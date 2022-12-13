@@ -40,6 +40,9 @@ Thumbs.db
 *.exe
 *.war
 
+# Package
+package-lock.json
+
 # Large media files
 *.mp4
 *.tiff
