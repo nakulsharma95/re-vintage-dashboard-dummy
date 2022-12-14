@@ -1,7 +1,9 @@
 import { Provider } from "react-redux";
+import Layout from "../common/layout";
 import store from "../redux/store"
-import Layout from "../component/layout";
-import "../styles/globals.css";
+
+// Styles here
+import "../styles/theme.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,7 +11,7 @@ function MyApp({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-     </Provider>
+    </Provider>
   );
 }
 

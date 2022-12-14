@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "~bootstrap/scss/bootstrap";
+
+// variables
+@import "./variables/colors";
+@import "./variables/mixins";
+
+// theme styles files
+@import "./xtras";
+@import "./fonts";
+@import "./typography";
+
+// custom css
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  color: $white !important;
+  background: rgba($theme-primary, 0.2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include scrollbarCustom;
+}
+
+.scroll-hide {
+  @include scrollHide;
+}
+
+// four-oh-four
+.four-oh-four {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $theme-primary;
+
+  .title2 {
+    text-align: center;
+    color: $white;
+  }
+}
