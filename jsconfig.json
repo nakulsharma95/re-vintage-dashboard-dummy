@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+	  "baseUrl": ".",
+	  "paths": {
+		"~/contexts/*": ["contexts/*"],
+		"~/components/*": ["components/*"],
+		"~/hooks/*": ["hooks/*"],
+		"~/redux/*": ["redux/*"],
+		"~/lib/*": ["lib/*"],
+		"~/utils/*": ["utils/*"],
+		"~/styles/*": ["styles/*"],
+		"~/schemas/*": ["schemas/*"],
+		"~/svg/*": ["public/svg/*"]
+		// add more paths here...
+	  },
+	  "target": "es5",
+	  "lib": ["dom", "dom.iterable", "esnext"],
+	  "allowJs": true,
+	  "skipLibCheck": true,
+	  "strict": true,
+	  "forceConsistentCasingInFileNames": true,
+	  "noEmit": true,
+	  "esModuleInterop": true,
+	  "module": "esnext",
+	  "moduleResolution": "node",
+	  "resolveJsonModule": true,
+	  "isolatedModules": true,
+	  "jsx": "preserve",
+	  "incremental": true
+	},
+	"include": ["next-env.d.js", "**/*.js", "**/*.jsx", "sonar.js"],
+	"exclude": ["node_modules"]
+  }
