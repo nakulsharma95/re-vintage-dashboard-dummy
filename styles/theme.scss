@@ -35,6 +35,7 @@ body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0d0d0d;
 
   @include scrollbarCustom;
 }
@@ -54,5 +55,19 @@ body {
   .title2 {
     text-align: center;
     color: $white;
+  }
+}
+
+.re-mainContainer{
+  .mainDflex{
+    display: flex;
+  }
+}
+
+.mainsidebar-menu{
+  .accordion-item{
+    .accordion-button.collapsed{
+      background-color: $gray-1;
+    }
   }
 }

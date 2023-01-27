@@ -1,0 +1,75 @@
+@import '~/styles/config';
+
+.sideBarContainer{
+	width: 100%;
+	max-width: 240px;
+	height: 100vh;
+	overflow-y: auto;
+	background-color: $gray-1;
+	position: fixed;
+	top: 48px;
+	left: 0;
+	z-index: 9;
+}
+
+.reAccordion{
+	li{
+		list-style-type: none;
+		a{
+			padding: 11px 12px;
+			text-decoration: none;
+			color: #fff;
+			display: block;
+			font-size: 13px;
+		}
+	}
+	.accordionItems{
+		background: transparent;
+		border: none;
+		padding: 0;
+		border-radius: 0;
+		&:first-of-type{
+			button{
+				border-radius: 0 !important;
+			}
+		}
+		&:last-of-type{
+			button{
+				border-radius: 0 !important;
+			}
+		}
+		button{
+			background-color: transparent;
+			padding: 12px 14px;
+			outline: none;
+			box-shadow: none;
+			border-radius: 0;
+			background-color: $black;
+			&::after{
+				color: $white;
+				background: url('../../../public/images/down-arrow.png') no-repeat;
+				background-size: 18px;
+			}
+			a{
+				text-decoration: none;
+				color: $white;
+				font-size: 13px;
+			}
+		}
+	}
+
+	.accordionBody{
+		background-color: $black;
+		padding: 10px 0;
+		li{
+			a{
+				color: #818181;
+				padding: 6px 14px;
+				&:hover{
+					color: $white;
+					transition: all 0.5s;
+				}
+			}
+		}
+	}
+}

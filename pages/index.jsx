@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import Homepage from './homepage';
+import Sidebar from '../components/ui/sidebar/Sidebar';
+import Header from '../components/layout/header/Header';
 
 export default function Home() {
   return (
@@ -17,11 +18,18 @@ export default function Home() {
         />
 
         {/* Main Page Title */}
-        <title>Welcome to Next Js Boiler plate</title>
+        <title>Welcome</title>
       </Head>
 
       <main className="main">
-        <Homepage />
+        <div className="re-mainContainer">
+          <Header />
+          <div className="mainDflex">
+            <div className="mainsidebar-menu">
+              <Sidebar />
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   );
