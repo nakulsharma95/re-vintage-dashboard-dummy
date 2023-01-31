@@ -1,0 +1,56 @@
+@import '~/styles/config';
+
+.detailCardContainer{
+	top: 48px;
+	position: relative;
+}
+
+.card-container {
+    background-color: black;
+}
+
+.detailCard {
+    background-color: #404040;
+    border-radius: 5px;
+}
+
+
+.header-detail-id h5 {
+    font-size: 17px;
+
+}
+
+
+.border-styles {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+}
+
+
+/* action */
+.action {
+    cursor: pointer;
+}
+
+/* btn-customer */
+
+.action .input-btn {
+
+    border: 2px solid red;
+    height: 40px;
+}
+
+.btn-customer {
+    color: white;
+    border-radius: 0;
+    height: 100%;
+
+}
+
+
+.action .input-btn span {
+    background-color: red;
+    height: 100%;
+    font-size: 20px;
+    color: white;
+
+}

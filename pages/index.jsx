@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Sidebar from '../components/ui/sidebar/Sidebar';
 import Header from '../components/layout/header/Header';
+import TabPrimary from '../common/tabPrimary/index';
+import DetailCard from '../common/detailCard/index';
 
 export default function Home() {
   return (
@@ -26,8 +28,14 @@ export default function Home() {
           <Header />
           <div className="mainDflex">
             <div className="mainsidebar-menu">
-              <Sidebar />
+              {/* <Sidebar /> */}
+            
+
             </div>
+          </div>
+          <div className=''>
+          <TabPrimary />
+          {/* <DetailCard /> */}
           </div>
         </div>
       </main>
