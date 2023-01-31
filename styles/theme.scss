@@ -71,3 +71,19 @@ body {
     }
   }
 }
+.style_reTabs__mvD_v .nav-link{
+  color: #DA291C !important;
+  font-size: 14px !important;
+}
+
+.style_reTabs__mvD_v  .nav-link.active{
+background-color: transparent !important;
+border: none !important;
+border-bottom: 2px solid #DA291C !important;
+color: #DA291C !important;
+}
+
+.style_reTabs__mvD_v .nav-link:hover, .nav-tabs .nav-link:focus{
+  border: none !important;
+  border-bottom: 2px solid #DA291C !important;
+}
