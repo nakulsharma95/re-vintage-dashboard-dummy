@@ -5,7 +5,13 @@
     top: 48px;
     position: relative;
   }
-  
+  .detailsDivide{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+  }
+
   .card-container {
     background-color: black;
   }
