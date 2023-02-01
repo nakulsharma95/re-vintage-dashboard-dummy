@@ -9,7 +9,7 @@ export default function TabPrimary() {
   return (
     <Container>
       <Row>
-        <div className={styles.TabPrimaryContainer}>
+        <div>
           <Tabs
             className={`${styles.reTabs} mb-3`}
             defaultActiveKey="profile"

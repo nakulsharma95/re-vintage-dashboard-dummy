@@ -22,7 +22,7 @@ export default function DetailCard() {
       <Row className="mt-4 mb-4">
         {cardData.map((item, index) => (
           <Col xl={4} key={index} md={6}>
-            <div className={`${styles.detailCardContainer} mb-4 `}>
+            <div className="mb-4">
               <Card className={styles.detailCard}>
                 <Card.Body>
                   <div

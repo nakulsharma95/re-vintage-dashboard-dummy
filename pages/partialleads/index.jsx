@@ -5,6 +5,7 @@ import TabPrimary from "../../common/tabPrimary/index";
 import DetailCard from "../../common/detailCard/index";
 import DetailPagination from "../../common/detailPagination/index";
 import CustomButton from "common/customButton";
+import Breadcrumb from "common/breadCrumb";
 
 export default function PartialLeads() {
   return (
@@ -32,6 +33,7 @@ export default function PartialLeads() {
             <div className="mainsidebar-menu">{/* <Sidebar /> */}</div>
           </div>
           <div className="">
+            <Breadcrumb />
             <TabPrimary />
             <DetailCard />
             <DetailPagination />
