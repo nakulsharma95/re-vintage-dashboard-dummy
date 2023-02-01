@@ -1,0 +1,63 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables//mixins';
+
+.filtersMain{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #707070;
+
+	.filterHeading{
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: 0px;
+		text-transform: capitalize;
+	}
+
+	.filters{
+		display: flex;
+		align-items: center;
+		padding-bottom: 10px;
+
+		.formGroup{
+			position: relative;
+			
+			input{
+				min-width: 340px;
+				min-height: 42px;
+				color: #A7A7A7;
+				padding-right: 2.5rem;
+				background: transparent;
+				border-radius: 0;
+				border: 1px solid #707070;
+
+				&:focus{
+					box-shadow: none;
+				}
+			}
+			.inputSearch{
+				position: absolute;
+				top: 52%;
+				right: 4%;
+				color: #A7A7A7;
+				font-size: 16px;
+				transform: translateY(-50%);
+				cursor: pointer;
+			}
+		}
+		.filterButton{
+			padding: 0.375rem 1.2rem;
+			min-height: 42px;
+			color: #A7A7A7;
+			background: transparent;
+			border-radius: 0;
+			border: 1px solid #707070;
+
+			.filterBtnIcn{
+				margin-left: 15px;
+				font-size: 18px;
+				font-weight: bold;
+			}
+		}
+	}
+}
