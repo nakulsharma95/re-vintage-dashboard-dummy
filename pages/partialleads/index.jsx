@@ -6,6 +6,7 @@ import DetailCard from "../../common/detailCard/index";
 import DetailPagination from "../../common/detailPagination/index";
 import CustomButton from "common/customButton";
 import Breadcrumb from "common/breadCrumb";
+import Filters from "common/filters";
 
 export default function PartialLeads() {
   return (
@@ -34,6 +35,7 @@ export default function PartialLeads() {
           </div>
           <div className="">
             <Breadcrumb />
+            <Filters />
             <TabPrimary />
             <DetailCard />
             <DetailPagination />
