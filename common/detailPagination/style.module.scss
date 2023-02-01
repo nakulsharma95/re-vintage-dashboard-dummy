@@ -8,6 +8,7 @@
 .detailPaginationMain{
 	display: flex;
 	align-items: center;
+	margin: 0px 20px 0px 20px;
 }
 
 .detailPaginationNumber{
@@ -18,3 +19,20 @@
 
 }
 
+.PaginationArrow{
+	margin: 0px 5px 0px 6px;
+}
+.detailCustomBtn {
+	padding: 1rem;
+	font-size: 14px;
+	padding: 10px 20px 10px 20px;
+	color: #fff;
+	border: 1px solid  #fff;
+	background-color: transparent;
+
+	&:hover{
+		background-color: #fff;
+		color: #DA291C;
+	}
+
+  }
