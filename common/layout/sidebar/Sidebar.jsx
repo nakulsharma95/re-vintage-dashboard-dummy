@@ -11,14 +11,14 @@ export default function Sidebar() {
         </li>
         <Accordion.Item className={styles.accordionItems} eventKey="0">
           <Accordion.Header>
-            <Link href="/">Procurement</Link>
+            <Link href="/procurement">Procurement</Link>
           </Accordion.Header>
           <Accordion.Body className={styles.accordionBody}>
             <li>
               <Link href="/procurement/partial-leads">Partial Leads</Link>
             </li>
             <li>
-              <Link href="/">Evaluation Requests</Link>
+              <Link href="/procurement/scheduled-evaluation">Evaluation Requests</Link>
             </li>
             <li>
               <Link href="/">Scheduled Evaluation</Link>
