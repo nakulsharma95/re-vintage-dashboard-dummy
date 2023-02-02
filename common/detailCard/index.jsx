@@ -1,24 +1,22 @@
-import Container from "react-bootstrap/Container";
-import Card from "react-bootstrap/Card";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import styles from "./style.module.scss";
-import { AiOutlineClose } from "react-icons/ai";
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import styles from './style.module.scss';
 
 export default function DetailCard() {
   const cardData = [
     {
-      ownerName: "Rishab Sharma",
+      ownerName: 'Rishab Sharma',
     },
     {
-      ownerName: "Rishab kumar",
+      ownerName: 'Rishab kumar',
     },
     {
-      ownerName: "Rishab Sharma",
+      ownerName: 'Rishab Sharma',
     },
   ];
   return (
-    <Container>
+    <div>
       <Row className="mt-4 mb-4">
         {cardData.map((item, index) => (
           <Col xl={4} key={index} md={6}>
@@ -29,13 +27,13 @@ export default function DetailCard() {
                     className={`${styles.headerDetail} ${styles.detailsDivide} p-0 border-0 `}
                   >
                     <h2 className="text-white mb-0">
-                      Details{" "}
+                      Details{' '}
                       <span className="text-white-50">-FB29FH9219HR1</span>
                     </h2>
                     <div
                       className={`${styles.detailDrop} ${styles.detailsDivide} border-0 shadow-none text-white  gap-2 }`}
                     >
-                      <i className="fa-solid fa-xmark fs-4"></i>
+                      <i className="fa-solid fa-xmark fs-4" />
                       <span className="mb-0">Drop Lead</span>
                     </div>
                   </div>
@@ -57,7 +55,7 @@ export default function DetailCard() {
                     >
                       <div className={`${styles.detailEmail}`}>
                         <span className="text-white-50">Email</span>
-                        <p class="mb-0 text-white ">john@gmail.com</p>
+                        <p className="mb-0 text-white ">john@gmail.com</p>
                       </div>
                       <div className={`${styles.detailPincode}`}>
                         <span className="text-white-50">Pincode</span>
@@ -75,12 +73,12 @@ export default function DetailCard() {
                         <span
                           className={`${styles.btnthemeIcon} ${styles.detailsDivide}  px-2`}
                         >
-                          {" "}
-                          <i className="fa-solid fa-angle-right"></i>
+                          {' '}
+                          <i className="fa-solid fa-angle-right" />
                         </span>
                       </div>
                       <div className={`${styles.detailSendForm} text-white`}>
-                        <i className="fa-regular fa-calendar me-2"></i>
+                        <i className="fa-regular fa-calendar me-2" />
                         <span>Send eval. form</span>
                       </div>
                     </div>
@@ -90,10 +88,10 @@ export default function DetailCard() {
                   className={`${styles.detailCardFooter} ${styles.detailsDivide}  card-footer bg-dark`}
                 >
                   <p className="text-white-50 mb-0">
-                    Prm source: <span class="text-white">MIY</span>
+                    Prm source: <span className="text-white">MIY</span>
                   </p>
                   <p className="text-white-50 mb-0">
-                    Sec source: <span class="text-white">Google</span>
+                    Sec source: <span className="text-white">Google</span>
                   </p>
                 </div>
               </Card>
@@ -101,6 +99,6 @@ export default function DetailCard() {
           </Col>
         ))}
       </Row>
-    </Container>
+    </div>
   );
 }

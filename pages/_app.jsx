@@ -2,6 +2,9 @@ import { Provider } from 'react-redux';
 import Layout from '../common/layout';
 import store from '../redux/store';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 // Styles here
 import '../styles/theme.scss';
 

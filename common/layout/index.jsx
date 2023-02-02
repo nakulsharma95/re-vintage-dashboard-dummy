@@ -1,5 +1,5 @@
-import Header from '../header';
-import Footer from '../footer';
+import Sidebar from 'common/layout/sidebar/Sidebar';
+import Header from './header/Header';
 
 import style from './style.module.scss';
 
@@ -7,8 +7,9 @@ function Layout(props) {
   return (
     <div className={style.layoutStyle}>
       <Header />
-      {props.children}
-      <Footer />
+      <Sidebar />
+      <main className={style.mainContainerStyle}>{props.children}</main>
+      {/* <Footer /> */}
     </div>
   );
 }
