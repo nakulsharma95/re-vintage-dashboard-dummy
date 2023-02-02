@@ -1,13 +1,9 @@
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import styles from "./style.module.scss";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
+import { Row, Tab, Tabs } from 'react-bootstrap';
+import styles from './style.module.scss';
 
 export default function TabPrimary() {
   return (
-    <Container>
+    <div>
       <Row>
         <div>
           <Tabs
@@ -44,6 +40,6 @@ export default function TabPrimary() {
           </Tabs>
         </div>
       </Row>
-    </Container>
+    </div>
   );
 }
