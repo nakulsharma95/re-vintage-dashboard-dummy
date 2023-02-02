@@ -1,23 +1,28 @@
+import Link from 'next/link';
 import React from 'react';
-import BreadcrumbStyle from './breadCrumb.module.scss';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
+import styles from './style.module.scss';
 
-const Breadcrumb = () => {
+function Breadcrumb() {
   return (
-    <>
-      <Container>
-        <Row className={BreadcrumbStyle.breadcrumbsMain}>
-          <Col md={12}>
-            <nav className={BreadcrumbStyle.breadcrumbs}>
-              <a className={BreadcrumbStyle.breadcrumbsItem}>Home</a>
-              <a className={BreadcrumbStyle.breadcrumbsItem}>Procurement</a>
-              <a className={BreadcrumbStyle.breadcrumbsItem}>Procurement</a>
-            </nav>
-          </Col>
-        </Row>
-      </Container>
-    </>
+    <div>
+      <Row className={styles.breadcrumbsMain}>
+        <Col md={12}>
+          <nav className={styles.breadcrumbs}>
+            <Link href="/" className={styles.breadcrumbsItem}>
+              Home
+            </Link>
+            <Link href="/" className={styles.breadcrumbsItem}>
+              Procurement
+            </Link>
+            <Link href="/" className={styles.breadcrumbsItem}>
+              Procurement
+            </Link>
+          </nav>
+        </Col>
+      </Row>
+    </div>
   );
-};
+}
 
 export default Breadcrumb;

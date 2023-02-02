@@ -1,14 +1,9 @@
-import Head from "next/head";
-import Sidebar from "../components/ui/sidebar/Sidebar";
-import Header from "../components/layout/header/Header";
-import TabPrimary from "../common/tabPrimary/index";
-import DetailCard from "../common/detailCard/index";
-import DetailPagination from "../common/detailPagination/index";
-import CustomButton from "common/customButton";
+import Head from 'next/head';
+import Homepage from './homepage';
 
 export default function Home() {
   return (
-    <div className="main-container">
+    <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,19 +20,7 @@ export default function Home() {
         <title>Welcome</title>
       </Head>
 
-      <main className="main">
-        <div className="re-mainContainer">
-          <Header />
-          <div className="mainDflex">
-            <div className="mainsidebar-menu">{/* <Sidebar /> */}</div>
-          </div>
-          <div className="">
-            <TabPrimary />
-            <DetailCard />
-            <DetailPagination />
-          </div>
-        </div>
-      </main>
-    </div>
+      <Homepage />
+    </>
   );
 }
