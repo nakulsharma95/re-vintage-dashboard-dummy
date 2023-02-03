@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import { Row, Col } from 'react-bootstrap';
-import styles from './style.module.scss';
 import ViewAll from 'common/viewAllComp';
+import styles from './style.module.scss';
 
 export default function DetailCard() {
   const cardData = [

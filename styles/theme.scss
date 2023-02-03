@@ -133,7 +133,18 @@ color: #DA291C !important;
     }
 	}
 }
-.modal-backdrop{
-  backdrop-filter: blur(7px);
-}
+
 // ----------- cancel modal end-----------------//
+
+// modal-style1
+.modal-style1 {
+  backdrop-filter: blur(7px);
+
+  .modal-content {
+    background: $gray-18;
+  }
+
+  .modal-dialog  {
+    min-width: 560px;
+  }
+}
