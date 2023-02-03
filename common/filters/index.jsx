@@ -8,7 +8,7 @@ import filterStyle from './filtersStyle.module.scss';
 function Filters() {
   return (
     <div className={filterStyle.filtersMain}>
-      <h3 className={filterStyle.filterHeading}>Procurement Leads</h3>
+      <h1 className={filterStyle.filterHeading}>Procurement Leads</h1>
       <div className={filterStyle.filters}>
         <Form.Group className={`${filterStyle.formGroup} me-3`}>
           <Form.Control
