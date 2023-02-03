@@ -1,8 +1,8 @@
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Pagination from 'react-bootstrap/Pagination';
-import { BsChevronRight, BsChevronLeft } from 'react-icons/bs';
-import styles from './style.module.scss';
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Pagination from "react-bootstrap/Pagination";
+import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
+import styles from "./style.module.scss";
 
 export default function DetailPagination() {
   const active = 2;
