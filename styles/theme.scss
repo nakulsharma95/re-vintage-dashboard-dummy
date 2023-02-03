@@ -58,6 +58,10 @@ body {
   }
 }
 
+.bottom-white-border{
+	border-bottom: 1px solid #707070;
+}
+
 .re-mainContainer{
   .mainDflex{
     display: flex;
@@ -106,3 +110,21 @@ color: #DA291C !important;
     box-shadow: none !important;
 }
 // Pagination End
+
+// ----------- cancel modal start-----------------//
+.style_cancelModal__a5uQD{
+  .modal-content{
+		background-color: #181818;
+		border-radius: 0px;
+
+    .style_cancelModalHeader__xY_cJ{
+      .btn-close{
+        
+      }
+    }
+	}
+}
+.modal-backdrop{
+  backdrop-filter: blur(7px);
+}
+// ----------- cancel modal end-----------------//

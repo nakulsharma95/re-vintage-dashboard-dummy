@@ -7,6 +7,7 @@ function BikeCard() {
   const cardData = [
     {
       imageUrl: '/images/bikeImage.png',
+      overDue: 'evolutionOver',
     },
     {
       imageUrl: '/images/bikeImage2.png',
@@ -36,7 +37,7 @@ function BikeCard() {
         <Col md={3} key={index}>
           <Card className={bikeCardStyle.bikeCardMain}>
             <Card.Img variant="top" src={item.imageUrl} />
-            <div className={bikeCardStyle.bikeCardTag}>Evaluation Overdue</div>
+            <div className={`${bikeCardStyle.bikeCardTag}`}>Evaluation Overdue</div>
             <Card.Body className="px-0">
               <Card.Title className={bikeCardStyle.bkeName}>
                 2015 Classic 350 <span>- DL 6T AL 7314</span>

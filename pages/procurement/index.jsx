@@ -6,7 +6,8 @@ export default function Procurement() {
   return (
     <div>
       <Breadcrumb />
-      <Filters />
+      <Filters title="Procurement Leads"/>
+      <div className="bottom-white-border"></div>
       <BikeCard />
     </div>
   );

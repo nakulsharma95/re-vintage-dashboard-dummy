@@ -1,0 +1,167 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables//mixins';
+
+.topHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.7rem;
+  .topHeaderTxt {
+    font-size: 14px;
+    font-weight: 500;
+    color: #cbc6c6;
+    opacity: 0.9;
+    margin-bottom: 0px;
+  }
+  .topHeaderBtnBox {
+    display: flex;
+    .viewText {
+      font-size: 14px;
+      font-weight: 400;
+      color: #cbc6c6;
+      margin-bottom: 0px;
+    }
+    .topHeaderBtn {
+      padding: 0rem 0.8rem;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      background: transparent;
+      border-radius: 0;
+      border: 0px;
+      border-right: 1px solid #707070;
+	  &:last-child {
+		border-right: 0px;
+	  }
+	  &.activeBtn{
+		color: #DA291C;
+	  }
+    }
+  }
+}
+.bikeDetailCardMain {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #282828;
+  border: 0;
+  border-radius: 0;
+
+  .bikeDetailCardHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #707070;
+
+    .bikeName {
+      color: $white;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 0px;
+      span {
+        color: #e8b016;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .bikeCode {
+        color: #cbc6c6;
+        opacity: 0.7;
+        font-size: 13px;
+        margin-left: 5px;
+        margin-bottom: 0px;
+      }
+    }
+    .priceTag {
+      color: #cbc6c6;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 0px;
+      margin-right: 10px;
+    }
+    .priceText {
+      color: #f3f3f3;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 0px;
+    }
+  }
+  .bikeCardBody {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    .bikeCardBodyTitle {
+      color: #cbc6c6;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .bikeCardBodySubTitle {
+      color: #a7a7a7;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .bikeCardBodyText {
+      color: $white;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  .bikeCardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid #707070;
+    .statusBox {
+      display: flex;
+      .statusBoxText {
+        position: relative;
+        color: #cbc6c6;
+        font-size: 12px;
+        font-weight: 500;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-bottom: 0px;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0px;
+          top: 50%;
+          width: 5px;
+          height: 5px;
+          background-color: #da291c;
+          border-radius: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .statusBtnBox {
+      display: flex;
+      .statusBtn {
+        display: flex;
+        padding: 0rem 0.8rem;
+        color: #cbc6c6;
+        font-size: 12px;
+        font-weight: 500;
+        background: transparent;
+        border-radius: 0;
+        border: 0px;
+        border-right: 1px solid #707070;
+        .statusBtnIcn {
+          margin-right: 8px;
+          font-size: 15px;
+          font-weight: bold;
+
+          &.closeBtnIcn {
+            transform: rotate(45deg);
+          }
+        }
+
+        &:last-child {
+          border-right: 0px;
+        }
+      }
+    }
+  }
+}
+.cardBodyBorderRight {
+  border-right: 1px solid #707070;
+}
