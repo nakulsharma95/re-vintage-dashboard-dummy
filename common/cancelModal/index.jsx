@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './style.module.scss';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { IoMdClose } from "react-icons/io";
+import { IoMdClose } from 'react-icons/io';
 
 const CancelModal = () => {
   const [show, setShow] = useState(false);
@@ -21,8 +21,11 @@ const CancelModal = () => {
         className={styles.cancelModal}
       >
         <Modal.Header className={styles.cancelModalHeader}>
-          <Button variant="primary" className={`${styles.cancelModalCloseBtn} btn-close`}>
-		  <IoMdClose />
+          <Button
+            variant="primary"
+            className={`${styles.cancelModalCloseBtn} btn-close`}
+          >
+            <IoMdClose />
           </Button>
         </Modal.Header>
         <Modal.Body className={styles.cancelModalBody}>

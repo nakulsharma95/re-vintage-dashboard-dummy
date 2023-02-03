@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Card, Col, Row } from 'react-bootstrap';
 import bikeCardStyle from './bikeCardStyle.module.scss';
+import ViewAll from 'common/viewAllComp';
 
 function BikeCard() {
   const cardData = [
@@ -21,18 +22,7 @@ function BikeCard() {
   ];
   return (
     <Row>
-      <Col md={12}>
-        <div className={bikeCardStyle.titleViewAllMain}>
-          <h5 className={bikeCardStyle.titleViewAll}>
-            Evaluation Requests <span>(32 Leads)</span>
-          </h5>
-          <div>
-            <Button variant="primary" className={bikeCardStyle.viewAllBtn}>
-              View All
-            </Button>
-          </div>
-        </div>
-      </Col>
+     <ViewAll />
       {cardData.map((item, index) => (
         <Col md={3} key={index}>
           <Card className={bikeCardStyle.bikeCardMain}>
@@ -58,18 +48,7 @@ function BikeCard() {
           </Card>
         </Col>
       ))}
-      <Col md={12}>
-        <div className={bikeCardStyle.titleViewAllMain}>
-          <h5 className={bikeCardStyle.titleViewAll}>
-            Scheduled Evaluation <span>(32 Leads)</span>
-          </h5>
-          <div>
-            <Button variant="primary" className={bikeCardStyle.viewAllBtn}>
-              View All
-            </Button>
-          </div>
-        </div>
-      </Col>
+      <ViewAll />
       {cardData.map((item, index) => (
         <Col md={3} key={index}>
           <Card className={bikeCardStyle.bikeCardMain}>
@@ -100,18 +79,7 @@ function BikeCard() {
       ))}
 
       {/* ---------------------------------------------------------- */}
-      <Col md={12}>
-        <div className={bikeCardStyle.titleViewAllMain}>
-          <h5 className={bikeCardStyle.titleViewAll}>
-            Completed Evaluation <span>(32 Leads)</span>
-          </h5>
-          <div>
-            <Button variant="primary" className={bikeCardStyle.viewAllBtn}>
-              View All
-            </Button>
-          </div>
-        </div>
-      </Col>
+     <ViewAll />
       <Col md={3}>
         <Card className={bikeCardStyle.bikeCardMain}>
           <Card.Img variant="top" src="/images/bikeImage.png" />

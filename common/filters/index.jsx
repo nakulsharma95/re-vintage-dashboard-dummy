@@ -8,7 +8,7 @@ import filterStyle from './filtersStyle.module.scss';
 function Filters(props) {
   return (
     <div className={filterStyle.filtersMain}>
-      <h1 className={filterStyle.filterHeading}>Procurement Leads</h1>
+      <h3 className={filterStyle.filterHeading}>{props.title}</h3>
       <div className={filterStyle.filters}>
         <Button
           variant="primary"
