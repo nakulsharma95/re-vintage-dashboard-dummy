@@ -5,7 +5,7 @@ export default function Homepage() {
     <div className={style.homepageStyle}>
       <h1 className={`${style.titleCustomStyle} title2`}>
         Welcome to 😊
-        <br /> Next JS Boiler plate!!!
+        <br /> Vintage Dashboard
       </h1>
     </div>
   );

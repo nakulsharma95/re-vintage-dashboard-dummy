@@ -2,10 +2,102 @@
 // // ## FONTS.SCSS ## //
 // // ######################################## //
 
-// @font-face {
-//   font-family: "messina-sans";
-//   font-style: normal;
-//   font-weight: 100;
-//   src: url("../assets/fonts/MessinaSansTrial-Hairline.otf"); /* IE9 Compat Modes */
-//   src: url("../assets/fonts/MessinaSansTrial-Hairline.otf") format('truetype');
-// }
+@font-face {
+	font-family: 'montserrat';
+	src:url('/fonts/Montserrat-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: 'montserrat';
+	src: url('/fonts/Montserrat-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: 'montserrat';
+	src:url('/fonts/montserrat-regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+  }
+  
+  @font-face {
+	font-family: 'montserrat';
+	src: url('/fonts/Montserrat-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+  }
+  @font-face {
+	font-family: 'montserrat';
+	src:url('/fonts/Montserrat-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+  }
+  
+  @font-face {
+	font-family: 'montserrat';
+	src:url('/fonts/Montserrat-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+  }
+
+
+//  Guardian Sans Fonts
+@font-face {
+	font-family: 'Guardian Sans';
+	src:url('/fonts/GuardianSansHairline.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: 'Guardian Sans';
+	src:url('/fonts/GuardianSansThin.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+  }
+  
+  @font-face {
+	font-family: 'Guardian Sans';
+	src:url('/fonts/GuardianSansLight.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+  }
+  @font-face {
+	font-family: 'Guardian Sans';
+	src:url('/fonts/GuardianSansRegular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+  }
+  
+  @font-face {
+	font-family: 'Guardian Sans';
+	src:url('/fonts/GuardianSansMedium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+  }
+  
+  @font-face {
+	font-family: 'Guardian Sans';
+	src:url('/fonts/GuardianSansSemibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+  }
+  @font-face {
+	font-family: 'Guardian Sans';
+	src:url('/GuardianSansBold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+  }
+  @font-face {
+	font-family: 'Guardian Sans';
+	src:url('/GuardianSansBlack.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+  }

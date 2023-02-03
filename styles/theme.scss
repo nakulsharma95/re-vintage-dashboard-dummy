@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "~bootstrap/scss/bootstrap";
 
 // variables
@@ -12,7 +11,7 @@
 
 // custom css
 * {
-  font-family: "Poppins", sans-serif;
+	font-family: "montserrat", sans-serif;
 }
 
 ::selection {
@@ -36,8 +35,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #0d0d0d;
+  font-weight: 400;
 
   @include scrollbarCustom;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Guardian Sans', sans-serif;
 }
 
 .scroll-hide {
@@ -56,6 +61,10 @@ body {
     text-align: center;
     color: $white;
   }
+}
+
+.bottom-white-border{
+	border-bottom: 1px solid #707070;
 }
 
 .re-mainContainer{
@@ -118,3 +127,21 @@ margin-bottom: -2px !important;
     box-shadow: none !important;
 }
 // Pagination End
+
+// ----------- cancel modal start-----------------//
+.style_cancelModal__a5uQD{
+  .modal-content{
+		background-color: #181818;
+		border-radius: 0px;
+
+    .style_cancelModalHeader__xY_cJ{
+      .btn-close{
+        
+      }
+    }
+	}
+}
+.modal-backdrop{
+  backdrop-filter: blur(7px);
+}
+// ----------- cancel modal end-----------------//

@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import Card from "react-bootstrap/Card";
 import { Row, Col } from "react-bootstrap";
 import styles from "./style.module.scss";
 import { AiOutlineRight, AiOutlineClose } from "react-icons/ai";
+=======
+import Card from 'react-bootstrap/Card';
+import { Row, Col } from 'react-bootstrap';
+import styles from './style.module.scss';
+import ViewAll from 'common/viewAllComp';
+>>>>>>> 4ab907fa6982096d99ce5e169c896f685a56e73e
 
 export default function DetailCard() {
   const cardData = [
@@ -17,7 +24,8 @@ export default function DetailCard() {
   ];
   return (
     <div>
-      <Row className="mt-4 mb-4">
+      <Row>
+        <ViewAll />
         {cardData.map((item, index) => (
           <Col xl={4} key={index} md={6}>
             <div className="mb-4">
