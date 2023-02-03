@@ -12,15 +12,19 @@
 	z-index: 9;
 }
 
+.headerStyle {
+	border-bottom: 1px solid #282828;
+}
+
 .reAccordion{
 	li{
 		list-style-type: none;
 		a{
-			padding: 20px 12px;
+			padding: 14px 12px;
 			text-decoration: none;
 			color: #fff;
 			display: block;
-			font-size: 13px;
+			border-bottom: 1px solid #282828;
 		}
 	}
 	.accordionItems{
@@ -40,11 +44,11 @@
 		}
 		button{
 			background-color: transparent;
-			padding: 12px 14px;
+			padding: 14px 14px;
 			outline: none;
 			box-shadow: none;
 			border-radius: 0;
-			background-color: $black;
+			background-color: $gray-2;
 			&::after{
 				color: $white;
 				background: url('/images/down-arrow.png') no-repeat;
@@ -53,7 +57,6 @@
 			a{
 				text-decoration: none;
 				color: $white;
-				font-size: 13px;
 			}
 		}
 	}
@@ -64,7 +67,9 @@
 		li{
 			a{
 				color: #818181;
-				padding: 6px 14px;
+				padding: 8px 14px;
+				font-size: 12px;
+				border: none;
 				&:hover{
 					color: $white;
 					transition: all 0.5s;

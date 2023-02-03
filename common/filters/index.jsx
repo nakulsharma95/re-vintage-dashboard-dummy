@@ -13,7 +13,7 @@ function Filters(props) {
         <Button
           variant="primary"
           className={`${filterStyle.filterButton} ${filterStyle.exportButton} ${
-            props.export == true ? 'filtersStyle_activeBtn__9qsNe' : ''
+            props.export === true ? 'filtersStyle_activeBtn__9qsNe' : ''
           }`}
         >
           Export data
