@@ -5,6 +5,7 @@ import MotorcycleDetailCard from 'common/motorcycleDetailsCard';
 import TabPrimary from 'common/tabPrimary';
 import DetailPagination from 'common/detailPagination';
 import CancelModal from 'common/cancelModal';
+import RescheduleReason from 'common/rescheduleReasonModal';
 
 const EvaluationRequest = () => {
   return (
@@ -15,6 +16,7 @@ const EvaluationRequest = () => {
       <MotorcycleDetailCard />
       <DetailPagination />
       <CancelModal />
+      <RescheduleReason />
     </>
   );
 };
