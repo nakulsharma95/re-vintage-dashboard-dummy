@@ -22,14 +22,17 @@
 .detailCustomBtn {
 	padding: 1rem;
 	font-size: 14px;
-	padding: 10px 20px 10px 20px;
+	padding: 10px 15px 10px 15px;
 	color: #fff;
 	border: 1px solid  #fff;
 	background-color: transparent;
+	display: flex;
+    align-items: center;
 
 	&:hover{
 		background-color: #fff;
 		color: #DA291C;
+		transition: 0.3s;
 	}
 
   }

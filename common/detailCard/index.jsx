@@ -1,18 +1,25 @@
+<<<<<<< HEAD
 import Card from 'react-bootstrap/Card';
 import { Row, Col } from 'react-bootstrap';
+=======
+import Card from "react-bootstrap/Card";
+import { Row, Col } from "react-bootstrap";
+import styles from "./style.module.scss";
+import { AiOutlineRight, AiOutlineClose } from "react-icons/ai";
+>>>>>>> 909bf4ffc3c04fce6f341441fa00f1e463bed296
 import ViewAll from 'common/viewAllComp';
 import styles from './style.module.scss';
 
 export default function DetailCard() {
   const cardData = [
     {
-      ownerName: 'Rishab Sharma',
+      ownerName: "Rishab Sharma",
     },
     {
-      ownerName: 'Rishab kumar',
+      ownerName: "Rishab kumar",
     },
     {
-      ownerName: 'Rishab Sharma',
+      ownerName: "Rishab Sharma",
     },
   ];
   return (
@@ -28,13 +35,13 @@ export default function DetailCard() {
                     className={`${styles.headerDetail} ${styles.detailsDivide} p-0 border-0 `}
                   >
                     <h2 className="text-white mb-0">
-                      Details{' '}
+                      Details{" "}
                       <span className="text-white-50">-FB29FH9219HR1</span>
                     </h2>
                     <div
-                      className={`${styles.detailDrop} ${styles.detailsDivide} border-0 shadow-none text-white  gap-2 }`}
+                      className={`${styles.detailDrop} ${styles.detailsDivide} border-0 shadow-none text-white  gap-1 }`}
                     >
-                      <i className="fa-solid fa-xmark fs-4" />
+                      <AiOutlineClose size={18} />
                       <span className="mb-0">Drop Lead</span>
                     </div>
                   </div>
@@ -74,8 +81,7 @@ export default function DetailCard() {
                         <span
                           className={`${styles.btnthemeIcon} ${styles.detailsDivide}  px-2`}
                         >
-                          {' '}
-                          <i className="fa-solid fa-angle-right" />
+                          <AiOutlineRight />
                         </span>
                       </div>
                       <div className={`${styles.detailSendForm} text-white`}>

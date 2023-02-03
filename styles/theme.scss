@@ -84,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff !important;
   font-size: 14px !important;
   border: none !important;
+  margin-bottom: 1px !important;
 
 }
 .style_reTabs__mvD_v .nav-tabs .nav-link{
@@ -94,11 +95,14 @@ background-color: transparent !important;
 border: none !important;
 border-bottom: 2px solid #DA291C !important;
 color: #DA291C !important;
+margin-bottom: -2px !important;
+
 }
 
 .style_reTabs__mvD_v .nav-link:hover, .nav-tabs .nav-link:focus{
   border: none !important;
   border-bottom: 2px solid #DA291C !important;
+  margin-bottom: -2px !important;
 }
 
 // Pagination Start
@@ -111,6 +115,10 @@ color: #DA291C !important;
 .style_detailPaginationMain__qyKfk .page-link.active, .active > .page-link{
   border: 2px solid #DA291C !important;
   background-color: #DA291C !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
 }
 .style_detailPaginationMain__qyKfk .page-link:focus{
     background-color: #DA291C !important;
