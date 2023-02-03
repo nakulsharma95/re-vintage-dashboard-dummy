@@ -8,16 +8,12 @@ import filterStyle from './filtersStyle.module.scss';
 function Filters(props) {
   return (
     <div className={filterStyle.filtersMain}>
-<<<<<<< HEAD
-      <h3 className={filterStyle.filterHeading}>{props.title}</h3>
-=======
       <h1 className={filterStyle.filterHeading}>Procurement Leads</h1>
->>>>>>> c680e4dd91b87cba7eba11b272b5061ca454e922
       <div className={filterStyle.filters}>
         <Button
           variant="primary"
           className={`${filterStyle.filterButton} ${filterStyle.exportButton} ${
-            props.export == true ? 'filtersStyle_activeBtn__9qsNe' : ''
+            props.export === true ? 'filtersStyle_activeBtn__9qsNe' : ''
           }`}
         >
           Export data
