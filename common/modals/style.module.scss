@@ -1,0 +1,60 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables//mixins';
+
+.cancelModal{
+
+
+	.cancelModalCloseBtn{
+		display: flex;
+		color: $white;
+		border: none;
+		font-size: 58px;
+		background:none;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+
+		&:focus{
+			border: 0;
+			box-shadow: none;
+		}
+	}
+
+  .cancelModalBody{
+	padding: 50px 20px;
+
+	.cancelModalImage{
+		width: 64px;
+		margin-bottom: 1.5rem;
+	}
+	.cancelModalTitle{
+		color: #F3F3F3;
+		font-size: 20px;
+		font-weight: 400;
+		letter-spacing: 0.44px;
+	}
+  }
+  .cancelModalFooter{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 2rem;
+	margin-top: 54px;
+
+	.cancelModalBtn{
+		min-width: 160px;
+		min-height: 47px;
+		margin: 0px 10px;
+		font-size: 20px;
+		font-weight: 500;
+		text-transform: uppercase;
+		background: transparent;
+		border: 1px solid #FDFDFD;
+		border-radius: 0px;
+
+		&.redBtn{
+			background: #57100B;
+			border: 1px solid #DA291C;
+		}
+	}
+  }
+}

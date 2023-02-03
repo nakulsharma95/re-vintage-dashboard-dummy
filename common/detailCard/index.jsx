@@ -1,19 +1,19 @@
-import Card from "react-bootstrap/Card";
-import { Row, Col } from "react-bootstrap";
-import styles from "./style.module.scss";
-import { AiOutlineRight, AiOutlineClose } from "react-icons/ai";
+import Card from 'react-bootstrap/Card';
+import { Row, Col } from 'react-bootstrap';
+import { AiOutlineRight, AiOutlineClose } from 'react-icons/ai';
 import ViewAll from 'common/viewAllComp';
+import styles from './style.module.scss';
 
 export default function DetailCard() {
   const cardData = [
     {
-      ownerName: "Rishab Sharma",
+      ownerName: 'Rishab Sharma',
     },
     {
-      ownerName: "Rishab kumar",
+      ownerName: 'Rishab kumar',
     },
     {
-      ownerName: "Rishab Sharma",
+      ownerName: 'Rishab Sharma',
     },
   ];
   return (
@@ -29,7 +29,7 @@ export default function DetailCard() {
                     className={`${styles.headerDetail} ${styles.detailsDivide} p-0 border-0 `}
                   >
                     <h2 className="text-white mb-0">
-                      Details{" "}
+                      Details{' '}
                       <span className="text-white-50">-FB29FH9219HR1</span>
                     </h2>
                     <div
