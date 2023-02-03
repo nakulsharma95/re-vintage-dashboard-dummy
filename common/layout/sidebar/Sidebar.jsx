@@ -18,7 +18,11 @@ export default function Sidebar() {
               <Link href="/procurement/partial-leads">Partial Leads</Link>
             </li>
             <li>
+<<<<<<< HEAD
+              <Link href="/procurement/evaluation-requests">Evaluation Requests</Link>
+=======
               <Link href="/">Evaluation Requests</Link>
+>>>>>>> c680e4dd91b87cba7eba11b272b5061ca454e922
             </li>
             <li>
               <Link href="/procurement/scheduled-evaluation">
