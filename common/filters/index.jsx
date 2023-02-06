@@ -24,11 +24,11 @@ function Filters(props) {
             type="text"
             placeholder="Search Name, Location, Reference ID"
           />
-          <FaSearch className={filterStyle.inputSearch} />
+          <FaSearch className={filterStyle.inputSearch} size={15} />
         </Form.Group>
         <Button variant="primary" className={filterStyle.filterButton}>
           Filter
-          <CiFilter className={filterStyle.filterBtnIcn} />
+          <CiFilter className={filterStyle.filterBtnIcn} size={17} />
         </Button>
       </div>
     </div>

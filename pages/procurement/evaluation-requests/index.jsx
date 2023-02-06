@@ -1,24 +1,19 @@
-import React from 'react';
-import Breadcrumb from "common/breadCrumb";
-import Filters from "common/filters";
+import Breadcrumb from 'common/breadCrumb';
+import DetailPagination from 'common/detailPagination';
+import Filters from 'common/filters';
 import MotorcycleDetailCard from 'common/motorcycleDetailsCard';
 import TabPrimary from 'common/tabPrimary';
-import DetailPagination from 'common/detailPagination';
-import CancelModal from 'common/cancelModal';
-import RescheduleReason from 'common/rescheduleReasonModal';
 
-const EvaluationRequest = () => {
+function EvaluationRequest() {
   return (
     <>
       <Breadcrumb />
-      <Filters title="Evaluation Requests" export={true}/>
+      <Filters title="Evaluation Requests" export />
       <TabPrimary />
       <MotorcycleDetailCard />
       <DetailPagination />
-      <CancelModal />
-      <RescheduleReason />
     </>
   );
-};
+}
 
 export default EvaluationRequest;

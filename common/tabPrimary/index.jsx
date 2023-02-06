@@ -1,5 +1,5 @@
-import { Row, Tab, Tabs } from 'react-bootstrap';
-import styles from './style.module.scss';
+import { Row, Tab, Tabs } from "react-bootstrap";
+import styles from "./style.module.scss";
 
 export default function TabPrimary() {
   return (
@@ -11,32 +11,29 @@ export default function TabPrimary() {
             defaultActiveKey="profile"
             id="uncontrolled-tab-example"
           >
-            <Tab className={styles.reNavTab} eventKey="Recent" title="Recent">
-              <h4>3 Leads Available</h4>
-            </Tab>
+            <Tab
+              className={styles.reNavTab}
+              eventKey="Recent"
+              title="Recent"
+            ></Tab>
             <Tab
               className={styles.reNavTab}
               eventKey="In-progress (4)"
               title="In-progress (4)"
             >
-              <h4>3 Leads Available</h4>
             </Tab>
 
             <Tab
               className={styles.reNavTab}
               eventKey="Dropped (2)"
               title="Dropped (2)"
-            >
-              <h4>Dropped (2)</h4>
-            </Tab>
+            ></Tab>
 
             <Tab
               className={styles.reNavTab}
               eventKey="Self consume (By dealer)"
               title="Self consume (By dealer)"
-            >
-              <h4>Self consume (By dealer)</h4>
-            </Tab>
+            ></Tab>
           </Tabs>
         </div>
       </Row>

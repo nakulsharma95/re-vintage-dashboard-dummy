@@ -1,7 +1,8 @@
 import Card from 'react-bootstrap/Card';
 import { Row, Col } from 'react-bootstrap';
-import styles from './style.module.scss';
+import { AiOutlineRight, AiOutlineClose } from 'react-icons/ai';
 import ViewAll from 'common/viewAllComp';
+import styles from './style.module.scss';
 
 export default function DetailCard() {
   const cardData = [
@@ -32,9 +33,9 @@ export default function DetailCard() {
                       <span className="text-white-50">-FB29FH9219HR1</span>
                     </h2>
                     <div
-                      className={`${styles.detailDrop} ${styles.detailsDivide} border-0 shadow-none text-white  gap-2 }`}
+                      className={`${styles.detailDrop} ${styles.detailsDivide} border-0 shadow-none text-white  gap-1 }`}
                     >
-                      <i className="fa-solid fa-xmark fs-4" />
+                      <AiOutlineClose size={18} />
                       <span className="mb-0">Drop Lead</span>
                     </div>
                   </div>
@@ -74,8 +75,7 @@ export default function DetailCard() {
                         <span
                           className={`${styles.btnthemeIcon} ${styles.detailsDivide}  px-2`}
                         >
-                          {' '}
-                          <i className="fa-solid fa-angle-right" />
+                          <AiOutlineRight />
                         </span>
                       </div>
                       <div className={`${styles.detailSendForm} text-white`}>
