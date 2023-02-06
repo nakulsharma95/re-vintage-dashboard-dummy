@@ -26,7 +26,7 @@ export default function Sidebar() {
               </Link>
             </li>
             <li>
-              <Link href="/">Completed Evaluation</Link>
+              <Link href="/procurement/complete-evaluation">Completed Evaluation</Link>
             </li>
           </Accordion.Body>
         </Accordion.Item>
