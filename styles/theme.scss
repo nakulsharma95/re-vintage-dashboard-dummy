@@ -1,17 +1,17 @@
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
 // variables
-@import "./variables/colors";
-@import "./variables/mixins";
+@import './variables/colors';
+@import './variables/mixins';
 
 // theme styles files
-@import "./xtras";
-@import "./fonts";
-@import "./typography";
+@import './xtras';
+@import './fonts';
+@import './typography';
 
 // custom css
 * {
-	font-family: "montserrat", sans-serif;
+  font-family: 'montserrat', sans-serif;
 }
 
 ::selection {
@@ -40,7 +40,12 @@ body {
   @include scrollbarCustom;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   font-family: 'Guardian Sans', sans-serif;
 }
@@ -63,32 +68,32 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.bottom-white-border{
-	border-bottom: 1px solid #707070;
+.bottom-white-border {
+  border-bottom: 1px solid #707070;
 }
 
-.re-mainContainer{
-  .mainDflex{
+.re-mainContainer {
+  .mainDflex {
     display: flex;
   }
 }
 
-.mainsidebar-menu{
-  .accordion-item{
-    .accordion-button.collapsed{
+.mainsidebar-menu {
+  .accordion-item {
+    .accordion-button.collapsed {
       background-color: $gray-1;
     }
   }
 }
-.style_reTabs__mvD_v .nav-link{
+.style_reTabs__mvD_v .nav-link {
   color: #fff !important;
   font-size: 14px !important;
   border: none !important;
   margin-bottom: 1px !important;
 
 }
-.style_reTabs__mvD_v .nav-tabs .nav-link{
-border: none !important;
+.style_reTabs__mvD_v .nav-tabs .nav-link {
+  border: none !important;
 }
 .style_reTabs__mvD_v  .nav-link.active{
 background-color: transparent !important;
@@ -99,7 +104,8 @@ margin-bottom: -2px !important;
 
 }
 
-.style_reTabs__mvD_v .nav-link:hover, .nav-tabs .nav-link:focus{
+.style_reTabs__mvD_v .nav-link:hover,
+.nav-tabs .nav-link:focus {
   border: none !important;
   border-bottom: 2px solid #DA291C !important;
   margin-bottom: -2px !important;
@@ -107,7 +113,7 @@ margin-bottom: -2px !important;
 
 // Pagination Start
 
-.style_detailPaginationMain__qyKfk .page-link{
+.style_detailPaginationMain__qyKfk .page-link {
   background-color: transparent !important;
   border: none !important;
   color: #ffff !important;
@@ -120,26 +126,25 @@ margin-bottom: -2px !important;
   display: flex !important;
   align-items: center !important;
 }
-.style_detailPaginationMain__qyKfk .page-link:focus{
-    background-color: #DA291C !important;
-    border: none !important;
-    border-radius: 0px !important;
-    box-shadow: none !important;
+.style_detailPaginationMain__qyKfk .page-link:focus {
+  background-color: #da291c !important;
+  border: none !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
 }
 // Pagination End
 
 // ----------- cancel modal start-----------------//
-.style_cancelModal__a5uQD{
-  .modal-content{
-		background-color: #181818;
-		border-radius: 0px;
+.style_cancelModal__a5uQD {
+  .modal-content {
+    background-color: #181818;
+    border-radius: 0px;
 
-    .style_cancelModalHeader__xY_cJ{
-      .btn-close{
-        
+    .style_cancelModalHeader__xY_cJ {
+      .btn-close {
       }
     }
-	}
+  }
 }
 
 // ----------- cancel modal end-----------------//
@@ -154,5 +159,71 @@ margin-bottom: -2px !important;
 
   .modal-dialog  {
     min-width: 560px;
+  }
+}
+// ----------- cancel modal end-----------------//
+
+// ----------- complete evaluation slider -----------//
+
+.style_compBikeCard__UVdES {
+  .style_compBikeCardBody__RRJwL {
+    .style_compBikeCardSliderMain__M5Uzc {
+      .style_compBikeCardSlider__XcbRp {
+        .slick-arrow {
+          z-index: 9;
+          display: flex !important;
+          justify-content: center;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          background-color: #000000;
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          &::before{
+            font-size: 14px;
+          }
+          &.slick-disabled{
+          background-color: rgba(0, 0, 0, 0.6);
+          }
+        }
+        .slick-prev {
+          left: 10px;
+          &::before {
+            content: "\276E";
+          }
+        }
+        .slick-next {
+          right: 10px;  
+          &::before {
+            content: "\276F";
+          }
+        }
+        .slick-dots {
+          height: 46px;
+          bottom: 0px;
+          text-align: left;
+          li {
+            width: 63px;
+            height: 46px;
+            margin-left: 0px;
+            a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+            &.slick-active {
+              a {
+                border: 1px solid $white;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

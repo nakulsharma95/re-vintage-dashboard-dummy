@@ -1,0 +1,193 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables//mixins';
+
+.compBikeSearchTxt {
+  color: $gray-cb;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 1.2rem 0rem;
+  opacity: 0.9;
+}
+.compBikeCard {
+  margin-bottom: 1.5rem;
+  background-color: #282828;
+  border: 0px;
+  border-radius: 0px;
+
+  .compBikeCardBody {
+	padding: 0px;
+    .compBikeCardSliderMain {
+      .compBikeCardSlider {
+		max-height: 315px;
+		min-height: 315px;
+        .compBikeCardSlides {
+			&:focus-visible{
+				outline: none;
+			}
+          img {
+            width: 100%;
+            max-height: 315px;
+            min-height: 315px;
+            object-fit: cover;
+          }
+        }
+        .slick-thumb {
+          margin-top: 10px;
+        }
+      }
+    }
+    .motorcycleDetail {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+      .motorcycleTitle {
+        color: $gray-cb;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        span {
+          opacity: 0.7;
+        }
+      }
+      .motorcycleName {
+        color: $white;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 1.3rem;
+        span {
+          color: $theme-yellow-E8;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+      .motorcycleSpecs {
+        color: $gray-cb;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 0.8rem;
+        &:nth-child(2) {
+          border-left: 1px solid $gray-70;
+          border-right: 1px solid $gray-70;
+        }
+      }
+      .motorcycleCompleteSpec {
+        padding: 0.7rem 1rem;
+        border: 1px solid $black-40;
+        .specsHeading {
+          color: $gray-a7;
+          font-size: 10px;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+        }
+        .specsText {
+          color: $gray-F3;
+          font-size: 10px;
+          font-weight: 400;
+          margin-bottom: 0.7rem;
+        }
+      }
+      .motorStylePrice {
+        color: $gray-cb;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 0.7rem;
+        margin-top: 1rem;
+      }
+      .motorStylePriceTxt {
+        color: $gray-F3;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+    .evaluationDetail {
+		padding: 1.5rem;
+      .evalTitle {
+        color: $gray-cb;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+      }
+      .evalSubTitle {
+        color: $gray-a7;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+      .evalText {
+        color: $white;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 0.8rem;
+      }
+      .evalBtnBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+        border-top: 1px solid $gray-70;
+        .detailBtn {
+          position: relative;
+          min-width: 130px;
+          min-height: 42px;
+          font-size: 14px;
+          font-weight: 500;
+          text-align: left;
+          background-color: $theme-pink-da;
+          border: 1px solid $theme-red-da;
+          border-radius: 0;
+          .rightArrow {
+            position: absolute;
+            width: 42px;
+            height: 100%;
+            top: 50%;
+            right: 0%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            background-color: $theme-red-da;
+            transform: translateY(-50%);
+          }
+        }
+        .downloadBtn {
+          min-height: 42px;
+          margin-left: 0.8rem;
+          font-size: 14px;
+          font-weight: 500;
+          background: transparent;
+          border: 1px solid $gray-70;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+  .completeBikeFooter {
+    padding-top: 1.3rem;
+    background-color: $black;
+    border-top: 0;
+
+    .bikeFooterTitle {
+      color: #f3f3f3;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+    }
+    .bikeFooterSubTitle {
+      color: #a7a7a7;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .bikeFooterText {
+      color: $white;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 0rem;
+    }
+  }
+  .completeBorderBottom {
+    border: 1px solid $black-40;
+  }
+  .completeBorderRight{
+    border-right: 1px solid $gray-70;
+  }
+}
