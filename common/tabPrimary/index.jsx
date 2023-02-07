@@ -1,38 +1,38 @@
 import { Row, Tab, Tabs } from "react-bootstrap";
 import styles from "./style.module.scss";
 
-export default function TabPrimary() {
+export default function TabPrimary(props) {
   return (
     <div>
       <Row>
         <div>
           <Tabs
             className={`${styles.reTabs} mb-3`}
-            defaultActiveKey="profile"
+            defaultActiveKey="title1"
             id="uncontrolled-tab-example"
           >
             <Tab
               className={styles.reNavTab}
-              eventKey="Recent"
-              title="Recent"
+              eventKey="title1"
+              title={props.title1}
             ></Tab>
             <Tab
               className={styles.reNavTab}
-              eventKey="In-progress (4)"
-              title="In-progress (4)"
+              eventKey="title2"
+              title={props.title2}
             >
             </Tab>
 
             <Tab
               className={styles.reNavTab}
-              eventKey="Dropped (2)"
-              title="Dropped (2)"
+              eventKey="title3"
+              title={props.title3}
             ></Tab>
 
             <Tab
               className={styles.reNavTab}
-              eventKey="Self consume (By dealer)"
-              title="Self consume (By dealer)"
+              eventKey="title4"
+              title={props.title4}
             ></Tab>
           </Tabs>
         </div>

@@ -3,9 +3,9 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styles from './style.module.scss';
 
-function Breadcrumb() {
+function Breadcrumb(props) {
   return (
-    <div>
+    <div className="w-100">
       <Row className={styles.breadcrumbsMain}>
         <Col md={12}>
           <nav className={styles.breadcrumbs}>
@@ -13,10 +13,10 @@ function Breadcrumb() {
               Home
             </Link>
             <Link href="/" className={styles.breadcrumbsItem}>
-              Procurement
+              {props.title}
             </Link>
             <Link href="/" className={styles.breadcrumbsItem}>
-              Procurement
+              {props.addmoretitle}
             </Link>
           </nav>
         </Col>

@@ -15,7 +15,6 @@ export default function DetailPagination() {
     );
   }
   return (
-    <Row>
       <Row>
         <Col className="d-flex align-items-center mb-3" xl={4} lg={4} md={12}>
           <div className={styles.detailPaginationNumber}>
@@ -44,6 +43,5 @@ export default function DetailPagination() {
           </div>
         </Col>
       </Row>
-    </Row>
   );
 }

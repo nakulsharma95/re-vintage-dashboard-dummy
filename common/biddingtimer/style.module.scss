@@ -1,0 +1,16 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables//mixins';
+
+.biddingTimer{
+	display: inline-block;
+	padding: 10px 15px;
+	border:1px solid $theme-yellow-E8;
+	background-color: $gray-28;
+	width: 100%;
+	max-width: 30%;
+	text-align: center;
+	span{
+		margin-left: 15px;
+		color: $theme-yellow-E8;
+	}
+}

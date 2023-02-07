@@ -1,6 +1,6 @@
-import Card from "react-bootstrap/Card";
-import styles from "./style.module.scss";
-import { AiOutlineCalendar, AiOutlineClose } from "react-icons/ai";
+import Card from 'react-bootstrap/Card';
+import { AiOutlineCalendar, AiOutlineClose } from 'react-icons/ai';
+import styles from './style.module.scss';
 
 export default function DetailDropCard() {
   return (
@@ -20,15 +20,15 @@ export default function DetailDropCard() {
         </div>
 
         <div
-          class={`${styles.borderTopCustom} w-100 pb-1 pt-2 d-flex justify-content-between px-2 align-items-center`}
+          className={`${styles.borderTopCustom} w-100 pb-1 pt-2 d-flex justify-content-between px-2 align-items-center`}
         >
           <div
-            class={`${styles.borderRightCustom} ${styles.dropCardFooter} pe-3`}
+            className={`${styles.borderRightCustom} ${styles.dropCardFooter} pe-3`}
           >
             <AiOutlineCalendar className={`${styles.dropIcon}`} size={18} />
             <span className="ml-2">Reschedule</span>
           </div>
-          <div class={`${styles.dropCardFooter} pe-3`}>
+          <div className={`${styles.dropCardFooter} pe-3`}>
             <AiOutlineClose className={`${styles.dropIcon}`} size={18} />
             <span>Drop</span>
           </div>
