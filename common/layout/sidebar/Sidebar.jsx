@@ -76,20 +76,20 @@ export default function Sidebar() {
 
         <Accordion.Item className={styles.accordionItems} eventKey="3">
           <Accordion.Header className={styles.headerStyle}>
-            <Link href="/">Retail</Link>
+            <Link href="/retail">Retail</Link>
           </Accordion.Header>
           <Accordion.Body className={styles.accordionBody}>
             <li>
-              <Link href="/">Inventory</Link>
+              <Link href="/retail/inventory">Inventory</Link>
             </li>
             <li>
-              <Link href="/">Marketplace</Link>
+              <Link href="/retail/marketplace">Marketplace</Link>
             </li>
             <li>
-              <Link href="/">Test ride requests</Link>
+              <Link href="/retail/test-rider-requests">Test ride requests</Link>
             </li>
             <li>
-              <Link href="/">Test ride requests</Link>
+              <Link href="/retail/booking">Booking</Link>
             </li>
           </Accordion.Body>
         </Accordion.Item>
