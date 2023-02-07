@@ -19,7 +19,7 @@ export default function DetailCard() {
   return (
     <div>
       <Row>
-        <ViewAll />
+        <ViewAll title="Partial Leads" />
         {cardData.map((item, index) => (
           <Col xl={4} key={index} md={6}>
             <div className="mb-4">

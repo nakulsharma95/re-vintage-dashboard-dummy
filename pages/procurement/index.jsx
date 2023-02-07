@@ -6,9 +6,9 @@ import Filters from 'common/filters';
 export default function Procurement() {
   return (
     <div>
-      <Breadcrumb />
+      <Breadcrumb title="Procurement" addmoretitle="Procurement" />
       <Filters title="Procurement Leads" />
-      <div className="bottom-white-border"></div>
+      <div className="bottom-white-border" />
       <DetailCard />
       <BikeCard />
     </div>

@@ -7,9 +7,13 @@ import TabPrimary from 'common/tabPrimary';
 function EvaluationRequest() {
   return (
     <>
-      <Breadcrumb />
+      <Breadcrumb title="Procurement" addmoretitle="Evaluation Requests" />
       <Filters title="Evaluation Requests" export />
-      <TabPrimary />
+      <TabPrimary 
+        title1="Open" 
+        title2="Cancelled (12)"
+        title3="Dropped (12)"
+      />
       <MotorcycleDetailCard />
       <DetailPagination />
     </>
