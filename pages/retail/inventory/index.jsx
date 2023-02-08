@@ -11,7 +11,12 @@ export default function Inventory() {
       <Breadcrumb />
       <Filters title="Inventory" />
       <DashboardCard />
-      <TabPrimary />
+      <TabPrimary 
+        title1="Content Approval Pending (12)" 
+        title2="Content Upload Pending (8)"
+        title3="Under Refurbishment"
+        title4="Pending Evaluation (15)"
+      />
       <SortTabs />
       <BikeCardRadio isCheckBoxVisible={true} isButtonVisible={true} isCardVisible={false}  />
     </div>

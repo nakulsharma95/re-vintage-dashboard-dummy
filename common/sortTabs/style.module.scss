@@ -1,2 +1,93 @@
 @import '../../styles/variables/colors';
 @import '../../styles/variables//mixins';
+
+.sortTabBody{
+	background-color:$black;
+	padding: 10px;
+	margin-bottom: 1rem !important;
+
+	.SortInner{
+		display: flex;
+		justify-items: start;
+		align-items: center;
+		.resultFound{
+			font-size: 14px;
+			color: $gray-cb;
+		}
+	}
+
+.divider{
+	background-color: $gray-70 !important;
+    width: 2px;
+    height: 20px;
+}
+
+.customCheck{
+	display: flex;
+	align-items: center;
+}
+	
+
+	.sortSelectedBtn{
+		display: flex;
+		align-items: center;
+		border: 1px solid $white;
+		padding: 3px;
+		font-size: 12px;
+		cursor: pointer;
+		font-weight: 500;
+
+		&:hover{
+			background-color: $white;
+			color: $black;
+		}
+
+	}
+	.customCheck {
+		position: relative;
+		margin-bottom: 0px !important;
+		label {
+		  background-color: #FFFFFF;
+		  cursor: pointer;
+		  height: 18px;
+		  left: 0;
+		  position: absolute;
+		  top: 0;
+		  width: 18px;
+		  &:after {
+			border: 2px solid #fff;
+			border-top: none;
+			border-right: none;
+			content: "";
+			height: 6px;
+			left: 3px;
+			opacity: 0;
+			position: absolute;
+			top: 5px;
+			transform: rotate(-45deg);
+			width: 12px;
+		  }
+		}
+		input[type="checkbox"] {
+		  visibility: hidden;
+		  &:checked {
+			+ {
+			  label {
+				background-color: #DA291C;
+				border-color: #DA291C;
+				&:after {
+				  opacity: 1;
+				}
+			  }
+			}
+		  }
+		}
+
+		span{
+			font-size: 14px !important;
+			font-family: 300;
+		}
+	  }
+	  
+
+}

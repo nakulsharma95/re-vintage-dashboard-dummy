@@ -11,7 +11,11 @@ export default function MarketPlace() {
       <Breadcrumb />
       <Filters title="MarketPlace" />
       <DashboardCard />
-      <TabPrimary />
+      <TabPrimary 
+        title1="Active" 
+        title2="Inactive (12)"
+        title3="OLX Listing (4)"
+      />
       <SortTabs />
       <BikeCardRadio isCardVisible={true}  />
     </div>

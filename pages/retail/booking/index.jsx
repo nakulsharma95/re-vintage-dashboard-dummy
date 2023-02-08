@@ -8,7 +8,11 @@ export default function Booking() {
     <div>
       <Breadcrumb />
       <Filters title="Booking" />
-      <TabPrimary />
+      <TabPrimary 
+        title1="Booked (4)" 
+        title2="Sold"
+        title3="Returned (12)"
+      />
       <SortTabs />
     </div>
   );

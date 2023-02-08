@@ -9,7 +9,12 @@ export default function TestRiderRequests() {
     <div>
       <Breadcrumb />
       <Filters title="TestRiderRequests" />
-      <TabPrimary />
+      <TabPrimary 
+        title1="From Web (4)" 
+        title2="From OLX"
+        title3="Completed (4)"
+        title4="Dropped (4)"
+      />
       <SortTabs />
       <CompleteBikeDetail />
     </div>

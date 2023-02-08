@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
+import { Col,Button } from 'react-bootstrap';
 import style from './style.module.scss';
 
 const ViewAll = () => {
