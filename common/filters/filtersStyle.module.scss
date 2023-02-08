@@ -10,8 +10,14 @@
 	.filterHeading{
 		font-size: 24px;
 		font-weight: 500;
-		margin-bottom: 0px;
+		margin-bottom: 0.5rem;
 		text-transform: capitalize;
+	}
+	.filterSubTitle{
+		font-size: 14px;
+		font-weight: 500;
+		color: $gray-cb;
+		margin-bottom: 0px;
 	}
 
 	.filters{
@@ -62,7 +68,6 @@
 			}
 
 			&.exportButton{
-				display: none;
 				margin-right: 1.2rem;
 			}
 			&.activeBtn{

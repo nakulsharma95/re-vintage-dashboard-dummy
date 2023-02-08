@@ -19,7 +19,7 @@ export default function DetailCard() {
   return (
     <div>
       <Row>
-        <ViewAll />
+        <ViewAll title="Partial Leads" leads="(8 Leads)"/>
         {cardData.map((item, index) => (
           <Col xl={4} key={index} md={6}>
             <div className="mb-4">
@@ -67,7 +67,7 @@ export default function DetailCard() {
 
                     <div className={`${styles.detailsDivide} py-2 `}>
                       <div
-                        className={`${styles.btnthemeOuter} d-flex align-items-center}`}
+                        className={`${styles.btnthemeOuter} d-flex align-items-center`}
                       >
                         <div className={`${styles.btnthemeName} p-0 px-2`}>
                           Contact Customer

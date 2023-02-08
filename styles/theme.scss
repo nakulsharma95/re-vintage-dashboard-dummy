@@ -134,21 +134,6 @@ margin-bottom: -2px !important;
 }
 // Pagination End
 
-// ----------- cancel modal start-----------------//
-.style_cancelModal__a5uQD {
-  .modal-content {
-    background-color: #181818;
-    border-radius: 0px;
-
-    .style_cancelModalHeader__xY_cJ {
-      .btn-close {
-      }
-    }
-  }
-}
-
-// ----------- cancel modal end-----------------//
-
 // modal-style1
 .modal-style1 {
   backdrop-filter: blur(7px);
@@ -174,8 +159,8 @@ margin-bottom: -2px !important;
           display: flex !important;
           justify-content: center;
           align-items: center;
-          width: 24px;
-          height: 24px;
+          width: 28px;
+          height: 28px;
           background-color: #000000;
           backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);

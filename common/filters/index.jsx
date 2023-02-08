@@ -8,17 +8,20 @@ import filterStyle from './filtersStyle.module.scss';
 function Filters(props) {
   return (
     <div className={filterStyle.filtersMain}>
-      <h3 className={filterStyle.filterHeading}>{props.title}</h3>
+      <div>
+        <h3 className={filterStyle.filterHeading}>{props.title}</h3>
+        <p className={filterStyle.filterSubTitle}>{props.subTitle}</p>
+      </div>
       <div className={filterStyle.filters}>
-        <Button
-          variant="primary"
-          className={`${filterStyle.filterButton} ${filterStyle.exportButton} ${
-            props.export === true ? 'filtersStyle_activeBtn__9qsNe' : ''
-          }`}
-        >
-          Export data
-          <FaFileExport className={filterStyle.filterBtnIcn} />
-        </Button>
+        {props.export && (
+          <Button
+            variant="primary"
+            className={`${filterStyle.filterButton} ${filterStyle.exportButton}`}
+          >
+            Export data
+            <FaFileExport className={filterStyle.filterBtnIcn} />
+          </Button>
+        )}
         <Form.Group className={`${filterStyle.formGroup} me-3`}>
           <Form.Control
             type="text"

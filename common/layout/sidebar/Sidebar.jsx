@@ -53,11 +53,11 @@ export default function Sidebar() {
 
         <Accordion.Item className={styles.accordionItems} eventKey="2">
           <Accordion.Header className={styles.headerStyle}>
-            <Link href="/">Deal Closure</Link>
+            <Link href="/deal-closure">Deal Closure</Link>
           </Accordion.Header>
           <Accordion.Body className={styles.accordionBody}>
             <li>
-              <Link href="/">Under Negotiation</Link>
+              <Link href="/deal-closure/under-negotiation">Under Negotiation</Link>
             </li>
             <li>
               <Link href="/">Motorcycle Pickup</Link>
