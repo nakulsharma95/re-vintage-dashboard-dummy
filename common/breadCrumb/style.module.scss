@@ -2,8 +2,8 @@
 @import '../../styles/variables//mixins';
 
 .breadcrumbsMain {
-  margin-top: 70px;
-  margin-bottom: 25px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   .breadcrumbs {
     display: flex;
@@ -68,6 +68,9 @@
       &:last-child {
         border-right: none;
       }
+    }
+    .itemNone{
+      display: none;
     }
   }
 }

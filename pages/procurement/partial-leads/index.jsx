@@ -7,9 +7,14 @@ import TabPrimary from 'common/tabPrimary';
 export default function PartialLeads() {
   return (
     <div className="">
-      <Breadcrumb />
+      <Breadcrumb title="Procurement" addmoretitle="Partial Leads" />
       <Filters />
-      <TabPrimary />
+      <TabPrimary 
+        title1="Recent" 
+        title2="In-progress (4)"
+        title3="Dropped (2)"
+        title4="Self consume(By dealer)"
+      />
       <DetailCard />
       <DetailPagination />
     </div>

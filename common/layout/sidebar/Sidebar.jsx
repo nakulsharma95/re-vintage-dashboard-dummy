@@ -18,7 +18,9 @@ export default function Sidebar() {
               <Link href="/procurement/partial-leads">Partial Leads</Link>
             </li>
             <li>
-              <Link href="/procurement/evaluation-requests">Evaluation Requests</Link>
+              <Link href="/procurement/evaluation-requests">
+                Evaluation Requests
+              </Link>
             </li>
             <li>
               <Link href="/procurement/scheduled-evaluation">
@@ -26,27 +28,29 @@ export default function Sidebar() {
               </Link>
             </li>
             <li>
-              <Link href="/procurement/complete-evaluation">Completed Evaluation</Link>
+              <Link href="/procurement/complete-evaluation">
+                Completed Evaluation
+              </Link>
             </li>
           </Accordion.Body>
         </Accordion.Item>
 
         <Accordion.Item className={styles.accordionItems} eventKey="1">
           <Accordion.Header className={styles.headerStyle}>
-            <Link href="/">Bidding Portal</Link>
+            <Link href="/bidding-portal">Bidding Portal</Link>
           </Accordion.Header>
           <Accordion.Body className={styles.accordionBody}>
             <li>
-              <Link href="/">Upcoming</Link>
+              <Link href="/bidding-portal/upcoming-bids">Upcoming</Link>
             </li>
             <li>
-              <Link href="/">Active Bids</Link>
+              <Link href="/bidding-portal/active-bids">Active Bids</Link>
             </li>
             <li>
-              <Link href="/">Closed Bids</Link>
+              <Link href="/bidding-portal/closed-bids">Closed Bids</Link>
             </li>
             <li>
-              <Link href="/">Seller Portal</Link>
+              <Link href="/bidding-portal/seller-portal">Seller Portal</Link>
             </li>
           </Accordion.Body>
         </Accordion.Item>
@@ -76,20 +80,20 @@ export default function Sidebar() {
 
         <Accordion.Item className={styles.accordionItems} eventKey="3">
           <Accordion.Header className={styles.headerStyle}>
-            <Link href="/">Retail</Link>
+            <Link href="/retail">Retail</Link>
           </Accordion.Header>
           <Accordion.Body className={styles.accordionBody}>
             <li>
-              <Link href="/">Inventory</Link>
+              <Link href="/retail/inventory">Inventory</Link>
             </li>
             <li>
-              <Link href="/">Marketplace</Link>
+              <Link href="/retail/marketplace">Marketplace</Link>
             </li>
             <li>
-              <Link href="/">Test ride requests</Link>
+              <Link href="/retail/test-rider-requests">Test ride requests</Link>
             </li>
             <li>
-              <Link href="/">Test ride requests</Link>
+              <Link href="/retail/booking">Booking</Link>
             </li>
           </Accordion.Body>
         </Accordion.Item>

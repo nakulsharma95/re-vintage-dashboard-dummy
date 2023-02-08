@@ -2,8 +2,8 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { FaSearch, FaFileExport } from 'react-icons/fa';
-import { CiFilter } from 'react-icons/ci';
 import filterStyle from './filtersStyle.module.scss';
+import FilterDropdown from './FilterDropdown';
 
 function Filters(props) {
   return (
@@ -29,10 +29,7 @@ function Filters(props) {
           />
           <FaSearch className={filterStyle.inputSearch} size={15} />
         </Form.Group>
-        <Button variant="primary" className={filterStyle.filterButton}>
-          Filter
-          <CiFilter className={filterStyle.filterBtnIcn} size={17} />
-        </Button>
+        <FilterDropdown />
       </div>
     </div>
   );

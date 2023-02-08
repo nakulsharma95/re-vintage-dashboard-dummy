@@ -1,0 +1,12 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables//mixins';
+
+.toggleCardMain{
+	background-color: #282828;
+	padding: 0 1rem;
+	.sliderRound {
+		display: block !important;
+		padding-left: 0;	
+	}	
+}
+

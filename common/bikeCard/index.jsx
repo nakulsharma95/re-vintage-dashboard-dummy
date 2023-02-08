@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Card, Col, Row } from 'react-bootstrap';
-import bikeCardStyle from './bikeCardStyle.module.scss';
 import ViewAll from 'common/viewAllComp';
+import bikeCardStyle from './bikeCardStyle.module.scss';
 
 function BikeCard() {
   const cardData = [
@@ -22,12 +22,14 @@ function BikeCard() {
   ];
   return (
     <Row>
-     <ViewAll title="Partial Leads" leads="(8 Leads)" />
+      <ViewAll title="Evaluataion Requests" />
       {cardData.map((item, index) => (
         <Col md={3} key={index}>
           <Card className={bikeCardStyle.bikeCardMain}>
             <Card.Img variant="top" src={item.imageUrl} />
-            <div className={`${bikeCardStyle.bikeCardTag}`}>Evaluation Overdue</div>
+            <div className={`${bikeCardStyle.bikeCardTag}`}>
+              Evaluation Overdue
+            </div>
             <Card.Body className="px-0">
               <Card.Title className={bikeCardStyle.bkeName}>
                 2015 Classic 350 <span>- DL 6T AL 7314</span>
