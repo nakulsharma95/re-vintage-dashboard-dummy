@@ -6,10 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "build:uat": "env-cmd -f .env.uat npm run build",
-		"build:dev": "env-cmd -f .env.development npm run build",
+    "build:dev": "env-cmd -f .env.development npm run build",
     "start": "next start",
     "start:prod": "env-cmd -f .env.production next start",
-		"start:uat": "env-cmd -f .env.uat next start",
+    "start:uat": "env-cmd -f .env.uat next start",
     "lint": "next lint",
     "postinstall": "husky install"
   },
@@ -38,6 +38,8 @@
     "sonarqube-scanner": "^2.9.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
     "eslint": "^8.30.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.26.0",
