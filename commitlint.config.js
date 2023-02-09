@@ -7,7 +7,7 @@
 // refactor: A code change that neither fixes a bug nor adds a feature
 // style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 // test: Adding missing tests or correcting existing tests
-// ui: UI related changes that does not affect functionality but the visual of a website
+// ui: UI related changes that does not affect functionality but the visual of a website 
 
 module.exports = {
 	extends: ['@commitlint/config-conventional'],
