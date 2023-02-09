@@ -14,7 +14,7 @@ const MotorcyclePickup = () => {
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <SortTabs selectAllCheck />
       <Row>
-        <BikeCheckCard status isCheckBoxVisible acceptPrice pickupCheck/>
+        <BikeCheckCard isCheckBoxVisible acceptPrice pickupCheck/>
       </Row>
     </>
   );

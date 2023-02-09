@@ -48,7 +48,7 @@ function UpcomingBikeCard() {
                     <BiRupee />
                   </span>
                   <input type="text" value="1,25,000.00" name="" id="" />
-                  <BsPencil onClick={showSave} />
+                  <BsPencil onClick={showSave} className={showSaveBtn ? 'd-none' : ''} />
                   {showSaveBtn && (
                     <Button className={styles.submitBtn}>Submit</Button>
                   )}
