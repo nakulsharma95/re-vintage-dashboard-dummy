@@ -1,0 +1,10 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/variables//mixins";
+
+.bidsTitle{
+	font-size: 16px;
+	font-weight: 500;
+	color: $white;
+	margin-bottom: 1rem;
+	opacity: 0.9;
+}

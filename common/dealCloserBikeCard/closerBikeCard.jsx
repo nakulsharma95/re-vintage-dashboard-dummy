@@ -48,17 +48,37 @@ const closerBikeCard = (props) => {
               <h5 className={styles.priceTitle}>
                 Location: <span>Mumbai, Maharashtra</span>
               </h5>
-              {props.status && <div className={styles.statusBox}>
-                 <h5 className={styles.priceTitle}>Status:</h5>
-                 <h3 className={styles.boxText}>Payment detail pending</h3>
-                </div>}
+              {props.status && (
+                <div className={styles.statusBox}>
+                  <h5 className={styles.priceTitle}>Status:</h5>
+                  <h3 className={styles.boxText}>Payment detail pending</h3>
+                </div>
+              )}
+              {props.dealPrice && (
+                <Row className={`${styles.bidPrice} mx-0`}>
+                  <Col className={styles.priceTxt}>Dealer Price</Col>
+                  <Col className={styles.priceTxtValue}>₹1,25,000.00</Col>
+                </Row>
+              )}
+              {props.reason && (
+                <Row className={`${styles.bikeDetail} mx-0`}>
+                  <Col md={12}>
+                    <h5 className={styles.bikeDetailTitle}>Reason</h5>
+                    <h6 className={styles.bikeDetailSubTitle}>Customer not interested</h6>
+                  </Col>
+                </Row>
+              )}
               <div className={styles.btnBox}>
                 <Button variant="primary" className={styles.bikeCardBtn}>
                   VIEW DETAILS
                 </Button>
               </div>
             </Card.Body>
-            <Card.Footer className={styles.cardFooter}>Contact CSE</Card.Footer>
+            {props.contactCSE && (
+              <Card.Footer className={styles.cardFooter}>
+                Contact CSE
+              </Card.Footer>
+            )}
           </Card>
         </Col>
       ))}

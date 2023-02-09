@@ -67,13 +67,13 @@ export default function Sidebar() {
               <Link href="/deal-closure/motorcycle-pickup">Motorcycle Pickup</Link>
             </li>
             <li>
-              <Link href="/">Payment Pending</Link>
+              <Link href="/deal-closure/payment-pending">Payment Pending</Link>
             </li>
             <li>
-              <Link href="/">Procured</Link>
+              <Link href="/deal-closure/procured">Procured</Link>
             </li>
             <li>
-              <Link href="/">Dropped</Link>
+              <Link href="/deal-closure/dropped">Dropped</Link>
             </li>
           </Accordion.Body>
         </Accordion.Item>

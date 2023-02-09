@@ -1,0 +1,31 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/variables//mixins";
+
+.sortByMain{
+	@include d-flex(space-between, center);
+	margin-bottom: 1rem;
+	.sortByTitle{
+		font-size: 16px;
+		font-weight: 500;
+		color: $white;
+		opacity: 0.9;
+	}
+	.sortByTxt{
+		font-size: 14;
+		font-weight: 400;
+		color: $gray-cb;
+		margin-right: 0.5rem;
+	}
+	.sortByBtn{
+		padding: 0.2rem 0.8rem;
+		color: $white;
+		font-size: 14px;
+		font-weight: 400;
+		background: $gray-28;
+		border: 0;
+		border-radius: 15px;
+		&:active{
+			background: $gray-28;
+		}
+	}
+}
