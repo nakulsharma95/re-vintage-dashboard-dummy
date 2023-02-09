@@ -8,10 +8,14 @@ import TabPrimary from 'common/tabPrimary';
 export default function MarketPlace() {
   return (
     <div>
-      <Breadcrumb />
+      <Breadcrumb title="Retail" addmoretitle="Inventory" />
       <Filters title="MarketPlace" />
       <DashboardCard />
-      <TabPrimary />
+      <TabPrimary 
+        title1="Active" 
+        title2="Inactive (12)"
+        title3="OLX Listing (4)"
+      />
       <SortTabs />
       <BikeCardRadio isCardVisible={true}  />
     </div>
