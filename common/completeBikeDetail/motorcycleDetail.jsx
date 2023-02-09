@@ -5,7 +5,7 @@ import styles from './style.module.scss';
 const motorcycleDetail = ({bkeName}) => {
   return (
     <>
-      <div className={`${styles.completeBorderRight} px-3`}>
+      <div className={`${styles.motorcycleDetail} ${styles.completeBorderRight} px-3`}>
         <h4 className={styles.motorcycleTitle}>
           Motorcycle details <span>- FB29FH9219HR1</span>
         </h4>

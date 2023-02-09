@@ -6,7 +6,7 @@ import { AiOutlineRight } from 'react-icons/ai';
 
 const EvaluationDetail = () => {
   return (
-    <div>
+    <div className={styles.evaluationDetail}>
       <h4 className={styles.evalTitle}>Evaluation Details</h4>
       <h5 className={styles.evalSubTitle}>Evaluation Location</h5>
       <p className={styles.evalText}>Neel Motors, Lajpat Nagar, Delhi</p>
