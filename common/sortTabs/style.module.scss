@@ -1,2 +1,86 @@
 @import '../../styles/variables/colors';
 @import '../../styles/variables//mixins';
+.sortTabMain{
+	@include d-flex(space-between, center); 
+	margin-bottom: 1rem;
+	.sortTabFilter{
+		display: flex;
+		align-items: center; 
+		.sortTabFilterBtn{
+			color: $white;
+			opacity: 0.7;
+			font-size: 12px;
+			font-weight: 500;
+			padding: 0rem 0.5rem;
+			margin-bottom: 0rem;
+			border-left: 1px solid $gray-70;
+			border-right: 1px solid $gray-70;
+			cursor: pointer;
+			&:first-child{
+				border: 0;
+				padding-left: 0;
+			}
+			&:last-child{
+				border: 0;
+				padding-right: 0;
+			}
+            &.activeTab{
+				color: $theme-red-da;
+				opacity: 1;
+			}
+		}
+	}
+	.sortTabCheck{
+		display: flex;
+		align-items: center;
+		.tabCheckTitle{
+			color: $white;
+			font-size: 16px;
+			font-weight: 500;
+			padding-right: 1rem;
+			border-right: 1px solid $gray-70;
+		}
+		.tabCheck{
+			margin-left: 1rem;
+			margin-right: 1rem;
+			label{
+				color: $gray-cb;
+				font-size: 14px;
+				font-weight: 400;
+			}
+		}
+		.submitCheckBBtn{
+			padding: 0.3rem 0.8rem;
+			display: flex;
+			align-items: center;
+			height: 25px;
+			color: $white;
+			font-size: 12px;
+			background: transparent;
+			border: 1px solid $white;
+			border-radius: 0px;
+			transition: all 0.3s ease;
+			.checkBtnIcon{
+				font-size: 20px;
+			}
+			&:hover{
+				color: $black;
+				background: $white;
+			}
+		}
+	}
+	.sortTabBtnBox{
+		.viewTabBtn{
+			padding: 0.3rem 0.5rem;
+			font-size: 20px;
+			background: transparent;
+			border: 0px;
+			&:first-child{
+				color: $gray-BF;
+			}
+			&:first-child{
+				color: $gray-70;
+			}
+		}
+	}
+}

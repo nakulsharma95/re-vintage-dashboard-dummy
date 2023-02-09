@@ -6,7 +6,7 @@ import React from 'react'
 const DealClosure = () => {
   return (
 	<>
-	  <Breadcrumb />
+	  <Breadcrumb title="Deal Closure"/>
 	  <Filters title="Deal Closure" subTitle="Please fill all the necessary details"/>
 	  <div className='bottom-white-border'></div>
 	  <DealBikeCard />

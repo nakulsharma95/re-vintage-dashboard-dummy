@@ -64,7 +64,7 @@ export default function Sidebar() {
               <Link href="/deal-closure/under-negotiation">Under Negotiation</Link>
             </li>
             <li>
-              <Link href="/">Motorcycle Pickup</Link>
+              <Link href="/deal-closure/motorcycle-pickup">Motorcycle Pickup</Link>
             </li>
             <li>
               <Link href="/">Payment Pending</Link>

@@ -15,30 +15,10 @@
   border-radius: 0px;
 
   .compBikeCardBody {
-	padding: 0px;
-    .compBikeCardSliderMain {
-      .compBikeCardSlider {
-		max-height: 315px;
-		min-height: 315px;
-        .compBikeCardSlides {
-			&:focus-visible{
-				outline: none;
-			}
-          img {
-            width: 100%;
-            max-height: 315px;
-            min-height: 315px;
-            object-fit: cover;
-          }
-        }
-        .slick-thumb {
-          margin-top: 10px;
-        }
-      }
-    }
+    padding: 0px;
     .motorcycleDetail {
-		padding-top: 1.5rem;
-		padding-bottom: 1.5rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
       .motorcycleTitle {
         color: $gray-cb;
         font-size: 12px;
@@ -99,7 +79,7 @@
       }
     }
     .evaluationDetail {
-		padding: 1.5rem;
+      padding: 1.5rem;
       .evalTitle {
         color: $gray-cb;
         font-size: 12px;
@@ -128,7 +108,7 @@
           border: 2px solid $theme-red-da;
           height: 40px;
           background-color: $theme-pink-da;
-        
+
           .btnthemeName {
             color: $white;
             border-radius: 0;
@@ -138,7 +118,7 @@
             font-size: 12px;
             cursor: pointer;
           }
-        
+
           .btnthemeIcon {
             background-color: $theme-red-da;
             height: 100%;
@@ -186,13 +166,12 @@
   .completeBorderBottom {
     border: 1px solid $black-40;
   }
-  .completeBorderRight{
+  .completeBorderRight {
     border-right: 1px solid $gray-70;
   }
 }
-.detailsDivide{
+.detailsDivide {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
- }
+}

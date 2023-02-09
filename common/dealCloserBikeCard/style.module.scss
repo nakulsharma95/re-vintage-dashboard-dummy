@@ -10,7 +10,52 @@
     border-radius: 0px;
     object-fit: contain;
   }
+  .bikeCardCheck {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    margin-left: 10px;
 
+    .customCheck {
+      position: relative;
+      label {
+        background-color: #ffffff;
+        cursor: pointer;
+        height: 18px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 18px;
+        &:after {
+          border: 2px solid #fff;
+          border-top: none;
+          border-right: none;
+          content: '';
+          height: 6px;
+          left: 3px;
+          opacity: 0;
+          position: absolute;
+          top: 5px;
+          transform: rotate(-45deg);
+          width: 12px;
+        }
+      }
+      input[type='checkbox'] {
+        visibility: hidden;
+        &:checked {
+          + {
+            label {
+              background-color: #da291c;
+              border-color: #da291c;
+              &:after {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .bikeCardTag {
     position: absolute;
     left: -6px;
@@ -34,7 +79,7 @@
   .bkeName {
     font-size: 16px;
     color: $white;
-    padding: 0 1rem;
+    padding: 0rem 0.8rem;
     margin-bottom: 15px;
     span {
       font-size: 14px;
@@ -46,7 +91,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 0.8rem;
     background-color: #333333;
     .priceTxt {
       font-size: 12px;
@@ -61,6 +106,55 @@
       color: $white;
       padding: 0;
       margin-bottom: 0px;
+    }
+    .priceInput{
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 0px;
+      input{
+        background-color: $gray-2c;
+        padding: 5px;
+        padding-left: 18px;
+        width: 100%;
+        max-width: 105px;
+        font-size: 13px;
+        font-weight: 600;
+        outline: none;
+        border: none;
+        color: #fff;
+      }
+      button.submitBtn{
+        display:inline-block;
+        background-color: transparent;
+        border: 1px solid $gray-fd;
+        border-radius: 0;
+        height: 28px;
+        font-size: 11px;
+        text-transform: uppercase;
+        padding: 0 8px;
+        margin-left: 10px;
+        transition: all 0.5s;
+        &:hover{
+          background-color: $gray-fd;
+          color: $gray-3;
+        }
+      }
+      svg{
+        cursor: pointer;
+        margin-left: 0.8rem;
+        display:inline-block;
+        width: 28px;
+      }
+      span{
+        position: absolute;
+        top: 3px;
+        left: -2px;
+        svg{
+          margin-left: 0;
+          font-size: 16px;
+        }
+      }
     }
   }
   .bikeDetail {
@@ -126,15 +220,15 @@
     margin-bottom: 15px;
   }
   .statusBox {
-    .priceTitle{
+    .priceTitle {
       position: relative;
       color: $gray-cb;
       padding: 0rem 1.4rem;
       font-size: 12px;
       font-weight: 500;
       margin-bottom: 0.5rem;
-      &::before{
-        content: "";
+      &::before {
+        content: '';
         position: absolute;
         top: 50%;
         left: 8px;
@@ -154,6 +248,7 @@
     }
   }
   .btnBox {
+    @include d-flex(space-between, center);
     padding: 0rem 0.8rem;
 
     .bikeCardBtn {

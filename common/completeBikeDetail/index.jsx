@@ -2,25 +2,10 @@ import React from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
 import styles from './style.module.scss';
 import Button from 'react-bootstrap/Button';
-import Slider from 'react-slick';
 import { AiOutlineRight } from 'react-icons/ai';
+import BikeSlider from '../bikeSlider';
 
 const CompleteBikeDetail = () => {
-  const settings = {
-    customPaging: function (i) {
-      return (
-        <a>
-          <img src={`/images/sliderImg/bike${i}.png`} />
-        </a>
-      );
-    },
-    dots: true,
-    dotsClass: 'slick-dots slick-thumb',
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   const completeBikeName = [
     {
       bkeName: '2015 Classic 350',
@@ -38,14 +23,7 @@ const CompleteBikeDetail = () => {
             <Card.Body className={`${styles.compBikeCardBody}`}>
               <Row>
                 <Col md={4} className={styles.compBikeCardSliderMain}>
-                  <Slider {...settings} className={styles.compBikeCardSlider}>
-                    <div className={styles.compBikeCardSlides}>
-                      <img src="/images/sliderImg/bike0.png" />
-                    </div>
-                    <div className={styles.compBikeCardSlides}>
-                      <img src="/images/sliderImg/bike1.png" />
-                    </div>
-                  </Slider>
+                  <BikeSlider />
                 </Col>
                 <Col md={4} className={styles.motorcycleDetail}>
                   <div className={`${styles.completeBorderRight} px-3`}>

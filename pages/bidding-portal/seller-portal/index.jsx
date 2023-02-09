@@ -7,10 +7,10 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { BiRupee } from 'react-icons/bi';
 import { FiCopy } from 'react-icons/fi';
-import { BsCheck2, BsGrid, BsListUl } from "react-icons/bs";
 import styles from '../../../common/biddingBikeCard/style.module.scss';
 import ArrowButton from 'common/buttons/ArrowButton';
 import BiddingTimer from 'common/biddingtimer';
+import SortTabs from 'common/sortTabs';
 
 
 export default function ClosedBids() {
@@ -39,19 +39,7 @@ const activeBikeData = [
         title1="Today" 
         title2="Next Bidding (31 Dec)"
       />
-	  <div className="d-flex align-items-center justify-content-between mb-3">
-		<div className="d-flex align-items-center">
-			<div>25 Bids Available |</div>
-			<div className={styles.selectAll}>
-				<Form.Check type="checkbox" label="Select All -" />
-				<Button variant=""><BsCheck2 /> Submit Selected</Button>
-			</div>
-		</div>
-		<div className="d-flex align-items-center">
-			<Button variant="" className={styles.gridListBtn}><BsGrid /></Button>
-			<Button variant="" className={styles.gridListBtn}><BsListUl /></Button>
-		</div>
-	  </div>
+	  <SortTabs selectAllCheck />
 	  <Row>
 		{activeBikeData.map((item, index) => (      
 			<Col md={3} key={index}>

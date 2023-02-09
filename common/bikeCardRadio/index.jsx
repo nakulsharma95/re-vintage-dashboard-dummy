@@ -29,7 +29,6 @@ function BikeCardRadio({ isCheckBoxVisible, isButtonVisible, isCardVisible }) {
             <Card.Img variant="top" src={item.imageUrl} />
             {isCheckBoxVisible && (
               <div className={`${styles.bikeCardCheck}`}>
-                {" "}
                 <Form.Group
                   className={styles.customCheck}
                   controlId={`${index}form`}
