@@ -26,10 +26,10 @@ const CompleteBikeDetail = () => {
                 <Col md={4} className={styles.compBikeCardSliderMain}>
                   <BikeSlider />
                 </Col>
-                <Col md={4} className={styles.motorcycleDetail}>
+                <Col md={4}>
                   <MotorcycleDetailCard bikeName={item} />
                 </Col>
-                <Col md={4} className={styles.evaluationDetail}>
+                <Col md={4}>
                   <EvaluationDetail />
                 </Col>
               </Row>

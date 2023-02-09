@@ -1,4 +1,4 @@
-import ActiveBikeCard from 'common/biddingBikeCard/ActiveBikeCard';
+import ActiveBikeCard from '../../../common/biddingBikeCard/ActiveBikeCard';
 import Breadcrumb from 'common/breadCrumb';
 import DetailPagination from 'common/detailPagination';
 import Filters from 'common/filters';
