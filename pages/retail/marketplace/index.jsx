@@ -8,7 +8,7 @@ import TabPrimary from 'common/tabPrimary';
 export default function MarketPlace() {
   return (
     <div>
-      <Breadcrumb />
+      <Breadcrumb title="Retail" addmoretitle="Inventory" />
       <Filters title="MarketPlace" />
       <DashboardCard />
       <TabPrimary 

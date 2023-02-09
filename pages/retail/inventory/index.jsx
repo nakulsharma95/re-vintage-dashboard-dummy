@@ -8,7 +8,7 @@ import TabPrimary from "common/tabPrimary";
 export default function Inventory() {
   return (
     <div>
-      <Breadcrumb />
+       <Breadcrumb title="Retail" addmoretitle="Inventory" />
       <Filters title="Inventory" />
       <DashboardCard />
       <TabPrimary 

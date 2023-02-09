@@ -6,7 +6,7 @@ import TabPrimary from "common/tabPrimary";
 export default function Booking() {
   return (
     <div>
-      <Breadcrumb />
+     <Breadcrumb title="Retail" addmoretitle="Sold" />
       <Filters title="Booking" />
       <TabPrimary 
         title1="Booked (4)" 
