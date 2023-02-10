@@ -1,11 +1,11 @@
 import { Image } from 'react-bootstrap';
 import { FiClock } from 'react-icons/fi';
 import Link from 'next/link';
-import BikeDetailTitle from '~/components/common/detailHeader';
-import Tags from '~/components/common/tags';
+import BikeDetailTitle from '../../common/detailHeader';
+import Tags from '../../common/tags';
 import styles from './style.module.scss';
 import ManaualEntry from '../manualentry';
-import ExportButton from '~/components/common/buttons/ExportButton';
+import ExportButton from '../../common/buttons/ExportButton';
 
 export default function BikeHistory() {
   return (

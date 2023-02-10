@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Row, Col, Card } from 'react-bootstrap/';
 import Button from 'react-bootstrap/Button';
 import { FaRegCalendar, FaPlus } from 'react-icons/fa';
-import CancelModal from '~/components/modals/cancelModal';
-import RescheduleModal from '~/components/modals/rescheduleModal';
+import CancelModal from '../../modals/cancelModal';
+import RescheduleModal from '../../modals/rescheduleModal';
 import styles from './style.module.scss';
 
 function EvaluationRequestDetailCard() {

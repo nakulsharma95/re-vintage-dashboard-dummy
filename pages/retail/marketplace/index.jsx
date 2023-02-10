@@ -1,9 +1,9 @@
-import BikeCardRadio from '~/components/common/cardCheckbox';
-import Breadcrumb from '~/components/common/breadcrumbPrimary';
-import DashboardCard from '~/components/common/dashboardCard';
-import Filters from '~/components/common/filters';
-import SortTabs from '~/components/common/sortTabs';
-import TabPrimary from '~/components/common/tabPrimary';
+import BikeCardRadio from '../../../components/common/cardCheckbox';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import DashboardCard from '../../../components/common/dashboardCard';
+import Filters from '../../../components/common/filters';
+import SortTabs from '../../../components/common/sortTabs';
+import TabPrimary from '../../../components/common/tabPrimary';
 
 export default function MarketPlace() {
   return (
@@ -11,13 +11,13 @@ export default function MarketPlace() {
       <Breadcrumb title="Retail" addmoretitle="Inventory" />
       <Filters title="MarketPlace" />
       <DashboardCard />
-      <TabPrimary 
-        title1="Active" 
+      <TabPrimary
+        title1="Active"
         title2="Inactive (12)"
         title3="OLX Listing (4)"
       />
       <SortTabs />
-      <BikeCardRadio isCardVisible={true}  />
+      <BikeCardRadio isCardVisible />
     </div>
   );
 }

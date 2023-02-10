@@ -10,7 +10,7 @@ import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import styles from './style.module.scss';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
 import SortTabs from '../../../components/common/sortTabs';
-import ArrowButton from '~/components/common/buttons/ArrowButton';
+import ArrowButton from '../../../components/common/buttons/ArrowButton';
 
 export default function ClosedBids() {
   const activeBikeData = [

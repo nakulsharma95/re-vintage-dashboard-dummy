@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import { Card, Col, Row, Form } from 'react-bootstrap';
 import { AiOutlineRight } from 'react-icons/ai';
 import styles from './style.module.scss';
-import ToggleSwitchCard from '~/components/retails/toggleSwitchCard';
+import ToggleSwitchCard from '../../retails/toggleSwitchCard';
 
 function BikeCardRadio({ isCheckBoxVisible, isButtonVisible, isCardVisible }) {
   const cardData = [
