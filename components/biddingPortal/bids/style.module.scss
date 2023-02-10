@@ -1,0 +1,96 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/mixins';
+
+.allBidsMain{
+	display: flex;
+	margin: 15px 0;
+	.bidsCols{
+		width: 50%;
+		background-color: $gray-18;
+		border-right: 1px solid $black-40;
+		&:last-child{
+			border-right: none;
+		}
+		.title{
+			background-color: $gray-28;
+			font-size: 16px;
+			padding: 10px 30px;
+		}
+		.bidsPanel::-webkit-scrollbar {
+			width: 8px;
+		}
+		
+		.bidsPanel::-webkit-scrollbar-track {
+			box-shadow: inset 0 0 10px $gray-3;
+		}
+		
+		.bidsPanel::-webkit-scrollbar-thumb {
+			background-color: $theme-red-da;
+			outline: 1px solid #303030;
+		}
+		.bidsPanel{
+			max-height: 490px;
+			overflow-y: auto;
+			.bidsList{
+				display: flex;
+				justify-content: space-between;
+				margin: 0 25px;
+				padding: 15px 0;
+				border-bottom: 1px solid $gray-28;
+				&:last-child{
+					border-bottom: none;
+				}
+				.bidsLeft{
+					display: flex;
+					.bidsImg{
+						margin-right:12px;
+					}
+				}
+				.bidsSmTitle{
+					color: $gray-a7;
+					font-size: 12px;
+				}
+				.bidsTitle{
+					span{
+						display: inline;
+						font-size: 16px;
+						position: relative;
+						left: 3px;
+					}
+				}
+				.bidsRight{
+					.bidsSmTitle{
+						text-align: right;
+					}
+				}
+
+				.bidsBtn{
+					display: inline-block;
+					width: 100%;
+					max-width: 100px;
+					display: flex;
+					flex-wrap: wrap;
+					button{
+						width: 100%;
+						border: 1px solid #ccc;
+						color: $white;
+						white-space: nowrap;
+						border-radius: 0;
+						padding: 4px 10px;
+						font-size: 12px;
+						margin: 3px 0;
+						transition: all 0.5s;
+						&:hover{
+							background-color: $theme-danger;
+							border-color: $theme-danger;
+						}
+						img{
+							display: inline-block;
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

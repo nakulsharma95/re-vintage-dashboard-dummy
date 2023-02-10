@@ -1,9 +1,9 @@
-import BikeCardRadio from 'common/bikeCardRadio';
-import Breadcrumb from 'common/breadCrumb';
-import DashboardCard from 'common/dashboardCard';
-import Filters from 'common/filters';
-import SortTabs from 'common/sortTabs';
-import TabPrimary from 'common/tabPrimary';
+import BikeCardRadio from '~/components/common/cardCheckbox';
+import Breadcrumb from '~/components/common/breadcrumbPrimary';
+import DashboardCard from '~/components/common/dashboardCard';
+import Filters from '~/components/common/filters';
+import SortTabs from '~/components/common/sortTabs';
+import TabPrimary from '~/components/common/tabPrimary';
 
 export default function MarketPlace() {
   return (

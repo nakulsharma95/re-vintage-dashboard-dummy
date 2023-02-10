@@ -1,0 +1,215 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/variables//mixins';
+
+.filtersMain{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 5px;
+	margin-top: 20px;
+
+	.filterHeading{
+		font-size: 24px;
+		font-weight: 500;
+		margin-bottom: 0.5rem;
+		text-transform: capitalize;
+	}
+	.filterSubTitle{
+		font-size: 14px;
+		font-weight: 500;
+		color: $gray-cb;
+		margin-bottom: 0px;
+	}
+
+	.filters{
+		display: flex;
+		align-items: center;
+		padding-bottom: 10px;
+
+		.formGroup{
+			position: relative;
+			
+			input{
+				min-width: 340px;
+				font-size: 12px;
+				min-height: 42px;
+				color: #A7A7A7;
+				padding-right: 2.5rem;
+				background: transparent;
+				border-radius: 0;
+				border: 1px solid #707070;
+
+				&:focus{
+					box-shadow: none;
+				}
+			}
+			.inputSearch{
+				position: absolute;
+				top: 52%;
+				right: 4%;
+				color: #A7A7A7;
+				font-size: 16px;
+				transform: translateY(-50%);
+				cursor: pointer;
+			}
+		}
+		.filterButton{
+			padding: 0.375rem 1.2rem;
+			min-height: 42px;
+			color: #A7A7A7;
+			background: transparent;
+			border-radius: 0;
+			border: 1px solid #707070;
+			font-size: 12px;
+
+			.filterBtnIcn{
+				margin-left: 15px;
+				font-size: 18px;
+				font-weight: bold;
+			}
+
+			&.exportButton{
+				margin-right: 1.2rem;
+			}
+			&.activeBtn{
+				display: block;
+			}
+		}
+	}
+}
+
+.filterDropdown{
+	.dropdownMenu{
+		transform: inherit !important;
+		right: 0 !important;
+		left: inherit !important;
+		top: 50px !important;
+		border-radius: 0;
+		width: 100%;
+		max-width: 280px;
+		min-width: 280px;
+		.titleFlex{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 2px solid $theme-red-da;
+			padding: 8px 10px;
+			.title{
+				font-size: 16px;
+				font-weight: 600;
+			}
+			button{
+				padding: 0;
+				outline: none;
+			}
+		}
+		.filterPanelMain{
+			.title{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				font-weight: 600;
+				margin-bottom: 8px;
+			}
+			.filterPanel{
+				border-bottom: 1px solid $gray-c;
+				padding: 10px 0;
+				margin: 0 15px;
+				position: relative;
+				&:nth-last-child(02){
+					border-bottom: none;
+				}
+				select{
+					border-radius: 0;
+					outline: none;
+					box-shadow: none;
+				}
+				input.formControl{
+					border-radius: 0;
+					outline: none;
+					box-shadow: none;
+					padding-right: 30px;
+					&:focus::placeholder{
+						opacity: 0;
+					}
+				}
+				.searchBtn{
+					padding: 0;
+					position: absolute;
+					right: 10px;
+    				top: 43px;
+					outline: none;
+				}
+			}
+			.filterBtnCols{
+				border-top: 1px solid $gray-8;
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+.bidPricDropdown{
+	.dropdownToggle{
+		padding: 0.375rem 1.2rem;
+		min-height: 42px;
+		color: #A7A7A7;
+		background: transparent;
+		border-radius: 0;
+		border: 1px solid #707070;
+		font-size: 12px;
+		margin-right: 1.2rem;
+		outline: none;
+		&::after{
+			display: none;
+		}
+		svg{
+			margin-left: 10px;
+			font-size: 15px;
+		}
+	}
+	.bidPriceDropdownMenu{
+		transform: inherit !important;
+		left: 0 !important;
+		right: inherit !important;
+		top: 45px !important;
+		width: 100%;
+		min-width: 280px;
+		border-radius: 0;
+		padding: 0;
+		.bidPriceValue{
+			display: flex;
+			align-items: center;
+			padding: 8px 15px;
+			.title{
+				font-weight: 600;
+				span{
+					margin-left: 5px;
+				}
+			}
+			input{
+				border-radius: 0;
+				font-weight: 500;
+				width: 120px;
+				font-size: 12px;
+				margin: 0 8px;
+				outline: none;
+				border-color: $gray-c;
+				&:focus{
+					outline: none;
+					box-shadow: none;
+					border-color: $gray-c;
+				}
+			}
+		}
+		.bidPricebtn{
+			border-top: 1px solid $gray-65;
+		}
+	}
+	&.bidPriceButton{
+		display: none;
+	}
+	&.activeBtn{
+		display: block;
+	}
+}

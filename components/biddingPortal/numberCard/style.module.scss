@@ -1,0 +1,23 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.numberCardMain{
+	background-color: $gray-28;
+	margin: 15px 0;
+	padding: 20px;
+	min-height: 140px;
+	.number{
+		font-size: 24px;
+		font-weight: 600;
+		display: block;
+		margin: 5px 0 0;
+	}
+	.iconImg{
+		display: inline-block;
+		margin-bottom: 10px;
+		img{
+			width: 100%;
+			max-width: 28px;
+		}
+	}
+}

@@ -1,13 +1,13 @@
-import Breadcrumb from 'common/breadCrumb';
-import Filters from 'common/filters';
-import TabPrimary from 'common/tabPrimary';
 import React from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
+import Breadcrumb from '~/components/common/breadcrumbPrimary';
+import Filters from '~/components/common/filters';
+import TabPrimary from '~/components/common/tabPrimary';
 import styles from './style.module.scss';
-import UnderBikeCard from 'common/dealCloserBikeCard/closerBikeCard';
-import SortTabs from 'common/sortTabs';
+import SortTabs from '~/components/common/sortTabs';
+import CloserBikeCard from '~/components/dealClosure/closerCard';
 
-const UnderNegotiation = () => {
+function UnderNegotiation() {
   return (
     <>
       <Breadcrumb title="Deal Closure" addmoretitle="Under Negotiation" />
@@ -15,7 +15,7 @@ const UnderNegotiation = () => {
       <TabPrimary title1="OpDealer (25)en" title2="Seller Portal (12)" />
       <Row>
         <SortTabs />
-        <UnderBikeCard status />
+        <CloserBikeCard status />
         <Col md={12} className="text-center pt-2 pb-4">
           <Button variant="primary" className={styles.loadMoreBtn}>
             Load More
@@ -24,6 +24,6 @@ const UnderNegotiation = () => {
       </Row>
     </>
   );
-};
+}
 
 export default UnderNegotiation;

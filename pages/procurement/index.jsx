@@ -1,7 +1,7 @@
-import BikeCard from 'common/bikeCard';
-import Breadcrumb from 'common/breadCrumb';
-import DetailCard from 'common/detailCard';
-import Filters from 'common/filters';
+import BikeCard from '~/components/procurements/bikeCard';
+import Breadcrumb from '~/components/common/breadcrumbPrimary';
+import DetailCard from '~/components/procurements/detailCard';
+import Filters from '~/components/common/filters';
 
 export default function Procurement() {
   return (

@@ -1,0 +1,64 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.evaluationDetail {
+  padding: 1.5rem;
+  .evalTitle {
+    color: $gray-cb;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .evalSubTitle {
+    color: $gray-a7;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .evalText {
+    color: $white;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+  }
+  .evalBtnBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid $gray-70;
+    .btnthemeOuter {
+      border: 2px solid $theme-red-da;
+      height: 40px;
+      background-color: $theme-pink-da;
+
+      .btnthemeName {
+        color: $white;
+        border-radius: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      .btnthemeIcon {
+        background-color: $theme-red-da;
+        height: 100%;
+        font-size: 19px;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+    .downloadBtn {
+      min-height: 42px;
+      margin-left: 0.8rem;
+      font-size: 14px;
+      font-weight: 500;
+      background: transparent;
+      border: 1px solid $gray-70;
+      border-radius: 0;
+    }
+  }
+}
+

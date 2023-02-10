@@ -1,10 +1,10 @@
 import { Row, Col } from 'react-bootstrap';
-import BiddingOverview from 'common/overviewCard';
-import Breadcrumb from 'common/breadCrumb';
-import Filters from 'common/filters';
-import NumberCard from 'common/numberCard';
-import BiddingBikeCard from 'common/biddingBikeCard';
-import BiddingTimer from 'common/biddingtimer';
+import BiddingOverview from '../../components/biddingPortal/overviewCard';
+import Breadcrumb from '../../components/common/breadcrumbPrimary';
+import Filters from '../../components/common/filters';
+import NumberCard from '../../components/biddingPortal/numberCard';
+import BiddingBikeCard from '../../components/biddingPortal';
+import BiddingTimer from '../../components/biddingPortal/biddingTimer';
 
 export default function Procurement() {
   return (

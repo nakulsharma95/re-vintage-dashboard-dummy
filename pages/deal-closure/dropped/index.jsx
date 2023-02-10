@@ -1,13 +1,13 @@
-import Breadcrumb from '../../../common/breadCrumb';
-import Filters from '../../../common/filters';
 import React from 'react';
 import { Row, Button } from 'react-bootstrap';
-import TabPrimary from '../../../common/tabPrimary';
-import styles from './style.module.scss';
-import BikeCard from 'common/dealCloserBikeCard/closerBikeCard';
 import { BiChevronDown } from 'react-icons/bi';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import Filters from '../../../components/common/filters';
+import TabPrimary from '../../../components/common/tabPrimary';
+import styles from './style.module.scss';
+import CloserBikeCard from '~/components/dealClosure/closerCard';
 
-const PaymentsPending = () => {
+function PaymentsPending() {
   return (
     <>
       <Breadcrumb title="Deal Closure" addmoretitle="Payment Pending" />
@@ -23,10 +23,10 @@ const PaymentsPending = () => {
         </div>
       </div>
       <Row>
-        <BikeCard contactCSE reason />
+        <CloserBikeCard contactCSE reason />
       </Row>
     </>
   );
-};
+}
 
 export default PaymentsPending;

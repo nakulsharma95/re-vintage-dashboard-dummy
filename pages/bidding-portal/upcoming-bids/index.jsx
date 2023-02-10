@@ -1,9 +1,9 @@
-import UpcomingBikeCard from 'common/biddingBikeCard/UpcomingBikeCard';
-import Breadcrumb from 'common/breadCrumb';
-import DetailPagination from 'common/detailPagination';
-import Filters from 'common/filters';
-import TabPrimary from 'common/tabPrimary';
-import BiddingTimer from 'common/biddingtimer';
+import UpcomingBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import DetailPagination from '../../../components/common/paginationPrimary';
+import Filters from '../../../components/common/filters';
+import TabPrimary from '../../../components/common/tabPrimary';
+import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
 
 export default function UpcomingBids() {
   return (
@@ -12,13 +12,10 @@ export default function UpcomingBids() {
         <Breadcrumb title="Bidding Portal" addmoretitle="Upcoming Bids" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
-      <Filters title="Upcoming Bids" />
-      <TabPrimary 
-        title1="Today" 
-        title2="Next Bidding (31 Dec)"
-      />
+      <Filters title="Upcoming Bids" export bidPrice />
+      <TabPrimary title1="Today" title2="Next Bidding (31 Dec)" />
       <div className="mb-3">25 Bids Available</div>
-	    <UpcomingBikeCard />
+      <UpcomingBikeCard baseprice arrowBtn />
       <DetailPagination className="mt-3" />
     </div>
   );

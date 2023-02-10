@@ -1,12 +1,12 @@
-import Breadcrumb from '../../../common/breadCrumb';
-import Filters from '../../../common/filters';
 import React from 'react';
 import { Row } from 'react-bootstrap';
-import TabPrimary from '../../../common/tabPrimary';
+import CloserBikeCard from '~/components/dealClosure/closerCard';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import Filters from '../../../components/common/filters';
+import TabPrimary from '../../../components/common/tabPrimary';
 import styles from './style.module.scss';
-import BikeCard from 'common/dealCloserBikeCard/closerBikeCard';
 
-const PaymentsPending = () => {
+function PaymentsPending() {
   return (
     <>
       <Breadcrumb title="Deal Closure" addmoretitle="Payment Pending" />
@@ -14,10 +14,10 @@ const PaymentsPending = () => {
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <h4 className={styles.bidsTitle}>8 Leads</h4>
       <Row>
-        <BikeCard dealPrice/>
+        <CloserBikeCard dealPrice />
       </Row>
     </>
   );
-};
+}
 
 export default PaymentsPending;

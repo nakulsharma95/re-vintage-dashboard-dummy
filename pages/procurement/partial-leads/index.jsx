@@ -1,8 +1,8 @@
-import Breadcrumb from 'common/breadCrumb';
-import DetailCard from 'common/detailCard';
-import DetailPagination from 'common/detailPagination';
-import Filters from 'common/filters';
-import TabPrimary from 'common/tabPrimary';
+import Breadcrumb from '~/components/common/breadcrumbPrimary';
+import DetailCard from '~/components/procurements/detailCard';
+import DetailPagination from '~/components/common/paginationPrimary';
+import Filters from '~/components/common/filters';
+import TabPrimary from '~/components/common/tabPrimary';
 
 export default function PartialLeads() {
   return (

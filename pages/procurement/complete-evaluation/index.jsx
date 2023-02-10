@@ -1,7 +1,7 @@
 import React from 'react';
-import Filters from 'common/filters';
-import CompleteBikeDetail from 'common/completeBikeDetail';
-import Breadcrumb from 'common/breadCrumb';
+import Filters from '~/components/common/filters';
+import CompleteBikeDetail from '~/components/procurements/completeEvalutationCard';
+import Breadcrumb from '~/components/common/breadcrumbPrimary';
 
 function CompleteEvaluation() {
   return (

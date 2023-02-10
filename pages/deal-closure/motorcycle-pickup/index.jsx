@@ -1,12 +1,11 @@
 import React from 'react';
-import Breadcrumb from 'common/breadCrumb';
-import Filters from 'common/filters';
 import { Row } from 'react-bootstrap';
-import TabPrimary from 'common/tabPrimary';
-import SortTabs from 'common/sortTabs';
-import BikeCheckCard from 'common/dealCloserBikeCard/closerBikeCheckCard';
+import Breadcrumb from '~/components/common/breadcrumbPrimary';
+import Filters from '~/components/common/filters';
+import TabPrimary from '~/components/common/tabPrimary';
+import SortTabs from '~/components/common/sortTabs';
 
-const MotorcyclePickup = () => {
+function MotorcyclePickup() {
   return (
     <>
       <Breadcrumb title="Deal Closure" addmoretitle="Motorcycle Pickup" />
@@ -14,10 +13,10 @@ const MotorcyclePickup = () => {
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <SortTabs selectAllCheck />
       <Row>
-        <BikeCheckCard isCheckBoxVisible acceptPrice pickupCheck/>
+        {/* <BikeCheckCard isCheckBoxVisible acceptPrice pickupCheck /> */}
       </Row>
     </>
   );
-};
+}
 
 export default MotorcyclePickup;

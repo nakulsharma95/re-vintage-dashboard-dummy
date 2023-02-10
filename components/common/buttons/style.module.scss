@@ -1,0 +1,94 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/variables//mixins";
+
+.arrowButton{
+	display: block;
+	width: 100%;
+	background-color: $theme-pink-da;
+	border: 1px solid $theme-red-da;
+	outline: none;
+	border-radius: 0;
+	font-size: 12px;
+	height: 36px;
+	line-height: 35px;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	transition: all 0.5s;
+	color: $white;
+	text-decoration: none;
+	&:hover{
+		background-color: $theme-red-da;
+		color: $white;
+	}
+	span{
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		color: $white;
+		background-color: $theme-red-da;
+		padding: 0 12px;
+		height: 35px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 16px;
+	}
+}
+
+.redButton{
+	display: block;
+	width: 100%;
+	background-color: $theme-red-da;
+	outline: none;
+	border: none;
+	border-radius: 0;
+	font-size: 12px;
+	text-transform: uppercase;
+	height: 35px;
+	text-align: center;
+	position: relative;
+	transition: all 0.5s;
+	&:hover{
+		background-color: $theme-pink-da;
+	}
+}
+
+.arrowBtnMain{
+	padding:10px;
+}
+
+.downloadReportButton{
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+	border: 1px solid $gray-a7;
+	border-radius: 0;
+	transition: all 0.5s;
+	padding: auto;
+	&:hover{
+		background-color: $theme-danger;
+		border-color: $theme-danger;
+	}
+	svg{
+		font-size: 16px;
+		margin:0 6px;
+	}
+}
+
+.backButton{
+	cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 25px;
+	display: inline-block;
+	font-weight: 500;
+	transition: all 0.5s;
+	&:hover{
+		color: $theme-yellow-E8;
+	}
+	span{
+		font-size: 14px;
+	}
+}

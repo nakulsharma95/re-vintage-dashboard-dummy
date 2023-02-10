@@ -1,8 +1,8 @@
-import Breadcrumb from "common/breadCrumb";
-import CompleteBikeDetail from "common/completeBikeDetail";
-import Filters from "common/filters";
-import SortTabs from "common/sortTabs";
-import TabPrimary from "common/tabPrimary";
+import Breadcrumb from "~/components/common/breadcrumbPrimary";
+import CompleteBikeDetail from "~/components/procurements/completeEvalutationCard";
+import Filters from "~/components/common/filters";
+import SortTabs from "~/components/common/sortTabs";
+import TabPrimary from "~/components/common/tabPrimary";
 
 export default function TestRiderRequests() {
   return (

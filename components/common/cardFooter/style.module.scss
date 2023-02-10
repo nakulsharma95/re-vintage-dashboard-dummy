@@ -1,0 +1,27 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/mixins';
+
+.completeBikeFooter {
+	padding-top: 1.3rem;
+	background-color: $black;
+	border-top: 0;
+  
+	.bikeFooterTitle {
+	  color: #f3f3f3;
+	  font-size: 12px;
+	  font-weight: 500;
+	  margin-bottom: 0.7rem;
+	}
+	.bikeFooterSubTitle {
+	  color: #a7a7a7;
+	  font-size: 12px;
+	  font-weight: 500;
+	  margin-bottom: 0.5rem;
+	}
+	.bikeFooterText {
+	  color: $white;
+	  font-size: 14px;
+	  font-weight: 400;
+	  margin-bottom: 0rem;
+	}
+  }
