@@ -7,26 +7,54 @@ function CloserBikeCard(props) {
     {
       imageUrl: '/images/bikeImage.png',
       overDue: 'evolutionOver',
-      cardTag: 'Upload Content',
+      bikeStatus: 'Upload Content',
     },
     {
       imageUrl: '/images/bikeImage2.png',
-      cardTag: 'Under Refurbishment',
+      bikeStatus: 'Under Refurbishment',
     },
     {
       imageUrl: '/images/bikeImage3.png',
-      cardTag: 'Under Approval',
+      bikeStatus: 'Under Approval',
     },
     {
       imageUrl: '/images/bikeImage4.png',
     },
   ];
+  const tagClassHandler = (tag) => {
+    switch (tag) {
+      case 'Upload Content':
+        return styles.orangeTag;
+
+      case 'Under Refurbishment':
+        return styles.yellowTag;
+
+      case 'Under Approval':
+        return '';
+
+      default:
+        break;
+    }
+  };
   return (
     <>
       {cardData.map((item, index) => (
         <Col md={3} key={index}>
           <Card className={styles.bikeCardMain}>
             <Card.Img variant="top" src={item.imageUrl} />
+            {props.cardTag && (
+              <>
+                {item.bikeStatus && (
+                  <div
+                    className={`${styles.bikeCardTag} ${tagClassHandler(
+                      item.bikeStatus
+                    )}`}
+                  >
+                    {item.bikeStatus}
+                  </div>
+                )}
+              </>
+            )}
             <Card.Body className="px-0">
               <Card.Title className={styles.bkeName}>
                 2015 Classic 350 <span>- DL 6T AL 7314</span>
@@ -45,9 +73,16 @@ function CloserBikeCard(props) {
                   <h6 className={styles.bikeDetailSubTitle}>2020</h6>
                 </Col>
               </Row>
-              <h5 className={styles.priceTitle}>
-                Location: <span>Mumbai, Maharashtra</span>
-              </h5>
+              {props.rcTransfer && (
+                <h5 className={styles.priceTitle}>
+                  RC Transfer Status: <span>Pending</span>
+                </h5>
+              )}
+              {props.location && (
+                <h5 className={styles.priceTitle}>
+                  Location: <span>Mumbai, Maharashtra</span>
+                </h5>
+              )}
               {props.status && (
                 <div className={styles.statusBox}>
                   <h5 className={styles.priceTitle}>Status:</h5>

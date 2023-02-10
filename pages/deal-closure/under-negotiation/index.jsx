@@ -15,7 +15,7 @@ function UnderNegotiation() {
       <TabPrimary title1="OpDealer (25)en" title2="Seller Portal (12)" />
       <Row>
         <SortTabs />
-        <CloserBikeCard status />
+        <CloserBikeCard location status contactCSE/>
         <Col md={12} className="text-center pt-2 pb-4">
           <Button variant="primary" className={styles.loadMoreBtn}>
             Load More

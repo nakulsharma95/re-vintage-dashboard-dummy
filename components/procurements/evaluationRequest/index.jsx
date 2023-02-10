@@ -4,14 +4,19 @@ import Button from 'react-bootstrap/Button';
 import { FaRegCalendar, FaPlus } from 'react-icons/fa';
 import CancelModal from '../../modals/cancelModal';
 import RescheduleModal from '../../modals/rescheduleModal';
+import SelectRescheduleDate from '../../modals/selectRescheduleDate';
 import styles from './style.module.scss';
 
 function EvaluationRequestDetailCard() {
   const [cancelModal, setCancelModal] = useState(false);
   const [rescheduleModal, setRescheduleModal] = useState(false);
+  const [selectRescheduleDate, setSelectRescheduleDate] = useState(false);
 
   const cancelToggleModal = () => {
     setCancelModal(!cancelModal);
+  };
+  const dateToggleModal = () => {
+    setSelectRescheduleDate(!selectRescheduleDate);
   };
   const rescheduleToggleModal = () => {
     setRescheduleModal(!rescheduleModal);
@@ -147,7 +152,11 @@ function EvaluationRequestDetailCard() {
               </p>
             </div>
             <div className={styles.statusBtnBox}>
-              <Button variant="primary" className={styles.statusBtn}>
+              <Button
+                variant="primary"
+                onClick={dateToggleModal}
+                className={styles.statusBtn}
+              >
                 <FaRegCalendar className={styles.statusBtnIcn} />
                 Reschedule
               </Button>
@@ -181,6 +190,10 @@ function EvaluationRequestDetailCard() {
       <RescheduleModal
         isOpen={rescheduleModal}
         handleClose={rescheduleToggleModal}
+      />
+      <SelectRescheduleDate
+        isOpen={selectRescheduleDate}
+        handleClose={dateToggleModal}
       />
     </div>
   );

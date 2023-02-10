@@ -4,17 +4,17 @@ import ViewAll from '../common/viewAllHeader';
 import CloserBikeCard from './closerCard';
 import TagCards from './tagCard';
 
-function DealBikeCard() {
+const DealBikeCard = () => {
   return (
     <Row>
       <ViewAll title="Under Negotiation" />
-      <CloserBikeCard />
+      <CloserBikeCard location status contactCSE />
       <ViewAll title="Procured Motorcycle" />
-      <TagCards />
+      <CloserBikeCard rcTransfer cardTag />
       <ViewAll title="Dropped" />
-      <CloserBikeCard />
+      <CloserBikeCard location contactCSE />
     </Row>
   );
-}
+};
 
 export default DealBikeCard;
