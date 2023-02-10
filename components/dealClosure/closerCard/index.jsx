@@ -38,8 +38,8 @@ function CloserBikeCard(props) {
   };
   return (
     <>
-      {cardData.map((item, index) => (
-        <Col md={3} key={index}>
+      {cardData.map((item) => (
+        <Col md={3} key={item.id}>
           <Card className={styles.bikeCardMain}>
             <Card.Img variant="top" src={item.imageUrl} />
             {props.cardTag && (

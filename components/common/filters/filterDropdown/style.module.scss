@@ -92,10 +92,7 @@
 			}
 		}
 	}
-}
-
-.bidPricDropdown{
-	.dropdownToggle{
+	.filterButton{
 		padding: 0.375rem 1.2rem;
 		min-height: 42px;
 		color: #A7A7A7;
@@ -103,58 +100,21 @@
 		border-radius: 0;
 		border: 1px solid #707070;
 		font-size: 12px;
-		margin-right: 1.2rem;
-		outline: none;
 		&::after{
 			display: none;
 		}
-		svg{
-			margin-left: 10px;
-			font-size: 15px;
+
+		.filterBtnIcn{
+			margin-left: 15px;
+			font-size: 18px;
+			font-weight: bold;
 		}
-	}
-	.bidPriceDropdownMenu{
-		transform: inherit !important;
-		left: 0 !important;
-		right: inherit !important;
-		top: 45px !important;
-		width: 100%;
-		min-width: 280px;
-		border-radius: 0;
-		padding: 0;
-		.bidPriceValue{
-			display: flex;
-			align-items: center;
-			padding: 8px 15px;
-			.title{
-				font-weight: 600;
-				span{
-					margin-left: 5px;
-				}
-			}
-			input{
-				border-radius: 0;
-				font-weight: 500;
-				width: 120px;
-				font-size: 12px;
-				margin: 0 8px;
-				outline: none;
-				border-color: $gray-c;
-				&:focus{
-					outline: none;
-					box-shadow: none;
-					border-color: $gray-c;
-				}
-			}
+
+		&.exportButton{
+			margin-right: 1.2rem;
 		}
-		.bidPricebtn{
-			border-top: 1px solid $gray-65;
+		&.activeBtn{
+			display: block;
 		}
-	}
-	&.bidPriceButton{
-		display: none;
-	}
-	&.activeBtn{
-		display: block;
 	}
 }

@@ -24,7 +24,7 @@ function BikeCardRadio({ isCheckBoxVisible, isButtonVisible, isCardVisible }) {
   return (
     <Row>
       {cardData.map((item, index) => (
-        <Col xxl={3} xl={4} lg={6} key={index}>
+        <Col xxl={3} xl={4} lg={6} key={item.id}>
           <Card className={styles.bikeCardMain}>
             <Card.Img variant="top" src={item.imageUrl} />
             {isCheckBoxVisible && (

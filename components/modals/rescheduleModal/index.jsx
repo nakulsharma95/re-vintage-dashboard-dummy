@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable @next/next/no-img-element */
 import { Modal, Form, InputGroup, Button } from 'react-bootstrap';
 import { IoMdClose } from 'react-icons/io';

@@ -23,8 +23,8 @@ function BikeCard() {
   return (
     <Row>
       <ViewAll title="Evaluataion Requests" />
-      {cardData.map((item, index) => (
-        <Col md={3} key={index}>
+      {cardData.map((item) => (
+        <Col md={3}>
           <Card className={bikeCardStyle.bikeCardMain}>
             <Card.Img variant="top" src={item.imageUrl} />
             <div className={`${bikeCardStyle.bikeCardTag}`}>
@@ -51,8 +51,8 @@ function BikeCard() {
         </Col>
       ))}
       <ViewAll title="Evaluation Requests" leads="(32 Leads)" />
-      {cardData.map((item, index) => (
-        <Col md={3} key={index}>
+      {cardData.map((item) => (
+        <Col md={3}>
           <Card className={bikeCardStyle.bikeCardMain}>
             <Card.Img variant="top" src={item.imageUrl} />
             <div className={bikeCardStyle.bikeCardTag}>Evaluation Overdue</div>

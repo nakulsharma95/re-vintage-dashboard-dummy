@@ -37,8 +37,8 @@ export default function ClosedBids() {
       <TabPrimary title1="Today" title2="Next Bidding (31 Dec)" />
       <SortTabs selectAllCheck />
       <Row className="mb-3">
-        {activeBikeData.map((item, index) => (
-          <Col md={3} key={index}>
+        {activeBikeData.map((item) => (
+          <Col md={3} key={item.id}>
             <Card className={styles.bikeCardCols}>
               <Card.Img
                 className={styles.bikeImg}

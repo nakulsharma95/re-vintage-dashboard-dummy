@@ -5,9 +5,9 @@ import BikeDetailTitle from '../../components/common/detailHeader';
 import BikeHistory from '../../components/biddingPortal/bikeHistory';
 import BikeInspection from '../../components/biddingPortal/bikeInspection';
 import styles from './style.module.scss';
-import BackButton from '../../components/common/buttons/BackButton';
-import MotorcycleDetailCard from '../../components/procurements/evaluationRequest';
-import BikeSlider from '../../components/common/thumbnailSlider';
+import BackButton from '~/components/common/buttons/BackButton';
+import BikeSlider from '~/components/common/thumbnailSlider';
+import MotorcycleDetail from '~/components/procurements/motorcycleDetail';
 
 export default function BiddingDetails() {
   return (
@@ -25,19 +25,22 @@ export default function BiddingDetails() {
             <BikeSlider />
           </Col>
           <Col md={6}>
-            <MotorcycleDetailCard
+            <MotorcycleDetail
               bikeInfo
               detailMenu
               detailLocation
               footerPrice
               bikePriceTitle="Base Price"
-              bikeNumber="DL6SEP7845"
+              bikeNumber="- DL6SEP7845"
               bikeName="HUNTER 350"
-              chasisNumber="FB29FH9219HR1"
+              chasisNumber="- FB29FH9219HR1"
             />
           </Col>
         </Row>
-        <BikeCardFooter />
+        <BikeCardFooter 
+          creDetails 
+          ownerDetails 
+        />
       </div>
       <Bids />
       <BikeInspection />

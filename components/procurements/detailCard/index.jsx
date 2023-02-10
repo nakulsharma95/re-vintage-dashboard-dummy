@@ -20,8 +20,8 @@ export default function DetailCard() {
     <div>
       <Row>
         <ViewAll title="Partial Leads" leads="(8 Leads)" />
-        {cardData.map((item, index) => (
-          <Col xl={4} key={index} md={6}>
+        {cardData.map((item) => (
+          <Col xl={4} md={6}>
             <div className="mb-4">
               <Card className={styles.detailCard}>
                 <Card.Body>
