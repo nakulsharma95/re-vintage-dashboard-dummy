@@ -5,10 +5,10 @@ import styles from './style.module.scss';
 const bikeCardFooter = () => (
   <div>
     <Card.Footer className={styles.completeBikeFooter}>
-      <h6 className={styles.bikeFooterTitle}>SAMIL Details</h6>
       <Row>
-        <Col md={8}>
+        <Col md={5}>
           <Row>
+            <h6 className={styles.bikeFooterTitle}>SAMIL Details</h6>
             <Col>
               <h4 className={styles.bikeFooterSubTitle}>Name</h4>
               <p className={styles.bikeFooterText}>Ashok Sharma</p>
@@ -22,6 +22,24 @@ const bikeCardFooter = () => (
               <p className={styles.bikeFooterText}>+91 98996 45875</p>
             </Col>
           </Row>
+        </Col>
+        <Col md={4}>
+          <h6 className={styles.bikeFooterTitle} />
+          <Col>
+            <h4 className={styles.bikeFooterSubTitle} />
+            <p className={styles.bikeFooterText} />
+          </Col>
+          <Col>
+            <h4 className={styles.bikeFooterSubTitle} />
+            <p className={styles.bikeFooterText} />
+          </Col>
+        </Col>
+        <Col md={3}>
+          <h6 className={styles.bikeFooterTitle} />
+          <Col>
+            <h4 className={styles.bikeFooterSubTitle} />
+            <p className={styles.bikeFooterText} />
+          </Col>
         </Col>
       </Row>
     </Card.Footer>
