@@ -32,7 +32,7 @@ function EvaluationRequestDetailCard() {
   return (
     <div>
       <div className={styles.topHeader}>
-        <p className={styles.topHeaderTxt}>3 Leads Availablesasasasasasaas</p>
+        <p className={styles.topHeaderTxt}>3 Leads Available</p>
         <div className={styles.topHeaderBtnBox}>
           <p className={styles.viewText}>View:</p>
           <Button
@@ -46,8 +46,8 @@ function EvaluationRequestDetailCard() {
           </Button>
         </div>
       </div>
-      {motorCycleDetail.map((item, index) => (
-        <Card className={styles.bikeDetailCardMain} key={index}>
+      {motorCycleDetail.map((item) => (
+        <Card className={styles.bikeDetailCardMain}>
           <Card.Header className={`${styles.bikeDetailCardHeader} px-0`}>
             <div className="d-flex align-items-center">
               <h4 className={styles.bikeName}>

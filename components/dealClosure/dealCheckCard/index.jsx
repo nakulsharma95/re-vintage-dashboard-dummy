@@ -31,7 +31,7 @@ function DealCheckCard(props) {
   return (
     <>
       {cardData.map((item, index) => (
-        <Col md={3} key={index}>
+        <Col md={3}>
           <Card className={styles.bikeCardMain}>
             <Card.Img variant="top" src={item.imageUrl} />
             {props.isCheckBoxVisible && (

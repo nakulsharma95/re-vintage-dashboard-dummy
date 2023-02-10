@@ -58,8 +58,8 @@ export default function Bids() {
       <div className={styles.bidsCols}>
         <div className={styles.title}>Top 5 Bids</div>
         <div className={styles.bidsPanel}>
-          {TopfiveBidsData.map((item, index) => (
-            <div className={styles.bidsList} key={index}>
+          {TopfiveBidsData.map((item) => (
+            <div className={styles.bidsList}>
               <div className={styles.bidsLeft}>
                 <div className={styles.bidsImg}>
                   <Image
@@ -105,8 +105,8 @@ export default function Bids() {
       <div className={styles.bidsCols}>
         <div className={styles.title}>All Bids</div>
         <div className={styles.bidsPanel}>
-          {AllBidsData.map((item, index) => (
-            <div className={styles.bidsList} key={index}>
+          {AllBidsData.map((item) => (
+            <div className={styles.bidsList}>
               <div className={styles.bidsLeft}>
                 <div className={styles.bidsImg}>
                   <Image

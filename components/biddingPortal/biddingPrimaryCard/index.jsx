@@ -30,8 +30,8 @@ function BiddingBikeCard(props) {
   };
   return (
     <Row className="mb-3">
-      {upcomingBikeData.map((item, index) => (
-        <Col md={3} key={index}>
+      {upcomingBikeData.map((item) => (
+        <Col md={3}>
           <Card className={styles.bikeCardCols}>
             <Card.Img
               className={styles.bikeImg}
