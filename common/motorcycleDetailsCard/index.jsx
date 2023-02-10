@@ -5,6 +5,7 @@ import { Row, Col, Card } from 'react-bootstrap/';
 import Button from 'react-bootstrap/Button';
 import { FaRegCalendar, FaPlus } from 'react-icons/fa';
 import styles from './style.module.scss';
+import BikeCardFooter from '../completeBikeDetail/bikeCardFooter';
 
 function MotorcycleDetailCard() {
   const [cancelModal, setCancelModal] = useState(false);
