@@ -19,7 +19,13 @@ function CompleteBikeDetail() {
                 <BikeSlider />
               </Col>
               <Col md={4}>
-                <MotorcycleDetail bikeName={item} />
+                <MotorcycleDetail
+                  headBikeDetail
+                  bikeInfo
+                  bikeDetailTitle
+                  bikeNumber="- DL6TAL7314"
+                  bikeName={item} 
+                />
               </Col>
               <Col md={4}>
                 <EvaluationDetail />

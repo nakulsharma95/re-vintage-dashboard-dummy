@@ -2,12 +2,12 @@ import React from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
 import styles from './style.module.scss';
 
-const bikeCardFooter = () => (
+const bikeCardFooter = (props) => (
   <div>
     <Card.Footer className={styles.completeBikeFooter}>
       <Row>
         <Col md={5}>
-          <Row>
+          <div className={styles.cardFooterCols}>
             <h6 className={styles.bikeFooterTitle}>SAMIL Details</h6>
             <Col>
               <h4 className={styles.bikeFooterSubTitle}>Name</h4>
@@ -19,28 +19,37 @@ const bikeCardFooter = () => (
             </Col>
             <Col>
               <h4 className={styles.bikeFooterSubTitle}>Contact No.</h4>
-              <p className={styles.bikeFooterText}>+91 98996 45875</p>
+              <p className={styles.bikeFooterText}>+91 9899645875</p>
             </Col>
-          </Row>
+          </div>
         </Col>
-        <Col md={4}>
-          <h6 className={styles.bikeFooterTitle} />
-          <Col>
-            <h4 className={styles.bikeFooterSubTitle} />
-            <p className={styles.bikeFooterText} />
+        
+        {props.creDetails && (
+          <Col md={4}>
+            <div className={styles.cardFooterCols}>
+              <h6 className={styles.bikeFooterTitle}>CRE Details</h6>
+              <Col>
+                <h4 className={styles.bikeFooterSubTitle}>Name</h4>
+                <p className={styles.bikeFooterText}>Rishabh Sharma</p>
+              </Col>
+              <Col>
+                <h4 className={styles.bikeFooterSubTitle}>Contact No.</h4>
+                <p className={styles.bikeFooterText}>+91 9899645875</p>
+              </Col>
+            </div>
           </Col>
-          <Col>
-            <h4 className={styles.bikeFooterSubTitle} />
-            <p className={styles.bikeFooterText} />
+        )}
+        {props.ownerDetails && (
+          <Col md={3}>
+            <div className={`${styles.cardFooterCols} ${styles.borderNone}`}>
+              <h6 className={styles.bikeFooterTitle}>Owner Details</h6>
+              <Col>
+                <h4 className={styles.bikeFooterSubTitle}>Contact No.</h4>
+                <p className={styles.bikeFooterText}>+91 9899645875</p>
+              </Col>
+            </div>
           </Col>
-        </Col>
-        <Col md={3}>
-          <h6 className={styles.bikeFooterTitle} />
-          <Col>
-            <h4 className={styles.bikeFooterSubTitle} />
-            <p className={styles.bikeFooterText} />
-          </Col>
-        </Col>
+        )}
       </Row>
     </Card.Footer>
   </div>
