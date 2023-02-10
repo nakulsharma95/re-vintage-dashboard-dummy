@@ -26,14 +26,16 @@ function BikeSlider() {
     slidesToScroll: 1,
   };
   return (
-    <Slider {...settings} className={styles.compBikeCardSlider}>
-      <div className={styles.compBikeCardSlides}>
-        <Image src="/images/sliderImg/bike0.png" width="100" height="100" />
-      </div>
-      <div className={styles.compBikeCardSlides}>
-        <Image src="/images/sliderImg/bike1.png" width="100" height="100" />
-      </div>
-    </Slider>
+    <div className="bike-slider-custom">
+      <Slider {...settings} className={styles.compBikeCardSlider}>
+        <div className={styles.compBikeCardSlides}>
+          <Image src="/images/sliderImg/bike0.png" width="100" height="100" />
+        </div>
+        <div className={styles.compBikeCardSlides}>
+          <Image src="/images/sliderImg/bike1.png" width="100" height="100" />
+        </div>
+      </Slider>
+    </div>
   );
 }
 

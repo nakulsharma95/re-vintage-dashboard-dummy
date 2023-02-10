@@ -1,33 +1,31 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import Dropdown from 'react-bootstrap/Dropdown';
+import { Button, Dropdown, Form } from 'react-bootstrap';
 import { CiFilter } from 'react-icons/ci';
 import { BsChevronUp, BsSearch } from 'react-icons/bs';
-import Form from 'react-bootstrap/Form';
-import filterStyle from './style.module.scss';
 import RedButton from '../../buttons/RedButton';
+import styles from './style.module.scss';
 
 function FilterDropdown() {
   return (
-    <div className={filterStyle.filterDropdown}>
+    <div className={`${styles.filterDropdownStyle}`}>
       <Dropdown>
         <Dropdown.Toggle
           variant=""
-          className={filterStyle.filterButton}
+          className={styles.filterButton}
           id="dropdown-basic"
         >
           Filter
-          <CiFilter className={filterStyle.filterBtnIcn} size={17} />
+          <CiFilter className={styles.filterBtnIcn} size={17} />
         </Dropdown.Toggle>
 
-        <Dropdown.Menu className={filterStyle.dropdownMenu}>
-          <div className={filterStyle.titleFlex}>
-            <div className={filterStyle.title}>Filters</div>
+        <Dropdown.Menu className={styles.dropdownMenu}>
+          <div className={styles.titleFlex}>
+            <div className={styles.title}>Filters</div>
             <Button variant="">Reset All</Button>
           </div>
-          <div className={filterStyle.filterPanelMain}>
-            <div className={filterStyle.filterPanel}>
-              <div className={filterStyle.title}>
+          <div className={styles.filterPanelMain}>
+            <div className={styles.filterPanel}>
+              <div className={styles.title}>
                 Zone
                 <span>
                   <BsChevronUp />
@@ -38,8 +36,8 @@ function FilterDropdown() {
               <Form.Check type="checkbox" id="westzone" label="West Zone" />
               <Form.Check type="checkbox" id="southzone" label="South Zone" />
             </div>
-            <div className={filterStyle.filterPanel}>
-              <div className={filterStyle.title}>
+            <div className={styles.filterPanel}>
+              <div className={styles.title}>
                 State
                 <span>
                   <BsChevronUp />
@@ -52,8 +50,8 @@ function FilterDropdown() {
                 <option value="3">Chennai</option>
               </Form.Select>
             </div>
-            <div className={filterStyle.filterPanel}>
-              <div className={filterStyle.title}>
+            <div className={styles.filterPanel}>
+              <div className={styles.title}>
                 City
                 <span>
                   <BsChevronUp />
@@ -63,14 +61,14 @@ function FilterDropdown() {
                 type="text"
                 id=""
                 placeholder="Search City"
-                className={filterStyle.formControl}
+                className={styles.formControl}
               />
-              <Button variant="" className={filterStyle.searchBtn}>
+              <Button variant="" className={styles.searchBtn}>
                 <BsSearch />
               </Button>
             </div>
-            <div className={filterStyle.filterPanel}>
-              <div className={filterStyle.title}>
+            <div className={styles.filterPanel}>
+              <div className={styles.title}>
                 Registration Number
                 <span>
                   <BsChevronUp />
@@ -80,13 +78,13 @@ function FilterDropdown() {
                 type="text"
                 id=""
                 placeholder="Ex. DL"
-                className={filterStyle.formControl}
+                className={styles.formControl}
               />
-              <Button variant="" className={filterStyle.searchBtn}>
+              <Button variant="" className={styles.searchBtn}>
                 <BsSearch />
               </Button>
             </div>
-            <div className={filterStyle.filterBtnCols}>
+            <div className={styles.filterBtnCols}>
               <RedButton title="Apply" />
             </div>
           </div>

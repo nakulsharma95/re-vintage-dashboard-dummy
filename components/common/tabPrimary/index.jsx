@@ -1,9 +1,9 @@
-import { Row, Tab, Tabs } from "react-bootstrap";
-import styles from "./style.module.scss";
+import { Row, Tab, Tabs } from 'react-bootstrap';
+import styles from './style.module.scss';
 
 export default function TabPrimary(props) {
   return (
-    <div>
+    <div className="custom-tab-style">
       <Row>
         <div>
           <Tabs
@@ -15,25 +15,24 @@ export default function TabPrimary(props) {
               className={styles.reNavTab}
               eventKey="title1"
               title={props.title1}
-            ></Tab>
+            />
             <Tab
               className={styles.reNavTab}
               eventKey="title2"
               title={props.title2}
-            >
-            </Tab>
+            />
 
             <Tab
               className={styles.reNavTab}
               eventKey="title3"
               title={props.title3}
-            ></Tab>
+            />
 
             <Tab
               className={styles.reNavTab}
               eventKey="title4"
               title={props.title4}
-            ></Tab>
+            />
           </Tabs>
         </div>
       </Row>

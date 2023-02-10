@@ -4,6 +4,7 @@ import Breadcrumb from '~/components/common/breadcrumbPrimary';
 import Filters from '~/components/common/filters';
 import TabPrimary from '~/components/common/tabPrimary';
 import SortTabs from '~/components/common/sortTabs';
+import DealCheckCard from '~/components/dealClosure/dealCheckCard';
 
 function MotorcyclePickup() {
   return (
@@ -13,7 +14,7 @@ function MotorcyclePickup() {
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <SortTabs selectAllCheck />
       <Row>
-        {/* <BikeCheckCard isCheckBoxVisible acceptPrice pickupCheck /> */}
+        <DealCheckCard isCheckBoxVisible acceptPrice pickupCheck />
       </Row>
     </>
   );

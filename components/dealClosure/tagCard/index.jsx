@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './style.module.scss';
 import { Row, Col, Card, Button } from 'react-bootstrap';
+import styles from './style.module.scss';
 
-const closeBikeTagCard = () => {
+function CloseBikeTagCard() {
   const cardData = [
     {
       imageUrl: '/images/bikeImage.png',
@@ -76,6 +76,6 @@ const closeBikeTagCard = () => {
       ))}
     </>
   );
-};
+}
 
-export default closeBikeTagCard;
+export default CloseBikeTagCard;

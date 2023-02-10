@@ -4,17 +4,10 @@ import styles from './style.module.scss';
 import BikeSlider from '../../common/thumbnailSlider';
 import EvaluationDetail from '../evalutationDetail';
 import BikeCardFooter from '../../common/cardFooter';
-import EvaluationRequestDetailCard from '../evaluationRequest';
+import MotorcycleDetail from '../motorcycleDetail';
 
 function CompleteBikeDetail() {
-  const completeBikeName = [
-    {
-      bkeName: '2015 Classic 350',
-    },
-    {
-      bkeName: '2015 Thunder 350',
-    },
-  ];
+  const completeBikeName = ['2015 Classic 350', '2015 Thunder 350'];
   return (
     <>
       <h5 className={styles.compBikeSearchTxt}>2 Search</h5>
@@ -26,7 +19,7 @@ function CompleteBikeDetail() {
                 <BikeSlider />
               </Col>
               <Col md={4}>
-                <EvaluationRequestDetailCard bikeName={item} />
+                <MotorcycleDetail bikeName={item} />
               </Col>
               <Col md={4}>
                 <EvaluationDetail />

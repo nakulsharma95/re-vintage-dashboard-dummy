@@ -32,7 +32,7 @@ function EvaluationRequestDetailCard() {
   return (
     <div>
       <div className={styles.topHeader}>
-        <p className={styles.topHeaderTxt}>3 Leads Available</p>
+        <p className={styles.topHeaderTxt}>3 Leads Availablesasasasasasaas</p>
         <div className={styles.topHeaderBtnBox}>
           <p className={styles.viewText}>View:</p>
           <Button

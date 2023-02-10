@@ -85,38 +85,56 @@ h6 {
     }
   }
 }
-.style_reTabs__mvD_v .nav-link {
+.custom-tab-style .nav-link {
   color: #fff !important;
   font-size: 14px !important;
   border: none !important;
-  margin-bottom: 1px !important;
 }
-.style_reTabs__mvD_v .nav-tabs .nav-link {
+.custom-tab-style .nav-tabs .nav-link {
   border: none !important;
 }
-.style_reTabs__mvD_v .nav-link.active {
+.custom-tab-style  .nav-link.active{
   background-color: transparent !important;
   border: none !important;
-  border-bottom: 2px solid #da291c !important;
-  color: #da291c !important;
-  margin-bottom: -2px !important;
+  color: $theme-red-da !important;
+  margin-bottom: 0 !important;
+  position: relative;
+  &::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: $theme-red-da;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+  }
 }
 
-.style_reTabs__mvD_v .nav-link:hover,
+.custom-tab-style .nav-link.active {
+  background-color: transparent !important;
+  border: none !important;
+  color: #da291c !important;
+}
+
+.custom-tab-style .nav-link:hover,
 .nav-tabs .nav-link:focus {
   border: none !important;
-  border-bottom: 2px solid #da291c !important;
-  margin-bottom: -2px !important;
+  border-bottom: 0 solid $theme-red-da !important;
+  margin-bottom: 0 !important;
 }
 
 // Pagination Start
 
-.style_detailPaginationMain__qyKfk .page-link {
+.custom-pagination .page-link {
   background-color: transparent !important;
   border: none !important;
   color: #ffff !important;
 }
-.style_detailPaginationMain__qyKfk .page-link.active,
+.custom-pagination .page-link.active, .active > .page-link{
+  border: 2px solid $theme-red-da !important;
+  background-color: $theme-red-da !important;
+}
+.custom-pagination .page-link.active,
 .active > .page-link {
   border: 2px solid #da291c !important;
   background-color: #da291c !important;
@@ -125,8 +143,8 @@ h6 {
   display: flex !important;
   align-items: center !important;
 }
-.style_detailPaginationMain__qyKfk .page-link:focus {
-  background-color: #da291c !important;
+.custom-pagination .page-link:focus {
+  background-color: $theme-red-da !important;
   border: none !important;
   border-radius: 0px !important;
   box-shadow: none !important;
@@ -149,7 +167,7 @@ h6 {
 
 // ----------- complete evaluation slider -----------//
 
-.style_compBikeCardSlider__F6kpG {
+.bike-slider-custom {
   .slick-arrow {
     z-index: 9;
     display: flex !important;
@@ -224,7 +242,6 @@ h6 {
   border-color: $theme-green !important;
 }
 .style_sliderRound__e3A_x .form-check-input {
-  //  background-color: $theme-red-da  !important;
   margin-left: 0 !important;
 }
 
@@ -234,3 +251,20 @@ h6 {
 }
 
 // toggleSwitch End
+
+.nav .nav-item .navBidsLink.active{
+	background-color: $theme-red-da;
+}
+
+.nav .nav-item .bodyExtNavItem.active{
+  color: $white;
+  &::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: $white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
