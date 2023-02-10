@@ -2,7 +2,7 @@ import { Tab, Nav, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 import styles from './style.module.scss';
 import BodyExteriors from '../bodyExteriors';
-import DownloadReportButton from '~/components/common/buttons/DownloadReportButton';
+import DownloadReportButton from '../../common/buttons/DownloadReportButton';
 
 export default function BikeInspection() {
   return (

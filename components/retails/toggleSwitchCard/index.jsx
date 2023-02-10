@@ -1,6 +1,6 @@
-import React from "react";
-import {Card, FormCheck } from "react-bootstrap";
-import styles from "./style.module.scss";
+import React from 'react';
+import { Card, FormCheck } from 'react-bootstrap';
+import styles from './style.module.scss';
 
 export default function ToggleSwitchCard() {
   return (

@@ -5,9 +5,9 @@ import BikeDetailTitle from '../../components/common/detailHeader';
 import BikeHistory from '../../components/biddingPortal/bikeHistory';
 import BikeInspection from '../../components/biddingPortal/bikeInspection';
 import styles from './style.module.scss';
-import BackButton from '~/components/common/buttons/BackButton';
-import MotorcycleDetailCard from '~/components/procurements/evaluationRequest';
-import BikeSlider from '~/components/common/thumbnailSlider';
+import BackButton from '../../components/common/buttons/BackButton';
+import MotorcycleDetailCard from '../../components/procurements/evaluationRequest';
+import BikeSlider from '../../components/common/thumbnailSlider';
 
 export default function BiddingDetails() {
   return (

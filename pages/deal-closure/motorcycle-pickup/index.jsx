@@ -1,10 +1,10 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
-import Breadcrumb from '~/components/common/breadcrumbPrimary';
-import Filters from '~/components/common/filters';
-import TabPrimary from '~/components/common/tabPrimary';
-import SortTabs from '~/components/common/sortTabs';
-import DealCheckCard from '~/components/dealClosure/dealCheckCard';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import Filters from '../../../components/common/filters';
+import TabPrimary from '../../../components/common/tabPrimary';
+import SortTabs from '../../../components/common/sortTabs';
+import DealCheckCard from '../../../components/dealClosure/dealCheckCard';
 
 function MotorcyclePickup() {
   return (

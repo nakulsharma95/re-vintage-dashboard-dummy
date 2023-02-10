@@ -1,7 +1,7 @@
-import Breadcrumb from '~/components/common/breadcrumbPrimary';
-import Filters from '~/components/common/filters';
-import DetailMotorcycleCard from '~/components/procurements/detailMotorcycleCard';
-import TabPrimary from '~/components/common/tabPrimary/index';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import Filters from '../../../components/common/filters';
+import DetailMotorcycleCard from '../../../components/procurements/detailMotorcycleCard';
+import TabPrimary from '../../../components/common/tabPrimary/index';
 
 export default function ScheduledEvaluation() {
   return (

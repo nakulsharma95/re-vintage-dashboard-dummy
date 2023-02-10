@@ -5,7 +5,7 @@ import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import Filters from '../../../components/common/filters';
 import TabPrimary from '../../../components/common/tabPrimary';
 import styles from './style.module.scss';
-import CloserBikeCard from '~/components/dealClosure/closerCard';
+import CloserBikeCard from '../../../components/dealClosure/closerCard';
 
 function PaymentsPending() {
   return (

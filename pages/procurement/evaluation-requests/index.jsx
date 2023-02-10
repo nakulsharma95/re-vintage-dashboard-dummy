@@ -1,8 +1,8 @@
-import Breadcrumb from '~/components/common/breadcrumbPrimary';
-import DetailPagination from '~/components/common/paginationPrimary';
-import Filters from '~/components/common/filters';
-import MotorcycleDetailCard from '~/components/procurements/evaluationRequest';
-import TabPrimary from '~/components/common/tabPrimary';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import DetailPagination from '../../../components/common/paginationPrimary';
+import Filters from '../../../components/common/filters';
+import MotorcycleDetailCard from '../../../components/procurements/evaluationRequest';
+import TabPrimary from '../../../components/common/tabPrimary';
 
 function EvaluationRequest() {
   return (

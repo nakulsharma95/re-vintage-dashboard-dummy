@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { Modal, Form, InputGroup, Button } from 'react-bootstrap';
 import { IoMdClose } from 'react-icons/io';
+import { FaAngleRight } from 'react-icons/fa';
 import styles from './style.module.scss';
-import { FaAngleRight } from "react-icons/fa";
 
 function RescheduleModal(props) {
   return (
@@ -34,7 +34,7 @@ function RescheduleModal(props) {
                   name="radio-group"
                   className="form-check-input"
                 />
-                <label for="test1" className="form-check-label">
+                <label htmlFor="test1" className="form-check-label">
                   Ut enim ad minim veniam
                 </label>
               </p>
@@ -45,7 +45,7 @@ function RescheduleModal(props) {
                   name="radio-group"
                   className="form-check-input"
                 />
-                <label for="test2" className="form-check-label">
+                <label htmlFor="test2" className="form-check-label">
                   Incididunt ut labore et
                 </label>
               </p>
@@ -56,7 +56,7 @@ function RescheduleModal(props) {
                   name="radio-group"
                   className="form-check-input"
                 />
-                <label for="test3" className="form-check-label">
+                <label htmlFor="test3" className="form-check-label">
                   Sed do eiusmod tempor
                 </label>
               </p>
@@ -67,7 +67,7 @@ function RescheduleModal(props) {
                   name="radio-group"
                   className="form-check-input"
                 />
-                <label for="test4" className="form-check-label">
+                <label htmlFor="test4" className="form-check-label">
                   Incididunt ut labore et
                 </label>
               </p>
@@ -78,11 +78,11 @@ function RescheduleModal(props) {
                   name="radio-group"
                   className="form-check-input"
                 />
-                <label for="test5" className="form-check-label">
+                <label htmlFor="test5" className="form-check-label">
                   Others
                 </label>
               </p>
-              <InputGroup className='mb-4'>
+              <InputGroup className="mb-4">
                 <Form.Control
                   as="textarea"
                   rows={6}
@@ -92,10 +92,10 @@ function RescheduleModal(props) {
                 />
               </InputGroup>
 
-              <InputGroup className='justify-content-end'>
+              <InputGroup className="justify-content-end">
                 <Button variant="primary" className={styles.rescheduleButton}>
                   Submit
-                  <FaAngleRight className={styles.rescheduleButtonIcon}/>
+                  <FaAngleRight className={styles.rescheduleButtonIcon} />
                 </Button>
               </InputGroup>
             </Form>

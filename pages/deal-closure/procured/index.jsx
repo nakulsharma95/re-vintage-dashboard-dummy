@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
-import CloserBikeCard from '~/components/dealClosure/closerCard';
+import CloserBikeCard from '../../../components/dealClosure/closerCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import Filters from '../../../components/common/filters';
 import TabPrimary from '../../../components/common/tabPrimary';

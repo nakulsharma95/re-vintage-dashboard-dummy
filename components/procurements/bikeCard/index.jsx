@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Card, Col, Row } from 'react-bootstrap';
-import ViewAll from '~/components/common/viewAllHeader';
+import ViewAll from '../../common/viewAllHeader';
 import bikeCardStyle from './style.module.scss';
 
 function BikeCard() {
