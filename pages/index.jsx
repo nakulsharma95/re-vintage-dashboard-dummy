@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Homepage from './homepage';
 
 export default function Home() {
-  console.log("env", process.env.NEXT_PUBLIC_ENVIRONMENT)
   return (
     <>
       <Head>

@@ -11,8 +11,8 @@ function CompleteBikeDetail() {
   return (
     <>
       <h5 className={styles.compBikeSearchTxt}>2 Search</h5>
-      {completeBikeName.map((item, index) => (
-        <Card key={index} className={styles.compBikeCard}>
+      {completeBikeName.map((item) => (
+        <Card className={styles.compBikeCard}>
           <Card.Body className={`${styles.compBikeCardBody}`}>
             <Row>
               <Col md={4} className={styles.compBikeCardSliderMain}>

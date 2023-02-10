@@ -2,7 +2,7 @@ import { Button } from 'react-bootstrap';
 import { BsChevronRight } from 'react-icons/bs';
 import Form from 'react-bootstrap/Form';
 import styles from './style.module.scss';
-import Tags from '~/components/common/tags';
+import Tags from '../../common/tags';
 
 export default function ManaualEntry() {
   return (

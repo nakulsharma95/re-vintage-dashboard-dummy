@@ -10,7 +10,7 @@ import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import styles from './style.module.scss';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
 import SortTabs from '../../../components/common/sortTabs';
-import ArrowButton from '~/components/common/buttons/ArrowButton';
+import ArrowButton from '../../../components/common/buttons/ArrowButton';
 
 export default function ClosedBids() {
   const activeBikeData = [
@@ -37,8 +37,8 @@ export default function ClosedBids() {
       <TabPrimary title1="Today" title2="Next Bidding (31 Dec)" />
       <SortTabs selectAllCheck />
       <Row className="mb-3">
-        {activeBikeData.map((item, index) => (
-          <Col md={3} key={index}>
+        {activeBikeData.map((item) => (
+          <Col md={3} key={item.id}>
             <Card className={styles.bikeCardCols}>
               <Card.Img
                 className={styles.bikeImg}

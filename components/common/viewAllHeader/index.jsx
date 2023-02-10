@@ -4,7 +4,6 @@ import style from './style.module.scss';
 
 const ViewAll = (props) => {
   return (
-    <>
       <Col md={12}>
         <div className={style.titleViewAllMain}>
           <h5 className={style.titleViewAll}>
@@ -16,9 +15,8 @@ const ViewAll = (props) => {
             </Button>
           </div>
         </div>
-      </Col>
-    </>
+    </Col>
   );
-};
+}
 
 export default ViewAll;

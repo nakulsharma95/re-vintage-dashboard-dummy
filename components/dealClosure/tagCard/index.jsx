@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 import React from 'react';
 import { Row, Col, Card, Button } from 'react-bootstrap';
 import styles from './style.module.scss';
@@ -38,8 +39,8 @@ function CloseBikeTagCard() {
   };
   return (
     <>
-      {cardData.map((item, index) => (
-        <Col md={3} key={index}>
+      {cardData.map((item) => (
+        <Col md={3}>
           <Card className={styles.bikeCardMain}>
             <Card.Img variant="top" src={item.imageUrl} />
             {item.cardTag && (

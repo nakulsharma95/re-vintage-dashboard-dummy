@@ -5,8 +5,8 @@ import { BiRupee } from 'react-icons/bi';
 import Button from 'react-bootstrap/Button';
 import Link from 'next/link';
 import styles from './style.module.scss';
-import ArrowButton from '~/components/common/buttons/ArrowButton';
-import RedButton from '~/components/common/buttons/RedButton';
+import ArrowButton from '../../common/buttons/ArrowButton';
+import RedButton from '../../common/buttons/RedButton';
 
 function BiddingBikeCard(props) {
   const upcomingBikeData = [
@@ -30,8 +30,8 @@ function BiddingBikeCard(props) {
   };
   return (
     <Row className="mb-3">
-      {upcomingBikeData.map((item, index) => (
-        <Col md={3} key={index}>
+      {upcomingBikeData.map((item) => (
+        <Col md={3}>
           <Card className={styles.bikeCardCols}>
             <Card.Img
               className={styles.bikeImg}
