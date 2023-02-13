@@ -58,7 +58,7 @@ function BiddingBikeCard(props) {
                         className={showSaveBtn ? 'd-none' : ''}
                       />
                       {showSaveBtn && (
-                        <Button className={styles.submitBtn}>Submit</Button>
+                        <Button className={styles.submitBtn}>Save</Button>
                       )}
                     </div>
                   </div>

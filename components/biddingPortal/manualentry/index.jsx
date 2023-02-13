@@ -9,7 +9,7 @@ export default function ManaualEntry() {
     <div className={styles.addManaulMain}>
       <div>Add manual entry here</div>
       <div className={styles.addManaulCols}>
-        <div className="d-flex mb-2">
+        <div className="d-flex">
           <Tags title="Evaluation" bgColor="#B8382F" />
           <Tags title="CRE" bgColor="#2F6AB8" />
           <Tags title="SAMIL" bgColor="#E8B016" />
@@ -17,8 +17,10 @@ export default function ManaualEntry() {
           <Tags title="Bidding" bgColor="#B8812F" />
           <Tags title="Negotiation" bgColor="#2FB8B3" />
         </div>
-        <Form.Control type="text" placeholder="Primary Comment" />
-        <Form.Control as="textarea" placeholder="Secondary Comment" rows={3} />
+        <div className={styles.inputCols}>
+          <Form.Control type="text" placeholder="Primary Comment" />
+          <Form.Control as="textarea" placeholder="Secondary Comment" rows={3} />
+        </div>
       </div>
       <div className={styles.submitBtn}>
         <Button variant="">
