@@ -3,6 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import { AiOutlineRight, AiOutlineClose } from 'react-icons/ai';
 import ViewAll from '../../common/viewAllHeader';
 import styles from './style.module.scss';
+import ArrowButton from '../../common/buttons/ArrowButton';
 
 export default function DetailCard() {
   const cardData = [
@@ -66,18 +67,7 @@ export default function DetailCard() {
                     </div>
 
                     <div className={`${styles.detailsDivide} py-2 `}>
-                      <div
-                        className={`${styles.btnthemeOuter} d-flex align-items-center`}
-                      >
-                        <div className={`${styles.btnthemeName} p-0 px-2`}>
-                          Contact Customer
-                        </div>
-                        <span
-                          className={`${styles.btnthemeIcon} ${styles.detailsDivide}  px-2`}
-                        >
-                          <AiOutlineRight />
-                        </span>
-                      </div>
+                      <ArrowButton title="Contact Customer" />
                       <div className={`${styles.detailSendForm} text-white`}>
                         <i className="fa-regular fa-calendar me-2" />
                         <span>Send eval. form</span>
