@@ -4,9 +4,9 @@ import styles from './style.module.scss';
 
 export const data = [
   ['Task', 'Hours per Day'],
-  ['Upcoming Bids', 5],
-  ['Active Bids', 5],
-  ['Closed Bids', 2],
+  ['Upcoming Bids', 8],
+  ['Active Bids', 4],
+  ['Closed Bids', 6],
 ];
 
 export const options = {
@@ -14,7 +14,7 @@ export const options = {
   pieHole: 0.4,
   is3D: false,
   backgroundColor: '',
-  legendTextStyle: { color: '#FFF' },
+  legendTextStyle: { color: '#fff' },
 };
 export default function BiddingOverview() {
   return (
