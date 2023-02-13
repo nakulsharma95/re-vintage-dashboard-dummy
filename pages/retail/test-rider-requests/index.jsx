@@ -1,8 +1,8 @@
-import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import CompleteBikeDetail from '../../../components/procurements/completeEvalutationCard';
-import Filters from '../../../components/common/filters';
-import SortTabs from '../../../components/common/sortTabs';
-import TabPrimary from '../../../components/common/tabPrimary';
+import Breadcrumb from "../../../components/common/breadcrumbPrimary";
+import CompleteBikeDetail from "../../../components/procurements/completeEvalutationCard";
+import Filters from "../../../components/common/filters";
+import SortTabs from "../../../components/common/sortTabs";
+import TabPrimary from "../../../components/common/tabPrimary";
 
 export default function TestRiderRequests() {
   return (
@@ -16,7 +16,7 @@ export default function TestRiderRequests() {
         title4="Dropped (4)"
       />
       <SortTabs />
-      <CompleteBikeDetail />
+      <CompleteBikeDetail isEvalBtnVisible={false} isCallerBtnVisible={true} />
     </div>
   );
 }

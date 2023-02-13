@@ -1,13 +1,13 @@
-import React from 'react';
-import { Row, Col, Card } from 'react-bootstrap';
-import styles from './style.module.scss';
-import BikeSlider from '../../common/thumbnailSlider';
-import EvaluationDetail from '../evalutationDetail';
-import BikeCardFooter from '../../common/cardFooter';
-import MotorcycleDetail from '../motorcycleDetail';
+import React from "react";
+import { Row, Col, Card } from "react-bootstrap";
+import styles from "./style.module.scss";
+import BikeSlider from "../../common/thumbnailSlider";
+import EvaluationDetail from "../evalutationDetail";
+import BikeCardFooter from "../../common/cardFooter";
+import MotorcycleDetail from "../motorcycleDetail";
 
-function CompleteBikeDetail() {
-  const completeBikeName = ['2015 Classic 350', '2015 Thunder 350'];
+function CompleteBikeDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
+  const completeBikeName = ["2015 Classic 350", "2015 Thunder 350"];
   return (
     <>
       <h5 className={styles.compBikeSearchTxt}>2 Search</h5>
@@ -24,11 +24,14 @@ function CompleteBikeDetail() {
                   bikeInfo
                   bikeDetailTitle
                   bikeNumber="- DL6TAL7314"
-                  bikeName={item} 
+                  bikeName={item}
                 />
               </Col>
               <Col md={4}>
-                <EvaluationDetail />
+                <EvaluationDetail
+                  isEvalBtnVisible={isEvalBtnVisible}
+                  isCallerBtnVisible={isCallerBtnVisible}
+                />
               </Col>
             </Row>
           </Card.Body>
