@@ -1,7 +1,6 @@
 @import '../../../styles/variables/colors';
 @import '../../../styles/variables/mixins';
 
-
 .sortTabMain{
 	@include d-flex(space-between, center); 
 	margin-bottom: 1rem;

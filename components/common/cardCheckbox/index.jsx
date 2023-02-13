@@ -4,6 +4,7 @@ import { Card, Col, Row, Form, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { AiOutlineRight } from "react-icons/ai";
 import styles from "./style.module.scss";
 import ToggleSwitchCard from "../../retails/toggleSwitchCard";
+import CustomCheckBox from "../customCheckBox";
 
 function BikeCardRadio({
   isCheckBoxVisible,
@@ -40,12 +41,7 @@ function BikeCardRadio({
             <Card.Img variant="top" src={item.imageUrl} />
             {isCheckBoxVisible && (
               <div className={`${styles.bikeCardCheck}`}>
-                <Form.Group
-                  className={styles.customCheck}
-                  controlId={`${index}form`}
-                >
-                  <Form.Check type="checkbox" label="" />
-                </Form.Group>
+                <CustomCheckBox />
               </div>
             )}
             {isBikeTagVisible && (

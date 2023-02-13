@@ -14,46 +14,6 @@
 	top: 15px;
   left: 0;
   margin-left: 10px;
-
-  .customCheck {
-    position: relative;
-    label {
-      background-color: #FFFFFF;
-      cursor: pointer;
-      height: 18px;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 18px;
-      &:after {
-        border: 2px solid #fff;
-        border-top: none;
-        border-right: none;
-        content: "";
-        height: 6px;
-        left: 3px;
-        opacity: 0;
-        position: absolute;
-        top: 5px;
-        transform: rotate(-45deg);
-        width: 12px;
-      }
-    }
-    input[type="checkbox"] {
-      visibility: hidden;
-      &:checked {
-        + {
-          label {
-            background-color: #DA291C;
-            border-color: #DA291C;
-            &:after {
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
-  }
   
 }
   .bikeCardTag{

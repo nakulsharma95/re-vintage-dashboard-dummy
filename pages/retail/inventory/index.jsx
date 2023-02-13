@@ -17,7 +17,7 @@ export default function Inventory() {
         title3="Under Refurbishment"
         title4="Pending Evaluation (15)"
       />
-      <SortTabs selectAllCheck approveBtn moveToOlx />
+      <SortTabs selectAllCheck />
       <BikeCardRadio
         isCheckBoxVisible
         isButtonVisible
