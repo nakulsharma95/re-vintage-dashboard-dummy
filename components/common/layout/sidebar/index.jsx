@@ -25,6 +25,7 @@ export default function Sidebar() {
                 <BsFileEarmarkText />
               </span>{' '}
               Procurement
+              <span className={styles.sideBarbadge}>3</span>
             </Link>
           </Accordion.Header>
           <Accordion.Body className={styles.accordionBody}>

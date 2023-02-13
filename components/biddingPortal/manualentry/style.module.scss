@@ -9,6 +9,9 @@
 		margin-top: 10px;
 		width: 100%;
 		max-width: 570px;
+		.inputCols{
+			margin: 10px 0 0;
+		}
 		input, textarea{
 			margin: 5px 3px;
 			border-radius: 0;
@@ -40,14 +43,14 @@
 			text-align: center;
 			background-color:$theme-pink-da;
 			border-radius: 0;
-			border: 2px solid $theme-red-da;
+			border: 1px solid transparent;
 			outline: none;
 			color: $white;
 			position: relative;
 			padding-right: 58px;
 			transition: all 0.5s;
 			&:hover{
-				background-color: $theme-red-da;
+				border: 1px solid $theme-red-da;
 			}
 			span{
 				display: inline-block;
