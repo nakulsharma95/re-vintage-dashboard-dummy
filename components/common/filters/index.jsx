@@ -1,7 +1,8 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { FaSearch, FaFileExport } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
+import { RiShareBoxFill } from 'react-icons/ri';
 import { BiRefresh } from 'react-icons/bi';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { FiSettings } from 'react-icons/fi';
@@ -49,7 +50,7 @@ function Filters(props) {
             className={`${filterStyle.filterButton} ${filterStyle.exportButton}`}
           >
             Export data
-            <FaFileExport className={filterStyle.filterBtnIcn} />
+            <RiShareBoxFill className={filterStyle.filterBtnIcn} />
           </Button>
         )}
         {props.refresh && (

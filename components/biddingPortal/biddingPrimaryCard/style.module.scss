@@ -4,22 +4,23 @@
 .bikeCardCols{
 	background-color: $gray-28;
 	border-radius: 0px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	position: relative;
 	.bikeImg{
 		border-radius: 0;
 	}
 	.bikeName{
-		font-size: 14px;
+		font-size: 16px;
 		color: $white;
 		margin-bottom: 5px;
 		padding: 10px;
 		display: flex;
+		align-items: center;
 		span{
 			color: $theme-yellow-E8;
-			font-size: 13px;
+			font-size: 14px;
 			display: inline-block;
-			margin-left: 3px;
+			margin-left: 4px;
 		}
 		svg{
 			cursor: pointer;
