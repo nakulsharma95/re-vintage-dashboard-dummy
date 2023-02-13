@@ -1,9 +1,9 @@
-import BikeCardRadio from '../../../components/common/cardCheckbox';
-import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import DashboardCard from '../../../components/common/dashboardCard';
-import Filters from '../../../components/common/filters';
-import SortTabs from '../../../components/common/sortTabs';
-import TabPrimary from '../../../components/common/tabPrimary';
+import BikeCardRadio from "../../../components/common/cardCheckbox";
+import Breadcrumb from "../../../components/common/breadcrumbPrimary";
+import DashboardCard from "../../../components/common/dashboardCard";
+import Filters from "../../../components/common/filters";
+import SortTabs from "../../../components/common/sortTabs";
+import TabPrimary from "../../../components/common/tabPrimary";
 
 export default function Inventory() {
   return (
@@ -17,8 +17,14 @@ export default function Inventory() {
         title3="Under Refurbishment"
         title4="Pending Evaluation (15)"
       />
-      <SortTabs selectAllCheck approveBtn moveToOlx/>
-      <BikeCardRadio isCheckBoxVisible isButtonVisible isCardVisible={false} />
+      <SortTabs selectAllCheck approveBtn moveToOlx />
+      <BikeCardRadio
+        isCheckBoxVisible
+        isButtonVisible
+        isCardVisible={false}
+        isBikeTagVisible={true}
+        isOlxTagVisible={false}
+      />
     </div>
   );
 }

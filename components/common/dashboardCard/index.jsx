@@ -1,6 +1,6 @@
-import { Card, Col, Row, Form } from 'react-bootstrap';
-import { TbTrendingUp } from 'react-icons/tb';
-import styles from './style.module.scss';
+import { Card, Col, Row, DropdownButton, Dropdown } from "react-bootstrap";
+import { TbTrendingUp } from "react-icons/tb";
+import styles from "./style.module.scss";
 
 export default function DashboardCard() {
   return (
@@ -32,17 +32,19 @@ export default function DashboardCard() {
                 <h2>
                   Content Approval <br /> Pending
                 </h2>
-                <Form.Group className={styles.dashMonthSelect}>
-                  <Form.Select>
-                    <option>1 Month</option>
-                    <option>2 Month</option>
-                  </Form.Select>
-                </Form.Group>
+                <DropdownButton
+                  className={styles.dashboardDropdown}
+                  id="dropdown-basic-button"
+                  title="1 Month"
+                >
+                  <Dropdown.Item href="#/action-1">Month 2</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Month 3</Dropdown.Item>
+                </DropdownButton>
               </div>
 
               <p>12</p>
             </div>
-            <div className={`${styles.divider} w-100`} />
+            <div className={`${styles.dividerDark} w-100`} />
             <div className={`${styles.cardFooter} pt-2 w-100`}>
               <h3>Received This Week</h3>
               <div>
@@ -62,12 +64,14 @@ export default function DashboardCard() {
                   Content Upload
                   <br /> Pending
                 </h2>
-                <Form.Group className={styles.dashMonthSelect}>
-                  <Form.Select>
-                    <option>1 Month</option>
-                    <option>2 Month</option>
-                  </Form.Select>
-                </Form.Group>
+                <DropdownButton
+                  className={styles.dashboardDropdown}
+                  id="dropdown-basic-button"
+                  title="1 Month"
+                >
+                  <Dropdown.Item href="#/action-1">Month 2</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Month 3</Dropdown.Item>
+                </DropdownButton>
               </div>
 
               <p>8</p>
@@ -82,12 +86,14 @@ export default function DashboardCard() {
             <div className={`${styles.cardHead}`}>
               <div className="d-flex justify-content-between">
                 <h2>Under Refurbishment</h2>
-                <Form.Group className={styles.dashMonthSelect}>
-                  <Form.Select>
-                    <option>1 Month</option>
-                    <option>2 Month</option>
-                  </Form.Select>
-                </Form.Group>
+                <DropdownButton
+                  className={styles.dashboardDropdown}
+                  id="dropdown-basic-button"
+                  title="1 Month"
+                >
+                  <Dropdown.Item href="#/action-1">Month 2</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Month 3</Dropdown.Item>
+                </DropdownButton>
               </div>
 
               <p>12</p>

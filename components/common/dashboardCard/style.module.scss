@@ -51,7 +51,8 @@
 				color: $theme-success;
 			  }
 
-			  .dashMonthSelect{
+				.dashboardDropdown{
+					
 			display: block !important;
 
 				}
@@ -61,6 +62,9 @@
 
 .divider{
 	border: 1px solid #FFFFFF;
+}
+.dividerDark{
+	border: 1px solid $gray-28;
 }
 
 .bgRed{
@@ -72,5 +76,5 @@ background-color: $theme-red-da;
 }
 
 .bgDarkGray{
-background-color: #282828;
+background-color: $gray-28;
 }
