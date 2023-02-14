@@ -5,6 +5,7 @@ import { FaRegCalendar, FaPlus } from 'react-icons/fa';
 import CancelModal from '../../modals/cancelModal';
 import RescheduleModal from '../../modals/rescheduleModal';
 import SelectRescheduleDate from '../../modals/selectRescheduleDate';
+import ViewAllInnerTab from '../ViewAllInnerTab';
 import styles from './style.module.scss';
 
 function EvaluationRequestDetailCard() {
@@ -26,6 +27,7 @@ function EvaluationRequestDetailCard() {
   const motorCycleDetail = [
     {
       bikeName: '2015 Classic 350',
+      requestTag: "Dealer"
     },
     {
       bikeName: '2015 Hunter 350',
@@ -35,22 +37,8 @@ function EvaluationRequestDetailCard() {
     },
   ];
   return (
-    <div>
-      <div className={styles.topHeader}>
-        <p className={styles.topHeaderTxt}>3 Leads Available</p>
-        <div className={styles.topHeaderBtnBox}>
-          <p className={styles.viewText}>View:</p>
-          <Button
-            variant="primary"
-            className={`${styles.topHeaderBtn} ${styles.activeBtn}`}
-          >
-            All
-          </Button>
-          <Button variant="primary" className={`${styles.topHeaderBtn}`}>
-            Dealer
-          </Button>
-        </div>
-      </div>
+    <>
+    <ViewAllInnerTab />
       {motorCycleDetail.map((item) => (
         <Card className={styles.bikeDetailCardMain}>
           <Card.Header className={`${styles.bikeDetailCardHeader} px-0`}>
@@ -58,6 +46,11 @@ function EvaluationRequestDetailCard() {
               <h4 className={styles.bikeName}>
                 {item.bikeName} <span>- DL 6T AL 7314</span>
                 <span className={styles.bikeCode}>- FB29FH9219HR1</span>
+                {item.requestTag && (
+                  <p className={styles.bikeRequest}>
+                    Request by:<span>{item.requestTag}</span>
+                  </p>
+                )}
               </h4>
             </div>
             <div className="d-flex align-items-end">
@@ -195,7 +188,7 @@ function EvaluationRequestDetailCard() {
         isOpen={selectRescheduleDate}
         handleClose={dateToggleModal}
       />
-    </div>
+    </>
   );
 }
 

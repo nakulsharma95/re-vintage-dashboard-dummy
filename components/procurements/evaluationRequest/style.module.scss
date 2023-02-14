@@ -1,44 +1,6 @@
 @import '../../../styles/variables/colors';
 @import '../../../styles/variables//mixins';
 
-.topHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.7rem;
-  .topHeaderTxt {
-    font-size: 14px;
-    font-weight: 500;
-    color: #cbc6c6;
-    opacity: 0.9;
-    margin-bottom: 0px;
-  }
-  .topHeaderBtnBox {
-    display: flex;
-    .viewText {
-      font-size: 14px;
-      font-weight: 400;
-      color: #cbc6c6;
-      margin-bottom: 0px;
-    }
-    .topHeaderBtn {
-      padding: 0rem 0.8rem;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 500;
-      background: transparent;
-      border-radius: 0;
-      border: 0px;
-      border-right: 1px solid #707070;
-	  &:last-child {
-		border-right: 0px;
-	  }
-	  &.activeBtn{
-		color: #DA291C;
-	  }
-    }
-  }
-}
 .bikeDetailCardMain {
   margin-bottom: 1.5rem;
   padding: 1rem 1.5rem;
@@ -68,6 +30,19 @@
         font-size: 13px;
         margin-left: 5px;
         margin-bottom: 0px;
+      }
+      .bikeRequest{
+        display: inline;
+        margin-left: 1rem;
+        padding: 0.2rem 0.8rem;
+        color: $gray-cb;
+        font-size: 10px;
+        font-weight: 500;
+        background-color: $black;
+        span{
+          color: $white;
+          font-size: 10px;
+        }
       }
     }
     .priceTag {
