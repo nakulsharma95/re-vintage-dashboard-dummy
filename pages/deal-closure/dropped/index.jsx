@@ -6,12 +6,13 @@ import Filters from '../../../components/common/filters';
 import TabPrimary from '../../../components/common/tabPrimary';
 import styles from './style.module.scss';
 import CloserBikeCard from '../../../components/dealClosure/closerCard';
+import DetailPagination from '../../../components/common/paginationPrimary';
 
 function PaymentsPending() {
   return (
     <>
       <Breadcrumb title="Deal Closure" addmoretitle="Payment Pending" />
-      <Filters title="Payment Pending" />
+      <Filters title="Payment Pending" export/>
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <div className={styles.sortByMain}>
         <h5 className={styles.sortByTitle}>3 Leads</h5>
@@ -23,8 +24,9 @@ function PaymentsPending() {
         </div>
       </div>
       <Row>
-        <CloserBikeCard contactCSE reason />
+        <CloserBikeCard contactCSE reason location/>
       </Row>
+      <DetailPagination />
     </>
   );
 }
