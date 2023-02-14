@@ -252,6 +252,7 @@ h6 {
   border: 1px solid $white !important;
   color: $white !important;
   font-weight: 300 !important;
+  padding: 4px 10px 4px 15px !important;
 
 }
 
@@ -267,18 +268,26 @@ h6 {
   background-color: #000000 !important;
   border-bottom: 1px solid #333333 !important;
   color: #ffffff !important;
-  padding: 6px 15px !important;
   font-size: 13px !important;
   transform: inherit !important;
-  top: 37px !important;
-  right: -18px !important;
+  top: 34px !important;
+  right: 0px !important;
   left: inherit !important;
   text-align: left !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
     
 }
 .style_dashboardDropdown__LLzPp .dropdown-item{
-  color: $white   !important;
+  background-color: $black !important;
+	border-bottom: 1px solid $gray-3 !important;
+	color: $white !important;
+	padding: 6px 15px !important;
 
+}
+
+.style_dashboardDropdown__LLzPp .dropdown-item:last-child {
+  border-bottom: none !important;
 }
 .style_dashboardDropdown__LLzPp .dropdown-item:hover{
     background-color: transparent !important;
@@ -410,5 +419,14 @@ h6 {
         }
       }
     }
+
+
   }
 }
+
+.tooltip.bs-tooltip-end{
+    background-color: #da291c;
+  }
+
+  
+  
