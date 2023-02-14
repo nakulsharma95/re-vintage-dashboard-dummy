@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Form, Button } from "react-bootstrap";
-import { BiGridAlt, BiListUl, BiCheck } from "react-icons/bi";
+import { BiGridAlt, BiListUl, BiCheck, BiErrorAlt } from "react-icons/bi";
 import CustomCheckBox from "../customCheckBox";
 import styles from "./style.module.scss";
 
@@ -31,7 +31,10 @@ function SortTabs(props) {
                         variant="primary"
                         className={`${styles.submitCheckBBtn} ms-3`}
                       >
-                        <BiCheck className={styles.checkBtnIcon} />
+                        <BiErrorAlt
+                          className={`${styles.checkBtnIcon} mx-1`}
+                          size={15}
+                        />
                         Move to Inactive
                       </Button>
                     </>
@@ -43,7 +46,6 @@ function SortTabs(props) {
                       <BiCheck className={styles.checkBtnIcon} />
                       Approve Selected
                     </Button>
-                    
                   )}
                 </>
               ) : (
@@ -51,7 +53,6 @@ function SortTabs(props) {
                   <BiCheck className={styles.checkBtnIcon} />
                   Submit Selected
                 </Button>
-                
               )}
             </div>
           </>
