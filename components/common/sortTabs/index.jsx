@@ -1,8 +1,8 @@
-import React from "react";
-import { Col, Form, Button } from "react-bootstrap";
-import { BiGridAlt, BiListUl, BiCheck } from "react-icons/bi";
-import CustomCheckBox from "../customCheckBox";
-import styles from "./style.module.scss";
+import React from 'react';
+import { Col, Form, Button } from 'react-bootstrap';
+import { BiGridAlt, BiListUl, BiCheck, BiChevronDown } from 'react-icons/bi';
+import CustomCheckBox from '../customCheckBox';
+import styles from './style.module.scss';
 
 function SortTabs(props) {
   return (
@@ -13,7 +13,7 @@ function SortTabs(props) {
             <div className={styles.sortTabCheck}>
               <h5 className={styles.tabCheckTitle}>25 Bids Available</h5>
               <div className="mx-3">
-                <CustomCheckBox checkTitle="Select all"/>
+                <CustomCheckBox checkTitle="Select all" />
               </div>
 
               {props.approveBtn ? (
@@ -71,14 +71,27 @@ function SortTabs(props) {
             </div>
           </>
         )}
+        <div className={styles.sortTabBtnBoxMain}>
+          {props.isSortTabBox && (
+            <div className="d-flex align-items-center">
+              <p className={styles.sortText}>Sort by:</p>
+              <div>
+                <Button variant="primary" className={styles.sortTabBtn}>
+                  Self Procure
+                  <BiChevronDown size={20}/>
+                </Button>
+              </div>
+            </div>
+          )}
 
-        <div className={styles.sortTabBtnBox}>
-          <Button variant="primary" className={styles.viewTabBtn}>
-            <BiGridAlt />
-          </Button>
-          <Button variant="primary" className={styles.viewTabBtn}>
-            <BiListUl />
-          </Button>
+          <div className={styles.sortTabBtnBox}>
+            <Button variant="primary" className={styles.viewTabBtn}>
+              <BiGridAlt />
+            </Button>
+            <Button variant="primary" className={styles.viewTabBtn}>
+              <BiListUl />
+            </Button>
+          </div>
         </div>
       </Col>
     </>
