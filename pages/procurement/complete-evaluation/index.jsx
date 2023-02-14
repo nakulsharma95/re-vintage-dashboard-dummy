@@ -10,7 +10,7 @@ function CompleteEvaluation() {
       <Breadcrumb title="Procurement" addmoretitle="Complete Evaluation" />
       <Filters title="Completed Evaluation" export />
       <div className="bottom-white-border" />
-      <CompleteBikeDetail isEvalBtnVisible={true}  isCallerBtnVisible={false}/>
+      <CompleteBikeDetail isEvalBtnVisible={true}  isCallerBtnVisible={false} isEnquiryNumVisible={false}/>
       <DetailPagination />
     </>
   );
