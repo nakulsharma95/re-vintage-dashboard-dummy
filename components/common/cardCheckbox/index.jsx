@@ -17,7 +17,7 @@ function BikeCardRadio({
 }) {
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      Simple tooltip
+      Last Listed on: 22 Dec
     </Tooltip>
   );
   const cardData = [
