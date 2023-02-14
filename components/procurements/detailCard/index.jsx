@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import { Row, Col } from 'react-bootstrap';
-import { AiOutlineRight, AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineRight, AiOutlineClose, AiOutlineContainer } from 'react-icons/ai';
 import ViewAll from '../../common/viewAllHeader';
 import styles from './style.module.scss';
 
@@ -79,7 +79,7 @@ export default function DetailCard() {
                         </span>
                       </div>
                       <div className={`${styles.detailSendForm} text-white`}>
-                        <i className="fa-regular fa-calendar me-2" />
+                        <AiOutlineContainer className='mx-1' size={16}/>
                         <span>Send eval. form</span>
                       </div>
                     </div>
