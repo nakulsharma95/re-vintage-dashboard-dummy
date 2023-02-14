@@ -161,7 +161,7 @@ export default function Sidebar() {
         </Accordion.Item>
 
         <li>
-          <Link href="/">
+          <Link href="/price-calculator">
             <span className={styles.navIcon}>
               <BiRupee />
             </span>{' '}
