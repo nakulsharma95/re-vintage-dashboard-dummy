@@ -1,12 +1,10 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import { Card, Col, Row, Form, OverlayTrigger, Tooltip } from "react-bootstrap";
-import { AiOutlineRight } from "react-icons/ai";
 import styles from "./style.module.scss";
 import ToggleSwitchCard from "../../retails/toggleSwitchCard";
 import CustomCheckBox from "../customCheckBox";
 import ArrowButton from '../../common/buttons/ArrowButton';
-import RedButton from '../../common/buttons/RedButton';
 
 function BikeCardRadio({
   isCheckBoxVisible,
@@ -47,7 +45,7 @@ function BikeCardRadio({
               </div>
             )}
             {isBikeTagVisible && (
-              <div className={`${styles.bikeCardTag}`}>Self Consumed</div>
+              <div className={`${styles.bikeCardTag}`}>Self Procured</div>
             )}
             {isOlxTagVisible && (
               <div className={`${styles.bikeCardTagOlx}`}>
