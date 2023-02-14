@@ -27,31 +27,11 @@
     align-items: center;
     padding-top: 1rem;
     border-top: 1px solid $gray-70;
-    .btnthemeOuter {
-      border: 2px solid $theme-red-da;
-      height: 40px;
-      background-color: $theme-pink-da;
 
-      .btnthemeName {
-        color: $white;
-        border-radius: 0;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-        cursor: pointer;
-      }
-
-      .btnthemeIcon {
-        background-color: $theme-red-da;
-        height: 100%;
-        font-size: 19px;
-        color: $white;
-        cursor: pointer;
-      }
+    .arrowBtnDiv{
+      flex-grow: 1;
     }
     .downloadBtn {
-      width: 100%;
       min-height: 36px;
       margin-left: 0.8rem;
       font-size: 14px;

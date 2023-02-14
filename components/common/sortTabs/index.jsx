@@ -13,7 +13,7 @@ function SortTabs(props) {
             <div className={styles.sortTabCheck}>
               <h5 className={styles.tabCheckTitle}>25 Bids Available</h5>
               <div className="mx-3">
-                <CustomCheckBox />
+                <CustomCheckBox checkTitle="Select all"/>
               </div>
 
               {props.approveBtn ? (

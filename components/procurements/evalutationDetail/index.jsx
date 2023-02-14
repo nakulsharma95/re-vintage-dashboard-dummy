@@ -1,9 +1,9 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import { AiFillPhone } from "react-icons/ai";
-import ArrowButton from "../../common/buttons/ArrowButton"
-import styles from "./style.module.scss";
+import React from 'react';
+import { Row, Col } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import { AiFillPhone } from 'react-icons/ai';
+import ArrowButton from '../../common/buttons/ArrowButton';
+import styles from './style.module.scss';
 
 function EvaluationDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
   return (
@@ -26,7 +26,9 @@ function EvaluationDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
 
       {isEvalBtnVisible && (
         <div className={styles.evalBtnBox}>
-          <ArrowButton title="Detail" />
+          <div className={styles.arrowBtnDiv}>
+            <ArrowButton title="Detail" />
+          </div>
           <Button variant="primary" className={styles.downloadBtn}>
             Download Report
           </Button>
