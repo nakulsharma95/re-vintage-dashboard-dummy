@@ -1,8 +1,8 @@
-import React from 'react';
-import { Row, Col, Button } from 'react-bootstrap';
-import styles from './style.module.scss';
-import { BiDotsVerticalRounded, BiRupee } from 'react-icons/bi';
-import Link from 'next/link';
+import React from "react";
+import { Row, Col, Button } from "react-bootstrap";
+import styles from "./style.module.scss";
+import { BiDotsVerticalRounded, BiRupee } from "react-icons/bi";
+import Link from "next/link";
 
 function MotorcycleDetail({
   bikeName,
@@ -15,6 +15,7 @@ function MotorcycleDetail({
   bikeDetailTitle,
   bikePriceTitle,
   footerPrice,
+  isEnquiryNumVisible,
 }) {
   return (
     <div
@@ -83,25 +84,25 @@ function MotorcycleDetail({
       </div>
 
       <div className="d-flex justify-content-between align-items-center mt-3">
-      <div className='d-flex align-items-center'>
-      <div className={styles.bikeRupeeIcon}>
-          <BiRupee />
+        <div className="d-flex align-items-center">
+          <div className={styles.bikeRupeeIcon}>
+            <BiRupee />
+          </div>
+          <div>
+            <h3 className={styles.motorStylePrice}>Evaluation Price</h3>
+            <h2 className={styles.motorStylePriceTxt}>1,19,300</h2>
+          </div>
         </div>
-        <div>
-          <h3 className={styles.motorStylePrice}>Evaluation Price</h3>
-          <h2 className={styles.motorStylePriceTxt}>1,19,300</h2>
-        </div>
+        {isEnquiryNumVisible && (
+          <div className="d-flex align-items-center">
+            <div>
+              <h3 className={styles.motorStylePrice}>MSD enquiry number</h3>
+              <h2 className={styles.motorStylePriceTxt}>219244982196</h2>
+            </div>
+          </div>
+        )}
       </div>
 
-      <div className='d-flex align-items-center'>
-  
-        <div>
-          <h3 className={styles.motorStylePrice}>MSD enquiry number</h3>
-          <h2 className={styles.motorStylePriceTxt}>219244982196</h2>
-        </div>
-      </div>
-      </div>
- 
       {footerPrice && (
         <div className={styles.hgBidCols}>
           <div className={styles.priceTag}>

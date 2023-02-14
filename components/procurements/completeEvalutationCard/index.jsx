@@ -6,8 +6,13 @@ import EvaluationDetail from "../evalutationDetail";
 import BikeCardFooter from "../../common/cardFooter";
 import MotorcycleDetail from "../motorcycleDetail";
 
-function CompleteBikeDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
+function CompleteBikeDetail({
+  isEvalBtnVisible,
+  isCallerBtnVisible,
+  isEnquiryNumVisible,
+}) {
   const completeBikeName = ["2015 Classic 350", "2015 Thunder 350"];
+
   return (
     <>
       <h5 className={styles.compBikeSearchTxt}>2 Search</h5>
@@ -25,6 +30,7 @@ function CompleteBikeDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
                   bikeDetailTitle
                   bikeNumber="- DL6TAL7314"
                   bikeName={item}
+                  isEnquiryNumVisible={isEnquiryNumVisible}
                 />
               </Col>
               <Col md={4}>
