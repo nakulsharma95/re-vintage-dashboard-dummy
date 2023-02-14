@@ -24,7 +24,7 @@ function PaymentsPending() {
         </div>
       </div>
       <Row>
-        <CloserBikeCard contactCSE reason location/>
+        <CloserBikeCard isHighestBid="Highest Bid" isKmDriven contactCSE reason location/>
       </Row>
       <DetailPagination />
     </>

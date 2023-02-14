@@ -97,7 +97,7 @@ function BiddingBikeCard(props) {
               <div className={styles.addtionalInfo}>
                 <div className="d-flex align-items-center justify-content-between">
                   <span className={styles.infoTitle}>KMs Driven</span>
-                  <span className={styles.infoTitle}>KMs Driven</span>
+                  <span className={styles.infoTitle}>Model</span>
                 </div>
                 <div className="d-flex align-items-center justify-content-between">
                   <span>48,523 KM</span>
@@ -108,9 +108,15 @@ function BiddingBikeCard(props) {
                 </div>
               </div>
               {props.arrowBtn && (
-                <ArrowButton detailLink="/bike-details" title="BID DETAILS" />
+                <div className={styles.cardBtnCols}>
+                  <ArrowButton detailLink="/bike-details" title="BID DETAILS" />
+                </div>
               )}
-              {props.redBtn && <RedButton title="VIEW DETAIL" />}
+              {props.redBtn && 
+                <div className={styles.cardBtnCols}>
+                  <RedButton title="VIEW DETAIL" />
+                </div>
+              }
             </Card.Body>
           </Card>
         </Col>
