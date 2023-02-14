@@ -18,7 +18,7 @@ export default function Retail() {
         title4="Pending Evaluation (15)"
       />
        <SortTabs selectAllCheck />
-      <BikeCardRadio isCheckBoxVisible={false} isButtonVisible={false} />
+      <BikeCardRadio isCheckBoxVisible={false} isButtonVisible={false} isBikeChassisVisible={false} />
     </div>
   );
 }

@@ -24,6 +24,7 @@ export default function Inventory() {
         isCardVisible={false}
         isBikeTagVisible={true}
         isOlxTagVisible={false}
+        isBikeChassisVisible={true}
       />
     </div>
   );
