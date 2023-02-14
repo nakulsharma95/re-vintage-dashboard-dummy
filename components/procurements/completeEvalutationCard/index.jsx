@@ -15,7 +15,6 @@ function CompleteBikeDetail({
 
   return (
     <>
-      <h5 className={styles.compBikeSearchTxt}>2 Search</h5>
       {completeBikeName.map((item) => (
         <Card className={styles.compBikeCard}>
           <Card.Body className={`${styles.compBikeCardBody}`}>

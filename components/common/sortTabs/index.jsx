@@ -43,6 +43,7 @@ function SortTabs(props) {
                       <BiCheck className={styles.checkBtnIcon} />
                       Approve Selected
                     </Button>
+                    
                   )}
                 </>
               ) : (
@@ -50,6 +51,7 @@ function SortTabs(props) {
                   <BiCheck className={styles.checkBtnIcon} />
                   Submit Selected
                 </Button>
+                
               )}
             </div>
           </>

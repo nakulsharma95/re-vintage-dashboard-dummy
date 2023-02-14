@@ -1,8 +1,8 @@
 import Breadcrumb from "../../../components/common/breadcrumbPrimary";
 import CompleteBikeDetail from "../../../components/procurements/completeEvalutationCard";
 import Filters from "../../../components/common/filters";
-import SortTabs from "../../../components/common/sortTabs";
 import TabPrimary from "../../../components/common/tabPrimary";
+import DealFilter from '../../../components/dealClosure/dealFilter';
 
 export default function TestRiderRequests() {
   return (
@@ -15,7 +15,7 @@ export default function TestRiderRequests() {
         title3="Completed (4)"
         title4="Dropped (4)"
       />
-      <SortTabs selectAllCheck />
+       <DealFilter title="12 Result Found" isViewBy />
       <CompleteBikeDetail isEvalBtnVisible={false} isCallerBtnVisible={true} isEnquiryNumVisible={true}  />
     </div>
   );
