@@ -16,8 +16,8 @@ export default function MarketPlace() {
         title2="Inactive (12)"
         title3="OLX Listing (4)"
       />
-      <SortTabs />
-      <BikeCardRadio isCardVisible />
+       <SortTabs selectAllCheck />
+      <BikeCardRadio isCardVisible isCheckBoxVisible={true} isBikeTagVisible={false} isOlxTagVisible={true} />
     </div>
   );
 }

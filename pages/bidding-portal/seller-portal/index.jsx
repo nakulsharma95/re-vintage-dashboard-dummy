@@ -11,6 +11,7 @@ import styles from './style.module.scss';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
 import SortTabs from '../../../components/common/sortTabs';
 import ArrowButton from '../../../components/common/buttons/ArrowButton';
+import CustomCheckBox from '../../../components/common/customCheckBox';
 
 export default function ClosedBids() {
   const activeBikeData = [
@@ -46,11 +47,9 @@ export default function ClosedBids() {
                 src={item.imageUrl}
                 alt="not-found"
               />
-              <Form.Check
-                type="checkbox"
-                label=""
-                className={styles.selectBoxCheck}
-              />
+              <div className={styles.selectBoxCheck}>
+                <CustomCheckBox />
+              </div>
               <Card.Body className={styles.cardPanel}>
                 <Card.Title className={styles.bikeName}>
                   2015 Classic 350{' '}

@@ -1,7 +1,8 @@
-import React from 'react';
-import { Col, Form, Button } from 'react-bootstrap';
-import { BiGridAlt, BiListUl, BiCheck } from 'react-icons/bi';
-import styles from './style.module.scss';
+import React from "react";
+import { Col, Form, Button } from "react-bootstrap";
+import { BiGridAlt, BiListUl, BiCheck } from "react-icons/bi";
+import CustomCheckBox from "../customCheckBox";
+import styles from "./style.module.scss";
 
 function SortTabs(props) {
   return (
@@ -11,16 +12,10 @@ function SortTabs(props) {
           <>
             <div className={styles.sortTabCheck}>
               <h5 className={styles.tabCheckTitle}>25 Bids Available</h5>
-              <Form.Group
-                className={styles.tabCheck}
-                controlId="formBasicCheckbox"
-              >
-                <Form.Check
-                  className="mb-0"
-                  type="checkbox"
-                  label="Select all"
-                />
-              </Form.Group>
+              <div className="mx-3">
+                <CustomCheckBox />
+              </div>
+
               {props.approveBtn ? (
                 <>
                   {props.moveToOlx ? (

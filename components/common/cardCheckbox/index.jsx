@@ -1,24 +1,36 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import { Card, Col, Row, Form } from 'react-bootstrap';
-import { AiOutlineRight } from 'react-icons/ai';
-import styles from './style.module.scss';
-import ToggleSwitchCard from '../../retails/toggleSwitchCard';
+import React from "react";
+import Button from "react-bootstrap/Button";
+import { Card, Col, Row, Form, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { AiOutlineRight } from "react-icons/ai";
+import styles from "./style.module.scss";
+import ToggleSwitchCard from "../../retails/toggleSwitchCard";
+import CustomCheckBox from "../customCheckBox";
 
-function BikeCardRadio({ isCheckBoxVisible, isButtonVisible, isCardVisible }) {
+function BikeCardRadio({
+  isCheckBoxVisible,
+  isButtonVisible,
+  isCardVisible,
+  isBikeTagVisible,
+  isOlxTagVisible,
+}) {
+  const renderTooltip = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      Simple tooltip
+    </Tooltip>
+  );
   const cardData = [
     {
-      imageUrl: '/images/bikeImage.png',
-      overDue: 'evolutionOver',
+      imageUrl: "/images/bikeImage.png",
+      overDue: "evolutionOver",
     },
     {
-      imageUrl: '/images/bikeImage2.png',
+      imageUrl: "/images/bikeImage2.png",
     },
     {
-      imageUrl: '/images/bikeImage3.png',
+      imageUrl: "/images/bikeImage3.png",
     },
     {
-      imageUrl: '/images/bikeImage4.png',
+      imageUrl: "/images/bikeImage4.png",
     },
   ];
   return (
@@ -29,15 +41,26 @@ function BikeCardRadio({ isCheckBoxVisible, isButtonVisible, isCardVisible }) {
             <Card.Img variant="top" src={item.imageUrl} />
             {isCheckBoxVisible && (
               <div className={`${styles.bikeCardCheck}`}>
-                <Form.Group
-                  className={styles.customCheck}
-                  controlId={`${index}form`}
-                >
-                  <Form.Check type="checkbox" label="" />
-                </Form.Group>
+                <CustomCheckBox />
               </div>
             )}
-            <div className={`${styles.bikeCardTag}`}>Self Consumed</div>
+            {isBikeTagVisible && (
+              <div className={`${styles.bikeCardTag}`}>Self Consumed</div>
+            )}
+            {isOlxTagVisible && (
+              <div className={`${styles.bikeCardTagOlx}`}>
+                Listed on
+                <img src="/images/olx.png" className={styles.olxImage} alt="" />
+                <OverlayTrigger
+                  placement="right"
+                  delay={{ show: 250, hide: 400 }}
+                  overlay={renderTooltip}
+                  className="d-inline-flex align-items-center"
+                >
+                  <Button>2</Button>
+                </OverlayTrigger>
+              </div>
+            )}
             <Card.Body className="px-0">
               <Card.Title className={styles.bkeName}>
                 2015 Classic 350 <span>- DL 6T AL 7314</span>
