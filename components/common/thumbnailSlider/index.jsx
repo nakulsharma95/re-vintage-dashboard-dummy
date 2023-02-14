@@ -30,6 +30,7 @@ function BikeSlider() {
       <Slider {...settings} className={styles.compBikeCardSlider}>
         <div className={styles.compBikeCardSlides}>
           <Image src="/images/sliderImg/bike0.png" width="100" height="100" />
+          {/* <img src="/images/sliderImg/bike0.png" alt="" /> */}
         </div>
         <div className={styles.compBikeCardSlides}>
           <Image src="/images/sliderImg/bike1.png" width="100" height="100" />

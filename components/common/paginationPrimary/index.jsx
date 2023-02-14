@@ -1,10 +1,9 @@
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Pagination from 'react-bootstrap/Pagination';
+import React from 'react';
+import { Row, Col, Button, Pagination } from 'react-bootstrap';
 import { BsChevronRight, BsChevronLeft } from 'react-icons/bs';
 import styles from './style.module.scss';
 
-export default function DetailPagination() {
+const DetailPagination = () => {
   const active = 2;
   const items = [];
   for (let number = 1; number <= 5; number++) {
@@ -15,35 +14,36 @@ export default function DetailPagination() {
     );
   }
   return (
-    <div className="custom-pagination">
-      <Row>
-        <Col className="d-flex align-items-center mb-3" xl={4} lg={4} md={12}>
-          <div className={styles.detailPaginationNumber}>
-            <h3 className="mb-0">Page 2 of 4</h3>
-          </div>
+    <div className={`${styles.paginationMain} custom-paginationMain`}>
+      <Row className='align-items-center'>
+        <Col className={styles.detailPaginationTitle} xl={4} lg={4} md={12}>
+          <h3 className="mb-0">Page 2 of 4</h3>
         </Col>
 
-        <Col xl={8} lg={8} md={12}>
-          <div className="d-flex justify-content-end">
-            <div className="">
-              <button type="button" className={styles.detailCustomBtn}>
-                <BsChevronLeft className={styles.PaginationArrow} />
+        <Col xl={8} lg={8} md={12} className={styles.detailPaginationNumber}>
+          <div className="d-flex justify-content-end align-items-center">
+            <div>
+              <Button
+                variant="primary"
+                className={styles.detailPagePrevNextBtn}
+              >
+                <BsChevronLeft className={`${styles.paginationArrow} me-2`} />
                 Previous
-              </button>
+              </Button>
             </div>
-            <Pagination className={styles.detailPaginationMain} size="md">
+            <Pagination className={`${styles.detailPageNo} custom-pagination`} size="md">
               {items}
             </Pagination>
-
-            <div className="">
-              <button type="button" className={styles.detailCustomBtn}>
+            <div>
+              <Button variant="primary" className={styles.detailPagePrevNextBtn}>
                 Next
-                <BsChevronRight className={styles.PaginationArrow} />
-              </button>
+                <BsChevronRight className={`${styles.paginationArrow} ms-2`} />
+              </Button>
             </div>
           </div>
         </Col>
       </Row>
     </div>
   );
-}
+};
+export default DetailPagination;

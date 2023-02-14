@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import { AiOutlineRight } from 'react-icons/ai';
+import ArrowButton from "../../common/buttons/ArrowButton"
 import styles from './style.module.scss';
 
 function EvaluationDetail() {
@@ -23,14 +23,7 @@ function EvaluationDetail() {
       <h5 className={styles.evalSubTitle}>Evaluation Location</h5>
       <p className={styles.evalText}>Neel Motors, Lajpat Nagar, Delhi</p>
       <div className={styles.evalBtnBox}>
-        <div className={`${styles.btnthemeOuter} d-flex align-items-center`}>
-          <div className={`${styles.btnthemeName} p-0 px-3`}>Details</div>
-          <span
-            className={`${styles.btnthemeIcon} ${styles.detailsDivide}  px-2`}
-          >
-            <AiOutlineRight />
-          </span>
-        </div>
+        <ArrowButton title="Detail" />
         <Button variant="primary" className={styles.downloadBtn}>
           Download Report
         </Button>

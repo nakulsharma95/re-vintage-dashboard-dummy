@@ -20,6 +20,18 @@ function CloserBikeCard(props) {
     {
       imageUrl: '/images/bikeImage4.png',
     },
+    {
+      imageUrl: '/images/bikeImage4.png',
+    },
+    {
+      imageUrl: '/images/bikeImage4.png',
+    },
+    {
+      imageUrl: '/images/bikeImage4.png',
+    },
+    {
+      imageUrl: '/images/bikeImage4.png',
+    },
   ];
   const tagClassHandler = (tag) => {
     switch (tag) {

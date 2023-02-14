@@ -123,34 +123,43 @@ h6 {
   margin-bottom: 0 !important;
 }
 
-// Pagination Start
-
-.custom-pagination .page-link {
-  background-color: transparent !important;
-  border: none !important;
-  color: #ffff !important;
+// Pagination Start ---------------------------------
+.custom-paginationMain {
+  .custom-pagination {
+    .page-item {
+      margin: 0 0.4rem;
+      &:first-child,
+      &:last-child {
+        .page-link {
+          border-radius: 0;
+        }
+      }
+      .page-link{
+        width: 22px;
+        height: 28px;
+        padding: 0rem;
+        color: $gray-cb;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 29px;
+        border: 0;
+        background-color: transparent;
+        &:focus{
+          outline: none;
+          box-shadow: none;
+        }
+      }
+      &.active{
+        .page-link{
+          color: $white;
+          background-color: $theme-red-da;
+        }
+      }
+    }
+  }
 }
-.custom-pagination .page-link.active,
-.active > .page-link {
-  border: 2px solid $theme-red-da !important;
-  background-color: $theme-red-da !important;
-}
-.custom-pagination .page-link.active,
-.active > .page-link {
-  border: 2px solid #da291c !important;
-  background-color: #da291c !important;
-  width: 32px !important;
-  height: 32px !important;
-  display: flex !important;
-  align-items: center !important;
-}
-.custom-pagination .page-link:focus {
-  background-color: $theme-red-da !important;
-  border: none !important;
-  border-radius: 0px !important;
-  box-shadow: none !important;
-}
-// Pagination End
+// Pagination End ------------------------------------
 
 // modal-style1
 .modal-style1 {
@@ -282,7 +291,7 @@ h6 {
       opacity: 0.9;
       background: $gray-20;
       border-bottom: 1px solid $gray-70;
-      &:not(.collapsed){
+      &:not(.collapsed) {
         box-shadow: none;
       }
       &:focus {

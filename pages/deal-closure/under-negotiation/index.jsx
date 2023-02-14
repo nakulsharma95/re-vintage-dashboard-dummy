@@ -3,9 +3,9 @@ import { Row, Col, Button } from 'react-bootstrap';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import Filters from '../../../components/common/filters';
 import TabPrimary from '../../../components/common/tabPrimary';
-import styles from './style.module.scss';
 import SortTabs from '../../../components/common/sortTabs';
 import CloserBikeCard from '../../../components/dealClosure/closerCard';
+import DetailPagination from '../../../components/common/paginationPrimary';
 
 function UnderNegotiation() {
   return (
@@ -16,12 +16,8 @@ function UnderNegotiation() {
       <Row>
         <SortTabs />
         <CloserBikeCard location status contactCSE/>
-        <Col md={12} className="text-center pt-2 pb-4">
-          <Button variant="primary" className={styles.loadMoreBtn}>
-            Load More
-          </Button>
-        </Col>
       </Row>
+      <DetailPagination />
     </>
   );
 }

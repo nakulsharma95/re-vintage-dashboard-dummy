@@ -2,6 +2,7 @@ import React from 'react';
 import Filters from '../../../components/common/filters';
 import CompleteBikeDetail from '../../../components/procurements/completeEvalutationCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import DetailPagination from '../../../components/common/paginationPrimary';
 
 function CompleteEvaluation() {
   return (
@@ -10,6 +11,7 @@ function CompleteEvaluation() {
       <Filters title="Completed Evaluation" export />
       <div className="bottom-white-border" />
       <CompleteBikeDetail />
+      <DetailPagination />
     </>
   );
 }
