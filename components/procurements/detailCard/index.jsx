@@ -87,7 +87,9 @@ export default function DetailCard(props) {
         </Col>
       ))}
       <Col md={12}>
-        <p className={styles.detailCardTxt}>{props.detailCardBtmTxt}</p>
+        {props.detailCardBtmTxt && (
+          <p className={styles.detailCardTxt}>{props.detailCardBtmTxt}</p>
+        )}
       </Col>
     </>
   );
