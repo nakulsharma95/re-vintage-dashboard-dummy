@@ -425,8 +425,26 @@ h6 {
 }
 
 .tooltip.bs-tooltip-end{
-    background-color: #da291c;
-  }
-
-  
-  
+    .tooltip-inner{
+      background-color: $theme-yellow-E8;
+      color: $black;
+      font-weight: 500;
+      margin-left: 10px;
+      font-size: 10px;
+      &::before{
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 10px 6px 0;
+        border-color: transparent $theme-yellow-E8 transparent transparent;
+        line-height: 0px;
+        _border-color: $black $theme-yellow-E8 $black $black;
+        _filter: progid:DXImageTransform.Microsoft.Chroma(color='$black');
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+}
