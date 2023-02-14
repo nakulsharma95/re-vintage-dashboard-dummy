@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import { Col } from 'react-bootstrap';
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose,AiOutlineContainer } from 'react-icons/ai';
 import styles from './style.module.scss';
 import ArrowButton from '../../common/buttons/ArrowButton';
 
@@ -66,9 +66,9 @@ export default function DetailCard(props) {
                   <div className={`${styles.detailsDivide} py-2 `}>
                     <ArrowButton title="Contact Customer" />
                     <div className={`${styles.detailSendForm} text-white`}>
-                      <i className="fa-regular fa-calendar me-2" />
-                      <span>Send eval. form</span>
-                    </div>
+                        <AiOutlineContainer className='mx-1' size={16}/>
+                        <span>Send eval. form</span>
+                      </div>
                   </div>
                 </div>
               </Card.Body>
