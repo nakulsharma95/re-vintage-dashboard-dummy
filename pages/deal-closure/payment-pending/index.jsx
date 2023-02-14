@@ -14,7 +14,7 @@ function PaymentsPending() {
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <DealFilter title="25 Bids Available" isSortButton />
       <Row>
-        <CloserBikeCard contactCSE />
+        <CloserBikeCard contactCSE cardTag location />
       </Row>
     </>
   );
