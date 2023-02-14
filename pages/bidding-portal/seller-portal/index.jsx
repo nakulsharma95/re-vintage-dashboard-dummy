@@ -94,7 +94,9 @@ export default function ClosedBids() {
                     <span>Location</span> Mumbai, Maharashtra
                   </div>
                 </div>
-                <ArrowButton title="VIEW DETAILS" />
+                <div className={styles.cardBtnCols}>
+                  <ArrowButton title="VIEW DETAILS" />
+                </div>
               </Card.Body>
             </Card>
           </Col>
