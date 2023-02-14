@@ -3,7 +3,6 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { BiRupee } from 'react-icons/bi';
 import { FiCopy } from 'react-icons/fi';
-import TabPrimary from '../../../components/common/tabPrimary';
 import Filters from '../../../components/common/filters';
 import DetailPagination from '../../../components/common/paginationPrimary';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
@@ -34,8 +33,8 @@ export default function ClosedBids() {
         <Breadcrumb title="Bidding Portal" addmoretitle="Seller Portal" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
-      <Filters title="Seller Portal" export />
-      <TabPrimary title1="Today" title2="Next Bidding (31 Dec)" />
+      <Filters title="Seller Portal" subTitle="Please find all the necessary details" export />
+      <div className="bottom-white-border mt-3 mb-2" />
       <SortTabs selectAllCheck />
       <Row className="mb-3">
         {activeBikeData.map((item) => (

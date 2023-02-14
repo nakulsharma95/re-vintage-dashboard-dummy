@@ -82,15 +82,26 @@ function MotorcycleDetail({
         </Row>
       </div>
 
-      <div className="d-flex align-items-center mt-3">
-        <div className={styles.bikeRupeeIcon}>
+      <div className="d-flex justify-content-between align-items-center mt-3">
+      <div className='d-flex align-items-center'>
+      <div className={styles.bikeRupeeIcon}>
           <BiRupee />
         </div>
         <div>
-          <h3 className={styles.motorStylePrice}>{bikePriceTitle}</h3>
+          <h3 className={styles.motorStylePrice}>Evaluation Price</h3>
           <h2 className={styles.motorStylePriceTxt}>1,19,300</h2>
         </div>
       </div>
+
+      <div className='d-flex align-items-center'>
+  
+        <div>
+          <h3 className={styles.motorStylePrice}>MSD enquiry number</h3>
+          <h2 className={styles.motorStylePriceTxt}>219244982196</h2>
+        </div>
+      </div>
+      </div>
+ 
       {footerPrice && (
         <div className={styles.hgBidCols}>
           <div className={styles.priceTag}>

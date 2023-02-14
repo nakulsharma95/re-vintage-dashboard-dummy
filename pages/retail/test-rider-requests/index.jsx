@@ -15,7 +15,7 @@ export default function TestRiderRequests() {
         title3="Completed (4)"
         title4="Dropped (4)"
       />
-      <SortTabs />
+      <SortTabs selectAllCheck />
       <CompleteBikeDetail isEvalBtnVisible={false} isCallerBtnVisible={true} />
     </div>
   );

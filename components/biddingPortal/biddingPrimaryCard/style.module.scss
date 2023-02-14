@@ -75,7 +75,7 @@
 				input{
 					background-color: $gray-2c;
 					padding: 5px;
-					padding-left: 18px;
+					padding-left: 20px;
 					width: 100%;
 					max-width: 105px;
 					font-size: 13px;
@@ -89,10 +89,13 @@
 					background-color: transparent;
 					border: 1px solid $gray-fd;
 					border-radius: 0;
+					width: 100%;
+					max-width: 78px;
+					margin-bottom: 2px;
 					height: 28px;
 					font-size: 11px;
 					text-transform: uppercase;
-					padding: 0 8px;
+					padding: 0 10px;
 					margin-left: 10px;
 					transition: all 0.5s;
 					&:hover{
@@ -108,7 +111,7 @@
 				}
 				span{
 					position: absolute;
-					top: 3px;
+					top:4px;
 					left: -2px;
 					svg{
 						margin-left: 0;
@@ -133,6 +136,7 @@
 				font-size: 12px;
 				span{
 					color: $gray-cb;
+					font-size: 12px;
 				}
 			}
 		}

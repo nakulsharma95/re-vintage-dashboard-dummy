@@ -5,6 +5,8 @@ import { AiOutlineRight } from "react-icons/ai";
 import styles from "./style.module.scss";
 import ToggleSwitchCard from "../../retails/toggleSwitchCard";
 import CustomCheckBox from "../customCheckBox";
+import ArrowButton from '../../common/buttons/ArrowButton';
+import RedButton from '../../common/buttons/RedButton';
 
 function BikeCardRadio({
   isCheckBoxVisible,
@@ -98,12 +100,7 @@ function BikeCardRadio({
                   <Button variant="primary" className={styles.downloadBtn}>
                     VIEW
                   </Button>
-                  <Button variant="primary" className={styles.detailBtn}>
-                    APPROVE
-                    <span className={styles.rightArrow}>
-                      <AiOutlineRight />
-                    </span>
-                  </Button>
+                  <ArrowButton detailLink="" title="APPROVE" />
                 </div>
               )}
             </Card.Body>
