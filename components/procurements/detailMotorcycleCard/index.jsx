@@ -1,12 +1,10 @@
 import { Table } from 'react-bootstrap';
 import styles from './style.module.scss';
 import DetailDropCard from '../detailDropCard';
-import ViewAllInnerTab from '../ViewAllInnerTab';
 
 export default function DetailMotorcycleCard() {
   return (
     <>
-      <ViewAllInnerTab />
       <div className={styles.vehicleCardContainer}>
         <div className={styles.vehicleCard}>
           <div className={styles.vehicleDetail}>

@@ -4,6 +4,7 @@ import { BsPencil } from 'react-icons/bs';
 import { BiRupee } from 'react-icons/bi';
 import { Row, Col, Card, Button, Form } from 'react-bootstrap';
 import styles from './style.module.scss';
+import CustomCheckBox from "../../common/customCheckBox"
 
 function DealCheckCard(props) {
   const cardData = [
@@ -102,20 +103,7 @@ function DealCheckCard(props) {
                   </Button>
                 </div>
                 {props.pickupCheck && (
-                  <div className="form-check">
-                    <input
-                      type="checkbox"
-                      id="1form"
-                      className="form-check-input"
-                    />
-                    <label
-                      title=""
-                      htmlFor="1form"
-                      className="form-check-label"
-                    >
-                      Picked-up
-                    </label>
-                  </div>
+                 <CustomCheckBox checkTitle="Picked-up"/>
                 )}
               </div>
             </Card.Body>
