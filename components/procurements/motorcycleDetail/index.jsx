@@ -20,7 +20,7 @@ function MotorcycleDetail({
     <div
       className={`${styles.motorcycleDetail} ${styles.completeBorderRight} px-3`}
     >
-      <div className="mb-4">
+      <div>
         {headBikeDetail && (
           <h4 className={styles.motorcycleTitle}>
             Motorcycle details <span>- FB29FH9219HR1</span>
