@@ -15,7 +15,7 @@ export default function TestRiderRequests() {
         title3="Completed (4)"
         title4="Dropped (4)"
       />
-      <DealFilter title="12 Result Found" isViewBy />
+      <DealFilter title="12 Result Found" isViewBy droptitle="Pending" />
       <CompleteBikeDetail
         isEvalBtnVisible={false}
         isCallerBtnVisible

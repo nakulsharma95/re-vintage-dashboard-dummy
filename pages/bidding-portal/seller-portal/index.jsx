@@ -101,7 +101,7 @@ export default function ClosedBids() {
                   </div>
                 </div>
                 <div className={styles.cardBtnCols}>
-                  <ArrowButton title="VIEW DETAILS" />
+                  <ArrowButton detailLink="/" title="VIEW DETAILS" />
                 </div>
               </Card.Body>
             </Card>

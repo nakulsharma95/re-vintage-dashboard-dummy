@@ -30,7 +30,7 @@ const DealFilter = (props) => {
                   id="dropdown-basic"
                   className={styles.pendingImg}
                 >
-                  <span>Pending</span>
+                  <span >{props.droptitle}</span>
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className={styles.pendingDropdownMenu}>

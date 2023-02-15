@@ -27,7 +27,7 @@ function EvaluationDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
       {isEvalBtnVisible && (
         <div className={styles.evalBtnBox}>
           <div className={styles.arrowBtnDiv}>
-            <ArrowButton title="Detail" />
+            <ArrowButton detailLink="/" title="Detail" />
           </div>
           <Button variant="primary" className={styles.downloadBtn}>
             Download Report
