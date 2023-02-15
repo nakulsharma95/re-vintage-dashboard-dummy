@@ -15,7 +15,13 @@ function UnderNegotiation() {
       <TabPrimary title1="OpDealer (25)en" title2="Seller Portal (12)" />
       <Row>
         <SortTabs />
-        <CloserBikeCard location status contactCSE isHighestBid="Highest Bid" isKmDriven/>
+        <CloserBikeCard
+          location
+          status
+          contactCSE
+          isHighestBid="Highest Bid"
+          isKmDriven
+        />
       </Row>
       <DetailPagination />
     </>

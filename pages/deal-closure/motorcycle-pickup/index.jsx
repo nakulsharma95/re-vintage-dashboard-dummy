@@ -10,7 +10,7 @@ function MotorcyclePickup() {
   return (
     <>
       <Breadcrumb title="Deal Closure" addmoretitle="Motorcycle Pickup" />
-      <Filters title="Motorcycle Pickup" export/>
+      <Filters title="Motorcycle Pickup" export />
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <SortTabs selectAllCheck />
       <Row>

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Homepage from './homepage';
+import Procurement from './procurement';
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
         <title>Welcome</title>
       </Head>
 
-      <Homepage />
+      <Procurement />
     </>
   );
 }

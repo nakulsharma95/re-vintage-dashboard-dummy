@@ -186,16 +186,15 @@ h6 {
 // ----------- complete evaluation slider -----------//
 
 .bike-slider-custom {
+  position: relative;
+
   .slick-arrow {
     z-index: 9;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    width: 28px;
-    height: 28px;
+    min-width: 30px;
+    min-height: 30px;
     background-color: #000000;
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    padding-bottom: 5px;
     &::before {
       font-size: 14px;
     }
@@ -242,6 +241,27 @@ h6 {
       }
     }
   }
+  
+// slider-tumbnail style
+.slider-tumbnail {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  background: rgba($black, 0.8);
+  height: 58px;
+  padding: 6px 4px;
+  backdrop-filter: blur(8px);
+
+  .slick-track {
+    display: flex;
+    gap: 4px;
+  }
+
+.img-full {
+  width: 100%;
+}
+}
 }
 
 // Dashboard Card Dropdown Start
