@@ -11,7 +11,15 @@ export default function ActiveBids() {
         <Breadcrumb title="Bidding Portal" addmoretitle="Active Bids" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
-      <Filters title="Active Bids" subTitle="Please find all the necessary details" export refresh />
+      
+      <Filters 
+        filterInput 
+        filterButton 
+        title="Active Bids" 
+        subTitle="Please find all the necessary details" 
+        export refresh 
+      />
+
       <div className="bottom-white-border mt-3 mb-3" />
       <div className="mb-3">25 Bids Available</div>
       <ActiveBikeCard highestBid arrowBtn />

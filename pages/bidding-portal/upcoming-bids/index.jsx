@@ -12,7 +12,12 @@ export default function UpcomingBids() {
         <Breadcrumb title="Bidding Portal" addmoretitle="Upcoming Bids" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
-      <Filters title="Upcoming Bids" export bidPrice />
+      <Filters 
+        filterInput
+        filterButton
+        title="Upcoming Bids" 
+        export bidPrice 
+      />
       <TabPrimary title1="Today" title2="Next Bidding (31 Dec)" />
       <div className="mb-3">25 Bids Available</div>
       <UpcomingBikeCard baseprice arrowBtn />

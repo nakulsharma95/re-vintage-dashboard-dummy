@@ -12,7 +12,12 @@ export default function ClosedBids() {
         <Breadcrumb title="Bidding Portal" addmoretitle="Closed Bids" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
-      <Filters title="Closed Bids" export />
+      <Filters 
+        filterInput
+        filterButton
+        title="Closed Bids"
+        export 
+      />
       <TabPrimary title1="Bids" title2="No Bids" />
       <div className="mb-3">25 Bids Available</div>
       <ClosedBikeCard closedBid arrowBtn />

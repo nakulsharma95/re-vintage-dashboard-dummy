@@ -62,14 +62,20 @@ function Filters(props) {
             <BiRefresh className={filterStyle.filterBtnIcn} />
           </Button>
         )}
-        <Form.Group className={`${filterStyle.formGroup} me-3`}>
-          <Form.Control
-            type="text"
-            placeholder="Search Name, Location, Reference ID"
-          />
-          <FaSearch className={filterStyle.inputSearch} size={15} />
-        </Form.Group>
-        <FilterDropdown />
+
+        {props.filterInput && (
+          <Form.Group className={`${filterStyle.formGroup} me-3`}>
+            <Form.Control
+              type="text"
+              placeholder="Search Name, Location, Reference ID"
+            />
+            <FaSearch className={filterStyle.inputSearch} size={15} />
+          </Form.Group>
+        )}
+
+        {props.filterButton && (
+          <FilterDropdown />
+        )}
       </div>
     </div>
   );
