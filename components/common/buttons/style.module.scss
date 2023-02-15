@@ -84,7 +84,8 @@
 	color: #fff;
 	text-decoration: none;
 	margin-bottom: 25px;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
 	font-weight: 500;
 	transition: all 0.5s;
 	&:hover{

@@ -11,20 +11,45 @@ import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
 import SortTabs from '../../../components/common/sortTabs';
 import ArrowButton from '../../../components/common/buttons/ArrowButton';
 import CustomCheckBox from '../../../components/common/customCheckBox';
+import SellerPrimaryCard from '~/components/biddingPortal/sellerPrimaryCard';
 
 export default function ClosedBids() {
   const activeBikeData = [
     {
       imageUrl: '/images/bikeImage.png',
+      bikeName: '2015 Classic 350',
+      bikeNumber: 'DL 6T AL 7314',
+      sellerId: 'CSFDJG548798',
+      kmDrive: '48,523 KM',
+      modelYear: '2020',
+      location: 'Mumbai, Maharashtra',
     },
     {
       imageUrl: '/images/bikeImage2.png',
+      bikeName: '2015 Classic 350',
+      bikeNumber: 'DL 6T AL 7315',
+      sellerId: 'CSFDJG548798',
+      kmDrive: '48,523 KM',
+      modelYear: '2020',
+      location: 'Delhi',
     },
     {
       imageUrl: '/images/bikeImage3.png',
+      bikeName: '2015 Classic 350',
+      bikeNumber: 'DL 6T AL 7316',
+      sellerId: 'CSFDJG548798',
+      kmDrive: '48,523 KM',
+      modelYear: '2020',
+      location: 'Rajasthan',
     },
     {
       imageUrl: '/images/bikeImage4.png',
+      bikeName: '2015 Classic 350',
+      bikeNumber: 'DL 6T AL 7317',
+      sellerId: 'CSFDJG548798',
+      kmDrive: '48,523 KM',
+      modelYear: '2020',
+      location: 'Uttar Pradesh',
     },
   ];
   return (
@@ -44,67 +69,17 @@ export default function ClosedBids() {
       <SortTabs selectAllCheck />
       <Row className="mb-3">
         {activeBikeData.map((item) => (
-          <Col md={3} key={item.id}>
-            <Card className={styles.bikeCardCols}>
-              <Card.Img
-                className={styles.bikeImg}
-                variant="top"
-                src={item.imageUrl}
-                alt="not-found"
-              />
-              <div className={styles.selectBoxCheck}>
-                <CustomCheckBox />
-              </div>
-              <Card.Body className={styles.cardPanel}>
-                <Card.Title className={styles.bikeName}>
-                  2015 Classic 350{' '}
-                  <span>
-                    - DL 6T AL 7314 <FiCopy className={styles.copyIcon} />
-                  </span>
-                </Card.Title>
-                <div className={styles.priceList}>
-                  <div className="d-flex align-items-center justify-content-between">
-                    <div className={styles.sbTitle}>Seller Portal ID:</div>
-                    <div>
-                      CSFDJG548798 <FiCopy className={styles.copyIcon} />
-                    </div>
-                  </div>
-                  <div className={styles.sellerPrice}>
-                    <div className={styles.sbTitle}>Seller Portal Price</div>
-                    <div className="d-flex align-items-center justify-content-between">
-                      <span>
-                        <BiRupee />
-                      </span>
-                      <Form.Control
-                        type="text"
-                        value="1,25,00,000"
-                        id=""
-                        name=""
-                      />
-                      <Button variant="" className={styles.submitBtn}>
-                        Submit
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.addtionalInfo}>
-                  <div className="d-flex align-items-center justify-content-between">
-                    <span className={styles.infoTitle}>KMs Driven</span>
-                    <span className={styles.infoTitle}>Model</span>
-                  </div>
-                  <div className="d-flex align-items-center justify-content-between">
-                    <span>48,523 KM</span>
-                    <span>2020</span>
-                  </div>
-                  <div className={styles.locationText}>
-                    <span>Location</span> Mumbai, Maharashtra
-                  </div>
-                </div>
-                <div className={styles.cardBtnCols}>
-                  <ArrowButton detailLink="/" title="VIEW DETAILS" />
-                </div>
-              </Card.Body>
-            </Card>
+          <Col md={3}>
+            <SellerPrimaryCard 
+              ArrowButton
+              bikeName={item.bikeName}
+              bikeNumber={item.bikeNumber}
+              imageUrl={item.imageUrl}
+              sellerId={item.sellerId}
+              kmDrive={item.kmDrive}
+              modelYear={item.modelYear}
+              location={item.location}
+            />
           </Col>
         ))}
       </Row>
