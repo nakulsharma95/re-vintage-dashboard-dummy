@@ -106,7 +106,7 @@ function BikeCardRadio({
                   <Button variant="primary" className={styles.downloadBtn}>
                     VIEW
                   </Button>
-                  <ArrowButton detailLink="" title="APPROVE" />
+                  <ArrowButton detailLink="/" title="APPROVE" />
                 </div>
               )}
             </Card.Body>
