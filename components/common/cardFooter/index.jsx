@@ -24,7 +24,7 @@ const bikeCardFooter = (props) => (
             </Col>
           </div>
         </Col>
-        
+
         {props.creDetails && (
           <Col md={4}>
             <div className={styles.cardFooterCols}>
