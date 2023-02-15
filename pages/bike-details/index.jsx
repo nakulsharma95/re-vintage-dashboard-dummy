@@ -37,10 +37,7 @@ export default function BiddingDetails() {
             />
           </Col>
         </Row>
-        <BikeCardFooter 
-          creDetails 
-          ownerDetails 
-        />
+        <BikeCardFooter creDetails ownerDetails />
       </div>
       <Bids />
       <BikeInspection />

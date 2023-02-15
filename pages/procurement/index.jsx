@@ -1,19 +1,19 @@
 import React from 'react';
-import BikeCard from '../../components/procurements/bikeCard';
 import { Row } from 'react-bootstrap';
+import BikeCard from '../../components/procurements/bikeCard';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import DetailCard from '../../components/procurements/detailCard';
 import ViewAll from '../../components/common/viewAllHeader';
 import Filters from '../../components/common/filters';
 
-const Procurement = () => {
+function Procurement() {
   return (
     <div>
       <Breadcrumb title="Procurement" addmoretitle="Procurement" />
       <Filters title="Procurement Leads" />
       <div className="bottom-white-border" />
       <Row>
-      <ViewAll title="Partial Leads" leadsTitle="(8 Leads)" />
+        <ViewAll title="Partial Leads" leadsTitle="(8 Leads)" />
         <DetailCard />
       </Row>
       <Row>
@@ -26,5 +26,5 @@ const Procurement = () => {
       </Row>
     </div>
   );
-};
+}
 export default Procurement;

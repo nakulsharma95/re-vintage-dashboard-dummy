@@ -14,7 +14,9 @@ function Filters(props) {
   return (
     <div className={filterStyle.filtersMain}>
       <div>
-        <h3 className={filterStyle.filterHeading}>{props.title} <span> {props.totalLeads}</span></h3>
+        <h3 className={filterStyle.filterHeading}>
+          {props.title} <span> {props.totalLeads}</span>
+        </h3>
         <p className={filterStyle.filterSubTitle}>{props.subTitle}</p>
       </div>
       <div className={filterStyle.filters}>
@@ -73,9 +75,7 @@ function Filters(props) {
           </Form.Group>
         )}
 
-        {props.filterButton && (
-          <FilterDropdown />
-        )}
+        {props.filterButton && <FilterDropdown />}
       </div>
     </div>
   );

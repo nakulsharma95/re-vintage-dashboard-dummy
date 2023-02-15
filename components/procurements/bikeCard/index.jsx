@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Card, Col, Row } from 'react-bootstrap';
-import ViewAll from '../../common/viewAllHeader';
 import bikeCardStyle from './style.module.scss';
 
 function BikeCard(props) {
@@ -28,13 +27,13 @@ function BikeCard(props) {
           <Card className={bikeCardStyle.bikeCardMain}>
             <Card.Img variant="top" src={item.imageUrl} />
             {props.isEvalTag && (
-              <>
+              <div>
                 {item.evalTag && (
                   <div className={`${bikeCardStyle.bikeCardTag}`}>
                     {item.evalTag}
                   </div>
                 )}
-              </>
+              </div>
             )}
             <Card.Body className="px-0">
               <Card.Title className={bikeCardStyle.bkeName}>

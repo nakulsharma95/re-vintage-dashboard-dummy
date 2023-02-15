@@ -3,7 +3,7 @@ import { Row, Col, Button, Pagination } from 'react-bootstrap';
 import { BsChevronRight, BsChevronLeft } from 'react-icons/bs';
 import styles from './style.module.scss';
 
-const DetailPagination = () => {
+function DetailPagination() {
   const active = 2;
   const items = [];
   for (let number = 1; number <= 5; number++) {
@@ -15,7 +15,7 @@ const DetailPagination = () => {
   }
   return (
     <div className={`${styles.paginationMain} custom-paginationMain`}>
-      <Row className='align-items-center'>
+      <Row className="align-items-center">
         <Col className={styles.detailPaginationTitle} xl={4} lg={4} md={12}>
           <h3 className="mb-0">Page 2 of 4</h3>
         </Col>
@@ -31,11 +31,17 @@ const DetailPagination = () => {
                 Previous
               </Button>
             </div>
-            <Pagination className={`${styles.detailPageNo} custom-pagination`} size="md">
+            <Pagination
+              className={`${styles.detailPageNo} custom-pagination`}
+              size="md"
+            >
               {items}
             </Pagination>
             <div>
-              <Button variant="primary" className={styles.detailPagePrevNextBtn}>
+              <Button
+                variant="primary"
+                className={styles.detailPagePrevNextBtn}
+              >
                 Next
                 <BsChevronRight className={`${styles.paginationArrow} ms-2`} />
               </Button>
@@ -45,5 +51,5 @@ const DetailPagination = () => {
       </Row>
     </div>
   );
-};
+}
 export default DetailPagination;

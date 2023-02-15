@@ -6,18 +6,14 @@ import NumberCard from '../../components/biddingPortal/numberCard';
 import BiddingBikeCard from '../../components/biddingPortal';
 import BiddingTimer from '../../components/biddingPortal/biddingTimer';
 
-export default function Procurement() {
+export default function BiddingPortal() {
   return (
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <Breadcrumb title="Bidding Portal" addmoretitle="Bidding Portal" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
-      <Filters
-        filterInput
-        filterButton
-        title="Bidding Portal" 
-      />
+      <Filters filterInput filterButton title="Bidding Portal" />
       <Row>
         <Col md={6}>
           <NumberCard />
