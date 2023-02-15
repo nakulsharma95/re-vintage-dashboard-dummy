@@ -170,7 +170,7 @@ export default function Sidebar() {
         </li>
 
         <li>
-          <Link href="/">
+          <Link href="/cre-management">
             <span className={styles.navIcon}>
               <FiUsers />
             </span>{' '}
