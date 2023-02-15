@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import styles from './style.module.scss';
 
-function BikeSlider() {
+function BikeSlider(props) {
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
 
@@ -38,41 +38,52 @@ function BikeSlider() {
   ];
 
   return (
-    <div className="bike-slider-custom">
-      <Slider
-        asNavFor={nav2}
-        ref={(slider1) => setNav1(slider1)}
-        className={styles.compBikeCardSlider}
-      >
-        {sliderImages.map((item) => (
-          <div className={styles.compBikeCardSlides}>
-            <Image src={item.imgUrl} width="590" height="320" />
+    <div>
+      {!props.isSlider ? (
+        <div className="bike-slider-custom">
+          <Slider
+            asNavFor={nav2}
+            ref={(slider1) => setNav1(slider1)}
+            className={styles.compBikeCardSlider}
+          >
+            {sliderImages.map((item) => (
+              <div className={styles.compBikeCardSlides}>
+                <Image src={item.imgUrl} width="590" height="320" />
+              </div>
+            ))}
+          </Slider>
+          <div className="slider-tumbnail">
+            <Slider
+              asNavFor={nav1}
+              ref={(slider2) => setNav2(slider2)}
+              slidesToShow={5}
+              swipeToSlide
+              focusOnSelect
+              arrows={false}
+            >
+              {sliderImages.map((item) => (
+                <div className={styles.compBikeCardSlides}>
+                  <Image
+                    src={item.imgUrl}
+                    className="img-full"
+                    width="63"
+                    height="46"
+                  />
+                </div>
+              ))}
+            </Slider>
           </div>
-        ))}
-      </Slider>
-      <div className="slider-tumbnail">
-        <Slider
-          asNavFor={nav1}
-          ref={(slider2) => setNav2(slider2)}
-          slidesToShow={5}
-          swipeToSlide
-          focusOnSelect
-          arrows={false}
-        >
-          {sliderImages.map((item) => (
-            <div className={styles.compBikeCardSlides}>
-              <Image
-                src={item.imgUrl}
-                className="img-full"
-                width="63"
-                height="46"
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
-
-      {/* <Slider {...settings} className={styles.compBikeCardSlider} /> */}
+        </div>
+      ) : (
+        <div className={styles.imgFull}>
+          <Image
+            src="/images/sliderImg/bike0.png"
+            width="590"
+            height="320"
+            className={styles.imgFullStyle}
+          />
+        </div>
+      )}
     </div>
   );
 }

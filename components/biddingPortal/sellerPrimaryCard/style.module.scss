@@ -4,7 +4,7 @@
 .bikeCardCols{
 	background-color: $gray-28;
 	border-radius: 0px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	position: relative;
 	.bikeImg{
 		border-radius: 0;
@@ -14,18 +14,15 @@
 		color: $white;
 		margin-bottom: 5px;
 		padding: 10px;
-		display: flex;
-		align-items: center;
 		span{
 			color: $theme-yellow-E8;
-			font-size: 14px;
+			font-size: 13px;
 			display: inline-block;
-			margin-left: 4px;
+			margin-left: 3px;
 		}
 		svg{
 			cursor: pointer;
 			color: $white;
-			font-size: 12px;
 		}
 	}
 	.cardPanel{
@@ -66,6 +63,7 @@
 			.sbTitle{
 				font-size: 12px;
 				color: $gray-a7;
+				margin-bottom: 2px;
 			}
 			.bikePrice{
 				display: flex;
@@ -74,7 +72,7 @@
 				input{
 					background-color: $gray-2c;
 					padding: 5px;
-					padding-left: 20px;
+					padding-left: 18px;
 					width: 100%;
 					max-width: 105px;
 					font-size: 13px;
@@ -88,13 +86,10 @@
 					background-color: transparent;
 					border: 1px solid $gray-fd;
 					border-radius: 0;
-					width: 100%;
-					max-width: 78px;
-					margin-bottom: 2px;
 					height: 28px;
 					font-size: 11px;
 					text-transform: uppercase;
-					padding: 0 10px;
+					padding: 0 8px;
 					margin-left: 10px;
 					transition: all 0.5s;
 					&:hover{
@@ -110,7 +105,7 @@
 				}
 				span{
 					position: absolute;
-					top:4px;
+					top: 3px;
 					left: -2px;
 					svg{
 						margin-left: 0;
@@ -135,12 +130,12 @@
 				font-size: 12px;
 				span{
 					color: $gray-cb;
-					font-size: 12px;
 				}
 			}
 		}
 	}	
 }
+
 .selectAll{
 	display: flex;
 	align-items: center;
@@ -167,6 +162,7 @@
 	}
 }
 .copyIcon{
+	font-size: 10px;
 	cursor: pointer;
 }
 
@@ -182,7 +178,7 @@
 	span{
 		position: absolute;
 		left: 4px;
-		top: 22px;
+		top: 21px;
 		font-size: 18px;
 	}
 	input{
@@ -229,8 +225,6 @@
 	color: $gray-cb;
 	outline: none;
 }
-
 .cardBtnCols{
 	padding: 15px 10px;
 }
-

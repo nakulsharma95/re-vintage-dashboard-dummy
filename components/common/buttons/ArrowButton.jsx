@@ -6,10 +6,11 @@ import styles from './style.module.scss';
 export default function ArrowButton(props) {
   return (
     <div className={styles.arrowBtnMain}>
-      {/* <Button className={styles.arrowButton}>{props.title} <span><BsChevronRight /></span></Button> */}
       <Link href={props.detailLink} className={styles.arrowButton}>
         {props.title}
-        <BsChevronRight className={styles.iconBtn} />
+        <span className={styles.iconBox}>
+          <BsChevronRight className={styles.iconBtn} />
+        </span>
       </Link>
     </div>
   );
