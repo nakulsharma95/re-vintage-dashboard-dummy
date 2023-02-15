@@ -10,11 +10,17 @@ function PaymentsPending() {
   return (
     <>
       <Breadcrumb title="Deal Closure" addmoretitle="Payment Pending" />
-      <Filters title="Payment Pending" />
+      <Filters title="Payment Pending" export />
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <DealFilter title="8 Leads" />
       <Row>
-        <CloserBikeCard dealPrice cardTag location/>
+        <CloserBikeCard
+          isHighestBid="Evolution Price"
+          isKmDriven
+          dealPrice
+          cardTag
+          location
+        />
       </Row>
     </>
   );

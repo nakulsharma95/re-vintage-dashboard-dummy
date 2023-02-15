@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Homepage from './homepage';
+import Procurement from './procurement';
 
 export default function Home() {
   return (
@@ -17,10 +17,10 @@ export default function Home() {
         />
 
         {/* Main Page Title */}
-        <title>Welcome</title>
+        <title>Welcome to Vintage Dashboard</title>
       </Head>
 
-      <Homepage />
+      <Procurement />
     </>
   );
 }

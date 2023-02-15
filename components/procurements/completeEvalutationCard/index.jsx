@@ -1,21 +1,20 @@
-import React from "react";
-import { Row, Col, Card } from "react-bootstrap";
-import styles from "./style.module.scss";
-import BikeSlider from "../../common/thumbnailSlider";
-import EvaluationDetail from "../evalutationDetail";
-import BikeCardFooter from "../../common/cardFooter";
-import MotorcycleDetail from "../motorcycleDetail";
+import React from 'react';
+import { Row, Col, Card } from 'react-bootstrap';
+import styles from './style.module.scss';
+import BikeSlider from '../../common/thumbnailSlider';
+import EvaluationDetail from '../evalutationDetail';
+import BikeCardFooter from '../../common/cardFooter';
+import MotorcycleDetail from '../motorcycleDetail';
 
 function CompleteBikeDetail({
   isEvalBtnVisible,
   isCallerBtnVisible,
   isEnquiryNumVisible,
 }) {
-  const completeBikeName = ["2015 Classic 350", "2015 Thunder 350"];
+  const completeBikeName = ['2015 Classic 350', '2015 Thunder 350'];
 
   return (
     <>
-      <h5 className={styles.compBikeSearchTxt}>2 Search</h5>
       {completeBikeName.map((item) => (
         <Card className={styles.compBikeCard}>
           <Card.Body className={`${styles.compBikeCardBody}`}>

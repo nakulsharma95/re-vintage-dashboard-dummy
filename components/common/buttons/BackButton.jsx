@@ -6,7 +6,7 @@ export default function BackButton(props) {
     <a href={props.backLink} className={styles.backButton}>
       <span>
         <BsChevronLeft />
-      </span>{' '}
+      </span>
       {props.title}
     </a>
   );

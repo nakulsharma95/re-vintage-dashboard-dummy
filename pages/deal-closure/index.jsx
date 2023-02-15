@@ -1,7 +1,7 @@
 import React from 'react';
-import Breadcrumb from '~/components/common/breadcrumbPrimary';
+import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import DealBikeCard from '../../components/dealClosure';
-import Filters from '~/components/common/filters';
+import Filters from '../../components/common/filters';
 
 function DealClosure() {
   return (

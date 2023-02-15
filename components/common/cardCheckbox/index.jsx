@@ -1,12 +1,10 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import { Card, Col, Row, Form, OverlayTrigger, Tooltip } from "react-bootstrap";
-import { AiOutlineRight } from "react-icons/ai";
 import styles from "./style.module.scss";
 import ToggleSwitchCard from "../../retails/toggleSwitchCard";
 import CustomCheckBox from "../customCheckBox";
-import ArrowButton from '../../common/buttons/ArrowButton';
-import RedButton from '../../common/buttons/RedButton';
+import ArrowButton from "../../common/buttons/ArrowButton";
 
 function BikeCardRadio({
   isCheckBoxVisible,
@@ -14,6 +12,7 @@ function BikeCardRadio({
   isCardVisible,
   isBikeTagVisible,
   isOlxTagVisible,
+  isBikeChassisVisible,
 }) {
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -40,15 +39,22 @@ function BikeCardRadio({
       {cardData.map((item, index) => (
         <Col xxl={3} xl={4} lg={6} key={item.id}>
           <Card className={styles.bikeCardMain}>
-            <Card.Img variant="top" src={item.imageUrl} />
+            <div className={styles.ChassisImage}>
+              <Card.Img variant="top" src={item.imageUrl} />
+              {isBikeChassisVisible && (
+                <div className={`${styles.bikeChassisTag}`}>FB29FH9219HR1</div>
+              )}
+            </div>
+
             {isCheckBoxVisible && (
               <div className={`${styles.bikeCardCheck}`}>
                 <CustomCheckBox />
               </div>
             )}
             {isBikeTagVisible && (
-              <div className={`${styles.bikeCardTag}`}>Self Consumed</div>
+              <div className={`${styles.bikeCardTag}`}>Self Procured</div>
             )}
+
             {isOlxTagVisible && (
               <div className={`${styles.bikeCardTagOlx}`}>
                 Listed on
@@ -100,7 +106,7 @@ function BikeCardRadio({
                   <Button variant="primary" className={styles.downloadBtn}>
                     VIEW
                   </Button>
-                  <ArrowButton detailLink="" title="APPROVE" />
+                  <ArrowButton detailLink="/" title="APPROVE" />
                 </div>
               )}
             </Card.Body>

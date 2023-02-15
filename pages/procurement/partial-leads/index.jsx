@@ -1,10 +1,10 @@
+import { Row } from 'react-bootstrap';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailCard from '../../../components/procurements/detailCard';
-import { Row } from 'react-bootstrap';
 import DetailPagination from '../../../components/common/paginationPrimary';
 import Filters from '../../../components/common/filters';
 import TabPrimary from '../../../components/common/tabPrimary';
-import ViewAll from "../../../components/common/viewAllHeader"
+import ViewAll from '../../../components/common/viewAllHeader';
 
 export default function PartialLeads() {
   return (
@@ -19,7 +19,7 @@ export default function PartialLeads() {
       />
       <Row>
         <ViewAll title="3 Leads Available" />
-        <DetailCard detailCardBtmTxt="Evaluation form sent: 8th November 2022 | 4:40 PM"/>
+        <DetailCard detailCardBtmTxt="Evaluation form sent: 8th November 2022 | 4:40 PM" />
       </Row>
       <DetailPagination />
     </div>

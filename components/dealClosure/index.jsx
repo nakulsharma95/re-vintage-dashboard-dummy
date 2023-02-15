@@ -8,11 +8,11 @@ const DealBikeCard = () => {
   return (
     <Row>
       <ViewAll title="Under Negotiation" />
-      <CloserBikeCard location status contactCSE />
+      <CloserBikeCard location status contactCSE isHighestBid="Highest Bid" isKmDriven />
       <ViewAll title="Procured Motorcycle" />
-      <CloserBikeCard rcTransfer cardTag />
+      <CloserBikeCard rcTransfer cardTag isOwner price/>
       <ViewAll title="Dropped" />
-      <CloserBikeCard location contactCSE />
+      <CloserBikeCard location contactCSE isHighestBid="Highest Bid" isKmDriven/>
     </Row>
   );
 };

@@ -20,18 +20,6 @@ function CloserBikeCard(props) {
     {
       imageUrl: '/images/bikeImage4.png',
     },
-    {
-      imageUrl: '/images/bikeImage4.png',
-    },
-    {
-      imageUrl: '/images/bikeImage4.png',
-    },
-    {
-      imageUrl: '/images/bikeImage4.png',
-    },
-    {
-      imageUrl: '/images/bikeImage4.png',
-    },
   ];
   const tagClassHandler = (tag) => {
     switch (tag) {
@@ -71,20 +59,32 @@ function CloserBikeCard(props) {
               <Card.Title className={styles.bkeName}>
                 2015 Classic 350 <span>- DL 6T AL 7314</span>
               </Card.Title>
-              <Row className={`${styles.bidPrice} mx-0`}>
-                <Col className={styles.priceTxt}>Highest Bid</Col>
-                <Col className={styles.priceTxtValue}>₹1,25,000.00</Col>
-              </Row>
-              <Row className={`${styles.bikeDetail} mx-0`}>
-                <Col>
-                  <h5 className={styles.bikeDetailTitle}>KMs Driven</h5>
-                  <h6 className={styles.bikeDetailSubTitle}>48,523 KM</h6>
-                </Col>
-                <Col className={`${styles.detailTxtValue} text-end`}>
-                  <h5 className={styles.bikeDetailTitle}>Model</h5>
-                  <h6 className={styles.bikeDetailSubTitle}>2020</h6>
-                </Col>
-              </Row>
+              {props.isHighestBid && (
+                <Row className={`${styles.bidPrice} mx-0`}>
+                  <Col className={styles.priceTxt}>{props.isHighestBid}</Col>
+                  <Col className={styles.priceTxtValue}>₹1,25,000.00</Col>
+                </Row>
+              )}
+              {props.isKmDriven && (
+                <Row className={`${styles.bikeDetail} mx-0`}>
+                  <Col>
+                    <h5 className={styles.bikeDetailTitle}>KMs Driven</h5>
+                    <h6 className={styles.bikeDetailSubTitle}>48,523 KM</h6>
+                  </Col>
+                  <Col className={`${styles.detailTxtValue} text-end`}>
+                    <h5 className={styles.bikeDetailTitle}>Model</h5>
+                    <h6 className={styles.bikeDetailSubTitle}>2020</h6>
+                  </Col>
+                </Row>
+              )}
+              {props.isOwner && (
+                <Row className={`${styles.bikeInlineDetail} mx-0`}>
+                  <Col className={styles.bikeInlineDetailTxt}>43,384 km</Col>
+                  <Col className={styles.bikeInlineDetailTxt}>1st Owner</Col>
+                  <Col className={styles.bikeInlineDetailTxt}>350 CC</Col>
+                </Row>
+              )}
+              {props.price && <h3 className={styles.priceHead}>₹1,25,000.00</h3>}
               {props.rcTransfer && (
                 <h5 className={styles.priceTitle}>
                   RC Transfer Status: <span>Pending</span>
