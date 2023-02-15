@@ -9,7 +9,7 @@ import styles from './style.module.scss';
 export default function Sidebar() {
   return (
     <div className={styles.sideBarContainer}>
-      <Accordion className={styles.reAccordion} defaultActiveKey="0">
+      <Accordion className={styles.reAccordion} defaultActiveKey="">
         <li>
           <Link href="/">
             <span className={styles.navIcon}>

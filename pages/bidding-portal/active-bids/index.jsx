@@ -14,7 +14,7 @@ export default function ActiveBids() {
       
       <Filters 
         filterInput 
-        filterButton 
+        filterButton
         title="Active Bids" 
         subTitle="Please find all the necessary details" 
         export refresh 
