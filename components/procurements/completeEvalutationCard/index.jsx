@@ -20,7 +20,7 @@ function CompleteBikeDetail({
           <Card.Body className={`${styles.compBikeCardBody}`}>
             <Row>
               <Col md={4} className={styles.compBikeCardSliderMain}>
-                <BikeSlider />
+                <BikeSlider isSlider />
               </Col>
               <Col md={4}>
                 <MotorcycleDetail

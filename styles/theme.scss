@@ -468,3 +468,56 @@ h6 {
       }
     }
 }
+
+// Overview Dashbord progress bar 
+.overviewProgress .progress{
+  background-color: #282828 !important;
+  height: 1.5rem !important;
+  border-radius: 0px !important;
+}
+
+.bar1 .progress-bar{
+  background-color: #F28823 !important;
+}
+.bar2 .progress-bar{
+  background-color: #F0CB2D !important;
+}
+.bar3 .progress-bar{
+  background-color: #F5B82A !important;
+}
+.bar4 .progress-bar{
+  background-color: #403E3E !important;
+}
+.bar5 .progress-bar{
+  background-color: #DA291C !important;
+}
+.bar6 .progress-bar{
+  background-color: #AAAAAA !important;
+}
+
+// Overview DefaultTab
+
+.defaultTab .nav-tabs .nav-link {
+border: 1px solid white !important;
+color:#A7A7A7;
+}
+
+.defaultTab .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
+color: #403E3E;
+}
+// overview table 
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg: #282828;
+  color: #BFBFBF;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  background-color:black !important;
+  border-bottom-width: none;
+}
+
+thead, tbody, tfoot, tr, td, th {
+  border: none;
+}

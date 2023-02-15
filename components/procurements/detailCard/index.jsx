@@ -65,7 +65,7 @@ export default function DetailCard(props) {
                   </div>
 
                   <div className={`${styles.detailsDivide} py-2 `}>
-                    <ArrowButton title="Contact Customer" />
+                    <ArrowButton detailLink="/" title="Contact Customer" />
                     <div className={`${styles.detailSendForm} text-white`}>
                       <FaRegClipboard className="mx-1" size={16} />
                       <span>Send eval. form</span>

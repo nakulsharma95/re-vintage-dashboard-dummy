@@ -1,8 +1,9 @@
 import { Tab, Nav, Row, Col } from 'react-bootstrap';
+import { BiDownload } from 'react-icons/bi';
 import Image from 'next/image';
 import styles from './style.module.scss';
 import BodyExteriors from '../bodyExteriors';
-import DownloadReportButton from '../../common/buttons/DownloadReportButton';
+import OutlineButton from '../../common/buttons/OutlineButton';
 
 export default function BikeInspection() {
   return (
@@ -167,7 +168,7 @@ export default function BikeInspection() {
         </Tab.Container>
       </div>
       <div className="mt-3">
-        <DownloadReportButton title="Download Report" />
+        <OutlineButton leftIcon={<BiDownload />} title="Download Report" />
       </div>
     </div>
   );

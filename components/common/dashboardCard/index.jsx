@@ -1,6 +1,6 @@
-import { Card, Col, Row, DropdownButton, Dropdown } from "react-bootstrap";
-import { TbTrendingUp } from "react-icons/tb";
-import styles from "./style.module.scss";
+import { Card, Col, Row, DropdownButton, Dropdown } from 'react-bootstrap';
+import { TbTrendingUp } from 'react-icons/tb';
+import styles from './style.module.scss';
 
 export default function DashboardCard() {
   return (
