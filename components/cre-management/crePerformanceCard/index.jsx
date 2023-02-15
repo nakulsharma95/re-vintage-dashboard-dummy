@@ -4,27 +4,16 @@ import styles from "./style.module.scss";
 export default function CrePerformanceCard() {
   const cardData = [
     {
-      imageUrl: "/images/bob-Vishwas.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
-	  class: styles.bgGray18
+      class: styles.bgGray18,
     },
     {
-      imageUrl: "/images/bob-Vishwas1.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
-	  class: styles.bgGray28
+      class: styles.bgGray28,
     },
     {
-      imageUrl: "/images/bob-Vishwas2.png",
-      overDue: "evolutionOver",
-      class: styles.bgblack40
+      class: styles.bgblack40,
     },
     {
-      imageUrl: "/images/bob-Vishwas3.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
-	  class: styles.bgGray18
+      class: styles.bgGray18,
     },
   ];
   return (
