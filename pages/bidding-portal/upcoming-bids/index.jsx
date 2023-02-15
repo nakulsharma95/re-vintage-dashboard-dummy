@@ -10,19 +10,15 @@ export default function UpcomingBids() {
   const UpcomingBikeData = [
     {
       imageUrl: '/images/bikeImage.png',
-      bidPrice: '1,25,000',
     },
     {
       imageUrl: '/images/bikeImage2.png',
-      bidPrice: '1,35,000'
     },
     {
       imageUrl: '/images/bikeImage3.png',
-      bidPrice: '1,45,000'
     },
     {
       imageUrl: '/images/bikeImage4.png',
-      bidPrice: '1,56,000'
     },
   ];
   return (

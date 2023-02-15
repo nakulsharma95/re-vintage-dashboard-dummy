@@ -16,15 +16,39 @@ export default function ClosedBids() {
   const activeBikeData = [
     {
       imageUrl: '/images/bikeImage.png',
+      bikeName: '2015 Classic 350',
+      bikeNumber: 'DL 6T AL 7314',
+      sellerId: 'CSFDJG548798',
+      kmDrive: '48,523 KM',
+      modelYear: '2020',
+      location: 'Mumbai, Maharashtra',
     },
     {
       imageUrl: '/images/bikeImage2.png',
+      bikeName: '2015 Classic 350',
+      bikeNumber: 'DL 6T AL 7315',
+      sellerId: 'CSFDJG548798',
+      kmDrive: '48,523 KM',
+      modelYear: '2020',
+      location: 'Delhi',
     },
     {
       imageUrl: '/images/bikeImage3.png',
+      bikeName: '2015 Classic 350',
+      bikeNumber: 'DL 6T AL 7316',
+      sellerId: 'CSFDJG548798',
+      kmDrive: '48,523 KM',
+      modelYear: '2020',
+      location: 'Rajasthan',
     },
     {
       imageUrl: '/images/bikeImage4.png',
+      bikeName: '2015 Classic 350',
+      bikeNumber: 'DL 6T AL 7317',
+      sellerId: 'CSFDJG548798',
+      kmDrive: '48,523 KM',
+      modelYear: '2020',
+      location: 'Uttar Pradesh',
     },
   ];
   return (
@@ -57,16 +81,16 @@ export default function ClosedBids() {
               </div>
               <Card.Body className={styles.cardPanel}>
                 <Card.Title className={styles.bikeName}>
-                  2015 Classic 350{' '}
+                  {item.bikeName}
                   <span>
-                    - DL 6T AL 7314 <FiCopy className={styles.copyIcon} />
+                    - {item.bikeNumber} <FiCopy className={styles.copyIcon} />
                   </span>
                 </Card.Title>
                 <div className={styles.priceList}>
                   <div className="d-flex align-items-center justify-content-between">
                     <div className={styles.sbTitle}>Seller Portal ID:</div>
                     <div>
-                      CSFDJG548798 <FiCopy className={styles.copyIcon} />
+                      {item.sellerId} <FiCopy className={styles.copyIcon} />
                     </div>
                   </div>
                   <div className={styles.sellerPrice}>
@@ -93,15 +117,15 @@ export default function ClosedBids() {
                     <span className={styles.infoTitle}>Model</span>
                   </div>
                   <div className="d-flex align-items-center justify-content-between">
-                    <span>48,523 KM</span>
-                    <span>2020</span>
+                    <span>{item.kmDrive}</span>
+                    <span>{item.modelYear}</span>
                   </div>
                   <div className={styles.locationText}>
-                    <span>Location</span> Mumbai, Maharashtra
+                    <span>Location</span> {item.location}
                   </div>
                 </div>
                 <div className={styles.cardBtnCols}>
-                  <ArrowButton title="VIEW DETAILS" />
+                  <ArrowButton detailLink="/bike-details" title="VIEW DETAILS" />
                 </div>
               </Card.Body>
             </Card>

@@ -14,7 +14,7 @@ export default function Sidebar() {
           <Link href="/">
             <span className={styles.navIcon}>
               <FiBarChart2 />
-            </span>{' '}
+            </span>
             Overview
           </Link>
         </li>
@@ -23,7 +23,7 @@ export default function Sidebar() {
             <Link href="/procurement">
               <span className={styles.navIcon}>
                 <BsFileEarmarkText />
-              </span>{' '}
+              </span>
               Procurement
               <span className={styles.sideBarbadge}>3</span>
             </Link>
@@ -55,7 +55,7 @@ export default function Sidebar() {
             <Link href="/bidding-portal">
               <span className={styles.navIcon}>
                 <BsFileEarmarkText />
-              </span>{' '}
+              </span>
               Bidding Portal
             </Link>
           </Accordion.Header>
@@ -80,7 +80,7 @@ export default function Sidebar() {
             <Link href="/deal-closure">
               <span className={styles.navIcon}>
                 <BsFileEarmarkText />
-              </span>{' '}
+              </span>
               Deal Closure
             </Link>
           </Accordion.Header>
@@ -112,7 +112,7 @@ export default function Sidebar() {
             <Link href="/retail">
               <span className={styles.navIcon}>
                 <BsFileEarmarkText />
-              </span>{' '}
+              </span>
               Retail
             </Link>
           </Accordion.Header>
@@ -146,7 +146,7 @@ export default function Sidebar() {
             <Link href="/">
               <span className={styles.navIcon}>
                 <BsGraphUp />
-              </span>{' '}
+              </span>
               Demand
             </Link>
           </Accordion.Header>
@@ -164,7 +164,7 @@ export default function Sidebar() {
           <Link href="/price-calculator">
             <span className={styles.navIcon}>
               <BiRupee />
-            </span>{' '}
+            </span>
             Price Calculator
           </Link>
         </li>
@@ -173,7 +173,7 @@ export default function Sidebar() {
           <Link href="/cre-management">
             <span className={styles.navIcon}>
               <FiUsers />
-            </span>{' '}
+            </span>
             CRE Management
           </Link>
         </li>
@@ -181,7 +181,7 @@ export default function Sidebar() {
           <Link href="/">
             <span className={styles.navIcon}>
               <FiUsers />
-            </span>{' '}
+            </span>
             Dealer Management
           </Link>
         </li>
@@ -189,7 +189,7 @@ export default function Sidebar() {
           <Link href="/">
             <span className={styles.navIcon}>
               <BsFileEarmarkText />
-            </span>{' '}
+            </span>
             Report
           </Link>
         </li>
@@ -197,7 +197,7 @@ export default function Sidebar() {
           <Link href="/">
             <span className={styles.navIcon}>
               <BsFileEarmarkText />
-            </span>{' '}
+            </span>
             Escalations
           </Link>
         </li>
