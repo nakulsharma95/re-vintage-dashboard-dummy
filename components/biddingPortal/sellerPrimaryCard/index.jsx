@@ -11,10 +11,10 @@ export default function SellerPrimaryCard(props) {
   return (
 	<Card className={styles.bikeCardCols}>
 		<Card.Img
-		className={styles.bikeImg}
-		variant="top"
-		src={props.imageUrl}
-		alt="not-found"
+			className={styles.bikeImg}
+			variant="top"
+			src={props.imageUrl}
+			alt="not-found"
 		/>
 		<div className={styles.selectBoxCheck}>
 		<CustomCheckBox />
@@ -40,14 +40,12 @@ export default function SellerPrimaryCard(props) {
 				<BiRupee />
 				</span>
 				<Form.Control
-				type="text"
-				value="1,25,00,000"
-				id=""
-				name=""
+					type="text"
+					value="1,25,00,000"
+					id=""
+					name=""
 				/>
-				<Button variant="" className={styles.submitBtn}>
-				Submit
-				</Button>
+				<Button variant="" className={styles.submitBtn}>Submit</Button>
 			</div>
 			</div>
 		</div>

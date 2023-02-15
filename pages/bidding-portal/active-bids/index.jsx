@@ -1,9 +1,9 @@
+import { Row, Col } from 'react-bootstrap';
 import ActiveBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
 import Filters from '../../../components/common/filters';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
-import { Row, Col } from 'react-bootstrap';
 
 export default function ActiveBids() {
   const activeBikeData = [
@@ -65,9 +65,9 @@ export default function ActiveBids() {
       <Row className="mb-3">
         {activeBikeData.map((item) => (
           <Col md={3}>
-            <ActiveBikeCard 
-              highestBid 
-              arrowBtn 
+            <ActiveBikeCard
+              highestBid
+              arrowBtn
               imageUrl={item.imageUrl}
               bikeName={item.name}
               bikeNumber={item.number}

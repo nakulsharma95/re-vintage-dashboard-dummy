@@ -1,10 +1,11 @@
-import React from "react";
-import Breadcrumb from "~/components/common/breadcrumbPrimary";
-import { Row} from "react-bootstrap";
-import Filters from "~/components/common/filters";
-import CreDetailCard from "~/components/cre-management/creDetailCard";
-import DealFilter from "~/components/dealClosure/dealFilter";
-import CrePerformanceCard from "~/components/cre-management/crePerformanceCard";
+import React from 'react';
+import { Row } from 'react-bootstrap';
+import Breadcrumb from '../../components/common/breadcrumbPrimary';
+import Filters from '../../components/common/filters';
+import CreDetailCard from '../../components/cre-management/creDetailCard';
+import DealFilter from '../../components/dealClosure/dealFilter';
+import CrePerformanceCard from '../../components/cre-management/crePerformanceCard';
+import CrePerformanceMatrix from '~/components/cre-management/crePerformanceMatrix';
 
 function CreManagement() {
   return (
@@ -16,6 +17,7 @@ function CreManagement() {
       <Row>
         <CreDetailCard />
         <CrePerformanceCard />
+        <CrePerformanceMatrix />
       </Row>
     </>
   );
