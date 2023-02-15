@@ -1,18 +1,19 @@
 import { Image } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
 import { FiClock } from 'react-icons/fi';
 import Link from 'next/link';
 import BikeDetailTitle from '../../common/detailHeader';
 import Tags from '../../common/tags';
 import styles from './style.module.scss';
 import ManaualEntry from '../manualentry';
-import ExportButton from '../../common/buttons/ExportButton';
+import OutlineButton from '../../common/buttons/OutlineButton';
 
 export default function BikeHistory() {
   return (
     <div className={styles.bikeHistoryMain}>
       <div className="d-flex align-items-center justify-content-between">
         <BikeDetailTitle title="History / Background" />
-        <ExportButton title="Export Logs" />
+        <OutlineButton rightIcon={<RiShareBoxFill />} title="Export Logs" />
       </div>
       <div className={styles.bikeHistoryCols}>
         <div className={styles.title}>This Week</div>

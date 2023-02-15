@@ -7,7 +7,7 @@ import { BiRefresh } from 'react-icons/bi';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { FiSettings } from 'react-icons/fi';
 import FilterDropdown from './filterDropdown';
-import RedButton from '../buttons/RedButton';
+import ButtonPrimary from '../buttons/ButtonPrimary';
 import filterStyle from './style.module.scss';
 
 function Filters(props) {
@@ -41,7 +41,7 @@ function Filters(props) {
                 <div className={filterStyle.title}>%</div>
               </div>
               <div className={filterStyle.bidPricebtn}>
-                <RedButton title="Apply" />
+                <ButtonPrimary title="Apply" />
               </div>
             </Dropdown.Menu>
           </Dropdown>
