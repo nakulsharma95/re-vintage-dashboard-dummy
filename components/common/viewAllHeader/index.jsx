@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Button } from 'react-bootstrap';
 import style from './style.module.scss';
 
-const ViewAll = (props) => {
+function ViewAll(props) {
   return (
     <Col md={12}>
       <div className={style.titleViewAllMain}>
@@ -17,6 +17,6 @@ const ViewAll = (props) => {
       </div>
     </Col>
   );
-};
+}
 
 export default ViewAll;

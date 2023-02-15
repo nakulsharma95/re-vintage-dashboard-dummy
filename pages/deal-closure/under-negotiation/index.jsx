@@ -1,11 +1,10 @@
-import React from 'react';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import Filters from '../../../components/common/filters';
-import TabPrimary from '../../../components/common/tabPrimary';
-import SortTabs from '../../../components/common/sortTabs';
-import CloserBikeCard from '../../../components/dealClosure/closerCard';
 import DetailPagination from '../../../components/common/paginationPrimary';
+import SortTabs from '../../../components/common/sortTabs';
+import TabPrimary from '../../../components/common/tabPrimary';
+import CloserBikeCard from '../../../components/dealClosure/closerCard';
 
 function UnderNegotiation() {
   return (

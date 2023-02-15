@@ -17,7 +17,7 @@ export default function Home() {
         />
 
         {/* Main Page Title */}
-        <title>Welcome</title>
+        <title>Welcome to Vintage Dashboard</title>
       </Head>
 
       <Procurement />
