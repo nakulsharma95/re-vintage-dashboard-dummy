@@ -1,7 +1,7 @@
 import { Button } from 'react-bootstrap';
 import styles from './style.module.scss';
 
-export default function RedButton(props) {
+export default function ButtonPrimary(props) {
   return (
     <div className={styles.arrowBtnMain}>
       <Button className={styles.redButton}>{props.title}</Button>

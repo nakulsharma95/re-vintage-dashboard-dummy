@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Dropdown, Form } from 'react-bootstrap';
 import { CiFilter } from 'react-icons/ci';
 import { BsChevronUp, BsSearch } from 'react-icons/bs';
-import RedButton from '../../buttons/RedButton';
+import ButtonPrimary from '../../buttons/ButtonPrimary';
 import styles from './style.module.scss';
 
 function FilterDropdown() {
@@ -85,7 +85,7 @@ function FilterDropdown() {
               </Button>
             </div>
             <div className={styles.filterBtnCols}>
-              <RedButton title="Apply" />
+              <ButtonPrimary title="Apply" />
             </div>
           </div>
         </Dropdown.Menu>

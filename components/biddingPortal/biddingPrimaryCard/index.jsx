@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Link from 'next/link';
 import styles from './style.module.scss';
 import ArrowButton from '../../common/buttons/ArrowButton';
-import RedButton from '../../common/buttons/RedButton';
+import ButtonPrimary from '../../common/buttons/ButtonPrimary';
 
 function BiddingBikeCard(props) {
   const upcomingBikeData = [
@@ -112,11 +112,11 @@ function BiddingBikeCard(props) {
                   <ArrowButton detailLink="/bike-details" title="BID DETAILS" />
                 </div>
               )}
-              {props.redBtn && 
+              {props.redBtn && (
                 <div className={styles.cardBtnCols}>
-                  <RedButton title="VIEW DETAIL" />
+                  <ButtonPrimary title="VIEW DETAIL" />
                 </div>
-              }
+              )}
             </Card.Body>
           </Card>
         </Col>
