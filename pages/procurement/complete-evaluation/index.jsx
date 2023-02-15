@@ -15,7 +15,7 @@ function CompleteEvaluation() {
         <DealFilter title="2 Search" />
       </div>
       <CompleteBikeDetail
-        isEvalBtnVisible={true}
+        isEvalBtnVisible
         isCallerBtnVisible={false}
         isEnquiryNumVisible={false}
       />

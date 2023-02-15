@@ -1,59 +1,78 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import styles from './style.module.scss';
 
 function BikeSlider() {
-  const settings = {
-    // eslint-disable-next-line react/no-unstable-nested-components
-    customPaging(i) {
-      return (
-        <Link href="/">
-          <Image
-            src={`/images/sliderImg/bike${i}.png`}
-            width="590"
-            height="320"
-            className={styles.sliderBgImage}
-          />
-        </Link>
-      );
+  const [nav1, setNav1] = useState();
+  const [nav2, setNav2] = useState();
+
+  const sliderImages = [
+    {
+      imgUrl: '/images/sliderImg/bike0.png',
     },
-    dots: true,
-    dotsClass: 'slick-dots slick-thumb',
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+    {
+      imgUrl: '/images/sliderImg/bike1.png',
+    },
+    {
+      imgUrl: '/images/sliderImg/bike2.png',
+    },
+    {
+      imgUrl: '/images/sliderImg/bike3.png',
+    },
+    {
+      imgUrl: '/images/sliderImg/bike4.png',
+    },
+    {
+      imgUrl: '/images/sliderImg/bike5.png',
+    },
+    {
+      imgUrl: '/images/sliderImg/bike6.png',
+    },
+    {
+      imgUrl: '/images/sliderImg/bike7.png',
+    },
+    {
+      imgUrl: '/images/sliderImg/bike8.png',
+    },
+  ];
+
   return (
     <div className="bike-slider-custom">
-      <Slider {...settings} className={styles.compBikeCardSlider}>
-        <div className={styles.compBikeCardSlides}>
-          <Image src="/images/sliderImg/bike0.png" width="590" height="320" />
-        </div>
-        <div className={styles.compBikeCardSlides}>
-          <Image src="/images/sliderImg/bike1.png" width="590" height="320" />
-        </div>
-        <div className={styles.compBikeCardSlides}>
-          <Image src="/images/sliderImg/bike2.png" width="590" height="320" />
-        </div>
-        <div className={styles.compBikeCardSlides}>
-          <Image src="/images/sliderImg/bike3.jpg" width="590" height="320" />
-        </div>
-        <div className={styles.compBikeCardSlides}>
-          <Image src="/images/sliderImg/bike4.jpg" width="590" height="320" />
-        </div>
-        <div className={styles.compBikeCardSlides}>
-          <Image src="/images/sliderImg/bike5.jpg" width="590" height="320" />
-        </div>
-        <div className={styles.compBikeCardSlides}>
-          <Image src="/images/sliderImg/bike6.jpg" width="590" height="320" />
-        </div>
-        <div className={styles.compBikeCardSlides}>
-          <Image src="/images/sliderImg/bike7.jpg" width="590" height="320" />
-        </div>
+      <Slider
+        asNavFor={nav2}
+        ref={(slider1) => setNav1(slider1)}
+        className={styles.compBikeCardSlider}
+      >
+        {sliderImages.map((item) => (
+          <div className={styles.compBikeCardSlides}>
+            <Image src={item.imgUrl} width="590" height="320" />
+          </div>
+        ))}
       </Slider>
+      <div className="slider-tumbnail">
+        <Slider
+          asNavFor={nav1}
+          ref={(slider2) => setNav2(slider2)}
+          slidesToShow={5}
+          swipeToSlide
+          focusOnSelect
+          arrows={false}
+        >
+          {sliderImages.map((item) => (
+            <div className={styles.compBikeCardSlides}>
+              <Image
+                src={item.imgUrl}
+                className="img-full"
+                width="63"
+                height="46"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* <Slider {...settings} className={styles.compBikeCardSlider} /> */}
     </div>
   );
 }

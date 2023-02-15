@@ -1,7 +1,7 @@
-import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import CompleteBikeDetail from "../../../components/procurements/completeEvalutationCard";
-import Filters from "../../../components/common/filters";
-import TabPrimary from "../../../components/common/tabPrimary";
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import CompleteBikeDetail from '../../../components/procurements/completeEvalutationCard';
+import Filters from '../../../components/common/filters';
+import TabPrimary from '../../../components/common/tabPrimary';
 import DealFilter from '../../../components/dealClosure/dealFilter';
 
 export default function TestRiderRequests() {

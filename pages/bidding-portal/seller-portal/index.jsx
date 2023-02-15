@@ -33,7 +33,13 @@ export default function ClosedBids() {
         <Breadcrumb title="Bidding Portal" addmoretitle="Seller Portal" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
-      <Filters title="Seller Portal" subTitle="Please find all the necessary details" export />
+      <Filters
+        filterInput
+        filterButton
+        title="Seller Portal"
+        subTitle="Please find all the necessary details"
+        export
+      />
       <div className="bottom-white-border mt-3 mb-2" />
       <SortTabs selectAllCheck />
       <Row className="mb-3">

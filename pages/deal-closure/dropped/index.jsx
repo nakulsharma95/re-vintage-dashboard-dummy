@@ -12,7 +12,7 @@ function PaymentsPending() {
   return (
     <>
       <Breadcrumb title="Deal Closure" addmoretitle="Payment Pending" />
-      <Filters title="Payment Pending" export/>
+      <Filters title="Payment Pending" export />
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <div className={styles.sortByMain}>
         <h5 className={styles.sortByTitle}>3 Leads</h5>
@@ -24,7 +24,13 @@ function PaymentsPending() {
         </div>
       </div>
       <Row>
-        <CloserBikeCard isHighestBid="Highest Bid" isKmDriven contactCSE reason location/>
+        <CloserBikeCard
+          isHighestBid="Highest Bid"
+          isKmDriven
+          contactCSE
+          reason
+          location
+        />
       </Row>
       <DetailPagination />
     </>
