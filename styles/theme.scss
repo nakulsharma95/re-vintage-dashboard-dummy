@@ -507,17 +507,17 @@ color: #403E3E;
 }
 // overview table 
 
-.table-striped > tbody > tr:nth-of-type(odd) > * {
-  --bs-table-accent-bg: #282828;
-  color: #BFBFBF;
-}
+// .table-striped > tbody > tr:nth-of-type(odd) > * {
+//   --bs-table-accent-bg: #282828;
+//   color: #BFBFBF;
+// }
 
-.table > :not(caption) > * > * {
-  padding: 0.5rem 0.5rem;
-  background-color:black !important;
-  border-bottom-width: none;
-}
+// .table > :not(caption) > * > * {
+//   padding: 0.5rem 0.5rem;
+//   background-color:black !important;
+//   border-bottom-width: none;
+// }
 
-thead, tbody, tfoot, tr, td, th {
-  border: none;
-}
+// thead, tbody, tfoot, tr, td, th {
+//   border: none;
+// }

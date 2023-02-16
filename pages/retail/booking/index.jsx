@@ -9,7 +9,7 @@ export default function Booking() {
   return (
     <div>
       <Breadcrumb title="Retail" addmoretitle="Sold" />
-      <Filters title="Booking" />
+      <Filters filterInput filterButton export title="Booking" />
       <TabPrimary title1="Booked (4)" title2="Sold" title3="Returned (12)" />
       <DealFilter title="4 Leads" />
       <Row>
