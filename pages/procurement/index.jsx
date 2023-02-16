@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import BikeCard from '../../components/procurements/bikeCard';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import DetailCard from '../../components/procurements/detailCard';
@@ -7,22 +7,74 @@ import ViewAll from '../../components/common/viewAllHeader';
 import Filters from '../../components/common/filters';
 
 function Procurement() {
+  const cardData = [
+    {
+      ownerName: 'Rishab Sharma',
+      detailNo: '123456',
+    },
+    {
+      ownerName: 'Rishab kumar',
+      detailNo: '123456',
+    },
+    {
+      ownerName: 'Rishab Sharma',
+      detailNo: '123456',
+    },
+  ];
+  const cardData2 = [
+    {
+      imageUrl: '/images/bikeImage.png',
+      overDue: 'evolutionOver',
+    },
+    {
+      imageUrl: '/images/bikeImage2.png',
+      evalTag: 'Evaluation Overdue',
+    },
+    {
+      imageUrl: '/images/bikeImage3.png',
+    },
+    {
+      imageUrl: '/images/bikeImage4.png',
+    },
+  ];
   return (
     <div>
       <Breadcrumb title="Procurement" addmoretitle="Procurement" />
-      <Filters title="Procurement Leads" />
+      <Filters title="Procurement Leads"filterInput filterButton />
       <div className="bottom-white-border" />
+      <ViewAll title="Partial Leads" leadsTitle="(8 Leads)" />
       <Row>
-        <ViewAll title="Partial Leads" leadsTitle="(8 Leads)" />
-        <DetailCard />
+        {cardData.map((item) => (
+          <Col xl={4} md={6}>
+            <DetailCard detailNumber={item.detailNo} />
+          </Col>
+        ))}
       </Row>
       <Row>
         <ViewAll title="Evaluation Requests" leadsTitle="(8 Leads)" />
-        <BikeCard contactBtn isEvalTag />
+        {cardData2.map((item, index) => {
+          return (
+            <Col md={3} key={index}>
+              <BikeCard data={item} contactBtn isEvalTag />
+            </Col>
+          );
+        })}
         <ViewAll title="Scheduled Evaluation" leadsTitle="(32 Leads)" />
-        <BikeCard viewDetail />
+        {cardData2.map((item, index) => {
+          return (
+            <Col md={3} key={index}>
+              <BikeCard data={item} viewDetail />
+            </Col>
+          );
+        })}
         <ViewAll title="Completed Evaluation" leadsTitle="(32 Leads)" />
-        <BikeCard completeEval />
+        {cardData2.map((item, index) => {
+          return (
+            <Col md={3} key={index}>
+              <BikeCard data={item} completeEval />
+            </Col>
+          );
+        })}
       </Row>
     </div>
   );

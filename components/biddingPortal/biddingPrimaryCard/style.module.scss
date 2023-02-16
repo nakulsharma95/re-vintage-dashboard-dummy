@@ -4,7 +4,7 @@
 .bikeCardCols{
 	background-color: $gray-28;
 	border-radius: 0px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	position: relative;
 	.bikeImg{
 		border-radius: 0;
@@ -66,7 +66,6 @@
 			.sbTitle{
 				font-size: 12px;
 				color: $gray-a7;
-				margin-bottom: 2px;
 			}
 			.bikePrice{
 				display: flex;
@@ -234,3 +233,4 @@
 .cardBtnCols{
 	padding: 15px 10px;
 }
+

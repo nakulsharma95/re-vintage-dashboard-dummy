@@ -1,0 +1,51 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/variables//mixins';
+
+table.addPrimaryTable{
+	tr{
+		&:hover{
+			td{
+				color: $white;
+			}
+		}
+		th{
+			color: $gray-cb;
+			background-color: $gray-28 !important;
+			font-size: 12px;
+			font-weight: 500;
+			word-wrap: break-word;
+			text-align: left;
+			vertical-align: middle;
+			padding: 10px 10px;
+			border: 1px solid $black-40;
+		}
+		td{
+			color: $white;
+			font-size: 12px;
+			vertical-align: middle;
+			background-color: $gray-18 !important;
+			border: 1px solid $black-40;
+			white-space: nowrap;
+			padding: 10px 10px;
+			&:nth-child(01){
+				font-size: 10px;
+				color: $gray-cb;
+			}
+		}
+		.editLink{
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+			font-size: 10px;
+			color: $gray-cb;
+			transition: all 0.5s;
+			&:hover{
+				color:$theme-red-da;
+			}
+			svg{
+				display: inline-block;
+				margin-left:10px;
+			}
+		}
+	}
+}

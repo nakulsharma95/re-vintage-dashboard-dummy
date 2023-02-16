@@ -1,0 +1,83 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.nonReCard {
+  background-color: #282828;
+  border-radius: 0px;
+
+  .nonReCardTitle {
+    color: $white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    span {
+      color: $theme-yellow-E8;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .nonReCardSubTitle {
+    color: $white;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .nonReCardInline {
+    .nonReCardInlineText {
+      color: $gray-cb;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      &:nth-child(2) {
+        border-left: 1px solid $gray-70;
+        border-right: 1px solid $gray-70;
+      }
+    }
+  }
+  .nonReCardPrice {
+    color: $white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .dealerCode {
+    color: $gray-cb;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    span {
+      color: $gray-F3;
+      font-size: 10px;
+    }
+  }
+  .dealerAddress {
+    color: $gray-F3;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+
+  .nonReCardFooter {
+	padding: 1rem;
+    background-color: $gray-18;
+    border: 0px;
+
+	.footerTitle{
+		color: $gray-F3;
+		font-size: 12px;
+		font-weight: 500;
+		margin-bottom: 1rem;
+	}
+	.footerSubTitle{
+		color: $gray-cb;
+		font-size: 12px;
+		font-weight: 500;
+		margin-bottom: 0.8rem;
+		span{
+			color: $gray-F3;
+			font-size: 12px;
+			font-weight: 600;
+		}
+	}
+  }
+}
