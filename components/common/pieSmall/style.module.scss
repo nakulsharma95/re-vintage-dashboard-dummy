@@ -1,0 +1,38 @@
+.pieContainer {
+  width: 20%;
+  height: 20rem;
+  background-color: #282828;
+  padding: 1rem;
+  h5 {
+    // font: normal normal normal 16px/20px Guardian Sans;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .pieChart {
+    background-color: plum;
+    height: 50%;
+    width: 70%;
+    border-radius: 50%;
+    margin: 1rem 0;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "montserrat";
+  }
+  .pie1 {
+    background-color: #d2635b;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .pie2 {
+    background-color: #f1df67;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+  }
+}

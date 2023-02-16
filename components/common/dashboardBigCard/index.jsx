@@ -64,38 +64,42 @@ function dashboardBigCard() {
           <TabPrimary title1="Highest Rated" title2="Lowest Rated" />
 
           <div className={styles.cardBody}>
-            <Table striped hover variant="dark">
-              {/* <thead>
-        <tr>
-          <th>Neel Motors</th>
-          <th>Last Name</th>
-        </tr>
-      </thead> */}
-              <tbody>
-                <tr>
-                  <td>Neel Motors</td>
-                  <td>
-                    <AiFillStar /> 4.5
-                  </td>
-                </tr>
-                <tr>
-                  <td>Neel Motors</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <td>Neel Motors</td>
-                  <td>@twitter</td>
-                </tr>
-                <tr>
-                  <td>Neel Motors</td>
-                  <td>@twitter</td>
-                </tr>
-                <tr>
-                  <td>Neel Motors</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </Table>
+            <div className="dashboardTable">
+              <Table striped  variant="dark">
+                <tbody>
+                  <tr>
+                    <td>Neel Motors</td>
+                    <td className="text-end">
+                      <AiFillStar className={styles.cardBody_star} /> 4.5
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Neel Motors</td>
+                    <td className="text-end">
+                      <AiFillStar className={styles.cardBody_star} /> 4.5
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Neel Motors</td>
+                    <td className="text-end">
+                      <AiFillStar className={styles.cardBody_star} /> 4.5
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Neel Motors</td>
+                    <td className="text-end">
+                      <AiFillStar className={styles.cardBody_star} /> 4.5
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Neel Motors</td>
+                    <td className="text-end">
+                      <AiFillStar className={styles.cardBody_star} /> 4.5
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
+            </div>
           </div>
         </Card>
       </Col>
@@ -108,6 +112,34 @@ function dashboardBigCard() {
           </div>
           <TabDefault />
           <TabPrimary title1="Highest Rated" title2="Lowest Rated" />
+          <div className={styles.cardBody}>
+            <div className="dashboardTable">
+              <Table striped variant="dark">
+                <tbody>
+                  <tr>
+                    <td>Neel Motors</td>
+                    <td className="text-end">4512</td>
+                  </tr>
+                  <tr>
+                    <td>Neel Motors</td>
+                    <td className="text-end"> 321</td>
+                  </tr>
+                  <tr>
+                    <td>Neel Motors</td>
+                    <td className="text-end"> 789</td>
+                  </tr>
+                  <tr>
+                    <td>Neel Motors</td>
+                    <td className="text-end">465</td>
+                  </tr>
+                  <tr>
+                    <td>Neel Motors</td>
+                    <td className="text-end">72</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </div>
+          </div>
         </Card>
       </Col>
     </Row>
