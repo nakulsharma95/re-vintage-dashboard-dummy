@@ -6,7 +6,8 @@ import styles from './style.module.scss';
 import ArrowButton from '../../common/buttons/ArrowButton';
 
 export default function DetailCard(props) {
-  
+  const { data } = props;
+
   return (
     <>
       <Card className={styles.detailCard}>
@@ -15,8 +16,8 @@ export default function DetailCard(props) {
             className={`${styles.headerDetail} ${styles.detailsDivide} p-0 border-0 `}
           >
             <h2 className="text-white mb-0">
-              Details{' '}
-              <span className="text-white-50">-{props.detailNumber}</span>
+              Details
+              <span className="text-white-50">-{data.detailNumber}</span>
             </h2>
             <div
               className={`${styles.detailDrop} ${styles.detailsDivide} border-0 shadow-none text-white  gap-1 }`}
@@ -71,11 +72,6 @@ export default function DetailCard(props) {
           </p>
         </div>
       </Card>
-      <Col md={12}>
-        {props.detailCardBtmTxt && (
-          <p className={styles.detailCardTxt}>{props.detailCardBtmTxt}</p>
-        )}
-      </Col>
     </>
   );
 }

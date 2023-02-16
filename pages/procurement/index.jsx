@@ -21,28 +21,60 @@ function Procurement() {
       detailNo: '123456',
     },
   ];
+  const cardData2 = [
+    {
+      imageUrl: '/images/bikeImage.png',
+      overDue: 'evolutionOver',
+    },
+    {
+      imageUrl: '/images/bikeImage2.png',
+      evalTag: 'Evaluation Overdue',
+    },
+    {
+      imageUrl: '/images/bikeImage3.png',
+    },
+    {
+      imageUrl: '/images/bikeImage4.png',
+    },
+  ];
   return (
     <div>
       <Breadcrumb title="Procurement" addmoretitle="Procurement" />
-      <Filters title="Procurement Leads" />
+      <Filters title="Procurement Leads"filterInput filterButton />
       <div className="bottom-white-border" />
       <ViewAll title="Partial Leads" leadsTitle="(8 Leads)" />
       <Row>
         {cardData.map((item) => (
           <Col xl={4} md={6}>
-            <DetailCard
-              detailNumber={item.detailNo}
-            />
+            <DetailCard detailNumber={item.detailNo} />
           </Col>
         ))}
       </Row>
       <Row>
         <ViewAll title="Evaluation Requests" leadsTitle="(8 Leads)" />
-        <BikeCard contactBtn isEvalTag />
+        {cardData2.map((item, index) => {
+          return (
+            <Col md={3} key={index}>
+              <BikeCard data={item} contactBtn isEvalTag />
+            </Col>
+          );
+        })}
         <ViewAll title="Scheduled Evaluation" leadsTitle="(32 Leads)" />
-        <BikeCard viewDetail />
+        {cardData2.map((item, index) => {
+          return (
+            <Col md={3} key={index}>
+              <BikeCard data={item} viewDetail />
+            </Col>
+          );
+        })}
         <ViewAll title="Completed Evaluation" leadsTitle="(32 Leads)" />
-        <BikeCard completeEval />
+        {cardData2.map((item, index) => {
+          return (
+            <Col md={3} key={index}>
+              <BikeCard data={item} completeEval />
+            </Col>
+          );
+        })}
       </Row>
     </div>
   );

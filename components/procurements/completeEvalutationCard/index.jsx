@@ -10,12 +10,12 @@ function CompleteBikeDetail({
   isEvalBtnVisible,
   isCallerBtnVisible,
   isEnquiryNumVisible,
+  data
 }) {
   const completeBikeName = ['2015 Classic 350', '2015 Thunder 350'];
 
   return (
     <>
-      {completeBikeName.map((item) => (
         <Card className={styles.compBikeCard}>
           <Card.Body className={`${styles.compBikeCardBody}`}>
             <Row>
@@ -28,7 +28,7 @@ function CompleteBikeDetail({
                   bikeInfo
                   bikeDetailTitle
                   bikeNumber="- DL6TAL7314"
-                  bikeName={item}
+                  bikeName={data}
                   isEnquiryNumVisible={isEnquiryNumVisible}
                 />
               </Col>
@@ -42,7 +42,6 @@ function CompleteBikeDetail({
           </Card.Body>
           <BikeCardFooter />
         </Card>
-      ))}
     </>
   );
 }

@@ -133,7 +133,7 @@ export default function Sidebar() {
         </Accordion.Item>
 
         <li>
-          <Link href="/">
+          <Link href="/non-re">
             <span className={styles.navIcon}>
               <Image src="/images/motorcycle.svg" alt="no found" />
             </span>

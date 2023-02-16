@@ -10,7 +10,7 @@ export default function ScheduledEvaluation() {
   return (
     <div className="">
       <Breadcrumb title="Procurement" addmoretitle="Scheduled Evaluation" />
-      <Filters title="Scheduled Evaluation" export />
+      <Filters title="Scheduled Evaluation" export filterInput filterButton />
       <TabPrimary title1="Open" title2="Cancelled (12)" title3="Dropped (12)" />
       <ViewAllInnerTab />
       {cardItemData.map(() => (
