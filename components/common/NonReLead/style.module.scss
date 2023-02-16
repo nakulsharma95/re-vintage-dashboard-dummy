@@ -1,0 +1,30 @@
+.NonLead{
+	box-sizing: border-box;
+
+	.NonLead_top{
+		display: flex;
+		justify-content: space-between;
+		.NonleadTable{
+			width: 48%;
+			Table{
+				height: 20rem;
+				margin: 1rem 0;
+      
+				a{
+					color: #E8B016;
+				}
+			}
+		}
+		
+	}
+	.NonLead_bottom{
+		display: flex;
+		justify-content: space-between;
+		.NonLead_graph{
+			width: 48%;
+			height: 20rem;
+			margin: 1rem 0;
+			background-color: #282828;
+		}
+	}
+}

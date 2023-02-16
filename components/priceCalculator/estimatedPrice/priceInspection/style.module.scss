@@ -1,0 +1,38 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/variables//mixins';
+
+.priceInspectionMain{
+	.title{
+		padding: 15px 25px;
+		background-color: $gray-28;
+	}
+	.performanceTitle{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 25px;
+		color: $gray-cb;
+	}
+	img{
+		width: 100%;
+	}
+	.estimatedPrice{
+		padding: 15px 25px;
+		background-color: $gray-28;
+		text-align: center;
+		margin-top: 15px;
+		h3{
+			margin: 0;
+			font-size: 23px;
+			span{
+				svg{
+					position: relative;
+					bottom: 2px;
+				}
+			}
+		}
+		p{
+			margin: 0;
+		}
+	}
+}

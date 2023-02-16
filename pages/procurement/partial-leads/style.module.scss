@@ -1,5 +1,5 @@
-@import "../../styles/variables/colors";
-@import "../../styles/variables//mixins";
+@import "../../../styles/variables/colors";
+@import "../../../styles/variables//mixins";
 
 // Home Page Style
 .PartialLeadsStyle {
@@ -13,4 +13,10 @@
     text-align: center;
     color: $white;
   }
+}
+.detailCardTxt{
+  color: $gray-a7;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
 }

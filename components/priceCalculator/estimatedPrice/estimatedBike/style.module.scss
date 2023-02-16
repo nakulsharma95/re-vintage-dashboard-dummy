@@ -1,0 +1,36 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/variables//mixins';
+
+.inspectionBikeMain{
+	background-color: $gray-28;
+	position: relative;
+	&::after{
+		content: '';
+		width: 100%;
+		height: 140px;
+		background-color: $gray-37;
+		position: absolute;
+		bottom: 0;
+		z-index: 1;
+	}
+	.nameTitle{
+		font-size: 24px;
+		padding: 15px 30px;
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		span{
+			font-size: 14px;
+			color: $theme-yellow-E8;
+			margin-left: 10px;
+		}
+	}
+	.bikeImg{
+		padding:50px 15px 30px;
+		position: relative;
+		z-index: 9;
+		img{
+			width: 100%;
+		}
+	}
+}

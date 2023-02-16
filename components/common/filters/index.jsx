@@ -15,7 +15,11 @@ function Filters(props) {
     <div className={filterStyle.filtersMain}>
       <div>
         <h3 className={filterStyle.filterHeading}>
-          {props.title} <span> {props.totalLeads}</span>
+          {props.title} 
+          <span> {props.totalLeads}</span>
+          {props.lastEdited && (
+            <div className={filterStyle.latsEditedText}>({props.editedTitle} :<span className={filterStyle.nameText}> {props.editedName}</span>)</div>
+          )}
         </h3>
         <p className={filterStyle.filterSubTitle}>{props.subTitle}</p>
       </div>

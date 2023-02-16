@@ -1,102 +1,97 @@
 import React from 'react';
 import Link from 'next/link';
 import { BsPlusLg } from 'react-icons/bs';
-import { Row, Image } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import Filters from '../../components/common/filters';
 import styles from './style.module.scss';
+import PricePrimaryCard from '~/components/priceCalculator/pricePrimaryCard';
 
 export default function PriceCalculator() {
   const priceCardData = [
     {
-      bikeImg: 'bike0.png',
-      priceTitle: 'Classic J',
+      imageUrl: '/images/sliderImg/bike0.png',
+      title: 'Classic J',
     },
     {
-      bikeImg: 'bike1.png',
-      priceTitle: 'Bullet',
+      imageUrl: '/images/sliderImg/bike1.png',
+      title: 'Bullet',
     },
     {
-      bikeImg: 'bike2.png',
-      priceTitle: 'Bullet X',
+      imageUrl: '/images/sliderImg/bike2.png',
+      title: 'Bullet X',
     },
     {
-      bikeImg: 'bike3.png',
-      priceTitle: 'Bullet ES',
+      imageUrl: '/images/sliderImg/bike3.png',
+      title: 'Bullet ES',
     },
     {
-      bikeImg: 'bike4.png',
-      priceTitle: 'Himalayan',
+      imageUrl: '/images/sliderImg/bike4.png',
+      title: 'Himalayan',
     },
     {
-      bikeImg: 'bike5.png',
-      priceTitle: 'Himalayan Scram',
+      imageUrl: '/images/sliderImg/bike5.png',
+      title: 'Himalayan Scram',
     },
     {
-      bikeImg: 'bike6.png',
-      priceTitle: 'Meteor Fireball',
+      imageUrl: '/images/sliderImg/bike6.png',
+      title: 'Meteor Fireball',
     },
     {
-      bikeImg: 'bike7.png',
-      priceTitle: 'Meteor Stellar',
+      imageUrl: '/images/sliderImg/bike7.png',
+      title: 'Meteor Stellar',
     },
     {
-      bikeImg: 'bike8.png',
-      priceTitle: 'Meteor Supernova',
+      imageUrl: '/images/sliderImg/bike8.png',
+      title: 'Meteor Supernova',
     },
 
     {
-      bikeImg: 'bike3.png',
-      priceTitle: 'Thunderbird',
+      imageUrl: '/images/sliderImg/bike3.png',
+      title: 'Thunderbird',
     },
     {
-      bikeImg: 'bike4.png',
-      priceTitle: 'GT',
+      imageUrl: '/images/sliderImg/bike4.png',
+      title: 'GT',
     },
     {
-      bikeImg: 'bike5.png',
-      priceTitle: 'Continental GT',
+      imageUrl: '/images/sliderImg/bike5.png',
+      title: 'Continental GT',
     },
     {
-      bikeImg: 'bike6.png',
-      priceTitle: 'Interceptor',
+      imageUrl: '/images/sliderImg/bike6.png',
+      title: 'Interceptor',
     },
     {
-      bikeImg: 'bike7.png',
-      priceTitle: 'TBX',
+      imageUrl: '/images/sliderImg/bike7.png',
+      title: 'TBX',
     },
     {
-      bikeImg: 'bike8.png',
-      priceTitle: 'Classic UCE',
+      imageUrl: '/images/sliderImg/bike8.png',
+      title: 'Classic UCE',
     },
   ];
 
   return (
     <div>
-      <div className="d-flex align-items-center justify-content-between">
-        <Breadcrumb title="Instant Estimator Configurator" />
-      </div>
+      <Breadcrumb title="Instant Estimator Configurator" />
       <div className={styles.priceFilterFlex}>
         <Filters
           title="Instant Estimator Configurator"
           subTitle="Here you will find the Contact details of CRE for active Motorcycle and General Info"
         />
-        <Link href="/add-motorcycle" className={styles.addMotorBtn}>
+        <Link href="/price-calculator/add-motorcycle" className={styles.addMotorBtn}>
           <BsPlusLg /> Add Motorcycle
         </Link>
       </div>
       <div className={styles.priceResultText}>18 item found</div>
       <Row>
-        {priceCardData.map(({ bikeImg, index, priceTitle }) => (
-          <div className={styles.priceCols} key={index}>
-            <div className={styles.priceBox}>
-              <div className={styles.priceImg}>
-                <Image src={`/images/sliderImg/${bikeImg}`} alt="not found" />
-              </div>
-              <div className={styles.priceTitle}>{priceTitle}</div>
-            </div>
-          </div>
-        ))}
+          {priceCardData.map((item) => (
+            <PricePrimaryCard 
+              imageUrl={item.imageUrl}
+              priceTitle={item.title}
+            />
+          ))}    
       </Row>
     </div>
   );

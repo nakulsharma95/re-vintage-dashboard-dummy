@@ -1,5 +1,5 @@
-@import '../../styles/variables/colors';
-@import '../../styles/variables//mixins';
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
 
 .bikeCardCols{
 	background-color: $gray-28;
@@ -10,11 +10,10 @@
 		border-radius: 0;
 	}
 	.bikeName{
-		font-size: 14px;
+		font-size: 16px;
 		color: $white;
 		margin-bottom: 5px;
 		padding: 10px;
-		display: flex;
 		span{
 			color: $theme-yellow-E8;
 			font-size: 13px;
@@ -24,7 +23,6 @@
 		svg{
 			cursor: pointer;
 			color: $white;
-			font-size: 12px;
 		}
 	}
 	.cardPanel{
@@ -137,6 +135,7 @@
 		}
 	}	
 }
+
 .selectAll{
 	display: flex;
 	align-items: center;
@@ -163,6 +162,7 @@
 	}
 }
 .copyIcon{
+	font-size: 10px;
 	cursor: pointer;
 }
 
@@ -178,7 +178,7 @@
 	span{
 		position: absolute;
 		left: 4px;
-		top: 22px;
+		top: 21px;
 		font-size: 18px;
 	}
 	input{
@@ -224,4 +224,7 @@
 	font-size:18px;
 	color: $gray-cb;
 	outline: none;
+}
+.cardBtnCols{
+	padding: 15px 10px;
 }

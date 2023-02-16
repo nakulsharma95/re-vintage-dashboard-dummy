@@ -2,7 +2,7 @@ import { Card, Col, Row, DropdownButton, Dropdown } from 'react-bootstrap';
 import { TbTrendingUp } from 'react-icons/tb';
 import styles from './style.module.scss';
 
-export default function DashboardCard() {
+export default function DashboardCard(props) {
   return (
     <Row>
       <Col xxl={3} lg={6} md={6}>
@@ -21,6 +21,8 @@ export default function DashboardCard() {
                   <Dropdown.Item href="#/action-1">Month 2</Dropdown.Item>
                   <Dropdown.Item href="#/action-2">Month 3</Dropdown.Item>
                 </DropdownButton>
+            
+                
               </div>
               <p>1507</p>
             </div>

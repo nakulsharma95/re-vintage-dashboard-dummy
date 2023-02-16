@@ -16,9 +16,11 @@ function SortTabs(props) {
       {props.selectAllCheck ? (
         <div className={styles.sortTabCheck}>
           <h5 className={styles.tabCheckTitle}>25 Bids Available</h5>
-          <div className="mx-3">
-            <CustomCheckBox checkTitle="Select all" />
-          </div>
+          {props.isCheckInput && (
+            <div className="mx-3">
+              <CustomCheckBox checkTitle="Select all" />
+            </div>
+          )}
 
           {props.approveBtn ? (
             <div>
@@ -47,10 +49,16 @@ function SortTabs(props) {
               )}
             </div>
           ) : (
-            <Button variant="primary" className={styles.submitCheckBBtn}>
-              <BiCheck className={styles.checkBtnIcon} />
-              Submit Selected
-            </Button>
+            <>
+              {props.isSubmitBtn && (
+                <div className={styles.leftBorder}>
+                  <Button variant="primary" className={styles.submitCheckBBtn}>
+                    <BiCheck className={styles.checkBtnIcon} />
+                    Submit Selected
+                  </Button>
+                </div>
+              )}
+            </>
           )}
         </div>
       ) : (
@@ -67,7 +75,7 @@ function SortTabs(props) {
       )}
       <div className={styles.sortTabBtnBoxMain}>
         {props.isSortTabBox && (
-          <div className="d-flex align-items-center">
+          <div className={`${styles.rightBorder} d-flex align-items-center`}>
             <p className={styles.sortText}>Sort by:</p>
             <div>
               <Button variant="primary" className={styles.sortTabBtn}>

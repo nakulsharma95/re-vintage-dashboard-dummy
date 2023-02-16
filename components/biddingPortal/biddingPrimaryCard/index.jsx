@@ -23,7 +23,7 @@ function BiddingBikeCard(props) {
       />
       <Card.Body className={styles.cardPanel}>
         <Card.Title className={styles.bikeName}>
-          2015 Classic 350 <span>- DL 6T AL 7314</span>
+          {props.bikeName} <span>- {props.bikeNumber}</span>
         </Card.Title>
 
         <div className={styles.priceList}>
@@ -66,12 +66,12 @@ function BiddingBikeCard(props) {
                   <span>
                     <BiRupee />
                   </span>
-                  1,25,000.00
+                  {props.highestClosedBidPrice}
                 </div>
               </div>
               <div className={styles.closedPriceCols}>
                 <div className={styles.sbTitle}>Bid By</div>
-                <Link href="/">Neel motors</Link>
+                <Link href="/">{props.motorShopName}</Link>
               </div>
             </div>
           )}
@@ -82,11 +82,11 @@ function BiddingBikeCard(props) {
             <span className={styles.infoTitle}>Model</span>
           </div>
           <div className="d-flex align-items-center justify-content-between">
-            <span>48,523 KM</span>
-            <span>2020</span>
+            <span>{props.kmDrive} KM</span>
+            <span>{props.modelYear}</span>
           </div>
           <div className={styles.locationText}>
-            <span>Location</span> Mumbai, Maharashtra
+            <span>Location</span> {props.location}
           </div>
         </div>
         {props.arrowBtn && (
