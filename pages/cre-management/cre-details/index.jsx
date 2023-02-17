@@ -8,6 +8,7 @@ import CrePrimaryCard from "~/components/cre-management/crePrimaryCard";
 import CreProfileCard from "~/components/cre-management/creProfileCard";
 import CreTrainingCard from "~/components/cre-management/creTrainingCard";
 import TabPrimary from "../../../components/common/tabPrimary";
+import HeaderPrimary from "~/components/common/headerPrimary";
 
 function CreDetails() {
   const cardData = [
@@ -27,7 +28,11 @@ function CreDetails() {
   return (
     <>
       <Breadcrumb title="CRE Management" addmoretitle="CRE Details" />
-      <Filters title="CRE Details" />
+
+      <HeaderPrimary title="CRE Details">
+        <Filters />
+      </HeaderPrimary>
+
       <Row>
         <CreProfileCard />
 
@@ -45,7 +50,7 @@ function CreDetails() {
         ))}
         <Col xxl={6} xl={6} lg={6} md={12}>
           <CrePrimaryCard
-           cardHeading="Primary Details"
+            cardHeading="Primary Details"
             firstName="Adesh"
             lastName="Goyal"
             gender="Male"
@@ -64,13 +69,11 @@ function CreDetails() {
 
         <Col xxl={6} xl={6} lg={6} md={12}>
           <CreTrainingCard
-           cardHeading="Trainings Attended"
+            cardHeading="Trainings Attended"
             trainingName="Name of the training"
             completeOn="13th April, 2022"
-            
           />
         </Col>
-      
       </Row>
     </>
   );

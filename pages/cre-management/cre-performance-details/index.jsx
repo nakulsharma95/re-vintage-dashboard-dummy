@@ -5,6 +5,7 @@ import Filters from "../../../components/common/filters";
 import CrePerformanceMatrix from "../../../components/cre-management/crePerformanceMatrix";
 import TabPrimary from "../../../components/common/tabPrimary";
 import CreMonthPerformace from "~/components/cre-management/creMonthPerformace";
+import HeaderPrimary from "~/components/common/headerPrimary";
 
 function CrePerformanceDetails() {
   return (
@@ -13,7 +14,10 @@ function CrePerformanceDetails() {
         title="CRE Management"
         addmoretitle="CRE Performance Details"
       />
-      <Filters title="CRE Performance Details" />
+
+      <HeaderPrimary title="CRE Performance Details">
+        <Filters />
+      </HeaderPrimary>
       <Row>
         <TabPrimary title1="Basic Details" title2="Basic Details" />
         <div className="mb-2 mt-2">Performance</div>
