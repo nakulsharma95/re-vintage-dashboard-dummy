@@ -4,12 +4,14 @@ import style from './style.module.scss';
 
 function ImageCustom(props) {
   const [errorImage, setErrorImage] = useState(
-    'https://i.ytimg.com/vi/jMkHvP4YLag/maxresdefault.jpg'
+    '/images/default-thumbnail.webp'
   );
 
   useEffect(() => {
-    setErrorImage('https://i.ytimg.com/vi/jMkHvP4YLag/maxresdefault.jpg');
+    setErrorImage('/images/default-thumbnail.webp');
   }, [errorImage, props.srcSet]);
+
+  const IMAGE_QUALITY = 80;
 
   return (
     <Image
@@ -20,11 +22,9 @@ function ImageCustom(props) {
       className={`${style.imageStyle} ${props.customClass}`}
       onClick={props.onClick}
       placeholder="blur"
-      blurDataURL="/blur_image.webp"
       priority
-      onError={() =>
-        setErrorImage('https://i.ytimg.com/vi/jMkHvP4YLag/maxresdefault.jpg')
-      }
+      quality={IMAGE_QUALITY}
+      onError={() => setErrorImage('/images/default-thumbnail.webp')}
     />
   );
 }
