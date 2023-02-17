@@ -11,6 +11,8 @@ function ImageCustom(props) {
     setErrorImage('https://i.ytimg.com/vi/jMkHvP4YLag/maxresdefault.jpg');
   }, [errorImage, props.srcSet]);
 
+  const IMAGE_QUALITY = 80;
+
   return (
     <Image
       src={props?.srcSet}
@@ -20,8 +22,9 @@ function ImageCustom(props) {
       className={`${style.imageStyle} ${props.customClass}`}
       onClick={props.onClick}
       placeholder="blur"
-      blurDataURL="/blur_image.webp"
+      // blurDataURL="/blur_image.webp"
       priority
+      quality={IMAGE_QUALITY}
       onError={() =>
         setErrorImage('https://i.ytimg.com/vi/jMkHvP4YLag/maxresdefault.jpg')
       }
