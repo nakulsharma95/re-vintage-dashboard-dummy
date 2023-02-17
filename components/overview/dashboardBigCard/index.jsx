@@ -1,7 +1,7 @@
 import { Card, Col, Row, Table } from 'react-bootstrap';
 import { AiFillStar, AiOutlineDownload } from 'react-icons/ai';
-import TabDefault from '../tabDefault';
-import TabPrimary from '../tabPrimary';
+import TabDefault from '../../common/tabDefault';
+import TabPrimary from '../../common/tabPrimary';
 
 import styles from './style.module.scss';
 

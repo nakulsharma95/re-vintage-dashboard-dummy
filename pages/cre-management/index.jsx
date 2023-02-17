@@ -51,26 +51,16 @@ function CreManagement() {
   return (
     <>
       <Breadcrumb title="CRE Management" addmoretitle="CRE Management" />
-      <div className="header-section">
-        <div className="row w-100">
-          <div className="col-sm-4">
-            <TextHeader
-              title="CRE Management"
-              subTitle="CRE Management module"
-            />
-          </div>
-          <div className="col-sm-8">
-            <div className="d-flex justify-content-end">
-              <Filters filterInput />
-              <ButtonPrimary
-                buttonLink="cre-management/add-cre"
-                title="Add cre"
-                btnWhite
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+
+      <HeaderPrimary title="CRE Management" subTitle="CRE Management module">
+        <Filters filterInput />
+        <ButtonPrimary
+          buttonLink="cre-management/add-cre"
+          iconLeft={<FiPlus />}
+          title="Add cre"
+          white
+        />
+      </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-3" />
       <DealFilter title="Available CRE(s)" droptitle="Top Performer" isViewBy />

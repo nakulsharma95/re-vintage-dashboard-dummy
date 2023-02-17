@@ -1,47 +1,51 @@
 import { Row, Col } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
+import { FiSettings } from 'react-icons/fi';
 import UpcomingBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
-import Filters from '../../../components/common/filters';
 import TabPrimary from '../../../components/common/tabPrimary';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
 
 export default function UpcomingBids() {
   const upcomingBikeData = [
     {
       imageUrl: '/images/bikeImage.png',
-      name:'Classic 350',
-      number:'DL6TAL7314',
-      km:'48,523',
-      year:'2020',
-      location:'Mumbai, Maharashtra',
+      name: 'Classic 350',
+      number: 'DL6TAL7314',
+      km: '48,523',
+      year: '2020',
+      location: 'Mumbai, Maharashtra',
     },
     {
       imageUrl: '/images/bikeImage2.png',
-      name:'Classic 350',
+      name: 'Classic 350',
       bidPrice: '1,35,000',
-      number:'DL6TAL7215',
-      km:'48,523',
-      year:'2020',
-      location:'Janakpuri, Delhi',
+      number: 'DL6TAL7215',
+      km: '48,523',
+      year: '2020',
+      location: 'Janakpuri, Delhi',
     },
     {
       imageUrl: '/images/bikeImage3.png',
-      name:'Classic 350',
+      name: 'Classic 350',
       bidPrice: '1,45,000',
-      number:'DL6TAL7016',
-      km:'48,523',
-      year:'2020',
-      location:'Chandigarh',
+      number: 'DL6TAL7016',
+      km: '48,523',
+      year: '2020',
+      location: 'Chandigarh',
     },
     {
       imageUrl: '/images/bikeImage4.png',
-      name:'Classic 350',
+      name: 'Classic 350',
       bidPrice: '1,56,000',
-      number:'DL6TAL7119',
-      km:'48,523',
-      year:'2020',
-      location:'Noida, Uttar Pradesh',
+      number: 'DL6TAL7119',
+      km: '48,523',
+      year: '2020',
+      location: 'Noida, Uttar Pradesh',
     },
   ];
   return (
@@ -50,15 +54,23 @@ export default function UpcomingBids() {
         <Breadcrumb title="Bidding Portal" addmoretitle="Upcoming Bids" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
-      <Filters filterInput filterButton title="Upcoming Bids" export bidPrice />
+      <HeaderPrimary headerClass="mb-2" title="Completed Evaluation">
+        <OutlineButton title="Bid Price Logic" rightIcon={<FiSettings />} />
+        <OutlineButton
+          title="Scheduled Evaluation"
+          rightIcon={<RiShareBoxFill />}
+        />
+        <SearchPrimary />
+      </HeaderPrimary>
+
       <TabPrimary title1="Today" title2="Next Bidding (31 Dec)" />
       <div className="mb-3">25 Bids Available</div>
       <Row className="mb-3">
         {upcomingBikeData.map((item) => (
           <Col md={3}>
-            <UpcomingBikeCard 
-              baseprice 
-              arrowBtn 
+            <UpcomingBikeCard
+              baseprice
+              arrowBtn
               imageUrl={item.imageUrl}
               bikeName={item.name}
               bikeNumber={item.number}

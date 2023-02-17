@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Link from 'next/link';
-import PieBig from '../../common/pieBig';
+import PieBig from '../pieBig';
 
 import styles from './style.module.scss';
 

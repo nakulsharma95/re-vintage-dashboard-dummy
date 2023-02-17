@@ -36,18 +36,16 @@ function MotorcyclePickup() {
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <SortTabs selectAllCheck />
       <Row>
-        {cardData.map((item, index) => {
-          return (
-            <Col md={3} key={index}>
-              <DealCheckCard
-                data={item}
-                isCheckBoxVisible
-                acceptPrice
-                pickupCheck
-              />
-            </Col>
-          );
-        })}
+        {cardData.map((item, index) => (
+          <Col md={3} key={index}>
+            <DealCheckCard
+              data={item}
+              isCheckBoxVisible
+              acceptPrice
+              pickupCheck
+            />
+          </Col>
+        ))}
       </Row>
     </>
   );
