@@ -10,7 +10,7 @@ table.addPrimaryTable{
 		}
 		th{
 			color: $gray-cb;
-			background-color: $gray-28 !important;
+			background-color: $gray-28;
 			font-size: 12px;
 			font-weight: 500;
 			word-wrap: break-word;
@@ -23,7 +23,7 @@ table.addPrimaryTable{
 			color: $white;
 			font-size: 12px;
 			vertical-align: middle;
-			background-color: $gray-18 !important;
+			background-color: $gray-18;
 			border: 1px solid $black-40;
 			white-space: nowrap;
 			padding: 10px 10px;
