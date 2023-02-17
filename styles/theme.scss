@@ -542,3 +542,9 @@ h6 {
   gap: 0 12px;
   }
 }
+
+// DealerTable checkbox
+.dealerTable .form-check-input:checked {
+  background-color: red;
+  border-color: red;
+}

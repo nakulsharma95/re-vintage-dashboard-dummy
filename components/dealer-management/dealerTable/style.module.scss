@@ -1,15 +1,33 @@
 .dealerTable{
 	Table{
+		
 		a{
 			color: #FFFFFF;
+			position: relative;
+			margin-left: 1rem;
+
+			&:before{
+				content: "";
+				position: absolute;
+				background-color: green;
+				border-radius: 50%;
+				height: 0.6rem;
+				width: 0.6rem;
+				left: -0.9rem;
+                top: 0.3rem;
+			}
 		}
 		thead tr th{
 			background-color: #282828;
 			color: #A7A7A7;
+			border: none;
+			padding: 1.3rem;
 		}
 		tbody tr td{
-			background-color: #0D0D0D;
+			background-color: #181818;
 			color: #FFFFFF;
+			border: none;
+			border-bottom: 1px solid #282828;
 
 			.tableCheckbox .form-check-input:checked {
 				background-color: red;
