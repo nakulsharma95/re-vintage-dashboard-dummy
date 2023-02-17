@@ -1,18 +1,75 @@
 import { Card, Col, Row, Table } from 'react-bootstrap';
 import { AiFillStar, AiOutlineDownload } from 'react-icons/ai';
+import HorizontalBarChart from '../../charts/horizontalBarChart';
 import TabDefault from '../../common/tabDefault';
 import TabPrimary from '../../common/tabPrimary';
 
 import styles from './style.module.scss';
 
+const data = [
+  [
+    'Element',
+    'Density',
+    { role: 'style' },
+    {
+      sourceColumn: 0,
+      role: 'annotation',
+      type: 'string',
+      calc: 'stringify',
+    },
+  ],
+  ['Copper', 100, '#F28823', null],
+  ['Silver', 90, '#F0CB2D', null],
+  ['Gold', 80, '#F5B82A', null],
+  ['Platinum', 70, '#403E3E', null],
+  ['Gold', 60, '#DA291C', null],
+  ['Platinum', 21.45, '#AAAAAA', null],
+];
+
+const options = {
+  title: '',
+  bar: { groupWidth: '70%' },
+  legend: { position: 'none' },
+  backgroundColor: 'transparent',
+  hAxis: {
+    gridlines: {
+      interval: 0,
+    },
+    title: '',
+    titleTextStyle: {
+      color: '#fff',
+    },
+    minorGridlines: {
+      color: '#494949',
+    },
+    textStyle: { color: '#FFF' },
+  },
+  vAxis: {
+    title: '',
+    titleTextStyle: {
+      color: '#fff',
+    },
+    gridlines: {
+      interval: 0,
+    },
+    minValue: 0,
+    minorGridlines: {
+      color: '#494949',
+    },
+    textStyle: { color: '#FFF' },
+  },
+};
 function dashboardBigCard() {
   return (
     <Row>
       <Col xxl={4} lg={6} md={6}>
         <Card className={styles.card}>
-          <div className={styles.cardHead}>
-            <h4>Motorcycle Sales</h4>
-            <AiOutlineDownload className={styles.cardIcon} />
+          <div className={`${styles.cardHead} flex-column`}>
+            <div className="d-flex justify-content-between">
+              <h4>Motorcycle Sales</h4>
+              <AiOutlineDownload className={styles.cardIcon} />
+            </div>
+            <HorizontalBarChart data={data} options={options} />
           </div>
           <div className={`${styles.cardProgress} overviewProgress`} />
           <hr />
@@ -48,7 +105,6 @@ function dashboardBigCard() {
         <Card className={styles.card}>
           <div className={styles.cardHead}>
             <h4>Dealer Perfomance</h4>
-
             <AiOutlineDownload className={styles.cardIcon} />
           </div>
           <TabDefault />

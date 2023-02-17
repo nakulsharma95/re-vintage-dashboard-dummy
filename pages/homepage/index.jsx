@@ -33,7 +33,12 @@ export default function Homepage() {
         description4="₹ 1,25,000.00"
       />
       <DashboardBigCard />
-      {/* <Filters filterInput filterButton title="Leads" /> */}
+
+      <HeaderPrimary headerClass="mt-5" title="Leads">
+        <SearchPrimary />
+        <FilterButton />
+      </HeaderPrimary>
+
       <TabPrimary title1="Procurement" title2="Inventory" title3="Retail" />
       <LeadSection />
       <NonReLeadSection />
