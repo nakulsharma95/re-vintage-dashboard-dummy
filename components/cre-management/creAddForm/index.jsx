@@ -73,6 +73,20 @@ export default function CreAddForm() {
         <div className={styles.inputDivider}></div>
         <Row>
           <Col className={`${styles.labalAlign}`} xl={4} lg={4} md={12}>
+            <span className={styles.inputSpan}>Date of Birth</span>
+          </Col>
+
+          <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
+            <Form>
+              <Form.Group className="" controlId="formBasicEmail">
+                <Form.Control type="text" placeholder="29/08/2022" />
+              </Form.Group>
+            </Form>
+          </Col>
+        </Row>
+        <div className={styles.inputDivider}></div>
+        <Row>
+          <Col className={`${styles.labalAlign}`} xl={4} lg={4} md={12}>
             <span className={styles.inputSpan}>Phone</span>
           </Col>
 
@@ -95,7 +109,30 @@ export default function CreAddForm() {
         <div className={styles.inputDivider}></div>
         <Row>
           <Col className={`${styles.labalAlign}`} xl={4} lg={4} md={12}>
-            <span className={styles.inputSpan}>Current Address</span>
+            <span className={styles.inputSpan}>State and city</span>
+          </Col>
+
+          <Col className={`${styles.inputField} `} xl={4} lg={4} md={12}>
+            <Form>
+              <Form.Group className="" controlId="formBasicEmail">
+                <Form.Control type="email" placeholder="Delhi" />
+              </Form.Group>
+            </Form>
+          </Col>
+
+          <Col className={`${styles.inputField}`} xl={4} lg={4} md={12}>
+            <Form>
+              <Form.Group className="" controlId="formBasicEmail">
+                <Form.Control type="email" placeholder="New Delhi" />
+              </Form.Group>
+            </Form>
+          </Col>
+        </Row>
+      
+        <div className={styles.inputDivider}></div>
+        <Row>
+          <Col className={`${styles.labalAlign}`} xl={4} lg={4} md={12}>
+            <span className={styles.inputSpan}>Gender</span>
           </Col>
 
           <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
@@ -103,7 +140,24 @@ export default function CreAddForm() {
               <Form.Group className="" controlId="formBasicEmail">
                 <Form.Control
                   type="text"
-                  placeholder="1236/2, D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi, Delhi - 110066"
+                  placeholder="Male"
+                />
+              </Form.Group>
+            </Form>
+          </Col>
+        </Row>
+        <div className={styles.inputDivider}></div>
+        <Row>
+          <Col className={`${styles.labalAlign}`} xl={4} lg={4} md={12}>
+            <span className={styles.inputSpan}>Marital Status</span>
+          </Col>
+
+          <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
+            <Form>
+              <Form.Group className="" controlId="formBasicEmail">
+                <Form.Control
+                  type="text"
+                  placeholder="Single"
                 />
               </Form.Group>
             </Form>
