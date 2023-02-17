@@ -1,0 +1,13 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.overviewCardMain{
+	background-color: $gray-28;
+	margin: 15px 0;
+	padding: 20px;
+	min-height: 321px;
+}
+
+.chartStyle {
+	background: none;
+}

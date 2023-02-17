@@ -1,0 +1,80 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+	
+.dashboardCardMain{
+	border: none;
+	border-radius: 0;
+	margin-bottom: 20px;
+	.cardBody{
+		height: 10rem;
+
+		.cardHead{
+			height: 75%;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			padding: 0 15px 0 15px;
+
+			h2{
+              font-size: 14px;
+			  margin-bottom: 0;
+			  font-weight: 300;
+			}
+
+			p{
+				font-size: 24px;
+				margin-bottom: 0;
+				font-weight: 600;
+			}
+		}
+
+		.cardFooter{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 15px 0 15px;
+
+			h3{
+				font-size: 12px;
+				margin-bottom: 0;
+				font-weight: 300;
+			  }
+  
+			span{
+				  font-size: 12px;
+				  margin-bottom: 0;
+				  font-weight: 300;
+				 
+			  }
+
+			  .customIcon{
+				color: $theme-success;
+			  }
+
+				.dashboardDropdown{
+					
+			display: block !important;
+
+				}
+		}
+	}
+}
+
+.divider{
+	border: 1px solid #FFFFFF;
+}
+.dividerDark{
+	border: 1px solid $gray-28;
+}
+
+.bgRed{
+background-color: $theme-red-da;
+}
+
+.bgBlack{
+	background-color: $black-40;
+}
+
+.bgDarkGray{
+background-color: $gray-28;
+}

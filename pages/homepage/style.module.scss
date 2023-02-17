@@ -4,14 +4,14 @@
 
 // Home Page Style
 .homepageStyle {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: $theme-primary;
+  // min-height: 100vh;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // background:#000000 0% 0% no-repeat padding-box;
+  // padding: 1rem 2.5rem;
 
   .titleCustomStyle {
-    text-align: center;
     color: $white;
   }
 }

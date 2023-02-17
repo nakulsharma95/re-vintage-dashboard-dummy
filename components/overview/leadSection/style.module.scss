@@ -1,0 +1,48 @@
+.Leads {
+  box-sizing: border-box;
+
+  .LeadsTop {
+    display: flex;
+    justify-content: space-between;
+    .leadTable {
+      width: 78%;     
+      Table{
+        height: 20rem;
+       
+        thead, tbody, tfoot, tr, td, th{
+          border: none;
+        }
+        tbody{
+          .BoldHead{            
+              color: white;
+              .BoldHeadIcon{
+                font-size: 1.5rem;
+              }
+            
+          }
+        }       
+        a{
+          color: #E8B016;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .LeadsMiddle{
+	  display: flex;
+    justify-content: space-between;
+
+    .leadMidTable{
+      width: 50%;
+      Table{
+        height: 20rem;
+
+        thead, tbody, tfoot, tr, td, th{
+            border: 1px solid #282828;
+          }
+      }
+    }
+	
+  }
+}

@@ -1,0 +1,55 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.dropCardBg {
+  background-color: $black;
+  border-radius: 0px;
+  width: 40%;
+  padding:32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  .dropCardInner {
+    h3 {
+      color: #a7a7a7;
+      font-size: 12px;
+      margin-bottom: 0px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #ffffff;
+      margin-bottom: 0px;
+    }
+
+    .dropContact {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .borderTopCustom {
+    border-top: 2px solid !important;
+    border-color: #4c4c4c !important;
+  }
+  .borderRightCustom {
+    border-right: 1px solid !important;
+    border-color: #4c4c4c !important;
+  }
+
+  .dropCardFooter {
+    display: flex;
+    align-items: center;
+    .dropIcon {
+      color: #cbc6c6;
+      margin: 0px 5px 0px 5px;
+      cursor: pointer;
+    }
+    span {
+      font-size: 12px;
+      color: #cbc6c6;
+      cursor: pointer;
+    }
+  }
+}
