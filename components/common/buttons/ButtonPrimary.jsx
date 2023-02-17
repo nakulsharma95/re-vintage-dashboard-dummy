@@ -1,6 +1,13 @@
-import { Button } from 'react-bootstrap';
+import Link from 'next/link';
 import styles from './style.module.scss';
 
 export default function ButtonPrimary(props) {
-  return <Button className={styles.buttonPrimary}>{props.title}</Button>;
+  return (
+    <Link
+      href={props.buttonLink || '/'}
+      className={props.btnWhite ? styles.buttonWhite : styles.buttonPrimary}
+    >
+      {props.title}
+    </Link>
+  );
 }

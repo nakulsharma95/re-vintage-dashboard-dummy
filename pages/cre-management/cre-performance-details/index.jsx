@@ -1,10 +1,9 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
-import Breadcrumb from "~/components/common/breadcrumbPrimary";
-import Filters from "~/components/common/filters";
-import CrePerformanceMatrix from "~/components/cre-management/crePerformanceMatrix";
-import CreProfileCard from "~/components/cre-management/creProfileCard";
-import TabPrimary from "../../../components/common/tabPrimary";
+import React from 'react';
+import { Row } from 'react-bootstrap';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import Filters from '../../../components/common/filters';
+import CrePerformanceMatrix from '../../../components/cre-management/crePerformanceMatrix';
+import TabPrimary from '../../../components/common/tabPrimary';
 
 function CrePerformanceDetails() {
   return (
