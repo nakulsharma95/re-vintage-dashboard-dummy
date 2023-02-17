@@ -1,7 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import Breadcrumb from "../../components/common/breadcrumbPrimary";
-import Filters from "../../components/common/filters";
 import CreDetailCard from "../../components/cre-management/creDetailCard";
 import DealFilter from "../../components/dealClosure/dealFilter";
 import CrePerformanceCard from "../../components/cre-management/crePerformanceCard";
@@ -10,43 +9,44 @@ import ButtonPrimary from "../../components/common/buttons/ButtonPrimary";
 import styles from "./style.module.scss";
 import HeaderPrimary from "~/components/common/headerPrimary";
 import { FiPlus } from "react-icons/fi";
+import SearchPrimary from "../../components/common/searchPrimary";
 
 
 function CreManagement() {
   const cardData = [
     {
-      imageUrl: "/images/bob-Vishwas.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bob-Vishwas1.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas1.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bob-Vishwas2.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas2.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bob-Vishwas3.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas3.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
   ];
   const performanceCardData = [
     {
-      cardBodyBg: "bgGray18",
+      cardBodyBg: 'bgGray18',
     },
     {
-      cardBodyBg: "bgGray28",
+      cardBodyBg: 'bgGray28',
     },
     {
-      cardBodyBg: "bgblack40",
+      cardBodyBg: 'bgblack40',
     },
     {
-      cardBodyBg: "bgGray18",
+      cardBodyBg: 'bgGray18',
     },
   ];
 
@@ -55,7 +55,7 @@ function CreManagement() {
       <Breadcrumb title="CRE Management" addmoretitle="CRE Management" />
 
       <HeaderPrimary title="CRE Management" subTitle="CRE Management module">
-        <Filters filterInput />
+        <SearchPrimary />
         <ButtonPrimary
           buttonLink="cre-management/add-cre"
           iconLeft={<FiPlus />}

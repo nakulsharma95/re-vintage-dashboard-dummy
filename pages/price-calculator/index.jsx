@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { BsPlusLg } from 'react-icons/bs';
 import { Row } from 'react-bootstrap';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
-import Filters from '../../components/common/filters';
 import styles from './style.module.scss';
-import PricePrimaryCard from '~/components/priceCalculator/pricePrimaryCard';
+import PricePrimaryCard from '../../components/priceCalculator/pricePrimaryCard';
+import HeaderPrimary from '../../components/common/headerPrimary';
 
 export default function PriceCalculator() {
   const priceCardData = [
@@ -76,10 +76,12 @@ export default function PriceCalculator() {
     <div>
       <Breadcrumb title="Instant Estimator Configurator" />
       <div className={styles.priceFilterFlex}>
-        <Filters
+        <HeaderPrimary
+          headerClass="mb-2"
           title="Instant Estimator Configurator"
           subTitle="Here you will find the Contact details of CRE for active Motorcycle and General Info"
-        />
+        >
+        </HeaderPrimary>
         <Link
           href="/price-calculator/add-motorcycle"
           className={styles.addMotorBtn}
