@@ -1,0 +1,10 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables//mixins';
+
+.enquireBarChart {
+	position: relative;
+	padding: 5px;
+	background-color: $gray-28;
+	overflow: hidden;
+	height: 100%;
+}

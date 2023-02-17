@@ -7,12 +7,19 @@ import BikeCardFooter from '../../common/cardFooter';
 import MotorcycleDetail from '../motorcycleDetail';
 
 function CompleteBikeDetail({
-  isEvalBtnVisible,
-  isCallerBtnVisible,
-  isEnquiryNumVisible,
-  data
-}) {
-  const completeBikeName = ['2015 Classic 350', '2015 Thunder 350'];
+    isEvalBtnVisible,
+    isCallerBtnVisible,
+  }) {
+
+  const completeData = [
+    {
+      bikeCode: 'FB29FH9219HR1',
+      bikeName: '2015 Classic 350',
+      bikeNumber: '- DL6TAL7314',
+      priceTitle: 'Evaluation Price',
+      evaluationPrice: '1,19,300',
+    },
+  ];
 
   return (
     <>
@@ -22,16 +29,20 @@ function CompleteBikeDetail({
               <Col md={4} className={styles.compBikeCardSliderMain}>
                 <BikeSlider isSlider />
               </Col>
-              <Col md={4}>
-                <MotorcycleDetail
-                  headBikeDetail
-                  bikeInfo
-                  bikeDetailTitle
-                  bikeNumber="- DL6TAL7314"
-                  bikeName={data}
-                  isEnquiryNumVisible={isEnquiryNumVisible}
-                />
-              </Col>
+              {completeData.map((item) => (
+                <Col md={4}>
+                  <MotorcycleDetail
+                    headBikeDetail
+                    bikeInfo
+                    bikeDetailTitle
+                    bikeCode={item.bikeCode}
+                    bikeName={item.bikeName}
+                    bikeNumber={item.bikeNumber}
+                    priceTitle={item.priceTitle}
+                    evaluationPrice={item.evaluationPrice}
+                  />
+                </Col>
+              ))}
               <Col md={4}>
                 <EvaluationDetail
                   isEvalBtnVisible={isEvalBtnVisible}

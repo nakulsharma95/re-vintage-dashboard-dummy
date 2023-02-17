@@ -2,15 +2,19 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import PriceInspection from '../../../components/priceCalculator/estimatedPrice/priceInspection';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import Filters from '../../../components/common/filters';
 import EstimatedBike from '../../../components/priceCalculator/estimatedPrice/estimatedBike';
+import HeaderPrimary from '../../../components/common/headerPrimary';
 
 export default function EstimatedPrice() {
   return (
     <>
       <Breadcrumb title="Instant Estimator Configurator" />
       <div className="mb-5" />
-      <Filters title="Estimated Price" />
+      <HeaderPrimary
+          headerClass="mb-2"
+          title="Estimated Price"
+        >
+      </HeaderPrimary>
       <Row>
         <Col md={7} className="mt-1">
           <PriceInspection

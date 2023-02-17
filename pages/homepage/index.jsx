@@ -21,23 +21,26 @@ export default function Homepage() {
       </HeaderPrimary>
 
       <DashboardCard
-      title1="Total Procured"
-      description1="1507"
-      bottomDescription1="Overall Booking Growth"
-      title2="Evaluation Request"
-      description2="97"
-      bottomDescription2="Received This Week"
-      title3="Pending Evaluation"
-      description3="12"
-      title4="Total Revenue"
-      description4="₹ 1,25,000.00"
-       />
+        title1="Total Procured"
+        description1="1507"
+        bottomDescription1="Overall Booking Growth"
+        title2="Evaluation Request"
+        description2="97"
+        bottomDescription2="Received This Week"
+        title3="Pending Evaluation"
+        description3="12"
+        title4="Total Revenue"
+        description4="₹ 1,25,000.00"
+      />
       <DashboardBigCard />
-      {/* <Filters filterInput filterButton title="Leads" /> */}
+
+      <HeaderPrimary headerClass="mb-1" title="Lead">
+        <SearchPrimary />
+        <FilterButton />
+      </HeaderPrimary>
       <TabPrimary title1="Procurement" title2="Inventory" title3="Retail" />
       <LeadSection />
       <NonReLeadSection />
-  
     </div>
   );
 }

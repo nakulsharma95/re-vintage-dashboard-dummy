@@ -8,12 +8,12 @@ function BikeCard(props) {
   return (
     <>
       <Card className={bikeCardStyle.bikeCardMain}>
-        <Card.Img variant="top" src={data.imageUrl} />
+        <Card.Img variant="top" src={data?.imageUrl} />
         {props.isEvalTag && (
           <div>
             {data.evalTag && (
               <div className={`${bikeCardStyle.bikeCardTag}`}>
-                {data.evalTag}
+                {data?.evalTag}
               </div>
             )}
           </div>

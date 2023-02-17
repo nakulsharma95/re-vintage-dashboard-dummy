@@ -1,5 +1,6 @@
 import { Col, Row } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
+import FilterButton from '../../../components/common/filterButton';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
 import SellerPrimaryCard from '../../../components/biddingPortal/sellerPrimaryCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
@@ -62,6 +63,7 @@ export default function ClosedBids() {
       >
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
         <SearchPrimary />
+        <FilterButton />
       </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-2" />

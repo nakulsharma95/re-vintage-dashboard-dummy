@@ -1,14 +1,14 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import Breadcrumb from "~/components/common/breadcrumbPrimary";
-import Filters from "~/components/common/filters";
+import Breadcrumb from "../../../components/common/breadcrumbPrimary";
 import CreAddressDetailCard from "~/components/cre-management/creAddressDetailCard";
-import CreBikeInfoCard from "~/components/cre-management/creBikeInfoCard";
-import CrePrimaryCard from "~/components/cre-management/crePrimaryCard";
-import CreProfileCard from "~/components/cre-management/creProfileCard";
-import CreTrainingCard from "~/components/cre-management/creTrainingCard";
+import CreBikeInfoCard from "../../../components/cre-management/creBikeInfoCard";
+import CrePrimaryCard from "../../../components/cre-management/crePrimaryCard";
+import CreProfileCard from "../../../components/cre-management/creProfileCard";
+import CreTrainingCard from "../../../components/cre-management/creTrainingCard";
 import TabPrimary from "../../../components/common/tabPrimary";
-import HeaderPrimary from "~/components/common/headerPrimary";
+import HeaderPrimary from "../../../components/common/headerPrimary";
+import SearchPrimary from "../../../components/common/searchPrimary";
 
 function CreDetails() {
   const cardData = [
@@ -30,7 +30,7 @@ function CreDetails() {
       <Breadcrumb title="CRE Management" addmoretitle="CRE Details" />
 
       <HeaderPrimary title="CRE Details">
-        <Filters />
+        <SearchPrimary />
       </HeaderPrimary>
 
       <Row>

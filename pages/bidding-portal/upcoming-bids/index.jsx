@@ -9,6 +9,7 @@ import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import FilterButton from '../../../components/common/filterButton';
 
 export default function UpcomingBids() {
   const upcomingBikeData = [
@@ -61,6 +62,7 @@ export default function UpcomingBids() {
           rightIcon={<RiShareBoxFill />}
         />
         <SearchPrimary />
+        <FilterButton />
       </HeaderPrimary>
 
       <TabPrimary title1="Today" title2="Next Bidding (31 Dec)" />
