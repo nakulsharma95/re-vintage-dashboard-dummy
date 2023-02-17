@@ -2,9 +2,13 @@ import { Col, Row } from 'react-bootstrap';
 import BikeCardRadio from '../../../components/common/cardCheckbox';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DashboardCard from '../../../components/common/dashboardCard';
-import Filters from '../../../components/common/filters';
 import SortTabs from '../../../components/common/sortTabs';
 import TabPrimary from '../../../components/common/tabPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import FilterButton from '../../../components/common/filterButton';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import { RiShareBoxFill } from 'react-icons/ri';
 
 export default function MarketPlace() {
   const cardData = [
@@ -29,21 +33,17 @@ export default function MarketPlace() {
   return (
     <div>
       <Breadcrumb title="Retail" addmoretitle="Inventory" />
-      <Filters filterInput filterButton export title="MarketPlace" />
-      <DashboardCard
-      Dropdown
-      title1="Listed "
-      titleBr= "(Active + Inactive)"
-      description1="1507"
-      bottomDescription1="Overall Booking Growth"
-      title2="Recent Inventory"
-      description2="97"
-      bottomDescription2="Received This Week"
-      title3="Test Ride Requests"
-      description3="12"
-      title4="Booking"
-      description4="35"
-       />
+      
+      <HeaderPrimary 
+        headerClass="mb-2" 
+        title="MarketPlace"
+      >
+        <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
+        <SearchPrimary />
+        <FilterButton />
+      </HeaderPrimary>
+
+      <DashboardCard />
       <TabPrimary
         title1="Active"
         title2="Inactive (12)"

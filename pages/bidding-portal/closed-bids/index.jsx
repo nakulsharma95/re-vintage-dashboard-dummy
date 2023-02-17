@@ -3,12 +3,12 @@ import { RiShareBoxFill } from 'react-icons/ri';
 import ClosedBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
-import Filters from '../../../components/common/filters';
 import TabPrimary from '../../../components/common/tabPrimary';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import FilterButton from '../../../components/common/filterButton';
 
 export default function ClosedBids() {
   const closedBikeData = [
@@ -62,6 +62,7 @@ export default function ClosedBids() {
       <HeaderPrimary headerClass="mb-2" title="Closed Bids">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
         <SearchPrimary />
+        <FilterButton />
       </HeaderPrimary>
 
       <TabPrimary title1="Bids" title2="No Bids" />

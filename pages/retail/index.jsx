@@ -2,9 +2,13 @@ import { Col, Row } from 'react-bootstrap';
 import BikeCardRadio from '../../components/common/cardCheckbox';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import DashboardCard from '../../components/common/dashboardCard';
-import Filters from '../../components/common/filters';
 import SortTabs from '../../components/common/sortTabs';
 import TabPrimary from '../../components/common/tabPrimary';
+import SearchPrimary from '../../components/common/searchPrimary';
+import FilterButton from '../../components/common/filterButton';
+import HeaderPrimary from '../../components/common/headerPrimary';
+import OutlineButton from '../../components/common/buttons/OutlineButton';
+import { RiShareBoxFill } from 'react-icons/ri';
 
 export default function Retail() {
   const cardData = [
@@ -29,7 +33,14 @@ export default function Retail() {
   return (
     <div>
       <Breadcrumb title="Retail" addmoretitle="Inventory" />
-      <Filters filterInput filterButton export title="Inventory" />
+      <HeaderPrimary 
+        headerClass="mb-2" 
+        title="Retail"
+      >
+        <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
+        <SearchPrimary />
+        <FilterButton />
+      </HeaderPrimary>
       <DashboardCard />
       <TabPrimary
         title1="Content Approval Pending (12)"

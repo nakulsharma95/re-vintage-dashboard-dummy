@@ -15,10 +15,11 @@ function Breadcrumb(props) {
             <Link href="/" className={styles.breadcrumbsItem}>
               {props.title}
             </Link>
-            
-            <Link href="/" className={styles.breadcrumbsItem}>
-              {props.addmoretitle}
-            </Link>
+            {props.addmoretitle && (
+              <Link href="/" className={styles.breadcrumbsItem}>
+                {props.addmoretitle}
+              </Link>
+            )}
           </nav>
         </Col>
       </Row>
