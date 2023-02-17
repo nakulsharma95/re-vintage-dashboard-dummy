@@ -6,6 +6,7 @@ import CrePerformanceMatrix from "../../../components/cre-management/crePerforma
 import TabPrimary from "../../../components/common/tabPrimary";
 import CreMonthPerformace from "~/components/cre-management/creMonthPerformace";
 import HeaderPrimary from "~/components/common/headerPrimary";
+import CreProfileCard from "~/components/cre-management/creProfileCard";
 
 function CrePerformanceDetails() {
   return (
@@ -19,6 +20,9 @@ function CrePerformanceDetails() {
         <Filters />
       </HeaderPrimary>
       <Row>
+        <Col xxl={12} lg={12} md={12}>
+        <CreProfileCard droptitle="Action" />
+        </Col>
         <TabPrimary title1="Basic Details" title2="Basic Details" />
         <div className="mb-2 mt-2">Performance</div>
         <Col xxl={12} lg={12} md={12}>

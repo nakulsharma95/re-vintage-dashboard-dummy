@@ -1,2 +1,81 @@
 @import "../../../styles/variables/colors";
 @import "../../../styles/variables//mixins";
+
+.profileCardHead {
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  background-color: #222222;
+
+  .profileImg {
+    img {
+      width: 100%;
+      background-size: cover;
+      height: 210px;
+    }
+  }
+
+  .performerDetails {
+	padding: 20px 15px 15px 2px;
+    background-color: $gray-2;
+    .performerDetailsHead {
+      position: relative;
+
+      h3 {
+        font-size: 18px;
+      }
+
+      .availableTag {
+        position: absolute;
+        top: -2px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #ffffff;
+        padding: 5px 15px 5px 20px;
+        background: rgba(0, 0, 0, 0.5) 11% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+        margin-left: 115px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 7px;
+          top: 50%;
+          width: 6px;
+          height: 6px;
+          background-color: $theme-green;
+          border-radius: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  .performerArea {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .icon {
+      margin-right: 5px;
+    }
+    span {
+      font-size: 12px;
+      color: $white;
+    }
+  }
+
+  .description {
+    h3 {
+      font-size: 12px;
+      color: $gray-a7;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 10px;
+    }
+  }
+
+  .divider {
+    border: 1px solid $gray-70;
+    margin: 15px 0px 15px 0px;
+  }
+}
