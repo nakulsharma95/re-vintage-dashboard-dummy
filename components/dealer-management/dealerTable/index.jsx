@@ -7,7 +7,7 @@ import style from './style.module.scss';
 
 function dealerTable() {
   return (
-	<div className={`${style.dealerTable}`}>
+	<div className={`${style.dealerTable}  dealerTable`}>
 		<Table bordered variant="dark">
       <thead>
         <tr>
@@ -37,7 +37,7 @@ function dealerTable() {
           <td><Form.Check className={style.tableCheckbox} type="checkbox" label="Enabled" /> </td>
         </tr>
 		<tr>
-          <td><Link href="/">Neel Motors</Link></td>
+          <td><Link href="/dealer-management/dealership-details">Neel Motors</Link></td>
           <td>H2N8XS94JU</td>
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
@@ -45,7 +45,7 @@ function dealerTable() {
           <td><Form.Check className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
         </tr>
 		<tr>
-          <td><Link href="/">Neel Motors</Link></td>
+          <td><Link href="/dealer-management/dealership-details">Neel Motors</Link></td>
           <td>H2N8XS94JU</td>
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
@@ -69,7 +69,7 @@ function dealerTable() {
           <td><Form.Check className={style.tableCheckbox} type="checkbox" label="Enabled" /> </td>
         </tr>
 		<tr>
-          <td><Link href="/">Neel Motors</Link></td>
+          <td><Link href="/dealer-management/dealership-details">Neel Motors</Link></td>
           <td>H2N8XS94JU</td>
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
@@ -77,7 +77,7 @@ function dealerTable() {
           <td><Form.Check className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
         </tr>
 		<tr>
-          <td><Link href="/">Neel Motors</Link></td>
+          <td><Link href="/dealer-management/dealership-details">Neel Motors</Link></td>
           <td>H2N8XS94JU</td>
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
