@@ -1,49 +1,52 @@
-import { Col, Row } from 'react-bootstrap';
-import { FiPlus } from 'react-icons/fi';
-import Breadcrumb from '../../components/common/breadcrumbPrimary';
-import ButtonPrimary from '../../components/common/buttons/ButtonPrimary';
-import Filters from '../../components/common/filters';
-import HeaderPrimary from '../../components/common/headerPrimary';
-import CreDetailCard from '../../components/cre-management/creDetailCard';
-import CrePerformanceCard from '../../components/cre-management/crePerformanceCard';
-import CrePerformanceMatrix from '../../components/cre-management/crePerformanceMatrix';
-import DealFilter from '../../components/dealClosure/dealFilter';
+import React from "react";
+import { Row, Col } from "react-bootstrap";
+import Breadcrumb from "../../components/common/breadcrumbPrimary";
+import Filters from "../../components/common/filters";
+import CreDetailCard from "../../components/cre-management/creDetailCard";
+import DealFilter from "../../components/dealClosure/dealFilter";
+import CrePerformanceCard from "../../components/cre-management/crePerformanceCard";
+import CrePerformanceMatrix from "../../components/cre-management/crePerformanceMatrix";
+import ButtonPrimary from "../../components/common/buttons/ButtonPrimary";
+import styles from "./style.module.scss";
+import HeaderPrimary from "~/components/common/headerPrimary";
+import { FiPlus } from "react-icons/fi";
+
 
 function CreManagement() {
   const cardData = [
     {
-      imageUrl: '/images/bob-Vishwas.png',
-      overDue: 'evolutionOver',
-      bikeStatus: 'Upload Content',
+      imageUrl: "/images/bob-Vishwas.png",
+      overDue: "evolutionOver",
+      bikeStatus: "Upload Content",
     },
     {
-      imageUrl: '/images/bob-Vishwas1.png',
-      overDue: 'evolutionOver',
-      bikeStatus: 'Upload Content',
+      imageUrl: "/images/bob-Vishwas1.png",
+      overDue: "evolutionOver",
+      bikeStatus: "Upload Content",
     },
     {
-      imageUrl: '/images/bob-Vishwas2.png',
-      overDue: 'evolutionOver',
-      bikeStatus: 'Upload Content',
+      imageUrl: "/images/bob-Vishwas2.png",
+      overDue: "evolutionOver",
+      bikeStatus: "Upload Content",
     },
     {
-      imageUrl: '/images/bob-Vishwas3.png',
-      overDue: 'evolutionOver',
-      bikeStatus: 'Upload Content',
+      imageUrl: "/images/bob-Vishwas3.png",
+      overDue: "evolutionOver",
+      bikeStatus: "Upload Content",
     },
   ];
   const performanceCardData = [
     {
-      cardBodyBg: 'bgGray18',
+      cardBodyBg: "bgGray18",
     },
     {
-      cardBodyBg: 'bgGray28',
+      cardBodyBg: "bgGray28",
     },
     {
-      cardBodyBg: 'bgblack40',
+      cardBodyBg: "bgblack40",
     },
     {
-      cardBodyBg: 'bgGray18',
+      cardBodyBg: "bgGray18",
     },
   ];
 
@@ -71,7 +74,7 @@ function CreManagement() {
         ))}
 
         <div>
-          {/* <h2 className={styles}>Cumulative Performance</h2> */}
+          <h2 className={styles.heading}>Cumulative Performance</h2>
           <Row>
             {performanceCardData.map((item) => (
               <Col xxl={3} lg={6} md={6}>
@@ -80,8 +83,9 @@ function CreManagement() {
             ))}
           </Row>
         </div>
-
-        <CrePerformanceMatrix creTitle="Cumulative CRE Performance Matrix" />
+        <Col xxl={12} lg={12} md={12}>
+          <CrePerformanceMatrix creTitle="Cumulative CRE Performance Matrix" />
+        </Col>
       </Row>
     </>
   );

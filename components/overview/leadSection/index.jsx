@@ -2,15 +2,15 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Link from 'next/link';
 import { AiOutlineDownload } from 'react-icons/ai';
-import PieBig from '../../common/pieBig';
-import PieSmall from '../../common/pieSmall';
+import PieBig from '../pieBig';
+import PieSmall from '../pieSmall';
 import styles from './style.module.scss';
 
 function LeadSection() {
   return (
-    <div className={styles.Leads}>
-      <div className={styles.LeadsTop}>
-        <PieSmall />
+    <div className={styles.leads}>
+      <div className={styles.leadsTop}>
+        <PieSmall withouticon />
         <div className={`${styles.leadTable}  dashboardTable`}>
           <Table striped variant="dark">
             <tbody>
@@ -69,7 +69,7 @@ function LeadSection() {
           </Table>
         </div>
       </div>
-      <div className={styles.LeadsMiddle}>
+      <div className={styles.leadsMiddle}>
         <div className={`${styles.leadMidTable} dashboardTable leadTable`}>
           <Table striped bordered variant="dark">
             <thead>
@@ -125,10 +125,10 @@ function LeadSection() {
           </Table>
         </div>
 
-        <PieSmall />
-        <PieSmall />
+        <PieSmall icon />
+        <PieSmall icon />
       </div>
-      <div className={styles.LeadsBottom}>
+      <div className={styles.leadsBottom}>
         <PieBig />
       </div>
     </div>

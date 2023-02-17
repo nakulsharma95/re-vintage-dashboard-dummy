@@ -29,7 +29,7 @@ function MotorcycleDetail({
         )}
         {bikeInfo && (
           <h2 className={styles.motorcycleName}>
-            {bikeName.bikeName}
+            {bikeName?.bikeName}
             <span> {bikeNumber}</span>
             <small>{chasisNumber}</small>
           </h2>
