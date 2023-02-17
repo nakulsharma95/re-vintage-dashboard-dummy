@@ -178,7 +178,7 @@ export default function Sidebar() {
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/dealer-management">
             <span className={styles.navIcon}>
               <FiUsers />
             </span>

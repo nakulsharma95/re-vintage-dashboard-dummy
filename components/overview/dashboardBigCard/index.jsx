@@ -18,12 +18,12 @@ const data = [
       calc: 'stringify',
     },
   ],
-  ['Copper', 100, '#F28823', null],
-  ['Silver', 90, '#F0CB2D', null],
-  ['Gold', 80, '#F5B82A', null],
-  ['Platinum', 70, '#403E3E', null],
-  ['Gold', 60, '#DA291C', null],
-  ['Platinum', 21.45, '#AAAAAA', null],
+  ['', 100, '#F28823', null],
+  ['', 90, '#F0CB2D', null],
+  ['', 80, '#F5B82A', null],
+  ['', 70, '#403E3E', null],
+  ['', 60, '#DA291C', null],
+  ['', 21.45, '#AAAAAA', null],
 ];
 
 const options = {
