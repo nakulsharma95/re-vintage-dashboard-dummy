@@ -22,17 +22,15 @@ function CompleteEvaluation() {
       <div className="mt-3">
         <DealFilter title="2 Search" />
       </div>
-      {completeData.map((item, index) => {
-        return (
-          <CompleteBikeDetail
-            data={item}
-            key={index}
-            isEvalBtnVisible
-            isCallerBtnVisible={false}
-            isEnquiryNumVisible={false}
-          />
-        );
-      })}
+      {completeData.map((item, index) => (
+        <CompleteBikeDetail
+          data={item}
+          key={index}
+          isEvalBtnVisible
+          isCallerBtnVisible={false}
+          isEnquiryNumVisible={false}
+        />
+      ))}
 
       <DetailPagination />
     </>

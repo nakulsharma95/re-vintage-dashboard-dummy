@@ -7,7 +7,7 @@ import SortTabs from '../../components/common/sortTabs';
 import EnquireBarChart from '../../components/non-re/enquireBarChart';
 import EnquirePieChart from '../../components/non-re/enquirePieChart';
 
-const NonRe = () => {
+function NonRe() {
   const nonReData = [
     {
       bikeName: '2020 Pulsar NS',
@@ -28,14 +28,14 @@ const NonRe = () => {
       <Filters title="Non-RE" filterInput export />
       <div className="bottom-white-border mt-3 mb-3" />
       <SortTabs selectAllCheck isSortTabBox />
-	  <Row className='mb-4'>
-		<Col md={6}>
-			<EnquirePieChart />
-		</Col>
-		<Col md={6}>
-			<EnquireBarChart />
-		</Col> 
-	  </Row>
+      <Row className="mb-4">
+        <Col md={6}>
+          <EnquirePieChart />
+        </Col>
+        <Col md={6}>
+          <EnquireBarChart />
+        </Col>
+      </Row>
       <Row>
         {nonReData.map((item, index) => (
           <Col md={3} key={index}>
@@ -45,6 +45,6 @@ const NonRe = () => {
       </Row>
     </>
   );
-};
+}
 
 export default NonRe;

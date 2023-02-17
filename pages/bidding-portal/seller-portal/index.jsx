@@ -70,7 +70,7 @@ export default function ClosedBids() {
       <Row className="mb-3">
         {activeBikeData.map((item) => (
           <Col md={3}>
-            <SellerPrimaryCard 
+            <SellerPrimaryCard
               ArrowButton
               bikeName={item.bikeName}
               bikeNumber={item.bikeNumber}

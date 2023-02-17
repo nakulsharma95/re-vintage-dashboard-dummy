@@ -5,8 +5,13 @@ export default function ButtonPrimary(props) {
   return (
     <Link
       href={props.buttonLink || '/'}
-      className={props.btnWhite ? styles.buttonWhite : styles.buttonPrimary}
+      className={`${styles.btnPrimary} ${
+        props.white ? styles.white : styles.primary
+      }`}
     >
+      {props.iconLeft && (
+        <div className={styles.iconLeft}>{props.iconLeft}</div>
+      )}
       {props.title}
     </Link>
   );

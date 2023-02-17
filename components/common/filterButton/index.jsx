@@ -5,7 +5,7 @@ import { BsChevronUp, BsSearch } from 'react-icons/bs';
 import ButtonPrimary from '../buttons/ButtonPrimary';
 import styles from './style.module.scss';
 
-function FilterDropdown() {
+function FilterButton() {
   return (
     <div className={`${styles.filterDropdownStyle}`}>
       <Dropdown>
@@ -94,4 +94,4 @@ function FilterDropdown() {
   );
 }
 
-export default FilterDropdown;
+export default FilterButton;

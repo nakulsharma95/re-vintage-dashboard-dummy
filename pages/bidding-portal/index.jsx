@@ -11,155 +11,155 @@ export default function BiddingPortal() {
   const upcomingBikeData = [
     {
       imageUrl: '/images/bikeImage.png',
-      name:'Classic 350',
-      number:'DL6TAL7314',
-      km:'48,523',
-      year:'2020',
-      location:'Mumbai, Maharashtra',
+      name: 'Classic 350',
+      number: 'DL6TAL7314',
+      km: '48,523',
+      year: '2020',
+      location: 'Mumbai, Maharashtra',
     },
     {
       imageUrl: '/images/bikeImage2.png',
-      name:'Classic 350',
+      name: 'Classic 350',
       bidPrice: '1,35,000',
-      number:'DL6TAL7215',
-      km:'48,523',
-      year:'2020',
-      location:'Janakpuri, Delhi',
+      number: 'DL6TAL7215',
+      km: '48,523',
+      year: '2020',
+      location: 'Janakpuri, Delhi',
     },
     {
       imageUrl: '/images/bikeImage3.png',
-      name:'Classic 350',
+      name: 'Classic 350',
       bidPrice: '1,45,000',
-      number:'DL6TAL7016',
-      km:'48,523',
-      year:'2020',
-      location:'Chandigarh',
+      number: 'DL6TAL7016',
+      km: '48,523',
+      year: '2020',
+      location: 'Chandigarh',
     },
     {
       imageUrl: '/images/bikeImage4.png',
-      name:'Classic 350',
+      name: 'Classic 350',
       bidPrice: '1,56,000',
-      number:'DL6TAL7119',
-      km:'48,523',
-      year:'2020',
-      location:'Noida, Uttar Pradesh',
+      number: 'DL6TAL7119',
+      km: '48,523',
+      year: '2020',
+      location: 'Noida, Uttar Pradesh',
     },
   ];
-  
+
   const activeBikeData = [
     {
       imageUrl: '/images/bikeImage.png',
-      name:'Classic 350',
-      number:'DL6TAL7314',
-      km:'48,523',
-      year:'2020',
-      location:'Mumbai, Maharashtra',
-      highestbidPrice:'1,25,000.00',
+      name: 'Classic 350',
+      number: 'DL6TAL7314',
+      km: '48,523',
+      year: '2020',
+      location: 'Mumbai, Maharashtra',
+      highestbidPrice: '1,25,000.00',
     },
     {
       imageUrl: '/images/bikeImage2.png',
-      name:'Classic 350',
-      number:'DL6TAL7215',
-      km:'48,523',
-      year:'2020',
-      location:'Janakpuri, Delhi',
-      highestbidPrice:'1,25,000.00',
+      name: 'Classic 350',
+      number: 'DL6TAL7215',
+      km: '48,523',
+      year: '2020',
+      location: 'Janakpuri, Delhi',
+      highestbidPrice: '1,25,000.00',
     },
     {
       imageUrl: '/images/bikeImage3.png',
-      name:'Classic 350',
-      number:'DL6TAL7016',
-      km:'48,523',
-      year:'2020',
-      location:'Chandigarh',
-      highestbidPrice:'1,25,000.00',
+      name: 'Classic 350',
+      number: 'DL6TAL7016',
+      km: '48,523',
+      year: '2020',
+      location: 'Chandigarh',
+      highestbidPrice: '1,25,000.00',
     },
     {
       imageUrl: '/images/bikeImage4.png',
-      name:'Classic 350',
-      number:'DL6TAL7119',
-      km:'48,523',
-      year:'2020',
-      location:'Noida, Uttar Pradesh',
-      highestbidPrice:'1,25,000.00',
+      name: 'Classic 350',
+      number: 'DL6TAL7119',
+      km: '48,523',
+      year: '2020',
+      location: 'Noida, Uttar Pradesh',
+      highestbidPrice: '1,25,000.00',
     },
   ];
 
   const closedBikeData = [
     {
       imageUrl: '/images/bikeImage.png',
-      name:'Classic 350',
-      number:'DL6TAL7314',
-      km:'48,523',
-      year:'2020',
-      location:'Mumbai, Maharashtra',
-      highestbidPrice:'1,25,000.00',
+      name: 'Classic 350',
+      number: 'DL6TAL7314',
+      km: '48,523',
+      year: '2020',
+      location: 'Mumbai, Maharashtra',
+      highestbidPrice: '1,25,000.00',
     },
     {
       imageUrl: '/images/bikeImage2.png',
-      name:'Classic 350',
-      number:'DL6TAL7215',
-      km:'48,523',
-      year:'2020',
-      location:'Janakpuri, Delhi',
-      highestbidPrice:'1,25,000.00',
+      name: 'Classic 350',
+      number: 'DL6TAL7215',
+      km: '48,523',
+      year: '2020',
+      location: 'Janakpuri, Delhi',
+      highestbidPrice: '1,25,000.00',
     },
     {
       imageUrl: '/images/bikeImage3.png',
-      name:'Classic 350',
-      number:'DL6TAL7016',
-      km:'48,523',
-      year:'2020',
-      location:'Chandigarh',
-      highestbidPrice:'1,25,000.00',
+      name: 'Classic 350',
+      number: 'DL6TAL7016',
+      km: '48,523',
+      year: '2020',
+      location: 'Chandigarh',
+      highestbidPrice: '1,25,000.00',
     },
     {
       imageUrl: '/images/bikeImage4.png',
-      name:'Classic 350',
-      number:'DL6TAL7119',
-      km:'48,523',
-      year:'2020',
-      location:'Noida, Uttar Pradesh',
-      highestbidPrice:'1,25,000.00',
+      name: 'Classic 350',
+      number: 'DL6TAL7119',
+      km: '48,523',
+      year: '2020',
+      location: 'Noida, Uttar Pradesh',
+      highestbidPrice: '1,25,000.00',
     },
   ];
 
   const sellerBikeData = [
     {
       imageUrl: '/images/bikeImage.png',
-      name:'Classic 350',
-      number:'DL6TAL7314',
-      km:'48,523',
-      year:'2020',
-      location:'Mumbai, Maharashtra',
-      highestbidPrice:'1,25,000.00',
+      name: 'Classic 350',
+      number: 'DL6TAL7314',
+      km: '48,523',
+      year: '2020',
+      location: 'Mumbai, Maharashtra',
+      highestbidPrice: '1,25,000.00',
     },
     {
       imageUrl: '/images/bikeImage2.png',
-      name:'Classic 350',
-      number:'DL6TAL7215',
-      km:'48,523',
-      year:'2020',
-      location:'Janakpuri, Delhi',
-      highestbidPrice:'1,25,000.00',
+      name: 'Classic 350',
+      number: 'DL6TAL7215',
+      km: '48,523',
+      year: '2020',
+      location: 'Janakpuri, Delhi',
+      highestbidPrice: '1,25,000.00',
     },
     {
       imageUrl: '/images/bikeImage3.png',
-      name:'Classic 350',
-      number:'DL6TAL7016',
-      km:'48,523',
-      year:'2020',
-      location:'Chandigarh',
-      highestbidPrice:'1,25,000.00',
+      name: 'Classic 350',
+      number: 'DL6TAL7016',
+      km: '48,523',
+      year: '2020',
+      location: 'Chandigarh',
+      highestbidPrice: '1,25,000.00',
     },
     {
       imageUrl: '/images/bikeImage4.png',
-      name:'Classic 350',
-      number:'DL6TAL7119',
-      km:'48,523',
-      year:'2020',
-      location:'Noida, Uttar Pradesh',
-      highestbidPrice:'1,25,000.00',
+      name: 'Classic 350',
+      number: 'DL6TAL7119',
+      km: '48,523',
+      year: '2020',
+      location: 'Noida, Uttar Pradesh',
+      highestbidPrice: '1,25,000.00',
     },
   ];
   return (
@@ -177,18 +177,18 @@ export default function BiddingPortal() {
           <BiddingOverview />
         </Col>
       </Row>
-      
+
       <ViewAll
         viewallLink="/bidding-portal/upcoming-bids"
         title="Upcoming Bids"
-        leadsTitle="(1507 Leads)" 
+        leadsTitle="(1507 Leads)"
       />
       <Row>
         {upcomingBikeData.map((item) => (
           <Col md={3}>
-            <BiddingCard 
-              baseprice 
-              arrowBtn 
+            <BiddingCard
+              baseprice
+              arrowBtn
               imageUrl={item.imageUrl}
               bikeName={item.name}
               bikeNumber={item.number}
@@ -199,19 +199,19 @@ export default function BiddingPortal() {
           </Col>
         ))}
       </Row>
-      
+
       <div className="bottom-white-border" />
-      <ViewAll 
-        viewallLink="/bidding-portal/active-bids" 
-        title="Active Bids" 
-        leadsTitle="(97 Leads)" 
+      <ViewAll
+        viewallLink="/bidding-portal/active-bids"
+        title="Active Bids"
+        leadsTitle="(97 Leads)"
       />
       <Row>
         {activeBikeData.map((item) => (
           <Col md={3}>
-            <BiddingCard 
-              highestBid 
-              redBtn 
+            <BiddingCard
+              highestBid
+              redBtn
               imageUrl={item.imageUrl}
               bikeName={item.name}
               bikeNumber={item.number}
@@ -224,23 +224,23 @@ export default function BiddingPortal() {
         ))}
       </Row>
       <div className="bottom-white-border" />
-      <ViewAll 
-        viewallLink="/bidding-portal/closed-bids" 
-        title="Closed Bids" 
+      <ViewAll
+        viewallLink="/bidding-portal/closed-bids"
+        title="Closed Bids"
         leadsTitle="(12 Leads)"
       />
       <Row>
         {closedBikeData.map((item) => (
           <Col md={3}>
-            <BiddingCard 
-              highestBid 
+            <BiddingCard
+              highestBid
               imageUrl={item.imageUrl}
               bikeName={item.name}
               bikeNumber={item.number}
               kmDrive={item.km}
               modelYear={item.year}
               location={item.location}
-              highestBidPrice={item.highestbidPrice} 
+              highestBidPrice={item.highestbidPrice}
             />
           </Col>
         ))}
@@ -251,19 +251,19 @@ export default function BiddingPortal() {
         title="Seller Portal"
         leadsTitle="(25 Leads)"
       />
-       <Row>
+      <Row>
         {sellerBikeData.map((item) => (
           <Col md={3}>
-            <BiddingCard 
-              highestBid 
-              arrowBtn 
+            <BiddingCard
+              highestBid
+              arrowBtn
               imageUrl={item.imageUrl}
               bikeName={item.name}
               bikeNumber={item.number}
               kmDrive={item.km}
               modelYear={item.year}
               location={item.location}
-              highestBidPrice={item.highestbidPrice} 
+              highestBidPrice={item.highestbidPrice}
             />
           </Col>
         ))}

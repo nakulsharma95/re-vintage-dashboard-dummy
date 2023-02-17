@@ -10,38 +10,38 @@ export default function UpcomingBids() {
   const upcomingBikeData = [
     {
       imageUrl: '/images/bikeImage.png',
-      name:'Classic 350',
-      number:'DL6TAL7314',
-      km:'48,523',
-      year:'2020',
-      location:'Mumbai, Maharashtra',
+      name: 'Classic 350',
+      number: 'DL6TAL7314',
+      km: '48,523',
+      year: '2020',
+      location: 'Mumbai, Maharashtra',
     },
     {
       imageUrl: '/images/bikeImage2.png',
-      name:'Classic 350',
+      name: 'Classic 350',
       bidPrice: '1,35,000',
-      number:'DL6TAL7215',
-      km:'48,523',
-      year:'2020',
-      location:'Janakpuri, Delhi',
+      number: 'DL6TAL7215',
+      km: '48,523',
+      year: '2020',
+      location: 'Janakpuri, Delhi',
     },
     {
       imageUrl: '/images/bikeImage3.png',
-      name:'Classic 350',
+      name: 'Classic 350',
       bidPrice: '1,45,000',
-      number:'DL6TAL7016',
-      km:'48,523',
-      year:'2020',
-      location:'Chandigarh',
+      number: 'DL6TAL7016',
+      km: '48,523',
+      year: '2020',
+      location: 'Chandigarh',
     },
     {
       imageUrl: '/images/bikeImage4.png',
-      name:'Classic 350',
+      name: 'Classic 350',
       bidPrice: '1,56,000',
-      number:'DL6TAL7119',
-      km:'48,523',
-      year:'2020',
-      location:'Noida, Uttar Pradesh',
+      number: 'DL6TAL7119',
+      km: '48,523',
+      year: '2020',
+      location: 'Noida, Uttar Pradesh',
     },
   ];
   return (
@@ -56,9 +56,9 @@ export default function UpcomingBids() {
       <Row className="mb-3">
         {upcomingBikeData.map((item) => (
           <Col md={3}>
-            <UpcomingBikeCard 
-              baseprice 
-              arrowBtn 
+            <UpcomingBikeCard
+              baseprice
+              arrowBtn
               imageUrl={item.imageUrl}
               bikeName={item.name}
               bikeNumber={item.number}

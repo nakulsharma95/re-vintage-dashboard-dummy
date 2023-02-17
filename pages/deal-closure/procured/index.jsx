@@ -32,20 +32,18 @@ function PaymentsPending() {
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <DealFilter title="8 Leads" />
       <Row>
-        {cardData.map((item, index) => {
-          return (
-            <Col md={3} key={index}>
-              <CloserBikeCard
-                data={item}
-                isHighestBid="Evolution Price"
-                isKmDriven
-                dealPrice
-                cardTag
-                location
-              />
-            </Col>
-          );
-        })}
+        {cardData.map((item, index) => (
+          <Col md={3} key={index}>
+            <CloserBikeCard
+              data={item}
+              isHighestBid="Evolution Price"
+              isKmDriven
+              dealPrice
+              cardTag
+              location
+            />
+          </Col>
+        ))}
       </Row>
     </>
   );

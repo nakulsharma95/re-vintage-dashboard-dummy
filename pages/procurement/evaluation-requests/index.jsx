@@ -24,9 +24,9 @@ function EvaluationRequest() {
       <Filters title="Evaluation Requests" export filterInput filterButton />
       <TabPrimary title1="Open" title2="Cancelled (12)" title3="Dropped (12)" />
       <ViewAllInnerTab />
-      {motorCycleDetail.map((item, index) => {
-        return <MotorcycleDetailCard key={index} data={item} />;
-      })}
+      {motorCycleDetail.map((item, index) => (
+        <MotorcycleDetailCard key={index} data={item} />
+      ))}
 
       <DetailPagination />
     </>

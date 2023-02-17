@@ -3,7 +3,7 @@ import PieChart from '../../charts/pieChart';
 
 import styles from './style.module.scss';
 
-function pieSmall(props) {
+function pieSmall() {
   return (
     <div className={styles.pieContainer}>
       <h5>Procured</h5>
