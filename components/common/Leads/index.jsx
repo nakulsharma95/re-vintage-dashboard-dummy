@@ -7,11 +7,11 @@ import { AiOutlineDownload} from 'react-icons/ai';
 
 import styles from './style.module.scss';
 
-function Leads() {
+function Leads(props) {
   return (
     <div className={styles.Leads}>
       <div className={styles.LeadsTop}>
-        <PieSmall />
+      <PieSmall  withouticon />
         <div className={`${styles.leadTable}  dashboardTable`} >
           <Table striped variant="dark">
             <tbody>
@@ -115,8 +115,8 @@ function Leads() {
         </Table>
         </div>
        
-        <PieSmall />
-        <PieSmall />
+        <PieSmall title="procured" withicon />
+        <PieSmall title="procured" withicon />
       </div>
       <div className={styles.LeadsBottom}>
         <PieBig />
