@@ -34,6 +34,13 @@ export default function Homepage() {
        />
       <DashboardBigCard />
       {/* <Filters filterInput filterButton title="Leads" /> */}
+      <HeaderPrimary
+        headerClass="mb-1"
+        title="Lead"
+      >
+        <SearchPrimary />
+        <FilterButton />
+      </HeaderPrimary>
       <TabPrimary title1="Procurement" title2="Inventory" title3="Retail" />
       <LeadSection />
       <NonReLeadSection />

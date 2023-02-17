@@ -15,6 +15,7 @@ function Breadcrumb(props) {
             <Link href="/" className={styles.breadcrumbsItem}>
               {props.title}
             </Link>
+            
             <Link href="/" className={styles.breadcrumbsItem}>
               {props.addmoretitle}
             </Link>

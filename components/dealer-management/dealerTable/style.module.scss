@@ -1,0 +1,21 @@
+.dealerTable{
+	Table{
+		a{
+			color: #FFFFFF;
+		}
+		thead tr th{
+			background-color: #282828;
+			color: #A7A7A7;
+		}
+		tbody tr td{
+			background-color: #0D0D0D;
+			color: #FFFFFF;
+
+			.tableCheckbox .form-check-input:checked {
+				background-color: red;
+				border-color: red;
+			}
+		}
+		
+	}
+}
