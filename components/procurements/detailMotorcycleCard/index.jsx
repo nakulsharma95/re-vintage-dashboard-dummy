@@ -1,5 +1,6 @@
 import { Table } from 'react-bootstrap';
 import styles from './style.module.scss';
+import { BiRupee } from 'react-icons/bi';
 import DetailDropCard from '../detailDropCard';
 
 export default function DetailMotorcycleCard(props) {
@@ -35,14 +36,14 @@ export default function DetailMotorcycleCard(props) {
             <thead>
               <tr>
                 <th className={styles.ownerdetailHeadTable}>
-                  Owner<p className={styles.ownerDescription}>2nd</p>
+                  Owner<p className={styles.ownerDescription}>{props.ownerNo}</p>
                 </th>
                 <th className={styles.ownerdetailHeadTable}>
-                  KM<p className={styles.ownerDescription}>35150</p>
+                  KM<p className={styles.ownerDescription}>{props.kmDrive}</p>
                 </th>
                 <th className={styles.ownerdetailHeadTable}>
                   Mileage
-                  <p className={styles.ownerDescription}>43.6 kmpl</p>
+                  <p className={styles.ownerDescription}>{props.mileage} kmpl</p>
                 </th>
               </tr>
             </thead>
@@ -51,15 +52,15 @@ export default function DetailMotorcycleCard(props) {
               <tr>
                 <th className={styles.ownerdetailHeadTable}>
                   Colour
-                  <p className={styles.ownerDescription}>Red, Chrome</p>
+                  <p className={styles.ownerDescription}>{props.bikeColor}</p>
                 </th>
                 <th className={styles.ownerdetailHeadTable}>
                   Location
-                  <p className={styles.ownerDescription}>Delhi</p>
+                  <p className={styles.ownerDescription}>{props.location}</p>
                 </th>
                 <th className={styles.ownerdetailHeadTable}>
                   Posting date
-                  <p className={styles.ownerDescription}>25/08/2022</p>
+                  <p className={styles.ownerDescription}>{props.postingDate}</p>
                 </th>
               </tr>
             </thead>
@@ -67,7 +68,7 @@ export default function DetailMotorcycleCard(props) {
 
           <div className={styles.Estimatedprice}>
             <span>Estimated Price</span>
-            <p className="mb-0">₹ 1,19,300 - ₹ 1,26,600 </p>
+            <p className="mb-0"><BiRupee /> {props.priceOne} - <BiRupee /> {props.priceTwo} </p>
           </div>
         </div>
         <div className={styles.evaluation}>
@@ -75,19 +76,19 @@ export default function DetailMotorcycleCard(props) {
 
           <div className="location eval mb-3">
             <p>Evaluation Location</p>
-            <h5>Neel Motors, Lajpat Nagar, Delhi</h5>
+            <h5>{props.evaluationLocation}</h5>
           </div>
           <div className="owner-name eval mb-3">
             <p>Owner Details</p>
-            <h5>Rishab Sharma</h5>
+            <h5>{props.ownerDetails}</h5>
           </div>
           <div className="conct eval mb-3">
             <p>Contact No.</p>
-            <h5>+91 98765 43219</h5>
+            <h5>{props.ownerContact}</h5>
           </div>
           <div className="date-&-time eval mb-3">
-            <p>Contact No.</p>
-            <h5>Thu, 19 Nov at 08:30 AM</h5>
+            <p>Evaluation Date & time</p>
+            <h5>{props.evaluationDateTime}</h5>
           </div>
         </div>
       </div>

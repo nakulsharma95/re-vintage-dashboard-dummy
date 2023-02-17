@@ -4,7 +4,9 @@ import BikeCard from '../../components/procurements/bikeCard';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import DetailCard from '../../components/procurements/detailCard';
 import ViewAll from '../../components/common/viewAllHeader';
-import Filters from '../../components/common/filters';
+import SearchPrimary from '../../components/common/searchPrimary';
+import FilterButton from '../../components/common/filterButton';
+import HeaderPrimary from '../../components/common/headerPrimary';
 
 function Procurement() {
   const cardData = [
@@ -52,7 +54,11 @@ function Procurement() {
   return (
     <div>
       <Breadcrumb title="Procurement" addmoretitle="Procurement" />
-      <Filters title="Procurement Leads" filterInput filterButton />
+      <HeaderPrimary headerClass="mb-2" title="Procurement Leads">
+        <SearchPrimary />
+        <FilterButton />
+      </HeaderPrimary>
+
       <div className="bottom-white-border" />
       <ViewAll title="Partial Leads" leadsTitle="(8 Leads)" />
       <Row>

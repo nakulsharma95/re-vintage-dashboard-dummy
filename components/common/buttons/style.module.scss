@@ -41,10 +41,9 @@
 	}
 }
 
-.buttonPrimary{
-	display: block;
-	width: 100%;
-	background-color: $theme-red-da;
+.btnPrimary{
+	display: flex;
+	align-items: center;
 	outline: none;
 	border: none;
 	border-radius: 0;
@@ -54,9 +53,35 @@
 	text-align: center;
 	position: relative;
 	transition: all 0.5s;
+	padding: 0 16px;
+	text-decoration: none;
 
+	.iconLeft {
+		font-size: 16px;
+		margin-right: 12px;
+	}
+
+	&.primary {
+		background-color: $theme-red-da;
+		color: white;
+
+		&:hover{
+			background-color: $theme-pink-da;
+		}
+	}
+
+	&.white {
+		background-color: $white;
+		border: 1px solid $white;
+		color: $gray-0D;
+		font-weight: 600;
+
+		
 	&:hover{
-		background-color: $theme-pink-da;
+		background-color: transparent;
+		border: 1px solid $white;
+		color: $white;
+	}
 	}
 }
 

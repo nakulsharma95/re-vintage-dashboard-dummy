@@ -2,13 +2,13 @@ import { Card, Col, Tabs, Tab, Table } from "react-bootstrap";
 import styles from "./style.module.scss";
 import { AiOutlineDownload } from "react-icons/ai";
 
-export default function CrePerformanceMatrix() {
+export default function CrePerformanceMatrix(props) {
   return (
     <>
       <Col xxl={12} lg={12} md={12}>
         <Card className={`${styles.crePerformanceMatrix} mt-3`}>
           <div className={styles.matrixHeading}>
-            <h2>Cumulative CRE Performance Matrix</h2>
+            <h2>{props.creTitle}</h2>
             <AiOutlineDownload className={styles.downloadIcon} size={26} />
           </div>
           <Tabs

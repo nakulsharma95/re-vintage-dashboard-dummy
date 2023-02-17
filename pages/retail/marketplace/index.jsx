@@ -2,9 +2,13 @@ import { Col, Row } from 'react-bootstrap';
 import BikeCardRadio from '../../../components/common/cardCheckbox';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DashboardCard from '../../../components/common/dashboardCard';
-import Filters from '../../../components/common/filters';
 import SortTabs from '../../../components/common/sortTabs';
 import TabPrimary from '../../../components/common/tabPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import FilterButton from '../../../components/common/filterButton';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import { RiShareBoxFill } from 'react-icons/ri';
 
 export default function MarketPlace() {
   const cardData = [
@@ -29,7 +33,16 @@ export default function MarketPlace() {
   return (
     <div>
       <Breadcrumb title="Retail" addmoretitle="Inventory" />
-      <Filters filterInput filterButton export title="MarketPlace" />
+      
+      <HeaderPrimary 
+        headerClass="mb-2" 
+        title="MarketPlace"
+      >
+        <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
+        <SearchPrimary />
+        <FilterButton />
+      </HeaderPrimary>
+
       <DashboardCard />
       <TabPrimary
         title1="Active"

@@ -509,3 +509,36 @@ h6 {
   background-color:#181818 !important;
   border-bottom-width: none;
 }
+
+// .dashboardTable thead, tbody, tfoot, tr, td, th {
+//   border: none;
+// }
+
+// Card Bg Colour
+
+.bgGray18 {
+  background-color: $gray-18;
+}
+
+.bgGray28 {
+ background-color: $gray-28;
+}
+
+.bgblack40 {
+  background-color: $black-40;
+}
+
+
+
+// Header Section style
+.header-section {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+
+  .header-button-style {
+  display: flex;
+  justify-content: end;
+  gap: 0 12px;
+  }
+}
