@@ -1,11 +1,13 @@
 import { Row, Col } from 'react-bootstrap';
 import BiddingOverview from '../../components/biddingPortal/overviewCard';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
-import Filters from '../../components/common/filters';
 import NumberCard from '../../components/biddingPortal/numberCard';
 import BiddingTimer from '../../components/biddingPortal/biddingTimer';
 import ViewAll from '../../components/common/viewAllHeader';
 import BiddingCard from '../../components/biddingPortal/biddingPrimaryCard';
+import SearchPrimary from '../../components/common/searchPrimary';
+import FilterButton from '../../components/common/filterButton';
+import HeaderPrimary from '../../components/common/headerPrimary';
 
 export default function BiddingPortal() {
   const upcomingBikeData = [
@@ -168,7 +170,12 @@ export default function BiddingPortal() {
         <Breadcrumb title="Bidding Portal" addmoretitle="Bidding Portal" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
-      <Filters filterInput filterButton title="Bidding Portal" />
+
+      <HeaderPrimary headerClass="mb-2" title="Bidding Portal">
+        <SearchPrimary />
+        <FilterButton />
+      </HeaderPrimary>
+
       <Row>
         <Col md={6}>
           <NumberCard />

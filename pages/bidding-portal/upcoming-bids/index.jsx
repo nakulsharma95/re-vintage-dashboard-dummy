@@ -1,10 +1,15 @@
 import { Row, Col } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
+import { FiSettings } from 'react-icons/fi';
 import UpcomingBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
 import Filters from '../../../components/common/filters';
 import TabPrimary from '../../../components/common/tabPrimary';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
 
 export default function UpcomingBids() {
   const upcomingBikeData = [
@@ -50,7 +55,15 @@ export default function UpcomingBids() {
         <Breadcrumb title="Bidding Portal" addmoretitle="Upcoming Bids" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
-      <Filters filterInput filterButton title="Upcoming Bids" export bidPrice />
+      <HeaderPrimary headerClass="mb-2" title="Completed Evaluation">
+        <OutlineButton title="Bid Price Logic" rightIcon={<FiSettings />} />
+        <OutlineButton
+          title="Scheduled Evaluation"
+          rightIcon={<RiShareBoxFill />}
+        />
+        <SearchPrimary />
+      </HeaderPrimary>
+
       <TabPrimary title1="Today" title2="Next Bidding (31 Dec)" />
       <div className="mb-3">25 Bids Available</div>
       <Row className="mb-3">
