@@ -1,10 +1,14 @@
 import { Row, Col } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
 import ClosedBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
 import Filters from '../../../components/common/filters';
 import TabPrimary from '../../../components/common/tabPrimary';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
 
 export default function ClosedBids() {
   const closedBikeData = [
@@ -55,7 +59,11 @@ export default function ClosedBids() {
         <Breadcrumb title="Bidding Portal" addmoretitle="Closed Bids" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
-      <Filters filterInput filterButton title="Closed Bids" export />
+      <HeaderPrimary headerClass="mb-2" title="Closed Bids">
+        <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
+        <SearchPrimary />
+      </HeaderPrimary>
+
       <TabPrimary title1="Bids" title2="No Bids" />
       <div className="mb-3">25 Bids Available</div>
       <Row className="mb-3">

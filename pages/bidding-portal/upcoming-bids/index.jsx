@@ -4,7 +4,6 @@ import { FiSettings } from 'react-icons/fi';
 import UpcomingBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
-import Filters from '../../../components/common/filters';
 import TabPrimary from '../../../components/common/tabPrimary';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
 import HeaderPrimary from '../../../components/common/headerPrimary';
