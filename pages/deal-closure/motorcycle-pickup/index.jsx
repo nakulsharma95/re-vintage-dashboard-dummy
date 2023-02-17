@@ -1,10 +1,14 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import Filters from '../../../components/common/filters';
 import TabPrimary from '../../../components/common/tabPrimary';
 import SortTabs from '../../../components/common/sortTabs';
 import DealCheckCard from '../../../components/dealClosure/dealCheckCard';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import FilterButton from '../../../components/common/filterButton';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import { RiShareBoxFill } from 'react-icons/ri';
 
 function MotorcyclePickup() {
   const cardData = [
@@ -32,7 +36,14 @@ function MotorcyclePickup() {
   return (
     <>
       <Breadcrumb title="Deal Closure" addmoretitle="Motorcycle Pickup" />
-      <Filters title="Motorcycle Pickup" export />
+      <HeaderPrimary 
+        headerClass="mb-2" 
+        title="Motorcycle Pickup"
+      >
+        <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
+        <SearchPrimary />
+        <FilterButton />
+      </HeaderPrimary>
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <SortTabs selectAllCheck />
       <Row>

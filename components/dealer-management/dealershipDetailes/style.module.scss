@@ -1,0 +1,61 @@
+.dealershipDetails{
+	button{
+		background-color: transparent;
+		border: none;
+		color: white;
+	}
+}
+.motors{
+	margin-top: 2rem;
+	.motors_head{
+		display: flex;
+		justify-content: space-between;
+		.motors_heading{
+			h3{
+				font-size: 24px;
+				// font-family: "Guardian Sans, Semibold";
+				span{
+					font-size: 12px;
+					color: #CBC6C6;
+				}
+			}
+			p{
+				font-size: 14px;
+				span{
+					font-size: 12px;
+					color: #CBC6C6;
+					margin-left: 0.5rem;
+				}
+			}
+		}
+		.motors_lists{
+			.motors_list{
+				display: flex;
+				border-right: 1px solid #282828;
+
+				img{
+					margin-right: 0.7rem;
+				margin-top: 1rem;				}
+			}
+		}
+	}
+
+	.motors_cards{
+		display: flex;
+		justify-content: space-between;
+		.motors_card{
+			background-color: #282828;
+			padding: 1.5rem;
+			width:42rem ;
+
+			h6{
+				font-size: 12px;
+				color: #A7A7A7;
+				margin-bottom: 0.5rem;
+			}
+			p{
+				font-size: 14px;
+			}
+		}
+	}
+}

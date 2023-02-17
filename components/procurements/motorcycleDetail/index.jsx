@@ -4,50 +4,38 @@ import styles from "./style.module.scss";
 import { BiDotsVerticalRounded, BiRupee } from "react-icons/bi";
 import Link from "next/link";
 
-function MotorcycleDetail({
-  bikeName,
-  headBikeDetail,
-  bikeInfo,
-  bikeNumber,
-  detailMenu,
-  chasisNumber,
-  detailLocation,
-  bikeDetailTitle,
-  bikePriceTitle,
-  footerPrice,
-  isEnquiryNumVisible,
-}) {
+function MotorcycleDetail(props) {
   return (
     <div
       className={`${styles.motorcycleDetail} ${styles.completeBorderRight} px-3`}
     >
       <div>
-        {headBikeDetail && (
+        {props.headBikeDetail && (
           <h4 className={styles.motorcycleTitle}>
-            Motorcycle details <span>- FB29FH9219HR1</span>
+            Motorcycle details <span>- {props.bikeCode}</span>
           </h4>
         )}
-        {bikeInfo && (
+        {props.bikeInfo && (
           <h2 className={styles.motorcycleName}>
-            {bikeName?.bikeName}
-            <span> {bikeNumber}</span>
-            <small>{chasisNumber}</small>
+            {props.bikeName}
+            <span> {props.bikeNumber}</span>
+            <small> {props.chasisNumber}</small>
           </h2>
         )}
-        {detailLocation && (
+        {props.detailLocation && (
           <div className={styles.bikeDetailLocation}>
-            <span>Loacation:</span> Mumbai, Maharashtra
+            <span>Loacation:</span> {props.bikeLocation}
           </div>
         )}
 
-        {detailMenu && (
+        {props.detailMenu && (
           <Button variant="" className={styles.bikeDetailInfoIcon}>
             <BiDotsVerticalRounded />
           </Button>
         )}
       </div>
-      {bikeDetailTitle && (
-        <Row>
+      {props.bikeDetailTitle && (
+        <Row className="mt-3">
           <Col className={styles.motorcycleSpecs}>43,384 km</Col>
           <Col className={styles.motorcycleSpecs}>1st Owner</Col>
           <Col className={styles.motorcycleSpecs}>350 CC</Col>
@@ -89,28 +77,28 @@ function MotorcycleDetail({
             <BiRupee />
           </div>
           <div>
-            <h3 className={styles.motorStylePrice}>Evaluation Price</h3>
-            <h2 className={styles.motorStylePriceTxt}>1,19,300</h2>
+            <h3 className={styles.motorStylePrice}>{props.priceTitle}</h3>
+            <h2 className={styles.motorStylePriceTxt}>{props.evaluationPrice}</h2>
           </div>
         </div>
-        {isEnquiryNumVisible && (
+        {props.isEnquiryNumVisible && (
           <div className="d-flex align-items-center">
             <div>
               <h3 className={styles.motorStylePrice}>MSD enquiry number</h3>
-              <h2 className={styles.motorStylePriceTxt}>219244982196</h2>
+              <h2 className={styles.motorStylePriceTxt}>{props.msdEnquery}</h2>
             </div>
           </div>
         )}
       </div>
 
-      {footerPrice && (
+      {props.footerPrice && (
         <div className={styles.hgBidCols}>
           <div className={styles.priceTag}>
-            <BiRupee /> 1,25,000.00
+            <BiRupee /> {props.evaluationFootPrice}
           </div>
           <div className={styles.motorsDetails}>
             <span>Current highest bid by</span>
-            <Link href="/">Neel Motors, Lajpat Nagar, Delhi</Link>
+            <Link href="/">{props.highestBidPrice}</Link>
           </div>
         </div>
       )}

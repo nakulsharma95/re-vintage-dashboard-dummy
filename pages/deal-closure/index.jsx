@@ -1,9 +1,11 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
-import Filters from '../../components/common/filters';
 import ViewAll from '../../components/common/viewAllHeader';
 import CloserBikeCard from '../../components/dealClosure/closerCard';
+import SearchPrimary from '../../components/common/searchPrimary';
+import FilterButton from '../../components/common/filterButton';
+import HeaderPrimary from '../../components/common/headerPrimary';
 
 function DealClosure() {
   const cardData = [
@@ -27,12 +29,15 @@ function DealClosure() {
   return (
     <>
       <Breadcrumb title="Deal Closure" />
-      <Filters
-        title="Deal Closure"
+      <HeaderPrimary 
+        headerClass="mb-2" 
+        title="Deal Closure" 
         subTitle="Please fill all the necessary details"
-        filterInput
-        filterButton
-      />
+      >
+        <SearchPrimary />
+        <FilterButton />
+      </HeaderPrimary>
+      
       <div className="bottom-white-border" />
       <Row>
         <ViewAll title="Under Negotiation" />

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Row, Col, Card } from 'react-bootstrap/';
 import Button from 'react-bootstrap/Button';
 import { FaRegCalendar, FaPlus } from 'react-icons/fa';
+import { BiRupee } from 'react-icons/bi';
 import CancelModal from '../../modals/cancelModal';
 import RescheduleModal from '../../modals/rescheduleModal';
 import SelectRescheduleDate from '../../modals/selectRescheduleDate';
@@ -30,18 +31,18 @@ function EvaluationRequestDetailCard(props) {
         <Card.Header className={`${styles.bikeDetailCardHeader} px-0`}>
           <div className="d-flex align-items-center">
             <h4 className={styles.bikeName}>
-              {data.bikeName} <span>- DL 6T AL 7314</span>
-              <span className={styles.bikeCode}>- FB29FH9219HR1</span>
-              {data.requestTag && (
+              {props.bikeName} <span>- {props.bikeNumber}</span>
+              <span className={styles.bikeCode}>- {props.bikeCode}</span>
+              {props.requestTag && (
                 <p className={styles.bikeRequest}>
-                  Request by:<span>{data.requestTag}</span>
+                  Request by: <span>{props.requestTag}</span>
                 </p>
               )}
             </h4>
           </div>
           <div className="d-flex align-items-end">
             <p className={styles.priceTag}>Estimate Price</p>
-            <h3 className={styles.priceText}>₹ 1,19,300 - ₹ 1,26,600</h3>
+            <h3 className={styles.priceText}><BiRupee /> {props.priceOne} - <BiRupee /> {props.priceTwo}</h3>
           </div>
         </Card.Header>
         <Card.Body className={`${styles.bikeCardBody} px-0`}>
@@ -51,32 +52,32 @@ function EvaluationRequestDetailCard(props) {
               <Row className="mb-3">
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>Owner</h6>
-                  <p className={styles.bikeCardBodyText}>2nd</p>
+                  <p className={styles.bikeCardBodyText}>{props.owner}</p>
                 </Col>
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>KM</h6>
-                  <p className={styles.bikeCardBodyText}>35,150</p>
+                  <p className={styles.bikeCardBodyText}>{props.kmDrive}</p>
                 </Col>
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>Mileage</h6>
-                  <p className={styles.bikeCardBodyText}>43.6 kmpl</p>
+                  <p className={styles.bikeCardBodyText}>{props.mileage} kmpl</p>
                 </Col>
               </Row>
               <Row>
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>Colour</h6>
                   <p className={`${styles.bikeCardBodyText} mb-0`}>
-                    Red, Chrome
+                    {props.bikeColor}
                   </p>
                 </Col>
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>Location</h6>
-                  <p className={`${styles.bikeCardBodyText} mb-0`}>Delhi</p>
+                  <p className={`${styles.bikeCardBodyText} mb-0`}>{props.location}</p>
                 </Col>
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>Posting date</h6>
                   <p className={`${styles.bikeCardBodyText} mb-0`}>
-                    25/08/2022
+                    {props.postedDate}
                   </p>
                 </Col>
               </Row>
@@ -86,20 +87,20 @@ function EvaluationRequestDetailCard(props) {
               <Row className="mb-3">
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>
-                    +91 98765 43219
+                    Name
                   </h6>
-                  <p className={styles.bikeCardBodyText}>Neel Motors</p>
+                  <p className={styles.bikeCardBodyText}>{props.supplierName}</p>
                 </Col>
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>Contact No.</h6>
-                  <p className={styles.bikeCardBodyText}>+91 98765 43219</p>
+                  <p className={styles.bikeCardBodyText}>{props.supplierContact}</p>
                 </Col>
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>
                     Evaluation Date & time
                   </h6>
                   <p className={styles.bikeCardBodyText}>
-                    Thu, 19 Nov at 08:30AM
+                    {props.evaluationDateTime}
                   </p>
                 </Col>
               </Row>
@@ -109,7 +110,7 @@ function EvaluationRequestDetailCard(props) {
                     Evaluation Location
                   </h6>
                   <p className={`${styles.bikeCardBodyText} mb-0`}>
-                    No F 26, 4, Pocket D, Okhla Phase II, New Delhi, 110020
+                    {props.evaluationLocation}
                   </p>
                 </Col>
               </Row>
@@ -119,13 +120,13 @@ function EvaluationRequestDetailCard(props) {
         <Card.Footer className={`${styles.bikeCardFooter} px-0`}>
           <div className={styles.statusBox}>
             <p className={styles.statusBoxText}>
-              SAMIL Status: <span>Pending</span>
+              SAMIL Status: <span>{props.samilStatus}</span>
             </p>
             <p className={styles.statusBoxText}>
-              Technical Response: <span>Pending</span>
+              Technical Response: <span>{props.technicalResponse}</span>
             </p>
             <p className={styles.statusBoxText}>
-              Reschedule: <span>none</span>
+              Reschedule: <span>{props.reschedule}</span>
             </p>
           </div>
           <div className={styles.statusBtnBox}>

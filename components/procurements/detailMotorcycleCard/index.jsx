@@ -1,8 +1,9 @@
 import { Table } from 'react-bootstrap';
 import styles from './style.module.scss';
+import { BiRupee } from 'react-icons/bi';
 import DetailDropCard from '../detailDropCard';
 
-export default function DetailMotorcycleCard() {
+export default function DetailMotorcycleCard(props) {
   return (
     <div className={styles.vehicleCardContainer}>
       <div className={styles.vehicleCard}>
@@ -10,40 +11,39 @@ export default function DetailMotorcycleCard() {
           <h2 className={`${styles.vehicleDetailStatus} mb-3 mb-0`}>
             Motorcycle details
             <span className={`${styles.status} ms-4 mb-0`}>Status:</span>
-            <span className={`${styles.overdue} ms-2 mb-0`}>Overdue</span>
+            <span className={`${styles.overdue} ms-2 mb-0`}>{props.status}</span>
           </h2>
 
           <h3 className={`${styles.vehicleDetailNumber} mb-3 mb-0`}>
-            2015 Classic 350{' '}
+            {props.bikeName}
             <span className={`${styles.vehicleNumber} ms-2`}>
-              - DL 6T AL 7314
+              - {props.bikeNumber}
             </span>
-            <span className={`${styles.vehicleId} ms-1`}>- F293RB29RF82</span>
+            <span className={`${styles.vehicleId} ms-1`}>- {props.bikeCode}</span>
           </h3>
 
           <h4 className={`${styles.vehicleRideDetails} mb-3 mb-0`}>
             <span className={`${styles.vehicleKm} ${styles.DividerRight}`}>
-              {' '}
-              43,384 km{' '}
+              {props.kmDrive} km
             </span>
             <span className={`${styles.vehicleOwner} ${styles.DividerRight}`}>
-              1st Owner
+              {props.owner}
             </span>
-            <span className={`${styles.vehicleCc}`}>350 CC</span>
+            <span className={`${styles.vehicleCc}`}>{props.bikeCC} CC</span>
           </h4>
 
           <Table className={`${styles.ownerBikeDetail}`} responsive="sm">
             <thead>
               <tr>
                 <th className={styles.ownerdetailHeadTable}>
-                  Owner<p className={styles.ownerDescription}>2nd</p>
+                  Owner<p className={styles.ownerDescription}>{props.ownerNo}</p>
                 </th>
                 <th className={styles.ownerdetailHeadTable}>
-                  KM<p className={styles.ownerDescription}>35150</p>
+                  KM<p className={styles.ownerDescription}>{props.kmDrive}</p>
                 </th>
                 <th className={styles.ownerdetailHeadTable}>
                   Mileage
-                  <p className={styles.ownerDescription}>43.6 kmpl</p>
+                  <p className={styles.ownerDescription}>{props.mileage} kmpl</p>
                 </th>
               </tr>
             </thead>
@@ -52,15 +52,15 @@ export default function DetailMotorcycleCard() {
               <tr>
                 <th className={styles.ownerdetailHeadTable}>
                   Colour
-                  <p className={styles.ownerDescription}>Red, Chrome</p>
+                  <p className={styles.ownerDescription}>{props.bikeColor}</p>
                 </th>
                 <th className={styles.ownerdetailHeadTable}>
                   Location
-                  <p className={styles.ownerDescription}>Delhi</p>
+                  <p className={styles.ownerDescription}>{props.location}</p>
                 </th>
                 <th className={styles.ownerdetailHeadTable}>
                   Posting date
-                  <p className={styles.ownerDescription}>25/08/2022</p>
+                  <p className={styles.ownerDescription}>{props.postingDate}</p>
                 </th>
               </tr>
             </thead>
@@ -68,7 +68,7 @@ export default function DetailMotorcycleCard() {
 
           <div className={styles.Estimatedprice}>
             <span>Estimated Price</span>
-            <p className="mb-0">₹ 1,19,300 - ₹ 1,26,600 </p>
+            <p className="mb-0"><BiRupee /> {props.priceOne} - <BiRupee /> {props.priceTwo} </p>
           </div>
         </div>
         <div className={styles.evaluation}>
@@ -76,19 +76,19 @@ export default function DetailMotorcycleCard() {
 
           <div className="location eval mb-3">
             <p>Evaluation Location</p>
-            <h5>Neel Motors, Lajpat Nagar, Delhi</h5>
+            <h5>{props.evaluationLocation}</h5>
           </div>
           <div className="owner-name eval mb-3">
             <p>Owner Details</p>
-            <h5>Rishab Sharma</h5>
+            <h5>{props.ownerDetails}</h5>
           </div>
           <div className="conct eval mb-3">
             <p>Contact No.</p>
-            <h5>+91 98765 43219</h5>
+            <h5>{props.ownerContact}</h5>
           </div>
           <div className="date-&-time eval mb-3">
-            <p>Contact No.</p>
-            <h5>Thu, 19 Nov at 08:30 AM</h5>
+            <p>Evaluation Date & time</p>
+            <h5>{props.evaluationDateTime}</h5>
           </div>
         </div>
       </div>
