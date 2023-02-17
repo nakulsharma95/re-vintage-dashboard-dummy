@@ -29,7 +29,7 @@ export default function Retail() {
   return (
     <div>
       <Breadcrumb title="Retail" addmoretitle="Inventory" />
-      <Filters title="Inventory" />
+      <Filters filterInput filterButton export title="Inventory" />
       <DashboardCard />
       <TabPrimary
         title1="Content Approval Pending (12)"

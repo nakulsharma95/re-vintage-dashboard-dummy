@@ -40,7 +40,7 @@ function Procurement() {
   return (
     <div>
       <Breadcrumb title="Procurement" addmoretitle="Procurement" />
-      <Filters title="Procurement Leads"filterInput filterButton />
+      <Filters title="Procurement Leads" filterInput filterButton />
       <div className="bottom-white-border" />
       <ViewAll title="Partial Leads" leadsTitle="(8 Leads)" />
       <Row>
@@ -52,29 +52,23 @@ function Procurement() {
       </Row>
       <Row>
         <ViewAll title="Evaluation Requests" leadsTitle="(8 Leads)" />
-        {cardData2.map((item, index) => {
-          return (
-            <Col md={3} key={index}>
-              <BikeCard data={item} contactBtn isEvalTag />
-            </Col>
-          );
-        })}
+        {cardData2.map((item) => (
+          <Col md={3}>
+            <BikeCard data={item} contactBtn isEvalTag />
+          </Col>
+        ))}
         <ViewAll title="Scheduled Evaluation" leadsTitle="(32 Leads)" />
-        {cardData2.map((item, index) => {
-          return (
-            <Col md={3} key={index}>
-              <BikeCard data={item} viewDetail />
-            </Col>
-          );
-        })}
+        {cardData2.map((item) => (
+          <Col md={3}>
+            <BikeCard data={item} viewDetail />
+          </Col>
+        ))}
         <ViewAll title="Completed Evaluation" leadsTitle="(32 Leads)" />
-        {cardData2.map((item, index) => {
-          return (
-            <Col md={3} key={index}>
-              <BikeCard data={item} completeEval />
-            </Col>
-          );
-        })}
+        {cardData2.map((item) => (
+          <Col md={3}>
+            <BikeCard data={item} completeEval />
+          </Col>
+        ))}
       </Row>
     </div>
   );

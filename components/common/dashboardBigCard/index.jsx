@@ -1,6 +1,5 @@
-import React from 'react';
-import { Card, Col, Row, ProgressBar, Table } from 'react-bootstrap';
-import { AiOutlineDownload, AiFillStar } from 'react-icons/ai';
+import { Card, Col, Row, Table } from 'react-bootstrap';
+import { AiFillStar, AiOutlineDownload } from 'react-icons/ai';
 import TabDefault from '../tabDefault';
 import TabPrimary from '../tabPrimary';
 
@@ -13,17 +12,9 @@ function dashboardBigCard() {
         <Card className={styles.card}>
           <div className={styles.cardHead}>
             <h4>Motorcycle Sales</h4>
-
             <AiOutlineDownload className={styles.cardIcon} />
           </div>
-          <div className={`${styles.cardProgress} overviewProgress`}>
-            <ProgressBar className="mt-3 my-2 bar1" now={100} />
-            <ProgressBar className="my-2 bar2" variant="info" now={70} />
-            <ProgressBar className="my-2 bar3" variant="warning" now={50} />
-            <ProgressBar className="my-2 bar4" variant="danger" now={40} />
-            <ProgressBar className="my-2 bar5" variant="primary" now={30} />
-            <ProgressBar className="my-2 bar6" variant="secondary" now={10} />
-          </div>
+          <div className={`${styles.cardProgress} overviewProgress`} />
           <hr />
           <Row>
             <Col className="my-2" xxl={6} lg={6} md={6}>
@@ -65,7 +56,7 @@ function dashboardBigCard() {
 
           <div className={styles.cardBody}>
             <div className="dashboardTable">
-              <Table striped  variant="dark">
+              <Table striped variant="dark">
                 <tbody>
                   <tr>
                     <td>Neel Motors</td>

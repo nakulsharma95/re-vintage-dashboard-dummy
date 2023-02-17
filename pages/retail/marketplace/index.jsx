@@ -29,7 +29,7 @@ export default function MarketPlace() {
   return (
     <div>
       <Breadcrumb title="Retail" addmoretitle="Inventory" />
-      <Filters title="MarketPlace" />
+      <Filters filterInput filterButton export title="MarketPlace" />
       <DashboardCard />
       <TabPrimary
         title1="Active"

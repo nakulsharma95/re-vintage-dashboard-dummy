@@ -1,40 +1,93 @@
 @import "../../../styles/variables/colors";
 @import "../../../styles/variables//mixins";
 
-.crePerformanceMatrix{
-	background-color: #282828;
-	padding: 15px 15px 15px 15px;
+.crePerformanceMatrix {
+  background-color: #282828;
+  padding: 15px 15px 15px 15px;
 
+  .matrixHeading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 
-	.MatrixHeading{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		justify-content: space-between;
-	
-		h2{
-			font-size: 16px;
-	
-		}
-		.downloadIcon{
-			cursor: pointer;
-		}
-		
-	}
-	.tabCre{
-		 li{
-			border: 1px solid $gray-70;
-			button{
-				border-radius: 0;
-				color: $gray-a7;
-				font-size: 12px;
-				margin-bottom: 0 !important;
-				font-weight: 600;
+    h2 {
+      font-size: 16px;
+    }
+    .downloadIcon {
+      cursor: pointer;
+    }
+  }
+  .tabCre {
+    li {
+      border: 1px solid $gray-70;
+      button {
+        border-radius: 0;
+        color: $gray-a7;
+        font-size: 12px;
+        margin-bottom: 0 !important;
+        font-weight: 600;
+      }
+    }
+  }
+}
+.partialLead{
+  position: relative;
+  .leadTransform {
+    background-color: $gray-28;
+    border: 1px solid $gray-0D;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -84px;
+    color: $gray-BF;
+    top: 190px;
+    width: 213px;
+    height: 45px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.tableBase {
+  color: $white;
+  text-align: center;
+  background-color: $gray-28;
 
-				
-					
-				
-			}
-		 }
-	}
+  .matixTable {
+    background-color: $gray-18;
+  }
+  .scoreAchieved {
+    color: $theme-yellow-E8;
+    font-weight: 600;
+  }
+  .textActivity {
+    text-align: left;
+  }
+  .percentSpan {
+    color: $gray-BF;
+  }
+
+  table {
+    border: 1px solid $gray-0D;
+  }
+
+  .tablePl {
+    padding-left: 50px;
+  }
+
+  th {
+    color: $gray-BF;
+    vertical-align: middle;
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid $gray-0D;
+  }
+  td {
+    color: $gray-BF;
+    vertical-align: middle;
+    font-size: 12px;
+    padding: 15px;
+    border: 1px solid $gray-0D;
+  }
 }
