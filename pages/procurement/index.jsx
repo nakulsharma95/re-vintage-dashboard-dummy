@@ -10,15 +10,27 @@ function Procurement() {
   const cardData = [
     {
       ownerName: 'Rishab Sharma',
-      detailNo: '123456',
+      contact:'+91 9876543219',
+      email:'john#gmail.com',
+      pinCode:'110014',
+      prmSource:'MIY',
+      secSource:'Google',
     },
     {
       ownerName: 'Rishab kumar',
-      detailNo: '123456',
+      contact:'+91 9876543219',
+      email:'john#gmail.com',
+      pinCode:'110014',
+      prmSource:'MIY',
+      secSource:'Google',
     },
     {
       ownerName: 'Rishab Sharma',
-      detailNo: '123456',
+      contact:'+91 9876543219',
+      email:'john#gmail.com',
+      pinCode:'110014',
+      prmSource:'MIY',
+      secSource:'Google',
     },
   ];
   const cardData2 = [
@@ -46,7 +58,14 @@ function Procurement() {
       <Row>
         {cardData.map((item) => (
           <Col xl={4} md={6}>
-            <DetailCard detailNumber={item.detailNo} />
+            <DetailCard
+              ownerName={item.ownerName}
+              emailId={item.email}
+              pinCode={item.pinCode}
+              prmSource={item.prmSource}
+              secSource={item.secSource}
+              contactNo={item.contact}
+            />
           </Col>
         ))}
       </Row>

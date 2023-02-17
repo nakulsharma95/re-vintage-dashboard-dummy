@@ -2,7 +2,7 @@ import { Table } from 'react-bootstrap';
 import styles from './style.module.scss';
 import DetailDropCard from '../detailDropCard';
 
-export default function DetailMotorcycleCard() {
+export default function DetailMotorcycleCard(props) {
   return (
     <div className={styles.vehicleCardContainer}>
       <div className={styles.vehicleCard}>
@@ -10,26 +10,25 @@ export default function DetailMotorcycleCard() {
           <h2 className={`${styles.vehicleDetailStatus} mb-3 mb-0`}>
             Motorcycle details
             <span className={`${styles.status} ms-4 mb-0`}>Status:</span>
-            <span className={`${styles.overdue} ms-2 mb-0`}>Overdue</span>
+            <span className={`${styles.overdue} ms-2 mb-0`}>{props.status}</span>
           </h2>
 
           <h3 className={`${styles.vehicleDetailNumber} mb-3 mb-0`}>
-            2015 Classic 350{' '}
+            {props.bikeName}
             <span className={`${styles.vehicleNumber} ms-2`}>
-              - DL 6T AL 7314
+              - {props.bikeNumber}
             </span>
-            <span className={`${styles.vehicleId} ms-1`}>- F293RB29RF82</span>
+            <span className={`${styles.vehicleId} ms-1`}>- {props.bikeCode}</span>
           </h3>
 
           <h4 className={`${styles.vehicleRideDetails} mb-3 mb-0`}>
             <span className={`${styles.vehicleKm} ${styles.DividerRight}`}>
-              {' '}
-              43,384 km{' '}
+              {props.kmDrive} km
             </span>
             <span className={`${styles.vehicleOwner} ${styles.DividerRight}`}>
-              1st Owner
+              {props.owner}
             </span>
-            <span className={`${styles.vehicleCc}`}>350 CC</span>
+            <span className={`${styles.vehicleCc}`}>{props.bikeCC} CC</span>
           </h4>
 
           <Table className={`${styles.ownerBikeDetail}`} responsive="sm">

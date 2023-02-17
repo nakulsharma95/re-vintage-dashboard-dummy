@@ -13,7 +13,7 @@ export default function DetailCard(props) {
         >
           <h2 className="text-white mb-0">
             Details
-            <span className="text-white-50">-{props.detailNumber}</span>
+            <span className="text-white-50"> {props.detailNumber}</span>
           </h2>
           <div
             className={`${styles.detailDrop} ${styles.detailsDivide} border-0 shadow-none text-white  gap-1 }`}
@@ -32,7 +32,7 @@ export default function DetailCard(props) {
             </div>
             <div className={`${styles.detailContact}`}>
               <span className="text-white-50">Contact No.</span>
-              <p className="mb-0 text-white ">+91 9876543219</p>
+              <p className="mb-0 text-white ">{props.contactNo}</p>
             </div>
           </div>
           <div
@@ -40,11 +40,11 @@ export default function DetailCard(props) {
           >
             <div className={`${styles.detailEmail}`}>
               <span className="text-white-50">Email</span>
-              <p className="mb-0 text-white ">john@gmail.com</p>
+              <p className="mb-0 text-white ">{props.emailId}</p>
             </div>
             <div className={`${styles.detailPincode}`}>
               <span className="text-white-50">Pincode</span>
-              <p className="mb-0 text-white ">110014</p>
+              <p className="mb-0 text-white ">{props.pinCode}</p>
             </div>
           </div>
 
@@ -61,10 +61,10 @@ export default function DetailCard(props) {
         className={`${styles.detailCardFooter} ${styles.detailsDivide}  card-footer bg-dark`}
       >
         <p className="text-white-50 mb-0">
-          Prm source: <span className="text-white">MIY</span>
+          Prm source: <span className="text-white">{props.prmSource}</span>
         </p>
         <p className="text-white-50 mb-0">
-          Sec source: <span className="text-white">Google</span>
+          Sec source: <span className="text-white">{props.secSource}</span>
         </p>
       </div>
     </Card>

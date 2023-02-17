@@ -10,13 +10,31 @@ import styles from "./style.module.scss"
 export default function PartialLeads() {
   const cardData = [
     {
-      details: '- FB29FH9219HR1',
+      ownerName: 'Rishab Sharma',
+      contact:'+91 9876543219',
+      email:'john#gmail.com',
+      pinCode:'110014',
+      prmSource:'MIY',
+      secSource:'Google',
+      detailNo:'- FB29FH9219HR1',
     },
     {
-      details: '- FB29FH9219HR1',
+      ownerName: 'Rishab kumar',
+      contact:'+91 9876543219',
+      email:'john#gmail.com',
+      pinCode:'110014',
+      prmSource:'MIY',
+      secSource:'Google',
+      detailNo:'- FB29FH9219HR1',
     },
     {
-      details: '- FB29FH9219HR1',
+      ownerName: 'Rishab Sharma',
+      contact:'+91 9876543219',
+      email:'john#gmail.com',
+      pinCode:'110014',
+      prmSource:'MIY',
+      secSource:'Google',
+      detailNo:'- FB29FH9219HR1',
     },
   ];
   return (
@@ -40,7 +58,15 @@ export default function PartialLeads() {
         {cardData.map((item, index) => {
           return (
             <Col md={4} key={index}>
-              <DetailCard data={item} detailCardBtmTxt="" />
+              <DetailCard
+                detailNumber={item.detailNo}
+                ownerName={item.ownerName}
+                emailId={item.email}
+                pinCode={item.pinCode}
+                prmSource={item.prmSource}
+                secSource={item.secSource}
+                contactNo={item.contact} 
+              />
             </Col>
           );
         })}

@@ -34,7 +34,7 @@
       .bikeRequest{
         display: inline;
         margin-left: 1rem;
-        padding: 0.2rem 0.8rem;
+        padding: 0.4rem 0.8rem;
         color: $gray-cb;
         font-size: 10px;
         font-weight: 500;
@@ -57,6 +57,11 @@
       font-size: 18px;
       font-weight: 500;
       margin-bottom: 0px;
+      svg{
+        position: relative;
+        bottom: 1px;
+        left: 3px;
+      }
     }
   }
   .bikeCardBody {
@@ -105,6 +110,9 @@
           background-color: #da291c;
           border-radius: 50%;
           transform: translateY(-50%);
+        }
+        span{
+          color: $white;
         }
       }
     }
