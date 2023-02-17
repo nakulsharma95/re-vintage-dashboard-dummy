@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Dropdown, Form } from 'react-bootstrap';
 import { CiFilter } from 'react-icons/ci';
 import { BsChevronUp, BsSearch } from 'react-icons/bs';
-import ButtonPrimary from '../../buttons/ButtonPrimary';
+import ButtonPrimary from '../buttons/ButtonPrimary';
 import styles from './style.module.scss';
 
 function FilterDropdown() {

@@ -5,7 +5,12 @@ import Filters from "../../components/common/filters";
 import CreDetailCard from "../../components/cre-management/creDetailCard";
 import DealFilter from "../../components/dealClosure/dealFilter";
 import CrePerformanceCard from "../../components/cre-management/crePerformanceCard";
-import CrePerformanceMatrix from "~/components/cre-management/crePerformanceMatrix";
+import CrePerformanceMatrix from "../../components/cre-management/crePerformanceMatrix";
+import ButtonPrimary from "../../components/common/buttons/ButtonPrimary";
+import styles from "./style.module.scss";
+import HeaderPrimary from "~/components/common/headerPrimary";
+import { FiPlus } from "react-icons/fi";
+
 
 function CreManagement() {
   const cardData = [
@@ -48,32 +53,39 @@ function CreManagement() {
   return (
     <>
       <Breadcrumb title="CRE Management" addmoretitle="CRE Management" />
-      <Filters
-        filterInput
-        title="CRE Management"
-        subTitle="CRE Management module"
-      />
+
+      <HeaderPrimary title="CRE Management" subTitle="CRE Management module">
+        <Filters filterInput />
+        <ButtonPrimary
+          buttonLink="cre-management/add-cre"
+          iconLeft={<FiPlus />}
+          title="Add cre"
+          white
+        />
+      </HeaderPrimary>
+
       <div className="bottom-white-border mt-3 mb-3" />
       <DealFilter title="Available CRE(s)" droptitle="Top Performer" isViewBy />
       <Row>
-        {cardData.map((item, index) => (
-          <Col xxl={3} xl={4} lg={6} key={index}>
+        {cardData.map((item) => (
+          <Col xxl={3} xl={4} lg={6}>
             <CreDetailCard creDetailData={item} />
           </Col>
         ))}
 
         <div>
-          {/* <h2 className={styles}>Cumulative Performance</h2> */}
+          <h2 className={styles.heading}>Cumulative Performance</h2>
           <Row>
-            {performanceCardData.map((item, index) => (
+            {performanceCardData.map((item) => (
               <Col xxl={3} lg={6} md={6}>
                 <CrePerformanceCard cardBodyStyle={item.cardBodyBg} />
               </Col>
             ))}
           </Row>
         </div>
-
-        <CrePerformanceMatrix creTitle="Cumulative CRE Performance Matrix" />
+        <Col xxl={12} lg={12} md={12}>
+          <CrePerformanceMatrix creTitle="Cumulative CRE Performance Matrix" />
+        </Col>
       </Row>
     </>
   );

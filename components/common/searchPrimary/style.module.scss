@@ -1,0 +1,40 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.searchPrimary {
+.formGroup{
+	position: relative;
+	
+	input{
+		min-width: 340px;
+		font-size: 12px;
+		min-height: 32px;
+		font-weight: 600;
+		color: $gray-a7;
+		padding-right: 2.5rem;
+		background: transparent;
+		border-radius: 0;
+		border: 1px solid $gray-70;
+		&::placeholder{
+			color: $gray-a7;
+		}
+		&:focus::placeholder{
+			opacity: 0;
+		}
+
+		&:focus{
+			box-shadow: none;
+		}
+	}
+	.inputSearch{
+		position: absolute;
+		top: 52%;
+		right: 4%;
+		color: $gray-cb;
+		font-weight: 600;
+		font-size: 16px;
+		transform: translateY(-50%);
+		cursor: pointer;
+	}
+}
+}

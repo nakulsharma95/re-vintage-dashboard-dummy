@@ -32,20 +32,18 @@ function UnderNegotiation() {
       <TabPrimary title1="OpDealer (25)en" title2="Seller Portal (12)" />
       <Row>
         <SortTabs />
-        {cardData.map((item, index) => {
-          return (
-            <Col md={3} key={index}>
-              <CloserBikeCard
-                data={item}
-                location
-                status
-                contactCSE
-                isHighestBid="Highest Bid"
-                isKmDriven
-              />
-            </Col>
-          );
-        })}
+        {cardData.map((item, index) => (
+          <Col md={3} key={index}>
+            <CloserBikeCard
+              data={item}
+              location
+              status
+              contactCSE
+              isHighestBid="Highest Bid"
+              isKmDriven
+            />
+          </Col>
+        ))}
       </Row>
       <DetailPagination />
     </>

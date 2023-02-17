@@ -80,18 +80,18 @@ export default function PriceCalculator() {
           title="Instant Estimator Configurator"
           subTitle="Here you will find the Contact details of CRE for active Motorcycle and General Info"
         />
-        <Link href="/price-calculator/add-motorcycle" className={styles.addMotorBtn}>
+        <Link
+          href="/price-calculator/add-motorcycle"
+          className={styles.addMotorBtn}
+        >
           <BsPlusLg /> Add Motorcycle
         </Link>
       </div>
       <div className={styles.priceResultText}>18 item found</div>
       <Row>
-          {priceCardData.map((item) => (
-            <PricePrimaryCard 
-              imageUrl={item.imageUrl}
-              priceTitle={item.title}
-            />
-          ))}    
+        {priceCardData.map((item) => (
+          <PricePrimaryCard imageUrl={item.imageUrl} priceTitle={item.title} />
+        ))}
       </Row>
     </div>
   );

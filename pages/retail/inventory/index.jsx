@@ -30,7 +30,20 @@ export default function Inventory() {
     <div>
       <Breadcrumb title="Retail" addmoretitle="Inventory" />
       <Filters filterInput filterButton export title="Inventory" />
-      <DashboardCard />
+      <DashboardCard 
+      Dropdown
+      title1="Listed "
+      titleBr= "(Active + Inactive)"
+      description1="1507"
+      bottomDescription1="Overall Booking Growth"
+      title2="Recent Inventory"
+      description2="97"
+      bottomDescription2="Received This Week"
+      title3="Test Ride Requests"
+      description3="12"
+      title4="Booking"
+      description4="35"
+       />
       <TabPrimary
         title1="Content Approval Pending (12)"
         title2="Content Upload Pending (8)"
