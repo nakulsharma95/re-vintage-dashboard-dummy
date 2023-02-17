@@ -16,7 +16,10 @@ function CreDetailCard(props) {
           <Card.Img variant="top" src={creDetailData.imageUrl} />
         </div>
 
-        <div className={`${styles.bikeCardTag}`}>Available</div>
+       
+        <p className={styles.bikeCardTag}>
+        Available 
+            </p>
 
         <Card.Body>
           <Card.Title className={styles.headingName}>
