@@ -7,8 +7,10 @@ import DealFilter from "../../components/dealClosure/dealFilter";
 import CrePerformanceCard from "../../components/cre-management/crePerformanceCard";
 import CrePerformanceMatrix from "../../components/cre-management/crePerformanceMatrix";
 import ButtonPrimary from "../../components/common/buttons/ButtonPrimary";
-import TextHeader from "../../components/common/textHeader";
 import styles from "./style.module.scss";
+import HeaderPrimary from "~/components/common/headerPrimary";
+import { FiPlus } from "react-icons/fi";
+
 
 function CreManagement() {
   const cardData = [
