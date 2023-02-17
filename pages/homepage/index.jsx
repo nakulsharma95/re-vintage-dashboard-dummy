@@ -3,8 +3,8 @@ import Filters from '../../components/common/filters';
 import DashboardCard from '../../components/common/dashboardCard';
 import DashboardBigCard from '../../components/common/dashboardBigCard';
 import TabPrimary from '../../components/common/tabPrimary';
-import Leads from "../../components/common/Leads";
-import NonReLead from '../../components/common/NonReLead';
+import LeadSection from '../../components/overview/leadSection';
+import NonReLeadSection from '../../components/overview/nonReLeadSection';
 
 export default function Homepage() {
   return (
@@ -20,10 +20,10 @@ export default function Homepage() {
 
       <DashboardCard />
       <DashboardBigCard />
-      <Filters filterInput filterButton title="Leads"  />
-      <TabPrimary title1="Procurement" title2="Inventory" title3="Retail"/>
-      <Leads />
-      <NonReLead/>
+      <Filters filterInput filterButton title="Leads" />
+      <TabPrimary title1="Procurement" title2="Inventory" title3="Retail" />
+      <LeadSection />
+      <NonReLeadSection />
     </div>
   );
 }
