@@ -9,6 +9,7 @@ function PieBig() {
     title: '',
     backgroundColor: 'transparent',
     pieHole: 0.5,
+    pieSliceText: 'none',
     slices: [
       {
         color: '#DA291C',

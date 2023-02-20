@@ -10,6 +10,7 @@ function PieSmall(props) {
     title: '',
     backgroundColor: 'transparent',
     pieHole: 0.5,
+    pieSliceText: 'none',
     slices: [
       {
         color: '#D2635B',
