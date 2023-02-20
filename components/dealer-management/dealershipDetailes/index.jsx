@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import HeaderPrimary from '../../common/headerPrimary';
 import { AiFillStar } from "react-icons/ai";
 import { Row, Col } from 'react-bootstrap';
@@ -43,13 +43,13 @@ function DealershipDetails() {
 		</div>
 
 		<Row className={style.motors_cards} >
-			<Col lg={5} className={style.motors_card}>
+			<Col xxl={5} xl={5} lg={5} className={style.motors_card}>
 			<h6>Address <span>View in map</span> </h6>
 			<p>
 			No F 29/2, Phase 2, Okhla Industrial Area, Okhla Industrial Area, New Delhi -110020
 			</p>
 			</Col>
-			<Col lg={5} className={style.motors_card} >
+			<Col xxl={5} xl={5} lg={5} className={style.motors_card} >
 			<h6>Contact Dealer</h6>
 			<p>
 			+91 89564 23658 <br/> <span>Mon - Sat, 9:00 AM - 8:00 PM</span>
