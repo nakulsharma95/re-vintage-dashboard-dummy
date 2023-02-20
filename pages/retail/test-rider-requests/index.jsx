@@ -1,3 +1,4 @@
+import { RiShareBoxFill } from 'react-icons/ri';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import CompleteBikeDetail from '../../../components/procurements/completeEvalutationCard';
 import TabPrimary from '../../../components/common/tabPrimary';
@@ -6,16 +7,12 @@ import SearchPrimary from '../../../components/common/searchPrimary';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
-import { RiShareBoxFill } from 'react-icons/ri';
 
 export default function TestRiderRequests() {
   return (
     <div>
       <Breadcrumb title="Retail" addmoretitle="Test Ride Requests" />
-      <HeaderPrimary 
-        headerClass="mb-2" 
-        title="Test Rider Requests"
-      >
+      <HeaderPrimary headerClass="mb-2" title="Test Rider Requests">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
         <SearchPrimary />
         <FilterButton />

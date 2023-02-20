@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import TabPrimary from '../../../components/common/tabPrimary';
 import SortTabs from '../../../components/common/sortTabs';
@@ -8,7 +9,6 @@ import SearchPrimary from '../../../components/common/searchPrimary';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
-import { RiShareBoxFill } from 'react-icons/ri';
 
 function MotorcyclePickup() {
   const cardData = [
@@ -36,10 +36,7 @@ function MotorcyclePickup() {
   return (
     <>
       <Breadcrumb title="Deal Closure" addmoretitle="Motorcycle Pickup" />
-      <HeaderPrimary 
-        headerClass="mb-2" 
-        title="Motorcycle Pickup"
-      >
+      <HeaderPrimary headerClass="mb-2" title="Motorcycle Pickup">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
         <SearchPrimary />
         <FilterButton />
@@ -47,8 +44,8 @@ function MotorcyclePickup() {
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <SortTabs selectAllCheck />
       <Row>
-        {cardData.map((item, index) => (
-          <Col md={3} key={index}>
+        {cardData.map((item) => (
+          <Col md={3}>
             <DealCheckCard
               data={item}
               isCheckBoxVisible

@@ -143,7 +143,7 @@ export default function Sidebar() {
 
         <Accordion.Item className={styles.accordionItems} eventKey="4">
           <Accordion.Header className={styles.headerStyle}>
-            <Link href="/">
+            <Link href="/demand">
               <span className={styles.navIcon}>
                 <BsGraphUp />
               </span>
@@ -152,10 +152,12 @@ export default function Sidebar() {
           </Accordion.Header>
           <Accordion.Body className={styles.accordionBody}>
             <li>
-              <Link href="/">Customer requirements</Link>
+              <Link href="/demand/customer-requirements">
+                Customer requirements
+              </Link>
             </li>
             <li>
-              <Link href="/">Wishlist</Link>
+              <Link href="/demand/wishlist">Wishlist</Link>
             </li>
           </Accordion.Body>
         </Accordion.Item>

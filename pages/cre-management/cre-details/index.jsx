@@ -34,7 +34,9 @@ function CreDetails() {
       </HeaderPrimary>
 
       <Row>
-        <CreProfileCard />
+        <Col xxl={12} lg={12} md={12}>
+          <CreProfileCard droptitle="Action" />
+        </Col>
 
         <TabPrimary title1="Basic Details" title2="Performance Management" />
         <div className="mb-2 mt-2">Allocated Leads</div>

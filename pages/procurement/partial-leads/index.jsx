@@ -15,30 +15,30 @@ export default function PartialLeads() {
   const cardData = [
     {
       ownerName: 'Rishab Sharma',
-      contact:'+91 9876543219',
-      email:'john#gmail.com',
-      pinCode:'110014',
-      prmSource:'MIY',
-      secSource:'Google',
-      detailNo:'- FB29FH9219HR1',
+      contact: '+91 9876543219',
+      email: 'john#gmail.com',
+      pinCode: '110014',
+      prmSource: 'MIY',
+      secSource: 'Google',
+      detailNo: '- FB29FH9219HR1',
     },
     {
       ownerName: 'Rishab kumar',
-      contact:'+91 9876543219',
-      email:'john#gmail.com',
-      pinCode:'110014',
-      prmSource:'MIY',
-      secSource:'Google',
-      detailNo:'- FB29FH9219HR1',
+      contact: '+91 9876543219',
+      email: 'john#gmail.com',
+      pinCode: '110014',
+      prmSource: 'MIY',
+      secSource: 'Google',
+      detailNo: '- FB29FH9219HR1',
     },
     {
       ownerName: 'Rishab Sharma',
-      contact:'+91 9876543219',
-      email:'john#gmail.com',
-      pinCode:'110014',
-      prmSource:'MIY',
-      secSource:'Google',
-      detailNo:'- FB29FH9219HR1',
+      contact: '+91 9876543219',
+      email: 'john#gmail.com',
+      pinCode: '110014',
+      prmSource: 'MIY',
+      secSource: 'Google',
+      detailNo: '- FB29FH9219HR1',
     },
   ];
   return (
@@ -66,21 +66,19 @@ export default function PartialLeads() {
       />
       <Row>
         <ViewAll title="3 Leads Available" />
-        {cardData.map((item, index) => {
-          return (
-            <Col md={4} key={index}>
-              <DetailCard
-                detailNumber={item.detailNo}
-                ownerName={item.ownerName}
-                emailId={item.email}
-                pinCode={item.pinCode}
-                prmSource={item.prmSource}
-                secSource={item.secSource}
-                contactNo={item.contact} 
-              />
-            </Col>
-          );
-        })}
+        {cardData.map((item) => (
+          <Col md={4}>
+            <DetailCard
+              detailNumber={item.detailNo}
+              ownerName={item.ownerName}
+              emailId={item.email}
+              pinCode={item.pinCode}
+              prmSource={item.prmSource}
+              secSource={item.secSource}
+              contactNo={item.contact}
+            />
+          </Col>
+        ))}
         <Col md={12}>
           <p className={styles.detailCardTxt}>
             Evaluation form sent: 8th November 2022 | 4:40 PM
