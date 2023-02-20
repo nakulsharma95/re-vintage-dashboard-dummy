@@ -1,21 +1,15 @@
-.leadsMiddle {
-  display: flex;
-  justify-content: space-between;
+.leadMidTable {
+  Table {
+    height: 20rem;
+    text-align: center;
 
-  .leadMidTable {
-    width: 50%;
-    Table {
-      height: 20rem;
-      text-align: center;
-
-      thead,
-      tbody,
-      tfoot,
-      tr,
-      td,
-      th {
-        border: 1px solid rgb(19, 19, 19);
-      }
+    thead,
+    tbody,
+    tfoot,
+    tr,
+    td,
+    th {
+      border: 1px solid rgb(19, 19, 19);
     }
   }
 }

@@ -5,6 +5,7 @@ import TabPrimary from '../../../components/common/tabPrimary'
 import { Row, Col } from 'react-bootstrap';
 import ActiveBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
 import DetailPagination from '../../../components/common/paginationPrimary';
+import Review from '../../../components/dealer-management/reviewSlider';
 
 
 function DealershipDetails() {
@@ -104,6 +105,7 @@ function DealershipDetails() {
         ))}
       </Row>
       <DetailPagination className="mt-3" />
+      <Review/>
 	</div>
   )
 }

@@ -548,3 +548,15 @@ h6 {
   background-color: red;
   border-color: red;
 }
+
+
+// Review slider 
+.review_slider .slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: #DA291C;
+  font-size: 9px;
+}
+.review_slider .slick-dots li button:before {
+  opacity: .75;
+  color: #656565;
+}
