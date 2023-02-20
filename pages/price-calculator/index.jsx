@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { BsPlusLg } from 'react-icons/bs';
 import { Row } from 'react-bootstrap';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
-import Filters from '../../components/common/filters';
 import styles from './style.module.scss';
-import PricePrimaryCard from '~/components/priceCalculator/pricePrimaryCard';
+import PricePrimaryCard from '../../components/priceCalculator/pricePrimaryCard';
+import HeaderPrimary from '../../components/common/headerPrimary';
 
 export default function PriceCalculator() {
   const priceCardData = [
@@ -76,22 +76,24 @@ export default function PriceCalculator() {
     <div>
       <Breadcrumb title="Instant Estimator Configurator" />
       <div className={styles.priceFilterFlex}>
-        <Filters
+        <HeaderPrimary
+          headerClass="mb-2"
           title="Instant Estimator Configurator"
           subTitle="Here you will find the Contact details of CRE for active Motorcycle and General Info"
-        />
-        <Link href="/price-calculator/add-motorcycle" className={styles.addMotorBtn}>
+        >
+        </HeaderPrimary>
+        <Link
+          href="/price-calculator/add-motorcycle"
+          className={styles.addMotorBtn}
+        >
           <BsPlusLg /> Add Motorcycle
         </Link>
       </div>
       <div className={styles.priceResultText}>18 item found</div>
       <Row>
-          {priceCardData.map((item) => (
-            <PricePrimaryCard 
-              imageUrl={item.imageUrl}
-              priceTitle={item.title}
-            />
-          ))}    
+        {priceCardData.map((item) => (
+          <PricePrimaryCard imageUrl={item.imageUrl} priceTitle={item.title} />
+        ))}
       </Row>
     </div>
   );

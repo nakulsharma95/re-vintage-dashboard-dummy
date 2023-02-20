@@ -1,20 +1,117 @@
+import { RiShareBoxFill } from 'react-icons/ri';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import Filters from '../../../components/common/filters';
 import DetailMotorcycleCard from '../../../components/procurements/detailMotorcycleCard';
 import TabPrimary from '../../../components/common/tabPrimary/index';
 import DetailPagination from '../../../components/common/paginationPrimary';
 import ViewAllInnerTab from '../../../components/procurements/ViewAllInnerTab';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import FilterButton from '../../../components/common/filterButton';
 
 export default function ScheduledEvaluation() {
-  const cardItemData = [1, 2, 3];
+  const cardItemData = [
+    {
+      status: 'Overdue',
+      bikeName:'2015 Classic 350',
+      bikeNumber:'DL6TAL7314',
+      bikeCode:'F293RB29RF82',
+      kmDrive:'43,384',
+      owner:'1st',
+      bikeCC:'350',
+      ownerNo:'2nd',
+      kmDetail:'35150',
+      mileage:'43.6',
+      bikeColor:'Red, Chrome',
+      location:'Delhi',
+      postingDate:'25/08/2022',
+      priceOne:'1,19,300',
+      priceTwo:'1,26,300',
+      evaluationLocation:'Neel Motors, Lajpat Nagar, Delhi',
+      ownerDetails:'Rishabh Sharma',
+      ownerContact:'+91 9876543219',
+      evaluationDateTime:'Thu, 19 Nov at 08:30AM',
+    },
+    {
+      status: 'Overdue',
+      bikeName:'2015 Classic 350',
+      bikeNumber:'DL6TAL7314',
+      bikeCode:'F293RB29RF82',
+      kmDrive:'43,384',
+      owner:'1st',
+      bikeCC:'350',
+      ownerNo:'2nd',
+      kmDetail:'35150',
+      mileage:'43.6',
+      bikeColor:'Red, Chrome',
+      location:'Delhi',
+      postingDate:'25/08/2022',
+      priceOne:'1,19,300',
+      priceTwo:'1,26,300',
+      evaluationLocation:'Neel Motors, Lajpat Nagar, Delhi',
+      ownerDetails:'Rishabh Sharma',
+      ownerContact:'+91 9876543219',
+      evaluationDateTime:'Thu, 19 Nov at 08:30AM',
+    },
+    {
+      status: 'Overdue',
+      bikeName:'2015 Classic 350',
+      bikeNumber:'DL6TAL7314',
+      bikeCode:'F293RB29RF82',
+      kmDrive:'43,384',
+      owner:'1st',
+      bikeCC:'350',
+      ownerNo:'2nd',
+      kmDetail:'35150',
+      mileage:'43.6',
+      bikeColor:'Red, Chrome',
+      location:'Delhi',
+      postingDate:'25/08/2022',
+      priceOne:'1,19,300',
+      priceTwo:'1,26,300',
+      evaluationLocation:'Neel Motors, Lajpat Nagar, Delhi',
+      ownerDetails:'Rishabh Sharma',
+      ownerContact:'+91 9876543219',
+      evaluationDateTime:'Thu, 19 Nov at 08:30AM',
+    },
+  ];
   return (
     <div className="">
       <Breadcrumb title="Procurement" addmoretitle="Scheduled Evaluation" />
-      <Filters title="Scheduled Evaluation" export filterInput filterButton />
+      <HeaderPrimary headerClass="mb-2" title="Scheduled Evaluation">
+        <OutlineButton
+          title="Scheduled Evaluation"
+          rightIcon={<RiShareBoxFill />}
+          className="mr-2"
+        />
+        <SearchPrimary />
+        <FilterButton />
+      </HeaderPrimary>
+
       <TabPrimary title1="Open" title2="Cancelled (12)" title3="Dropped (12)" />
       <ViewAllInnerTab />
-      {cardItemData.map(() => (
-        <DetailMotorcycleCard />
+      {cardItemData.map((item) => (
+        <DetailMotorcycleCard
+          status={item.status}
+          bikeName={item.bikeName}
+          bikeNumber={item.bikeNumber}
+          bikeCode={item.bikeCode}
+          kmDrive={item.kmDrive}
+          owner={item.owner}
+          bikeCC={item.bikeCC}
+          ownerNo={item.ownerNo}
+          kmDetail={item.kmDrive}
+          mileage={item.mileage}
+          bikeColor={item.bikeColor}
+          location={item.location}
+          postingDate={item.postingDate}
+          priceOne={item.priceOne}
+          priceTwo={item.priceTwo}
+          evaluationLocation={item.evaluationLocation}
+          ownerDetails={item.ownerDetails}
+          ownerContact={item.ownerContact}
+          evaluationDateTime={item.evaluationDateTime}
+        />
       ))}
       <DetailPagination />
     </div>

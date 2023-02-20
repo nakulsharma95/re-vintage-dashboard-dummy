@@ -41,10 +41,9 @@
 	}
 }
 
-.buttonPrimary{
+.btnPrimary{
 	display: flex;
 	align-items: center;
-	background-color: $theme-red-da;
 	outline: none;
 	border: none;
 	border-radius: 0;
@@ -54,43 +53,55 @@
 	text-align: center;
 	position: relative;
 	transition: all 0.5s;
+	padding: 0 16px;
+	text-decoration: none;
 
-	&:hover{
-		background-color: $theme-pink-da;
+	.iconLeft {
+		font-size: 16px;
+		margin-right: 12px;
 	}
-}
 
-.buttonWhite{
-	display: flex;
-	align-items: center;
-	background-color: $white;
-	border: 1px solid $white;
-	color: $black;
-	outline: none;
-	border-radius: 0;
-	font-size: 12px;
-	text-transform: uppercase;
-	height: 32px;
-	text-align: center;
-	position: relative;
-	transition: all 0.5s;
+	&.primary {
+		background-color: $theme-red-da;
+		color: white;
 
+		&:hover{
+			background-color: $theme-pink-da;
+		}
+	}
+
+	&.white {
+		background-color: $white;
+		border: 1px solid $white;
+		color: $gray-0D;
+		font-weight: 600;
+
+		
 	&:hover{
 		background-color: transparent;
 		border: 1px solid $white;
+		color: $white;
+	}
 	}
 }
 
+// Outline Button Container Style
 .outlineButtonContainer{
 	display: flex;
 	align-items: center;
 	background-color: transparent;
-	border: 1px solid $gray-a7;
+	border: 1px solid $gray-70;
 	border-radius: 0;
 	transition: all 0.5s;
 	padding: auto;
 	font-size: 12px;
 	font-weight: 600;
+	color:$gray-a7;
+
+	&.theme1 {
+		border: 1px solid $gray-a7;
+	}
+
 	&:hover{
 		background-color: $theme-danger;
 		border-color: $theme-danger;

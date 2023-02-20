@@ -1,11 +1,11 @@
-import React from "react";
-import { Row, Col, Card, Button } from "react-bootstrap";
-import styles from "./style.module.scss";
+import Link from 'next/link';
+import { Card } from 'react-bootstrap';
 import {
   FaMapMarkerAlt,
-  FaRegWindowMaximize,
   FaPhoneAlt,
-} from "react-icons/fa";
+  FaRegWindowMaximize,
+} from 'react-icons/fa';
+import styles from './style.module.scss';
 
 function CreDetailCard(props) {
   const { creDetailData } = props;
@@ -16,10 +16,7 @@ function CreDetailCard(props) {
           <Card.Img variant="top" src={creDetailData.imageUrl} />
         </div>
 
-       
-        <p className={styles.bikeCardTag}>
-        Available 
-            </p>
+        <p className={styles.bikeCardTag}>Available</p>
 
         <Card.Body>
           <Card.Title className={styles.headingName}>
@@ -31,7 +28,12 @@ function CreDetailCard(props) {
             <h4>Gurugram, Haryana</h4>
           </div>
 
-          <Button className={styles.downloadBtn}>VIEW DETAILS</Button>
+          <Link
+            href="/cre-management/cre-details"
+            className={styles.downloadBtn}
+          >
+            VIEW DETAILS
+          </Link>
         </Card.Body>
       </Card>
 
@@ -39,7 +41,7 @@ function CreDetailCard(props) {
         <Card.Body>
           <div className={styles.contactTitle}>
             <h3>Contact Info</h3>
-            <div className={styles.divider}></div>
+            <div className={styles.divider} />
 
             <p className={`${styles.creDetail} mb-0`}>
               <FaPhoneAlt size={13} />

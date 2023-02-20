@@ -1,13 +1,16 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { FiPlus } from 'react-icons/fi';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
-import Filters from '../../components/common/filters';
 import CreDetailCard from '../../components/cre-management/creDetailCard';
 import DealFilter from '../../components/dealClosure/dealFilter';
 import CrePerformanceCard from '../../components/cre-management/crePerformanceCard';
 import CrePerformanceMatrix from '../../components/cre-management/crePerformanceMatrix';
 import ButtonPrimary from '../../components/common/buttons/ButtonPrimary';
-import TextHeader from '../../components/common/textHeader';
+import HeaderPrimary from '../../components/common/headerPrimary';
+import SearchPrimary from '../../components/common/searchPrimary';
+
+import styles from './style.module.scss';
 
 function CreManagement() {
   const cardData = [
@@ -50,26 +53,16 @@ function CreManagement() {
   return (
     <>
       <Breadcrumb title="CRE Management" addmoretitle="CRE Management" />
-      <div className="header-section">
-        <div className="row w-100">
-          <div className="col-sm-4">
-            <TextHeader
-              title="CRE Management"
-              subTitle="CRE Management module"
-            />
-          </div>
-          <div className="col-sm-8">
-            <div className="d-flex justify-content-end">
-              <Filters filterInput />
-              <ButtonPrimary
-                buttonLink="cre-management/add-cre"
-                title="Add cre"
-                btnWhite
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+
+      <HeaderPrimary title="CRE Management" subTitle="CRE Management module">
+        <SearchPrimary />
+        <ButtonPrimary
+          buttonLink="cre-management/add-cre"
+          iconLeft={<FiPlus />}
+          title="Add cre"
+          white
+        />
+      </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-3" />
       <DealFilter title="Available CRE(s)" droptitle="Top Performer" isViewBy />
@@ -81,7 +74,7 @@ function CreManagement() {
         ))}
 
         <div>
-          {/* <h2 className={styles}>Cumulative Performance</h2> */}
+          <h2 className={styles.heading}>Cumulative Performance</h2>
           <Row>
             {performanceCardData.map((item) => (
               <Col xxl={3} lg={6} md={6}>
@@ -90,8 +83,9 @@ function CreManagement() {
             ))}
           </Row>
         </div>
-
-        <CrePerformanceMatrix creTitle="Cumulative CRE Performance Matrix" />
+        <Col xxl={12} lg={12} md={12}>
+          <CrePerformanceMatrix creTitle="Cumulative CRE Performance Matrix" />
+        </Col>
       </Row>
     </>
   );

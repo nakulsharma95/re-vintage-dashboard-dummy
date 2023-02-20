@@ -1,17 +1,14 @@
-import { Card, Col, Row } from 'react-bootstrap';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import { BiRupee } from 'react-icons/bi';
-import { FiCopy } from 'react-icons/fi';
-import Filters from '../../../components/common/filters';
-import DetailPagination from '../../../components/common/paginationPrimary';
-import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import styles from './style.module.scss';
+import { Col, Row } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
+import FilterButton from '../../../components/common/filterButton';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
+import SellerPrimaryCard from '../../../components/biddingPortal/sellerPrimaryCard';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import DetailPagination from '../../../components/common/paginationPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
 import SortTabs from '../../../components/common/sortTabs';
-import ArrowButton from '../../../components/common/buttons/ArrowButton';
-import CustomCheckBox from '../../../components/common/customCheckBox';
-import SellerPrimaryCard from '~/components/biddingPortal/sellerPrimaryCard';
 
 export default function ClosedBids() {
   const activeBikeData = [
@@ -58,19 +55,23 @@ export default function ClosedBids() {
         <Breadcrumb title="Bidding Portal" addmoretitle="Seller Portal" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
-      <Filters
-        filterInput
-        filterButton
+
+      <HeaderPrimary
+        headerClass="mb-2"
         title="Seller Portal"
         subTitle="Please find all the necessary details"
-        export
-      />
+      >
+        <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
+        <SearchPrimary />
+        <FilterButton />
+      </HeaderPrimary>
+
       <div className="bottom-white-border mt-3 mb-2" />
       <SortTabs selectAllCheck />
       <Row className="mb-3">
         {activeBikeData.map((item) => (
           <Col md={3}>
-            <SellerPrimaryCard 
+            <SellerPrimaryCard
               ArrowButton
               bikeName={item.bikeName}
               bikeNumber={item.bikeNumber}

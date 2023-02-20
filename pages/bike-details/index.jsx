@@ -10,6 +10,18 @@ import BikeSlider from '../../components/common/thumbnailSlider';
 import MotorcycleDetail from '../../components/procurements/motorcycleDetail';
 
 export default function BiddingDetails() {
+  const bikeDetailData = [
+    {
+      bikeName: 'HUNTER 350',
+      bikeNumber: '- DL6SEP7845',
+      chasisNumber: '- B28EG192BR19',
+      bikeLocation: 'Mumbai, Maharashtra',
+      priceTitle: 'Base Price',
+      evaluationPrice: '1,20,000.00',
+      evaluationFootPrice: '1,25,000.00',
+      highestBidPrice: 'Neel Motors, Lajpat Nagar, Delhi',
+    },
+  ];
   return (
     <div>
       <BackButton backLink="/bidding-portal" title="Back" />
@@ -24,18 +36,24 @@ export default function BiddingDetails() {
           <Col md={6}>
             <BikeSlider />
           </Col>
-          <Col md={6}>
-            <MotorcycleDetail
-              bikeInfo
-              detailMenu
-              detailLocation
-              footerPrice
-              bikePriceTitle="Base Price"
-              bikeNumber="- DL6SEP7845"
-              bikeName="HUNTER 350"
-              chasisNumber="- FB29FH9219HR1"
-            />
-          </Col>
+          {bikeDetailData.map((item) => (
+            <Col md={6}>
+              <MotorcycleDetail
+                bikeInfo
+                detailMenu
+                detailLocation
+                footerPrice
+                bikeName={item.bikeName}
+                bikeNumber={item.bikeNumber}
+                chasisNumber={item.chasisNumber}
+                bikeLocation={item.bikeLocation}
+                priceTitle={item.priceTitle}
+                evaluationPrice={item.evaluationPrice}
+                evaluationFootPrice={item.evaluationFootPrice}
+                highestBidPrice={item.highestBidPrice}
+              />
+            </Col>
+          ))}
         </Row>
         <BikeCardFooter creDetails ownerDetails />
       </div>
