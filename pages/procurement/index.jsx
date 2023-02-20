@@ -53,7 +53,7 @@ function Procurement() {
   ];
   return (
     <div>
-      <Breadcrumb title="Procurement" addmoretitle="Procurement" />
+      <Breadcrumb title="Procurement" />
       <HeaderPrimary headerClass="mb-2" title="Procurement Leads">
         <SearchPrimary />
         <FilterButton />

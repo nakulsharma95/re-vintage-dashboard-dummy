@@ -32,7 +32,7 @@ export default function Retail() {
   ];
   return (
     <div>
-      <Breadcrumb title="Retail" addmoretitle="Inventory" />
+      <Breadcrumb title="Retail" />
       <HeaderPrimary 
         headerClass="mb-2" 
         title="Retail"

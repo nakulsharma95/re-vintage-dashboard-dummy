@@ -1,5 +1,6 @@
 import { Tab, Nav } from 'react-bootstrap';
 import { BsCheckCircle } from 'react-icons/bs';
+import { ImBlocked } from 'react-icons/im';
 import { MdOutlineErrorOutline } from 'react-icons/md';
 import styles from './style.module.scss';
 
@@ -11,7 +12,7 @@ export default function BodyExteriors() {
     },
     {
       listTitle: 'Rear Mudguard - slightly broken',
-      iconName: <MdOutlineErrorOutline className={styles.redIcon} />,
+      iconName: <MdOutlineErrorOutline className={styles.waringIcon} />,
     },
     {
       listTitle: 'Leg Guard',
@@ -35,11 +36,11 @@ export default function BodyExteriors() {
     },
     {
       listTitle: 'Front Mudguard',
-      iconName: <BsCheckCircle />,
+      iconName: <ImBlocked className={styles.blockedIcon} />,
     },
     {
       listTitle: 'Rear Mudguard - slightly broken',
-      iconName: <MdOutlineErrorOutline className={styles.redIcon} />,
+      iconName: <MdOutlineErrorOutline className={styles.waringIcon} />,
     },
     {
       listTitle: 'Leg Guard',
@@ -51,7 +52,7 @@ export default function BodyExteriors() {
     },
     {
       listTitle: 'Side Mirrors',
-      iconName: <BsCheckCircle />,
+      iconName: <ImBlocked className={styles.blockedIcon} />,
     },
     {
       listTitle: 'Rear Indicators',
