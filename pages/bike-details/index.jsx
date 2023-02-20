@@ -13,13 +13,13 @@ export default function BiddingDetails() {
   const bikeDetailData = [
     {
       bikeName: 'HUNTER 350',
-      bikeNumber:'- DL6SEP7845',
-      chasisNumber:'- B28EG192BR19',
-      bikeLocation:'Mumbai, Maharashtra',
-      priceTitle:'Base Price',
-      evaluationPrice:'1,20,000.00',
-      evaluationFootPrice:'1,25,000.00',
-      highestBidPrice:'Neel Motors, Lajpat Nagar, Delhi',
+      bikeNumber: '- DL6SEP7845',
+      chasisNumber: '- B28EG192BR19',
+      bikeLocation: 'Mumbai, Maharashtra',
+      priceTitle: 'Base Price',
+      evaluationPrice: '1,20,000.00',
+      evaluationFootPrice: '1,25,000.00',
+      highestBidPrice: 'Neel Motors, Lajpat Nagar, Delhi',
     },
   ];
   return (

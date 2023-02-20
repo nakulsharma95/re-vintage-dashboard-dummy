@@ -159,10 +159,10 @@ export default function CreAddForm() {
 
       <div className={styles.fixedFooter}>
         <div className="mx-3">
-          <OutlineButton title="Cancel" />
+          <OutlineButton title="Cancel" className="theme1" />
         </div>
         <div>
-          <ButtonPrimary title="Save" />
+          <ButtonPrimary title="Save" className="theme1" />
         </div>
       </div>
 
@@ -223,7 +223,7 @@ export default function CreAddForm() {
 
       <div className={styles.fixedFooter}>
         <div className="mx-3">
-          <OutlineButton title="Cancel" />
+          <OutlineButton title="Cancel" className="theme1" />
         </div>
         <div>
           {' '}

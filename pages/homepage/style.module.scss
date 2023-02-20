@@ -4,14 +4,17 @@
 
 // Home Page Style
 .homepageStyle {
-  // min-height: 100vh;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // background:#000000 0% 0% no-repeat padding-box;
-  // padding: 1rem 2.5rem;
-
   .titleCustomStyle {
     color: $white;
+  }
+
+  .cardGridLayoutStyle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10.33px;
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }

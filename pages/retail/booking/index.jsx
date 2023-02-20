@@ -1,4 +1,5 @@
 import { Row } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
 import BikeCard from '../../../components/procurements/bikeCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import TabPrimary from '../../../components/common/tabPrimary';
@@ -7,16 +8,12 @@ import SearchPrimary from '../../../components/common/searchPrimary';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
-import { RiShareBoxFill } from 'react-icons/ri';
 
 export default function Booking() {
   return (
     <div>
       <Breadcrumb title="Retail" addmoretitle="Sold" />
-      <HeaderPrimary 
-        headerClass="mb-2" 
-        title="Booking"
-      >
+      <HeaderPrimary headerClass="mb-2" title="Booking">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
         <SearchPrimary />
         <FilterButton />

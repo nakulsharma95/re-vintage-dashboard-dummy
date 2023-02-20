@@ -32,6 +32,8 @@ function NonRe() {
     title: '',
     backgroundColor: 'transparent',
     pieHole: 0.5,
+    pieSliceText: 'none',
+    chartArea: { height: 180, width: 380 },
     slices: [
       {
         color: '#EE0000',
@@ -79,6 +81,7 @@ function NonRe() {
     titlePosition: 'none',
     backgroundColor: '',
     legend: 'none',
+    chartArea: { height: 170 },
     hAxis: {
       title: '',
       titleTextStyle: {
@@ -123,7 +126,12 @@ function NonRe() {
       <Row className="mb-4">
         <Col md={6}>
           <div className={styles.enquireBarChart}>
-            <PieChart chartData={pieData} pieOptions={pieOptions} />
+            <PieChart
+              chartData={pieData}
+              pieOptions={pieOptions}
+              defaultValue="1616"
+              defaultValueTextAlign="112px"
+            />
           </div>
         </Col>
         <Col md={6}>

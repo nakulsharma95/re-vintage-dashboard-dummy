@@ -1,4 +1,5 @@
 import { Row, Col } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
 import SortTabs from '../../../components/common/sortTabs';
@@ -8,7 +9,6 @@ import SearchPrimary from '../../../components/common/searchPrimary';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
-import { RiShareBoxFill } from 'react-icons/ri';
 
 function UnderNegotiation() {
   const cardData = [
@@ -32,10 +32,7 @@ function UnderNegotiation() {
   return (
     <>
       <Breadcrumb title="Deal Closure" addmoretitle="Under Negotiation" />
-      <HeaderPrimary 
-        headerClass="mb-2" 
-        title="Under Negotiation"
-      >
+      <HeaderPrimary headerClass="mb-2" title="Under Negotiation">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
         <SearchPrimary />
         <FilterButton />
@@ -43,8 +40,8 @@ function UnderNegotiation() {
       <TabPrimary title1="OpDealer (25)en" title2="Seller Portal (12)" />
       <Row>
         <SortTabs />
-        {cardData.map((item, index) => (
-          <Col md={3} key={index}>
+        {cardData.map((item) => (
+          <Col md={3}>
             <CloserBikeCard
               data={item}
               location

@@ -40,6 +40,7 @@
 			}
 			p{
 				font-size: 14px;
+				margin-top: 1rem;
 				span{
 					font-size: 12px;
 					color: #CBC6C6;
@@ -50,10 +51,13 @@
 		.motors_lists{
 			.motors_list{
 				display: flex;
+				justify-content: space-between;
+				align-items: center;
 				border-right: 1px solid #282828;
               h6{
                 font-size: 16px;
                 color: #FFFFFF;
+				padding: 0 0.8rem;
 				span{
 					font-size: 12px;
 					color: #CBC6C6;
@@ -62,7 +66,9 @@
 			  }
 				img{
 					margin-right: 0.7rem;
-				margin-top: 1rem;				}
+				margin-top: 1rem;	
+				padding: 0 0.3rem;
+						}
 			}
 		}
 	}
@@ -73,7 +79,7 @@
 		.motors_card{
 			background-color: #282828;
 			padding: 1.5rem;
-			width:42rem ;
+			width:49% ;
 
 			h6{
 				font-size: 12px;

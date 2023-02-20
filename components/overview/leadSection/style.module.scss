@@ -2,47 +2,60 @@
   box-sizing: border-box;
 
   .leadsTop {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 0px 1.5rem;
     .leadTable {
-      width: 78%;     
-      Table{
-        height: 20rem;
-       
-        thead, tbody, tfoot, tr, td, th{
+      Table {
+        // height: 20rem;
+
+        thead,
+        tbody,
+        tfoot,
+        tr,
+        td,
+        th {
           border: none;
+          padding: 1.2rem 1.5rem;
         }
-        tbody{
-          .BoldHead{            
-              color: white;
-              .BoldHeadIcon{
-                font-size: 1.5rem;
-              }
-            
+        tbody {
+          padding: 1rem;
+          .BoldHead {
+            color: white;
+            font-size: 16px;
+            .BoldHeadIcon {
+              font-size: 1.5rem;
+              margin: 0 0.5rem;
+            }
           }
-        }       
-        a{
-          color: #E8B016;
+        }
+        a {
+          color: #e8b016;
           text-decoration: none;
         }
       }
     }
   }
 
-  .leadsMiddle{
-	  display: flex;
-    justify-content: space-between;
+  .leadsMiddle {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 0px 1.5rem;
 
-    .leadMidTable{
-      width: 50%;
-      Table{
+    .leadMidTable {
+      Table {
         height: 20rem;
+        text-align: center;
 
-        thead, tbody, tfoot, tr, td, th{
-            border: 1px solid #282828;
-          }
+        thead,
+        tbody,
+        tfoot,
+        tr,
+        td,
+        th {
+          border: 1px solid rgb(19, 19, 19);
+        }
       }
     }
-	
   }
 }
