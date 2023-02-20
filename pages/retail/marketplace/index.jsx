@@ -1,4 +1,5 @@
 import { Col, Row } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
 import BikeCardRadio from '../../../components/common/cardCheckbox';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DashboardCard from '../../../components/common/dashboardCard';
@@ -8,7 +9,6 @@ import SearchPrimary from '../../../components/common/searchPrimary';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
-import { RiShareBoxFill } from 'react-icons/ri';
 
 export default function MarketPlace() {
   const cardData = [
@@ -33,11 +33,8 @@ export default function MarketPlace() {
   return (
     <div>
       <Breadcrumb title="Retail" addmoretitle="Inventory" />
-      
-      <HeaderPrimary 
-        headerClass="mb-2" 
-        title="MarketPlace"
-      >
+
+      <HeaderPrimary headerClass="mb-2" title="MarketPlace">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
         <SearchPrimary />
         <FilterButton />

@@ -168,7 +168,11 @@ export default function BikeInspection() {
         </Tab.Container>
       </div>
       <div className="mt-3">
-        <OutlineButton leftIcon={<BiDownload />} title="Download Report" />
+        <OutlineButton
+          leftIcon={<BiDownload />}
+          title="Download Report"
+          className="theme1"
+        />
       </div>
     </div>
   );

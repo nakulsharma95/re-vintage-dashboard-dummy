@@ -1,16 +1,16 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
-import Breadcrumb from "../../components/common/breadcrumbPrimary";
-import CreDetailCard from "../../components/cre-management/creDetailCard";
-import DealFilter from "../../components/dealClosure/dealFilter";
-import CrePerformanceCard from "../../components/cre-management/crePerformanceCard";
-import CrePerformanceMatrix from "../../components/cre-management/crePerformanceMatrix";
-import ButtonPrimary from "../../components/common/buttons/ButtonPrimary";
-import styles from "./style.module.scss";
-import HeaderPrimary from "~/components/common/headerPrimary";
-import { FiPlus } from "react-icons/fi";
-import SearchPrimary from "../../components/common/searchPrimary";
+import React from 'react';
+import { Row, Col } from 'react-bootstrap';
+import { FiPlus } from 'react-icons/fi';
+import Breadcrumb from '../../components/common/breadcrumbPrimary';
+import CreDetailCard from '../../components/cre-management/creDetailCard';
+import DealFilter from '../../components/dealClosure/dealFilter';
+import CrePerformanceCard from '../../components/cre-management/crePerformanceCard';
+import CrePerformanceMatrix from '../../components/cre-management/crePerformanceMatrix';
+import ButtonPrimary from '../../components/common/buttons/ButtonPrimary';
+import HeaderPrimary from '../../components/common/headerPrimary';
+import SearchPrimary from '../../components/common/searchPrimary';
 
+import styles from './style.module.scss';
 
 function CreManagement() {
   const cardData = [

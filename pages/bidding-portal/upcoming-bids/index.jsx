@@ -1,4 +1,4 @@
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Dropdown, Form } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
 import { FiSettings } from 'react-icons/fi';
 import UpcomingBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
@@ -10,6 +10,10 @@ import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
+import ButtonPrimary from '../../../components/common/buttons/ButtonPrimary';
+
+// Style here
+import styles from './style.module.scss';
 
 export default function UpcomingBids() {
   const upcomingBikeData = [
@@ -56,7 +60,32 @@ export default function UpcomingBids() {
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
       <HeaderPrimary headerClass="mb-2" title="Completed Evaluation">
-        <OutlineButton title="Bid Price Logic" rightIcon={<FiSettings />} />
+        <div>
+          <Dropdown className={styles.bidPricDropdown}>
+            <Dropdown.Toggle
+              variant=""
+              id="dropdown-basic"
+              className={styles.dropdownToggle}
+            >
+              Bid Price Logic <FiSettings />
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu className={styles.bidPriceDropdownMenu}>
+              <div className={styles.bidPriceValue}>
+                <div className={styles.title}>
+                  Base Price <span>X</span>
+                </div>
+                <div>
+                  <Form.Control type="text" placeholder="Enter a value" />
+                </div>
+                <div className={styles.title}>%</div>
+              </div>
+              <div className={styles.bidPricebtn}>
+                <ButtonPrimary title="Apply" />
+              </div>
+            </Dropdown.Menu>
+          </Dropdown>
+        </div>
         <OutlineButton
           title="Scheduled Evaluation"
           rightIcon={<RiShareBoxFill />}

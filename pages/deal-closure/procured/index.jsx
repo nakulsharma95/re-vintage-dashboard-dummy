@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
 import CloserBikeCard from '../../../components/dealClosure/closerCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import TabPrimary from '../../../components/common/tabPrimary';
@@ -8,7 +9,6 @@ import SearchPrimary from '../../../components/common/searchPrimary';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
-import { RiShareBoxFill } from 'react-icons/ri';
 
 function PaymentsPending() {
   const cardData = [
@@ -32,10 +32,7 @@ function PaymentsPending() {
   return (
     <>
       <Breadcrumb title="Deal Closure" addmoretitle="Payment Pending" />
-      <HeaderPrimary 
-        headerClass="mb-2" 
-        title="Payment Pending"
-      >
+      <HeaderPrimary headerClass="mb-2" title="Payment Pending">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
         <SearchPrimary />
         <FilterButton />
@@ -43,8 +40,8 @@ function PaymentsPending() {
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
       <DealFilter title="8 Leads" />
       <Row>
-        {cardData.map((item, index) => (
-          <Col md={3} key={index}>
+        {cardData.map((item) => (
+          <Col md={3}>
             <CloserBikeCard
               data={item}
               isHighestBid="Evolution Price"

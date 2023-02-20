@@ -13,7 +13,11 @@ export default function BikeHistory() {
     <div className={styles.bikeHistoryMain}>
       <div className="d-flex align-items-center justify-content-between">
         <BikeDetailTitle title="History / Background" />
-        <OutlineButton rightIcon={<RiShareBoxFill />} title="Export Logs" />
+        <OutlineButton
+          rightIcon={<RiShareBoxFill />}
+          title="Export Logs"
+          className="theme1"
+        />
       </div>
       <div className={styles.bikeHistoryCols}>
         <div className={styles.title}>This Week</div>

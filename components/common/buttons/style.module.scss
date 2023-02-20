@@ -85,16 +85,23 @@
 	}
 }
 
+// Outline Button Container Style
 .outlineButtonContainer{
 	display: flex;
 	align-items: center;
 	background-color: transparent;
-	border: 1px solid $gray-a7;
+	border: 1px solid $gray-70;
 	border-radius: 0;
 	transition: all 0.5s;
 	padding: auto;
 	font-size: 12px;
 	font-weight: 600;
+	color:$gray-a7;
+
+	&.theme1 {
+		border: 1px solid $gray-a7;
+	}
+
 	&:hover{
 		background-color: $theme-danger;
 		border-color: $theme-danger;
