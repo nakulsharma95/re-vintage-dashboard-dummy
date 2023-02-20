@@ -69,7 +69,11 @@ function dashboardBigCard() {
               <h4>Motorcycle Sales</h4>
               <AiOutlineDownload className={styles.cardIcon} />
             </div>
-            <HorizontalBarChart data={data} options={options} />
+            <HorizontalBarChart
+              data={data}
+              options={options}
+              containerClassName={styles.horizontalChartStyle}
+            />
           </div>
           <div className={`${styles.cardProgress} overviewProgress`} />
           <hr />

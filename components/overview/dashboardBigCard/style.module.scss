@@ -66,3 +66,14 @@
 .cardBody_star{
 	color: #E8B016;
 }
+
+.horizontalChartStyle {
+	margin: 10px 0;
+
+	div {
+		scale: 1.1;
+		@include desktop-lg {
+			scale: 1.08;
+		}
+	}
+}
