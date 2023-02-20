@@ -32,8 +32,11 @@ export default function Retail() {
   ];
   return (
     <div>
-      <Breadcrumb title="Retail" addmoretitle="Inventory" />
-      <HeaderPrimary headerClass="mb-2" title="Retail">
+      <Breadcrumb title="Retail" />
+      <HeaderPrimary 
+        headerClass="mb-2" 
+        title="Retail"
+      >
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
         <SearchPrimary />
         <FilterButton />

@@ -157,7 +157,7 @@ export default function Sidebar() {
               </Link>
             </li>
             <li>
-              <Link href="/demand/wishlist">Wishlist</Link>
+              <Link href="/demand">Wishlist</Link>
             </li>
           </Accordion.Body>
         </Accordion.Item>

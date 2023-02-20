@@ -167,7 +167,7 @@ export default function BiddingPortal() {
   return (
     <div>
       <div className="d-flex align-items-center justify-content-between">
-        <Breadcrumb title="Bidding Portal" addmoretitle="Bidding Portal" />
+        <Breadcrumb title="Bidding Portal" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
 
