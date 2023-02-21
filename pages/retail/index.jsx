@@ -41,7 +41,9 @@ export default function Retail() {
         <SearchPrimary />
         <FilterButton />
       </HeaderPrimary>
-      <DashboardCard />
+      <DashboardCard 
+        Dropdown
+      />
       <TabPrimary
         title1="Content Approval Pending (12)"
         title2="Content Upload Pending (8)"
