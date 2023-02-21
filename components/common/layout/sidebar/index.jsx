@@ -196,7 +196,7 @@ export default function Sidebar() {
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/escalation">
             <span className={styles.navIcon}>
               <BsFileEarmarkText />
             </span>
