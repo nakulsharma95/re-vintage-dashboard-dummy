@@ -1,19 +1,35 @@
 import React from 'react';
 import { Col, Button } from 'react-bootstrap';
-import style from './style.module.scss';
+import styles from './style.module.scss';
 
 function ViewAll(props) {
   return (
     <Col md={12}>
-      <div className={style.titleViewAllMain}>
-        <h5 className={style.titleViewAll}>
+      <div className={`${styles.titleViewAllMain} ${props.viewAllClass}`}>
+        <h5 className={styles.titleViewAll}>
           {props.title} <span>{props.leadsTitle}</span>
         </h5>
         <div>
-          <Button variant="primary" className={style.viewAllBtn}>
-            View All
-          </Button>
+          {props.viewAllBtn &&
+            <Button variant="primary" className={styles.viewAllBtn}>
+              View All
+            </Button>
+          }
         </div>
+        {props.viewAllList &&
+          <div className={styles.topHeaderBtnBox}>
+            <p className={styles.viewText}>View:</p>
+            <Button
+              variant=""
+              className={`${styles.topHeaderBtn} ${styles.activeBtn}`}
+            >
+              All
+            </Button>
+            <Button variant="" className={`${styles.topHeaderBtn}`}>
+              Dealer
+            </Button>
+          </div>
+        }
       </div>
     </Col>
   );

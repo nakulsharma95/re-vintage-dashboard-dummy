@@ -5,34 +5,37 @@
 	background-color: $black;
 	border-top: 0;
 	padding: 15px 0;
-  
-	.bikeFooterTitle {
-	  color: #f3f3f3;
-	  font-size: 12px;
-	  font-weight: 500;
-	  margin-bottom: 0.7rem;
-	  width: 100%;
-	}
-	.bikeFooterSubTitle {
-	  color: #a7a7a7;
-	  font-size: 12px;
-	  font-weight: 500;
-	  margin-bottom: 0.5rem;
-	}
-	.bikeFooterText {
-	  color: $white;
-	  font-size: 14px;
-	  font-weight: 400;
-	  margin-bottom: 0rem;
-	}
-  }
 
-  .cardFooterCols{
+	.bikeFooterTitle {
+		color: $gray-F3;
+		font-size: 12px;
+		font-weight: 500;
+		margin-bottom: 0.7rem;
+		width: 100%;
+	}
+
+	.bikeFooterSubTitle {
+		color: $gray-a7;
+		font-size: 12px;
+		font-weight: 500;
+		margin-bottom: 0.5rem;
+	}
+
+	.bikeFooterText {
+		color: $white;
+		font-size: 14px;
+		font-weight: 400;
+		margin-bottom: 0rem;
+	}
+}
+
+.cardFooterCols {
 	display: flex;
 	padding: 0 15px;
 	flex-wrap: wrap;
 	border-right: 1px solid $black-40;
-  }
-  .borderNone{
+}
+
+.borderNone {
 	border-right: none;
-  }
+}

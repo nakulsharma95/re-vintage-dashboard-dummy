@@ -59,7 +59,7 @@ export default function UpcomingBids() {
         <Breadcrumb title="Bidding Portal" addmoretitle="Upcoming Bids" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
-      <HeaderPrimary headerClass="mb-2" title="Completed Evaluation">
+      <HeaderPrimary headerClass="mb-2" title="Upcoming Bids">
         <div>
           <Dropdown className={styles.bidPricDropdown}>
             <Dropdown.Toggle

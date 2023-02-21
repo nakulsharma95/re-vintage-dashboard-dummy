@@ -18,7 +18,7 @@ function SortTabs(props) {
           <h5 className={styles.tabCheckTitle}>25 Bids Available</h5>
           {props.isCheckInput && (
             <div className="mx-3">
-              <CustomCheckBox checkTitle="Select all" />
+              <CustomCheckBox checkTitle="Select all -" />
             </div>
           )}
 
@@ -51,7 +51,7 @@ function SortTabs(props) {
           ) : (
             <>
               {props.isSubmitBtn && (
-                <div className={styles.leftBorder}>
+                <div>
                   <Button variant="primary" className={styles.submitCheckBBtn}>
                     <BiCheck className={styles.checkBtnIcon} />
                     Submit Selected
