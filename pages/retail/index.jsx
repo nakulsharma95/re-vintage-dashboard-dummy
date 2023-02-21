@@ -57,7 +57,12 @@ export default function Retail() {
         title3="Under Refurbishment"
         title4="Pending Evaluation (15)"
       />
-      <SortTabs selectAllCheck />
+         <SortTabs
+        selectAllCheck
+        isSortTabBox
+        isCheckInput
+        sortTabTitle="12 Result Found"
+      />
       <Row>
         {cardData.map((item) => (
           <Col xxl={3} xl={4} lg={6} key={item.id}>
@@ -67,7 +72,7 @@ export default function Retail() {
               bikekm="43,384 km"
               bikeOwner="1st Owner"
               bikeCc="350 CC"
-              bikePrice="₹ 1,25,000.00"
+              bikePrice="1,25,000.00"
               bikeDealer="(C2N0RJ20FC2N)"
               dealerAddress="Neel Motors, Lajpat Nagar, Delhi"
               creDetail="CRE Detail"
