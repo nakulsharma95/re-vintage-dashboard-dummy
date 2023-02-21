@@ -477,10 +477,6 @@ h6 {
   border-bottom-width: none;
 }
 
-// .dashboardTable thead, tbody, tfoot, tr, td, th {
-//   border: none;
-// }
-
 // Card Bg Colour
 
 .bgGray18 {
@@ -524,4 +520,15 @@ h6 {
 
 .table-dark {
   margin: 0;
+}
+
+.re-detailFootBg{
+  background-color: $black;
+  .col-md-4{
+    &:last-child{
+      div{
+        border-right: none;
+      }
+    }
+  }
 }

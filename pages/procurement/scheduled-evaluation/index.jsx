@@ -3,11 +3,11 @@ import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailMotorcycleCard from '../../../components/procurements/detailMotorcycleCard';
 import TabPrimary from '../../../components/common/tabPrimary/index';
 import DetailPagination from '../../../components/common/paginationPrimary';
-import ViewAllInnerTab from '../../../components/procurements/ViewAllInnerTab';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
 import FilterButton from '../../../components/common/filterButton';
+import ViewAll from '../../../components/common/viewAllHeader';
 
 export default function ScheduledEvaluation() {
   const cardItemData = [
@@ -80,7 +80,7 @@ export default function ScheduledEvaluation() {
       <Breadcrumb title="Procurement" addmoretitle="Scheduled Evaluation" />
       <HeaderPrimary headerClass="mb-2" title="Scheduled Evaluation">
         <OutlineButton
-          title="Scheduled Evaluation"
+          title="Export Data"
           rightIcon={<RiShareBoxFill />}
           className="mr-2"
         />
@@ -89,7 +89,11 @@ export default function ScheduledEvaluation() {
       </HeaderPrimary>
 
       <TabPrimary title1="Open" title2="Cancelled (12)" title3="Dropped (12)" />
-      <ViewAllInnerTab />
+      <ViewAll
+        title="3 Leads Available"
+        viewAllList
+        viewAllClass="mb-4"
+      />
       {cardItemData.map((item) => (
         <DetailMotorcycleCard
           status={item.status}
