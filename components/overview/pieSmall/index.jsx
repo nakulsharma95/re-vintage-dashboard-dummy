@@ -5,44 +5,31 @@ import DoughnutChart from '../../charts/doughnutChart';
 import styles from './style.module.scss';
 
 function PieSmall(props) {
-  const options = {
+  const optionsDoughnut = {
     responsive: true,
-    scales: {
-      x: {
-        grid: {
-          display: false,
-        },
-      },
-      y: {
-        grid: {
-          border: {
-            dash: [2, 1],
-          },
-          color: '#575757',
-        },
-      },
-    },
     maintainAspectRatio: false,
     plugins: {
       legend: {
-        position: 'top',
-        display: false,
-      },
-      title: {
-        display: false,
-        text: 'Chart.js Line Chart',
+        display: true,
+        position: 'bottom',
+        labels: {
+          fontSize: 20,
+          color: 'white',
+        },
       },
     },
   };
-
-  const chartData = {
-    labels: ['From Web', 'From OLX'],
+  const labels = ['From Web', 'From OLX'];
+  const doughnutChartData = {
+    labels,
     datasets: [
       {
         label: 'My First Dataset',
-        data: [300, 50],
+        data: [100, 300],
         backgroundColor: ['#F1DF67', '#D2635B'],
         hoverOffset: 4,
+        borderColor: ['#686868'],
+        borderWidth: 0.2,
       },
     ],
   };
@@ -55,7 +42,7 @@ function PieSmall(props) {
         </h5>
       )}
 
-      {/* <DoughnutChart options={options} chartData={chartData} /> */}
+      <DoughnutChart options={optionsDoughnut} data={doughnutChartData} />
     </div>
   );
 }

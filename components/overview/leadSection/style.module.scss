@@ -5,12 +5,12 @@
   margin-bottom: 20px;
 
   .leadsTop {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+    display: flex;
     gap: 0px 24px;
     margin-bottom: 20px;
 
     .leadTable {
+      flex-grow: 2;
       .tableStyle {
         thead,
         tbody,
