@@ -1,35 +1,50 @@
 import React from 'react';
-import { Chart } from 'react-google-charts';
+import DoughnutChart from '../../charts/doughnutChart';
 import styles from './style.module.scss';
 
-export const data = [
-  ['Task', 'Hours per Day'],
-  ['Upcoming Bids', 8],
-  ['Active Bids', 4],
-  ['Closed Bids', 6],
-];
+const optionsDoughnut = {
+  responsive: true,
+  maintainAspectRatio: false,
+  centerText: {
+    display: true,
+    text: `90%sasassassa`,
+  },
+  plugins: {
+    legend: {
+      display: true,
+      position: 'right',
+      labels: {
+        fontSize: 20,
+        color: 'white',
+      },
+    },
+  },
+};
 
-export const options = {
-  title: '',
-  pieHole: 0.4,
-  is3D: false,
-  backgroundColor: '',
-  legendTextStyle: { color: '#fff' },
+const doughnutChartData = {
+  labels: [
+    'Upcoming Bids',
+    'Active Bids',
+    'Closed Bids',
+    'No Bids',
+    'Seller Portal',
+  ],
+  datasets: [
+    {
+      label: 'My First Dataset',
+      data: [100, 300, 100, 80, 50],
+      backgroundColor: ['#F1DF67', '#D2635B', '#403E3E', '#DA291C', '#F28823'],
+      borderColor: ['#686868'],
+      hoverOffset: 4,
+      borderWidth: 0.2,
+    },
+  ],
 };
 export default function BiddingOverview() {
   return (
-    <div>
-      <div className={styles.overviewCardMain}>
-        <div className={styles.title}>Bidding Overview</div>
-        <Chart
-          chartType="PieChart"
-          data={data}
-          options={options}
-          width="100%"
-          height="260px"
-          className={styles.chartStyle}
-        />
-      </div>
+    <div className={styles.overviewCardMain}>
+      <div className={styles.title}>Bidding Overview</div>
+      <DoughnutChart options={optionsDoughnut} data={doughnutChartData} />
     </div>
   );
 }

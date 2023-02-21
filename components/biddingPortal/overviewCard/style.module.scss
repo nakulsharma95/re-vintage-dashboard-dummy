@@ -5,7 +5,13 @@
 	background-color: $gray-28;
 	margin: 15px 0;
 	padding: 20px;
-	min-height: 321px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	.title {
+		margin-bottom: 20px;
+	}
 }
 
 .chartStyle {
