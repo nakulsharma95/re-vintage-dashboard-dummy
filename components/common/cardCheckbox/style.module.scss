@@ -9,30 +9,33 @@
     border-radius: 0px;
     object-fit: contain;
   }
-.bikeCardCheck{
-  position: absolute;
-	top: 15px;
-  left: 0;
-  margin-left: 10px;
-  
-}
 
-.ChassisImage{
-  position: relative;
-}
-  .bikeCardTag{
-	position: absolute;
-	top: 15px;
-	font-size: 12px;
-	font-weight: 600;
-	color: #ffffff;
-	padding: 0.2rem 0.6rem 0.2rem 1rem;
-	background: rgb(0 0 0 / 75%) 11% 0% no-repeat padding-box;
-	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
-  right: 0;
-  margin-right: 10px;
+  .bikeCardCheck {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    margin-left: 10px;
+
   }
-  .bikeChassisTag{
+
+  .ChassisImage {
+    position: relative;
+  }
+
+  .bikeCardTag {
+    position: absolute;
+    top: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 0.2rem 0.6rem 0.2rem 1rem;
+    background: rgb(0 0 0 / 75%) 11% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+    right: 0;
+    margin-right: 10px;
+  }
+
+  .bikeChassisTag {
     position: absolute;
     font-size: 12px;
     font-weight: 600;
@@ -43,7 +46,8 @@
     bottom: 0;
 
   }
-  .bikeCardTagOlx{
+
+  .bikeCardTagOlx {
     display: block !important;
     position: absolute;
     top: 15px;
@@ -58,28 +62,42 @@
     display: flex;
     align-items: center;
 
-    .olxImage{
+    .olxImage {
       width: 27px;
       height: 25px;
       margin-left: 5px;
     }
+
+    .olxBtn {
+      background-color: #da291c;
+      border-radius: 50%;
+      border: none;
+      margin-left: 10px;
+      padding: 0px;
+      height: 19px;
+      width: 19px;
+      font-size: 8px;
     }
+  }
 
   .bkeName {
     font-size: 16px;
     color: #ffffff;
     padding: 0 1rem;
     margin-bottom: 15px;
+
     span {
       font-size: 14px;
       color: #e8b016;
     }
   }
+
   .bikeDetail {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
     padding: 0 1rem;
+
     .detailTxt {
       font-size: 12px;
       color: #cbc6c6;
@@ -91,11 +109,13 @@
         border-left: 1px solid #707070;
         border-right: 1px solid #707070;
       }
+
       &:nth-child(3) {
         text-align: end;
       }
     }
   }
+
   .price {
     color: #ffffff;
     font-size: 18px;
@@ -103,18 +123,21 @@
     padding: 0 1rem;
     margin-bottom: 15px;
   }
-  .dealer{
+
+  .dealer {
     padding: 0 1rem;
     font-size: 12px;
     color: #CBC6C6;
     margin-bottom: 0px;
-    span{
+
+    span {
       font-size: 10px;
       color: #F3F3F3;
     }
 
   }
-  .dealerLocation{
+
+  .dealerLocation {
     padding: 0 1rem;
     font-size: 12px;
     text-decoration: underline;
@@ -123,13 +146,13 @@
 
 }
 
-.cardCreMain{
+.cardCreMain {
   background-color: #181818;
   border-radius: 0px;
   margin-bottom: 20px;
 
-  .creDetails{
-    h3{
+  .creDetails {
+    h3 {
       margin-bottom: 0;
       padding: 0 1rem;
       margin-bottom: 10px;
@@ -137,19 +160,21 @@
       color: #F3F3F3;
       font-weight: 300;
     }
-    .creInfo{
+
+    .creInfo {
       padding: 0 1rem;
       font-size: 12px;
       color: #CBC6C6;
       margin-bottom: 5px !important;
-      span{
-      color: #F3F3F3;
-      font-weight: 500;
-      margin-left: 3px;
+
+      span {
+        color: #F3F3F3;
+        font-weight: 500;
+        margin-left: 3px;
       }
     }
 
-  
+
   }
 
 }
@@ -170,4 +195,3 @@
     border-radius: 0;
   }
 }
-

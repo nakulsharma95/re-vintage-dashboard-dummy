@@ -9,7 +9,7 @@ export default function DashboardCard(props) {
         <Card className={styles.dashboardCardMain}>
           <div className={`${styles.cardBody} ${styles.bgRed} py-2`}>
             <div className={`${styles.cardHead}`}>
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between align-items-center">
                 <h2>
                   {props.title1} <br /> {props.titleBr}
                 </h2>
@@ -42,17 +42,22 @@ export default function DashboardCard(props) {
         <Card className={styles.dashboardCardMain}>
           <div className={`${styles.cardBody} ${styles.bgBlack} py-2`}>
             <div className={`${styles.cardHead}`}>
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between align-items-center">
                 <h2>{props.title2}</h2>
                 {props.Dropdown && (
-                  <DropdownButton
-                    className={styles.dashboardDropdown}
-                    id="dropdown-basic-button"
-                    title="1 Month"
-                  >
-                    <Dropdown.Item href="#/action-1">Month 2</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Month 3</Dropdown.Item>
-                  </DropdownButton>
+                  <Dropdown className={styles.dashboardDropdown}>
+                    <Dropdown.Toggle
+                      className={styles.dashboardToggle}
+                      id="dropdown-basic-button"
+                    >
+                      1 Month
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu className={styles.dropdownOpenMennu}>
+                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 )}
               </div>
 
@@ -73,17 +78,22 @@ export default function DashboardCard(props) {
         <Card className={styles.dashboardCardMain}>
           <div className={`${styles.cardBody} ${styles.bgDarkGray} py-2`}>
             <div className={`${styles.cardHead}`}>
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between align-items-center">
                 <h2>{props.title3}</h2>
                 {props.Dropdown && (
-                  <DropdownButton
-                    className={styles.dashboardDropdown}
-                    id="dropdown-basic-button"
-                    title="1 Month"
-                  >
-                    <Dropdown.Item href="#/action-1">Month 2</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Month 3</Dropdown.Item>
-                  </DropdownButton>
+                  <Dropdown className={styles.dashboardDropdown}>
+                    <Dropdown.Toggle
+                      className={styles.dashboardToggle}
+                      id="dropdown-basic-button"
+                    >
+                      1 Month
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu className={styles.dropdownOpenMennu}>
+                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 )}
               </div>
 
@@ -97,17 +107,22 @@ export default function DashboardCard(props) {
         <Card className={styles.dashboardCardMain}>
           <div className={`${styles.cardBody} ${styles.bgBlack} py-2`}>
             <div className={`${styles.cardHead}`}>
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between align-items-center">
                 <h2>{props.title4}</h2>
                 {props.Dropdown && (
-                  <DropdownButton
-                    className={styles.dashboardDropdown}
-                    id="dropdown-basic-button"
-                    title="1 Month"
-                  >
-                    <Dropdown.Item href="#/action-1">Month 2</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Month 3</Dropdown.Item>
-                  </DropdownButton>
+                  <Dropdown className={styles.dashboardDropdown}>
+                    <Dropdown.Toggle
+                      className={styles.dashboardToggle}
+                      id="dropdown-basic-button"
+                    >
+                      1 Month
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu className={styles.dropdownOpenMennu}>
+                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 )}
               </div>
 

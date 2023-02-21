@@ -1,12 +1,26 @@
 @import '../../../styles/variables/colors';
 @import '../../../styles/variables//mixins';
 
-.toggleCardMain{
+.toggleCardMain {
 	background-color: #282828;
 	padding: 0 1rem;
+
 	.sliderRound {
 		display: block !important;
-		padding-left: 0;	
-	}	
-}
+		padding-left: 0;
 
+		input {
+			margin-left: 0;
+		}
+
+		input:checked {
+			background-color: $theme-green;
+			border-color: $theme-green;
+		}
+
+		label {
+			margin: 0 5px 0 10px;
+			font-size: 12px;
+		}
+	}
+}
