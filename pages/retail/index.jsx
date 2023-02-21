@@ -1,47 +1,57 @@
-import { Col, Row } from 'react-bootstrap';
-import { RiShareBoxFill } from 'react-icons/ri';
-import BikeCardRadio from '../../components/common/cardCheckbox';
-import Breadcrumb from '../../components/common/breadcrumbPrimary';
-import DashboardCard from '../../components/common/dashboardCard';
-import SortTabs from '../../components/common/sortTabs';
-import TabPrimary from '../../components/common/tabPrimary';
-import SearchPrimary from '../../components/common/searchPrimary';
-import FilterButton from '../../components/common/filterButton';
-import HeaderPrimary from '../../components/common/headerPrimary';
-import OutlineButton from '../../components/common/buttons/OutlineButton';
+import { Col, Row } from "react-bootstrap";
+import { RiShareBoxFill } from "react-icons/ri";
+import BikeCardRadio from "../../components/common/cardCheckbox";
+import Breadcrumb from "../../components/common/breadcrumbPrimary";
+import DashboardCard from "../../components/common/dashboardCard";
+import SortTabs from "../../components/common/sortTabs";
+import TabPrimary from "../../components/common/tabPrimary";
+import SearchPrimary from "../../components/common/searchPrimary";
+import FilterButton from "../../components/common/filterButton";
+import HeaderPrimary from "../../components/common/headerPrimary";
+import OutlineButton from "../../components/common/buttons/OutlineButton";
 
 export default function Retail() {
   const cardData = [
     {
-      imageUrl: '/images/bikeImage.png',
-      overDue: 'evolutionOver',
-      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
+      imageUrl: "/images/bikeImage.png",
+      overDue: "evolutionOver",
+      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
     },
     {
-      imageUrl: '/images/bikeImage2.png',
-      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
+      imageUrl: "/images/bikeImage2.png",
+      dealerLocation: "Neel Motors, Rohini Nagar, Delhi",
     },
     {
-      imageUrl: '/images/bikeImage3.png',
-      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
+      imageUrl: "/images/bikeImage3.png",
+      dealerLocation: "Neel Motors, Punjabi Bagh, Delhi",
     },
     {
-      imageUrl: '/images/bikeImage4.png',
-      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
+      imageUrl: "/images/bikeImage4.png",
+      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
     },
   ];
   return (
     <div>
       <Breadcrumb title="Retail" />
-      <HeaderPrimary 
-        headerClass="mb-2" 
-        title="Retail"
-      >
+      <HeaderPrimary headerClass="mb-2" title="Retail">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
         <SearchPrimary />
         <FilterButton />
       </HeaderPrimary>
-      <DashboardCard />
+      <DashboardCard
+        Dropdown
+        title1="Total"
+        description1="32"
+        bottomDescription1="Overall Growth"
+        title2="Content Approval Pending"
+        description2="12"
+        bottomDescription2="Received This Week"
+        title3="Content Upload Pending"
+        description3="8"
+        title4="Under Refurbishment"
+        description4="12"
+      />
+
       <TabPrimary
         title1="Content Approval Pending (12)"
         title2="Content Upload Pending (8)"

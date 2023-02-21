@@ -9,7 +9,7 @@ export default function DashboardCard(props) {
         <Card className={styles.dashboardCardMain}>
           <div className={`${styles.cardBody} ${styles.bgRed} py-2`}>
             <div className={`${styles.cardHead}`}>
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between align-items-center">
                 <h2>
                   {props.title1} <br /> {props.titleBr}
                 </h2>
@@ -42,7 +42,7 @@ export default function DashboardCard(props) {
         <Card className={styles.dashboardCardMain}>
           <div className={`${styles.cardBody} ${styles.bgBlack} py-2`}>
             <div className={`${styles.cardHead}`}>
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between align-items-center">
                 <h2>{props.title2}</h2>
                 {props.Dropdown && (
                   <DropdownButton
@@ -73,7 +73,7 @@ export default function DashboardCard(props) {
         <Card className={styles.dashboardCardMain}>
           <div className={`${styles.cardBody} ${styles.bgDarkGray} py-2`}>
             <div className={`${styles.cardHead}`}>
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between align-items-center">
                 <h2>{props.title3}</h2>
                 {props.Dropdown && (
                   <DropdownButton
@@ -97,7 +97,7 @@ export default function DashboardCard(props) {
         <Card className={styles.dashboardCardMain}>
           <div className={`${styles.cardBody} ${styles.bgBlack} py-2`}>
             <div className={`${styles.cardHead}`}>
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between align-items-center">
                 <h2>{props.title4}</h2>
                 {props.Dropdown && (
                   <DropdownButton
