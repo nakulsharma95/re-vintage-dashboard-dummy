@@ -28,21 +28,19 @@ function Demand() {
     },
   };
 
-  const labels = [
-    'Hunter 350',
-    'Classic 350',
-    'Scram 411',
-    'Meteor',
-    'Interceptor',
-    'Continental GT',
-    'Himalayan',
-    'Bullet 350',
-    'Bullet 350 ES',
-    'Meteor Fireball',
-  ];
-
   const barData = {
-    labels,
+    labels: [
+      'Hunter 350',
+      'Classic 350',
+      'Scram 411',
+      'Meteor',
+      'Interceptor',
+      'Continental GT',
+      'Himalayan',
+      'Bullet 350',
+      'Bullet 350 ES',
+      'Meteor Fireball',
+    ],
     datasets: [
       {
         label: 'Dataset 1',
@@ -58,6 +56,74 @@ function Demand() {
           '#F1DF67',
           '#F1DF67',
         ],
+      },
+    ],
+  };
+
+  // LIne CHart
+  const optionLineChart = {
+    responsive: true,
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        grid: {
+          border: {
+            dash: [2, 1],
+          },
+          color: '#575757',
+        },
+      },
+    },
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'top',
+        display: false,
+      },
+      title: {
+        display: false,
+        text: 'Chart.js Line Chart',
+      },
+    },
+  };
+
+  const lineChartData = {
+    labels: [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'June',
+      'July',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ],
+    datasets: [
+      {
+        label: 'Dataset 1',
+        borderColor: '#C93B2B',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        data: [65, 59, 80, 81, 56, 55, 40, 81, 56, 55, 40, 81, 56, 55, 40],
+      },
+      {
+        label: 'Dataset 2',
+        borderColor: '#52AF3C',
+        backgroundColor: 'rgba(53, 162, 235, 0.5)',
+        data: [45, 69, 20, 91, 106, 55, 20, 45, 69, 20, 91, 106, 55, 20],
+      },
+      {
+        label: 'Dataset 3',
+        borderColor: '#46a2da',
+        backgroundColor: 'rgba(53, 162, 235, 0.5)',
+        data: [15, 29, 10, 11, 30, 25, 80, 15, 29, 10, 11, 30, 25, 80],
       },
     ],
   };
@@ -142,7 +208,7 @@ function Demand() {
         </div>
 
         <div className={styles.dummyGraphBox}>
-          <LineChart />
+          <LineChart options={optionLineChart} data={lineChartData} />
         </div>
       </div>
 
