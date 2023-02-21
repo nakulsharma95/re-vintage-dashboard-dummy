@@ -10,11 +10,24 @@ function BikeCardRadio({
   isCheckBoxVisible,
   imageUrl,
   isBikeTagVisible,
+  bikeModal,
+  bikeRc,
+  bikekm,
+  bikeOwner,
+  bikeCc,
+  bikePrice,
+  bikeDealer,
+  dealerAddress,
+  creDetail,
+  creName,
+  creNumber,
   isOlxTagVisible,
   isBikeChassisVisible,
   dealerLocation,
   isButtonVisible,
   isCardVisible,
+  toggleLabal1,
+  toggleLabal2,
 }) {
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -57,31 +70,31 @@ function BikeCardRadio({
         )}
         <Card.Body className="px-0">
           <Card.Title className={styles.bkeName}>
-            2015 Classic 350 <span>- DL 6T AL 7314</span>
+            {bikeModal} <span> {bikeRc}</span>
           </Card.Title>
           <Row className={`${styles.bikeDetail} mx-0`}>
-            <Col className={styles.detailTxt}>43,384 km</Col>
-            <Col className={styles.detailTxt}>1st Owner</Col>
-            <Col className={styles.detailTxt}>350 CC</Col>
+            <Col className={styles.detailTxt}>{bikekm}</Col>
+            <Col className={styles.detailTxt}>{bikeOwner}</Col>
+            <Col className={styles.detailTxt}>{bikeCc}</Col>
           </Row>
-          <h4 className={styles.price}>₹1,15,000 - ₹1,25,000</h4>
+          <h4 className={styles.price}>{bikePrice}</h4>
           <p className={styles.dealer}>
-            Dealer: <span>(C2N0RJ20FC2N)</span>
+            Dealer: <span>{bikeDealer}</span>
           </p>
-          <span className={styles.dealerLocation}>{dealerLocation}</span>
+          <span className={styles.dealerLocation}>{dealerAddress}</span>
         </Card.Body>
       </Card>
       <Card className={styles.cardCreMain}>
         <Card.Body className="px-0">
           <div className={styles.creDetails}>
-            <h3>CRE Detail</h3>
+            <h3>{creDetail}</h3>
 
             <p className={`${styles.creInfo} mb-0`}>
-              Name:<span>John Watson</span>
+              Name:<span>{creName}</span>
             </p>
 
             <p className={`${styles.creInfo} mb-0`}>
-              Number:<span>+91 98765 43210</span>
+              Number:<span>{creNumber}</span>
             </p>
           </div>
           {isButtonVisible && (
@@ -93,7 +106,12 @@ function BikeCardRadio({
             </div>
           )}
         </Card.Body>
-        {isCardVisible && <ToggleSwitchCard />}
+        {isCardVisible && (
+          <ToggleSwitchCard
+            toggleLabal1="Inactive on OLX"
+            toggleLabal2="Active on Marketplace"
+          />
+        )}
       </Card>
     </>
   );

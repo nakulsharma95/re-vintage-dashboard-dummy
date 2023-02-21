@@ -1,10 +1,10 @@
-import { Card, Col, Row, DropdownButton, Dropdown } from 'react-bootstrap';
-import { TbTrendingUp } from 'react-icons/tb';
-import styles from './style.module.scss';
+import { Card, Col, Row, DropdownButton, Dropdown } from "react-bootstrap";
+import { TbTrendingUp } from "react-icons/tb";
+import styles from "./style.module.scss";
 
 export default function DashboardCard(props) {
   return (
-    <Row>
+    <Row className="mt-4">
       <Col xxl={3} lg={6} md={6}>
         <Card className={styles.dashboardCardMain}>
           <div className={`${styles.cardBody} ${styles.bgRed} py-2`}>
@@ -54,8 +54,12 @@ export default function DashboardCard(props) {
                     </Dropdown.Toggle>
                     <Dropdown.Menu className={styles.dropdownOpenMennu}>
                       <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">
+                        Another action
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">
+                        Something else
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
                 )}
@@ -90,8 +94,12 @@ export default function DashboardCard(props) {
                     </Dropdown.Toggle>
                     <Dropdown.Menu className={styles.dropdownOpenMennu}>
                       <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">
+                        Another action
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">
+                        Something else
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
                 )}
@@ -119,8 +127,12 @@ export default function DashboardCard(props) {
                     </Dropdown.Toggle>
                     <Dropdown.Menu className={styles.dropdownOpenMennu}>
                       <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">
+                        Another action
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">
+                        Something else
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
                 )}
