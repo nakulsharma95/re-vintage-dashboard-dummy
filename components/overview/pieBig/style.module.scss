@@ -1,12 +1,16 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
 .pieContainer {
 	width: 50%;
-	height: 20rem;
 	background-color: #282828;
 	padding: 1rem;
 	margin: 1rem 0;
+
 	h5 {
 	  font-size: 18px;
 	  font-weight: normal;
+	  margin-bottom: 20px;
 	}
   
 	.pieChart{

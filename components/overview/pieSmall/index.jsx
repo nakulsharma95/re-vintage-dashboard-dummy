@@ -1,54 +1,48 @@
 import React from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
-import PieChart from '../../charts/pieChart';
+import DoughnutChart from '../../charts/doughnutChart';
 
 import styles from './style.module.scss';
 
 function PieSmall(props) {
-  // Pie Chart Here
-  const pieOptions = {
-    title: '',
-    backgroundColor: 'transparent',
-    pieHole: 0.5,
-    pieSliceText: 'none',
-    slices: [
-      {
-        color: '#D2635B',
+  const optionsDoughnut = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: true,
+        position: 'bottom',
+        labels: {
+          fontSize: 20,
+          color: 'white',
+        },
       },
+    },
+  };
+  const labels = ['From Web', 'From OLX'];
+  const doughnutChartData = {
+    labels,
+    datasets: [
       {
-        color: '#F1DF67',
+        label: 'My First Dataset',
+        data: [100, 300],
+        backgroundColor: ['#F1DF67', '#D2635B'],
+        hoverOffset: 4,
+        borderColor: ['#686868'],
+        borderWidth: 0.2,
       },
     ],
-    pieSliceBorderColor: 'transparent',
-    legend: {
-      position: 'bottom',
-      alignment: 'left',
-      textStyle: {
-        color: 'white',
-        fontSize: 14,
-      },
-    },
-    tooltip: {
-      showColorCode: true,
-    },
-    fontSize: 12,
   };
-
-  const pieData = [
-    ['Item', 'Numbers'],
-    ['From Web 1507', 10000],
-    ['MIY 74', 6000],
-  ];
   return (
     <div className={styles.pieContainer}>
       {props.withouticon && <h5>Source</h5>}
       {props.icon && (
         <h5>
-          Procured <IoIosArrowForward />{' '}
+          Procured <IoIosArrowForward />
         </h5>
       )}
 
-      <PieChart chartData={pieData} pieOptions={pieOptions} />
+      <DoughnutChart options={optionsDoughnut} data={doughnutChartData} />
     </div>
   );
 }

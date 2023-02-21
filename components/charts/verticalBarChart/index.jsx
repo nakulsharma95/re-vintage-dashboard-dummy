@@ -1,16 +1,27 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import { Chart } from 'react-google-charts';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 function VerticalBarChart(props) {
-  return (
-    <Chart
-      width="100%"
-      data={props.data}
-      chartType="ColumnChart"
-      options={props.options}
-      loader={<div>Loading Chart...</div>}
-    />
-  );
+  return <Bar options={props.options} data={props.data} />;
 }
 
 export default VerticalBarChart;

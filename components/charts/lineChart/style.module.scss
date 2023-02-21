@@ -1,0 +1,16 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.lineChart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 30px 0 20px;
+
+  .title4 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}

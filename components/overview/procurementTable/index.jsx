@@ -8,7 +8,7 @@ import styles from './style.module.scss';
 function ProcurementTable() {
   return (
     <div className={`${styles.leadTable}  dashboardTable`}>
-      <Table striped variant="dark">
+      <Table striped variant="dark" className={styles.tableStyle}>
         <tbody>
           <tr>
             <td className={styles.BoldHead}>

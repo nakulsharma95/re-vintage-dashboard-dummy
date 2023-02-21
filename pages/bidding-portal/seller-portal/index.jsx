@@ -67,7 +67,7 @@ export default function ClosedBids() {
       </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-2" />
-      <SortTabs selectAllCheck />
+      <SortTabs selectAllCheck isCheckInput isSubmitBtn />
       <Row className="mb-3">
         {activeBikeData.map((item) => (
           <Col md={3}>

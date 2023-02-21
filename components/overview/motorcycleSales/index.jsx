@@ -4,60 +4,82 @@ import HorizontalBarChart from '../../charts/horizontalBarChart';
 
 import styles from './style.module.scss';
 
-const data = [
-  [
-    'Element',
-    'Density',
-    { role: 'style' },
-    {
-      sourceColumn: 0,
-      role: 'annotation',
-      type: 'string',
-      calc: 'stringify',
-    },
-  ],
-  ['', 100, '#F28823', null],
-  ['', 90, '#F0CB2D', null],
-  ['', 80, '#F5B82A', null],
-  ['', 70, '#403E3E', null],
-  ['', 60, '#DA291C', null],
-  ['', 21.45, '#AAAAAA', null],
-];
-
-const options = {
-  title: '',
-  bar: { groupWidth: '70%' },
-  legend: { position: 'none' },
-  backgroundColor: 'transparent',
-  hAxis: {
-    gridlines: {
-      interval: 0,
-    },
-    title: '',
-    titleTextStyle: {
-      color: '#fff',
-    },
-    minorGridlines: {
-      color: '#494949',
-    },
-    textStyle: { color: '#FFF' },
-  },
-  vAxis: {
-    title: '',
-    titleTextStyle: {
-      color: '#fff',
-    },
-    gridlines: {
-      interval: 0,
-    },
-    minValue: 0,
-    minorGridlines: {
-      color: '#494949',
-    },
-    textStyle: { color: '#FFF' },
-  },
-};
 function MotorcycleSales() {
+  const horizontalOptions = {
+    indexAxis: 'y',
+    elements: {
+      bar: {
+        borderWidth: 0,
+      },
+    },
+    responsive: true,
+    scales: {
+      // to remove the labels
+      x: {
+        ticks: {
+          display: false,
+          beginAtZero: true,
+        },
+
+        // to remove the x-axis grid
+        grid: {
+          drawBorder: false,
+          display: false,
+        },
+      },
+      // to remove the y-axis labels
+      y: {
+        ticks: {
+          display: false,
+          beginAtZero: true,
+        },
+        // to remove the y-axis grid
+        grid: {
+          drawBorder: false,
+          display: false,
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        position: 'right',
+        display: false,
+      },
+      title: {
+        display: false,
+        text: '',
+      },
+    },
+  };
+
+  const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+  ];
+
+  const horizontalBarChartData = {
+    labels,
+    datasets: [
+      {
+        label: '',
+        data: [200, 180, 150, 120, 90, 50],
+        backgroundColor: [
+          '#F28823',
+          '#F0CB2D',
+          '#F5B82A',
+          '#403E3E',
+          '#DA291C',
+          '#AAAAAA',
+        ],
+      },
+    ],
+  };
+
   return (
     <Card className={styles.card}>
       <div className={`${styles.cardHead} flex-column`}>
@@ -66,8 +88,8 @@ function MotorcycleSales() {
           <AiOutlineDownload className={styles.cardIcon} />
         </div>
         <HorizontalBarChart
-          data={data}
-          options={options}
+          data={horizontalBarChartData}
+          options={horizontalOptions}
           containerClassName={styles.horizontalChartStyle}
         />
       </div>

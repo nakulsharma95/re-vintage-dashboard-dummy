@@ -1,14 +1,17 @@
-.leads {
-  box-sizing: border-box;
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.leadSection {
+  margin-bottom: 20px;
 
   .leadsTop {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: 0px 1.5rem;
-    .leadTable {
-      Table {
-        // height: 20rem;
+    display: flex;
+    gap: 0px 24px;
+    margin-bottom: 20px;
 
+    .leadTable {
+      flex-grow: 2;
+      .tableStyle {
         thead,
         tbody,
         tfoot,
@@ -18,6 +21,7 @@
           border: none;
           padding: 1.2rem 1.5rem;
         }
+        
         tbody {
           padding: 1rem;
           .BoldHead {
@@ -38,13 +42,12 @@
   }
 
   .leadsMiddle {
-    display: grid;
-    grid-template-columns: 4fr 1fr 1fr;
-    gap: 0px 1.5rem;
+    display: flex;
+    gap: 24px;
 
     .leadMidTable {
+      flex-grow: 2;
       Table {
-        // height: 20rem;
         text-align: center;
 
         thead,
