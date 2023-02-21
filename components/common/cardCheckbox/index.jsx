@@ -46,7 +46,7 @@ function BikeCardRadio({
             overlay={renderTooltip}
             className="d-inline-flex align-items-center"
           >
-            <Button>2</Button>
+            <Button className={styles.olxBtn}>2</Button>
           </OverlayTrigger>
         </div>
       )}

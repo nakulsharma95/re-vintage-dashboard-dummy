@@ -1,0 +1,9 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.doughnutChart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

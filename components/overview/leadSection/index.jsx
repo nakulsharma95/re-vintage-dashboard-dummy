@@ -7,17 +7,17 @@ import DealClouser from '../dealClouser';
 
 function LeadSection() {
   return (
-    <div className={styles.leads}>
+    <div className={styles.leadSection}>
       <div className={styles.leadsTop}>
         <PieSmall withouticon />
         <div className={`${styles.leadTable}  dashboardTable`}>
-        <ProcurementTable />
+          <ProcurementTable />
         </div>
       </div>
+
       <div className={styles.leadsMiddle}>
         <div className={`${styles.leadMidTable} dashboardTable leadTable`}>
-          <DealClouser/>
-          
+          <DealClouser />
         </div>
 
         <PieSmall icon />

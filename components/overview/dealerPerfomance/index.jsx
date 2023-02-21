@@ -17,7 +17,7 @@ function DealerPerfomance() {
 
       <div className={styles.cardBody}>
         <div className="dashboardTable">
-          <Table striped variant="dark">
+          <Table striped variant="dark" className={styles.tableStyle}>
             <tbody>
               <tr>
                 <td>Neel Motors</td>

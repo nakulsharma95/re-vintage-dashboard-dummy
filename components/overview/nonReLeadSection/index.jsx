@@ -7,12 +7,12 @@ import styles from './style.module.scss';
 
 function NonReLeadSection() {
   return (
-    <div className={styles.NonLead}>
+    <div className={styles.nonLeadSection}>
       <h4>Non-Re Lead</h4>
-      <div className={styles.NonLead_top}>
+      <div className={styles.nonLeadtop}>
         <PieBig />
-        <div className={`${styles.NonleadTable}  dashboardTable`}>
-          <Table striped bordered variant="dark">
+        <div className={`${styles.nonleadTable}  dashboardTable`}>
+          <Table striped bordered variant="dark" className={styles.tableStyle}>
             <thead>
               <tr>
                 <th colSpan={5}>Non-RE VDMP Enquiries</th>
@@ -66,9 +66,9 @@ function NonReLeadSection() {
           </Table>
         </div>
       </div>
-      <div className={styles.NonLead_bottom}>
+      <div className={styles.nonLeadBottom}>
         <PieBig />
-        <div className={styles.NonLead_graph} />
+        <div className={styles.nonLeadGraph} />
       </div>
     </div>
   );

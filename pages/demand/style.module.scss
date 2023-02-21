@@ -1,28 +1,35 @@
 @import '../../styles/variables/colors';
 @import '../../styles/variables//mixins';
 
-.demandTitle{
-	font-size: 18px;
+.demandTitle {
+  font-size: 18px;
 }
-.demandContainer{
-	background-color: $gray-28;
-	padding: 15px;
-	margin: 15px 0;
-	margin-bottom: 40px;
-	&:last-child{
-		margin-bottom: 15px;
-	}
+.demandContainer {
+  background-color: $gray-28;
+  padding: 15px;
+  margin: 15px 0;
+  margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 15px;
+  }
 }
-.demandHead{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.dummyGraphBox{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 200px;
+.demandHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.wishListedGraphBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 339px;
+  margin: 25px 0;
+}
+
+.dummyGraphBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
