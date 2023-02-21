@@ -1,15 +1,67 @@
 import React from 'react';
-import OutlineDropdown from '../../components/common/buttons/OutlineDropdown';
-import Breadcrumb from '../../components/common/breadcrumbPrimary';
-import styles from "./style.module.scss";
-import DemandNav from '../../components/demand/demandNav';
-import DemandPrimaryCard from '~/components/demand/demandPrimaryCard';
 import { Col, Row } from 'react-bootstrap';
-import OutlineButton from '../../components/common/buttons/OutlineButton';
 import { RiShareBoxFill } from 'react-icons/ri';
 import { BiDownload } from 'react-icons/bi';
+import OutlineDropdown from '../../components/common/buttons/OutlineDropdown';
+import Breadcrumb from '../../components/common/breadcrumbPrimary';
+import styles from './style.module.scss';
+import DemandNav from '../../components/demand/demandNav';
+import DemandPrimaryCard from '../../components/demand/demandPrimaryCard';
+import OutlineButton from '../../components/common/buttons/OutlineButton';
+import VerticalBarChart from '../../components/charts/verticalBarChart';
+import LineChart from '../../components/charts/lineChart';
 
 function Demand() {
+  // bar Chart Here
+  const barChartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'top',
+        display: false,
+      },
+      title: {
+        display: false,
+        text: '',
+      },
+    },
+  };
+
+  const labels = [
+    'Hunter 350',
+    'Classic 350',
+    'Scram 411',
+    'Meteor',
+    'Interceptor',
+    'Continental GT',
+    'Himalayan',
+    'Bullet 350',
+    'Bullet 350 ES',
+    'Meteor Fireball',
+  ];
+
+  const barData = {
+    labels,
+    datasets: [
+      {
+        label: 'Dataset 1',
+        data: [500, 420, 390, 380, 320, 280, 260, 200, 160, 140],
+        backgroundColor: [
+          '#F1DF67',
+          '#F1DF67',
+          '#F2AE00',
+          '#F1DF67',
+          '#F1DF67',
+          '#F1DF67',
+          '#F1DF67',
+          '#F1DF67',
+          '#F1DF67',
+        ],
+      },
+    ],
+  };
+
   const dropdownList = [
     {
       dropdownTitle: 'This Year',
@@ -22,10 +74,8 @@ function Demand() {
     {
       dropdownTitle: 'City',
       dropdownMenuTitle: 'Delhi',
-      dropdownMenuTitle: 'Chennai',
     },
   ];
-
 
   const cardList = [
     {
@@ -80,17 +130,20 @@ function Demand() {
           </div>
         </div>
 
-        <div className={styles.dummyGraphBox}>Garph Here...</div>
+        <div className={styles.wishListedGraphBox}>
+          <VerticalBarChart data={barData} options={barChartOptions} />
+        </div>
       </div>
 
       <div className={styles.demandTitle}>Total Leads</div>
       <div className={styles.demandContainer}>
         <div className={styles.demandHead}>
           <div className={styles.title}>Total Leads</div>
-
         </div>
 
-        <div className={styles.dummyGraphBox}>Garph Here...</div>
+        <div className={styles.dummyGraphBox}>
+          <LineChart />
+        </div>
       </div>
 
       <div className={styles.demandTitle}>All Time Favourites</div>

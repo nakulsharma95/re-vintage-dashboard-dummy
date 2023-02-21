@@ -516,8 +516,12 @@ h6 {
   border-color: red;
 }
 
-.sortText {
-  font-size: 14px;
-  margin-right: 8px;
-  color: $gray-cb;
+.sortText{
+	font-size: 14px;
+	margin-right: 8px;
+	color: $gray-cb;
+}
+
+.table-dark {
+  margin: 0;
 }

@@ -77,42 +77,38 @@ function NonRe() {
 
   // bar Chart Here
   const barChartOptions = {
-    title: '',
-    titlePosition: 'none',
-    backgroundColor: '',
-    legend: 'none',
-    chartArea: { height: 170 },
-    hAxis: {
-      title: '',
-      titleTextStyle: {
-        color: '#fff',
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'top',
+        display: false,
       },
-      minorGridlines: {
-        color: '#494949',
+      title: {
+        display: false,
+        text: '',
       },
-      textStyle: { color: '#FFF' },
-    },
-    vAxis: {
-      title: '',
-      titleTextStyle: {
-        color: '#fff',
-      },
-      gridlines: { color: '#494949' },
-      minValue: 0,
-      minorGridlines: {
-        color: '#494949',
-      },
-      textStyle: { color: '#FFF' },
     },
   };
-  const barData = [
-    ['Year', 'Visitations', { role: 'style' }],
-    ['Bajaj', 100, 'color: #EE0000'],
-    ['TVS', 84, 'color: #F2AE00'],
-    ['Honda', 76, 'color: #FF8200'],
-    ['Hero', 52, 'color: #E25B56'],
-    ['Others', 48, 'color: #707070'],
-  ];
+
+  const labels = ['Bajaj', 'TVS', 'Honda', 'Hero', 'Others'];
+
+  const barData = {
+    labels,
+    datasets: [
+      {
+        label: 'Dataset 1',
+        data: [500, 420, 390, 380, 320],
+        backgroundColor: [
+          '#EE0000',
+          '#F2AE00',
+          '#FF8200',
+          '#E25B56',
+          '#403E3E',
+        ],
+      },
+    ],
+  };
   return (
     <>
       <Breadcrumb title="Retail" addmoretitle="Non-RE" />
