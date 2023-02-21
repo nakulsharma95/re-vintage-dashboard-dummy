@@ -1,0 +1,20 @@
+// variables
+@import "../../styles/variables/colors";
+@import "../../styles/variables//mixins";
+
+// Home Page Style
+.homepageStyle {
+  .titleCustomStyle {
+    color: $white;
+  }
+
+  .cardGridLayoutStyle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10.33px;
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
