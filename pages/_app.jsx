@@ -11,14 +11,17 @@ import 'slick-carousel/slick/slick-theme.css';
 
 // Styles here
 import '../styles/theme.scss';
+import Login from './login';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Provider store={store}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </Provider>
+    <>
+      <Provider store={store}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>        
+      </Provider>
+    </>
   );
 }
 

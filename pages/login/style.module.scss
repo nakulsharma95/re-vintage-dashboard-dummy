@@ -1,0 +1,131 @@
+@import "../../styles/variables/colors";
+@import "../../styles/variables//mixins";
+
+.loginMain{
+	background-image: url('/images/login-bg.jpg');
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	position: relative;
+	&::before{
+		content: '';
+		background-color: rgba(0,0,0,0.35);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+	.loginFormContainer{
+		background-color: $gray-3;
+		padding: 15px 80px;
+		width: 100%;
+		max-width: 566px;
+		height: 100vh;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 9;
+		display: flex;
+		align-items: center;
+		.loginFormCols{
+			background-color: $white;
+			padding: 35px;
+			width: 100%;
+			border-radius: 2px;
+			.loginLogo{
+				width: 100%;
+				max-width: 236px;
+				margin: auto;
+			}
+		}
+		.loginForm{
+			margin-top: 70px;
+			.loginFormGroup{
+				position: relative;
+				margin-bottom: 35px;
+				.loginIcons{
+					position: absolute;
+					top: 7px;
+					left: 0;
+				}
+				input{
+					border: none;
+					border-bottom: 2px solid $gray-3;
+					border-radius: 0;
+					color: $black;
+					font-weight: 600;
+					font-size: 12px;
+					padding: 10px;
+					padding-left: 28px;
+					&::placeholder{
+						color: $black;
+					}
+					&:focus{
+						outline: none;
+						box-shadow: none;
+					}
+					&:focus::placeholder{
+						opacity: 0;
+					}
+				}
+			}			
+			button.submitBtn{
+				background-color: $white;
+				border: 1px solid $black;
+				border-radius: 4px;
+				font-size: 12px;
+				color: $black;
+				padding: 8px 20px;
+				font-weight: 600;
+				margin-top: 50px;
+				transition: all 0.5s;
+				&:hover{
+					background-color: $theme-red-da;
+					border-color: $theme-red-da;
+					color: $white;
+				}
+			}
+			.eyeIcon{
+				padding: 0;
+				border: none;
+				font-size: 18px;
+				color: $theme-red-da;
+				position: absolute;
+				right: 10px;
+				top: 7px;
+				background-color: transparent;
+			}
+		}
+
+		.forgotPass{
+			margin-top: 80px;
+			text-align: center;
+			position: relative;
+			&::before{
+				content: '';
+				width: 100%;
+				height: 1px;
+				background-color: $gray-3;
+				position: absolute;
+				top: 11px;
+				left: 50%;
+				transform: translate(-50%);
+				z-index: 1;
+			}
+			a{
+				color: $black-40;
+				text-decoration: none;
+				font-size: 12px;
+				font-weight: 600;
+				display: inline-block;
+				background-color: $white;
+				z-index: 9;
+				position: relative;
+				padding: 0 8px;
+			}
+		}
+	}
+}
