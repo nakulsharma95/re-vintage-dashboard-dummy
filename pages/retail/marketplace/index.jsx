@@ -64,6 +64,17 @@ export default function MarketPlace() {
         {cardData.map((item) => (
           <Col xxl={3} xl={4} lg={6} key={item.id}>
             <BikeCardRadio
+              bikeModal="2015 Classic 350"
+              bikeRc="-DL6TAL7314"
+              bikekm="43,384 km"
+              bikeOwner="1st Owner"
+              bikeCc="350 CC"
+              bikePrice="₹ 1,25,000.00"
+              bikeDealer="(C2N0RJ20FC2N)"
+              dealerAddress="Neel Motors, Lajpat Nagar, Delhi"
+              creDetail="CRE Detail"
+              creName="John Watson"
+              creNumber="+91 98765 43210"
               isCardVisible
               isCheckBoxVisible
               isBikeTagVisible={false}

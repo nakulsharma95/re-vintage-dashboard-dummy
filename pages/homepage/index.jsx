@@ -14,7 +14,7 @@ export default function Homepage() {
   return (
     <div className={style.homepageStyle}>
       <HeaderPrimary
-        headerClass="mb-5"
+        headerClass=""
         title="Welcome to Your Inventory Dashboard"
         subTitle="Here you will see the most latest update"
       >
