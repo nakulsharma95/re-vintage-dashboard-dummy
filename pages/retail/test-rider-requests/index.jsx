@@ -27,7 +27,8 @@ export default function TestRiderRequests() {
       <CompleteBikeDetail
         isEvalBtnVisible={false}
         isCallerBtnVisible
-        isEnquiryNumVisible
+        isEnquiryNumVisible={true}
+        
       />
     </div>
   );

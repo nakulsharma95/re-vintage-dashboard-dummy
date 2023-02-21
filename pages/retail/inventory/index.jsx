@@ -53,14 +53,19 @@ export default function Inventory() {
         title4="Under Refurbishment"
         description4="12"
       />
-
       <TabPrimary
         title1="Content Approval Pending (12)"
         title2="Content Upload Pending (8)"
         title3="Under Refurbishment"
         title4="Pending Evaluation (15)"
       />
-      <SortTabs selectAllCheck approveBtn isSortTabBox />
+      <SortTabs
+        selectAllCheck
+        approveBtn
+        isSortTabBox
+        isCheckInput
+        sortTabTitle="12 Result Found"
+      />
 
       <Row>
         {cardData.map((item) => (

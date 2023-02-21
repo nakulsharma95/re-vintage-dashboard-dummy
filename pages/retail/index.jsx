@@ -57,7 +57,12 @@ export default function Retail() {
         title3="Under Refurbishment"
         title4="Pending Evaluation (15)"
       />
-      <SortTabs selectAllCheck />
+         <SortTabs
+        selectAllCheck
+        isSortTabBox
+        isCheckInput
+        sortTabTitle="12 Result Found"
+      />
       <Row>
         {cardData.map((item) => (
           <Col xxl={3} xl={4} lg={6} key={item.id}>
