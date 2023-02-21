@@ -58,7 +58,7 @@ export default function MarketPlace() {
         title2="Inactive (12)"
         title3="OLX Listing (4)"
       />
-      <SortTabs selectAllCheck approveBtn moveToOlx />
+      <SortTabs selectAllCheck isCheckInput isSubmitBtn approveBtn moveToOlx sortTabTitle="12 Result Found" />
 
       <Row>
         {cardData.map((item) => (

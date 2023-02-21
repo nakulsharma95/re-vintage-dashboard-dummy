@@ -5,6 +5,7 @@ import ToggleSwitchCard from "~/components/retails/toggleSwitchCard";
 import ArrowButton from "../buttons/ArrowButton";
 import CustomCheckBox from "../customCheckBox";
 import styles from "./style.module.scss";
+import { BiRupee } from 'react-icons/bi';
 
 function BikeCardRadio({
   isCheckBoxVisible,
@@ -77,7 +78,7 @@ function BikeCardRadio({
             <Col className={styles.detailTxt}>{bikeOwner}</Col>
             <Col className={styles.detailTxt}>{bikeCc}</Col>
           </Row>
-          <h4 className={styles.price}>{bikePrice}</h4>
+          <h4 className={styles.price}><BiRupee size={21} />{bikePrice}</h4>
           <p className={styles.dealer}>
             Dealer: <span>{bikeDealer}</span>
           </p>

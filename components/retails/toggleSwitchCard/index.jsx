@@ -18,7 +18,7 @@ export default function ToggleSwitchCard(props) {
             className={styles.sliderRound}
             id="switchEnabled"
             type="switch"
-            label={props.toggLelabal1}
+            label={props.toggleLabal2}
           />
         </Card.Body>
       </Card>

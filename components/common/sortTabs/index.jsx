@@ -1,21 +1,21 @@
-import React from 'react';
-import { Col, Button } from 'react-bootstrap';
+import React from "react";
+import { Col, Button } from "react-bootstrap";
 import {
   BiGridAlt,
   BiListUl,
   BiCheck,
   BiChevronDown,
   BiErrorAlt,
-} from 'react-icons/bi';
-import CustomCheckBox from '../customCheckBox';
-import styles from './style.module.scss';
+} from "react-icons/bi";
+import CustomCheckBox from "../customCheckBox";
+import styles from "./style.module.scss";
 
 function SortTabs(props) {
   return (
     <Col md={12} className={styles.sortTabMain}>
       {props.selectAllCheck ? (
         <div className={styles.sortTabCheck}>
-          <h5 className={styles.tabCheckTitle}>25 Bids Available</h5>
+          <h5 className={styles.tabCheckTitle}>{props.sortTabTitle}</h5>
           {props.isCheckInput && (
             <div className="mx-3">
               <CustomCheckBox checkTitle="Select all -" />

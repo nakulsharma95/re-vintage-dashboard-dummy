@@ -27,7 +27,7 @@ ChartJS.register(
 
 function DoughnutChart(props) {
   return (
-    <div className={styles.pieChart}>
+    <div className={styles.doughnutChart}>
       <Doughnut options={props.options} data={props.data} width="100%" />
     </div>
   );
