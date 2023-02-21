@@ -279,7 +279,6 @@ h6 {
   }
 }
 
-
 // toggleSwitch start
 // .style_sliderRound__yX05D .form-check-input:checked {
 //   background-color: $theme-green !important;
@@ -350,7 +349,6 @@ h6 {
     border: 0;
 
     .react-calendar__navigation {
-
       .react-calendar__navigation__prev2-button,
       .react-calendar__navigation__next2-button {
         display: none;
@@ -403,8 +401,6 @@ h6 {
         }
       }
     }
-
-
   }
 }
 
@@ -434,7 +430,7 @@ h6 {
   }
 }
 
-// Overview Dashbord progress bar 
+// Overview Dashbord progress bar
 
 // Overview DefaultTab
 .defaultTab {
@@ -442,7 +438,7 @@ h6 {
     border: 1px solid $gray-a;
 
     .nav-link {
-      color: #A7A7A7;
+      color: #a7a7a7;
       border-radius: 0;
       width: 100%;
       display: flex;
@@ -466,12 +462,12 @@ h6 {
   }
 }
 
-.dashboardTable .table-striped>tbody>tr:nth-of-type(odd)>* {
+.dashboardTable .table-striped > tbody > tr:nth-of-type(odd) > * {
   --bs-table-accent-bg: #282828;
-  color: #BFBFBF;
+  color: #bfbfbf;
 }
 
-.dashboardTable .table> :not(caption)>*>* {
+.dashboardTable .table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
   background-color: #181818 !important;
   border-bottom-width: none;
@@ -490,8 +486,6 @@ h6 {
 .bgblack40 {
   background-color: $black-40;
 }
-
-
 
 // Header Section style
 .header-section {
@@ -532,6 +526,62 @@ h6 {
 
 .table-dark {
   margin: 0;
+}
+
+// primary-accordion-style
+.primary-accordion-style {
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    background: none;
+  }
+
+  .accordion-item {
+    border: none;
+    border-radius: 0;
+  }
+
+  .accordion-header {
+    border: none;
+    overflow: hidden;
+  }
+
+  .accordion-collapse {
+    border: none;
+  }
+
+  .accordion-item:last-of-type .accordion-collapse {
+    border: none;
+    border-radius: 0;
+  }
+
+  .accordion-button:not(.collapsed) {
+    box-shadow: none;
+  }
+
+  .accordion-button {
+    background-color: $gray-2;
+    border-radius: 0 !important;
+    color: $white;
+    padding: 20px;
+    font-size: 16px;
+
+    &:focus {
+      box-shadow: none;
+      outline: 0;
+    }
+
+    &::after {
+      filter: contrast(0) brightness(100);
+    }
+  }
+
+  .accordion-body {
+    background-color: $gray-2;
+    color: $gray-8;
+    font-size: 16px;
+  }
 }
 
 .re-detailFootBg{
