@@ -5,10 +5,12 @@ import styles from './style.module.scss';
 function DealClouser() {
   return (
     <div className={`${styles.leadMidTable} dashboardTable leadTable`}>
-      <Table striped bordered variant="dark">
+      <Table striped bordered variant="dark" className={styles.tableStyle}>
         <thead>
           <tr>
-            <th rowSpan={2} className="pb-4">Deal Clouser</th>
+            <th rowSpan={2} className="pb-4">
+              Deal Clouser
+            </th>
             <th colSpan={2}>Dealer</th>
             <th colSpan={2}>Seller Portal</th>
           </tr>

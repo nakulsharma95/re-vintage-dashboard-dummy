@@ -1,8 +1,10 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
 .pieContainer {
-  // width: 20%;
-  height: 20rem;
   background-color: #282828;
   padding: 1rem;
+  max-width: 235px;
   h5 {
     // font: normal normal normal 16px/20px Guardian Sans;
     font-size: 18px;

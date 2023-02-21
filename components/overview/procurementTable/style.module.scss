@@ -1,7 +1,8 @@
-.leadTable {
-  Table {
-    height: 20rem;
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
 
+.leadTable {
+  .tableStyle {
     thead,
     tbody,
     tfoot,
