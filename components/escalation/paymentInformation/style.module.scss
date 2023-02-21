@@ -1,0 +1,57 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.paymentInformation{
+	display: flex;
+	background-color: #000000;
+	padding: 1rem 1.5rem;
+	box-sizing: border-box;
+
+	.transerfer{
+		width: 67%;
+		border-right: 1px solid #707070;
+		margin-right: 2rem;
+		h6{
+			font-size: 14px;
+			color: $gray-cb;
+			font-weight: 300;
+			text-decoration: underline;
+			margin-bottom: 1rem;
+		}
+		p{
+			font-size: 14px;
+			color: $gray-cb;
+
+			span{
+				color: #F3F3F3;
+				margin: 0 2rem;
+			}
+		}
+	
+	}
+	.received{
+		width: 30%;
+		h6{
+			font-size: 14px;
+			color: $gray-cb;
+			font-weight: 300;
+			text-decoration: underline;
+			margin-bottom: 1rem;
+		}
+		p{
+			font-size: 14px;
+			color: $gray-cb;
+
+			span{
+				color: #F3F3F3;
+				margin: 0 1rem;
+			}
+		}
+	}
+}
+
+.refNo{
+	background-color: #282828;
+	padding: 0.5rem;
+	margin: 0rem !important;
+}
