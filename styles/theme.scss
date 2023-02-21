@@ -477,10 +477,6 @@ h6 {
   border-bottom-width: none;
 }
 
-// .dashboardTable thead, tbody, tfoot, tr, td, th {
-//   border: none;
-// }
-
 // Card Bg Colour
 
 .bgGray18 {
@@ -516,6 +512,18 @@ h6 {
   border-color: red;
 }
 
+
+// Review slider 
+.review_slider .slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: #DA291C;
+  font-size: 9px;
+}
+.review_slider .slick-dots li button:before {
+  opacity: .75;
+  color: #656565;
+}
+
 .sortText{
 	font-size: 14px;
 	margin-right: 8px;
@@ -524,4 +532,15 @@ h6 {
 
 .table-dark {
   margin: 0;
+}
+
+.re-detailFootBg{
+  background-color: $black;
+  .col-md-4{
+    &:last-child{
+      div{
+        border-right: none;
+      }
+    }
+  }
 }

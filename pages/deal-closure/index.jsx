@@ -29,18 +29,22 @@ function DealClosure() {
   return (
     <>
       <Breadcrumb title="Deal Closure" />
-      <HeaderPrimary 
-        headerClass="mb-2" 
-        title="Deal Closure" 
+      <HeaderPrimary
+        headerClass="mb-2"
+        title="Deal Closure"
         subTitle="Please fill all the necessary details"
       >
         <SearchPrimary />
         <FilterButton />
       </HeaderPrimary>
-      
+
       <div className="bottom-white-border" />
       <Row>
-        <ViewAll title="Under Negotiation" />
+        <ViewAll
+          title="Under Negotiation"
+          viewAllBtn
+          viewAllClass="mt-3 mb-3"
+        />
         {cardData.map((item, index) => (
           <Col md={3} key={index}>
             <CloserBikeCard
@@ -53,13 +57,21 @@ function DealClosure() {
             />
           </Col>
         ))}
-        <ViewAll title="Procured Motorcycle" />
+        <ViewAll
+          title="Procured Motorcycle"
+          viewAllBtn
+          viewAllClass="mt-3 mb-3"
+        />
         {cardData.map((item, index) => (
           <Col md={3} key={index}>
             <CloserBikeCard data={item} rcTransfer cardTag isOwner price />
           </Col>
         ))}
-        <ViewAll title="Dropped" />
+        <ViewAll
+          title="Dropped"
+          viewAllBtn
+          viewAllClass="mt-3 mb-3"
+        />
         {cardData.map((item, index) => (
           <Col md={3} key={index}>
             <CloserBikeCard

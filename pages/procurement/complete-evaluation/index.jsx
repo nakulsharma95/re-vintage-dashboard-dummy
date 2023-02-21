@@ -23,7 +23,7 @@ function CompleteEvaluation() {
       <Breadcrumb title="Procurement" addmoretitle="Complete Evaluation" />
       <HeaderPrimary headerClass="mb-2" title="Completed Evaluation">
         <OutlineButton
-          title="Scheduled Evaluation"
+          title="Export Data"
           rightIcon={<RiShareBoxFill />}
           className="mr-2"
         />

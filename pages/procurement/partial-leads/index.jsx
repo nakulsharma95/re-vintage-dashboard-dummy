@@ -65,7 +65,10 @@ export default function PartialLeads() {
         title4="Self consume(By dealer)"
       />
       <Row>
-        <ViewAll title="3 Leads Available" />
+        <ViewAll 
+          title="3 Leads Available" 
+          viewAllClass="mb-4 mt-0"
+        />
         {cardData.map((item) => (
           <Col md={4}>
             <DetailCard

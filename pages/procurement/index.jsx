@@ -13,7 +13,7 @@ function Procurement() {
     {
       ownerName: 'Rishab Sharma',
       contact:'+91 9876543219',
-      email:'john#gmail.com',
+      email:'john@gmail.com',
       pinCode:'110014',
       prmSource:'MIY',
       secSource:'Google',
@@ -21,7 +21,7 @@ function Procurement() {
     {
       ownerName: 'Rishab kumar',
       contact:'+91 9876543219',
-      email:'john#gmail.com',
+      email:'john@gmail.com',
       pinCode:'110014',
       prmSource:'MIY',
       secSource:'Google',
@@ -29,7 +29,7 @@ function Procurement() {
     {
       ownerName: 'Rishab Sharma',
       contact:'+91 9876543219',
-      email:'john#gmail.com',
+      email:'john@gmail.com',
       pinCode:'110014',
       prmSource:'MIY',
       secSource:'Google',
@@ -60,7 +60,12 @@ function Procurement() {
       </HeaderPrimary>
 
       <div className="bottom-white-border" />
-      <ViewAll title="Partial Leads" leadsTitle="(8 Leads)" />
+      <ViewAll 
+        title="Partial Leads"
+        leadsTitle="(8 Leads)" 
+        viewAllBtn
+        viewAllClass="mt-4 mb-4"
+      />
       <Row>
         {cardData.map((item) => (
           <Col xl={4} md={6}>
@@ -76,19 +81,34 @@ function Procurement() {
         ))}
       </Row>
       <Row>
-        <ViewAll title="Evaluation Requests" leadsTitle="(8 Leads)" />
+        <ViewAll 
+          title="Evaluation Requests"
+          leadsTitle="(8 Leads)" 
+          viewAllBtn
+          viewAllClass="mt-5 mb-3"
+        />
         {cardData2.map((item) => (
           <Col md={3}>
             <BikeCard data={item} contactBtn isEvalTag />
           </Col>
         ))}
-        <ViewAll title="Scheduled Evaluation" leadsTitle="(32 Leads)" />
+        <ViewAll 
+          title="Scheduled Evaluation" 
+          leadsTitle="(32 Leads)" 
+          viewAllBtn
+          viewAllClass="mt-5 mb-3"
+        />
         {cardData2.map((item) => (
           <Col md={3}>
             <BikeCard data={item} viewDetail />
           </Col>
         ))}
-        <ViewAll title="Completed Evaluation" leadsTitle="(32 Leads)" />
+        <ViewAll 
+          title="Completed Evaluation"
+          leadsTitle="(32 Leads)" 
+          viewAllBtn
+          viewAllClass="mt-5 mb-3"
+        />
         {cardData2.map((item) => (
           <Col md={3}>
             <BikeCard data={item} completeEval />
