@@ -1,12 +1,12 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { FiDownload,FiEdit2 } from "react-icons/fi";
 
 import style from './style.module.scss';
 
 function PaymentInformation() {
   return (
     <div className={style.paymentInformation}>
-      {/* <h5>Payment Information</h5> */}
       <div className={style.transerfer}>
         <h6>Transfer to</h6>
         <Row className={style.transerfer_info}>
@@ -38,7 +38,7 @@ function PaymentInformation() {
             <p >Payment Ref No. <span className={style.refNo}>CSFDJG54879865</span> <span>Save</span> </p>
           </Col>
           <Col lg={5}>
-            <p>Cancelled Check: <span>Download</span> </p>
+            <p>Cancelled Check: <span className={style.downloadBtn}><FiDownload/> Download</span> </p>
           </Col>
         </Row>
         <Row>
@@ -67,7 +67,7 @@ function PaymentInformation() {
 		</Row>
 		<Row>
 			<Col>
-			<p>Payment Ref No. <span className={style.refNo}>CSFDJG54879865</span> </p>
+			<p>Payment Ref No. <span className={style.refNo}>CSFDJG54879865</span> <span><FiEdit2/></span> </p>
 			</Col>
 		</Row>
       </div>

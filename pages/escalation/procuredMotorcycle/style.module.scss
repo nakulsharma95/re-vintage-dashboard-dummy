@@ -1,0 +1,21 @@
+.procuredStatus {
+  color: #cbc6c6;
+  font-size: 12px;
+  background-color: #282828;
+  padding: 0.5rem 1rem;
+  position: relative;
+
+  span {
+    margin-left: 0.6rem;
+  }
+  &:before{
+	content: "";
+	position: absolute;
+	background-color: #E86A16;
+	border-radius: 50%;
+	height: 5px;
+	width: 5px;
+	left: 0.3rem;
+	top: 0.9rem;
+}
+}
