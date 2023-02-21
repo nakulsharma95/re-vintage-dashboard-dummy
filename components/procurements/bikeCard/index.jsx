@@ -2,6 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import { Card, Col, Row } from "react-bootstrap";
 import bikeCardStyle from "./style.module.scss";
+import { BiRupee } from "react-icons/bi";
 
 function BikeCard(props) {
   const { data } = props;
@@ -29,8 +30,11 @@ function BikeCard(props) {
             <Col className={bikeCardStyle.detailTxt}>{props.bikeCc}</Col>
           </Row>
           <div className={bikeCardStyle.bikePrice}>
-            <h5 className={bikeCardStyle.priceTitle}>Estimated Price</h5>
-            <h4 className={bikeCardStyle.price}>{props.sellingPrice}</h4>
+            <h5 className={bikeCardStyle.priceTitle}>Selling Price</h5>
+            <h4 className={bikeCardStyle.price}>
+              <BiRupee size={21} />
+              {props.bikekm}
+            </h4>
           </div>
           <div className="d-flex align-items-center">
             <h5 className={bikeCardStyle.priceTitle}>Source:</h5>

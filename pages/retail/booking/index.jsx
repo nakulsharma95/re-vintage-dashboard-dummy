@@ -46,10 +46,10 @@ export default function Booking() {
             <BikeCard
               bikeModal="2015 Classic 350"
               bikeRc="DL6TAL7314"
-              bikekm="43,384 km"
+              bikekm="1,25,000.00"
               bikeOwner="1st Owner"
               bikeCc="350 CC"
-              sellingPrice="₹1,25,000.00"
+              sellingPrice="1,25,000.00"
               source="VDMP"
               imageUrl={item.imageUrl}
             />
