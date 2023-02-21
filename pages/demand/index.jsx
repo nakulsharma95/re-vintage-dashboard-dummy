@@ -208,7 +208,11 @@ function Demand() {
         </div>
 
         <div className={styles.dummyGraphBox}>
-          <LineChart options={optionLineChart} data={lineChartData} />
+          <LineChart
+            options={optionLineChart}
+            data={lineChartData}
+            graphClass={styles.graphStyle}
+          />
         </div>
       </div>
 
