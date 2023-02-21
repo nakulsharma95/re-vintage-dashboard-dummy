@@ -9,6 +9,8 @@ import SearchPrimary from '../../components/common/searchPrimary';
 import FilterButton from '../../components/common/filterButton';
 import HeaderPrimary from '../../components/common/headerPrimary';
 
+import styles from './style.module.scss';
+
 export default function BiddingPortal() {
   const upcomingBikeData = [
     {
@@ -176,14 +178,10 @@ export default function BiddingPortal() {
         <FilterButton />
       </HeaderPrimary>
 
-      <Row>
-        <Col md={6}>
-          <NumberCard />
-        </Col>
-        <Col md={6}>
-          <BiddingOverview />
-        </Col>
-      </Row>
+      <div className={styles.gridCards}>
+        <NumberCard />
+        <BiddingOverview />
+      </div>
       <ViewAll
         viewallLink="/bidding-portal/upcoming-bids"
         title="Upcoming Bids"

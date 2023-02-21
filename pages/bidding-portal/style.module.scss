@@ -1,0 +1,10 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables//mixins';
+
+
+.gridCards {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+	margin-bottom: 43px;
+}
