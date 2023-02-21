@@ -38,8 +38,18 @@ export default function Retail() {
         <SearchPrimary />
         <FilterButton />
       </HeaderPrimary>
-      <DashboardCard 
+      <DashboardCard
         Dropdown
+        title1="Total"
+        description1="32"
+        bottomDescription1="Overall Growth"
+        title2="Content Approval Pending"
+        description2="12"
+        bottomDescription2="Received This Week"
+        title3="Content Upload Pending"
+        description3="8"
+        title4="Under Refurbishment"
+        description4="12"
       />
       <TabPrimary
         title1="Content Approval Pending (12)"

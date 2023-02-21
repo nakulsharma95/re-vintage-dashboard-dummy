@@ -23,7 +23,7 @@ function SortTabs(props) {
           )}
 
           {props.approveBtn ? (
-            <div>
+            <div className="d-flex">
               {props.moveToOlx ? (
                 <>
                   <Button variant="primary" className={styles.submitCheckBBtn}>
