@@ -37,7 +37,7 @@ function dealerTable() {
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
           <td>No F 29/2, Phase 2, Okhla <br/> Industrial Area, New Delhi -110020</td>
-          <td><Form.Check onClick={cancelToggleModal} className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
+          <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
         </tr>
         <tr>
           <td><Link href="/">Neel Motors</Link></td>
@@ -53,7 +53,7 @@ function dealerTable() {
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
           <td>No F 29/2, Phase 2, Okhla <br/> Industrial Area, New Delhi -110020</td>
-          <td><Form.Check onClick={cancelToggleModal} className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
+          <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
         </tr>
 		<tr>
           <td><Link href="/dealer-management/dealership-details">Neel Motors</Link></td>
@@ -61,7 +61,7 @@ function dealerTable() {
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
           <td>No F 29/2, Phase 2, Okhla <br/> Industrial Area, New Delhi -110020</td>
-          <td><Form.Check onClick={cancelToggleModal} className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
+          <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
         </tr>
 		<tr>
           <td><Link href="/">Neel Motors</Link></td>
@@ -85,7 +85,7 @@ function dealerTable() {
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
           <td>No F 29/2, Phase 2, Okhla <br/> Industrial Area, New Delhi -110020</td>
-          <td><Form.Check onClick={cancelToggleModal} className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
+          <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
         </tr>
 		<tr>
           <td><Link href="/dealer-management/dealership-details">Neel Motors</Link></td>
@@ -93,7 +93,7 @@ function dealerTable() {
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
           <td>No F 29/2, Phase 2, Okhla <br/> Industrial Area, New Delhi -110020</td>
-          <td><Form.Check onClick={cancelToggleModal} className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
+          <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
         </tr>
 		<tr>
           <td><Link href="/">Neel Motors</Link></td>

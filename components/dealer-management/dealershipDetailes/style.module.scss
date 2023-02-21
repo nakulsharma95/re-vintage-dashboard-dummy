@@ -17,15 +17,15 @@
 			position: absolute;
 			background-color: green;
 			border-radius: 50%;
-			height: 0.6rem;
-			width: 0.6rem;
+			height: 5px;
+			width: 5px;
 			left: -0.9rem;
-			top: 0.4rem;
+			top: 0.5rem;
 		}
 	}
 }
 .motors{
-	margin-top: 2rem;
+	margin-top: 2.5rem;
 	.motors_head{
 		display: flex;
 		justify-content: space-between;
@@ -44,7 +44,7 @@
 				span{
 					font-size: 12px;
 					color: #CBC6C6;
-					margin-left: 0.5rem;
+					margin-left: 0.3rem;
 				}
 			}
 		}
@@ -54,6 +54,10 @@
 				justify-content: space-between;
 				align-items: center;
 				border-right: 1px solid #282828;
+
+				&:last-child{
+					border-right: none;
+				}
               h6{
                 font-size: 16px;
                 color: #FFFFFF;
@@ -65,7 +69,6 @@
 				
 			  }
 				img{
-					margin-right: 0.7rem;
 				margin-top: 1rem;	
 				padding: 0 0.3rem;
 						}
