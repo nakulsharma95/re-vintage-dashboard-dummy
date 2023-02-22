@@ -92,7 +92,7 @@
           }
         }
       }
-      button.submitBtn {
+      .submitBtn {
         background-color: $white;
         border: 1px solid $black;
         border-radius: 4px;
@@ -102,6 +102,8 @@
         font-weight: 600;
         margin-top: 50px;
         transition: all 0.5s;
+        text-decoration: none;
+        
         &:hover {
           background-color: $theme-red-da;
           border-color: $theme-red-da;

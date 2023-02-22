@@ -11,7 +11,7 @@ export default function Sidebar() {
     <div className={styles.sideBarContainer}>
       <Accordion className={styles.reAccordion} defaultActiveKey="">
         <li>
-          <Link href="/">
+          <Link href="/homepage">
             <span className={styles.navIcon}>
               <FiBarChart2 />
             </span>
