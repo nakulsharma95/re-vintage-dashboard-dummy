@@ -279,22 +279,6 @@ h6 {
   }
 }
 
-// toggleSwitch start
-// .style_sliderRound__yX05D .form-check-input:checked {
-//   background-color: $theme-green !important;
-//   border-color: $theme-green !important;
-// }
-
-// .style_sliderRound__yX05D .form-check-input {
-//   margin-left: 0 !important;
-// }
-
-// .style_sliderRound__yX05D .form-check-label {
-//   margin: 0 5px 0 10px !important;
-//   font-size: 12px !important;
-// }
-
-// toggleSwitch End
 
 .nav .nav-item .navBidsLink.active {
   background-color: $theme-red-da;
@@ -508,15 +492,45 @@ h6 {
 
 
 // Review slider 
-.review_slider .slick-dots li.slick-active button:before {
-  opacity: .75;
-  color: #DA291C;
-  font-size: 9px;
+
+
+.review_slider{
+  .slick-arrow{
+    color: $gray-cb;
+    width: 40px;
+    height: 40px;
+  }
+  .slick-prev{
+    left: -35px;
+  }
+  .slick-next{
+    right: -35px;
+  }
+
+  .slick-dots{
+    li{
+      width: 7px;
+      height: 7px;
+      margin: 0 3px;
+      button{
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        padding: 0;
+        background-color: $gray-65;
+      }
+    }
+    li.slick-active{
+      button{
+        background-color: $theme-red-da;
+      }
+    }
+  }
 }
-.review_slider .slick-dots li button:before {
-  opacity: .75;
-  color: #656565;
-}
+
+
+
+
 
 .sortText{
 	font-size: 14px;
@@ -590,6 +604,59 @@ h6 {
     &:last-child{
       div{
         border-right: none;
+      }
+    }
+  }
+}
+
+
+.errorMain{
+  background-color: $white;
+  height: 100vh;
+  position: relative;
+  .errorImg{
+    img{
+      width: 100%;
+      max-width: 125px;
+    }
+  }
+  &::after{
+    content: '';
+    background-image: url('/images/error-bg.svg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 395px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .errorContainer{
+    color: $black;
+    padding: 90px 40px;
+    width: 100%;
+    max-width: 45%;
+    h3{
+      font-size: 24px;
+      font-weight: 600;
+      margin: 10px 0 15px;
+    }
+    p{
+      font-weight: 500;
+    }
+    a{
+      display: inline-block;
+      padding: 6px 30px;
+      text-transform: uppercase;
+      color: $white;
+      background-color: $theme-red-da;
+      text-decoration: none;
+      font-size: 14px;
+      margin: 10px 0;
+      transition: all 0.5s;
+      &:hover{
+        background-color: $black;
       }
     }
   }

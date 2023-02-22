@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Homepage from './homepage';
+import Login from './login';
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
         <title>Welcome to Vintage Dashboard</title>
       </Head>
 
-      <Homepage />
+      <Login />
     </>
   );
 }

@@ -41,8 +41,8 @@ function EscalationCard() {
 			<Col lg={3}>
 			<p>Date and Time of escalation <br/> <span>17 Jan, 2023 at 4:23 PM</span> </p>
 			</Col>
-			<Col className='mt-3' lg={2}>
-			<ArrowButton  detailLink="/" title="View Details" />
+			<Col className='mt-3 text-end ps-5' lg={3}>
+			<ArrowButton  detailLink="/escalation/procuredMotorcycle" title="View Details" />
 			</Col>
 		</Row>
       </div>

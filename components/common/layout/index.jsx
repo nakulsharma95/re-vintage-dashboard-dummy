@@ -1,13 +1,29 @@
+import { useRouter } from 'next/router';
 import Header from './header';
 import Sidebar from './sidebar';
 import style from './style.module.scss';
 
 function Layout(props) {
+  const router = useRouter();
+  const isLoggin = router.pathname !== '/';
+  const is404 = router.pathname !== '/404';
   return (
     <div className={style.layoutStyle}>
-      <Header />
-      <Sidebar />
-      <main className={style.mainContainerStyle}>{props.children}</main>
+      {isLoggin && is404 && (
+        <>
+          <Header />
+          <Sidebar />
+        </>
+      )}
+
+      <main
+        className={`${isLoggin && is404
+            ? style.mainContainerStyle
+            : style.mainContainerLogin
+          }`}
+      >
+        {props.children}
+      </main>
     </div>
   );
 }

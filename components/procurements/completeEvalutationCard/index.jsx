@@ -6,7 +6,7 @@ import EvaluationDetail from "../evalutationDetail";
 import BikeCardFooter from "../../common/cardFooter";
 import MotorcycleDetail from "../motorcycleDetail";
 
-function CompleteBikeDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
+function CompleteBikeDetail({ isEvalBtnVisible, isCallerBtnVisible ,props}) {
   const completeData = [
     {
       bikeCode: "FB29FH9219HR1",
@@ -59,6 +59,7 @@ function CompleteBikeDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
             </Col>
           </Row>
         </Card.Body>
+        
         <div className="re-detailFootBg">
           <Row>
             {cardFootData.map((item) => (

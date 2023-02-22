@@ -2,6 +2,8 @@ import { Row, Tab, Tabs } from 'react-bootstrap';
 import Accordion from 'react-bootstrap/Accordion';
 import HeaderPrimary from '../../components/common/headerPrimary';
 import style from './style.module.scss';
+import Form from 'react-bootstrap/Form';
+import { FaSearch } from 'react-icons/fa';
 
 export default function FAQpage() {
   const accordionData = [
@@ -33,10 +35,15 @@ export default function FAQpage() {
   return (
     <div className={style.homepageStyle}>
       <HeaderPrimary
-        headerClass="mb-5"
+        headerClass="mb-3"
         title="Frequently Asked Questions"
         subTitle="Here you will see the most latest update"
       />
+
+      <div className={style.faqSearch}>
+        <Form.Control type="email" placeholder="Search FAQs" />
+        <FaSearch className={style.inputSearch} size={15} />
+      </div>
 
       <div className="custom-tab-style">
         <Row>

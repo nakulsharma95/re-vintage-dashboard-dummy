@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { AiFillStar } from 'react-icons/ai';
-
+import { MdOutlineArrowForwardIos, MdOutlineArrowBackIosNew } from 'react-icons/md';
 import style from './style.module.scss';
 
 function Review() {
@@ -11,6 +11,8 @@ function Review() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    nextArrow: <MdOutlineArrowForwardIos />,
+    prevArrow: <MdOutlineArrowBackIosNew />,
   };
   return (
     <div className={style.review}>
