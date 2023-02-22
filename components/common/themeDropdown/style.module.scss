@@ -1,0 +1,58 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/mixins';
+
+
+.dashboardDropdown{
+	button.dashboardToggle{
+		font-size: 12px;
+		border-radius: 0px;
+		background-color: transparent;
+		border: 1px solid $gray-a7;
+		color: $gray-a7;
+		font-weight: 300;
+		padding: 5px 15px;
+		padding-right: 35px;
+		font-weight: 600;
+		&::after{
+			content: '';
+			background-image: url('/images/down-arrow.png');
+			background-repeat: no-repeat;
+			padding: 8px 10px;
+			background-size: 15px;
+			border: none;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translate(0,-50%);
+		}
+		&:hover{
+			background-color: transparent;
+			border-color: $white;
+		}
+		&:focus{
+			background-color: transparent;
+			border-color: $white;
+		}
+	}
+	.dropdownOpenMennu{
+		border-radius: 0;
+		background-color: $black;
+		padding: 0;
+		transform: inherit !important;
+		left: inherit !important;
+		right: 0 !important;
+		top: 31px !important;
+		a{
+			color: $white;
+			font-size: 12px;
+			padding: 6px 10px;
+			border-bottom: 1px solid $gray-3;
+			&:hover{
+				background-color: $gray-3;
+			}
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+	}
+}

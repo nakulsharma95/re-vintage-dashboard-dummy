@@ -18,17 +18,22 @@ export default function CrePerformanceMatrix(props) {
         >
           <Tab
             eventKey="Procurement Lead Management"
-            title="Procurement Lead Management"
+            title={props.title1}
           ></Tab>
           <Tab
             eventKey="Bidding / First Offer"
-            title="Bidding / First Offer"
+            title={props.title2}
           ></Tab>
-          <Tab eventKey="Deal Closure" title="Deal Closure"></Tab>
+          <Tab eventKey="Deal Closure" title={props.title3}></Tab>
           <Tab
             eventKey="General Query Response"
-            title="General Query Response"
+            title={props.title4}
           ></Tab>
+          <Tab
+            eventKey="General Query Response"
+            title={props.title5}
+          ></Tab>
+          
         </Tabs>
       </Card>
       <div className={styles.partialLead}>

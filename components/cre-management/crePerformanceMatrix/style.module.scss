@@ -21,6 +21,7 @@
     }
   }
   .tabCre {
+    border-bottom: none;
     li {
       border: 1px solid $gray-70;
       button {
@@ -29,6 +30,11 @@
         font-size: 12px;
         margin-bottom: 0 !important;
         font-weight: 600;
+
+        .activeTab{
+          background-color: $white;
+          color: $gray-a7;
+        }
       }
     }
   }
