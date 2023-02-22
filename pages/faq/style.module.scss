@@ -18,3 +18,43 @@
     }
   }
 }
+
+
+.faqSearch {
+  margin: 20px 0 25px;
+  position: relative;
+  input{
+    font-size: 14px;
+    min-height: 40px;
+    font-weight: 400;
+    color: $gray-a7;
+    padding-right:15px;
+    background: transparent;
+    border-radius: 0;
+    border: 1px solid $gray-70;
+    &:focus{
+      background-color: transparent;
+      outline: none;
+      box-shadow: none;
+      border-color: $gray-70;
+      color: $gray-a7;
+    }
+    &::placeholder{
+      color: $gray-a7;
+    }
+    &:focus::placeholder{
+      opacity: 0;
+    }
+  }
+  
+  .inputSearch{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    color: #CBC6C6;
+    font-weight: 600;
+    font-size: 16px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
