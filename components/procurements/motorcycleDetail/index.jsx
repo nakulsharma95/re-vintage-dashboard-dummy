@@ -85,7 +85,8 @@ function MotorcycleDetail(props) {
             </h2>
           </div>
         </div>
-        <div className={styles.bike_dealerPrice}>
+        {props.dealerDetails && (
+          <div className={styles.bike_dealerPrice}>
           <div className={styles.bikeRupeeIcon}>
             <BiRupee />
           </div>
@@ -94,6 +95,8 @@ function MotorcycleDetail(props) {
             <h2 className={styles.motorStylePriceTxt}>{props.dealerPrice}</h2>
           </div>
         </div>
+        )}
+        
         {props.isEnquiryNumVisible && (
           <div className="d-flex align-items-center">
             <div>

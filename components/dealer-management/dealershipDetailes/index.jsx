@@ -6,6 +6,7 @@ import { IoIosArrowBack } from "react-icons/io";
 
 import style from './style.module.scss';
 import Link from 'next/link';
+import OutlineDropdown from '../../common/buttons/OutlineDropdown';
 
 function DealershipDetails() {
   return (
@@ -16,6 +17,7 @@ function DealershipDetails() {
         subTitle="Please find all the necessary details"
       >
 		<p className={style.dealership_status}>Status Active</p>
+		<OutlineDropdown dropdownTitle="Actions" dropdownMenuTitle="Blacklist Dealer" />
 	  </HeaderPrimary>
 
       <div className={style.motors}>
@@ -26,7 +28,7 @@ function DealershipDetails() {
 		  </div>
 		  <div className={style.motors_lists}>
            <Row>
-			<Col lg={4} className={style.motors_list} >
+			<Col lg={4} className={style.motors_list}>
 				<img src='/images/dealership-icon1.svg' />
 			   <h6>35 <br/> <span>Active listing</span></h6>
 			</Col>
@@ -36,7 +38,7 @@ function DealershipDetails() {
 			</Col>
 			<Col lg={4} className={style.motors_list}>
 			<img src='/images/dealership-icon1.svg' />
-			   <h6>06 <br/> <span>Branches....</span></h6>
+			   <h6>06 <br/> <span>Branches</span></h6>
 			</Col>
 		   </Row>
 		  </div>

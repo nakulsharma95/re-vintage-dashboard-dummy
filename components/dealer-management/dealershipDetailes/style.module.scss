@@ -12,6 +12,8 @@
 
 	.dealership_status{
 		position: relative;
+		top: 0.4rem;
+		right: 0.3rem;
 		&:before{
 			content: "";
 			position: absolute;
@@ -49,11 +51,13 @@
 			}
 		}
 		.motors_lists{
+			width: 40%;
 			.motors_list{
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				border-right: 1px solid #282828;
+				width: 11.7rem;
 
 				&:last-child{
 					border-right: none;
@@ -61,7 +65,8 @@
               h6{
                 font-size: 16px;
                 color: #FFFFFF;
-				padding: 0 0.8rem;
+				padding: 0 0.9rem;
+				width: 100%;
 				span{
 					font-size: 12px;
 					color: #CBC6C6;
