@@ -1,57 +1,56 @@
 import React from 'react'
-// import Timeline from '@mui/lab/Timeline';
-// import TimelineItem from '@mui/lab/TimelineItem';
-// import TimelineSeparator from '@mui/lab/TimelineSeparator';
-// import TimelineConnector from '@mui/lab/TimelineConnector';
-// import TimelineContent from '@mui/lab/TimelineContent';
-// import TimelineDot from '@mui/lab/TimelineDot';
-// import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+
+import styles from "./style.module.scss"
 
 function SalesJourney() {
   return (
-	<div>SalesJourney
-		 {/* <Timeline position="alternate">
-      <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
-          09:30 am
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Eat</TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
-          10:00 am
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Code</TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
-          12:00 am
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Sleep</TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent color="text.secondary">
-          9:00 am
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Repeat</TimelineContent>
-      </TimelineItem>
-    </Timeline> */}
+	<div>
+    SalesJourney
+    <div className={styles.main}>
+      <ul>
+        <li>
+          <div className={styles.progress}>
+          </div>
+          <p className={styles.text}>Request for Evaluation</p>
+        </li>
+        <li>
+          <div className={styles.progress}>
+          </div>
+          <p className={styles.text}>Evaluation Complete</p>
+        </li>
+        <li>
+          <div className={styles.progress}>
+          </div>
+          <p className={styles.text}>Bidding</p>
+        </li>
+        <li>
+          <div className={styles.progress}>
+          </div>
+          <p className={styles.text}>Procurement Details</p>
+        </li>
+        <li>
+          <div className={styles.progress}>
+          </div>
+          <p className={styles.text}>Listed on Marketplace</p>
+        </li>
+        <li>
+          <div className={styles.progress}>
+          </div>
+          <p className={styles.text}>Test Ride Details</p>
+        </li>
+        <li>
+          <div className={styles.progress}>
+          </div>
+          <p className={styles.text}>Booking</p>
+        </li>
+
+        <li>
+          <div className={styles.progress}>
+          </div>
+          <p className={styles.text}>Motorcycle Sold</p>
+        </li>
+      </ul>
+    </div>
 	</div>
   )
 }
