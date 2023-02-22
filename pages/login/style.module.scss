@@ -19,9 +19,10 @@
 .loginMain {
   background-image: url('/images/login-bg.jpg');
   background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100%;
   height: calc(100vh - 65px);
-  background-size: cover;
+  background-size: 100%;
   position: relative;
   &::before {
     content: '';
@@ -37,7 +38,7 @@
     background-color: $gray-3;
     padding: 15px 80px;
     width: 100%;
-    max-width: 566px;
+    max-width: 38%;
     height: 100vh;
     position: absolute;
     right: 0;
@@ -47,7 +48,7 @@
     align-items: center;
 
     @include desktop-lg {
-      max-width: 700px;
+      max-width: 38%;
     }
 
     .loginFormCols {
