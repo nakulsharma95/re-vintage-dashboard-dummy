@@ -29,13 +29,23 @@ function CreDetails() {
     <>
       <Breadcrumb title="CRE Management" addmoretitle="CRE Details" />
 
-      <HeaderPrimary title="CRE Details">
-        <SearchPrimary />
-      </HeaderPrimary>
+      <HeaderPrimary title="CRE Details"></HeaderPrimary>
 
       <Row>
         <Col xxl={12} lg={12} md={12}>
-          <CreProfileCard droptitle="Action" />
+          <CreProfileCard
+            droptitle="Action"
+            userName="Adesh Goyal"
+            available="Available"
+            area="Karol Bagh, Delhi"
+            mailId="emailaddress@royalenfield.com"
+            phoneNumber="+91 98765 43210"
+            jobTitle="CRE"
+            department="Management"
+            ratio="80%"
+            joinDate="05 Oct, 2022"
+            empNo="RECRE/108"
+          />
         </Col>
 
         <TabPrimary title1="Basic Details" title2="Performance Management" />
@@ -47,7 +57,14 @@ function CreDetails() {
         />
         {cardData.map((item) => (
           <Col xxl={3} xl={4} lg={6} key={item.id}>
-            <CreBikeInfoCard />
+            <CreBikeInfoCard
+              bikeChassis="B28EG192BR19"
+              bikeModal="2015 Classic 350"
+              bikeDL="- DL6TAL7314"
+              bikeKm="43,384 km"
+              bikeOwner="1st Owner"
+              bikeCc="350 CC"
+            />
           </Col>
         ))}
         <Col xxl={6} xl={6} lg={6} md={12}>

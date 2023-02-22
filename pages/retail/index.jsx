@@ -57,8 +57,9 @@ export default function Retail() {
         title3="Under Refurbishment"
         title4="Pending Evaluation (15)"
       />
-         <SortTabs
+       <SortTabs
         selectAllCheck
+        approveBtn
         isSortTabBox
         isCheckInput
         sortTabTitle="12 Result Found"

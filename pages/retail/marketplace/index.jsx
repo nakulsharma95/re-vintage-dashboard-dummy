@@ -69,7 +69,7 @@ export default function MarketPlace() {
               bikekm="43,384 km"
               bikeOwner="1st Owner"
               bikeCc="350 CC"
-              bikePrice="₹ 1,25,000.00"
+              bikePrice="1,25,000.00"
               bikeDealer="(C2N0RJ20FC2N)"
               dealerAddress="Neel Motors, Lajpat Nagar, Delhi"
               creDetail="CRE Detail"

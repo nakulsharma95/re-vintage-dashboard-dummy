@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, Card, Dropdown } from "react-bootstrap";
+import ThemeDropdown from "~/components/common/themeDropdown";
 import styles from "./style.module.scss";
 
 function CreMonthPerformace(props) {
@@ -13,21 +14,12 @@ function CreMonthPerformace(props) {
             </div>
 
             <div className={styles.dateOuter}>
-              <Dropdown className={styles.dateDropdown}>
-                <Dropdown.Toggle
-                  variant=""
-                  id="dropdown-basic"
-                  className={styles.dateImg}
-                >
-                  <span>{props.droptitle}</span>
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu className={styles.dateDropdownMenu}>
-                  <Dropdown.Item href="#/action-1">2023</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">2024</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">2025</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+              <ThemeDropdown
+                dropDownTitle="2022"
+                dropItem1="2023"
+                dropItem2="2024"
+                dropItem3="2025"
+              />{" "}
             </div>
           </div>
         </Card.Body>

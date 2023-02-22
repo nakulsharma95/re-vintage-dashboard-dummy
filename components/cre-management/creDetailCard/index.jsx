@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import { Card } from 'react-bootstrap';
+import Link from "next/link";
+import { Card } from "react-bootstrap";
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaRegWindowMaximize,
-} from 'react-icons/fa';
-import styles from './style.module.scss';
+} from "react-icons/fa";
+import styles from "./style.module.scss";
 
 function CreDetailCard(props) {
   const { creDetailData } = props;
@@ -20,12 +20,13 @@ function CreDetailCard(props) {
 
         <Card.Body>
           <Card.Title className={styles.headingName}>
-            Bob Vishwas <span className="mx-2">(Senior CRE)</span>
+            <h3>{props.name}</h3>
+            <span className="mx-2">{props.jobPost}</span>
           </Card.Title>
 
           <div className={styles.location}>
             <FaMapMarkerAlt size={13} />
-            <h4>Gurugram, Haryana</h4>
+            <h4>{props.location}</h4>
           </div>
 
           <Link
@@ -45,12 +46,12 @@ function CreDetailCard(props) {
 
             <p className={`${styles.creDetail} mb-0`}>
               <FaPhoneAlt size={13} />
-              <span>+91 98765 43210</span>
+              <span>{props.phoneNo}</span>
             </p>
 
             <p className={`${styles.creDetail} mb-0`}>
               <FaRegWindowMaximize size={13} />
-              <span>bobvishwas@royalenfield.com</span>
+              <span>{props.emailID}</span>
             </p>
           </div>
         </Card.Body>

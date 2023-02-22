@@ -40,9 +40,13 @@
   }
 
   .headingName {
-    font-size: 16px;
-    color: #ffffff;
+   display: flex;
+   align-items: center;
     margin-bottom: 15px;
+    h3{
+      font-size: 16px;
+      color: #ffffff;
+    }
     span {
       font-size: 14px;
       color: #e8b016;
@@ -93,6 +97,7 @@
     }
     .divider {
       border-bottom: 1px solid $gray-70;
+      opacity: 0.9;
       margin: 0px 0 10px 0;
     }
     .creDetail {

@@ -33,6 +33,11 @@ export default function TabPrimary(props) {
               eventKey="title4"
               title={props.title4}
             />
+            <Tab
+              className={styles.reNavTab}
+              eventKey="title5"
+              title={props.title5}
+            />
           </Tabs>
         </div>
       </Row>

@@ -1,8 +1,9 @@
-import React from 'react';
-import { Row, Col, Form, Image } from 'react-bootstrap';
-import ButtonPrimary from '../../common/buttons/ButtonPrimary';
-import OutlineButton from '../../common/buttons/OutlineButton';
-import styles from './style.module.scss';
+import React from "react";
+import { Row, Col, Form, Image } from "react-bootstrap";
+import FileUploader from "~/components/common/fileUploader";
+import ButtonPrimary from "../../common/buttons/ButtonPrimary";
+import OutlineButton from "../../common/buttons/OutlineButton";
+import styles from "./style.module.scss";
 
 export default function CreAddForm() {
   return (
@@ -50,6 +51,7 @@ export default function CreAddForm() {
             <div className={styles.profileImg}>
               <Image src="/images/profile-image.png" alt="not found" />
             </div>
+            <FileUploader />
           </div>
         </Col>
       </Row>
@@ -226,7 +228,7 @@ export default function CreAddForm() {
           <OutlineButton title="Cancel" className="theme1" />
         </div>
         <div>
-          {' '}
+          {" "}
           <ButtonPrimary title="Save" />
         </div>
       </div>
