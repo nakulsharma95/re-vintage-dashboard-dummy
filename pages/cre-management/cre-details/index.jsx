@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Tab, Tabs } from "react-bootstrap";
 import Breadcrumb from "../../../components/common/breadcrumbPrimary";
 import CreAddressDetailCard from "~/components/cre-management/creAddressDetailCard";
 import CreBikeInfoCard from "../../../components/cre-management/creBikeInfoCard";
@@ -8,7 +8,8 @@ import CreProfileCard from "../../../components/cre-management/creProfileCard";
 import CreTrainingCard from "../../../components/cre-management/creTrainingCard";
 import TabPrimary from "../../../components/common/tabPrimary";
 import HeaderPrimary from "../../../components/common/headerPrimary";
-import SearchPrimary from "../../../components/common/searchPrimary";
+import CrePerformanceMatrix from "~/components/cre-management/crePerformanceMatrix";
+import CreMonthPerformace from "~/components/cre-management/creMonthPerformace";
 
 function CreDetails() {
   const cardData = [
@@ -48,8 +49,32 @@ function CreDetails() {
           />
         </Col>
 
-        <TabPrimary title1="Basic Details" title2="Performance Management" />
-        <div className="mb-2 mt-2">Allocated Leads</div>
+        <div className="custom-tab-style">
+          <Tabs
+            className="mb-3"
+            defaultActiveKey="title3"
+            id="uncontrolled-tab-example"
+          >
+            <Tab eventKey="title1" title="Basic Details" />
+
+            <Tab eventKey="title2" title="Performance Management">
+              <div className="cre-heading mb-2 mt-2">Performance</div>
+              <Col xxl={12} lg={12} md={12}>
+                <CrePerformanceMatrix
+                  title1="Procurement Lead Management"
+                  title2="Bidding / First Offer"
+                  title3="Deal Closure"
+                  title4="General Query Response"
+                  creTitle="CRE Performance Matrix"
+                />
+
+                <CreMonthPerformace performanceTitle="Monthly Performance" />
+              </Col>
+            </Tab>
+          </Tabs>
+        </div>
+
+        <div className="cre-heading mb-2 mt-2">Allocated Leads</div>
         <TabPrimary
           title1="Active Leads"
           title2="Closed Leads"
