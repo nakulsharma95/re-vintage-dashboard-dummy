@@ -2,7 +2,7 @@ import { Col, Row } from "react-bootstrap";
 import { RiShareBoxFill } from "react-icons/ri";
 import BikeCardRadio from "../../../components/common/cardCheckbox";
 import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import DashboardCard from "../../../components/common/dashboardCard";
+import DashboardCard from "../../../components/dashboardCard";
 import SortTabs from "../../../components/common/sortTabs";
 import TabPrimary from "../../../components/common/tabPrimary";
 import SearchPrimary from "../../../components/common/searchPrimary";
