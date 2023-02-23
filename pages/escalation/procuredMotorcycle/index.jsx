@@ -58,7 +58,7 @@ function ProcuredMotorcycle() {
               </div>
             ))}
       </div>
-      {/* <SalesJourney/> */}
+      <SalesJourney/>
       <MotorcycleAccordian />
       <div className="mt-5">
         <BikeInspection />
