@@ -1,35 +1,34 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
-import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import CreAddressDetailCard from "~/components/cre-management/creAddressDetailCard";
-import CreBikeInfoCard from "../../../components/cre-management/creBikeInfoCard";
-import CrePrimaryCard from "../../../components/cre-management/crePrimaryCard";
-import CreProfileCard from "../../../components/cre-management/creProfileCard";
-import CreTrainingCard from "../../../components/cre-management/creTrainingCard";
-import TabPrimary from "../../../components/common/tabPrimary";
-import HeaderPrimary from "../../../components/common/headerPrimary";
-import SearchPrimary from "../../../components/common/searchPrimary";
+import React from 'react';
+import { Row, Col } from 'react-bootstrap';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import CreAddressDetailCard from '../../../components/cre-management/creAddressDetailCard';
+import CreBikeInfoCard from '../../../components/cre-management/creBikeInfoCard';
+import CrePrimaryCard from '../../../components/cre-management/crePrimaryCard';
+import CreProfileCard from '../../../components/cre-management/creProfileCard';
+import CreTrainingCard from '../../../components/cre-management/creTrainingCard';
+import TabPrimary from '../../../components/common/tabPrimary';
+import HeaderPrimary from '../../../components/common/headerPrimary';
 
 function CreDetails() {
   const cardData = [
     {
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
     {
-      dealerLocation: "Neel Motors, Rohini Nagar, Delhi",
+      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
     },
     {
-      dealerLocation: "Neel Motors, Punjabi Bagh, Delhi",
+      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
     },
     {
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
   ];
   return (
     <>
       <Breadcrumb title="CRE Management" addmoretitle="CRE Details" />
 
-      <HeaderPrimary title="CRE Details"></HeaderPrimary>
+      <HeaderPrimary title="CRE Details" />
 
       <Row>
         <Col xxl={12} lg={12} md={12}>
