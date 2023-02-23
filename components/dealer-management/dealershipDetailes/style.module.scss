@@ -1,113 +1,126 @@
-.dealershipDetails{
-	button{
-		background-color: transparent;
-		border: none;
-		color: white;
+.dealershipDetails {
+  button {
+    background-color: transparent;
+    border: none;
+    color: white;
 
-		a{
-			color: white;
-			text-decoration: none;
-		}
-	}
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
 
-	.dealership_status{
-		position: relative;
-		top: 0.4rem;
-		right: 0.3rem;
-		&:before{
-			content: "";
-			position: absolute;
-			background-color: green;
-			border-radius: 50%;
-			height: 5px;
-			width: 5px;
-			left: -0.9rem;
-			top: 0.5rem;
-		}
-	}
+  .dealership_status {
+    position: relative;
+    top: 0.4rem;
+    right: 0.3rem;
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: green;
+      border-radius: 50%;
+      height: 5px;
+      width: 5px;
+      left: -0.9rem;
+      top: 0.5rem;
+    }
+  }
 }
-.motors{
-	margin-top: 2.5rem;
-	.motors_head{
-		display: flex;
-		justify-content: space-between;
-		.motors_heading{
-			h3{
-				font-size: 24px;
-				// font-family: "Guardian Sans, Semibold";
-				span{
-					font-size: 12px;
-					color: #CBC6C6;
-				}
-			}
-			p{
-				font-size: 14px;
-				margin-top: 1rem;
-				span{
-					font-size: 12px;
-					color: #CBC6C6;
-					margin-left: 0.3rem;
-				}
-			}
+.motors {
+  margin-top: 2.5rem;
+  .motors_head {
+    display: flex;
+    justify-content: space-between;
+    .motors_heading {
+      h3 {
+        font-size: 24px;
+        // font-family: "Guardian Sans, Semibold";
+        span {
+          font-size: 12px;
+          color: #cbc6c6;
+        }
+      }
+      p {
+        font-size: 14px;
+        margin-top: 1rem;
+        span {
+          font-size: 12px;
+          color: #cbc6c6;
+          margin-left: 0.3rem;
+        }
+      }
+    }
+    .motors_lists {
+      display: flex;
+
+	  .listItemContent {
+		width: 100%;
+	  }
+
+      .motors_list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+		margin-bottom: 40px;
+		gap: 0 20px;
+
+		&::before {
+			background: #656565;
+			height: 80%;
+			width: 2px;
+			display: flex;
+			content: '';
+			margin: 0 24px 22px;
 		}
-		.motors_lists{
-			width: 40%;
-			.motors_list{
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				border-right: 1px solid #282828;
-				width: 11.7rem;
 
-				&:last-child{
-					border-right: none;
-				}
-              h6{
-                font-size: 16px;
-                color: #FFFFFF;
-				padding: 0 0.9rem;
-				width: 100%;
-				span{
-					font-size: 12px;
-					color: #CBC6C6;
-				}
-				
-			  }
-				img{
-				margin-top: 1rem;	
-				padding: 0 0.3rem;
-						}
+        &:first-child {
+			&::before { 
+				display: none;
 			}
-		}
-	}
+        }
+        h6 {
+          font-size: 16px;
+          color: #ffffff;
+          width: 100%;
+        }
 
-	.motors_cards{
-		display: flex;
-		justify-content: space-between;
-		.motors_card{
-			background-color: #282828;
-			padding: 1.5rem;
-			width:49% ;
+        p {
+          font-size: 12px;
+          color: #cbc6c6;
+        }
+      }
+    }
+  }
 
-			h6{
-				font-size: 12px;
-				color: #A7A7A7;
-				margin-bottom: 0.5rem;
-				display: flex;
-				justify-content: space-between;
+  .motors_cards {
+    display: flex;
+    justify-content: space-between;
+	gap: 0 14px;
+	
+    .motors_card {
+      background-color: #282828;
+      padding: 1.5rem;
+      width: 100%;
 
-				span{
-                   text-decoration: underline;
-				   cursor: pointer;
-				}
-			}
-			p{
-				font-size: 14px;
+      h6 {
+        font-size: 12px;
+        color: #a7a7a7;
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
 
-				span{
-					color: #A7A7A7;
-				}
-			}
-		}
-	}
+        span {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      p {
+        font-size: 14px;
+
+        span {
+          color: #a7a7a7;
+        }
+      }
+    }
+  }
 }

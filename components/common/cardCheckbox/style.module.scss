@@ -195,3 +195,46 @@
     border-radius: 0;
   }
 }
+
+.bikeEditBtns{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin: 0.4rem 0;
+  .bikeEditBtn{
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid #707070;
+    padding: 0 2rem;
+    height: 38px;
+  }
+  .bikeSoldBtn{
+    background-color: #DA291C;
+    color: #FFFFFF;
+    height: 38px;
+    border: none;
+    padding: 0 1rem;
+  }
+}
+
+.contactCre{
+  font-size: 12px;
+  color: #CBC6C6;
+  padding: 0 2rem;
+  margin: 0;
+  position: relative;
+   &:before{
+    content: "";
+			position: absolute;
+			background-color: #707070;
+			border-radius: 50%;
+			height: 18px;
+			width: 1px;
+			left: 0.3rem;
+   }
+   &:first-child{
+    &:before{
+      display: none;
+    }
+   }
+}

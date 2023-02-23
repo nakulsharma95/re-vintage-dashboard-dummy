@@ -8,7 +8,7 @@ import DetailPagination from '../../../components/common/paginationPrimary';
 import Review from '../../../components/dealer-management/reviewSlider';
 import BikeCardRadio from '../../../components/common/cardCheckbox';
 
-function DealershipDetails() {
+function DealershipDetails(props) {
 	const cardData = [
     {
       imageUrl: "/images/bikeImage.png",
@@ -49,12 +49,12 @@ function DealershipDetails() {
               bikePrice="1,25,000.00"
               bikeDealer="(C2N0RJ20FC2N)"
               dealerAddress="Neel Motors, Lajpat Nagar, Delhi"
-              
-              // isButtonVisible
-              isCardVisible={false}
-              isOlxTagVisible={false}
+              // isCardVisible={false} 
+              // isOlxTagVisible={false}
               imageUrl={item.imageUrl}
               dealerLocation={item.dealerLocation}
+              isEditButton
+              isCreContact
             />
           </Col>
         ))}
