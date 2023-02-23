@@ -2,16 +2,12 @@ import React from 'react';
 import BikeInspection from '../../../components/biddingPortal/bikeInspection';
 import MotorcycleAccordian from '../../../components/escalation/motorCycleAccordian';
 import HeaderPrimary from '../../../components/common/headerPrimary';
-import CompleteBikeDetail from '../../../components/procurements/completeEvalutationCard';
-import SalesJourney from '../../../components/escalation/salesJourney';
 import BackButton from '../../../components/common/buttons/BackButton';
 import BikeSlider from '../../../components/common/thumbnailSlider';
-// import EvaluationDetail from '../../../components/procurements/evalutationDetail';
 import MotorcycleDetail from '../../../components/procurements/motorcycleDetail';
 
 import style from "./style.module.scss";
 
-// escalation/procuredMotorcycle
 function ProcuredMotorcycle() {
   const completeData = [
     {
@@ -58,7 +54,6 @@ function ProcuredMotorcycle() {
               </div>
             ))}
       </div>
-      <SalesJourney/>
       <MotorcycleAccordian />
       <div className="mt-5">
         <BikeInspection />

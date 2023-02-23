@@ -45,9 +45,7 @@ export default function FAQpage() {
         <FaSearch className={style.inputSearch} size={15} />
       </div>
 
-      <div className="custom-tab-style">
-        <Row>
-          <div>
+      <div className="custom-tab-style">     
             <Tabs
               className="mb-3"
               defaultActiveKey="title3"
@@ -71,9 +69,7 @@ export default function FAQpage() {
               <Tab eventKey="title5" title="Retrun and refund" />
               <Tab eventKey="title6" title="Promations" />
               <Tab eventKey="title7" title="Others" />
-            </Tabs>
-          </div>
-        </Row>
+            </Tabs>         
       </div>
     </div>
   );

@@ -19,24 +19,32 @@ function RegionalAnalytics() {
           <Table striped variant="dark">
             <tbody>
               <tr>
-                <td>Neel Motors</td>
+                <td>Delhi</td>
                 <td className="text-end">4512</td>
               </tr>
               <tr>
-                <td>Neel Motors</td>
+                <td>Rajasthan</td>
                 <td className="text-end"> 321</td>
               </tr>
               <tr>
-                <td>Neel Motors</td>
+                <td>Goa</td>
                 <td className="text-end"> 789</td>
               </tr>
               <tr>
-                <td>Neel Motors</td>
+                <td>Kerala</td>
                 <td className="text-end">465</td>
               </tr>
               <tr>
-                <td>Neel Motors</td>
+                <td>Maharashtra</td>
                 <td className="text-end">72</td>
+              </tr>
+              <tr>
+                <td>Tamil Nadu</td>
+                <td className="text-end">63</td>
+              </tr>
+              <tr>
+                <td>Haryana</td>
+                <td className="text-end">24</td>
               </tr>
             </tbody>
           </Table>

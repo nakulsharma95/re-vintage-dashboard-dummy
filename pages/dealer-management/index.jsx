@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiOutlineDownload } from 'react-icons/ai';
+import { BiDownload } from "react-icons/bi";;
 import { RiShareBoxFill } from 'react-icons/ri';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import HeaderPrimary from '../../components/common/headerPrimary';
@@ -18,8 +18,8 @@ function DealerManagement() {
         title="Dealer Management"
         subTitle="Dealer Management module"
       >
-        <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <OutlineButton title="Import EXCEL" rightIcon={<AiOutlineDownload />} />
+        <OutlineButton title="Export Data" leftIcon={<RiShareBoxFill />} />
+        <OutlineButton title="Import EXCEL" leftIcon={<BiDownload />} />
         <SearchPrimary />
         <FilterButton />
       </HeaderPrimary>
