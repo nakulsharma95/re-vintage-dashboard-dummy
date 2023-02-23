@@ -20,6 +20,7 @@ function DealershipDetails() {
         title="Dealership Details"
         subTitle="Please find all the necessary details"
       >
+        <div className='status-circle success mt-3'></div>
         <p className={style.dealership_status}>Status Active</p>
         <OutlineDropdown
           dropdownTitle="Actions"
@@ -31,11 +32,11 @@ function DealershipDetails() {
         <div className={style.motors_head}>
           <div className={style.motors_heading}>
             <h3>
-              Neel Motors <span> - C23N1JFC1OO19N</span>{' '}
+              Neel Motors <span> - C23N1JFC1OO19N</span>
             </h3>
             <p>
               <AiFillStar style={{ color: '#FFDF00' }} /> 4.2
-              <span>(50 Reviews)</span>{' '}
+              <span>(50 Reviews)</span>
             </p>
           </div>
           <div className={style.motors_lists}>
@@ -81,7 +82,7 @@ function DealershipDetails() {
         <div className={style.motors_cards}>
           <div className={style.motors_card}>
             <h6>
-              Address <span>View in map</span>{' '}
+              Address <span>View in map</span>
             </h6>
             <p>
               No F 29/2, Phase 2, Okhla Industrial Area, Okhla Industrial Area,
