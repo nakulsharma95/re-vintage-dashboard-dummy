@@ -14,23 +14,23 @@ import CreMonthPerformace from "~/components/cre-management/creMonthPerformace";
 function CreDetails() {
   const cardData = [
     {
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
     {
-      dealerLocation: "Neel Motors, Rohini Nagar, Delhi",
+      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
     },
     {
-      dealerLocation: "Neel Motors, Punjabi Bagh, Delhi",
+      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
     },
     {
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
   ];
   return (
     <>
       <Breadcrumb title="CRE Management" addmoretitle="CRE Details" />
 
-      <HeaderPrimary title="CRE Details"></HeaderPrimary>
+      <HeaderPrimary title="CRE Details" />
 
       <Row>
         <Col xxl={12} lg={12} md={12}>

@@ -17,10 +17,11 @@ function Layout(props) {
       )}
 
       <main
-        className={`${isLoggin && is404
+        className={`${
+          isLoggin && is404
             ? style.mainContainerStyle
             : style.mainContainerLogin
-          }`}
+        }`}
       >
         {props.children}
       </main>

@@ -665,4 +665,30 @@ h6 {
 .cre-heading{
   font-size: 16px;
   font-weight: 500;
+// Status circle Styles
+.status-circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+
+  &.danger {
+    background: $theme-red-da;
+  }
+
+  &.success {
+    background: $theme-green;
+  }
+
+  &.warning {
+    background: $theme-warning;
+  }
+}
+
+// dashboardCard
+
+.dashboard-card {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  margin-top: 24px;
 }

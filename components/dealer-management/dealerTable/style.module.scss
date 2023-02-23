@@ -6,16 +6,16 @@
 			position: relative;
 			margin-left: 1rem;
 
-			&:before{
-				content: "";
-				position: absolute;
-				background-color: green;
-				border-radius: 50%;
-				height: 5px;
-				width: 5px;
-				left: -0.9rem;
-                top: 0.3rem;
-			}
+			// &:before{
+			// 	content: "";
+			// 	position: absolute;
+			// 	background-color: green;
+			// 	border-radius: 50%;
+			// 	height: 5px;
+			// 	width: 5px;
+			// 	left: -0.9rem;
+            //     top: 0.3rem;
+			// }
 		}
 		.status_deactive{
 			&:before{

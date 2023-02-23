@@ -1,9 +1,9 @@
-import { Row, Tab, Tabs } from "react-bootstrap";
-import Accordion from "react-bootstrap/Accordion";
-import HeaderPrimary from "../../components/common/headerPrimary";
-import style from "./style.module.scss";
-import Form from "react-bootstrap/Form";
-import { FaSearch } from "react-icons/fa";
+import { Row, Tab, Tabs } from 'react-bootstrap';
+import Accordion from 'react-bootstrap/Accordion';
+import Form from 'react-bootstrap/Form';
+import { FaSearch } from 'react-icons/fa';
+import HeaderPrimary from '../../components/common/headerPrimary';
+import style from './style.module.scss';
 
 export default function FAQpage() {
   const accordionData = [
