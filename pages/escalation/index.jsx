@@ -1,9 +1,9 @@
 import React from 'react';
+import { RiShareBoxFill } from 'react-icons/ri';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import HeaderPrimary from '../../components/common/headerPrimary';
 import SearchPrimary from '../../components/common/searchPrimary';
 import OutlineButton from '../../components/common/buttons/OutlineButton';
-import { RiShareBoxFill } from 'react-icons/ri';
 import DealFilter from '../../components/dealClosure/dealFilter';
 import EscalationCard from '../../components/escalation/escalationCard';
 
@@ -19,12 +19,12 @@ function Escalation() {
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
         <SearchPrimary />
       </HeaderPrimary>
-    <hr/>
-    <DealFilter title="4 Escalations Found" isViewBy droptitle="Recent" />
-    <EscalationCard/>
-    <EscalationCard/>
-    <EscalationCard/>
-    <EscalationCard/>
+      <hr />
+      <DealFilter title="4 Escalations Found" isViewBy droptitle="Recent" />
+      <EscalationCard />
+      <EscalationCard />
+      <EscalationCard />
+      <EscalationCard />
     </div>
   );
 }
