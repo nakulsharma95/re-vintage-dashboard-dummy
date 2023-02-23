@@ -1,24 +1,26 @@
 @import '../../../styles/variables/colors';
 @import '../../../styles/variables/mixins';
 
-.titleViewAllMain{
+.titleViewAllMain {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 22px 0 15px;
-	.titleViewAll{
+
+	.titleViewAll {
 		display: flex;
 		font-size: 14px;
-		font-weight: 500;
-		color: $white;
+		font-weight: 400;
+		color: $gray-cb;
 		margin-bottom: 0px;
 		opacity: 0.9;
-		span{
+
+		span {
 			margin-left: 1rem;
 			opacity: 0.56;
 		}
 	}
-	.viewAllBtn{
+
+	.viewAllBtn {
 		padding: 0.375rem 1.2rem;
 		min-height: 28px;
 		font-size: 12px;
@@ -28,9 +30,40 @@
 		border-radius: 0px;
 		color: $white;
 		text-decoration: none;
-		&:active{
+
+		&:active {
 			background: transparent;
 			border: 1px solid $white;
+		}
+	}
+}
+
+.topHeaderBtnBox {
+	display: flex;
+
+	.viewText {
+		font-size: 14px;
+		font-weight: 400;
+		color: #cbc6c6;
+		margin-bottom: 0px;
+	}
+
+	.topHeaderBtn {
+		padding: 0rem 0.8rem;
+		color: $white;
+		font-size: 14px;
+		font-weight: 400;
+		background: transparent;
+		border-radius: 0;
+		border: 0px;
+		border-right: 1px solid #707070;
+
+		&:last-child {
+			border-right: 0px;
+		}
+
+		&.activeBtn {
+			color: #DA291C;
 		}
 	}
 }

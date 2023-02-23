@@ -22,6 +22,31 @@ export default function BiddingDetails() {
       highestBidPrice: 'Neel Motors, Lajpat Nagar, Delhi',
     },
   ];
+
+  const cardFootData = [
+    {
+      detailTitle: 'SAMIL Details',
+      userTitle: 'Name',
+      name: 'Ashok Sharma',
+      idTitle: 'SAMIL ID',
+      caseId: 'ASHS45125',
+      contactText: 'Contact No.',
+      contact: '+91 9899645875',
+    },
+    {
+      detailTitle: 'CRE Details',
+      userTitle: 'Name',
+      name: 'Rishabh Sharma',
+      contactText: 'Contact No.',
+      contact: '+91 9899645875',
+    },
+    {
+      detailTitle: 'Owner Details',
+      contactText: 'Contact No.',
+      contact: '+91 9899645875',
+    },
+  ];
+  
   return (
     <div>
       <BackButton backLink="/bidding-portal" title="Back" />
@@ -55,7 +80,23 @@ export default function BiddingDetails() {
             </Col>
           ))}
         </Row>
-        <BikeCardFooter creDetails ownerDetails />
+        <div className="re-detailFootBg">
+          <Row>
+            {cardFootData.map((item) => (
+              <Col md={4}>
+                <BikeCardFooter
+                  userTitle={item.userTitle}
+                  caseId={item.caseId}
+                  contactText={item.contactText}
+                  detailTitle={item.detailTitle}
+                  name={item.name}
+                  idTitle={item.idTitle}
+                  contact={item.contact}
+                />
+              </Col>
+            ))}
+          </Row>
+        </div>
       </div>
       <Bids />
       <BikeInspection />

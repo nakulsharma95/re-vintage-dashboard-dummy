@@ -1,8 +1,10 @@
-import React from "react";
-import { Row, Col, Button } from "react-bootstrap";
-import styles from "./style.module.scss";
-import { BiDotsVerticalRounded, BiRupee } from "react-icons/bi";
-import Link from "next/link";
+import React from 'react';
+import { Row, Col, Button } from 'react-bootstrap';
+import styles from './style.module.scss';
+import { BiDotsVerticalRounded, BiRupee } from 'react-icons/bi';
+import Link from 'next/link';
+import { IoHammer,IoCallOutline } from "react-icons/io5";
+import { RxCross2 } from "react-icons/rx";
 
 function MotorcycleDetail(props) {
   return (
@@ -72,15 +74,29 @@ function MotorcycleDetail(props) {
       </div>
 
       <div className="d-flex justify-content-between align-items-center mt-3">
-        <div className="d-flex align-items-center">
+        <div className="d-flex align-items-center ">
           <div className={styles.bikeRupeeIcon}>
             <BiRupee />
           </div>
           <div>
             <h3 className={styles.motorStylePrice}>{props.priceTitle}</h3>
-            <h2 className={styles.motorStylePriceTxt}>{props.evaluationPrice}</h2>
+            <h2 className={styles.motorStylePriceTxt}>
+              {props.evaluationPrice}
+            </h2>
           </div>
         </div>
+        {props.dealerDetails && (
+          <div className={styles.bike_dealerPrice}>
+          <div className={styles.bikeRupeeIcon}>
+            <BiRupee />
+          </div>
+          <div>
+            <h3 className={styles.motorStylePrice}>{props.priceTitle2}</h3>
+            <h2 className={styles.motorStylePriceTxt}>{props.dealerPrice}</h2>
+          </div>
+        </div>
+        )}
+        
         {props.isEnquiryNumVisible && (
           <div className="d-flex align-items-center">
             <div>
@@ -90,6 +106,20 @@ function MotorcycleDetail(props) {
           </div>
         )}
       </div>
+      {props.dealerDetails && (
+        <div className={styles.dealerDetails}>
+          <p>
+            Dealer:<span>{props.dealerName}</span>
+          </p>
+          <hr className={styles.dealerDetails_line} />
+          <Row className={styles.dealerDetails_lists}>
+            <Col className={styles.dealerDetails_list}> <IoHammer className={styles.list_icon}/> Bid Details</Col>
+            <Col className={styles.dealerDetails_list}><IoCallOutline className={styles.list_icon}/> Call Dealer</Col>
+            <Col className={styles.dealerDetails_list}><IoCallOutline className={styles.list_icon}/>Call CRE</Col>
+            <Col><RxCross2 className={styles.list_icon}/> Drop</Col>
+          </Row>
+        </div>
+      )}
 
       {props.footerPrice && (
         <div className={styles.hgBidCols}>

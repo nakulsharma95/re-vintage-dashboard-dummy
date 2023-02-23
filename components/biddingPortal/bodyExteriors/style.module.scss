@@ -70,7 +70,10 @@
 				position: relative;
 				top: 3px;
 			}
-			.redIcon{
+			.waringIcon{
+				color:$theme-warning;
+			}
+			.blockedIcon{
 				color: $theme-red-da;
 			}
 		}

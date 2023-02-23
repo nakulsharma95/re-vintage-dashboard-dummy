@@ -1,7 +1,8 @@
 import React from "react";
-import { Row, Col, Card, Button, Image, Dropdown } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import styles from "./style.module.scss";
 import { BiLocationPlus, BiMailSend, BiPhone } from "react-icons/bi";
+import ThemeDropdown from "~/components/common/themeDropdown";
 
 function CreProfileCard(props) {
   return (
@@ -17,33 +18,44 @@ function CreProfileCard(props) {
             <Col md={6}>
               <div className={styles.performerDetailsHead}>
                 <div className="d-flex">
-                  <h3>Adesh Goyal</h3>
+                  <h3>{props.userName}</h3>
 
-                  <p className={styles.availableTag}>Available</p>
+                  <p className={styles.availableTag}>{props.available}</p>
                 </div>
               </div>
             </Col>
-            <Col md={6}></Col>
+            <Col
+              className="d-flex align-items-center justify-content-end"
+              md={6}
+            >
+              {" "}
+              <ThemeDropdown
+                dropDownTitle="Action"
+                dropItem1="Action1"
+                dropItem2="Action2"
+                dropItem3="Action3"
+              />{" "}
+            </Col>
           </Row>
           <Row className="mt-5">
             <Col xxl={2} xl={3} lg={12}>
               <div className={styles.performerArea}>
                 <BiLocationPlus className={styles.icon} size={20} />
-                <span>Karol Bagh, Delhi</span>
+                <span>{props.area}</span>
               </div>
             </Col>
 
             <Col xxl={3} xl={4} lg={12}>
               <div className={styles.performerArea}>
                 <BiMailSend className={styles.icon} size={20} />
-                <span>emailaddress@royalenfield.com</span>
+                <span>{props.mailId}</span>
               </div>
             </Col>
 
             <Col xxl={3} xl={4} lg={12}>
               <div className={styles.performerArea}>
                 <BiPhone className={styles.icon} size={20} />
-                <span>+91 98765 43210</span>
+                <span>{props.phoneNumber}</span>
               </div>
             </Col>
           </Row>
@@ -54,35 +66,35 @@ function CreProfileCard(props) {
             <Col xxl={2} xl={3} lg={4} md={4}>
               <div className={styles.description}>
                 <h3>JOB TITLE</h3>
-                <p>CRE</p>
+                <p>{props.jobTitle}</p>
               </div>
             </Col>
 
             <Col xxl={2} xl={3} lg={4} md={4}>
               <div className={styles.description}>
                 <h3>DEPARTMENT</h3>
-                <p>Management</p>
+                <p>{props.department}</p>
               </div>
             </Col>
 
             <Col xxl={2} xl={3} lg={4} md={4}>
               <div className={styles.description}>
                 <h3>CONVERSION RATIO</h3>
-                <p>80%</p>
+                <p>{props.ratio}</p>
               </div>
             </Col>
 
             <Col xxl={2} xl={3} lg={4} md={4}>
               <div className={styles.description}>
                 <h3>JOINED ON</h3>
-                <p>05 Oct, 2022</p>
+                <p>{props.joinDate}</p>
               </div>
             </Col>
 
             <Col xxl={2} xl={3} lg={4} md={4}>
               <div className={styles.description}>
                 <h3>EMP NO.</h3>
-                <p>RECRE/108</p>
+                <p>{props.empNo}</p>
               </div>
             </Col>
           </Row>

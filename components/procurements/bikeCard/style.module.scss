@@ -1,8 +1,8 @@
-@import '../../../styles/variables/colors';
-@import '../../../styles/variables//mixins';
+@import "../../../styles/variables/colors";
+@import "../../../styles/variables//mixins";
 
 .bikeCardMain {
-  background-color: #282828;
+  background-color: $gray-28;
   border-radius: 0px;
 
   img {
@@ -10,92 +10,66 @@
     object-fit: contain;
   }
 
-  .bikeCardTag{
-	position: absolute;
-	left: -6px;
-	top: 15px;
-	font-size: 10px;
-	font-weight: 600;
-	color: #ffffff;
-	padding: 0.2rem 0.6rem 0.2rem 1rem;
-	background-color: #DA291C;
-	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
-  }
+  .bikePrice {
+    h5 {
+      margin-bottom: 0;
+    }
 
-  .bikeCardOlx{
-    position: absolute;
-	left: -6px;
-	top: 15px;
-	font-size: 10px;
-	font-weight: 600;
-	color: #ffffff;
-	padding: 0.2rem 0.6rem 0.2rem 1rem;
-	background-color: #DA291C;
-	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+    h4 {
+      margin-bottom: 0;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $gray-3;
+    padding: 0.7rem 0;
+    margin-bottom: 1rem;
   }
-
   .bkeName {
     font-size: 16px;
-    color: #ffffff;
+    color: $white;
     padding: 0 1rem;
     margin-bottom: 15px;
+
     span {
       font-size: 14px;
-      color: #e8b016;
+      color: $theme-yellow-E8;
     }
   }
+
   .bikeDetail {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
-    padding: 0.7rem 1rem;
-    background-color: #333333;
+    padding: 0px 15px 0px 15px;
+
     .detailTxt {
       font-size: 12px;
-      color: #cbc6c6;
+      color: $gray-cb;
       padding: 0;
       margin-bottom: 0px;
-
-      &:nth-child(2) {
-        text-align: center;
-        border-left: 1px solid #707070;
-        border-right: 1px solid #707070;
-      }
-      &:nth-child(3) {
-        text-align: end;
+      text-align: center;
+      border-right: 1px solid #707070;
+      &:last-child {
+        border-right: none;
       }
     }
   }
+
   .priceTitle {
-    color: #cbc6c6;
-    padding: 0rem 1rem;
+    color: $gray-cb;
+    padding: 0px 5px 0px 15px;
     font-size: 12px;
     font-weight: 500;
   }
+
   .price {
-    color: #ffffff;
+    color: $white;
     font-size: 18px;
     font-weight: 600;
-    padding: 0rem 1rem;
-    margin-bottom: 15px;
+    padding: 0px 15px 0px 15px;
   }
-  .bikeCardBtn {
-    width: 100%;
-    min-height: 42px;
+  .source {
     font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    background: #403e3e;
-    border: 0;
-    border-radius: 0;
-    &:active {
-      background: #403e3e;
-    }
-    &.viewDetailBtn{
-		background: #DA291C;
-		&:active{
-			background: #DA291C;
-		}
-	}
   }
 }

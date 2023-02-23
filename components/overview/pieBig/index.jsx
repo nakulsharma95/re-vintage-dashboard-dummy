@@ -1,60 +1,53 @@
 import React from 'react';
-import PieChart from '../../charts/pieChart';
+import DoughnutChart from '../../charts/doughnutChart';
 
 import styles from './style.module.scss';
 
 function PieBig() {
-  // Pie Chart Here
-  const pieOptions = {
-    title: '',
-    backgroundColor: 'transparent',
-    pieHole: 0.5,
-    slices: [
-      {
-        color: '#DA291C',
+  const optionsDoughnut = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: true,
+        position: 'right',
+        labels: {
+          fontSize: 20,
+          color: 'white',
+        },
       },
+    },
+  };
+  const labels = [
+    'Upcoming Bids',
+    'Active Bids',
+    'Closed Bids',
+    'No Bids',
+    'Seller Portal',
+  ];
+  const doughnutChartData = {
+    labels,
+    datasets: [
       {
-        color: '#E8B016',
-      },
-      {
-        color: '#F28823',
-      },
-      {
-        color: '#D2635B',
-      },
-      {
-        color: '#403E3E',
+        label: 'My First Dataset',
+        data: [100, 300, 100, 80, 50],
+        backgroundColor: [
+          '#F1DF67',
+          '#D2635B',
+          '#403E3E',
+          '#DA291C',
+          '#F28823',
+        ],
+        borderColor: ['#686868'],
+        hoverOffset: 4,
+        borderWidth: 0.2,
       },
     ],
-    pieSliceBorderColor: 'transparent',
-    legend: {
-      position: 'right',
-      alignment: 'left',
-      textStyle: {
-        color: 'white',
-        fontSize: 14,
-      },
-    },
-    tooltip: {
-      showColorCode: true,
-    },
-    fontSize: 12,
   };
-
-  const pieData = [
-    ['Item', 'Numbers'],
-    ['From Web 1507', 10000],
-    ['MIY 74', 6000],
-    ['Instore 10', 10000],
-    ['VDMP 20', 6000],
-    ['From App 2', 10000],
-  ];
   return (
     <div className={styles.pieContainer}>
       <h5>Bidding Overview</h5>
-      <div className="d-flex">
-        <PieChart chartData={pieData} pieOptions={pieOptions} />
-      </div>
+      <DoughnutChart options={optionsDoughnut} data={doughnutChartData} />
     </div>
   );
 }

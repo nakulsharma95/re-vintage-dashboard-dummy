@@ -11,7 +11,7 @@ export default function Sidebar() {
     <div className={styles.sideBarContainer}>
       <Accordion className={styles.reAccordion} defaultActiveKey="">
         <li>
-          <Link href="/">
+          <Link href="/homepage">
             <span className={styles.navIcon}>
               <FiBarChart2 />
             </span>
@@ -157,7 +157,7 @@ export default function Sidebar() {
               </Link>
             </li>
             <li>
-              <Link href="/demand/wishlist">Wishlist</Link>
+              <Link href="/demand">Wishlist</Link>
             </li>
           </Accordion.Body>
         </Accordion.Item>
@@ -196,7 +196,7 @@ export default function Sidebar() {
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/escalation">
             <span className={styles.navIcon}>
               <BsFileEarmarkText />
             </span>

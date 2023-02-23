@@ -3,11 +3,11 @@ import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
 import MotorcycleDetailCard from '../../../components/procurements/evaluationRequest';
 import TabPrimary from '../../../components/common/tabPrimary';
-import ViewAllInnerTab from '../../../components/procurements/ViewAllInnerTab';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
+import ViewAll from '../../../components/common/viewAllHeader';
 
 function EvaluationRequest() {
   const motorCycleDetail = [
@@ -92,7 +92,11 @@ function EvaluationRequest() {
       </HeaderPrimary>
 
       <TabPrimary title1="Open" title2="Cancelled (12)" title3="Dropped (12)" />
-      <ViewAllInnerTab />
+      <ViewAll
+        title="3 Leads Available"
+        viewAllList
+        viewAllClass="mb-4"
+      />
 
       {motorCycleDetail.map((item) => (
         <MotorcycleDetailCard

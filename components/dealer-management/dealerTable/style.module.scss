@@ -11,10 +11,17 @@
 				position: absolute;
 				background-color: green;
 				border-radius: 50%;
-				height: 0.6rem;
-				width: 0.6rem;
+				height: 5px;
+				width: 5px;
 				left: -0.9rem;
                 top: 0.3rem;
+			}
+		}
+		.status_deactive{
+			&:before{
+				content: "";
+				background-color: #DA291C;
+				
 			}
 		}
 		thead tr th{
@@ -28,6 +35,8 @@
 			color: #FFFFFF;
 			border: none;
 			border-bottom: 1px solid #282828;
+			padding:1rem 1.3rem;
+            
 
 			.tableCheckbox .form-check-input:checked {
 				background-color: red;

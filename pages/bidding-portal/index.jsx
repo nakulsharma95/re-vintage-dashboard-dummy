@@ -9,6 +9,8 @@ import SearchPrimary from '../../components/common/searchPrimary';
 import FilterButton from '../../components/common/filterButton';
 import HeaderPrimary from '../../components/common/headerPrimary';
 
+import styles from './style.module.scss';
+
 export default function BiddingPortal() {
   const upcomingBikeData = [
     {
@@ -167,7 +169,7 @@ export default function BiddingPortal() {
   return (
     <div>
       <div className="d-flex align-items-center justify-content-between">
-        <Breadcrumb title="Bidding Portal" addmoretitle="Bidding Portal" />
+        <Breadcrumb title="Bidding Portal" />
         <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
       </div>
 
@@ -176,19 +178,16 @@ export default function BiddingPortal() {
         <FilterButton />
       </HeaderPrimary>
 
-      <Row>
-        <Col md={6}>
-          <NumberCard />
-        </Col>
-        <Col md={6}>
-          <BiddingOverview />
-        </Col>
-      </Row>
-
+      <div className={styles.gridCards}>
+        <NumberCard />
+        <BiddingOverview />
+      </div>
       <ViewAll
         viewallLink="/bidding-portal/upcoming-bids"
         title="Upcoming Bids"
         leadsTitle="(1507 Leads)"
+        viewAllBtn
+        viewAllClass="mt-4 mb-3"
       />
       <Row>
         {upcomingBikeData.map((item) => (
@@ -209,9 +208,11 @@ export default function BiddingPortal() {
 
       <div className="bottom-white-border" />
       <ViewAll
-        viewallLink="/bidding-portal/active-bids"
+        viewallLink="/bidding-portal/upcoming-bids"
         title="Active Bids"
         leadsTitle="(97 Leads)"
+        viewAllBtn
+        viewAllClass="mt-4 mb-3"
       />
       <Row>
         {activeBikeData.map((item) => (
@@ -232,9 +233,11 @@ export default function BiddingPortal() {
       </Row>
       <div className="bottom-white-border" />
       <ViewAll
-        viewallLink="/bidding-portal/closed-bids"
+        viewallLink="/bidding-portal/upcoming-bids"
         title="Closed Bids"
         leadsTitle="(12 Leads)"
+        viewAllBtn
+        viewAllClass="mt-4 mb-3"
       />
       <Row>
         {closedBikeData.map((item) => (
@@ -254,9 +257,11 @@ export default function BiddingPortal() {
       </Row>
       <div className="bottom-white-border" />
       <ViewAll
-        viewallLink="/bidding-portal/seller-portal"
-        title="Seller Portal"
+        viewallLink="/bidding-portal/upcoming-bids"
+        title="Seller Bids"
         leadsTitle="(25 Leads)"
+        viewAllBtn
+        viewAllClass="mt-4 mb-3"
       />
       <Row>
         {sellerBikeData.map((item) => (

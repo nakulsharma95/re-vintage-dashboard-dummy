@@ -1,16 +1,31 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import { Chart } from 'react-google-charts';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+
+import styles from './style.module.scss';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 function HorizontalBarChart(props) {
   return (
-    <div className={props.containerClassName}>
-      <Chart
-        width="100%"
-        data={props.data}
-        options={props.options}
-        chartType="BarChart"
-        loader={<div>Loading Chart...</div>}
-      />
+    <div className={`${styles.graphStyle} ${props.containerClassName}`}>
+      <Bar options={props.options} data={props.data} />
     </div>
   );
 }

@@ -1,0 +1,40 @@
+.procurementDetails {
+  background-color: #000000;
+  padding: 2rem;
+  h5 {
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 0.9;
+  }
+  p {
+    font-size: 14px;
+    margin-top: 1rem;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+  h6 {
+    font-size: 14px;
+    // font-family: "Montserrat, Medium";
+  }
+  .remark_text {
+    background-color: #282828;
+    padding: 0.8rem 1rem;
+    height: 10vh;
+    width: 80%;
+    display: inline-block;
+    margin: 0.7rem 0;
+  }
+  .remark_btn {
+    background-color: #da291c;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+    position: relative;
+    top: 1.4rem;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+  }
+}

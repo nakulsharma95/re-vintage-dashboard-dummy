@@ -1,23 +1,33 @@
 @import '../../../styles/variables/colors';
 @import '../../../styles/variables//mixins';
 
-.numberCardMain{
-	background-color: $gray-28;
-	margin: 15px 0;
-	padding: 20px;
-	min-height: 321px;
-	.number{
-		font-size: 24px;
-		font-weight: 600;
-		display: block;
-		margin: 5px 0 0;
-	}
-	.iconImg{
-		display: inline-block;
-		margin-bottom: 10px;
-		img{
-			width: 100%;
-			max-width: 28px;
-		}
-	}
+.numberCardMain {
+  background-color: $gray-28;
+  margin: 15px 0;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title {
+	font-size: 16px;
+	margin-top: 24px;
+  }
+
+  .number {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 5px 0 0;
+  }
+
+  .iconImg {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    img {
+      width: 100%;
+      max-width: 38px;
+    }
+  }
 }

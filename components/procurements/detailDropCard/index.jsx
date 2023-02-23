@@ -36,17 +36,17 @@ export default function DetailDropCard() {
         </div>
 
         <div
-          className={`${styles.borderTopCustom} w-100 pb-1 pt-2 d-flex justify-content-between px-2 align-items-center`}
+          className={`${styles.borderTopCustom}`}
         >
           <div
-            className={`${styles.borderRightCustom} ${styles.dropCardFooter} pe-3`}
+            className={styles.dropCardFooter}
             onClick={dateToggleModal}
           >
             <AiOutlineCalendar className={`${styles.dropIcon}`} size={18} />
             <span className="ml-2">Reschedule</span>
           </div>
           <div
-            className={`${styles.dropCardFooter} pe-3`}
+            className={`${styles.dropCardFooter}`}
             onClick={cancelToggleModal}
           >
             <AiOutlineClose className={`${styles.dropIcon}`} size={18} />

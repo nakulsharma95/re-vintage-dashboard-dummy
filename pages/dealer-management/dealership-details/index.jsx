@@ -3,49 +3,30 @@ import Dealershipdetails from '../../../components/dealer-management/dealershipD
 import HeaderPrimary from '../../../components/common/headerPrimary'
 import TabPrimary from '../../../components/common/tabPrimary'
 import { Row, Col } from 'react-bootstrap';
-import ActiveBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
+// import ActiveBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
 import DetailPagination from '../../../components/common/paginationPrimary';
-
+import Review from '../../../components/dealer-management/reviewSlider';
+import BikeCardRadio from '../../../components/common/cardCheckbox';
 
 function DealershipDetails() {
-	const activeBikeData = [
-		{
-		  imageUrl: '/images/bikeImage.png',
-		  name: 'Classic 350',
-		  number: 'DL6TAL7314',
-		  km: '48,523',
-		  year: '2020',
-		  location: 'Mumbai, Maharashtra',
-		  highestbidPrice: '1,25,000.00',
-		},
-		{
-		  imageUrl: '/images/bikeImage2.png',
-		  name: 'Classic 350',
-		  number: 'DL6TAL7215',
-		  km: '48,523',
-		  year: '2020',
-		  location: 'Janakpuri, Delhi',
-		  highestbidPrice: '1,25,000.00',
-		},
-		{
-		  imageUrl: '/images/bikeImage3.png',
-		  name: 'Classic 350',
-		  number: 'DL6TAL7016',
-		  km: '48,523',
-		  year: '2020',
-		  location: 'Chandigarh',
-		  highestbidPrice: '1,25,000.00',
-		},
-		{
-		  imageUrl: '/images/bikeImage4.png',
-		  name: 'Classic 350',
-		  number: 'DL6TAL7119',
-		  km: '48,523',
-		  year: '2020',
-		  location: 'Noida, Uttar Pradesh',
-		  highestbidPrice: '1,25,000.00',
-		},
-	  ];
+	const cardData = [
+    {
+      imageUrl: "/images/bikeImage.png",
+      overDue: "evolutionOver",
+      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+    },
+    {
+      imageUrl: "/images/bikeImage2.png",
+      dealerLocation: "Neel Motors, Rohini Nagar, Delhi",
+    },
+    {
+      imageUrl: "/images/bikeImage3.png",
+      dealerLocation: "Neel Motors, Punjabi Bagh, Delhi",
+    },
+    {
+      imageUrl: "/images/bikeImage4.png",
+      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+    },]
   return (
 	<div>
 		<Dealershipdetails/>
@@ -57,53 +38,30 @@ function DealershipDetails() {
 	  <TabPrimary title1="Inventory" title2="Marketplace (31)" />
 	  <div className="mb-3">37 Listing Found</div>
       <Row className="mb-3">
-        {activeBikeData.map((item) => (
-          <Col md={3}>
-            <ActiveBikeCard
-              highestBid
-              arrowBtn
+      {cardData.map((item) => (
+          <Col xxl={3} xl={4} lg={6} key={item.id}>
+            <BikeCardRadio
+              bikeModal="2015 Classic 350"
+              bikeRc="-DL6TAL7314"
+              bikekm="43,384 km"
+              bikeOwner="1st Owner"
+              bikeCc="350 CC"
+              bikePrice="1,25,000.00"
+              bikeDealer="(C2N0RJ20FC2N)"
+              dealerAddress="Neel Motors, Lajpat Nagar, Delhi"
+              
+              // isButtonVisible
+              isCardVisible={false}
+              isOlxTagVisible={false}
               imageUrl={item.imageUrl}
-              bikeName={item.name}
-              bikeNumber={item.number}
-              kmDrive={item.km}
-              modelYear={item.year}
-              location={item.location}
-              highestBidPrice={item.highestbidPrice}
+              dealerLocation={item.dealerLocation}
             />
           </Col>
         ))}
-        {activeBikeData.map((item) => (
-          <Col md={3}>
-            <ActiveBikeCard
-              highestBid
-              arrowBtn
-              imageUrl={item.imageUrl}
-              bikeName={item.name}
-              bikeNumber={item.number}
-              kmDrive={item.km}
-              modelYear={item.year}
-              location={item.location}
-              highestBidPrice={item.highestbidPrice}
-            />
-          </Col>
-        ))}
-        {activeBikeData.map((item) => (
-          <Col md={3}>
-            <ActiveBikeCard
-              highestBid
-              arrowBtn
-              imageUrl={item.imageUrl}
-              bikeName={item.name}
-              bikeNumber={item.number}
-              kmDrive={item.km}
-              modelYear={item.year}
-              location={item.location}
-              highestBidPrice={item.highestbidPrice}
-            />
-          </Col>
-        ))}
+       
       </Row>
       <DetailPagination className="mt-3" />
+      <Review/>
 	</div>
   )
 }
