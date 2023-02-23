@@ -35,6 +35,15 @@
           background-color: $white;
           color: $gray-a7;
         }
+        &:hover{
+          border: none;
+          background-color: $white;
+          color: $black-40;
+        }
+
+        &:focus{
+          border: none !important;
+        }
       }
     }
   }
