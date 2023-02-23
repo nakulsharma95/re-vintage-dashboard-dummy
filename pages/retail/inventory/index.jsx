@@ -122,6 +122,8 @@ export default function Inventory() {
               isBikeChassisVisible
               imageUrl={item.imageUrl}
               dealerLocation={item.dealerLocation}
+              isCreDetails
+              isDealer
             />
           </Col>
         ))}
