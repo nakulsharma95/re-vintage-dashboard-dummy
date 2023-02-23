@@ -17,4 +17,13 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
+
+  .filterBtn {
+    background: $gray-2;
+    color: $gray-cb;
+    border: none;
+    padding: 0 30px;
+    height: 34px;
+    text-transform: uppercase;
+  }
 }

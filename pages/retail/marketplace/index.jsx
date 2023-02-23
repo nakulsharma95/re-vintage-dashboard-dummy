@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import { Col, Row } from "react-bootstrap";
+import { RiShareBoxFill } from "react-icons/ri";
+import BikeCardRadio from "../../../components/common/cardCheckbox";
+import Breadcrumb from "../../../components/common/breadcrumbPrimary";
+import DashboardCard from "../../../components/dashboardCard";
+import SortTabs from "../../../components/common/sortTabs";
+import TabPrimary from "../../../components/common/tabPrimary";
+import SearchPrimary from "../../../components/common/searchPrimary";
+import FilterButton from "../../../components/common/filterButton";
+import HeaderPrimary from "../../../components/common/headerPrimary";
+import OutlineButton from "../../../components/common/buttons/OutlineButton";
+=======
 import { Col, Row } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
 import BikeCardRadio from '../../../components/common/cardCheckbox';
@@ -9,6 +22,7 @@ import SearchPrimary from '../../../components/common/searchPrimary';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
+>>>>>>> 82c6827c0429981ec4d3e00573ec884aba74cbff
 
 export default function MarketPlace() {
   const cardData = [
