@@ -44,12 +44,15 @@ export default function Booking() {
         {cardData.map((item) => (
           <Col xxl={3} xl={4} lg={6} key={item.id}>
             <BikeCard
+              isKmData
+              isPriceData
+              priceTitle="Selling Price"
               bikeModal="2015 Classic 350"
               bikeRc="DL6TAL7314"
-              bikekm="1,25,000.00"
-              bikeOwner="1st Owner"
-              bikeCc="350 CC"
-              sellingPrice="1,25,000.00"
+              bikekm="43,384"
+              bikeOwner="1st"
+              bikeCc="350"
+              sellingPrice="1,25,000"
               source="VDMP"
               imageUrl={item.imageUrl}
             />

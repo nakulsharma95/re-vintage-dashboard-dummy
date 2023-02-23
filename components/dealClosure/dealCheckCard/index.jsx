@@ -19,9 +19,7 @@ function DealCheckCard(props) {
         <Card.Img variant="top" src={data.imageUrl} />
         {props.isCheckBoxVisible && (
           <div className={`${styles.bikeCardCheck}`}>
-            <Form.Group className={styles.customCheck} controlId={`${data.key}form`}>
-              <Form.Check type="checkbox" label="" />
-            </Form.Group>
+            <CustomCheckBox />
           </div>
         )}
         <Card.Body className="px-0">

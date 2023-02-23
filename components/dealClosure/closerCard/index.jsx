@@ -1,20 +1,21 @@
-import React from 'react';
-import { Row, Col, Card, Button } from 'react-bootstrap';
-import styles from './style.module.scss';
+import React from "react";
+import { Row, Col, Card, Button } from "react-bootstrap";
+import styles from "./style.module.scss";
+import { BiRupee } from "react-icons/bi";
 
 function CloserBikeCard(props) {
   const { data } = props;
 
   const tagClassHandler = (tag) => {
     switch (tag) {
-      case 'Upload Content':
+      case "Upload Content":
         return styles.orangeTag;
 
-      case 'Under Refurbishment':
+      case "Under Refurbishment":
         return styles.yellowTag;
 
-      case 'Under Approval':
-        return '';
+      case "Under Approval":
+        return "";
 
       default:
         break;
@@ -44,7 +45,10 @@ function CloserBikeCard(props) {
           {props.isHighestBid && (
             <Row className={`${styles.bidPrice} mx-0`}>
               <Col className={styles.priceTxt}>{props.isHighestBid}</Col>
-              <Col className={styles.priceTxtValue}>₹1,25,000.00</Col>
+              <Col className={styles.priceTxtValue}>
+                <BiRupee size={22} />
+                1,25,000.00
+              </Col>
             </Row>
           )}
           {props.isKmDriven && (

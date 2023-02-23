@@ -1,6 +1,7 @@
 import { Col, Row } from 'react-bootstrap';
 import { TbTrendingUp } from 'react-icons/tb';
 import { RiShareBoxFill } from 'react-icons/ri';
+import { BiRupee } from 'react-icons/bi';
 import BikeCardRadio from '../../../components/common/cardCheckbox';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DashboardCard from '../../../components/dashboardCard';

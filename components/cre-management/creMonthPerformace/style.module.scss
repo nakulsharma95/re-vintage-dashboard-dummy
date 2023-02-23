@@ -1,27 +1,35 @@
-@import "../../../styles/variables/colors";
-@import "../../../styles/variables//mixins";
-.performanceCard{
-	border: none;
-	border-radius: 0;
-	margin-top: 1.5rem !important;
-	.performanceCardBody{
-		background-color: $gray-2;
-		padding: 15px;
-		border: none;
-		.custumDivide{
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
-		.performanceCardText{
-			h3{
-				font-size: 16px;
-				color: $gray-cb;
-				margin-bottom: 10px;
-			}
-		
-		}
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
 
-		
-	}
+.performanceCard {
+  border: none;
+  border-radius: 0;
+
+  .performanceCardBody {
+    background-color: $gray-2;
+    padding: 15px;
+    border: none;
+	
+    .custumDivide {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .performanceCardText {
+      h3 {
+        font-size: 16px;
+        color: $gray-cb;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .wishListedGraphBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 339px;
+    margin: 25px 0;
+  }
 }
