@@ -32,7 +32,13 @@ function dealerTable() {
       </thead>
       <tbody>
         <tr>
-          <td><Link href="/dealer-management/dealership-details">Neel Motors</Link></td>
+          <td>
+            <div className='d-flex'>
+            <div className='status-circle success mt-2'></div>
+             <Link href="/dealer-management/dealership-details">Neel Motors</Link>
+            </div>
+            
+             </td>
           <td>H2N8XS94JU</td>
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
@@ -40,7 +46,12 @@ function dealerTable() {
           <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
         </tr>
         <tr>
-          <td><Link className={style.status_deactive} href="/">Neel Motors</Link></td>
+          <td>
+          <div className='d-flex'>
+            <div className='status-circle danger mt-2'></div>
+             <Link href="/">Neel Motors</Link>
+            </div>
+            </td>
           <td>H2N8XS94JU</td>
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
@@ -48,7 +59,12 @@ function dealerTable() {
           <td><Form.Check className={style.tableCheckbox} type="checkbox" label="Enabled" /> </td>
         </tr>
 		<tr>
-          <td><Link href="/dealer-management/dealership-details">Neel Motors</Link></td>
+          <td>
+          <div className='d-flex'>
+            <div className='status-circle success mt-2'></div>
+             <Link href="/dealer-management/dealership-details">Neel Motors</Link>
+            </div>
+            </td>
           <td>H2N8XS94JU</td>
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
@@ -56,7 +72,12 @@ function dealerTable() {
           <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
         </tr>
 		<tr>
-          <td><Link href="/dealer-management/dealership-details">Neel Motors</Link></td>
+          <td>
+          <div className='d-flex'>
+            <div className='status-circle success mt-2'></div>
+             <Link href="/dealer-management/dealership-details">Neel Motors</Link>
+            </div>
+            </td>
           <td>H2N8XS94JU</td>
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
@@ -64,7 +85,12 @@ function dealerTable() {
           <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
         </tr>
 		<tr>
-          <td><Link className={style.status_deactive} href="/">Neel Motors</Link></td>
+          <td>
+          <div className='d-flex'>
+            <div className='status-circle danger mt-2'></div>
+             <Link href="/">Neel Motors</Link>
+            </div>
+            </td>
           <td>H2N8XS94JU</td>
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
@@ -72,7 +98,12 @@ function dealerTable() {
           <td><Form.Check className={style.tableCheckbox} type="checkbox" label="Enabled" /> </td>
         </tr>
 		<tr>
-          <td><Link className={style.status_deactive} href="/">Neel Motors</Link></td>
+          <td>
+          <div className='d-flex'>
+            <div className='status-circle danger mt-2'></div>
+             <Link href="/">Neel Motors</Link>
+            </div>
+            </td>
           <td>H2N8XS94JU</td>
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
@@ -80,7 +111,12 @@ function dealerTable() {
           <td><Form.Check className={style.tableCheckbox} type="checkbox" label="Enabled" /> </td>
         </tr>
 		<tr>
-          <td><Link href="/dealer-management/dealership-details">Neel Motors</Link></td>
+          <td>
+          <div className='d-flex'>
+            <div className='status-circle success mt-2'></div>
+             <Link href="/dealer-management/dealership-details">Neel Motors</Link>
+            </div>
+            </td>
           <td>H2N8XS94JU</td>
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
@@ -88,7 +124,12 @@ function dealerTable() {
           <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
         </tr>
 		<tr>
-          <td><Link href="/dealer-management/dealership-details">Neel Motors</Link></td>
+          <td>
+          <div className='d-flex'>
+            <div className='status-circle success mt-2'></div>
+             <Link href="/dealer-management/dealership-details">Neel Motors</Link>
+            </div>
+            </td>
           <td>H2N8XS94JU</td>
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>
@@ -96,7 +137,12 @@ function dealerTable() {
           <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
         </tr>
 		<tr>
-          <td><Link className={style.status_deactive} href="/">Neel Motors</Link></td>
+          <td>
+          <div className='d-flex'>
+            <div className='status-circle danger mt-2'></div>
+             <Link href="/">Neel Motors</Link>
+            </div>
+            </td>
           <td>H2N8XS94JU</td>
           <td>+91 98996 98654</td>
           <td>johndoe@gmail.com</td>

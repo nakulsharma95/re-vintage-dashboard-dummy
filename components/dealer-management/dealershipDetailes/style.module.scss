@@ -14,16 +14,7 @@
     position: relative;
     top: 0.4rem;
     right: 0.3rem;
-    &:before {
-      content: '';
-      position: absolute;
-      background-color: green;
-      border-radius: 50%;
-      height: 5px;
-      width: 5px;
-      left: -0.9rem;
-      top: 0.5rem;
-    }
+    
   }
 }
 .motors {
