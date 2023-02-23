@@ -35,7 +35,7 @@ function BikeCard(props) {
           )}
 
           {props.isPriceData && (
-            <div className={bikeCardStyle.bikePrice}>
+            <div className={`${bikeCardStyle.bikePrice} ${props.className}`}>
               <h5 className={bikeCardStyle.priceTitle}>{props.priceTitle}</h5>
               <h4 className={bikeCardStyle.price}>
                 <BiRupee size={21} />

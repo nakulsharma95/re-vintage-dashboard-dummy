@@ -137,9 +137,7 @@ function Procurement() {
       bikekm: '43,384',
       bikeOwner: '1st',
       bikeCc: '350',
-      smPriceTitle: 'Estimated Price',
-      price: '1,15,000',
-      priceTwo: '1,25,000',
+      priceTitle:'Evaluation Price',
     },
     {
       imageUrl: '/images/bikeImage2.png',
@@ -148,9 +146,7 @@ function Procurement() {
       bikekm: '43,384',
       bikeOwner: '1st',
       bikeCc: '350',
-      smPriceTitle: 'Estimated Price',
-      price: '1,15,000',
-      priceTwo: '1,25,000',
+      priceTitle:'Evaluation Price',
     },
     {
       imageUrl: '/images/bikeImage3.png',
@@ -159,9 +155,7 @@ function Procurement() {
       bikekm: '43,384',
       bikeOwner: '1st',
       bikeCc: '350',
-      smPriceTitle: 'Estimated Price',
-      price: '1,15,000',
-      priceTwo: '1,25,000',
+      priceTitle:'Evaluation Price',
     },
     {
       imageUrl: '/images/bikeImage4.png',
@@ -170,9 +164,7 @@ function Procurement() {
       bikekm: '43,384',
       bikeOwner: '1st',
       bikeCc: '350',
-      smPriceTitle: 'Estimated Price',
-      price: '1,15,000',
-      priceTwo: '1,25,000',
+      priceTitle:'Evaluation Price',
     },
   ];
   return (
@@ -245,6 +237,7 @@ function Procurement() {
             <BikeCard
               className="bg-gray-3 py-2"
               isKmData
+              isEstBtn
               isestimatedPrice
               imageUrl={item.imageUrl}
               bikeModal={item.bikeModal}
@@ -270,19 +263,16 @@ function Procurement() {
         {completedData.map((item) => (
           <Col md={3}>
             <BikeCard
-              className="bg-gray-3 py-2"
+              className="bg-gray-3 py-2 bg-transparent mb-0 pb-0"
               isKmData
-              isestimatedPrice
-              isEstBtn
+              isPriceData
               imageUrl={item.imageUrl}
               bikeModal={item.bikeModal}
               bikeRc={item.bikeRc}
               bikekm={item.bikekm}
               bikeOwner={item.bikeOwner}
               bikeCc={item.bikeCc}
-              smPriceTitle={item.smPriceTitle}
-              price={item.price}
-              priceTwo={item.priceTwo}
+              priceTitle={item.priceTitle}
             />
           </Col>
         ))}
