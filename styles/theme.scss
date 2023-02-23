@@ -279,7 +279,6 @@ h6 {
   }
 }
 
-
 .nav .nav-item .navBidsLink.active {
   background-color: $theme-red-da;
 }
@@ -490,29 +489,27 @@ h6 {
   border-color: red;
 }
 
+// Review slider
 
-// Review slider 
-
-
-.review_slider{
-  .slick-arrow{
+.review_slider {
+  .slick-arrow {
     color: $gray-cb;
     width: 40px;
     height: 40px;
   }
-  .slick-prev{
+  .slick-prev {
     left: -35px;
   }
-  .slick-next{
+  .slick-next {
     right: -35px;
   }
 
-  .slick-dots{
-    li{
+  .slick-dots {
+    li {
       width: 7px;
       height: 7px;
       margin: 0 3px;
-      button{
+      button {
         width: 7px;
         height: 7px;
         border-radius: 50%;
@@ -520,22 +517,18 @@ h6 {
         background-color: $gray-65;
       }
     }
-    li.slick-active{
-      button{
+    li.slick-active {
+      button {
         background-color: $theme-red-da;
       }
     }
   }
 }
 
-
-
-
-
-.sortText{
-	font-size: 14px;
-	margin-right: 8px;
-	color: $gray-cb;
+.sortText {
+  font-size: 14px;
+  margin-right: 8px;
+  color: $gray-cb;
 }
 
 .table-dark {
@@ -598,31 +591,30 @@ h6 {
   }
 }
 
-.re-detailFootBg{
+.re-detailFootBg {
   display: flex;
   background-color: $black;
   gap: 0 40px;
-  .col-md-4{
-    &:last-child{
-      div{
+  .col-md-4 {
+    &:last-child {
+      div {
         border-right: none;
       }
     }
   }
 }
 
-
-.errorMain{
+.errorMain {
   background-color: $white;
   height: 100vh;
   position: relative;
-  .errorImg{
-    img{
+  .errorImg {
+    img {
       width: 100%;
       max-width: 125px;
     }
   }
-  &::after{
+  &::after {
     content: '';
     background-image: url('/images/error-bg.svg');
     background-repeat: no-repeat;
@@ -634,20 +626,20 @@ h6 {
     left: 0;
     z-index: 1;
   }
-  .errorContainer{
+  .errorContainer {
     color: $black;
     padding: 90px 40px;
     width: 100%;
     max-width: 45%;
-    h3{
+    h3 {
       font-size: 24px;
       font-weight: 600;
       margin: 10px 0 15px;
     }
-    p{
+    p {
       font-weight: 500;
     }
-    a{
+    a {
       display: inline-block;
       padding: 6px 30px;
       text-transform: uppercase;
@@ -657,41 +649,40 @@ h6 {
       font-size: 14px;
       margin: 10px 0;
       transition: all 0.5s;
-      &:hover{
+      &:hover {
         background-color: $black;
       }
     }
   }
 }
 
-.cre-heading{
+.cre-heading {
   font-size: 16px;
   font-weight: 500;
-// Status circle Styles
-.status-circle {
-  width: 5px;
-  height: 5px;
-  border-radius: 100%;
+  // Status circle Styles
+  .status-circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
 
-  &.danger {
-    background: $theme-red-da;
-  }
+    &.danger {
+      background: $theme-red-da;
+    }
 
-  &.success {
-    background: $theme-green;
-  }
+    &.success {
+      background: $theme-green;
+    }
 
-  &.warning {
-    background: $theme-warning;
+    &.warning {
+      background: $theme-warning;
+    }
   }
 }
 
 // dashboardCard
-
 .dashboard-card {
   display: flex;
   gap: 10px;
   margin-bottom: 12px;
   margin-top: 24px;
-}
 }
