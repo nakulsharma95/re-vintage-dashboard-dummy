@@ -599,7 +599,9 @@ h6 {
 }
 
 .re-detailFootBg{
+  display: flex;
   background-color: $black;
+  gap: 0 40px;
   .col-md-4{
     &:last-child{
       div{
