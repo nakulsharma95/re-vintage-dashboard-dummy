@@ -1,18 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
 // variables
-@import "./variables/colors";
-@import "./variables/mixins";
+@import './variables/colors';
+@import './variables/mixins';
 
 // theme styles files
-@import "./xtras";
-@import "./fonts";
-@import "./typography";
+@import './xtras';
+@import './fonts';
+@import './typography';
 
 // custom css
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: 'montserrat', sans-serif;
 }
 
 ::selection {
@@ -35,8 +34,20 @@ body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0d0d0d;
+  font-weight: 400;
 
   @include scrollbarCustom;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: 'Guardian Sans', sans-serif;
 }
 
 .scroll-hide {
@@ -54,5 +65,618 @@ body {
   .title2 {
     text-align: center;
     color: $white;
+  }
+}
+
+.bottom-white-border {
+  border-bottom: 1px solid #707070;
+}
+
+.re-mainContainer {
+  .mainDflex {
+    display: flex;
+  }
+}
+
+.mainsidebar-menu {
+  .accordion-item {
+    .accordion-button.collapsed {
+      background-color: $gray-1;
+    }
+  }
+}
+
+.custom-tab-style .nav-link {
+  color: #fff;
+  font-size: 14px;
+  border: none;
+}
+
+.custom-tab-style .nav-tabs .nav-link {
+  border: none;
+  padding: 10px 0px 10px 0;
+  margin-right: 25px;
+}
+
+.custom-tab-style .nav-link.active {
+  background-color: transparent;
+  border: none;
+  color: $theme-red-da;
+  margin-bottom: 0;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: $theme-red-da;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+  }
+}
+
+.custom-tab-style .nav-link:hover,
+.nav-tabs .nav-link:focus {
+  border: none;
+  border-bottom: 0 solid;
+  margin-bottom: 0;
+}
+
+// Pagination Start ---------------------------------
+.custom-paginationMain {
+  .custom-pagination {
+    .page-item {
+      margin: 0 0.4rem;
+
+      &:first-child,
+      &:last-child {
+        .page-link {
+          border-radius: 0;
+        }
+      }
+
+      .page-link {
+        width: 22px;
+        height: 28px;
+        padding: 0rem;
+        color: $gray-cb;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 29px;
+        border: 0;
+        background-color: transparent;
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+
+      &.active {
+        .page-link {
+          color: $white;
+          background-color: $theme-red-da;
+        }
+      }
+    }
+  }
+}
+
+// Pagination End ------------------------------------
+
+// modal-style1
+.modal-style1 {
+  backdrop-filter: blur(7px);
+
+  .modal-content {
+    background: $gray-18;
+  }
+
+  .modal-dialog {
+    max-width: 560px;
+  }
+}
+
+.modal-style2 {
+  .modal-dialog {
+    max-width: 760px;
+  }
+}
+
+// ----------- cancel modal end-----------------//
+
+// ----------- complete evaluation slider -----------//
+
+.bike-slider-custom {
+  position: relative;
+
+  .slick-arrow {
+    z-index: 9;
+    min-width: 30px;
+    min-height: 30px;
+    background-color: #000000;
+    backdrop-filter: blur(8px);
+    padding-bottom: 5px;
+
+    &::before {
+      font-size: 14px;
+    }
+
+    &.slick-disabled {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .slick-prev {
+    left: 10px;
+
+    &::before {
+      content: '\276E';
+    }
+  }
+
+  .slick-next {
+    right: 10px;
+
+    &::before {
+      content: '\276F';
+    }
+  }
+
+  .slick-dots {
+    height: auto;
+    bottom: 0;
+    text-align: left;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    li {
+      width: 64px;
+      height: 46px;
+      margin-left: 0px;
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &.slick-active {
+        a {
+          border: 1px solid $white;
+        }
+      }
+    }
+  }
+
+  // slider-tumbnail style
+  .slider-tumbnail {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    background: rgba($black, 0.8);
+    height: 58px;
+    padding: 6px 4px;
+    backdrop-filter: blur(8px);
+
+    .slick-track {
+      display: flex;
+      gap: 4px;
+    }
+
+    .img-full {
+      width: 100%;
+    }
+  }
+}
+
+
+.nav .nav-item .navBidsLink.active {
+  background-color: $theme-red-da;
+}
+
+.nav .nav-item .bodyExtNavItem.active {
+  color: $white;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: $white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+// ---------------------- accordion ------------
+.vintage-modal-accordion {
+  .accordion-header {
+    button {
+      color: $white;
+      opacity: 0.9;
+      background: $gray-20;
+      border-bottom: 1px solid $gray-70;
+
+      &:not(.collapsed) {
+        box-shadow: none;
+      }
+
+      &:focus {
+        border-color: $gray-70;
+        box-shadow: none;
+      }
+
+      &::after {
+        color: $white;
+        background: url('/images/down-arrow.png') no-repeat;
+        background-size: 18px;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+// ---------- calender---------------------
+.customCalender {
+  .react-calendar {
+    background: transparent;
+    border: 0;
+
+    .react-calendar__navigation {
+      .react-calendar__navigation__prev2-button,
+      .react-calendar__navigation__next2-button {
+        display: none;
+      }
+
+      button {
+        color: $white;
+
+        &:hover,
+        &:focus {
+          background: transparent;
+        }
+
+        &.react-calendar__navigation__arrow {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .react-calendar__viewContainer {
+      .react-calendar__month-view {
+        .react-calendar__month-view__weekdays {
+          .react-calendar__month-view__weekdays__weekday {
+            color: $white;
+            font-weight: 500;
+
+            abbr {
+              text-decoration: none;
+            }
+          }
+        }
+
+        .react-calendar__month-view__days {
+          .react-calendar__month-view__days__day {
+            color: #ffffff4d;
+            border: 1px solid transparent;
+
+            &:hover {
+              background: transparent;
+              border-color: #ededed;
+            }
+
+            &.react-calendar__tile--active,
+            &.react-calendar__tile--now {
+              color: $white;
+              background: #616161;
+              border: 1px solid #ededed;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tooltip.bs-tooltip-end {
+  .tooltip-inner {
+    background-color: $theme-yellow-E8;
+    color: $black;
+    font-weight: 500;
+    margin-left: 10px;
+    font-size: 10px;
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 10px 6px 0;
+      border-color: transparent $theme-yellow-E8 transparent transparent;
+      line-height: 0px;
+      _border-color: $black $theme-yellow-E8 $black $black;
+      _filter: progid:DXImageTransform.Microsoft.Chroma(color='$black');
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+// Overview Dashbord progress bar
+
+// Overview DefaultTab
+.defaultTab {
+  .nav-tabs {
+    border: 1px solid $gray-a;
+
+    .nav-link {
+      color: #a7a7a7;
+      border-radius: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border: none;
+    }
+  }
+
+  .nav-item {
+    flex-grow: 2;
+    border-right: 1px solid $gray-a;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
+    color: $black-40;
+  }
+}
+
+.dashboardTable .table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg: #282828;
+  color: #bfbfbf;
+}
+
+.dashboardTable .table > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  background-color: #181818 !important;
+  border-bottom-width: none;
+}
+
+// Card Bg Colour
+
+.bgGray18 {
+  background-color: $gray-18;
+}
+
+.bgGray28 {
+  background-color: $gray-28;
+}
+
+.bgblack40 {
+  background-color: $black-40;
+}
+
+// Header Section style
+.header-section {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+
+  .header-button-style {
+    display: flex;
+    justify-content: end;
+    gap: 0 12px;
+  }
+}
+
+// DealerTable checkbox
+.dealerTable .form-check-input:checked {
+  background-color: red;
+  border-color: red;
+}
+
+
+// Review slider 
+
+
+.review_slider{
+  .slick-arrow{
+    color: $gray-cb;
+    width: 40px;
+    height: 40px;
+  }
+  .slick-prev{
+    left: -35px;
+  }
+  .slick-next{
+    right: -35px;
+  }
+
+  .slick-dots{
+    li{
+      width: 7px;
+      height: 7px;
+      margin: 0 3px;
+      button{
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        padding: 0;
+        background-color: $gray-65;
+      }
+    }
+    li.slick-active{
+      button{
+        background-color: $theme-red-da;
+      }
+    }
+  }
+}
+
+
+
+
+
+.sortText{
+	font-size: 14px;
+	margin-right: 8px;
+	color: $gray-cb;
+}
+
+.table-dark {
+  margin: 0;
+}
+
+// primary-accordion-style
+.primary-accordion-style {
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    background: none;
+  }
+
+  .accordion-item {
+    border: none;
+    border-radius: 0;
+  }
+
+  .accordion-header {
+    border: none;
+    overflow: hidden;
+  }
+
+  .accordion-collapse {
+    border: none;
+  }
+
+  .accordion-item:last-of-type .accordion-collapse {
+    border: none;
+    border-radius: 0;
+  }
+
+  .accordion-button:not(.collapsed) {
+    box-shadow: none;
+  }
+
+  .accordion-button {
+    background-color: $gray-2;
+    border-radius: 0 !important;
+    color: $white;
+    padding: 20px;
+    font-size: 16px;
+
+    &:focus {
+      box-shadow: none;
+      outline: 0;
+    }
+
+    &::after {
+      filter: contrast(0) brightness(100);
+    }
+  }
+
+  .accordion-body {
+    background-color: $gray-2;
+    color: $gray-8;
+    font-size: 16px;
+  }
+}
+
+.re-detailFootBg{
+  background-color: $black;
+  .col-md-4{
+    &:last-child{
+      div{
+        border-right: none;
+      }
+    }
+  }
+}
+
+
+.errorMain{
+  background-color: $white;
+  height: 100vh;
+  position: relative;
+  .errorImg{
+    img{
+      width: 100%;
+      max-width: 125px;
+    }
+  }
+  &::after{
+    content: '';
+    background-image: url('/images/error-bg.svg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 395px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .errorContainer{
+    color: $black;
+    padding: 90px 40px;
+    width: 100%;
+    max-width: 45%;
+    h3{
+      font-size: 24px;
+      font-weight: 600;
+      margin: 10px 0 15px;
+    }
+    p{
+      font-weight: 500;
+    }
+    a{
+      display: inline-block;
+      padding: 6px 30px;
+      text-transform: uppercase;
+      color: $white;
+      background-color: $theme-red-da;
+      text-decoration: none;
+      font-size: 14px;
+      margin: 10px 0;
+      transition: all 0.5s;
+      &:hover{
+        background-color: $black;
+      }
+    }
+  }
+}
+
+// Status circle Styles
+.status-circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+
+  &.danger {
+    background: $theme-red-da;
+  }
+
+  &.success {
+    background: $theme-green;
+  }
+
+  &.warning {
+    background: $theme-warning;
   }
 }

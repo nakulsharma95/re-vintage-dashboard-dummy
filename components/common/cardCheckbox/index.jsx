@@ -1,0 +1,121 @@
+/* eslint-disable @next/next/no-img-element */
+import { Card, Col, OverlayTrigger, Row, Tooltip } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import ToggleSwitchCard from "~/components/retails/toggleSwitchCard";
+import ArrowButton from "../buttons/ArrowButton";
+import CustomCheckBox from "../customCheckBox";
+import styles from "./style.module.scss";
+import { BiRupee } from 'react-icons/bi';
+
+function BikeCardRadio({
+  isCheckBoxVisible,
+  imageUrl,
+  isBikeTagVisible,
+  bikeModal,
+  bikeRc,
+  bikekm,
+  bikeOwner,
+  bikeCc,
+  bikePrice,
+  bikeDealer,
+  dealerAddress,
+  creDetail,
+  creName,
+  creNumber,
+  isOlxTagVisible,
+  isBikeChassisVisible,
+  dealerLocation,
+  isButtonVisible,
+  isCardVisible,
+  toggleLabal1,
+  toggleLabal2,
+}) {
+  const renderTooltip = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      Last Listed on: 22 Dec
+    </Tooltip>
+  );
+
+  return (
+    <>
+      <Card className={styles.bikeCardMain}>
+        <div className={styles.ChassisImage}>
+          <Card.Img variant="top" src={imageUrl} />
+          {isBikeChassisVisible && (
+            <div className={`${styles.bikeChassisTag}`}>FB29FH9219HR1</div>
+          )}
+        </div>
+
+        {isCheckBoxVisible && (
+          <div className={`${styles.bikeCardCheck}`}>
+            <CustomCheckBox />
+          </div>
+        )}
+        {isBikeTagVisible && (
+          <div className={`${styles.bikeCardTag}`}>Self Procured</div>
+        )}
+
+        {isOlxTagVisible && (
+          <div className={`${styles.bikeCardTagOlx}`}>
+            Listed on
+            <img src="/images/olx.png" className={styles.olxImage} alt="" />
+            <OverlayTrigger
+              placement="right"
+              delay={{ show: 250, hide: 400 }}
+              overlay={renderTooltip}
+              className="d-inline-flex align-items-center"
+            >
+              <Button className={styles.olxBtn}>2</Button>
+            </OverlayTrigger>
+          </div>
+        )}
+        <Card.Body className="px-0">
+          <Card.Title className={styles.bkeName}>
+            {bikeModal} <span> {bikeRc}</span>
+          </Card.Title>
+          <Row className={`${styles.bikeDetail} mx-0`}>
+            <Col className={styles.detailTxt}>{bikekm}</Col>
+            <Col className={styles.detailTxt}>{bikeOwner}</Col>
+            <Col className={styles.detailTxt}>{bikeCc}</Col>
+          </Row>
+          <h4 className={styles.price}><BiRupee size={21} />{bikePrice}</h4>
+          <p className={styles.dealer}>
+            Dealer: <span>{bikeDealer}</span>
+          </p>
+          <span className={styles.dealerLocation}>{dealerAddress}</span>
+        </Card.Body>
+      </Card>
+      <Card className={styles.cardCreMain}>
+        <Card.Body className="px-0">
+          <div className={styles.creDetails}>
+            <h3>{creDetail}</h3>
+
+            <p className={`${styles.creInfo} mb-0`}>
+              Name:<span>{creName}</span>
+            </p>
+
+            <p className={`${styles.creInfo} mb-0`}>
+              Number:<span>{creNumber}</span>
+            </p>
+          </div>
+          {isButtonVisible && (
+            <div className={styles.creBtnBox}>
+              <Button variant="primary" className={styles.downloadBtn}>
+                VIEW
+              </Button>
+              <ArrowButton detailLink="" title="APPROVE" />
+            </div>
+          )}
+        </Card.Body>
+        {isCardVisible && (
+          <ToggleSwitchCard
+            toggleLabal1="Inactive on OLX"
+            toggleLabal2="Active on Marketplace"
+          />
+        )}
+      </Card>
+    </>
+  );
+}
+
+export default BikeCardRadio;

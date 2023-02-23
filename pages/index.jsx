@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import Homepage from './homepage';
+import Login from './login';
 
 export default function Home() {
   return (
-    <div className="main-container">
+    <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,12 +17,10 @@ export default function Home() {
         />
 
         {/* Main Page Title */}
-        <title>Welcome to Next Js Boiler plate</title>
+        <title>Welcome to Vintage Dashboard</title>
       </Head>
 
-      <main className="main">
-        <Homepage />
-      </main>
-    </div>
+      <Login />
+    </>
   );
 }

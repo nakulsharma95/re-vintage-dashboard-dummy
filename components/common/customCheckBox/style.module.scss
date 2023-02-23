@@ -1,0 +1,34 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/mixins';
+
+.checkBox {
+	div{
+		margin-bottom: 0;
+	}
+	input[type=checkbox] {
+		-moz-appearance: none;
+		appearance: none;
+		display: inline-block;
+		width: 18px;
+		border: none;
+		margin-top: 0;
+		height: 18px;
+		background-clip: content-box;
+		border: 1px solid #bbbbbb;
+		background-color: #e7e6e7;
+		margin-right: 10px;
+
+		&:checked {
+			background-color: #ff0000;
+		}
+
+		&:focus {
+			outline: 0 !important;
+			box-shadow: none;
+		}
+	}
+	label{
+		color: $gray-cb;
+		font-size: 14px;
+	}
+}

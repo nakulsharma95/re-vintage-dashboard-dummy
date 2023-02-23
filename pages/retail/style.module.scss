@@ -1,0 +1,16 @@
+@import "../../styles/variables/colors";
+@import "../../styles/variables//mixins";
+
+// Home Page Style
+.RetailStyle {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $theme-primary;
+
+  .titleCustomStyle {
+    text-align: center;
+    color: $white;
+  }
+}

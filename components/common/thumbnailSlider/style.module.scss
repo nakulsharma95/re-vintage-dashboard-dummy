@@ -1,0 +1,44 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/mixins';
+
+.compBikeCardSlider {
+	min-height: 330px;
+	max-height: 330px;
+	.compBikeCardSlides {
+	  &:focus-visible {
+		outline: none;
+	  }
+	  img {
+		width: 100%;
+		max-height: 330px;
+		min-height: 330px;
+		object-fit: cover;
+	  }
+	}
+	.slick-thumb {
+	  margin-top: 10px;
+	}
+}
+
+.sliderBgImage{
+	img{
+		width: auto;
+		height: auto;
+	}
+}
+
+.imgFull {
+	min-width: 346px;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+	
+	.imgFullStyle {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

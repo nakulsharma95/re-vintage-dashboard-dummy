@@ -1,0 +1,63 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.pieContainer {
+	width: 50%;
+	background-color: #282828;
+	padding: 1rem;
+	margin: 1rem 0;
+
+	h5 {
+	  font-size: 18px;
+	  font-weight: normal;
+	  margin-bottom: 20px;
+	}
+  
+	.pieChart{
+       width: 60%;
+		.pie {
+			background-color: plum;
+			height: 100%;
+			width: 60%;
+			border-radius: 50%;
+			margin: 1rem 0;
+		  }
+	}
+	.pieIds{
+		width: 40%;
+		padding: 1rem;
+	}
+	
+	p {
+	  font-size: 14px;
+	  font-weight: 500;
+	  font-family: "montserrat";
+	}
+	.pieId{
+		height: 1rem;
+		width: 1rem;
+		border-radius: 50%;
+		display: inline-block;
+	}
+	.pie1 {
+	  background-color: #DA291C;
+	  
+	}
+	.pie2 {
+	  background-color: #403E3E;
+	  
+	}
+	.pie3 {
+	  background-color: #E8B016;
+	  
+	}
+	.pie4 {
+	  background-color: #D2635B;
+	  
+	}
+	.pie5 {
+	  background-color: #F28823;
+	  
+	}
+  }
+  

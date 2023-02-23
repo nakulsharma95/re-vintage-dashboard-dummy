@@ -1,0 +1,91 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/mixins';
+
+.dealFilterMain{
+	@include d-flex(space-between, center);
+	margin-bottom: 1rem;
+
+	.dealFilterTitle{
+		font-size: 14px;
+		font-weight: 500;
+		color: $gray-cb;
+		opacity: 0.9;
+	}
+	.sortTabBtnBox{
+		.viewTabBtn{
+			padding: 0.3rem 0.5rem;
+			font-size: 20px;
+			background: transparent;
+			border: 0px;
+			&:first-child{
+				color: $gray-BF;
+			}
+			&:first-child{
+				color: $gray-70;
+			}
+		}
+	}
+
+	.viewPending{
+		display: flex;
+		align-items: center;
+		span{
+			font-size: 14px;
+			color: $gray-cb;
+			font-size: 400;
+		}
+
+		.pendingOuter{
+			padding-right: 20px;
+			background-color: $gray-28;
+			border-radius: 15px;
+			.pendingDropdown{
+				.pendingImg{
+					outline: none;
+					border: none;
+					img{
+						width: 28px;
+						height: 28px;
+						border-radius: 50%;
+					}
+					span{
+						display: inline-block;
+						margin: 0px 10px 0 6px;
+						font-size: 14px;
+						color: #ffffff;
+						font-weight: 500;
+					}
+					&::after{
+						content: '';
+						background: url('../../../public/images/down-arrow.png') no-repeat;
+						padding: 7px 7px;
+						border: none;
+						background-size: 12px;
+						position: absolute;
+						top: 10px;
+					}
+				}
+
+				.pendingDropdownMenu{
+					border-radius: 0;
+					transform: inherit !important;
+					top: 37px !important;
+					right: -18px !important;
+					left: inherit !important;
+					padding: 0;
+					a{
+						background-color: $black;
+						border-bottom: 1px solid $gray-3;
+						color: $white;
+						padding: 6px 15px;
+						font-size: 13px;
+						&:last-child{
+							border-bottom: none;
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

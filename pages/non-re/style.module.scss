@@ -1,0 +1,22 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables//mixins';
+
+.enquireBarChart {
+	position: relative;
+	padding: 5px;
+	background-color: $gray-28;
+	overflow: hidden;
+	height: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.enquireDoughnutChart {
+	position: relative;
+	padding: 5px;
+	background-color: $gray-28;
+	height: 100%;
+	padding-right: 100px;
+	padding-top: 50px;
+}

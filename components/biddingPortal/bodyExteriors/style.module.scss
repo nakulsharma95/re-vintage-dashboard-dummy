@@ -1,0 +1,81 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/mixins';
+
+.bodyExtMain{
+	border: 1px solid $gray-70;
+	.title{
+		font-size: 14px;
+		position: relative;
+		text-align: center;
+		padding: 8px 0;
+		margin: 0 20px;
+		span{
+			background-color: $gray-2;
+			position: relative;
+			z-index: 9;
+			padding: 0 8px;
+		}
+		&::after{
+			content: '';
+			background-color: $gray-70;
+			width: 100%;
+			height: 1px;
+			position: absolute;
+			top: 19px;
+			left: 0;
+		}
+	}
+	.bodyExtNav{
+		border: none;
+		border-bottom: 1px solid $gray-70;
+		padding: 0 15px;
+		a{
+			padding: 0;
+			margin: 0 10px;
+			color: $gray-a7;
+			font-size: 14px;
+			position: relative;
+		}
+	}
+
+	.bodyExtTabPanel::-webkit-scrollbar {
+		width: 8px;
+	}
+	
+	.bodyExtTabPanel::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 10px $gray-3;
+	}
+	
+	.bodyExtTabPanel::-webkit-scrollbar-thumb {
+		background-color: $theme-red-da;
+		outline: 1px solid #303030;
+	}
+
+	.bodyExtTabPanel{
+		padding: 15px 25px;
+		min-height: 300px;
+		max-height: 300px;
+		overflow-y: auto;
+		li{
+			padding: 0;
+			margin: 0 0 6px;
+			list-style-type: none;
+			display: flex;
+			align-items: flex-start;
+			font-size: 14px;
+			svg{
+				margin-right: 5px;
+				color: $theme-green;
+				font-size: 16px;
+				position: relative;
+				top: 3px;
+			}
+			.waringIcon{
+				color:$theme-warning;
+			}
+			.blockedIcon{
+				color: $theme-red-da;
+			}
+		}
+	}
+}

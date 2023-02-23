@@ -1,0 +1,64 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.leadSection {
+  margin-bottom: 20px;
+
+  .leadsTop {
+    display: flex;
+    gap: 0px 24px;
+    margin-bottom: 20px;
+
+    .leadTable {
+      flex-grow: 2;
+      .tableStyle {
+        thead,
+        tbody,
+        tfoot,
+        tr,
+        td,
+        th {
+          border: none;
+          padding: 1.2rem 1.5rem;
+        }
+        
+        tbody {
+          padding: 1rem;
+          .BoldHead {
+            color: white;
+            font-size: 16px;
+            .BoldHeadIcon {
+              font-size: 1.5rem;
+              margin: 0 0.5rem;
+            }
+          }
+        }
+        a {
+          color: #e8b016;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .leadsMiddle {
+    display: flex;
+    gap: 24px;
+
+    .leadMidTable {
+      flex-grow: 2;
+      Table {
+        text-align: center;
+
+        thead,
+        tbody,
+        tfoot,
+        tr,
+        td,
+        th {
+          border: 1px solid rgb(19, 19, 19);
+        }
+      }
+    }
+  }
+}

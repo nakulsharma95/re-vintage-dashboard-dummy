@@ -1,0 +1,34 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.nonLeadSection {
+	margin-top: 40px;
+
+  .nonLeadtop {
+    display: flex;
+    justify-content: space-between;
+
+    .nonleadTable {
+      width: 48%;
+
+      .tableStyle {
+        margin: 1rem 0;
+
+        a {
+          color: #e8b016;
+        }
+      }
+    }
+  }
+  .nonLeadBottom {
+    display: flex;
+    justify-content: space-between;
+
+    .nonLeadGraph {
+      width: 48%;
+      margin: 1rem 0;
+      padding: 20px;
+      background-color: #282828;
+    }
+  }
+}

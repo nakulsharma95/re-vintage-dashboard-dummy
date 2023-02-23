@@ -1,0 +1,19 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.overviewCardMain{
+	background-color: $gray-28;
+	margin: 15px 0;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	.title {
+		margin-bottom: 20px;
+	}
+}
+
+.chartStyle {
+	background: none;
+}

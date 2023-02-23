@@ -1,0 +1,76 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.breadcrumbsMain {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  .breadcrumbs {
+    display: flex;
+    border-radius: 0.3rem;
+    overflow: hidden;
+
+    .breadcrumbsItem {
+      display: flex;
+      font-size: 12px;
+      align-items: center;
+      background: #282828;
+      color: white;
+      outline: none;
+      margin-right: 10px;
+      padding: 12px 20px 12px 35px;
+      position: relative;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        &:after {
+          background: #282828;
+        }
+        background: #282828;
+      }
+      &:focus {
+        &:after {
+          background: #323f4a;
+          color: white;
+        }
+        background: #323f4a;
+        color: white;
+      }
+      &:after {
+        background: #282828;
+        bottom: 0;
+        clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+        content: '';
+        left: 100%;
+        position: absolute;
+        top: 0;
+
+        width: 3em;
+        z-index: 1;
+      }
+      &:before {
+        content: '';
+        top: 0;
+        background: #0d0d0d;
+        clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+        position: absolute;
+        width: 3em;
+        bottom: 0px;
+        left: 0px;
+        border: none;
+      }
+      &:first-child {
+        &::before {
+          background: #282828;
+        }
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+    .itemNone{
+      display: none;
+    }
+  }
+}

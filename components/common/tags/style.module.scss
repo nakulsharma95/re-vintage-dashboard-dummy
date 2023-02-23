@@ -1,0 +1,14 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/mixins';
+
+.tags{
+	display: inline-block;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    color: $white;
+    padding: 4px 8px;
+    font-size: 10px;
+    margin: 0 3px;
+    border-radius: 1px;
+}
