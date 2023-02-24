@@ -1,6 +1,6 @@
-import { Card, Col, Tabs, Tab, Table } from "react-bootstrap";
-import styles from "./style.module.scss";
-import { AiOutlineDownload } from "react-icons/ai";
+import { Card, Tab, Table, Tabs } from 'react-bootstrap';
+import { AiOutlineDownload } from 'react-icons/ai';
+import styles from './style.module.scss';
 
 export default function CrePerformanceMatrix(props) {
   return (
@@ -16,23 +16,11 @@ export default function CrePerformanceMatrix(props) {
           id="fill-tab-example"
           fill
         >
-          <Tab
-            eventKey="Procurement Lead Management"
-            title={props.title1}
-          ></Tab>
-          <Tab
-            eventKey="Bidding / First Offer"
-            title={props.title2}
-          ></Tab>
-          <Tab eventKey="Deal Closure" title={props.title3}></Tab>
-          <Tab
-            eventKey="General Query Response"
-            title={props.title4}
-          ></Tab>
-          <Tab
-            eventKey="General Query Response"
-            title={props.title5}
-          ></Tab>         
+          <Tab eventKey="Procurement Lead Management" title={props.title1} />
+          <Tab eventKey="Bidding / First Offer" title={props.title2} />
+          <Tab eventKey="Deal Closure" title={props.title3} />
+          <Tab eventKey="General Query Response" title={props.title4} />
+          <Tab eventKey="General Query Response" title={props.title5} />
         </Tabs>
       </Card>
       <div className={styles.partialLead}>
@@ -82,7 +70,7 @@ export default function CrePerformanceMatrix(props) {
             <tr className={styles.matixTable}>
               <td className={styles.textActivity}>
                 <div className={styles.tablePl}>
-                  {" "}
+                  {' '}
                   (b) Send Sell Form:<span>65% of (a)</span>
                 </div>
               </td>
@@ -96,7 +84,7 @@ export default function CrePerformanceMatrix(props) {
             <tr>
               <td className={styles.textActivity}>
                 <div className={styles.tablePl}>
-                  {" "}
+                  {' '}
                   (c) Converted to evaluation request: <br />
                   <span>25% of (b)</span>
                 </div>

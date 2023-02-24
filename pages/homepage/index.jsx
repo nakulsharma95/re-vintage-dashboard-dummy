@@ -8,10 +8,12 @@ import SearchPrimary from '../../components/common/searchPrimary';
 import DealerPerfomance from '../../components/overview/dealerPerfomance';
 import MotorcycleSales from '../../components/overview/motorcycleSales';
 import RegionalAnalytics from '../../components/overview/regionalAnalytics';
-import style from './style.module.scss';
-import ProcurementTab from '../../components/overview/tabProcurement';
 import InventoryTab from '../../components/overview/tabInventory';
 import RetailsTab from '../../components/overview/tabRetails';
+import LeadSection from '../../components/overview/leadSection';
+import NonReLeadSection from '../../components/overview/nonReLeadSection';
+
+import style from './style.module.scss';
 
 export default function Homepage() {
   const dashboardCardData = [
@@ -94,7 +96,10 @@ export default function Homepage() {
           id="uncontrolled-tab-example"
         >
           <Tab eventKey="title1" title="Procurement">
-            <ProcurementTab />
+            <div>
+              <LeadSection />
+              <NonReLeadSection />
+            </div>
           </Tab>
 
           <Tab eventKey="title2" title="Inventory">

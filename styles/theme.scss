@@ -123,6 +123,8 @@ h6 {
   }
 }
 
+
+// Custom Tab Style
 .custom-tab-style .nav-link {
   color: #fff;
   font-size: 14px;
@@ -158,6 +160,58 @@ h6 {
   border: none;
   border-bottom: 0 solid;
   margin-bottom: 0;
+}
+
+
+// default White tab style
+.default-tab-style {
+ border: 1px solid $gray-70;
+
+  .nav-item {
+    border-right: 1px solid $gray-70;
+
+    &:last-child {
+      border: none;
+    }
+
+    button {
+      border-radius: 0;
+      color: $gray-a7;
+      font-size: 12px;
+      margin-bottom: 0 !important;
+      font-weight: 600;
+      border: none;
+
+      .activeTab {
+        background-color: $white;
+        color: $gray-a7;
+      }
+
+      &:hover{
+        border: none;
+        background-color: $white;
+        color: $black-40;
+      }
+
+      &:focus{
+        border: none !important;
+      }
+    }
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  .nav-link {
+    border-radius: 0;
+  }
+
+  .active {
+    background: $white !important;
+    border: none;
+    color: $black-40 !important;
+  }
 }
 
 // Pagination Start ---------------------------------
@@ -482,18 +536,25 @@ h6 {
   }
 }
 
-.dashboardTable .table-striped > tbody > tr:nth-of-type(odd) > * {
-  --bs-table-accent-bg: #282828;
-  color: #bfbfbf;
-}
+
+// Tables Style here
 
 .dashboardTable .table > :not(caption) > * > * {
-  padding: 0.5rem 0.5rem;
-  background-color: #181818 !important;
+  padding: 1rem;
   border-bottom-width: none;
+  background-color: $gray-28;
+  color: rgba($gray-F3, 0.8);
 }
 
+.dashboardTable .table-odd > tbody > tr:nth-of-type(even) > * {
+  background-color: $gray-18;
+  color: $white;
+}
 
+.dashboardTable .table-even > tbody > tr:nth-of-type(odd) > * {
+  background-color: $gray-18;
+  color: $white;
+}
 // Card Bg Colour
 
 .bgGray18 {
@@ -508,9 +569,6 @@ h6 {
   background-color: $black-40;
 }
 
-.bgGray28{
-  background-color: red !important;
-}
 // Header Section style
 .header-section {
   display: flex;
@@ -798,6 +856,26 @@ h6 {
       background-color: $gray-28;
       color: $white;
       padding: 0;
+    }
+  }
+}
+
+.dark-card-style {
+  background-color: #282828;
+  padding: 15px 15px 15px 15px;
+
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .downloadIcon {
+      cursor: pointer;
     }
   }
 }

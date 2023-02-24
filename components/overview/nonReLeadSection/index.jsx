@@ -1,11 +1,10 @@
 import React from 'react';
-import Table from 'react-bootstrap/Table';
 import Link from 'next/link';
 import PieBig from '../pieBig';
 import LineChart from '../../charts/lineChart';
+import OutlineDropdown from '../../common/buttons/OutlineDropdown';
 
 import styles from './style.module.scss';
-import OutlineDropdown from '../../../components/common/buttons/OutlineDropdown';
 
 function NonReLeadSection() {
   // LIne CHart
@@ -63,18 +62,19 @@ function NonReLeadSection() {
       <h4>Non-Re Lead</h4>
       <div className={styles.nonLeadtop}>
         <PieBig title="Non-RE Number of Enquiries" />
-        <div className={`${styles.nonleadTable}  dashboardTable`}>
-          <Table  bordered variant="dark" className={styles.tableStyle}>
+        <div className="dashboardTable w-full">
+          <table className="table">
             <thead>
               <tr>
                 <th colSpan={5}>
-                  <div className='d-flex justify-content-between'>
-                <span>
-                Non-RE VDMP Enquiries  
-                </span>
-                <OutlineDropdown dropdownTitle="1 Month" dropdownMenuTitle="2 Month" />
+                  <div className="d-flex justify-content-between">
+                    <span>Non-RE VDMP Enquiries</span>
+                    <OutlineDropdown
+                      dropdownTitle="1 Month"
+                      dropdownMenuTitle="2 Month"
+                    />
                   </div>
-                   </th>
+                </th>
               </tr>
               <tr>
                 <th>Refrence</th>
@@ -134,12 +134,13 @@ function NonReLeadSection() {
                 </td>
               </tr>
             </tbody>
-          </Table>
+          </table>
         </div>
       </div>
       <div className={styles.nonLeadBottom}>
         <PieBig title="Non-RE Exchange Enquiries" />
         <div className={styles.nonLeadGraph}>
+          <h5>Non-RE Exchange Enquiries</h5>
           <LineChart options={optionLineChart} data={lineChartData} />
         </div>
       </div>
