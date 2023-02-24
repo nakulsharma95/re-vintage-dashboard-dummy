@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 
-async function verifyToken(token, user, successResponse, failureResponse) {
+async function verifyToken(token, successResponse, failureResponse) {
   
-  const res = await fetch('https://api-dev.y-axis.com/auth/verify-token', {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/verify-token`, {
     headers: new Headers({
       Authorization: token.split('#')?.[1],
     }),
@@ -13,36 +13,35 @@ async function verifyToken(token, user, successResponse, failureResponse) {
   }
   if (res?.code === 401 || res?.code === 402) {
     const response = await fetch(
-      'https://api-dev.y-axis.com/auth/generate-token',
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/generate-token`,
       {
         method: 'POST',
         body: {
           refreshToken: token.split('#')?.[0],
-          userId: JSON.parse(user).guid,
+          userId: token.split('#')?.[2],
         },
       }
     )
     if (response.code === 200) {
-      successResponse.cookies.set("token", "set the new token here")
+      successResponse.cookies.set(process.env.NEXT_PUBLIC_COOKIE_NAME, "set the new token here")
       return { isAuthenticated: true, successResponse };
     }
-    failureResponse.cookies.delete("token")
+    failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME)
     return { isAuthenticated: false, failureResponse };
   }
-  failureResponse.cookies.delete("token")
+  failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME)
   return { isAuthenticated: false, failureResponse };
 }
 
 async function authenticateUser(req) {
-  const successResponse = NextResponse.redirect(new URL('/login', req.url));
-  const failureResponse = NextResponse.redirect(new URL('/homepage', request.url));
+  const successResponse = NextResponse.redirect(new URL('/homepage', req.url));
+  const failureResponse = NextResponse.redirect(new URL('/', req.url));
 
-  const token = req.cookies.get('token');
-  const user = req.cookies.get('user');
+  const token = req.cookies.get(process.env.NEXT_PUBLIC_COOKIE_NAME);
   if (token && token?.value) {
-    return await verifyToken(token.value, user.value, successResponse, failureResponse);
+    return await verifyToken(token.value, successResponse, failureResponse);
   }
-  failureResponse.cookies.delete("token")
+  failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME)
   return { isAuthenticated: false, failureResponse }; // return false if token is not verified
 }
 
@@ -50,13 +49,13 @@ export async function middleware(request) {
   const { pathname } = request.nextUrl;
   if (pathname.match(/\.(.*)$/)) return; // prevent middleware running on public files
 
-  const isPath = pathname.includes('/login') || pathname.includes('/sign-up');
-  const { isAuthenticated, response } = await authenticateUser(request);
+  const isPath = pathname.includes('/') || pathname.includes('/sign-up');
+  const { isAuthenticated, successResponse, failureResponse } = await authenticateUser(request);
   if (!isPath && !isAuthenticated) {
-    return response;
+    return failureResponse;
   }
   if (isPath && isAuthenticated) {
-    return response
+    return successResponse
   }
   return NextResponse.next();
 }
