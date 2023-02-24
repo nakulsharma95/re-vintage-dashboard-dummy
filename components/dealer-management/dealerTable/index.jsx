@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
@@ -6,8 +6,8 @@ import CancelModal from '../../modals/cancelModal';
 
 import style from './style.module.scss';
 
-function dealerTable() {
-	const [cancelModal, setCancelModal] = useState(false);
+function DealerTable() {
+  const [cancelModal, setCancelModal] = useState(false);
   const [rescheduleModal, setRescheduleModal] = useState(false);
 
   const cancelToggleModal = () => {
@@ -52,113 +52,220 @@ function dealerTable() {
              <Link href="/">Neel Motors</Link>
             </div>
             </td>
-          <td>H2N8XS94JU</td>
-          <td>+91 98996 98654</td>
-          <td>johndoe@gmail.com</td>
-          <td>No F 29/2, Phase 2, Okhla <br/> Industrial Area, New Delhi -110020</td>
-          <td><Form.Check className={style.tableCheckbox} type="checkbox" label="Enabled" /> </td>
-        </tr>
-		<tr>
-          <td>
-          <div className='d-flex'>
-            <div className='status-circle success mt-2'></div>
-             <Link href="/dealer-management/dealership-details">Neel Motors</Link>
-            </div>
+            <td>H2N8XS94JU</td>
+            <td>+91 98996 98654</td>
+            <td>johndoe@gmail.com</td>
+            <td>
+              No F 29/2, Phase 2, Okhla <br /> Industrial Area, New Delhi
+              -110020
             </td>
-          <td>H2N8XS94JU</td>
-          <td>+91 98996 98654</td>
-          <td>johndoe@gmail.com</td>
-          <td>No F 29/2, Phase 2, Okhla <br/> Industrial Area, New Delhi -110020</td>
-          <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
-        </tr>
-		<tr>
-          <td>
-          <div className='d-flex'>
-            <div className='status-circle success mt-2'></div>
-             <Link href="/dealer-management/dealership-details">Neel Motors</Link>
-            </div>
+            <td onClick={cancelToggleModal}>
+              <Form.Check
+                className={style.tableCheckbox}
+                type="checkbox"
+                label="Enabled"
+                checked
+              />{' '}
             </td>
-          <td>H2N8XS94JU</td>
-          <td>+91 98996 98654</td>
-          <td>johndoe@gmail.com</td>
-          <td>No F 29/2, Phase 2, Okhla <br/> Industrial Area, New Delhi -110020</td>
-          <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
-        </tr>
-		<tr>
-          <td>
-          <div className='d-flex'>
-            <div className='status-circle danger mt-2'></div>
-             <Link href="/">Neel Motors</Link>
-            </div>
+          </tr>
+          <tr>
+            <td>
+              <div className="d-flex">
+                <div className="status-circle danger mt-2" />
+                <Link href="/">Neel Motors</Link>
+              </div>
             </td>
-          <td>H2N8XS94JU</td>
-          <td>+91 98996 98654</td>
-          <td>johndoe@gmail.com</td>
-          <td>No F 29/2, Phase 2, Okhla <br/> Industrial Area, New Delhi -110020</td>
-          <td><Form.Check className={style.tableCheckbox} type="checkbox" label="Enabled" /> </td>
-        </tr>
-		<tr>
-          <td>
-          <div className='d-flex'>
-            <div className='status-circle danger mt-2'></div>
-             <Link href="/">Neel Motors</Link>
-            </div>
+            <td>H2N8XS94JU</td>
+            <td>+91 98996 98654</td>
+            <td>johndoe@gmail.com</td>
+            <td>
+              No F 29/2, Phase 2, Okhla <br /> Industrial Area, New Delhi
+              -110020
             </td>
-          <td>H2N8XS94JU</td>
-          <td>+91 98996 98654</td>
-          <td>johndoe@gmail.com</td>
-          <td>No F 29/2, Phase 2, Okhla <br/> Industrial Area, New Delhi -110020</td>
-          <td><Form.Check className={style.tableCheckbox} type="checkbox" label="Enabled" /> </td>
-        </tr>
-		<tr>
-          <td>
-          <div className='d-flex'>
-            <div className='status-circle success mt-2'></div>
-             <Link href="/dealer-management/dealership-details">Neel Motors</Link>
-            </div>
+            <td>
+              <Form.Check
+                className={style.tableCheckbox}
+                type="checkbox"
+                label="Enabled"
+              />{' '}
             </td>
-          <td>H2N8XS94JU</td>
-          <td>+91 98996 98654</td>
-          <td>johndoe@gmail.com</td>
-          <td>No F 29/2, Phase 2, Okhla <br/> Industrial Area, New Delhi -110020</td>
-          <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
-        </tr>
-		<tr>
-          <td>
-          <div className='d-flex'>
-            <div className='status-circle success mt-2'></div>
-             <Link href="/dealer-management/dealership-details">Neel Motors</Link>
-            </div>
+          </tr>
+          <tr>
+            <td>
+              <div className="d-flex">
+                <div className="status-circle success mt-2" />
+                <Link href="/dealer-management/dealership-details">
+                  Neel Motors
+                </Link>
+              </div>
             </td>
-          <td>H2N8XS94JU</td>
-          <td>+91 98996 98654</td>
-          <td>johndoe@gmail.com</td>
-          <td>No F 29/2, Phase 2, Okhla <br/> Industrial Area, New Delhi -110020</td>
-          <td onClick={cancelToggleModal}><Form.Check  className={style.tableCheckbox} type="checkbox" label="Enabled" checked /> </td>
-        </tr>
-		<tr>
-          <td>
-          <div className='d-flex'>
-            <div className='status-circle danger mt-2'></div>
-             <Link href="/">Neel Motors</Link>
-            </div>
+            <td>H2N8XS94JU</td>
+            <td>+91 98996 98654</td>
+            <td>johndoe@gmail.com</td>
+            <td>
+              No F 29/2, Phase 2, Okhla <br /> Industrial Area, New Delhi
+              -110020
             </td>
-          <td>H2N8XS94JU</td>
-          <td>+91 98996 98654</td>
-          <td>johndoe@gmail.com</td>
-          <td>No F 29/2, Phase 2, Okhla <br/> Industrial Area, New Delhi -110020</td>
-          <td><Form.Check className={style.tableCheckbox} type="checkbox" label="Enabled" /> </td>
-        </tr>
-      </tbody>
-    </Table>
-    <CancelModal
+            <td onClick={cancelToggleModal}>
+              <Form.Check
+                className={style.tableCheckbox}
+                type="checkbox"
+                label="Enabled"
+                checked
+              />{' '}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="d-flex">
+                <div className="status-circle success mt-2" />
+                <Link href="/dealer-management/dealership-details">
+                  Neel Motors
+                </Link>
+              </div>
+            </td>
+            <td>H2N8XS94JU</td>
+            <td>+91 98996 98654</td>
+            <td>johndoe@gmail.com</td>
+            <td>
+              No F 29/2, Phase 2, Okhla <br /> Industrial Area, New Delhi
+              -110020
+            </td>
+            <td onClick={cancelToggleModal}>
+              <Form.Check
+                className={style.tableCheckbox}
+                type="checkbox"
+                label="Enabled"
+                checked
+              />{' '}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="d-flex">
+                <div className="status-circle danger mt-2" />
+                <Link href="/">Neel Motors</Link>
+              </div>
+            </td>
+            <td>H2N8XS94JU</td>
+            <td>+91 98996 98654</td>
+            <td>johndoe@gmail.com</td>
+            <td>
+              No F 29/2, Phase 2, Okhla <br /> Industrial Area, New Delhi
+              -110020
+            </td>
+            <td>
+              <Form.Check
+                className={style.tableCheckbox}
+                type="checkbox"
+                label="Enabled"
+              />{' '}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="d-flex">
+                <div className="status-circle danger mt-2" />
+                <Link href="/">Neel Motors</Link>
+              </div>
+            </td>
+            <td>H2N8XS94JU</td>
+            <td>+91 98996 98654</td>
+            <td>johndoe@gmail.com</td>
+            <td>
+              No F 29/2, Phase 2, Okhla <br /> Industrial Area, New Delhi
+              -110020
+            </td>
+            <td>
+              <Form.Check
+                className={style.tableCheckbox}
+                type="checkbox"
+                label="Enabled"
+              />{' '}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="d-flex">
+                <div className="status-circle success mt-2" />
+                <Link href="/dealer-management/dealership-details">
+                  Neel Motors
+                </Link>
+              </div>
+            </td>
+            <td>H2N8XS94JU</td>
+            <td>+91 98996 98654</td>
+            <td>johndoe@gmail.com</td>
+            <td>
+              No F 29/2, Phase 2, Okhla <br /> Industrial Area, New Delhi
+              -110020
+            </td>
+            <td onClick={cancelToggleModal}>
+              <Form.Check
+                className={style.tableCheckbox}
+                type="checkbox"
+                label="Enabled"
+                checked
+              />{' '}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="d-flex">
+                <div className="status-circle success mt-2" />
+                <Link href="/dealer-management/dealership-details">
+                  Neel Motors
+                </Link>
+              </div>
+            </td>
+            <td>H2N8XS94JU</td>
+            <td>+91 98996 98654</td>
+            <td>johndoe@gmail.com</td>
+            <td>
+              No F 29/2, Phase 2, Okhla <br /> Industrial Area, New Delhi
+              -110020
+            </td>
+            <td onClick={cancelToggleModal}>
+              <Form.Check
+                className={style.tableCheckbox}
+                type="checkbox"
+                label="Enabled"
+                checked
+              />{' '}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className="d-flex">
+                <div className="status-circle danger mt-2" />
+                <Link href="/">Neel Motors</Link>
+              </div>
+            </td>
+            <td>H2N8XS94JU</td>
+            <td>+91 98996 98654</td>
+            <td>johndoe@gmail.com</td>
+            <td>
+              No F 29/2, Phase 2, Okhla <br /> Industrial Area, New Delhi
+              -110020
+            </td>
+            <td>
+              <Form.Check
+                className={style.tableCheckbox}
+                type="checkbox"
+                label="Enabled"
+              />{' '}
+            </td>
+          </tr>
+        </tbody>
+      </Table>
+      <CancelModal
         isOpen={cancelModal}
         handleClose={cancelToggleModal}
         title="Are you sure you want to disable the dealer from the Portal?"
         handleYes={rescheduleToggleModal}
       />
-	</div>
-  )
+    </div>
+  );
 }
 
-export default dealerTable
+export default DealerTable;
