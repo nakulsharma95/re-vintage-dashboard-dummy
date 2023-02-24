@@ -743,3 +743,18 @@ h6 {
     }
   }
 }
+
+.leadsModalMain{
+  .modal-dialog{
+    width: 100%;
+    max-width: 732px;
+    margin: 50px auto;
+    .modal-content{
+      border-radius: 0;
+      border: none;
+      background-color: $gray-28;
+      color: $white;
+      padding: 0;
+    }
+  }
+}

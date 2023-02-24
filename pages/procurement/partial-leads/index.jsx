@@ -12,6 +12,7 @@ import FilterButton from '../../../components/common/filterButton';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 
 export default function PartialLeads() {
+
   const cardData = [
     {
       ownerName: 'Rishab Sharma',
