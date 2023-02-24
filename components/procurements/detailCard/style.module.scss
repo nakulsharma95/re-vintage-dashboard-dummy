@@ -2,130 +2,134 @@
 @import '../../../styles/variables//mixins';
 
 
-  .detailsDivide{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+.detailsDivide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  }
+}
 
-  .card-container {
-    background-color: black;
-  }
-  
-  .detailCard {
-    background-color: #404040;
-    border-radius: 5px;
-  }
-  
-  .borderStyles {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .headerDetail {
-    h2 {
-      font-size: 14px;
-    }
-  
-    span {
-      font-size: 13px;
-    }
+.card-container {
+  background-color: black;
+}
+
+.detailCard {
+  background-color: $gray-28;
+  border-radius: 5px;
+}
+
+.borderStyles {
+  border-bottom: 1px solid $gray-4c;
+}
+
+.headerDetail {
+  h2 {
+    font-size: 14px;
   }
 
-  .detailDrop{
-    span {
-        font-size: 12px;
-      }
+  span {
+    font-size: 13px;
   }
-  
-  .detailName {
-    span {
-      font-size: 12px;
-    }
-  
-    p {
-      font-size: 14px;
-    }
+}
+
+.detailDrop {
+  span {
+    font-size: 12px;
   }
-  
-  .detailContact {
-    span {
-      font-size: 12px;
-    }
-  
-    p {
-      font-size: 12px;
-      cursor: pointer;
-    }
+}
+
+.detailName {
+  span {
+    font-size: 12px;
   }
-  
-  .detailEmail {
-    span {
-      font-size: 12px;
-    }
-  
-    p {
-      font-size: 12px;
-    }
+
+  p {
+    font-size: 14px;
   }
-  
-  .detailPincode {
-    span {
-      font-size: 12px;
-    }
-  
-    p {
-      font-size: 12px;
-    }
+}
+
+.detailContact {
+  span {
+    font-size: 12px;
   }
-  
-  .detailSendForm {
+
+  p {
+    font-size: 12px;
+    cursor: pointer;
+  }
+}
+
+.detailEmail {
+  span {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.detailPincode {
+  span {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.detailSendForm {
+  display: flex;
+
+  span {
+    font-size: 12px;
+  }
+}
+
+/* btnThemecustomer */
+
+.btnthemeOuter {
+  border: 2px solid red;
+  height: 40px;
+  background-color: #5e2824;
+
+  .btnthemeName {
+    color: white;
+    border-radius: 0;
+    height: 100%;
     display: flex;
-    span {
-      font-size: 12px;
-    }
-  }
-  
-  /* btnThemecustomer */
-  
-  .btnthemeOuter {
-    border: 2px solid red;
-    height: 40px;
-    background-color: #5e2824;
-  
-    .btnthemeName {
-      color: white;
-      border-radius: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      font-size: 12px;
-      cursor: pointer;
-    }
-  
-    .btnthemeIcon {
-      background-color: red;
-      height: 100%;
-      font-size: 19px;
-      color: white;
-      cursor: pointer;
-    }
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
   }
 
-    /* btnThemecustomer */
-  
-    .detailCardFooter{
-        span {
-            font-size: 12px;
-          }
-        
-          p {
-            font-size: 12px;
-          }
-    }
-    .detailCardTxt{
-      color: $gray-a7;
-      font-size: 12px;
-      font-weight: 400;
-      text-align: center;
-    }
+  .btnthemeIcon {
+    background-color: red;
+    height: 100%;
+    font-size: 19px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/* btnThemecustomer */
+
+.detailCardFooter {
+  background-color: $gray-18;
+
+  span {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.detailCardTxt {
+  color: $gray-a7;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+}

@@ -1,27 +1,36 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
 .procuredStatus {
   display: flex;
   align-items: center;
   color: #cbc6c6;
+  display: flex;
+  align-items: center;
   font-size: 12px;
   background-color: #282828;
-  padding: 0.2rem 0.4rem;
+  padding: 6px 10px;
   position: relative;
-  .procuredStatusTitle {
-    margin: 0;
+
+  .space {
+    margin-right: 8px;
   }
-  span {
-    margin-left: 0.6rem;
+  .textHighlight {
+    color: $white;
+    margin-left: 4px;
   }
 }
-.procuredMotor_topcard {
+
+.procuredMotorTopcard{
   display: flex;
-  background-color: #222222;
-  align-items: center;
-  padding: 0 1rem;
-  .procuredMotor_bikeSlider {
-    width: 40%;
-  }
-  .procuredMotor_detail {
-    width: 50%;
-  }
+  background-color: $gray-2;
+}
+
+.imgBox {
+  width:70%;
+  padding: 15px;
+}
+
+.procuredMotorDetail {
+  width: 100%;
 }

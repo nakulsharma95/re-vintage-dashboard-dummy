@@ -25,22 +25,18 @@ function ProcuredMotorcycle() {
     <div>
       <BackButton backLink="/escalation" title="Go Back" />
       <HeaderPrimary headerClass="mb-2" title="Procured Motorcycle">
-        <div className={style.procuredStatus}>
-        <div className='status-circle orange me-2'></div>
-        <p className={style.procuredStatusTitle} >
-          Status:<span>Content Upload</span>
+        <p className={style.procuredStatus}>
+          <span className={`status-circle warning ${style.space}`} /> Status:
+          <span className={style.textHighlight}> Content Upload</span>
         </p>
-        </div>
-        
       </HeaderPrimary>
       <hr />
-
-      <div className={style.procuredMotor_topcard}>
-        <div className={style.procuredMotor_bikeSlider}>
+      <div className={style.procuredMotorTopcard}>
+        <div className={style.imgBox}>
           <BikeSlider isSlider />
         </div>
         {completeData.map((item) => (
-          <div className={style.procuredMotor_detail}>
+          <div className={style.procuredMotorDetail}>
             <MotorcycleDetail
               bikeInfo
               detailLocation

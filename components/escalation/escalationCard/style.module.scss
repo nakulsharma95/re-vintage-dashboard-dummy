@@ -57,6 +57,7 @@
       align-items: center;
 	   justify-content: space-between;
       gap: 0 41px;
+      padding: 17px 0;
 
 	  .escalationCard_Colums {
 		display: flex;
@@ -64,9 +65,9 @@
 	  }
 
       p {
-        margin: 1rem 0;
         font-size: 12px;
         color: $gray-a7;
+        margin: 0;
 
         span {
           font-size: 14px;

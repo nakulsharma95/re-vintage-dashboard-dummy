@@ -7,16 +7,16 @@
 	align-items: center;
 
 	.titleViewAll {
-		display: flex;
 		font-size: 14px;
 		font-weight: 400;
-		color: $gray-cb;
+		color: $white;
 		margin-bottom: 0px;
 		opacity: 0.9;
 
 		span {
-			margin-left: 1rem;
-			opacity: 0.56;
+			margin-left: 0.7rem;
+			opacity: 0.60;
+			color: $white;
 		}
 	}
 

@@ -35,7 +35,8 @@
     border-top: 1px solid $gray-70;
 
     .arrowBtnDiv {
-      flex-grow: 1;
+      width: 100%;
+      max-width: 130px;
     }
 
     .downloadBtn {
@@ -46,6 +47,7 @@
       background: transparent;
       border: 1px solid $gray-70;
       border-radius: 0;
+      width: 100%;
     }
   }
 
