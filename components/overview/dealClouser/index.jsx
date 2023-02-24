@@ -30,10 +30,10 @@ function DealClouser() {
             <th colSpan={2}>Seller Portal</th>
           </tr>
           <tr>
-            <td>open</td>
+            <td className='bgGray28 '>open</td>
             <td>Droped</td>
             <td>open</td>
-            <td>Draoped</td>
+            <td>Droped</td>
           </tr>
           <tr>
             <td>Price Acceptance</td>

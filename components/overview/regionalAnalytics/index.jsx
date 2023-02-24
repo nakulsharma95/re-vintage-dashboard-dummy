@@ -9,7 +9,7 @@ function RegionalAnalytics() {
   return (
     <Card className={styles.card}>
       <div className={styles.cardHead}>
-        <h4>Motorcycle Sales</h4>
+        <h4>Regional Analytics</h4>
         <AiOutlineDownload className={styles.cardIcon} />
       </div>
       <TabDefault />
