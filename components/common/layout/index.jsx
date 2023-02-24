@@ -5,7 +5,7 @@ import style from './style.module.scss';
 
 function Layout(props) {
   const router = useRouter();
-  const isLoggin = router.pathname !== '/';
+  const isLoggin = router.pathname !== '/login';
   const is404 = router.pathname !== '/404';
   return (
     <div className={style.layoutStyle}>
