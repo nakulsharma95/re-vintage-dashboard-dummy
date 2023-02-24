@@ -1,11 +1,14 @@
+/* eslint-disable no-unused-vars */
 import { Image } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { AiOutlineEyeInvisible } from 'react-icons/ai';
 import Link from 'next/link';
+import { useState } from 'react';
 import styles from './style.module.scss';
 
 export default function Login() {
+  const [isError, setError] = useState(false);
   return (
     <>
       <div className={styles.loginHeader}>
@@ -26,6 +29,11 @@ export default function Login() {
                   <Image src="/images/icons/email.svg" alt="not found" />
                 </span>
                 <Form.Control type="email" placeholder="Email / Mobile" />
+                {isError && (
+                  <span className="text-error">
+                    Please enter correct email.
+                  </span>
+                )}
               </Form.Group>
 
               <Form.Group className={styles.loginFormGroup}>
@@ -36,6 +44,11 @@ export default function Login() {
                 <Button className={styles.eyeIcon}>
                   <AiOutlineEyeInvisible />
                 </Button>
+                {isError && (
+                  <span className="text-error">
+                    Please enter correct email.
+                  </span>
+                )}
               </Form.Group>
               <div className="d-flex justify-content-center">
                 <Link href="/homepage" className={styles.submitBtn}>
