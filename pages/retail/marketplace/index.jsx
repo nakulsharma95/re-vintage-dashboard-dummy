@@ -1,15 +1,15 @@
-import { Col, Row } from 'react-bootstrap';
-import { RiShareBoxFill } from 'react-icons/ri';
-import { TbTrendingUp } from 'react-icons/tb';
-import BikeCardRadio from '../../../components/common/cardCheckbox';
-import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import SortTabs from '../../../components/common/sortTabs';
-import TabPrimary from '../../../components/common/tabPrimary';
-import SearchPrimary from '../../../components/common/searchPrimary';
-import FilterButton from '../../../components/common/filterButton';
-import HeaderPrimary from '../../../components/common/headerPrimary';
-import OutlineButton from '../../../components/common/buttons/OutlineButton';
-import DashboardCard from '../../../components/dashboardCard';
+import { Col, Row } from "react-bootstrap";
+import { RiShareBoxFill } from "react-icons/ri";
+import BikeCardRadio from "../../../components/common/cardCheckbox";
+import { TbTrendingUp } from "react-icons/tb";
+import Breadcrumb from "../../../components/common/breadcrumbPrimary";
+import SortTabs from "../../../components/common/sortTabs";
+import TabPrimary from "../../../components/common/tabPrimary";
+import SearchPrimary from "../../../components/common/searchPrimary";
+import FilterButton from "../../../components/common/filterButton";
+import HeaderPrimary from "../../../components/common/headerPrimary";
+import OutlineButton from "../../../components/common/buttons/OutlineButton";
+import DashboardCard from "../../../components/dashboardCard";
 
 export default function MarketPlace() {
   const dashboardCardData = [
@@ -43,21 +43,55 @@ export default function MarketPlace() {
   ];
   const cardData = [
     {
-      imageUrl: '/images/bikeImage.png',
-      overDue: 'evolutionOver',
-      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
+      imageUrl: "/images/bikeImage.png",
+      overDue: "evolutionOver",
+      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
     },
     {
-      imageUrl: '/images/bikeImage2.png',
-      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
+      imageUrl: "/images/bikeImage2.png",
+      dealerLocation: "Neel Motors, Rohini Nagar, Delhi",
     },
     {
-      imageUrl: '/images/bikeImage3.png',
-      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
+      imageUrl: "/images/bikeImage3.png",
+      dealerLocation: "Neel Motors, Punjabi Bagh, Delhi",
     },
     {
-      imageUrl: '/images/bikeImage4.png',
-      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
+      imageUrl: "/images/bikeImage4.png",
+      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+    },
+  ];
+
+  const dashboardCardData = [
+    {
+      title: "Listed (Active + Inactive)",
+      description: "1507",
+      bottomDescription: "Overall Booking Growth",
+      percentage: "12%",
+      icon: <TbTrendingUp color="#13B21F" size={15} />,
+      cardBg: "#DA291C",
+      dividerColor: "white",
+      dropdown: "dropdown",
+    },
+    {
+      title: "Recent Inventory",
+      description: "97",
+      bottomDescription: "Received This Week",
+      percentage: "22",
+      cardBg: "#403E3E",
+      dividerColor: "#282828",
+      dropdown: "dropdown",
+    },
+    {
+      title: "Test Ride Requests",
+      description: "12",
+      cardBg: "#282828",
+      dropdown: "dropdown",
+    },
+    {
+      title: "Bookings",
+      description: "35",
+      cardBg: "#403E3E",
+      dropdown: "dropdown",
     },
   ];
   return (
@@ -73,6 +107,9 @@ export default function MarketPlace() {
       <div className="dashboard-card">
         {dashboardCardData.map((item) => (
           <DashboardCard
+            dropdown={item.dropdown}
+            dropdownTitle="1 Month"
+            dropdownMenuTitle="2 Month"
             title={item.title}
             description={item.description}
             bottomDescription={item.bottomDescription}
@@ -85,7 +122,6 @@ export default function MarketPlace() {
           />
         ))}
       </div>
-
       <TabPrimary
         title1="Active"
         title2="Inactive (12)"
