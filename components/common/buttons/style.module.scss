@@ -64,6 +64,7 @@
 	&.primary {
 		background-color: $theme-red-da;
 		color: white;
+		justify-content: center;
 
 		&:hover {
 			background-color: $theme-pink-da;

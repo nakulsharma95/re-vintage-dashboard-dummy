@@ -41,7 +41,7 @@
 					span{
 						position: inherit;
 						top: -1px;
-						left:6px;
+						left:3px;
 					}
 				}
 				.closedPriceCols{
@@ -71,6 +71,8 @@
 				display: flex;
 				align-items: center;
 				position: relative;
+				font-weight: 600;
+				font-size: 18px;
 				input{
 					background-color: $gray-2c;
 					padding: 5px;
@@ -114,7 +116,7 @@
 					left: -2px;
 					svg{
 						margin-left: 0;
-						font-size: 16px;
+						font-size: 21px;
 					}
 				}
 			}

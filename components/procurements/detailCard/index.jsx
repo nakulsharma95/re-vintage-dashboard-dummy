@@ -58,7 +58,7 @@ export default function DetailCard(props) {
         </div>
       </Card.Body>
       <div
-        className={`${styles.detailCardFooter} ${styles.detailsDivide}  card-footer bg-dark`}
+        className={`${styles.detailCardFooter} ${styles.detailsDivide}  card-footer`}
       >
         <p className="text-white-50 mb-0">
           Prm source: <span className="text-white">{props.prmSource}</span>
