@@ -67,7 +67,7 @@ function MotorcycleSales() {
     datasets: [
       {
         label: '',
-        data: [200, 180, 150, 120, 90, 50],
+        data: [200, 160, 130, 90, 50, 10],
         backgroundColor: [
           '#F28823',
           '#F0CB2D',
@@ -88,6 +88,7 @@ function MotorcycleSales() {
           <AiOutlineDownload className={styles.cardIcon} />
         </div>
         <HorizontalBarChart
+          height={300}
           data={horizontalBarChartData}
           options={horizontalOptions}
           containerClassName={styles.horizontalChartStyle}
