@@ -1,6 +1,13 @@
 import React from 'react';
-
 import styles from './style.module.scss';
+
+const fields = (timeline, progress) => (
+  <li>
+    <p className={styles.date_heading}>{timeline}</p>
+    <p className={styles.progress} />
+    <p className={styles.text}>{progress}</p>
+  </li>
+);
 
 function SalesJourney() {
   return (
@@ -21,11 +28,3 @@ function SalesJourney() {
 }
 
 export default SalesJourney;
-
-const fields = (timeline, progress) => (
-  <li>
-    <p className={styles.date_heading}>{timeline}</p>
-    <p className={styles.progress} />
-    <p className={styles.text}>{progress}</p>
-  </li>
-);
