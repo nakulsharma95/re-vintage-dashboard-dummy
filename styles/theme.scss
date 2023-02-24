@@ -725,6 +725,12 @@ h6 {
   gap: 10px;
   margin-bottom: 12px;
   margin-top: 24px;
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
 
 

@@ -7,10 +7,19 @@
   justify-content: space-between;
   margin-top: 24px;
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   .headerActionSection {
     display: flex;
     justify-content: end;
     gap: 0 12px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 12px;
+    }
   }
 
   .latsEditedText {
@@ -41,5 +50,9 @@
     font-weight: 500;
     color: $gray-cb;
     margin-bottom: 0px;
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
   }
 }

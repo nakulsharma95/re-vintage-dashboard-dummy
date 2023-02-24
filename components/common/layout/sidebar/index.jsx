@@ -6,9 +6,9 @@ import { BsFileEarmarkText, BsGraphUp } from 'react-icons/bs';
 import { Image } from 'react-bootstrap';
 import styles from './style.module.scss';
 
-export default function Sidebar() {
+export default function Sidebar(props) {
   return (
-    <div className={styles.sideBarContainer}>
+    <div className={`${styles.sideBarContainer} ${props.containerStyle}`}>
       <Accordion className={styles.reAccordion} defaultActiveKey="">
         <li>
           <Link href="/homepage">
