@@ -4,13 +4,14 @@ import DashboardCard from '../../components/dashboardCard';
 import FilterButton from '../../components/common/filterButton';
 import HeaderPrimary from '../../components/common/headerPrimary';
 import SearchPrimary from '../../components/common/searchPrimary';
-import TabPrimary from '../../components/common/tabPrimary';
 import DealerPerfomance from '../../components/overview/dealerPerfomance';
-import LeadSection from '../../components/overview/leadSection';
 import MotorcycleSales from '../../components/overview/motorcycleSales';
-import NonReLeadSection from '../../components/overview/nonReLeadSection';
 import RegionalAnalytics from '../../components/overview/regionalAnalytics';
 import style from './style.module.scss';
+import ProcurementTab from '../../components/overview/tabProcurement';
+import InventoryTab from '../../components/overview/tabInventory';
+import RetailsTab from '../../components/overview/tabRetails';
+import { Tab, Tabs } from 'react-bootstrap';
 
 export default function Homepage() {
   const dashboardCardData = [
@@ -85,9 +86,28 @@ export default function Homepage() {
         <FilterButton />
       </HeaderPrimary>
 
-      <TabPrimary title1="Procurement" title2="Inventory" title3="Retail" />
-      <LeadSection />
-      <NonReLeadSection />
+      {/* <TabPrimary title1="Procurement" title2="Inventory" title3="Retail" /> */}
+      <div className="custom-tab-style">     
+            <Tabs
+              className="mb-3"
+              defaultActiveKey="title3"
+              id="uncontrolled-tab-example"
+            >
+              <Tab eventKey="title1" title="Procurement" >
+              <ProcurementTab />
+              </Tab>
+              
+              <Tab eventKey="title2" title="Inventory" >
+                <InventoryTab/>
+              </Tab>
+              <Tab eventKey="title3" title="Retail">
+               <RetailsTab/>
+              </Tab>
+              
+            </Tabs>         
+      </div>
+      {/* <LeadSection />
+      <NonReLeadSection /> */}
     </div>
   );
 }

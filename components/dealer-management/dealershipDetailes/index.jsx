@@ -21,7 +21,7 @@ function DealershipDetails() {
         subTitle="Please find all the necessary details"
       >
         <div className='status-circle success mt-3'></div>
-        <p className={style.dealership_status}>Status Active</p>
+        <p className={style.dealership_status}>Status: <span>Active</span> </p>
         <OutlineDropdown
           dropdownTitle="Actions"
           dropdownMenuTitle="Blacklist Dealer"
