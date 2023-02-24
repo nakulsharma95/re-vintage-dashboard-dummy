@@ -63,7 +63,7 @@ export default function ActiveBids() {
       >
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
         <OutlineButton title="Refresh bids" rightIcon={<BiRefresh />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 

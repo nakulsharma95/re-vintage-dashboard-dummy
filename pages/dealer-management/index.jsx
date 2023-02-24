@@ -20,7 +20,7 @@ function DealerManagement() {
       >
         <OutlineButton title="Export Data" leftIcon={<RiShareBoxFill />} />
         <OutlineButton title="Import EXCEL" leftIcon={<BiDownload />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
       <TabPrimary

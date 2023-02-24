@@ -67,7 +67,7 @@ export default function Inventory() {
 
       <HeaderPrimary headerClass="mb-2" title="Inventory">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 

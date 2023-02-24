@@ -34,7 +34,7 @@ function UnderNegotiation() {
       <Breadcrumb title="Deal Closure" addmoretitle="Under Negotiation" />
       <HeaderPrimary headerClass="mb-2" title="Under Negotiation">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
       <TabPrimary title1="OpDealer (25)en" title2="Seller Portal (12)" />

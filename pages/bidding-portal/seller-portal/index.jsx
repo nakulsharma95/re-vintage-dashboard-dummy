@@ -62,7 +62,7 @@ export default function ClosedBids() {
         subTitle="Please find all the necessary details"
       >
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 
