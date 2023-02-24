@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Col, Button } from 'react-bootstrap';
 import styles from './style.module.scss';
@@ -10,13 +11,13 @@ function ViewAll(props) {
           {props.title} <span>{props.leadsTitle}</span>
         </h5>
         <div>
-          {props.viewAllBtn &&
-            <Button variant="primary" className={styles.viewAllBtn}>
+          {props.viewAllBtn && (
+            <Link href={props.viewHandler || '/'} className={styles.viewAllBtn}>
               View All
-            </Button>
-          }
+            </Link>
+          )}
         </div>
-        {props.viewAllList &&
+        {props.viewAllList && (
           <div className={styles.topHeaderBtnBox}>
             <p className={styles.viewText}>View:</p>
             <Button
@@ -29,7 +30,7 @@ function ViewAll(props) {
               Dealer
             </Button>
           </div>
-        }
+        )}
       </div>
     </Col>
   );

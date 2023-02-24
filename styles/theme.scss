@@ -50,6 +50,10 @@ h6 {
   font-family: 'Guardian Sans', sans-serif;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .scroll-hide {
   @include scrollHide;
 }
