@@ -10,13 +10,13 @@
 		border-radius: 0;
 	}
 	.bikeName{
-		font-size: 16px;
+		font-size: 18px;
 		color: $white;
 		margin-bottom: 5px;
 		padding: 10px;
 		span{
 			color: $theme-yellow-E8;
-			font-size: 13px;
+			font-size: 14px;
 			display: inline-block;
 			margin-left: 3px;
 		}
@@ -30,6 +30,11 @@
 		.priceList{
 			background-color: $gray-3;
 			padding:5px 10px;
+			.sellerIdText{
+				color: $gray-F3;
+				font-weight: 500;
+				font-size: 14px;
+			}
 			.priceFlex{
 				display: flex;
 				align-items: center;
@@ -124,10 +129,12 @@
 			span{
 				font-size: 14px;
 				color: $white;
+				font-weight: 500;
 			}
 			.locationText{
 				margin-top: 5px;
 				font-size: 12px;
+				font-weight: 500;
 				span{
 					color: $gray-cb;
 				}
@@ -164,6 +171,7 @@
 .copyIcon{
 	font-size: 10px;
 	cursor: pointer;
+	margin-left: 5px;
 }
 
 .selectBoxCheck{
@@ -178,8 +186,8 @@
 	span{
 		position: absolute;
 		left: 4px;
-		top: 21px;
-		font-size: 18px;
+		top: 18px;
+		font-size: 22px;
 	}
 	input{
 		background-color: $black;
@@ -187,9 +195,10 @@
 		height: 30px;
 		color: $white;
 		outline: none;
+		font-size: 18px;
 		border: 1px solid $gray-5;
 		width: 100%;
-		padding-left: 22px;
+		padding-left: 24px;
 		font-weight: 600;
 		&:focus{
 			outline: none;
@@ -211,6 +220,7 @@
 		margin-left: 10px;
 		transition: all 0.5s;
 		color: $white;
+		font-weight: 500;
 		&:hover{
 			background-color: $gray-fd;
 			color: $gray-3;

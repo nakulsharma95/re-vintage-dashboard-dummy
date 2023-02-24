@@ -29,7 +29,7 @@ export default function SellerPrimaryCard(props) {
 		<div className={styles.priceList}>
 			<div className="d-flex align-items-center justify-content-between">
 			<div className={styles.sbTitle}>Seller Portal ID:</div>
-			<div>
+			<div className={styles.sellerIdText}>
 				{props.sellerId} <FiCopy className={styles.copyIcon} />
 			</div>
 			</div>
