@@ -27,30 +27,9 @@ function NonRe() {
     },
   ];
 
-  // const textCenterValue = {
-  //   beforeDraw(chart) {
-  //     const { width } = chart.chart;
-  //     const { height } = chart.chart;
-  //     const { ctx } = chart.chart;
-  //     ctx.restore();
-  //     const fontSize = (height / 160).toFixed(2);
-  //     ctx.font = `${fontSize}em sans-serif`;
-  //     ctx.textBaseline = 'top';
-  //     const text = 'Foo-basasasasasassasasar';
-  //     const textX = Math.round((width - ctx.measureText(text).width) / 2);
-  //     const textY = height / 2;
-  //     ctx.fillText(text, textX, textY);
-  //     ctx.save();
-  //   },
-  // };
-
   const optionsDoughnut = {
     responsive: true,
     maintainAspectRatio: false,
-    centerText: {
-      display: true,
-      text: `90%sasassassa`,
-    },
     plugins: {
       legend: {
         display: true,
@@ -58,6 +37,9 @@ function NonRe() {
         labels: {
           fontSize: 20,
           color: 'white',
+          usePointStyle: true,
+          pointStyle: 'circle',
+          padding: 15,
         },
       },
     },
