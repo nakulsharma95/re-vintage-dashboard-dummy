@@ -1,16 +1,46 @@
 import { Col, Row } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
+import { TbTrendingUp } from 'react-icons/tb';
 import BikeCardRadio from '../../../components/common/cardCheckbox';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-// import DashboardCard from '../../../components/common/dashboardCard';
 import SortTabs from '../../../components/common/sortTabs';
 import TabPrimary from '../../../components/common/tabPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import DashboardCard from '../../../components/dashboardCard';
 
 export default function MarketPlace() {
+  const dashboardCardData = [
+    {
+      title: 'Total',
+      description: '32',
+      bottomDescription: 'Overall Growth',
+      percentage: '12%',
+      icon: <TbTrendingUp color="#13B21F" size={15} />,
+      cardBg: '#DA291C',
+      dividerColor: 'white',
+    },
+    {
+      title: 'Content Approval Pending',
+      description: '12',
+      bottomDescription: 'Received This Week',
+      percentage: '8',
+      cardBg: '#403E3E',
+      dividerColor: '#282828',
+    },
+    {
+      title: 'Content Upload Pending',
+      description: '08',
+      cardBg: '#282828',
+    },
+    {
+      title: 'Under Refurbishment',
+      description: '12',
+      cardBg: '#282828',
+    },
+  ];
   const cardData = [
     {
       imageUrl: '/images/bikeImage.png',
@@ -40,19 +70,22 @@ export default function MarketPlace() {
         <FilterButton />
       </HeaderPrimary>
 
-      <DashboardCard
-        Dropdown
-        title1="Listed (Active + Inactive)"
-        description1="1507"
-        bottomDescription1="Overall Growth"
-        title2="Recent Inventory"
-        description2="97"
-        bottomDescription2="Received This Week"
-        title3="Test Ride Requests"
-        description3="12"
-        title4="Bookings"
-        description4="35"
-      />
+      <div className="dashboard-card">
+        {dashboardCardData.map((item) => (
+          <DashboardCard
+            title={item.title}
+            description={item.description}
+            bottomDescription={item.bottomDescription}
+            divider
+            icon={item.icon}
+            percentage={item.percentage}
+            cardBg={item.cardBg}
+            dividerColor={item.dividerColor}
+            priceValue={item.priceValue}
+          />
+        ))}
+      </div>
+
       <TabPrimary
         title1="Active"
         title2="Inactive (12)"

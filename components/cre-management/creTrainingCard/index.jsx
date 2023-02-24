@@ -1,6 +1,6 @@
-import React from "react";
-import { Row, Col, Card } from "react-bootstrap";
-import styles from "./style.module.scss";
+import React from 'react';
+import { Row, Col, Card } from 'react-bootstrap';
+import styles from './style.module.scss';
 
 function CreTrainingCard(props) {
   return (
@@ -27,7 +27,7 @@ function CreTrainingCard(props) {
               </div>
             </Col>
 
-            <div className={styles.divider}></div>
+            <div className={styles.divider} />
 
             <Col xl={6} lg={6} md={6}>
               <div className={styles.TrainingCardText}>
@@ -44,7 +44,7 @@ function CreTrainingCard(props) {
                 <p>{props.completeOn}</p>
               </div>
             </Col>
-			<div className={styles.divider}></div>
+            <div className={styles.divider} />
             <Col xl={6} lg={6} md={6}>
               <div className={styles.TrainingCardText}>
                 <h3>TRAINING NAME</h3>
