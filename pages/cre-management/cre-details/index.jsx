@@ -74,33 +74,42 @@ function CreDetails() {
                   />
                 </Col>
               ))}
-              <Col xxl={6} xl={6} lg={6} md={12}>
-                <CrePrimaryCard
-                  cardHeading="Primary Details"
-                  firstName="Adesh"
-                  lastName="Goyal"
-                  gender="Male"
-                  birthDate="26 - Jan - 1994"
-                  matrial="Single"
-                  handicapped="No"
-                />
-              </Col>
-              <Col xxl={6} xl={6} lg={6} md={12}>
-                <CreAddressDetailCard
-                  cardHeading="Address Details"
-                  currentAddress="1236/2 D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi Delhi - 110066"
-                  permanentAddress="1236/2 D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi, Delhi - 110066"
-                />
-              </Col>
-
-              <Col xxl={6} xl={6} lg={6} md={12}>
-                <CreTrainingCard
-                  cardHeading="Trainings Attended"
-                  trainingName="Name of the training"
-                  completeOn="13th April, 2022"
-                />
-              </Col>
             </Row>
+
+            <div className="cre-space-section">
+              <Row>
+                <Col xxl={6} xl={6} lg={6} md={12}>
+                  <CrePrimaryCard
+                    cardHeading="Primary Details"
+                    firstName="Adesh"
+                    lastName="Goyal"
+                    gender="Male"
+                    birthDate="26 - Jan - 1994"
+                    matrial="Single"
+                    handicapped="No"
+                  />
+                </Col>
+                <Col xxl={6} xl={6} lg={6} md={12}>
+                  <CreAddressDetailCard
+                    cardHeading="Address Details"
+                    currentAddress="1236/2 D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi Delhi - 110066"
+                    permanentAddress="1236/2 D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi, Delhi - 110066"
+                  />
+                </Col>
+              </Row>
+            </div>
+
+            <div>
+              <Row>
+                <Col xxl={6} xl={6} lg={6} md={12}>
+                  <CreTrainingCard
+                    cardHeading="Trainings Attended"
+                    trainingName="Name of the training"
+                    completeOn="13th April, 2022"
+                  />
+                </Col>
+              </Row>
+            </div>
           </Tab>
 
           <Tab eventKey="title2" title="Performance Management">
