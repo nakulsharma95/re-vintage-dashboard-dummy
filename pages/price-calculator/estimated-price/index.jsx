@@ -10,11 +10,7 @@ export default function EstimatedPrice() {
     <>
       <Breadcrumb title="Instant Estimator Configurator" />
       <div className="mb-5" />
-      <HeaderPrimary
-          headerClass="mb-2"
-          title="Estimated Price"
-        >
-      </HeaderPrimary>
+      <HeaderPrimary headerClass="mb-2" title="Estimated Price" />
       <Row>
         <Col md={7} className="mt-1">
           <PriceInspection

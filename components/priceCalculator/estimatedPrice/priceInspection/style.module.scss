@@ -10,7 +10,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 25px;
+		padding: 25px 25px 0;
 		color: $gray-cb;
 	}
 	img{
@@ -34,5 +34,9 @@
 		p{
 			margin: 0;
 		}
+	}
+
+	.graphStyle {
+		height: 230px;
 	}
 }
