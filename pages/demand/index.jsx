@@ -10,6 +10,8 @@ import DemandPrimaryCard from '../../components/demand/demandPrimaryCard';
 import OutlineButton from '../../components/common/buttons/OutlineButton';
 import VerticalBarChart from '../../components/charts/verticalBarChart';
 import LineChart from '../../components/charts/lineChart';
+import DemandPrimaryTable from '../../components/demand/demandPrimaryTable';
+import DetailPagination from '../../components/common/paginationPrimary';
 
 function Demand() {
   // bar Chart Here
@@ -205,6 +207,9 @@ function Demand() {
       <div className={styles.demandContainer}>
         <div className={styles.demandHead}>
           <div className={styles.title}>Total Leads</div>
+          <div className={styles.stageTitle}>
+            
+          </div>
         </div>
 
         <div className={styles.dummyGraphBox}>
@@ -247,6 +252,8 @@ function Demand() {
           ))}
         </div>
       </div>
+      <DemandPrimaryTable />
+      <DetailPagination />
     </>
   );
 }

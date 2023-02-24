@@ -46,7 +46,7 @@ export default function BiddingDetails() {
       contact: '+91 9899645875',
     },
   ];
-  
+
   return (
     <div>
       <BackButton backLink="/bidding-portal" title="Back" />
@@ -81,21 +81,17 @@ export default function BiddingDetails() {
           ))}
         </Row>
         <div className="re-detailFootBg">
-          <Row>
-            {cardFootData.map((item) => (
-              <Col md={4}>
-                <BikeCardFooter
-                  userTitle={item.userTitle}
-                  caseId={item.caseId}
-                  contactText={item.contactText}
-                  detailTitle={item.detailTitle}
-                  name={item.name}
-                  idTitle={item.idTitle}
-                  contact={item.contact}
-                />
-              </Col>
-            ))}
-          </Row>
+          {cardFootData.map((item) => (
+            <BikeCardFooter
+              userTitle={item.userTitle}
+              caseId={item.caseId}
+              contactText={item.contactText}
+              detailTitle={item.detailTitle}
+              name={item.name}
+              idTitle={item.idTitle}
+              contact={item.contact}
+            />
+          ))}
         </div>
       </div>
       <Bids />

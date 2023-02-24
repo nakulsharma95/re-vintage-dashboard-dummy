@@ -5,9 +5,11 @@ import ToggleSwitchCard from "~/components/retails/toggleSwitchCard";
 import ArrowButton from "../buttons/ArrowButton";
 import CustomCheckBox from "../customCheckBox";
 import styles from "./style.module.scss";
-import { BiRupee } from 'react-icons/bi';
+import { BiRupee } from "react-icons/bi";
+import OutlineButton from "../buttons/OutlineButton";
 
 function BikeCardRadio({
+  isEditButton,
   isCheckBoxVisible,
   imageUrl,
   isBikeTagVisible,
@@ -29,6 +31,9 @@ function BikeCardRadio({
   isCardVisible,
   toggleLabal1,
   toggleLabal2,
+  isCreContact,
+  isCreDetails,
+  isDealer,
 }) {
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -78,26 +83,50 @@ function BikeCardRadio({
             <Col className={styles.detailTxt}>{bikeOwner}</Col>
             <Col className={styles.detailTxt}>{bikeCc}</Col>
           </Row>
-          <h4 className={styles.price}><BiRupee size={21} />{bikePrice}</h4>
-          <p className={styles.dealer}>
-            Dealer: <span>{bikeDealer}</span>
-          </p>
-          <span className={styles.dealerLocation}>{dealerAddress}</span>
+          <h4 className={styles.price}>
+            <BiRupee size={21} />
+            {bikePrice}
+          </h4>
+          {isDealer && (
+            <>
+              <p className={styles.dealer}>
+                Dealer: <span>{bikeDealer}</span>
+              </p>
+              <span className={styles.dealerLocation}>{dealerAddress}</span>
+            </>
+          )}
+
+          {isEditButton && (
+            <div className={styles.bikeEditBtns}>
+              <button className={styles.bikeEditBtn}>EDIT</button>
+              <button className={styles.bikeSoldBtn}>SOLD / BOOKED</button>
+            </div>
+          )}
         </Card.Body>
       </Card>
       <Card className={styles.cardCreMain}>
         <Card.Body className="px-0">
-          <div className={styles.creDetails}>
-            <h3>{creDetail}</h3>
+          {isCreDetails && (
+            <div className={styles.creDetails}>
+              <h3>{creDetail}</h3>
 
-            <p className={`${styles.creInfo} mb-0`}>
-              Name:<span>{creName}</span>
-            </p>
+              <p className={`${styles.creInfo} mb-0`}>
+                Name:<span>{creName}</span>
+              </p>
 
-            <p className={`${styles.creInfo} mb-0`}>
-              Number:<span>{creNumber}</span>
-            </p>
-          </div>
+              <p className={`${styles.creInfo} mb-0`}>
+                Number:<span>{creNumber}</span>
+              </p>
+            </div>
+          )}
+
+          {isCreContact && (
+            <div className="d-flex">
+              <p className={styles.contactCre}>Contact CRE</p>
+              <p className={styles.contactCre}>Change CRE</p>
+            </div>
+          )}
+
           {isButtonVisible && (
             <div className={styles.creBtnBox}>
               <Button variant="primary" className={styles.downloadBtn}>

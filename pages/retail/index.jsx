@@ -1,33 +1,63 @@
-import { Col, Row } from "react-bootstrap";
-import { RiShareBoxFill } from "react-icons/ri";
-import BikeCardRadio from "../../components/common/cardCheckbox";
-import Breadcrumb from "../../components/common/breadcrumbPrimary";
-import DashboardCard from "../../components/common/dashboardCard";
-import SortTabs from "../../components/common/sortTabs";
-import TabPrimary from "../../components/common/tabPrimary";
-import SearchPrimary from "../../components/common/searchPrimary";
-import FilterButton from "../../components/common/filterButton";
-import HeaderPrimary from "../../components/common/headerPrimary";
-import OutlineButton from "../../components/common/buttons/OutlineButton";
+import { Col, Row } from 'react-bootstrap';
+import { TbTrendingUp } from 'react-icons/tb';
+import { RiShareBoxFill } from 'react-icons/ri';
+import BikeCardRadio from '../../components/common/cardCheckbox';
+import Breadcrumb from '../../components/common/breadcrumbPrimary';
+import DashboardCard from '../../components/dashboardCard';
+import SortTabs from '../../components/common/sortTabs';
+import TabPrimary from '../../components/common/tabPrimary';
+import SearchPrimary from '../../components/common/searchPrimary';
+import FilterButton from '../../components/common/filterButton';
+import HeaderPrimary from '../../components/common/headerPrimary';
+import OutlineButton from '../../components/common/buttons/OutlineButton';
 
 export default function Retail() {
+  const dashboardCardData = [
+    {
+      title: 'Total',
+      description: '32',
+      bottomDescription: 'Overall Growth',
+      percentage: '12%',
+      icon: <TbTrendingUp color="#13B21F" size={15} />,
+      cardBg: '#DA291C',
+      dividerColor: 'white',
+    },
+    {
+      title: 'Content Approval Pending',
+      description: '12',
+      bottomDescription: 'Received This Week',
+      percentage: '8',
+      cardBg: '#403E3E',
+      dividerColor: '#282828',
+    },
+    {
+      title: 'Content Upload Pending',
+      description: '08',
+      cardBg: '#282828',
+    },
+    {
+      title: 'Under Refurbishment',
+      description: '12',
+      cardBg: '#282828',
+    },
+  ];
   const cardData = [
     {
-      imageUrl: "/images/bikeImage.png",
-      overDue: "evolutionOver",
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      imageUrl: '/images/bikeImage.png',
+      overDue: 'evolutionOver',
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage2.png",
-      dealerLocation: "Neel Motors, Rohini Nagar, Delhi",
+      imageUrl: '/images/bikeImage2.png',
+      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage3.png",
-      dealerLocation: "Neel Motors, Punjabi Bagh, Delhi",
+      imageUrl: '/images/bikeImage3.png',
+      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage4.png",
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      imageUrl: '/images/bikeImage4.png',
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
   ];
   return (
@@ -38,26 +68,28 @@ export default function Retail() {
         <SearchPrimary />
         <FilterButton />
       </HeaderPrimary>
-      <DashboardCard
-        Dropdown
-        title1="Total"
-        description1="32"
-        bottomDescription1="Overall Growth"
-        title2="Content Approval Pending"
-        description2="12"
-        bottomDescription2="Received This Week"
-        title3="Content Upload Pending"
-        description3="8"
-        title4="Under Refurbishment"
-        description4="12"
-      />
+      <div className="dashboard-card">
+        {dashboardCardData.map((item) => (
+          <DashboardCard
+            title={item.title}
+            description={item.description}
+            bottomDescription={item.bottomDescription}
+            divider
+            icon={item.icon}
+            percentage={item.percentage}
+            cardBg={item.cardBg}
+            dividerColor={item.dividerColor}
+            priceValue={item.priceValue}
+          />
+        ))}
+      </div>
       <TabPrimary
         title1="Content Approval Pending (12)"
         title2="Content Upload Pending (8)"
         title3="Under Refurbishment"
         title4="Pending Evaluation (15)"
       />
-       <SortTabs
+      <SortTabs
         selectAllCheck
         approveBtn
         isSortTabBox
