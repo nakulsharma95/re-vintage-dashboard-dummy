@@ -25,7 +25,7 @@ ChartJS.register(
 function HorizontalBarChart(props) {
   return (
     <div className={`${styles.graphStyle} ${props.containerClassName}`}>
-      <Bar options={props.options} data={props.data} />
+      <Bar height={props.height} options={props.options} data={props.data} />
     </div>
   );
 }

@@ -27,15 +27,13 @@ export default function Homepage() {
       title: 'Total Procured',
       description: '97',
       bottomDescription: 'Overall Booking Growth',
-      percentage: '12%',
+      percentage: '22',
       cardBg: '#403E3E',
       dividerColor: '#282828',
     },
     {
       title: 'Total Procured',
       description: '12',
-      bottomDescription: 'Overall Booking Growth',
-      percentage: '12%',
       cardBg: '#282828',
     },
     {

@@ -38,6 +38,26 @@ function RegionalAnalytics() {
                 <td>Neel Motors</td>
                 <td className="text-end">72</td>
               </tr>
+              <tr>
+                <td>Neel Motors</td>
+                <td className="text-end">4512</td>
+              </tr>
+              <tr>
+                <td>Neel Motors</td>
+                <td className="text-end"> 321</td>
+              </tr>
+              <tr>
+                <td>Neel Motors</td>
+                <td className="text-end"> 789</td>
+              </tr>
+              <tr>
+                <td>Neel Motors</td>
+                <td className="text-end">465</td>
+              </tr>
+              <tr>
+                <td>Neel Motors</td>
+                <td className="text-end">72</td>
+              </tr>
             </tbody>
           </Table>
         </div>
