@@ -1,12 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import { Card, Col, OverlayTrigger, Row, Tooltip } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import ToggleSwitchCard from "~/components/retails/toggleSwitchCard";
-import ArrowButton from "../buttons/ArrowButton";
-import CustomCheckBox from "../customCheckBox";
-import styles from "./style.module.scss";
-import { BiRupee } from "react-icons/bi";
-import OutlineButton from "../buttons/OutlineButton";
+import { Card, Col, OverlayTrigger, Row, Tooltip } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import { BiRupee } from 'react-icons/bi';
+import ToggleSwitchCard from '../../retails/toggleSwitchCard';
+import ArrowButton from '../buttons/ArrowButton';
+import CustomCheckBox from '../customCheckBox';
+import styles from './style.module.scss';
 
 function BikeCardRadio({
   isEditButton,
@@ -26,11 +25,8 @@ function BikeCardRadio({
   creNumber,
   isOlxTagVisible,
   isBikeChassisVisible,
-  dealerLocation,
   isButtonVisible,
   isCardVisible,
-  toggleLabal1,
-  toggleLabal2,
   isCreContact,
   isCreDetails,
   isDealer,
@@ -98,8 +94,12 @@ function BikeCardRadio({
 
           {isEditButton && (
             <div className={styles.bikeEditBtns}>
-              <button className={styles.bikeEditBtn}>EDIT</button>
-              <button className={styles.bikeSoldBtn}>SOLD / BOOKED</button>
+              <button type="button" className={styles.bikeEditBtn}>
+                EDIT
+              </button>
+              <button type="button" className={styles.bikeSoldBtn}>
+                SOLD / BOOKED
+              </button>
             </div>
           )}
         </Card.Body>
@@ -132,7 +132,7 @@ function BikeCardRadio({
               <Button variant="primary" className={styles.downloadBtn}>
                 VIEW
               </Button>
-              <ArrowButton detailLink="" title="APPROVE" />
+              <ArrowButton detailLink="" title="APPROVE" buttonStyle="w-full" />
             </div>
           )}
         </Card.Body>

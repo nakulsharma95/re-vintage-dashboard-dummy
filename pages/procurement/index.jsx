@@ -188,6 +188,7 @@ function Procurement() {
         leadsTitle="(8 Leads)"
         viewAllBtn
         viewAllClass="mt-4 mb-4"
+        viewHandler="procurement/partial-leads"
       />
       <Row>
         {cardData.map((item) => (
@@ -209,6 +210,7 @@ function Procurement() {
         leadsTitle="(8 Leads)"
         viewAllBtn
         viewAllClass="mt-5 mb-3"
+        viewHandler="procurement/evaluation-requests"
       />
       <Row>
         {evaluationData.map((item) => (
@@ -237,6 +239,7 @@ function Procurement() {
         leadsTitle="(32 Leads)"
         viewAllBtn
         viewAllClass="mt-5 mb-3"
+        viewHandler="procurement/scheduled-evaluation"
       />
       <Row>
         {schedulednData.map((item) => (
@@ -265,6 +268,7 @@ function Procurement() {
         leadsTitle="(32 Leads)"
         viewAllBtn
         viewAllClass="mt-5 mb-3"
+        viewHandler="procurement/complete-evaluation"
       />
       <Row>
         {completedData.map((item) => (

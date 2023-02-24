@@ -50,8 +50,45 @@ h6 {
   font-family: 'Guardian Sans', sans-serif;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .scroll-hide {
   @include scrollHide;
+}
+
+// Sidebar Active Style
+.sidebar-global {
+  button[aria-expanded="true"] {
+    background: $black;
+    border-bottom: 1px solid $gray-28;
+
+    .nav-item {
+      color: $theme-red-da;
+    }
+
+    a {
+      color: $white !important;
+    }
+  }
+
+  .accordion-button:not(.collapsed) {
+    box-shadow: none;
+  }
+
+  .active {
+    color: $white !important;
+    background-color: $black;
+    
+    a {
+      color: $white !important;
+    }
+
+    .nav-item {
+      color: $theme-red-da;
+    }
+  }
 }
 
 // four-oh-four
@@ -721,6 +758,12 @@ h6 {
   gap: 10px;
   margin-bottom: 12px;
   margin-top: 24px;
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
 
 
@@ -740,6 +783,21 @@ h6 {
   .col-md-2{
     @media (min-width: 768px){
       width: 19.8%;
+    }
+  }
+}
+
+.leadsModalMain{
+  .modal-dialog{
+    width: 100%;
+    max-width: 732px;
+    margin: 50px auto;
+    .modal-content{
+      border-radius: 0;
+      border: none;
+      background-color: $gray-28;
+      color: $white;
+      padding: 0;
     }
   }
 }

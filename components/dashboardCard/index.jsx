@@ -1,7 +1,5 @@
-import { DropdownButton, Dropdown } from "react-bootstrap";
-import OutlineDropdown from "../common/buttons/OutlineDropdown";
-import OutlineDropdownWhite from "../common/buttons/OutlineDropdownWhite";
-import styles from "./style.module.scss";
+import OutlineDropdownWhite from '../common/buttons/OutlineDropdownWhite';
+import styles from './style.module.scss';
 
 export default function DashboardCard(props) {
   return (

@@ -6,10 +6,7 @@ function SearchPrimary(props) {
   return (
     <div className={styles.searchPrimary}>
       <Form.Group className={`${styles.formGroup}`}>
-        <Form.Control
-          type="text"
-          placeholder={props.placeholder}
-        />
+        <Form.Control type="text" placeholder={props.placeholder} />
         <FaSearch className={styles.inputSearch} size={15} />
       </Form.Group>
     </div>

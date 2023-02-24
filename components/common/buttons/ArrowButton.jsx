@@ -5,7 +5,7 @@ import styles from './style.module.scss';
 
 export default function ArrowButton(props) {
   return (
-    <div className={styles.arrowBtnMain}>
+    <div className={`${styles.arrowBtnMain} ${props.buttonStyle}`}>
       {props.detailLink ? (
         <Link href={props.detailLink} className={styles.arrowButton}>
           {props.title}

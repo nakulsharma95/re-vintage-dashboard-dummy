@@ -1,123 +1,151 @@
-@import "../../../../styles/variables/colors";
-@import "../../../../styles/variables/mixins";
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/variables/mixins';
+// variables
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/variables/mixins';
 
-.sideBarContainer{
-	width: 100%;
-	max-width: 240px;
-	height: 100vh;
-	overflow-y: auto;
-	background-color: $gray-2;
-	position: fixed;
-	top: 48px;
-	left: 0;
-	z-index: 9;
-}
-.sideBarContainer::-webkit-scrollbar {
-	width: 0em;
+.sideBarContainer {
+  width: 100%;
+  max-width: 240px;
+  height: calc(100vh - 48px);
+  overflow-y: auto;
+  background-color: $gray-2;
+  position: fixed;
+  top: 48px;
+  left: 0;
+  z-index: 9;
+
+  @include mobile {
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0em;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 0px solid slategrey;
+  }
 }
 
-.sideBarContainer::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.3);
-}
-
-.sideBarContainer::-webkit-scrollbar-thumb {
-	background-color: darkgrey;
-	outline: 0px solid slategrey;
+.buttonStyle {
+  border: none;
+  width: 100%;
+  background: none;
+  padding: 14px 12px;
 }
 
 .headerStyle {
-	border-bottom: 0px solid #282828;
+  width: 100%;
+  background: none;
+
+  button {
+    background: none;
+    padding: 14px 12px;
+    border: none;
+  }
+
+  li {
+    a {
+      padding: 14px 12px;
+    }
+  }
 }
 
-.reAccordion{
-	li{
-		list-style-type: none;
-		a{
-			padding: 14px 12px;
-			text-decoration: none;
-			color: $gray-a7;
-			display: block;
-			border-bottom: 1px solid $gray-28;
-			span.navIcon{
-				display: inline-block;
-				width: 20px;
-				img{
-					width: 15px;
-					opacity: 0.6;
-				}
-			}
-		}
-	}
-	.accordionItems{
-		background: transparent;
-		border: none;
-		padding: 0;
-		border-radius: 0;
-		border-bottom: 1px solid $gray-28;
-		&:first-of-type{
-			button{
-				border-radius: 0 !important;
-			}
-		}
-		&:last-of-type{
-			button{
-				border-radius: 0 !important;
-			}
-		}
-		button{
-			background-color: transparent;
-			padding: 14px 14px;
-			outline: none;
-			box-shadow: none;
-			border-radius: 0;
-			background-color: $gray-2;
-			&::after{
-				color: $white;
-				background: url('/images/down-arrow.png') no-repeat;
-				background-size: 18px;
-				opacity: 0.6;
-			}
-			a{
-				text-decoration: none;
-				color: $gray-a7;
-				span.navIcon{
-					display: inline-block;
-					width: 20px;
-				}
-			}
-		}
-	}
+.reAccordion {
+ 
+  .headerStyle button {
+    position: relative;
+    display: flex;
+    align-items: center;
 
-	.accordionBody{
-		background-color: $black;
-		padding: 8px 0;
-		padding-left: 25px;
-		li{
-			a{
-				color: #818181;
-				padding: 8px 14px;
-				font-size: 12px;
-				border: none;
-				&:hover{
-					color: $white;
-					transition: all 0.5s;
-				}
-			}
-		}
-	}
+    &::after {
+      color: $white;
+      background: url('/images/down-arrow.png') no-repeat;
+      background-size: 18px;
+      opacity: 0.6;
+      position: absolute;
+      right: 10px;
+      content: '';
+      width: 18px;
+      height: 14px;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  .accordionItems {
+    position: relative;
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    border-bottom: 1px solid $gray-28;
+
+    a {
+      text-decoration: none;
+      padding: 4px 0;
+      color: $gray-a7;
+      width: 100%;
+      display: flex;
+
+      span.navIcon {
+        display: inline-block;
+        width: 20px;
+      }
+    }
+  }
+
+
+  // Accordian Body
+  .accordionBody {
+    background-color: $black;
+    padding: 8px 0;
+    padding-left: 25px;
+
+    li {
+      list-style-type: none;
+  
+      a {
+        padding: 14px 12px;
+        text-decoration: none;
+        color: $gray-a7;
+        display: flex;
+  
+        span.navIcon {
+          display: inline-block;
+          width: 20px;
+  
+          img {
+            width: 15px;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
 }
 
-.sideBarbadge{
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	color: $white;
-	width: 14px;
-	height: 14px;
-	border-radius: 50%;
-	background-color: $theme-red-da;
-	font-size: 9px;
-	position: absolute;
-    right: 44px;
-    top: 16px;
+.sideBarbadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: $theme-red-da;
+  font-size: 9px;
+  position: absolute;
+  right: 44px;
+  bottom: 18px;
+}
+
+.sidebarShowStyle {
+  left: 0;
 }

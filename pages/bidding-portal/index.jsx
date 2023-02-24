@@ -183,7 +183,7 @@ export default function BiddingPortal() {
         <BiddingOverview />
       </div>
       <ViewAll
-        viewallLink="/bidding-portal/upcoming-bids"
+        viewHandler="/bidding-portal/upcoming-bids"
         title="Upcoming Bids"
         leadsTitle="(1507 Leads)"
         viewAllBtn
@@ -208,7 +208,7 @@ export default function BiddingPortal() {
 
       <div className="bottom-white-border" />
       <ViewAll
-        viewallLink="/bidding-portal/upcoming-bids"
+        viewHandler="/bidding-portal/upcoming-bids"
         title="Active Bids"
         leadsTitle="(97 Leads)"
         viewAllBtn
@@ -233,7 +233,7 @@ export default function BiddingPortal() {
       </Row>
       <div className="bottom-white-border" />
       <ViewAll
-        viewallLink="/bidding-portal/upcoming-bids"
+        viewHandler="/bidding-portal/upcoming-bids"
         title="Closed Bids"
         leadsTitle="(12 Leads)"
         viewAllBtn
@@ -257,7 +257,7 @@ export default function BiddingPortal() {
       </Row>
       <div className="bottom-white-border" />
       <ViewAll
-        viewallLink="/bidding-portal/upcoming-bids"
+        viewHandler="/bidding-portal/upcoming-bids"
         title="Seller Bids"
         leadsTitle="(25 Leads)"
         viewAllBtn

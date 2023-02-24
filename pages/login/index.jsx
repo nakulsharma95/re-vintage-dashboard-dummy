@@ -51,7 +51,7 @@ export default function Login() {
                 )}
               </Form.Group>
               <div className="d-flex justify-content-center">
-                <Link href="/homepage" className={styles.submitBtn}>
+                <Link href="/" className={styles.submitBtn}>
                   Login
                 </Link>
               </div>
