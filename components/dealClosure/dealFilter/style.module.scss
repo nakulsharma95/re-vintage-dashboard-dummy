@@ -3,13 +3,14 @@
 
 .dealFilterMain{
 	@include d-flex(space-between, center);
-	margin-bottom: 1rem;
+	// margin-bottom: 1rem;
 
 	.dealFilterTitle{
 		font-size: 14px;
 		font-weight: 500;
 		color: $gray-cb;
 		opacity: 0.9;
+		margin-right: 20px;
 	}
 	.sortTabBtnBox{
 		.viewTabBtn{
