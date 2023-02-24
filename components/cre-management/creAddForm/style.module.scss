@@ -41,8 +41,22 @@
       padding: 0.45rem 1.5rem;
       border: 1px solid $gray-28;
       color: $white;
-	  margin-bottom: 15px;
+	    margin-bottom: 15px;
 
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    textarea{
+      background-color: $gray-28;
+      font-size: 14px;
+      border-radius: 5px;
+      padding: 0.45rem 1.5rem;
+      border: 1px solid $gray-28;
+      color: $white;
+	    margin-bottom: 15px;
       &:focus {
         outline: none;
         box-shadow: none;

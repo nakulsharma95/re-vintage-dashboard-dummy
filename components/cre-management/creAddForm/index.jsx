@@ -159,67 +159,52 @@ export default function CreAddForm() {
         </Col>
       </Row>
 
-      <div className={styles.fixedFooter}>
-        <div className="mx-3">
-          <OutlineButton title="Cancel" className="theme1" />
-        </div>
-        <div>
-          <ButtonPrimary title="Save" className="theme1" />
-        </div>
-      </div>
-
       <div className={styles.inputDivider} />
 
-      <Row>
-        <Col className={`${styles.labalAlign}`} xl={4} lg={4} md={12}>
-          <span className={styles.inputSpan}>Email address</span>
-        </Col>
-
-        <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
-          <Form>
-            <Form.Group className="" controlId="formBasicEmail">
-              <Form.Control type="email" placeholder="Email address" />
-            </Form.Group>
-          </Form>
-        </Col>
-      </Row>
-      <div className={styles.inputDivider} />
-      <Row>
-        <Col className={`${styles.labalAlign}`} xl={4} lg={4} md={12}>
-          <span className={styles.inputSpan}>Phone</span>
-        </Col>
-
-        <Col className={`${styles.inputField} `} xl={2} lg={2} md={2}>
-          <Form>
-            <Form.Group className="" controlId="formBasicEmail">
-              <Form.Control type="email" placeholder="+91" />
-            </Form.Group>
-          </Form>
-        </Col>
-
-        <Col className={`${styles.inputField}`} xl={6} lg={6} md={6}>
-          <Form>
-            <Form.Group className="" controlId="formBasicEmail">
-              <Form.Control type="email" placeholder="+91 98765 43210" />
-            </Form.Group>
-          </Form>
-        </Col>
-      </Row>
-      <div className={styles.inputDivider} />
       <Row>
         <Col className={`${styles.labalAlign}`} xl={4} lg={4} md={12}>
           <span className={styles.inputSpan}>Current Address</span>
         </Col>
 
         <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
-          <Form>
-            <Form.Group className="" controlId="formBasicEmail">
-              <Form.Control
-                type="text"
-                placeholder="1236/2, D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi, Delhi - 110066"
-              />
-            </Form.Group>
-          </Form>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            placeholder="1236/2, D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi, Delhi - 110066"
+            rows="3"
+          ></textarea>
+        </Col>
+      </Row>
+      <div className={styles.inputDivider} />
+      <Row>
+        <Col className={`${styles.labalAlign}`} xl={4} lg={4} md={12}>
+          <span className={styles.inputSpan}>Permanent Address</span>
+        </Col>
+
+        <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            placeholder="1236/2, D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi, Delhi - 110066"
+            rows="3"
+          ></textarea>
+        </Col>
+      </Row>
+      <div className={styles.inputDivider} />
+      <Row>
+        <Col className={`${styles.labalAlign}`} xl={4} lg={4} md={12}>
+          <span className={styles.inputSpan}>About</span>
+        </Col>
+
+        <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            rows="3"
+          ></textarea>
+
+          <div className="text-area-character">10 character left</div>
         </Col>
       </Row>
 

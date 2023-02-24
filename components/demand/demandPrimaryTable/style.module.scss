@@ -1,0 +1,42 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.demandTableMain{
+	margin: 25px 0;
+	border: none;
+	tr{
+		th{
+			color:$gray-a7;
+			padding: 17px 15px;
+			font-size: 14px;
+			vertical-align: middle;
+			background-color: $gray-28;
+			border-color: $gray-28;
+			font-weight: 500;
+			&:first-child{
+				border-left: none;
+			}
+			&:last-child{
+				border-right: none;
+			}
+		}
+		td{
+			color:$white;
+			padding: 15px 15px;
+			font-size: 14px;
+			vertical-align: middle;
+			background-color: $gray-18;
+			border:1px solid $gray-28;
+			border-width: 0;
+			&:nth-child(01){
+				width: 6%;
+			}
+			&:first-child{
+				border-left: none;
+			}
+			&:last-child{
+				border-right: none;
+			}
+		}
+	}
+}

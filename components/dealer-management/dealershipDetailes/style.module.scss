@@ -12,17 +12,13 @@
 
   .dealership_status {
     position: relative;
-    top: 0.4rem;
+    top: 0.5rem;
     right: 0.3rem;
-    &:before {
-      content: '';
-      position: absolute;
-      background-color: green;
-      border-radius: 50%;
-      height: 5px;
-      width: 5px;
-      left: -0.9rem;
-      top: 0.5rem;
+    font-size: 12px;
+    color: #CBC6C6;
+
+    span{
+      color: #FFFFFF;
     }
   }
 }
