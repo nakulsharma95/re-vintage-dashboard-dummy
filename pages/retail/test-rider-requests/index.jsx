@@ -1,12 +1,12 @@
-import { RiShareBoxFill } from "react-icons/ri";
-import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import CompleteBikeDetail from "../../../components/procurements/completeEvalutationCard";
-import TabPrimary from "../../../components/common/tabPrimary";
-import DealFilter from "../../../components/dealClosure/dealFilter";
-import SearchPrimary from "../../../components/common/searchPrimary";
-import FilterButton from "../../../components/common/filterButton";
-import HeaderPrimary from "../../../components/common/headerPrimary";
-import OutlineButton from "../../../components/common/buttons/OutlineButton";
+import { RiShareBoxFill } from 'react-icons/ri';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import CompleteBikeDetail from '../../../components/procurements/completeEvalutationCard';
+import TabPrimary from '../../../components/common/tabPrimary';
+import DealFilter from '../../../components/dealClosure/dealFilter';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import FilterButton from '../../../components/common/filterButton';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
 
 export default function TestRiderRequests() {
   return (
@@ -27,7 +27,7 @@ export default function TestRiderRequests() {
       <CompleteBikeDetail
         isEvalBtnVisible={false}
         isCallerBtnVisible
-        isEnquiryNumVisible={true}
+        isEnquiryNumVisible
       />
     </div>
   );

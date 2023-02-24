@@ -1,190 +1,238 @@
-@import "../../../styles/variables/colors";
-@import "../../../styles/variables//mixins";
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
 
 .arrowButton {
-	display: block;
-	width: 100%;
-	padding: 0px 10px;
-	padding-right: 50px;
-	background-color: $theme-pink-da;
-	border: 1px solid transparent;
-	outline: none;
-	border-radius: 0;
-	font-size: 12px;
-	height: 36px;
-	line-height: 35px;
-	cursor: pointer;
-	text-align: center;
-	position: relative;
-	transition: all 0.5s;
-	color: $white;
-	text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 0px 10px;
+  padding-right: 50px;
+  background-color: $theme-pink-da;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 0;
+  font-size: 12px;
+  height: 36px;
+  line-height: 35px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  transition: all 0.5s;
+  color: $white;
+  text-decoration: none;
 
-	&:hover {
-		border: 1px solid $theme-red-da;
-		color: $white;
-	}
+  &:hover {
+    border: 1px solid $theme-red-da;
+    color: $white;
+  }
 
-	.iconBox {
-		display: inline-block;
-		position: absolute;
-		right: 0;
-		top: 0;
-		color: $white;
-		background-color: $theme-red-da;
-		padding: 0 12px;
-		height: 35px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 16px;
-	}
+  .iconBox {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: $white;
+    background-color: $theme-red-da;
+    padding: 0 12px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
 }
 
 .btnPrimary {
-	display: flex;
-	align-items: center;
-	outline: none;
-	border: none;
-	border-radius: 0;
-	font-size: 12px;
-	text-transform: uppercase;
-	height: 35px;
-	text-align: center;
-	position: relative;
-	transition: all 0.5s;
-	padding: 0 16px;
-	text-decoration: none;
+  display: flex;
+  align-items: center;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  transition: all 0.5s;
+  padding: 0 16px;
+  text-decoration: none;
 
-	.iconLeft {
-		font-size: 16px;
-		margin-right: 12px;
-	}
+  .iconLeft {
+    font-size: 16px;
+    margin-right: 12px;
+  }
 
-	&.primary {
-		background-color: $theme-red-da;
-		color: white;
-		justify-content: center;
+  &.primary {
+    background-color: $theme-red-da;
+    color: white;
+    justify-content: center;
 
-		&:hover {
-			background-color: $theme-pink-da;
-		}
-	}
+    &:hover {
+      background-color: $theme-pink-da;
+    }
+  }
 
-	&.white {
-		background-color: $white;
-		border: 1px solid $white;
-		color: $gray-0D;
-		font-weight: 600;
+  &.white {
+    background-color: $white;
+    border: 1px solid $white;
+    color: $gray-0D;
+    font-weight: 600;
 
-
-		&:hover {
-			background-color: transparent;
-			border: 1px solid $white;
-			color: $white;
-		}
-	}
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $white;
+      color: $white;
+    }
+  }
 }
 
+.outlineButtonContainer {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid $gray-70;
+  border-radius: 0;
+  transition: all 0.5s;
+  padding: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: $gray-a7;
 
-.outlineButtonContainer{
-	display: flex;
-	align-items: center;
-	background-color: transparent;
-	border: 1px solid $gray-70;
-	border-radius: 0;
-	transition: all 0.5s;
-	padding: auto;
-	font-size: 12px;
-	font-weight: 600;
-	color:$gray-a7;
+  &.theme1 {
+    border: 1px solid $gray-a7;
+  }
 
-	&.theme1 {
-		border: 1px solid $gray-a7;
-	}
+  &:hover {
+    background-color: $theme-danger;
+    border-color: $theme-danger;
+  }
 
-	&:hover{
-		background-color: $theme-danger;
-		border-color: $theme-danger;
-	}
-
-	svg {
-		font-size: 16px;
-		margin: 0 6px;
-	}
+  svg {
+    font-size: 16px;
+    margin: 0 6px;
+  }
 }
 
 .backButton {
-	cursor: pointer;
-	color: #fff;
-	text-decoration: none;
-	margin-bottom: 25px;
-	display: inline-flex;
-	align-items: center;
-	font-weight: 500;
-	transition: all 0.5s;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 25px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  transition: all 0.5s;
 
-	&:hover {
-		color: $theme-yellow-E8;
-	}
+  &:hover {
+    color: $theme-yellow-E8;
+  }
 
-	span {
-		font-size: 14px;
-		position: relative;
-		bottom: 1px;
-	}
+  span {
+    font-size: 14px;
+    position: relative;
+    bottom: 1px;
+  }
 }
 
 .outlineDropdownMenu {
-	margin-right: 10px;
+  margin-right: 10px;
 
-	&:last-child {
-		margin-right: 0;
-	}
+  &:last-child {
+    margin-right: 0;
+  }
 
-	.dropdownToggle {
-		padding: 5px 15px;
-		padding-right: 50px;
-		border-radius: 0;
-		border: 1px solid $gray-70;
-		font-size: 12px;
-		color: $gray-a7;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		position: relative;
+  .dropdownToggle {
+    padding: 5px 15px;
+    padding-right: 50px;
+    border-radius: 0;
+    border: 1px solid $gray-70;
+    font-size: 12px;
+    color: $gray-a7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 
-		&::after {
-			content: '';
-			background-image: url('/images/down-arrow.png');
-			background-repeat: no-repeat;
-			padding: 8px 8px;
-			background-size: 16px;
-			border: none;
-			position: absolute;
-			right: 8px;
-			transform: translate(0, -50%);
-			top: 50%;
-		}
-	}
+    &::after {
+      content: '';
+      background-image: url('/images/down-arrow.png');
+      background-repeat: no-repeat;
+      padding: 8px 8px;
+      background-size: 16px;
+      border: none;
+      position: absolute;
+      right: 8px;
+      transform: translate(0, -50%);
+      top: 50%;
+    }
+  }
 
-	.outlineOpendropdown{
-		transform: inherit !important;
-		right: 0 !important;
-		left: inherit !important;
-		top: 30px !important;
-		border-radius: 0;
-		background-color: $gray-4;
-		padding: 0;
-		a{
-			color: $white;
-			border-bottom: 1px solid $gray-3;
-			padding: 6px 12px;
-			font-size: 12px;
-			color: $gray-c;
-			&:last-child{
-				border-bottom: none;
-			}
-		}
-	}
+  .dropdownToggleWhite {
+    padding: 5px 15px;
+    padding-right: 50px;
+    border-radius: 0;
+    border: 1px solid $white;
+    font-size: 12px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &::after {
+      content: '';
+      background-image: url('/images/down-arrow.png');
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      padding: 7px 8px;
+      background-size: 16px;
+      border: none;
+      position: absolute;
+      right: 8px;
+      transform: translate(0, -50%);
+      top: 50%;
+    }
+  }
+
+  .outlineOpendropdown {
+    transform: inherit !important;
+    right: 0 !important;
+    left: inherit !important;
+    top: 30px !important;
+    border-radius: 0;
+    background-color: $gray-4;
+    padding: 0;
+    a {
+      color: $white;
+      border-bottom: 1px solid $gray-3;
+      padding: 6px 12px;
+      font-size: 12px;
+      color: $gray-c;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .outlineOpendropdownWhite {
+    transform: inherit !important;
+    right: 0 !important;
+    left: inherit !important;
+    top: 30px !important;
+    border-radius: 0;
+    background-color: $gray-3;
+    padding: 0;
+    a {
+      &:hover {
+        background-color: $gray-3;
+        color: $white;
+      }
+      color: $white;
+      border-bottom: 1px solid $gray-3;
+      padding: 6px 12px;
+      font-size: 12px;
+      color: $white;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
 }

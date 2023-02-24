@@ -43,6 +43,9 @@
       border: 1px solid $gray-28;
       color: $white;
 	    margin-bottom: 15px;
+      &::placeholder{
+        color: $white;
+      }
 
       &:focus {
         outline: none;
@@ -58,15 +61,15 @@
       border: 1px solid $gray-28;
       color: $white;
 	    margin-bottom: 15px;
+      resize: none;
+      &::placeholder{
+        color: $white;
+      }
       &:focus {
         outline: none;
         box-shadow: none;
       }
-    }
-    input::placeholder{
-      color: $white;
-    }
-    
+    }    
   }
 }
 

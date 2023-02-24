@@ -1,5 +1,6 @@
 import { MdOutlineFilterList } from 'react-icons/md';
 import { TbTrendingUp } from 'react-icons/tb';
+import { Tab, Tabs } from 'react-bootstrap';
 import DashboardCard from '../../components/dashboardCard';
 import FilterButton from '../../components/common/filterButton';
 import HeaderPrimary from '../../components/common/headerPrimary';
@@ -11,7 +12,6 @@ import style from './style.module.scss';
 import ProcurementTab from '../../components/overview/tabProcurement';
 import InventoryTab from '../../components/overview/tabInventory';
 import RetailsTab from '../../components/overview/tabRetails';
-import { Tab, Tabs } from 'react-bootstrap';
 
 export default function Homepage() {
   const dashboardCardData = [
@@ -86,26 +86,25 @@ export default function Homepage() {
         <FilterButton />
       </HeaderPrimary>
 
-      <div className="custom-tab-style">     
-            <Tabs
-              className="mb-3"
-              defaultActiveKey="title1"
-              id="uncontrolled-tab-example"
-            >
-              <Tab eventKey="title1" title="Procurement" >
-              <ProcurementTab />
-              </Tab>
-              
-              <Tab eventKey="title2" title="Inventory" >
-                <InventoryTab/>
-              </Tab>
-              <Tab eventKey="title3" title="Retail">
-               <RetailsTab/>
-              </Tab>
-              
-            </Tabs>         
+      {/* <TabPrimary title1="Procurement" title2="Inventory" title3="Retail" /> */}
+      <div className="custom-tab-style">
+        <Tabs
+          className="mb-3"
+          defaultActiveKey="title1"
+          id="uncontrolled-tab-example"
+        >
+          <Tab eventKey="title1" title="Procurement">
+            <ProcurementTab />
+          </Tab>
+
+          <Tab eventKey="title2" title="Inventory">
+            <InventoryTab />
+          </Tab>
+          <Tab eventKey="title3" title="Retail">
+            <RetailsTab />
+          </Tab>
+        </Tabs>
       </div>
-     
     </div>
   );
 }
