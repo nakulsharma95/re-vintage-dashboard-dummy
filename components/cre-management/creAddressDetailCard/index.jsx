@@ -15,8 +15,9 @@ function CreAddressDetailCard(props) {
             <Col xl={12} lg={12} md={12}>
               <div className={styles.addressCardText}>
                 <h3>CURRENT ADDRESS</h3>
-
+                <p>{props.houseNumber}</p>
                 <p>{props.currentAddress}</p>
+                <p>{props.addressPincode}</p>
               </div>
             </Col>
 

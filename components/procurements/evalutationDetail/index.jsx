@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import { AiFillPhone } from 'react-icons/ai';
+import { FiPhoneCall } from "react-icons/fi";
 import ArrowButton from '../../common/buttons/ArrowButton';
 import styles from './style.module.scss';
 
@@ -38,11 +38,11 @@ function EvaluationDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
       {isCallerBtnVisible && (
         <div className={styles.callerBtnBox}>
           <Col className={styles.CallBtn1}>
-            <AiFillPhone size={15} />
+            <FiPhoneCall size={15} />
             <span className="mx-2">Call Customer</span>
           </Col>
           <Col className={styles.CallBtn2}>
-            <AiFillPhone size={15} />
+            <FiPhoneCall size={15} />
             <span className="mx-2">Call Dealer</span>
           </Col>
         </div>

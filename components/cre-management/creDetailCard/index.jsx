@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { Card } from "react-bootstrap";
-import {
-  FaMapMarkerAlt,
-  FaPhoneAlt,
-  FaRegWindowMaximize,
-} from "react-icons/fa";
+import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import styles from "./style.module.scss";
 
 function CreDetailCard(props) {
@@ -25,7 +21,7 @@ function CreDetailCard(props) {
           </Card.Title>
 
           <div className={styles.location}>
-            <FaMapMarkerAlt size={13} />
+            <FiMapPin size={13} />
             <h4>{props.location}</h4>
           </div>
 
@@ -45,12 +41,12 @@ function CreDetailCard(props) {
             <div className={styles.divider} />
 
             <p className={`${styles.creDetail} mb-0`}>
-              <FaPhoneAlt size={13} />
+              <FiPhone size={13} />
               <span>{props.phoneNo}</span>
             </p>
 
             <p className={`${styles.creDetail} mb-0`}>
-              <FaRegWindowMaximize size={13} />
+              <FiMail size={13} />
               <span>{props.emailID}</span>
             </p>
           </div>
