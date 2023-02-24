@@ -471,6 +471,9 @@ h6 {
   background-color: $black-40;
 }
 
+.bgGray28{
+  background-color: red !important;
+}
 // Header Section style
 .header-section {
   display: flex;
@@ -704,6 +707,9 @@ h6 {
     &.warning {
       background: $theme-warning;
     }
+    &.orange{
+      background-color: #E86A16;
+    }
   }
 
 .bg-gray-3{
@@ -728,4 +734,12 @@ h6 {
 // cre-space-section
 .cre-space-section {
   margin-bottom: 60px;
+}
+
+.pricePrimaryCol{
+  .col-md-2{
+    @media (min-width: 768px){
+      width: 19.8%;
+    }
+  }
 }

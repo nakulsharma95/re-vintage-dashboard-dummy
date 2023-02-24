@@ -34,7 +34,7 @@ function DealClosure() {
         title="Deal Closure"
         subTitle="Please fill all the necessary details"
       >
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 

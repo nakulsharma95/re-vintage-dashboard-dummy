@@ -9,6 +9,7 @@ import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
+import SortTabs from '../../../components/common/sortTabs';
 
 export default function ClosedBids() {
   const closedBikeData = [
@@ -61,12 +62,15 @@ export default function ClosedBids() {
       </div>
       <HeaderPrimary headerClass="mb-2" title="Closed Bids">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 
       <TabPrimary title1="Bids" title2="No Bids" />
-      <div className="mb-3">25 Bids Available</div>
+      <SortTabs
+        selectAllCheck 
+        sortTabTitle="25 Bids Available"
+      />
       <Row className="mb-3">
         {closedBikeData.map((item) => (
           <Col md={3}>

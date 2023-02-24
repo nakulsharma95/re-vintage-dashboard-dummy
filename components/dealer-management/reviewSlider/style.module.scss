@@ -15,7 +15,7 @@
       border-radius: 5px;
       padding: 1rem;
       width: 95% !important;
-      height: 35vh;
+      height: max-content;
 
       .reviewCard_head {
         display: flex;
@@ -51,6 +51,7 @@
             .rating_icon {
               margin-bottom: 0.3rem;
               color: #e8b016;
+              font-size: 1.2rem;
             }
           }
         }

@@ -25,7 +25,7 @@ export default function Homepage() {
       dividerColor: '#403E3E',
     },
     {
-      title: 'Total Procured',
+      title: 'Evaluation Request',
       description: '97',
       bottomDescription: 'Overall Booking Growth',
       percentage: '22',
@@ -33,12 +33,12 @@ export default function Homepage() {
       dividerColor: '#282828',
     },
     {
-      title: 'Total Procured',
+      title: 'Pending Evaluation',
       description: '12',
       cardBg: '#282828',
     },
     {
-      title: 'Total Procured',
+      title: 'Total Revenue',
       description: '',
       bottomDescription: 'Overall Booking Growth',
       percentage: '12%',
@@ -53,7 +53,7 @@ export default function Homepage() {
         title="Welcome to Your Inventory Dashboard"
         subTitle="Here you will see the most latest update"
       >
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Reference ID" />
         <button type="button" className={style.filterBtn}>
           Filter <MdOutlineFilterList size={15} />
         </button>
@@ -82,7 +82,7 @@ export default function Homepage() {
       </div>
 
       <HeaderPrimary headerClass="mb-1" title="Lead">
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Mobile Number, Chassis Number…" />
         <FilterButton />
       </HeaderPrimary>
 
@@ -105,8 +105,6 @@ export default function Homepage() {
           </Tab>
         </Tabs>
       </div>
-      {/* <LeadSection />
-      <NonReLeadSection /> */}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Card, Table } from 'react-bootstrap';
+import { Card, Table,Tabs,Tab } from 'react-bootstrap';
 import { AiOutlineDownload } from 'react-icons/ai';
 import TabDefault from '../../common/tabDefault';
 import TabPrimary from '../../common/tabPrimary';
@@ -13,8 +13,14 @@ function RegionalAnalytics() {
         <AiOutlineDownload className={styles.cardIcon} />
       </div>
       <TabDefault />
-      <TabPrimary title1="Highest Rated" title2="Lowest Rated" />
-      <div className={styles.cardBody}>
+      <div className="custom-tab-style">
+        <Tabs
+          className="mb-3"
+          defaultActiveKey="title1"
+          id="uncontrolled-tab-example"
+        >
+          <Tab eventKey="title1" title="Highest Rated" >
+          <div className={styles.cardBody}>
         <div className="dashboardTable">
           <Table striped variant="dark">
             <tbody>
@@ -50,6 +56,40 @@ function RegionalAnalytics() {
           </Table>
         </div>
       </div>
+          </Tab>
+          <Tab eventKey="title2" title="Lowest Rated" >
+          <div className={styles.cardBody}>
+        <div className="dashboardTable">
+          <Table striped variant="dark">
+            <tbody>
+              <tr>
+                <td>Delhi</td>
+                <td className="text-end">512</td>
+              </tr>
+              <tr>
+                <td>Rajasthan</td>
+                <td className="text-end"> 21</td>
+              </tr>
+              <tr>
+                <td>Goa</td>
+                <td className="text-end"> 79</td>
+              </tr>
+              <tr>
+                <td>Kerala</td>
+                <td className="text-end">46</td>
+              </tr>
+            
+             
+              
+            </tbody>
+          </Table>
+        </div>
+      </div>
+          </Tab>
+                 
+        </Tabs>
+      </div>
+      
     </Card>
   );
 }

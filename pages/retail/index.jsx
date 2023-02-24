@@ -65,7 +65,7 @@ export default function Retail() {
       <Breadcrumb title="Retail" />
       <HeaderPrimary headerClass="mb-2" title="Retail">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
       <div className="dashboard-card">

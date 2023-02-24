@@ -34,7 +34,7 @@ export default function Booking() {
       <Breadcrumb title="Retail" addmoretitle="Sold" />
       <HeaderPrimary headerClass="mb-2" title="Booking">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 

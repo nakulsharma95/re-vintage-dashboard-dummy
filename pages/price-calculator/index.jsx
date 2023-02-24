@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { BsPlusLg } from 'react-icons/bs';
-import { Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import styles from './style.module.scss';
 import PricePrimaryCard from '../../components/priceCalculator/pricePrimaryCard';
@@ -90,9 +90,11 @@ export default function PriceCalculator() {
         </Link>
       </div>
       <div className={styles.priceResultText}>18 item found</div>
-      <Row>
+      <Row className="pricePrimaryCol">
         {priceCardData.map((item) => (
-          <PricePrimaryCard imageUrl={item.imageUrl} priceTitle={item.title} />
+          <Col md={2}>
+            <PricePrimaryCard imageUrl={item.imageUrl} priceTitle={item.title} />
+          </Col>
         ))}
       </Row>
     </div>

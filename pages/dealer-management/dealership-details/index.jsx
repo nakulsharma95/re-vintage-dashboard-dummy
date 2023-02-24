@@ -8,6 +8,7 @@ import DetailPagination from '../../../components/common/paginationPrimary';
 import Review from '../../../components/dealer-management/reviewSlider';
 import BikeCardRadio from '../../../components/common/cardCheckbox';
 import DealFilter from '../../../components/dealClosure/dealFilter';
+import styles from "./style.module.scss";
 
 function DealershipDetails(props) {
 	const cardData = [
@@ -31,11 +32,12 @@ function DealershipDetails(props) {
   return (
 	<div>
 		<Dealershipdetails/>
-		 <HeaderPrimary
-        headerClass="mb-2"
+    <h4 className={styles.dealerTitle}>Dealer’s Listings</h4>
+		 {/* <HeaderPrimary
+        // headerClass="mb-2"
         title="Dealer’s Listings"
       >
-      </HeaderPrimary>
+      </HeaderPrimary> */}
 	  <TabPrimary title1="Inventory" title2="Marketplace (31)" />
     <DealFilter title="37 Listing Found"  />
       <Row className="mb-3">

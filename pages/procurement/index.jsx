@@ -178,7 +178,7 @@ function Procurement() {
     <div>
       <Breadcrumb title="Procurement" />
       <HeaderPrimary headerClass="mb-2" title="Procurement Leads">
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 

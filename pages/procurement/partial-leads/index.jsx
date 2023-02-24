@@ -54,7 +54,7 @@ export default function PartialLeads() {
           rightIcon={<RiShareBoxFill />}
           className="mr-2"
         />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 
