@@ -11,7 +11,7 @@ import SearchPrimary from '../../../components/common/searchPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
 import ButtonPrimary from '../../../components/common/buttons/ButtonPrimary';
-
+import SortTabs from '../../../components/common/sortTabs';
 // Style here
 import styles from './style.module.scss';
 
@@ -95,7 +95,10 @@ export default function UpcomingBids() {
       </HeaderPrimary>
 
       <TabPrimary title1="Today" title2="Next Bidding (31 Dec)" />
-      <div className="mb-3">25 Bids Available</div>
+      <SortTabs
+        selectAllCheck 
+        sortTabTitle="25 Bids Available"
+      />
       <Row className="mb-3">
         {upcomingBikeData.map((item) => (
           <Col md={3}>

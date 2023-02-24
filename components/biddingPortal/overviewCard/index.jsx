@@ -5,10 +5,6 @@ import styles from './style.module.scss';
 const optionsDoughnut = {
   responsive: true,
   maintainAspectRatio: false,
-  centerText: {
-    display: true,
-    text: `90%sasassassa`,
-  },
   plugins: {
     legend: {
       display: true,
@@ -16,6 +12,9 @@ const optionsDoughnut = {
       labels: {
         fontSize: 20,
         color: 'white',
+        usePointStyle: true,
+        pointStyle: 'circle',
+        padding: 15,
       },
     },
   },

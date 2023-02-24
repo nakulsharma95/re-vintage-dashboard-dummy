@@ -735,3 +735,11 @@ h6 {
 .cre-space-section {
   margin-bottom: 60px;
 }
+
+.pricePrimaryCol{
+  .col-md-2{
+    @media (min-width: 768px){
+      width: 19.8%;
+    }
+  }
+}
