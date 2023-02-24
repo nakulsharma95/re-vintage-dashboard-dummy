@@ -56,7 +56,7 @@ function CreManagement() {
       <Breadcrumb title="CRE Management" addmoretitle="CRE Management" />
 
       <HeaderPrimary title="CRE Management" subTitle="CRE Management module">
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <ThemeDropdown
           dropDownTitle="Delhi"
           dropItem1="Puna"

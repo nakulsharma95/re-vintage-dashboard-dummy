@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import BikeCard from '../../components/procurements/bikeCard';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
@@ -7,8 +7,15 @@ import ViewAll from '../../components/common/viewAllHeader';
 import SearchPrimary from '../../components/common/searchPrimary';
 import FilterButton from '../../components/common/filterButton';
 import HeaderPrimary from '../../components/common/headerPrimary';
+import ContactViaModal from '../../components/modals/contactViaModal';
 
 function Procurement() {
+  const [contactViaModal, setContactViaModal] = useState(false);
+
+  const contactViaToggleModal = () => {
+    setContactViaModal(!contactViaModal);
+  };
+
   const cardData = [
     {
       ownerName: 'Rishab Sharma',
@@ -137,7 +144,7 @@ function Procurement() {
       bikekm: '43,384',
       bikeOwner: '1st',
       bikeCc: '350',
-      priceTitle:'Evaluation Price',
+      priceTitle: 'Evaluation Price',
     },
     {
       imageUrl: '/images/bikeImage2.png',
@@ -146,7 +153,7 @@ function Procurement() {
       bikekm: '43,384',
       bikeOwner: '1st',
       bikeCc: '350',
-      priceTitle:'Evaluation Price',
+      priceTitle: 'Evaluation Price',
     },
     {
       imageUrl: '/images/bikeImage3.png',
@@ -155,7 +162,7 @@ function Procurement() {
       bikekm: '43,384',
       bikeOwner: '1st',
       bikeCc: '350',
-      priceTitle:'Evaluation Price',
+      priceTitle: 'Evaluation Price',
     },
     {
       imageUrl: '/images/bikeImage4.png',
@@ -164,14 +171,14 @@ function Procurement() {
       bikekm: '43,384',
       bikeOwner: '1st',
       bikeCc: '350',
-      priceTitle:'Evaluation Price',
+      priceTitle: 'Evaluation Price',
     },
   ];
   return (
     <div>
       <Breadcrumb title="Procurement" />
       <HeaderPrimary headerClass="mb-2" title="Procurement Leads">
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 
@@ -192,6 +199,7 @@ function Procurement() {
               prmSource={item.prmSource}
               secSource={item.secSource}
               contactNo={item.contact}
+              detailHandler={contactViaToggleModal}
             />
           </Col>
         ))}
@@ -223,7 +231,6 @@ function Procurement() {
           </Col>
         ))}
       </Row>
-
 
       <ViewAll
         title="Scheduled Evaluation"
@@ -277,6 +284,11 @@ function Procurement() {
           </Col>
         ))}
       </Row>
+
+      <ContactViaModal
+        isOpen={contactViaModal}
+        handleClose={contactViaToggleModal}
+      />
     </div>
   );
 }

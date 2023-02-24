@@ -8,6 +8,7 @@ import OutlineButton from '../../components/common/buttons/OutlineButton';
 import TabPrimary from '../../components/common/tabPrimary';
 import DealerTable from '../../components/dealer-management/dealerTable';
 import FilterButton from '../../components/common/filterButton';
+import { Tab, Tabs } from 'react-bootstrap';
 
 function DealerManagement() {
   return (
@@ -20,15 +21,27 @@ function DealerManagement() {
       >
         <OutlineButton title="Export Data" leftIcon={<RiShareBoxFill />} />
         <OutlineButton title="Import EXCEL" leftIcon={<BiDownload />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
-      <TabPrimary
-        title1="All"
-        title2="Enabled Dealers"
-        title3="Disabled Dealers"
-      />
-      <DealerTable />
+     
+      <div className="custom-tab-style">
+        <Tabs
+          className="mb-3"
+          defaultActiveKey="title1"
+          id="uncontrolled-tab-example"
+        >
+          <Tab eventKey="title1" title="All" >
+          <DealerTable />
+          </Tab>
+          <Tab eventKey="title2" title="Enabled Dealers" >
+            Data not Found
+          </Tab>
+          <Tab eventKey="title3" title="Disabled Dealers">
+          Data not Found
+          </Tab>         
+        </Tabs>
+      </div>
     </div>
   );
 }

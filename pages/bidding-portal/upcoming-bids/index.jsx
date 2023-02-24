@@ -90,7 +90,7 @@ export default function UpcomingBids() {
           title="Scheduled Evaluation"
           rightIcon={<RiShareBoxFill />}
         />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 

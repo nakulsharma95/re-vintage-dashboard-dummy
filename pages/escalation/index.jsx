@@ -17,7 +17,7 @@ function Escalation() {
         subTitle="Please fill all the necessary details"
       >
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
       </HeaderPrimary>
       <hr />
       <DealFilter title="4 Escalations Found" isViewBy droptitle="Recent" />

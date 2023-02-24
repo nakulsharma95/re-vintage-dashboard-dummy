@@ -66,7 +66,7 @@ export default function MarketPlace() {
 
       <HeaderPrimary headerClass="mb-2" title="MarketPlace">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 

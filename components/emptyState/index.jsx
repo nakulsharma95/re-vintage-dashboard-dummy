@@ -8,7 +8,6 @@ function EmptyState(props) {
       <RiErrorWarningLine color="#DA291C" size={36} />
       <div className={styles.titleLarge}>{props.title}</div>
       <div className={styles.description}>{props.children}</div>
-      NO UPCOMING/ACTIVE BIDS FOR TODAY
     </div>
   );
 }

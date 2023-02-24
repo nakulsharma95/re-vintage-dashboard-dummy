@@ -128,7 +128,7 @@ function NonRe() {
       <Breadcrumb title="Retail" addmoretitle="Non-RE" />
       <HeaderPrimary headerClass="mb-2" title="Non-RE">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
       </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-3" />

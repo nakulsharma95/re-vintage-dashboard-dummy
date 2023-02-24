@@ -62,7 +62,7 @@ export default function ClosedBids() {
       </div>
       <HeaderPrimary headerClass="mb-2" title="Closed Bids">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 
