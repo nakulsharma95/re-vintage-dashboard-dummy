@@ -32,8 +32,7 @@ export default function CrePerformanceMatrix(props) {
           <Tab
             eventKey="General Query Response"
             title={props.title5}
-          ></Tab>
-          
+          ></Tab>         
         </Tabs>
       </Card>
       <div className={styles.partialLead}>

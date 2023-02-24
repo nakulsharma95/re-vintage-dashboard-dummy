@@ -22,7 +22,9 @@ function RetailsTab() {
       </Row>
 
       <div className={styles.retailFooter}>
-        <div className={`${styles.tabRetailsTable}  dashboardTable`}>
+        <Row>
+          <Col lg={8}>
+          <div className={`${styles.tabRetailsTable}  dashboardTable`}>
           <Table striped bordered variant="dark" className={styles.tableStyle}>
             <thead>
               <tr>
@@ -73,9 +75,16 @@ function RetailsTab() {
             </tbody>
           </Table>
         </div>
-        <div className={styles.tabRetailsPie}>
+          </Col>
+
+          <Col lg={4}>
+          <div className={styles.tabRetailsPie}>
           <PieSmall withouticon />
         </div>
+          </Col>
+        </Row>
+       
+        
       </div>
     </div>
   );
