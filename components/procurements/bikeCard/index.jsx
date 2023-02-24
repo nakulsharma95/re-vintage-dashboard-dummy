@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import { Card, Col, Row } from "react-bootstrap";
 import bikeCardStyle from "./style.module.scss";
 import { BiRupee } from "react-icons/bi";
 import Link from "next/link";
+import ButtonPrimary from "../../../components/common/buttons/ButtonPrimary";
 
 function BikeCard(props) {
   const { data } = props;
@@ -56,9 +56,14 @@ function BikeCard(props) {
             <h4 className={bikeCardStyle.source}>{props.source}</h4>
           </div>
           {props.isEstBtn && (
-          <div className={bikeCardStyle.smailBtn}>
-            <Link href="/">CONTACT SAMIL</Link>
-          </div>
+            <div className={bikeCardStyle.smailBtn}>
+              <Link href="/">CONTACT SAMIL</Link>
+            </div>
+          )}
+          {props.isViewBtn && (
+            <div className={bikeCardStyle.cardBtnCols}>
+              <ButtonPrimary title="VIEW DETAIL" />
+            </div>
           )}
         </Card.Body>
       </Card>

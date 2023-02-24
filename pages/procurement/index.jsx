@@ -237,7 +237,7 @@ function Procurement() {
             <BikeCard
               className="bg-gray-3 py-2"
               isKmData
-              isEstBtn
+              isViewBtn
               isestimatedPrice
               imageUrl={item.imageUrl}
               bikeModal={item.bikeModal}
