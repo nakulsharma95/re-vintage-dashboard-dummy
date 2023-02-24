@@ -696,3 +696,11 @@ h6 {
   margin-bottom: 12px;
   margin-top: 24px;
 }
+
+
+// text-error
+.text-error {
+  color: $theme-danger;
+  position: absolute;
+  font-size: 12px;
+}
