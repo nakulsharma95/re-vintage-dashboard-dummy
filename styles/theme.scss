@@ -592,6 +592,26 @@ h6 {
   }
 }
 
+// motor-cycle-accordian
+.motor-cycle-accordian {
+  .accordion-body {
+    padding: 0;
+    background-color: #191919;
+  }
+
+  .accordion-header .accordion-button {
+    background-color: $black;
+  }
+
+  .motor-cycle-accordian-inner {
+    padding: 20px;
+
+    .accordion-header .accordion-button {
+      background-color: $gray-2;
+    }
+  }
+}
+
 .re-detailFootBg {
   display: flex;
   background-color: $black;
