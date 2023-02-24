@@ -7,6 +7,7 @@ import { Row, Col } from 'react-bootstrap';
 import DetailPagination from '../../../components/common/paginationPrimary';
 import Review from '../../../components/dealer-management/reviewSlider';
 import BikeCardRadio from '../../../components/common/cardCheckbox';
+import DealFilter from '../../../components/dealClosure/dealFilter';
 
 function DealershipDetails(props) {
 	const cardData = [
@@ -36,7 +37,7 @@ function DealershipDetails(props) {
       >
       </HeaderPrimary>
 	  <TabPrimary title1="Inventory" title2="Marketplace (31)" />
-	  <div className="mb-3">37 Listing Found</div>
+    <DealFilter title="37 Listing Found"  />
       <Row className="mb-3">
       {cardData.map((item) => (
           <Col xxl={3} xl={4} lg={6} key={item.id}>
@@ -49,16 +50,53 @@ function DealershipDetails(props) {
               bikePrice="1,25,000.00"
               bikeDealer="(C2N0RJ20FC2N)"
               dealerAddress="Neel Motors, Lajpat Nagar, Delhi"
-              // isCardVisible={false} 
-              // isOlxTagVisible={false}
               imageUrl={item.imageUrl}
               dealerLocation={item.dealerLocation}
               isEditButton
               isCreContact
             />
           </Col>
-        ))}
-       
+        ))}       
+      </Row>
+      <Row className="mb-3">
+      {cardData.map((item) => (
+          <Col xxl={3} xl={4} lg={6} key={item.id}>
+            <BikeCardRadio
+              bikeModal="2015 Classic 350"
+              bikeRc="-DL6TAL7314"
+              bikekm="43,384 km"
+              bikeOwner="1st Owner"
+              bikeCc="350 CC"
+              bikePrice="1,25,000.00"
+              bikeDealer="(C2N0RJ20FC2N)"
+              dealerAddress="Neel Motors, Lajpat Nagar, Delhi"
+              imageUrl={item.imageUrl}
+              dealerLocation={item.dealerLocation}
+              isEditButton
+              isCreContact
+            />
+          </Col>
+        ))}       
+      </Row>
+      <Row className="mb-3">
+      {cardData.map((item) => (
+          <Col xxl={3} xl={4} lg={6} key={item.id}>
+            <BikeCardRadio
+              bikeModal="2015 Classic 350"
+              bikeRc="-DL6TAL7314"
+              bikekm="43,384 km"
+              bikeOwner="1st Owner"
+              bikeCc="350 CC"
+              bikePrice="1,25,000.00"
+              bikeDealer="(C2N0RJ20FC2N)"
+              dealerAddress="Neel Motors, Lajpat Nagar, Delhi"
+              imageUrl={item.imageUrl}
+              dealerLocation={item.dealerLocation}
+              isEditButton
+              isCreContact
+            />
+          </Col>
+        ))}       
       </Row>
       <DetailPagination className="mt-3" />
       <Review/>

@@ -5,6 +5,7 @@ import PieBig from '../pieBig';
 import LineChart from '../../charts/lineChart';
 
 import styles from './style.module.scss';
+import OutlineDropdown from '../../../components/common/buttons/OutlineDropdown';
 
 function NonReLeadSection() {
   // LIne CHart
@@ -61,12 +62,19 @@ function NonReLeadSection() {
     <div className={styles.nonLeadSection}>
       <h4>Non-Re Lead</h4>
       <div className={styles.nonLeadtop}>
-        <PieBig />
+        <PieBig title="Non-RE Number of Enquiries" />
         <div className={`${styles.nonleadTable}  dashboardTable`}>
-          <Table striped bordered variant="dark" className={styles.tableStyle}>
+          <Table  bordered variant="dark" className={styles.tableStyle}>
             <thead>
               <tr>
-                <th colSpan={5}>Non-RE VDMP Enquiries</th>
+                <th colSpan={5}>
+                  <div className='d-flex justify-content-between'>
+                <span>
+                Non-RE VDMP Enquiries  
+                </span>
+                <OutlineDropdown dropdownTitle="1 Month" dropdownMenuTitle="2 Month" />
+                  </div>
+                   </th>
               </tr>
               <tr>
                 <th>Refrence</th>
@@ -113,12 +121,24 @@ function NonReLeadSection() {
                   +91987654320
                 </td>
               </tr>
+              <tr>
+                <td>
+                  <Link href="/">FB29FH9212</Link>
+                </td>
+                <td>Bajaj</td>
+                <td>pulsar 180</td>
+                <td>2017</td>
+                <td>
+                  Rishbh singh <br />
+                  +91987654320
+                </td>
+              </tr>
             </tbody>
           </Table>
         </div>
       </div>
       <div className={styles.nonLeadBottom}>
-        <PieBig />
+        <PieBig title="Non-RE Exchange Enquiries" />
         <div className={styles.nonLeadGraph}>
           <LineChart options={optionLineChart} data={lineChartData} />
         </div>

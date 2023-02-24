@@ -456,6 +456,7 @@ h6 {
   border-bottom-width: none;
 }
 
+
 // Card Bg Colour
 
 .bgGray18 {
@@ -591,6 +592,26 @@ h6 {
   }
 }
 
+// motor-cycle-accordian
+.motor-cycle-accordian {
+  .accordion-body {
+    padding: 0;
+    background-color: #191919;
+  }
+
+  .accordion-header .accordion-button {
+    background-color: $black;
+  }
+
+  .motor-cycle-accordian-inner {
+    padding: 20px;
+
+    .accordion-header .accordion-button {
+      background-color: $gray-2;
+    }
+  }
+}
+
 .re-detailFootBg {
   display: flex;
   background-color: $black;
@@ -702,4 +723,9 @@ h6 {
   color: $theme-danger;
   position: absolute;
   font-size: 12px;
+}
+
+// cre-space-section
+.cre-space-section {
+  margin-bottom: 60px;
 }

@@ -61,24 +61,6 @@ function DealerPerfomance() {
                   <AiFillStar className={styles.cardBody_star} /> 4.5
                 </td>
               </tr>
-              <tr>
-                <td>Neel Motors</td>
-                <td className="text-end">
-                  <AiFillStar className={styles.cardBody_star} /> 4.5
-                </td>
-              </tr>
-              <tr>
-                <td>Neel Motors</td>
-                <td className="text-end">
-                  <AiFillStar className={styles.cardBody_star} /> 4.5
-                </td>
-              </tr>
-              <tr>
-                <td>Neel Motors</td>
-                <td className="text-end">
-                  <AiFillStar className={styles.cardBody_star} /> 4.5
-                </td>
-              </tr>
             </tbody>
           </Table>
         </div>

@@ -10,7 +10,20 @@
 
     .nonleadTable {
       width: 48%;
-
+      height: 100%;
+      
+      Table{
+        thead{
+          tr th{
+            background-color: #282828 !important;
+          }
+        }
+        tbody{
+          tr td {
+            vertical-align: middle;
+          }
+        }
+      }
       .tableStyle {
         margin: 1rem 0;
 
