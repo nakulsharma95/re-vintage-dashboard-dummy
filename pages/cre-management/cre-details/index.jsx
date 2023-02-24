@@ -1,29 +1,29 @@
-import React from 'react';
-import { Row, Col, Tab, Tabs } from 'react-bootstrap';
-import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import CreAddressDetailCard from '../../../components/cre-management/creAddressDetailCard';
-import CreBikeInfoCard from '../../../components/cre-management/creBikeInfoCard';
-import CrePrimaryCard from '../../../components/cre-management/crePrimaryCard';
-import CreProfileCard from '../../../components/cre-management/creProfileCard';
-import CreTrainingCard from '../../../components/cre-management/creTrainingCard';
-import TabPrimary from '../../../components/common/tabPrimary';
-import HeaderPrimary from '../../../components/common/headerPrimary';
-import CrePerformanceMatrix from '../../../components/cre-management/crePerformanceMatrix';
-import CreMonthPerformace from '../../../components/cre-management/creMonthPerformace';
+import React from "react";
+import { Row, Col, Tab, Tabs } from "react-bootstrap";
+import Breadcrumb from "../../../components/common/breadcrumbPrimary";
+import CreAddressDetailCard from "../../../components/cre-management/creAddressDetailCard";
+import CreBikeInfoCard from "../../../components/cre-management/creBikeInfoCard";
+import CrePrimaryCard from "../../../components/cre-management/crePrimaryCard";
+import CreProfileCard from "../../../components/cre-management/creProfileCard";
+import CreTrainingCard from "../../../components/cre-management/creTrainingCard";
+import TabPrimary from "../../../components/common/tabPrimary";
+import HeaderPrimary from "../../../components/common/headerPrimary";
+import CrePerformanceMatrix from "../../../components/cre-management/crePerformanceMatrix";
+import CreMonthPerformace from "../../../components/cre-management/creMonthPerformace";
 
 function CreDetails() {
   const cardData = [
     {
-      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
+      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
     },
     {
-      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
+      dealerLocation: "Neel Motors, Rohini Nagar, Delhi",
     },
     {
-      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
+      dealerLocation: "Neel Motors, Punjabi Bagh, Delhi",
     },
     {
-      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
+      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
     },
   ];
   return (
@@ -33,7 +33,7 @@ function CreDetails() {
       <Row>
         <Col xxl={12} lg={12} md={12}>
           <CreProfileCard
-            droptitle="Action"
+            dropdownTitle="Action"
             userName="Adesh Goyal"
             available="Available"
             area="Karol Bagh, Delhi"
@@ -87,9 +87,11 @@ function CreDetails() {
               </Col>
               <Col xxl={6} xl={6} lg={6} md={12}>
                 <CreAddressDetailCard
+                  houseNumber="1236/2 "
                   cardHeading="Address Details"
-                  currentAddress="1236/2 D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi Delhi - 110066"
-                  permanentAddress="1236/2 D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi, Delhi - 110066"
+                  currentAddress="D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi Delhi - 110066"
+                  addressPincode="Delhi - 110066"
+                  permanentAddress="1236/2 D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi, "
                 />
               </Col>
 
