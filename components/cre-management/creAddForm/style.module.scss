@@ -77,10 +77,11 @@
   display: flex;
   justify-content: end;
   background-color: $gray-28;
-  position: fixed ;
-  bottom: 0 ;
+  position: fixed;
+  bottom: 0;
   padding: 10px;
-  width: 1014px;
+  z-index: 9;
+  width: calc(100vw - 335px);
   
   button{
     height: 35px;

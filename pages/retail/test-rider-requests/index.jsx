@@ -14,7 +14,7 @@ export default function TestRiderRequests() {
       <Breadcrumb title="Retail" addmoretitle="Test Ride Requests" />
       <HeaderPrimary headerClass="mb-2" title="Test Rider Requests">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
       <TabPrimary

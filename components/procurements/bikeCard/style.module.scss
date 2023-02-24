@@ -108,8 +108,13 @@
     font-size: 12px;
     text-decoration: none;
     transition: all 0.5s;
+    font-weight: 500;
     &:hover{
       background-color:$theme-red-da;
     }
   }
+}
+
+.cardBtnCols{
+  padding: 10px 10px 0;
 }

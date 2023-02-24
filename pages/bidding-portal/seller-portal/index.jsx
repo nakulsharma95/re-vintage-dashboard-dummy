@@ -62,12 +62,17 @@ export default function ClosedBids() {
         subTitle="Please find all the necessary details"
       >
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-2" />
-      <SortTabs selectAllCheck isCheckInput isSubmitBtn />
+      <SortTabs 
+        selectAllCheck 
+        isCheckInput 
+        isSubmitBtn 
+        sortTabTitle="25 Bids Available"
+      />
       <Row className="mb-3">
         {activeBikeData.map((item) => (
           <Col md={3}>

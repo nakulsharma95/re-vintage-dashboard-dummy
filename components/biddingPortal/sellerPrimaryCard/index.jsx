@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button';
 import { BiRupee } from 'react-icons/bi';
 import { FiCopy } from 'react-icons/fi';
 import styles from './style.module.scss';
-import ArrowButton from '../../../components/common/buttons/ArrowButton';
-import CustomCheckBox from '../../../components/common/customCheckBox';
+import ArrowButton from '../../common/buttons/ArrowButton';
+import CustomCheckBox from '../../common/customCheckBox';
 
 export default function SellerPrimaryCard(props) {
   return (
@@ -29,7 +29,7 @@ export default function SellerPrimaryCard(props) {
 		<div className={styles.priceList}>
 			<div className="d-flex align-items-center justify-content-between">
 			<div className={styles.sbTitle}>Seller Portal ID:</div>
-			<div>
+			<div className={styles.sellerIdText}>
 				{props.sellerId} <FiCopy className={styles.copyIcon} />
 			</div>
 			</div>

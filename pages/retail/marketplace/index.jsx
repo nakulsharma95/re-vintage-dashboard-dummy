@@ -12,6 +12,35 @@ import OutlineButton from "../../../components/common/buttons/OutlineButton";
 import DashboardCard from "../../../components/dashboardCard";
 
 export default function MarketPlace() {
+  const dashboardCardData = [
+    {
+      title: 'Total',
+      description: '32',
+      bottomDescription: 'Overall Growth',
+      percentage: '12%',
+      icon: <TbTrendingUp color="#13B21F" size={15} />,
+      cardBg: '#DA291C',
+      dividerColor: 'white',
+    },
+    {
+      title: 'Content Approval Pending',
+      description: '12',
+      bottomDescription: 'Received This Week',
+      percentage: '8',
+      cardBg: '#403E3E',
+      dividerColor: '#282828',
+    },
+    {
+      title: 'Content Upload Pending',
+      description: '08',
+      cardBg: '#282828',
+    },
+    {
+      title: 'Under Refurbishment',
+      description: '12',
+      cardBg: '#282828',
+    },
+  ];
   const cardData = [
     {
       imageUrl: "/images/bikeImage.png",
@@ -71,7 +100,7 @@ export default function MarketPlace() {
 
       <HeaderPrimary headerClass="mb-2" title="MarketPlace">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 

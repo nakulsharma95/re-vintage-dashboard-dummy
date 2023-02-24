@@ -21,7 +21,7 @@ function DealershipDetails() {
         subTitle="Please find all the necessary details"
       >
         <div className='status-circle success mt-3'></div>
-        <p className={style.dealership_status}>Status Active</p>
+        <p className={style.dealership_status}>Status: <span>Active</span> </p>
         <OutlineDropdown
           dropdownTitle="Actions"
           dropdownMenuTitle="Blacklist Dealer"
@@ -66,13 +66,13 @@ function DealershipDetails() {
             </div>
             <div className={style.motors_list}>
               <Image
-                src="/images/dealership-icon1.svg"
+                src="/images/dealership-icon2.svg"
                 width="28"
                 height="17"
                 alt=""
               />
               <div className={style.listItemContent}>
-                <h6>96</h6>
+                <h6>06</h6>
                 <p>Branches</p>
               </div>
             </div>

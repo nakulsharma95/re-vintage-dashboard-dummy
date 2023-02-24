@@ -24,7 +24,7 @@ function LeadSection() {
         <PieSmall icon />
       </div>
       <div className={styles.leadsBottom}>
-        <PieBig />
+        <PieBig title="Bidding Overview" />
       </div>
     </div>
   );

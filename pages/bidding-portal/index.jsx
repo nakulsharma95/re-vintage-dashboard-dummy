@@ -174,7 +174,7 @@ export default function BiddingPortal() {
       </div>
 
       <HeaderPrimary headerClass="mb-2" title="Bidding Portal">
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 

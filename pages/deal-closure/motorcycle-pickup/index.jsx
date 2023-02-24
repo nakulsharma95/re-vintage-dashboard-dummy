@@ -38,7 +38,7 @@ function MotorcyclePickup() {
       <Breadcrumb title="Deal Closure" addmoretitle="Motorcycle Pickup" />
       <HeaderPrimary headerClass="mb-2" title="Motorcycle Pickup">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />

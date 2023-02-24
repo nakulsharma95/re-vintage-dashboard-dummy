@@ -1,7 +1,6 @@
-import { Card, Table } from 'react-bootstrap';
+import { Card, Table ,Tabs,Tab } from 'react-bootstrap';
 import { AiFillStar, AiOutlineDownload } from 'react-icons/ai';
 import TabDefault from '../../common/tabDefault';
-import TabPrimary from '../../common/tabPrimary';
 
 import styles from './style.module.scss';
 
@@ -13,9 +12,14 @@ function DealerPerfomance() {
         <AiOutlineDownload className={styles.cardIcon} />
       </div>
       <TabDefault />
-      <TabPrimary title1="Highest Rated" title2="Lowest Rated" />
-
-      <div className={styles.cardBody}>
+      <div className="custom-tab-style">
+        <Tabs
+          className="mb-3"
+          defaultActiveKey="title1"
+          id="uncontrolled-tab-example"
+        >
+          <Tab eventKey="title1" title="Highest Rated" >
+          <div className={styles.cardBody}>
         <div className="dashboardTable">
           <Table striped variant="dark" className={styles.tableStyle}>
             <tbody>
@@ -49,10 +53,70 @@ function DealerPerfomance() {
                   <AiFillStar className={styles.cardBody_star} /> 4.5
                 </td>
               </tr>
+              <tr>
+                <td>Neel Motors</td>
+                <td className="text-end">
+                  <AiFillStar className={styles.cardBody_star} /> 4.5
+                </td>
+              </tr>
+              <tr>
+                <td>Neel Motors</td>
+                <td className="text-end">
+                  <AiFillStar className={styles.cardBody_star} /> 4.5
+                </td>
+              </tr>
             </tbody>
           </Table>
         </div>
+          </div>
+          </Tab>
+          <Tab eventKey="title2" title="Lowest Rated" >
+          <div className={styles.cardBody}>
+        <div className="dashboardTable">
+          <Table striped variant="dark" className={styles.tableStyle}>
+            <tbody>
+              <tr>
+                <td>Neel Motors</td>
+                <td className="text-end">
+                  <AiFillStar className={styles.cardBody_star} /> 2.5
+                </td>
+              </tr>
+              <tr>
+                <td>Neel Motors</td>
+                <td className="text-end">
+                  <AiFillStar className={styles.cardBody_star} /> 3.5
+                </td>
+              </tr>
+              <tr>
+                <td>Neel Motors</td>
+                <td className="text-end">
+                  <AiFillStar className={styles.cardBody_star} /> 1.5
+                </td>
+              </tr>
+              <tr>
+                <td>Neel Motors</td>
+                <td className="text-end">
+                  <AiFillStar className={styles.cardBody_star} /> 2.5
+                </td>
+              </tr>
+              <tr>
+                <td>Neel Motors</td>
+                <td className="text-end">
+                  <AiFillStar className={styles.cardBody_star} /> 3.5
+                </td>
+              </tr>
+             
+              
+            </tbody>
+          </Table>
+        </div>
+          </div>
+          </Tab>
+                
+        </Tabs>
       </div>
+
+     
     </Card>
   );
 }

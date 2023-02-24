@@ -3,7 +3,7 @@ import DoughnutChart from '../../charts/doughnutChart';
 
 import styles from './style.module.scss';
 
-function PieBig() {
+function PieBig(props) {
   const optionsDoughnut = {
     responsive: true,
     maintainAspectRatio: false,
@@ -14,6 +14,9 @@ function PieBig() {
         labels: {
           fontSize: 20,
           color: 'white',
+          usePointStyle: true,
+          pointStyle: 'circle',
+          padding: 15,
         },
       },
     },
@@ -46,7 +49,7 @@ function PieBig() {
   };
   return (
     <div className={styles.pieContainer}>
-      <h5>Bidding Overview</h5>
+      <h5>{props.title} </h5>
       <DoughnutChart options={optionsDoughnut} data={doughnutChartData} />
     </div>
   );

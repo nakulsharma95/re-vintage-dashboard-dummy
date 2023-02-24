@@ -5,26 +5,9 @@
 			color: #FFFFFF;
 			position: relative;
 			margin-left: 1rem;
-
-			// &:before{
-			// 	content: "";
-			// 	position: absolute;
-			// 	background-color: green;
-			// 	border-radius: 50%;
-			// 	height: 5px;
-			// 	width: 5px;
-			// 	left: -0.9rem;
-            //     top: 0.3rem;
-			// }
 		}
-		.status_deactive{
-			&:before{
-				content: "";
-				background-color: #DA291C;
-				
-			}
-		}
-		thead tr th{
+		
+		thead tr td{
 			background-color: #282828;
 			color: #A7A7A7;
 			border: none;
@@ -36,6 +19,7 @@
 			border: none;
 			border-bottom: 1px solid #282828;
 			padding:1rem 1.3rem;
+			vertical-align: middle;
             
 
 			.tableCheckbox .form-check-input:checked {
