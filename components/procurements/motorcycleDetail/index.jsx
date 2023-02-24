@@ -108,7 +108,7 @@ function MotorcycleDetail(props) {
       </div>
       {props.dealerDetails && (
         <div className={styles.dealerDetails}>
-          <p>
+          <p className={styles.dealerName}>
             Dealer:<span>{props.dealerName}</span>
           </p>
           <hr className={styles.dealerDetails_line} />

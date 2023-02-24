@@ -22,12 +22,12 @@ function dealerTable() {
 		<Table bordered variant="dark">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Dealer Code</th>
-          <th>Mobile No.</th>
-          <th>Email</th>
-          <th>Address</th>
-          <th>Action</th>
+          <td>Name</td>
+          <td>Dealer Code</td>
+          <td>Mobile No.</td>
+          <td>Email</td>
+          <td>Address</td>
+          <td>Action</td>
         </tr>
       </thead>
       <tbody>

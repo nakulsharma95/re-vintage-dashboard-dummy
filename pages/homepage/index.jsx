@@ -86,7 +86,6 @@ export default function Homepage() {
         <FilterButton />
       </HeaderPrimary>
 
-      {/* <TabPrimary title1="Procurement" title2="Inventory" title3="Retail" /> */}
       <div className="custom-tab-style">     
             <Tabs
               className="mb-3"
@@ -106,8 +105,7 @@ export default function Homepage() {
               
             </Tabs>         
       </div>
-      {/* <LeadSection />
-      <NonReLeadSection /> */}
+     
     </div>
   );
 }
