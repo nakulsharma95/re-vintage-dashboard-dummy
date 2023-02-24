@@ -58,6 +58,39 @@ h6 {
   @include scrollHide;
 }
 
+// Sidebar Active Style
+.sidebar-global {
+  button[aria-expanded="true"] {
+    background: $black;
+    border-bottom: 1px solid $gray-28;
+
+    .nav-item {
+      color: $theme-red-da;
+    }
+
+    a {
+      color: $white !important;
+    }
+  }
+
+  .accordion-button:not(.collapsed) {
+    box-shadow: none;
+  }
+
+  .active {
+    color: $white !important;
+    background-color: $black;
+    
+    a {
+      color: $white !important;
+    }
+
+    .nav-item {
+      color: $theme-red-da;
+    }
+  }
+}
+
 // four-oh-four
 .four-oh-four {
   min-height: 100vh;
