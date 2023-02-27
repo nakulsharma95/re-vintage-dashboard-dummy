@@ -90,9 +90,9 @@ export default function PriceCalculator() {
         </Link>
       </div>
       <div className={styles.evaluteMain}>
-				<div className="mb-2">Evaluate In Easy Steps</div>
-				<EvaluteForm />
-			</div>
+        <div className="mb-2">Evaluate In Easy Steps</div>
+        <EvaluteForm />
+      </div>
       <div className={styles.priceResultText}>18 item found</div>
       <Row className="pricePrimaryCol">
         {priceCardData.map((item) => (

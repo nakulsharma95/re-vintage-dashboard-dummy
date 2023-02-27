@@ -47,12 +47,14 @@ export default function Sidebar(props) {
           </CustomLink>
         </div>
 
-        <Accordion.Item className={styles.accordionItems} eventKey="1">
+        <Accordion.Item
+          className={`${styles.accordionItems} ${
+            router.pathname === '/procurement' ? 'active' : ''
+          }`}
+          eventKey="1"
+        >
           <Accordion.Header className={styles.headerStyle}>
-            <Link
-              href="/procurement"
-              className={router.pathname === '/procurement' ? 'active' : ''}
-            >
+            <Link href="/procurement">
               <span className={`${styles.navIcon} nav-item`}>
                 <BsFileEarmarkText />
               </span>
@@ -82,12 +84,14 @@ export default function Sidebar(props) {
           </Accordion.Body>
         </Accordion.Item>
 
-        <Accordion.Item className={styles.accordionItems} eventKey="2">
+        <Accordion.Item
+          className={`${styles.accordionItems} ${
+            router.pathname === '/bidding-portal' ? 'active' : ''
+          }`}
+          eventKey="2"
+        >
           <Accordion.Header className={styles.headerStyle}>
-            <Link
-              href="/bidding-portal"
-              className={router.pathname === '/bidding-portal' ? 'active' : ''}
-            >
+            <Link href="/bidding-portal">
               <span className={`${styles.navIcon} nav-item`}>
                 <IoHammerOutline />
               </span>
@@ -134,12 +138,14 @@ export default function Sidebar(props) {
           </Accordion.Body>
         </Accordion.Item>
 
-        <Accordion.Item className={styles.accordionItems} eventKey="3">
+        <Accordion.Item
+          className={`${styles.accordionItems} ${
+            router.pathname === '/deal-closure' ? 'active' : ''
+          }`}
+          eventKey="3"
+        >
           <Accordion.Header className={styles.headerStyle}>
-            <Link
-              href="/deal-closure"
-              className={router.pathname === '/deal-closure' ? 'active' : ''}
-            >
+            <Link href="/deal-closure">
               <span className={`${styles.navIcon} nav-item`}>
                 <TbChartCircles />
               </span>
@@ -195,12 +201,14 @@ export default function Sidebar(props) {
           </Accordion.Body>
         </Accordion.Item>
 
-        <Accordion.Item className={styles.accordionItems} eventKey="4">
+        <Accordion.Item
+          eventKey="4"
+          className={`${styles.accordionItems} ${
+            router.pathname === '/retail' ? 'active' : ''
+          }`}
+        >
           <Accordion.Header className={styles.headerStyle}>
-            <Link
-              href="/retail"
-              className={router.pathname === '/retail' ? 'active' : ''}
-            >
+            <Link href="/retail">
               <span className={`${styles.navIcon} nav-item`}>
                 <BsFileEarmarkText />
               </span>
@@ -253,12 +261,14 @@ export default function Sidebar(props) {
           </CustomLink>
         </div>
 
-        <Accordion.Item className={styles.accordionItems} eventKey="6">
+        <Accordion.Item
+          className={`${styles.accordionItems} ${
+            router.pathname === '/demand' ? 'active' : ''
+          }`}
+          eventKey="6"
+        >
           <Accordion.Header className={styles.headerStyle}>
-            <Link
-              href="/demand"
-              className={router.pathname === '/demand' ? 'active' : ''}
-            >
+            <Link href="/demand">
               <span className={`${styles.navIcon} nav-item`}>
                 <BsGraphUp />
               </span>

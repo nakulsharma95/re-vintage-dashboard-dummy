@@ -153,16 +153,6 @@ function Demand() {
     },
   ];
 
-  const favDropdownList = [
-    {
-      dropdownTitle: 'This week',
-      dropdownMenuTitle: 'Week 1',
-    },
-    {
-      dropdownTitle: 'Delhi',
-      dropdownMenuTitle: 'Mumbai',
-    },
-  ];
   return (
     <>
       <Breadcrumb title="Demand" />
