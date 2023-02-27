@@ -26,7 +26,11 @@ function DealershipDetails() {
         </p>
         <OutlineDropdown
           dropdownTitle="Actions"
-          dropdownMenuTitle="Blacklist Dealer"
+          options={[
+            'Blacklist Dealer',
+            'Blacklist Dealer 2',
+            'Blacklist Dealer 3',
+          ]}
         />
       </HeaderPrimary>
 

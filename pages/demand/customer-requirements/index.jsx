@@ -1,13 +1,12 @@
 import React from 'react';
+import { Col, Row } from 'react-bootstrap';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DemandNav from '../../../components/demand/demandNav';
 import DemandPrimaryCard from '../../../components/demand/demandPrimaryCard';
-import { Col, Row } from 'react-bootstrap';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import OutlineDropdown from '../../../components/common/buttons/OutlineDropdown';
 
 function CustomerRequirements() {
-
   const cardList = [
     {
       imgUrl: '/images/bikeImage3.png',
@@ -31,39 +30,22 @@ function CustomerRequirements() {
     },
   ];
 
-  const favDropdownList = [
-    {
-      dropdownTitle: 'This week',
-      dropdownMenuTitle: 'Week 1',
-    },
-    {
-      dropdownTitle: 'Delhi',
-      dropdownMenuTitle: 'Mumbai',
-    },
-  ];
-
-  
   return (
     <>
       <Breadcrumb title="Demand" />
 
       <DemandNav />
 
-	  <HeaderPrimary
+      <HeaderPrimary
         headerClass="mb-4 mt-0"
         title="Requirement Request"
         subTitle="Please find all the necessary details"
       >
-		
-		<div className="d-flex align-items-center">
-			<span className="sortText">Sort By:</span>
-			{favDropdownList.map((item) => (
-				<OutlineDropdown
-					dropdownTitle={item.dropdownTitle}
-					dropdownMenuTitle={item.dropdownMenuTitle}
-				/>
-			))}
-		</div>
+        <div className="d-flex align-items-center">
+          <span className="sortText">Sort By:</span>
+          <OutlineDropdown dropdownTitle="This week" options={['Week 1']} />
+          <OutlineDropdown dropdownTitle="City" options={['Mumbai']} />
+        </div>
       </HeaderPrimary>
 
       <Row className="mt-3 mb-5">
