@@ -1,4 +1,4 @@
-import { Row, Tab, Tabs } from 'react-bootstrap';
+import { Tab, Tabs } from 'react-bootstrap';
 import Accordion from 'react-bootstrap/Accordion';
 import Form from 'react-bootstrap/Form';
 import { FaSearch } from 'react-icons/fa';
