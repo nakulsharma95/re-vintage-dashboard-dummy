@@ -1,5 +1,6 @@
 import { Card, Col, Row } from 'react-bootstrap';
 import { AiOutlineDownload } from 'react-icons/ai';
+import DownloadButton from '../../common/buttons/downloadButton';
 import HorizontalBarChart from '../../charts/horizontalBarChart';
 
 import styles from './style.module.scss';
@@ -85,7 +86,11 @@ function MotorcycleSales() {
       <div className={`${styles.cardHead} flex-column`}>
         <div className="d-flex justify-content-between">
           <h4>Motorcycle Sales</h4>
-          <AiOutlineDownload className={styles.cardIcon} />
+
+          <DownloadButton
+            buttonLink="/dummy.pdf"
+            iconUrl={<AiOutlineDownload className={styles.cardIcon} />}
+          />
         </div>
         <HorizontalBarChart
           height={300}

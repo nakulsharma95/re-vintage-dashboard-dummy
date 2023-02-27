@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Form, Button, Image } from 'react-bootstrap';
 import { MdOutlineArrowForwardIos } from 'react-icons/md';
@@ -28,9 +29,9 @@ export default function EvaluteForm() {
 						<Form.Control type="text" placeholder="KM Driven" />
 						<span className={styles.iconImg}><Image src="/images/icons/road.svg" alt="" /></span>
 					</Form.Group>
-					<Button variant="" type="submit">
+					<Link href="/price-calculator/estimated-price" variant="" type="submit">
 						Evaluate <MdOutlineArrowForwardIos />
-					</Button>
+					</Link>
 				</div>
 			</Form>
 		</>

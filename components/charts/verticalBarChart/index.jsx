@@ -21,7 +21,7 @@ ChartJS.register(
 );
 
 function VerticalBarChart(props) {
-  return <Bar options={props.options} data={props.data} />;
+  return <Bar height={props.size} options={props.options} data={props.data} />;
 }
 
 export default VerticalBarChart;
