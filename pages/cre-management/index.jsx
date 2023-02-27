@@ -16,38 +16,38 @@ import SortTabs from "~/components/common/sortTabs";
 function CreManagement() {
   const cardData = [
     {
-      imageUrl: "/images/bob-Vishwas.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bob-Vishwas1.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas1.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bob-Vishwas2.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas2.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bob-Vishwas3.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas3.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
   ];
   const performanceCardData = [
     {
-      cardBodyBg: "bgGray18",
+      cardBodyBg: 'bgGray18',
     },
     {
-      cardBodyBg: "bgGray28",
+      cardBodyBg: 'bgGray28',
     },
     {
-      cardBodyBg: "bgblack40",
+      cardBodyBg: 'bgblack40',
     },
     {
-      cardBodyBg: "bgGray18",
+      cardBodyBg: 'bgGray18',
     },
   ];
 
