@@ -2,9 +2,11 @@
 @import '../../../styles/variables//mixins';
 
 .priceBox{
-	margin-bottom: 15px;
-	width: 100%;
-	max-width: 20%;
+	background-color: $gray-18;
+    width: 100%;
+    padding: 0;
+    margin: 0 10px;
+    margin-bottom: 25px;
 	.priceImg{
 		img{
 			width: 100%;
@@ -13,7 +15,7 @@
 		}
 	}
 	.priceTitle{
-		padding: 10px;
+		padding: 10px 15px;
 		font-size: 16px;
 	}
 }

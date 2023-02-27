@@ -9,6 +9,7 @@ import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
+import SortTabs from '../../../components/common/sortTabs';
 
 export default function ActiveBids() {
   const activeBikeData = [
@@ -62,13 +63,16 @@ export default function ActiveBids() {
         subTitle="Please find all the necessary details"
       >
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <OutlineButton title="Refresh bids" rightIcon={<BiRefresh />} />
-        <SearchPrimary />
+        <OutlineButton title="Refresh bids" leftIcon={<BiRefresh />} />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-3" />
-      <div className="mb-3">25 Bids Available</div>
+      <SortTabs
+        selectAllCheck 
+        sortTabTitle="25 Bids Available"
+      />
       <Row className="mb-3">
         {activeBikeData.map((item) => (
           <Col md={3}>

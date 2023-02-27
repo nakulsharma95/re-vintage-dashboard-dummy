@@ -8,6 +8,7 @@ import {
   BiErrorAlt,
 } from "react-icons/bi";
 import CustomCheckBox from "../customCheckBox";
+import DealFilter from '../../../components/dealClosure/dealFilter';
 import styles from "./style.module.scss";
 
 function SortTabs(props) {
@@ -74,7 +75,7 @@ function SortTabs(props) {
         </div>
       )}
       <div className={styles.sortTabBtnBoxMain}>
-        {props.isSortTabBox && (
+        {/* {props.isSortTabBox && (
           <div className={`${styles.rightBorder} d-flex align-items-center`}>
             <p className={styles.sortText}>Sort by:</p>
             <div>
@@ -84,7 +85,10 @@ function SortTabs(props) {
               </Button>
             </div>
           </div>
-        )}
+        )} */}
+        <DealFilter title="Sort By" isViewBy isNonRe droptitle="Pending" />
+          <div className={styles.rightBorder}>
+        </div>
 
         <div className={styles.sortTabBtnBox}>
           <Button variant="primary" className={styles.viewTabBtn}>

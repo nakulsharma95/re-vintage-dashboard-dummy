@@ -6,7 +6,12 @@ import EvaluationDetail from '../evalutationDetail';
 import BikeCardFooter from '../../common/cardFooter';
 import MotorcycleDetail from '../motorcycleDetail';
 
-function CompleteBikeDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
+function CompleteBikeDetail({
+  isEvalBtnVisible,
+  isCallerBtnVisible,
+  isEnquiryNumVisible,
+  isCardFooterVisible,
+}) {
   const completeData = [
     {
       bikeCode: 'FB29FH9219HR1',
@@ -42,11 +47,13 @@ function CompleteBikeDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
                 headBikeDetail
                 bikeInfo
                 bikeDetailTitle
+                msdEnquery="219244982196"
                 bikeCode={item.bikeCode}
                 bikeName={item.bikeName}
                 bikeNumber={item.bikeNumber}
                 priceTitle={item.priceTitle}
                 evaluationPrice={item.evaluationPrice}
+                isEnquiryNumVisible={isEnquiryNumVisible}
               />
             </Col>
           ))}
@@ -58,20 +65,21 @@ function CompleteBikeDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
           </Col>
         </Row>
       </Card.Body>
-
-      <div className="re-detailFootBg">
-        {cardFootData.map((item) => (
-          <BikeCardFooter
-            userTitle={item.userTitle}
-            caseId={item.caseId}
-            contactText={item.contactText}
-            detailTitle={item.detailTitle}
-            name={item.name}
-            idTitle={item.idTitle}
-            contact={item.contact}
-          />
-        ))}
-      </div>
+      {isCardFooterVisible && (
+        <div className="re-detailFootBg">
+          {cardFootData.map((item) => (
+            <BikeCardFooter
+              userTitle={item.userTitle}
+              caseId={item.caseId}
+              contactText={item.contactText}
+              detailTitle={item.detailTitle}
+              name={item.name}
+              idTitle={item.idTitle}
+              contact={item.contact}
+            />
+          ))}
+        </div>
+      )}
     </Card>
   );
 }

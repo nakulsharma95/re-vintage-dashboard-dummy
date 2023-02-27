@@ -1,5 +1,6 @@
 import { MdOutlineFilterList } from 'react-icons/md';
 import { TbTrendingUp } from 'react-icons/tb';
+import { Tab, Tabs } from 'react-bootstrap';
 import DashboardCard from '../../components/dashboardCard';
 import FilterButton from '../../components/common/filterButton';
 import HeaderPrimary from '../../components/common/headerPrimary';
@@ -7,11 +8,12 @@ import SearchPrimary from '../../components/common/searchPrimary';
 import DealerPerfomance from '../../components/overview/dealerPerfomance';
 import MotorcycleSales from '../../components/overview/motorcycleSales';
 import RegionalAnalytics from '../../components/overview/regionalAnalytics';
-import style from './style.module.scss';
-import ProcurementTab from '../../components/overview/tabProcurement';
 import InventoryTab from '../../components/overview/tabInventory';
 import RetailsTab from '../../components/overview/tabRetails';
-import { Tab, Tabs } from 'react-bootstrap';
+import LeadSection from '../../components/overview/leadSection';
+import NonReLeadSection from '../../components/overview/nonReLeadSection';
+
+import style from './style.module.scss';
 
 export default function Homepage() {
   const dashboardCardData = [
@@ -25,7 +27,7 @@ export default function Homepage() {
       dividerColor: '#403E3E',
     },
     {
-      title: 'Total Procured',
+      title: 'Evaluation Request',
       description: '97',
       bottomDescription: 'Overall Booking Growth',
       percentage: '22',
@@ -33,12 +35,12 @@ export default function Homepage() {
       dividerColor: '#282828',
     },
     {
-      title: 'Total Procured',
+      title: 'Pending Evaluation',
       description: '12',
       cardBg: '#282828',
     },
     {
-      title: 'Total Procured',
+      title: 'Total Revenue',
       description: '',
       bottomDescription: 'Overall Booking Growth',
       percentage: '12%',
@@ -53,7 +55,7 @@ export default function Homepage() {
         title="Welcome to Your Inventory Dashboard"
         subTitle="Here you will see the most latest update"
       >
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Reference ID" />
         <button type="button" className={style.filterBtn}>
           Filter <MdOutlineFilterList size={15} />
         </button>
@@ -82,32 +84,32 @@ export default function Homepage() {
       </div>
 
       <HeaderPrimary headerClass="mb-1" title="Lead">
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Mobile Number, Chassis Number…" />
         <FilterButton />
       </HeaderPrimary>
 
       {/* <TabPrimary title1="Procurement" title2="Inventory" title3="Retail" /> */}
-      <div className="custom-tab-style">     
-            <Tabs
-              className="mb-3"
-              defaultActiveKey="title3"
-              id="uncontrolled-tab-example"
-            >
-              <Tab eventKey="title1" title="Procurement" >
-              <ProcurementTab />
-              </Tab>
-              
-              <Tab eventKey="title2" title="Inventory" >
-                <InventoryTab/>
-              </Tab>
-              <Tab eventKey="title3" title="Retail">
-               <RetailsTab/>
-              </Tab>
-              
-            </Tabs>         
+      <div className="custom-tab-style">
+        <Tabs
+          className="mb-3"
+          defaultActiveKey="title1"
+          id="uncontrolled-tab-example"
+        >
+          <Tab eventKey="title1" title="Procurement">
+            <div>
+              <LeadSection />
+              <NonReLeadSection />
+            </div>
+          </Tab>
+
+          <Tab eventKey="title2" title="Inventory">
+            <InventoryTab />
+          </Tab>
+          <Tab eventKey="title3" title="Retail">
+            <RetailsTab />
+          </Tab>
+        </Tabs>
       </div>
-      {/* <LeadSection />
-      <NonReLeadSection /> */}
     </div>
   );
 }

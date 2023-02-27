@@ -2,43 +2,53 @@
 @import '../../../styles/variables//mixins';
 
 .nonLeadSection {
-	margin-top: 40px;
+  margin-top: 40px;
 
   .nonLeadtop {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 24px;
+  }
 
-    .nonleadTable {
-      width: 48%;
-      height: 100%;
-      
-      Table{
-        thead{
-          tr th{
-            background-color: #282828 !important;
-          }
-        }
-        tbody{
-          tr td {
-            vertical-align: middle;
-          }
-        }
-      }
-      .tableStyle {
-        margin: 1rem 0;
+  table {
+    margin: 1rem 0;
+    width: 100%;
 
-        a {
-          color: #e8b016;
-        }
+    tbody tr > * {
+      background-color: $gray-18 !important;
+    }
+
+    thead,
+    tbody,
+    tfoot,
+    tr,
+    td,
+    th {
+      border: 1px solid rgb(19, 19, 19);
+    }
+    thead {
+      tr th {
+        background-color: $gray-28 !important;
+        vertical-align: middle;
       }
     }
+    tbody {
+      tr td {
+        vertical-align: middle;
+      }
+    }
+
+    a {
+      color: #e8b016;
+    }
   }
+
   .nonLeadBottom {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 24px;
 
     .nonLeadGraph {
-      width: 48%;
       margin: 1rem 0;
       padding: 20px;
       background-color: #282828;

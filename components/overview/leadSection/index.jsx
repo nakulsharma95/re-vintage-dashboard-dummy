@@ -9,7 +9,7 @@ function LeadSection() {
   return (
     <div className={styles.leadSection}>
       <div className={styles.leadsTop}>
-        <PieSmall withouticon />
+        <PieSmall title="Source" />
         <div className={`${styles.leadTable}  dashboardTable`}>
           <ProcurementTable />
         </div>
@@ -20,8 +20,8 @@ function LeadSection() {
           <DealClouser />
         </div>
 
-        <PieSmall icon />
-        <PieSmall icon />
+        <PieSmall title="Procurement - Partners" />
+        <PieSmall title="Procurement - Model Mix" />
       </div>
       <div className={styles.leadsBottom}>
         <PieBig title="Bidding Overview" />

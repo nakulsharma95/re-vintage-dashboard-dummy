@@ -1,7 +1,5 @@
 import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import AccordionBody from 'react-bootstrap/esm/AccordionBody';
-import AccordionItem from 'react-bootstrap/esm/AccordionItem';
 import PaymentInformation from '../paymentInformation';
 import ProcurementDetails from '../procurementDetails';
 import SalesJourney from '../salesJourney';
@@ -33,21 +31,23 @@ function MotorcycleAccordian() {
   ];
   return (
     <div>
-      <div className="primary-accordion-style pt-3">
+      <div className="primary-accordion-style motor-cycle-accordian pt-3">
         <Accordion>
           <Accordion.Item>
             <Accordion.Header>Payment Information</Accordion.Header>
             <Accordion.Body>
               <PaymentInformation />
               <SalesJourney />
-              <Accordion>
-                {accordionData.map((item, index) => (
-                  <Accordion.Item eventKey={index}>
-                    <Accordion.Header>{item.title}</Accordion.Header>
-                    <Accordion.Body>{item.description}</Accordion.Body>
-                  </Accordion.Item>
-                ))}
-              </Accordion>
+              <div className="motor-cycle-accordian-inner">
+                <Accordion>
+                  {accordionData.map((item, index) => (
+                    <Accordion.Item eventKey={index}>
+                      <Accordion.Header>{item.title}</Accordion.Header>
+                      <Accordion.Body>{item.description}</Accordion.Body>
+                    </Accordion.Item>
+                  ))}
+                </Accordion>
+              </div>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

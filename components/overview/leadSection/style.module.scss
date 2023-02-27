@@ -11,6 +11,7 @@
 
     .leadTable {
       flex-grow: 2;
+      
       .tableStyle {
         thead,
         tbody,
@@ -21,7 +22,7 @@
           border: none;
           padding: 1.2rem 1.5rem;
         }
-        
+
         tbody {
           padding: 1rem;
           .BoldHead {
@@ -41,13 +42,18 @@
     }
   }
 
+  .leadsBottom {
+    max-width: 49%;
+  }
+
   .leadsMiddle {
     display: flex;
     gap: 24px;
 
     .leadMidTable {
       flex-grow: 2;
-      Table {
+
+      table {
         text-align: center;
 
         thead,

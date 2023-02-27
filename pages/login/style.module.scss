@@ -77,13 +77,13 @@
           border: none;
           border-bottom: 2px solid $gray-3;
           border-radius: 0;
-          color: $black;
+          color: $gray-6;
           font-weight: 600;
           font-size: 12px;
           padding: 10px;
           padding-left: 28px;
           &::placeholder {
-            color: $black;
+            color: $gray-6;
           }
           &:focus {
             outline: none;

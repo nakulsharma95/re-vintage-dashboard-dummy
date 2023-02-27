@@ -1,0 +1,39 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.inventoryTabTable {
+  table {
+    padding: 1rem;
+    a {
+      color: #e8b016;
+      text-decoration: none;
+    }
+    tbody {
+      tr {
+        th {
+          padding: 1rem !important;
+        }
+        td {
+          padding: 1rem !important;
+        }
+      }
+    }
+    thead,
+    tbody,
+    tfoot,
+    tr,
+    td,
+    th {
+      border: 1px solid rgb(19, 19, 19);
+    }
+  }
+}
+
+.graphCards {
+  margin: 1rem 0;
+  .graphCard {
+    background-color: #282828;
+    height: 60vh;
+    width: 100%;
+  }
+}

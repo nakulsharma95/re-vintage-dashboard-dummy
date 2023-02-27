@@ -1,5 +1,4 @@
 import React from 'react';
-import Table from 'react-bootstrap/Table';
 import Link from 'next/link';
 import { FiDownload } from 'react-icons/fi';
 
@@ -7,13 +6,13 @@ import styles from './style.module.scss';
 
 function ProcurementTable() {
   return (
-    <div className={`${styles.leadTable}  dashboardTable`}>
-      <Table striped variant="dark" className={styles.tableStyle}>
+    <div className={`${styles.leadTable} dashboardTable`}>
+      <table className={`${styles.tableStyle} table table-odd`}>
         <tbody>
           <tr>
-            <td className={styles.BoldHead}>
+            <td className={styles.boldHead}>
               Procurement
-              <FiDownload className={styles.BoldHeadIcon} />
+              <FiDownload className={styles.boldHeadIcon} />
             </td>
             <td>Open</td>
             <td>Cancelled</td>
@@ -62,7 +61,7 @@ function ProcurementTable() {
             </td>
           </tr>
         </tbody>
-      </Table>
+      </table>
     </div>
   );
 }

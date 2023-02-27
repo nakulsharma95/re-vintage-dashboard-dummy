@@ -34,7 +34,7 @@ function DealClosure() {
         title="Deal Closure"
         subTitle="Please fill all the necessary details"
       >
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 
@@ -44,9 +44,10 @@ function DealClosure() {
           title="Under Negotiation"
           viewAllBtn
           viewAllClass="mt-3 mb-3"
+          viewHandler="deal-closure/under-negotiation"
         />
-        {cardData.map((item, index) => (
-          <Col md={3} key={index}>
+        {cardData.map((item) => (
+          <Col md={3}>
             <CloserBikeCard
               data={item}
               location
@@ -61,9 +62,10 @@ function DealClosure() {
           title="Procured Motorcycle"
           viewAllBtn
           viewAllClass="mt-3 mb-3"
+          viewHandler="deal-closure/procured"
         />
-        {cardData.map((item, index) => (
-          <Col md={3} key={index}>
+        {cardData.map((item) => (
+          <Col md={3}>
             <CloserBikeCard data={item} rcTransfer cardTag isOwner price />
           </Col>
         ))}
@@ -71,9 +73,10 @@ function DealClosure() {
           title="Dropped"
           viewAllBtn
           viewAllClass="mt-3 mb-3"
+          viewHandler="deal-closure/dropped"
         />
-        {cardData.map((item, index) => (
-          <Col md={3} key={index}>
+        {cardData.map((item) => (
+          <Col md={3}>
             <CloserBikeCard
               data={item}
               location

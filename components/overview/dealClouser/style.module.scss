@@ -1,24 +1,11 @@
 @import '../../../styles/variables/colors';
 @import '../../../styles/variables//mixins';
 
-.leadsMiddle {
-  display: flex;
-  justify-content: space-between;
-
-  .leadMidTable {
-    width: 50%;
-    
-    .tableStyle {
-      text-align: center;
-
-      thead,
-      tbody,
-      tfoot,
-      tr,
-      td,
-      th {
-        border: 1px solid rgb(19, 19, 19);
-      }
+.tableStyle {
+ 
+  .bgGray28Table {
+    td, th {
+      background: $gray-28 !important;
     }
   }
 }
