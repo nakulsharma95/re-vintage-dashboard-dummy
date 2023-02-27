@@ -4,6 +4,8 @@
 .pieContainer {
 	background-color: #282828;
 	padding: 24px;
+	display: flex;
+	flex-direction: column;
 
 	h5 {
 	  font-size: 18px;
