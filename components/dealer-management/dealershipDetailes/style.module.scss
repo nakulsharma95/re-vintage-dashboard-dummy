@@ -1,11 +1,13 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/variables/mixins";
 .dealershipDetails {
   button {
     background-color: transparent;
     border: none;
-    color: white;
+    color: $white;
 
     a {
-      color: white;
+      color: $white;
       text-decoration: none;
     }
   }
@@ -15,10 +17,10 @@
     top: 0.5rem;
     right: 0.3rem;
     font-size: 12px;
-    color: #CBC6C6;
+    color: $gray-cb;
 
     span{
-      color: #FFFFFF;
+      color: $white;
     }
   }
 }
@@ -33,7 +35,7 @@
         // font-family: "Guardian Sans, Semibold";
         span {
           font-size: 12px;
-          color: #cbc6c6;
+          color: $gray-cb;
         }
       }
       p {
@@ -41,7 +43,7 @@
         margin-top: 1rem;
         span {
           font-size: 12px;
-          color: #cbc6c6;
+          color: $gray-cb;
           margin-left: 0.3rem;
         }
       }
@@ -61,7 +63,7 @@
 		gap: 0 20px;
 
 		&::before {
-			background: #656565;
+			background: $gray-65;
 			height: 80%;
 			width: 2px;
 			display: flex;
@@ -76,13 +78,13 @@
         }
         h6 {
           font-size: 16px;
-          color: #ffffff;
+          color: $white;
           width: 100%;
         }
 
         p {
           font-size: 12px;
-          color: #cbc6c6;
+          color: $gray-cb;
         }
       }
     }
@@ -94,13 +96,13 @@
 	gap: 0 14px;
 	
     .motors_card {
-      background-color: #282828;
+      background-color: $gray-28;
       padding: 1.5rem;
       width: 100%;
 
       h6 {
         font-size: 12px;
-        color: #a7a7a7;
+        color: $gray-a7;
         margin-bottom: 0.5rem;
         display: flex;
         justify-content: space-between;
@@ -114,7 +116,7 @@
         font-size: 14px;
 
         span {
-          color: #a7a7a7;
+          color: $gray-a7;
         }
       }
     }
