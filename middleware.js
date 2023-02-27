@@ -35,7 +35,7 @@ async function verifyToken(token, successResponse, failureResponse) {
       );
       return { isAuthenticated: true, successResponse };
     }
-    // failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME);
+    failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME);
     return { isAuthenticated: false, failureResponse };
   }
   failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME);
@@ -51,7 +51,7 @@ async function authenticateUser(req) {
     token = atob(token.value);
     return verifyToken(token, successResponse, failureResponse);
   }
-  // failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME);
+  failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME);
   return { isAuthenticated: false, failureResponse }; // return false if token is not verified
 }
 

@@ -1,6 +1,5 @@
 import {
   setCookie,
-  // , getCookie
 } from 'cookies-next';
 import { apiSlice } from '../main';
 import { setCredentials } from '../../user';
@@ -19,7 +18,7 @@ export const authApiSlice = apiSlice.injectEndpoints({
           const jwtAccessToken = await data?.data?.jwtAccessToken;
           const refreshToken = await data?.data?.refreshToken;
           const guid = await data?.data?.user?.guid;
-          const tokens = await `${jwtAccessToken}#${refreshToken}#${guid}`;
+          const tokens = `${jwtAccessToken}#${refreshToken}#${guid}`;
           setCookie(process.env.NEXT_PUBLIC_COOKIE_NAME, btoa(tokens));
           api.dispatch(
             setCredentials({
