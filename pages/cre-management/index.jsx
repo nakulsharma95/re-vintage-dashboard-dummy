@@ -1,53 +1,53 @@
 import React from "react";
 import { Row, Col, Dropdown } from "react-bootstrap";
 import { FiPlus } from "react-icons/fi";
+import Link from "next/link";
 import Breadcrumb from "../../components/common/breadcrumbPrimary";
 import CreDetailCard from "../../components/cre-management/creDetailCard";
-import DealFilter from "../../components/dealClosure/dealFilter";
 import CrePerformanceCard from "../../components/cre-management/crePerformanceCard";
 import CrePerformanceMatrix from "../../components/cre-management/crePerformanceMatrix";
-import ButtonPrimary from "../../components/common/buttons/ButtonPrimary";
 import HeaderPrimary from "../../components/common/headerPrimary";
 import SearchPrimary from "../../components/common/searchPrimary";
 
 import styles from "./style.module.scss";
 import ThemeDropdown from "~/components/common/themeDropdown";
+import SortTabs from "~/components/common/sortTabs";
 
 function CreManagement() {
   const cardData = [
     {
-      imageUrl: "/images/bob-Vishwas.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bob-Vishwas1.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas1.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bob-Vishwas2.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas2.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bob-Vishwas3.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas3.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
   ];
   const performanceCardData = [
     {
-      cardBodyBg: "bgGray18",
+      cardBodyBg: 'bgGray18',
     },
     {
-      cardBodyBg: "bgGray28",
+      cardBodyBg: 'bgGray28',
     },
     {
-      cardBodyBg: "bgblack40",
+      cardBodyBg: 'bgblack40',
     },
     {
-      cardBodyBg: "bgGray18",
+      cardBodyBg: 'bgGray18',
     },
   ];
 
@@ -69,16 +69,15 @@ function CreManagement() {
           dropItem2="Zone2"
           dropItem3="Zone3"
         />
-        <ButtonPrimary
-          buttonLink="cre-management/add-cre"
-          iconLeft={<FiPlus />}
-          title="Add cre"
-          white
-        />
+
+        <Link href="cre-management/add-cre" className="addMotorBtn">
+          <FiPlus /> Add Motorcycle
+        </Link>
       </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-3" />
-      <DealFilter title="Available CRE(s)" droptitle="Top Performer" isViewBy />
+      <SortTabs selectAllCheck sortTabTitle="Available CRE(s)" />
+
       <Row>
         {cardData.map((item) => (
           <Col xxl={3} xl={4} lg={6}>

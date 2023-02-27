@@ -20,11 +20,17 @@ function DealershipDetails() {
         title="Dealership Details"
         subTitle="Please find all the necessary details"
       >
-        <div className='status-circle success mt-3'></div>
-        <p className={style.dealership_status}>Status: <span>Active</span> </p>
+        <div className="status-circle success mt-3" />
+        <p className={style.dealership_status}>
+          Status: <span>Active</span>{' '}
+        </p>
         <OutlineDropdown
           dropdownTitle="Actions"
-          dropdownMenuTitle="Blacklist Dealer"
+          options={[
+            'Blacklist Dealer',
+            'Blacklist Dealer 2',
+            'Blacklist Dealer 3',
+          ]}
         />
       </HeaderPrimary>
 
@@ -85,8 +91,8 @@ function DealershipDetails() {
               Address <span>View in map</span>
             </h6>
             <p>
-              No F 29/2, Phase 2, Okhla Industrial Area, Okhla Industrial <br/> Area,
-              New Delhi -110020
+              No F 29/2, Phase 2, Okhla Industrial Area, Okhla Industrial <br />{' '}
+              Area, New Delhi -110020
             </p>
           </div>
           <div className={style.motors_card}>
