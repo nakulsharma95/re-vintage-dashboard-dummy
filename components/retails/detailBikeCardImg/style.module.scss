@@ -10,6 +10,7 @@
 				width: 155px;
 				height: 139px;
 				cursor: pointer;
+				margin-bottom: 1.5rem;
 
 				&:hover{
 					border: 1px solid $white;
@@ -17,4 +18,22 @@
 			}
 		}
 	}
+	.detailBtnBox {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		gap: 0 15px;
+		padding: 1rem 1rem 0 0rem;
+		margin-top: 40px;
+	  
+		.downloadBtn {
+		  min-height: 36px;
+		  margin-left: 0.8rem;
+		  font-size: 12px;
+		  font-weight: 500;
+		  background: transparent;
+		  border: none;
+		  border-radius: 0;
+		}
+	  }
 }

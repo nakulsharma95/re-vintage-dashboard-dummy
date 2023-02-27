@@ -1,0 +1,113 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.bikeDetailCardMain {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #282828;
+  border: 0;
+  border-radius: 0;
+
+  .bikeDetailCardHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #707070;
+
+    .bikeName {
+      color: $white;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 0px;
+      span {
+        color: #e8b016;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .bikeCode {
+        color: #cbc6c6;
+        opacity: 0.7;
+        font-size: 13px;
+        margin-left: 5px;
+        margin-bottom: 0px;
+      }
+
+    }
+    .priceTag {
+      color: #cbc6c6;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 0px;
+      margin-right: 10px;
+    }
+ 
+  }
+  .bikeCardBody {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    .bikeCardBodyTitle {
+      color: #cbc6c6;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .bikeCardBodySubTitle {
+      color: #a7a7a7;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .bikeCardBodyText {
+      color: $white;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+.dealerLocation{
+	text-decoration: underline;
+	font-size: 14px;
+	color: $white;
+	font-weight: 300;
+	margin-left: 5px;
+}
+  .dealerSubTitleText{
+	font-size: 14px;
+	letter-spacing: 1px;
+	opacity: 0.6;
+	color: $white;
+	font-weight: 100;
+  }
+  .bikeCardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-top: 1rem;
+    border-top: 1px solid #707070;
+   
+    .statusBtnBox {
+      display: flex;
+      .statusBtn {
+        display: flex;
+        padding: 0rem 0.8rem;
+        color: #cbc6c6;
+        font-size: 12px;
+        font-weight: 500;
+        background: transparent;
+        border-radius: 0;
+        border: 0px;
+        border-right: 1px solid #707070;
+        .statusBtnIcn {
+          margin-right: 8px;
+          font-size: 15px;
+          font-weight: bold;
+        }
+
+        &:last-child {
+          border-right: 0px;
+        }
+      }
+    }
+  }
+}
+.cardBodyBorderRight {
+  border-right: 1px solid #707070;
+}

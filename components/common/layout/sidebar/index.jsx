@@ -198,8 +198,8 @@ export default function Sidebar(props) {
         <Accordion.Item className={styles.accordionItems} eventKey="4">
           <Accordion.Header className={styles.headerStyle}>
             <Link
-              href="/retail"
-              className={router.pathname === '/retail' ? 'active' : ''}
+              href="/retail/inventory"
+              className={router.pathname === '/retail/inventory' ? 'active' : ''}
             >
               <span className={`${styles.navIcon} nav-item`}>
                 <BsFileEarmarkText />
