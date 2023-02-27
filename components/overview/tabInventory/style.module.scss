@@ -31,9 +31,14 @@
 
 .graphCards {
   margin: 1rem 0;
+
   .graphCard {
     background-color: #282828;
-    height: 60vh;
     width: 100%;
+    padding: 20px;
+  }
+
+  .cardIcon {
+    font-size: 25px;
   }
 }

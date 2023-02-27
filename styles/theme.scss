@@ -60,7 +60,7 @@ h6 {
 
 // Sidebar Active Style
 .sidebar-global {
-  button[aria-expanded="true"] {
+  button[aria-expanded='true'] {
     background: $black;
     border-bottom: 1px solid $gray-28;
 
@@ -80,7 +80,7 @@ h6 {
   .active {
     color: $white !important;
     background-color: $black;
-    
+
     a {
       color: $white !important;
     }
@@ -123,7 +123,6 @@ h6 {
   }
 }
 
-
 // Custom Tab Style
 .custom-tab-style .nav-link {
   color: #fff;
@@ -131,10 +130,14 @@ h6 {
   border: none;
 }
 
-.custom-tab-style .nav-tabs .nav-link {
-  border: none;
-  padding: 10px 0px 10px 0;
-  margin-right: 25px;
+.custom-tab-style .nav-tabs {
+  border-color: $gray-70;
+
+  .nav-link {
+    border: none;
+    padding: 10px 0px 10px 0;
+    margin-right: 25px;
+  }
 }
 
 .custom-tab-style .nav-link.active {
@@ -162,10 +165,9 @@ h6 {
   margin-bottom: 0;
 }
 
-
 // default White tab style
 .default-tab-style {
- border: 1px solid $gray-70;
+  border: 1px solid $gray-70;
 
   .nav-item {
     border-right: 1px solid $gray-70;
@@ -187,13 +189,13 @@ h6 {
         color: $gray-a7;
       }
 
-      &:hover{
+      &:hover {
         border: none;
         background-color: $white;
         color: $black-40;
       }
 
-      &:focus{
+      &:focus {
         border: none !important;
       }
     }
@@ -536,7 +538,6 @@ h6 {
   }
 }
 
-
 // Tables Style here
 
 .dashboardTable .table > :not(caption) > * > * {
@@ -779,7 +780,7 @@ h6 {
   font-size: 16px;
   font-weight: 500;
 }
-.text-area-character{
+.text-area-character {
   font-size: 12px;
   color: $gray-a7;
   font-weight: 300;
@@ -795,19 +796,19 @@ h6 {
     background: $theme-red-da;
   }
 
-    &.success {
-      background: $theme-green;
-    }
-
-    &.warning {
-      background: $theme-warning;
-    }
-    &.orange{
-      background-color: #E86A16;
-    }
+  &.success {
+    background: $theme-green;
   }
 
-.bg-gray-3{
+  &.warning {
+    background: $theme-warning;
+  }
+  &.orange {
+    background-color: #e86a16;
+  }
+}
+
+.bg-gray-3 {
   background-color: $gray-3;
 }
 // dashboardCard
@@ -824,7 +825,6 @@ h6 {
   }
 }
 
-
 // text-error
 .text-error {
   color: $theme-danger;
@@ -837,20 +837,20 @@ h6 {
   margin-bottom: 60px;
 }
 
-.pricePrimaryCol{
-  .col-md-2{
-    @media (min-width: 768px){
+.pricePrimaryCol {
+  .col-md-2 {
+    @media (min-width: 768px) {
       width: 19.8%;
     }
   }
 }
 
-.leadsModalMain{
-  .modal-dialog{
+.leadsModalMain {
+  .modal-dialog {
     width: 100%;
     max-width: 732px;
     margin: 50px auto;
-    .modal-content{
+    .modal-content {
       border-radius: 0;
       border: none;
       background-color: $gray-28;

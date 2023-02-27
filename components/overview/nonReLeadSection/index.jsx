@@ -63,7 +63,7 @@ function NonReLeadSection() {
       <div className={styles.nonLeadtop}>
         <PieBig title="Non-RE Number of Enquiries" />
         <div className="dashboardTable w-full">
-          <table className="table">
+          <table className="table m-0">
             <thead>
               <tr>
                 <th colSpan={5}>
