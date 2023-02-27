@@ -7,7 +7,7 @@ import styles from './style.module.scss';
 function ProcurementTable() {
   return (
     <div className={`${styles.leadTable} dashboardTable`}>
-      <table className={`${styles.tableStyle} table table-odd`}>
+      <table className={`${styles.tableStyle} table table-odd m-0`}>
         <tbody>
           <tr>
             <td className={styles.boldHead}>

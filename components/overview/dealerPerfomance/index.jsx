@@ -1,5 +1,6 @@
 import { Card, Tab, Tabs } from 'react-bootstrap';
 import { AiFillStar, AiOutlineDownload } from 'react-icons/ai';
+import DownloadButton from '../../common/buttons/downloadButton';
 
 import styles from './style.module.scss';
 
@@ -8,7 +9,10 @@ function DealerPerfomance() {
     <Card className={styles.card}>
       <div className={styles.cardHead}>
         <h4>Dealer Perfomance</h4>
-        <AiOutlineDownload className={styles.cardIcon} />
+        <DownloadButton
+          buttonLink="/dummy.pdf"
+          iconUrl={<AiOutlineDownload className={styles.cardIcon} />}
+        />
       </div>
       <Tabs
         className="default-tab-style mb-3 mt-3"
