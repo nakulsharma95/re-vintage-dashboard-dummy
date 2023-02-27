@@ -194,6 +194,8 @@ function Procurement() {
         {cardData.map((item) => (
           <Col xl={4} md={6}>
             <DetailCard
+              isContactBtn
+              isCardFooter
               ownerName={item.ownerName}
               emailId={item.email}
               pinCode={item.pinCode}

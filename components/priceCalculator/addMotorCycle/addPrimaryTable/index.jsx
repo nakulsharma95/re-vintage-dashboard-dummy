@@ -41,7 +41,7 @@ export default function AddPrimaryTable() {
 				<td>4,000</td>
 				<td>100</td>
 				<td>
-					<Link href="/price-calculator/evalute" className={styles.editLink}>Edit <BsPencil /></Link>
+					<Link href="/" className={styles.editLink}>Edit <BsPencil /></Link>
 				</td>
 			</tr>
 
@@ -60,7 +60,7 @@ export default function AddPrimaryTable() {
 				<td>4,000</td>
 				<td>100</td>
 				<td>
-					<Link href="/price-calculator/evalute" className={styles.editLink}>Edit <BsPencil /></Link>
+					<Link href="/" className={styles.editLink}>Edit <BsPencil /></Link>
 				</td>
 			</tr>
 
@@ -79,7 +79,7 @@ export default function AddPrimaryTable() {
 				<td>4,000</td>
 				<td>100</td>
 				<td>
-					<Link href="/price-calculator/evalute" className={styles.editLink}>Edit <BsPencil /></Link>
+					<Link href="/" className={styles.editLink}>Edit <BsPencil /></Link>
 				</td>
 			</tr>
 

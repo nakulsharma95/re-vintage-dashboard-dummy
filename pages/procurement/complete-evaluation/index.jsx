@@ -32,7 +32,7 @@ function CompleteEvaluation() {
       </HeaderPrimary>
 
       <div className="bottom-white-border" />
-      <div className="mt-3">
+      <div className="mt-3 mb-3">
         <DealFilter title="2 Search" />
       </div>
       {completeData.map((item) => (
