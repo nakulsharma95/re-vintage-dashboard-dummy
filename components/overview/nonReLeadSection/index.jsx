@@ -1,8 +1,6 @@
-import React from 'react';
 import Link from 'next/link';
-import PieBig from '../pieBig';
 import LineChart from '../../charts/lineChart';
-import OutlineDropdown from '../../common/buttons/OutlineDropdown';
+import PieBig from '../pieBig';
 
 import styles from './style.module.scss';
 
@@ -69,10 +67,6 @@ function NonReLeadSection() {
                 <th colSpan={5}>
                   <div className="d-flex justify-content-between">
                     <span>Non-RE VDMP Enquiries</span>
-                    <OutlineDropdown
-                      dropdownTitle="1 Month"
-                      dropdownMenuTitle="2 Month"
-                    />
                   </div>
                 </th>
               </tr>
@@ -141,7 +135,11 @@ function NonReLeadSection() {
         <PieBig title="Non-RE Exchange Enquiries" />
         <div className={styles.nonLeadGraph}>
           <h5>Non-RE Exchange Enquiries</h5>
-          <LineChart options={optionLineChart} data={lineChartData} />
+          <LineChart
+            options={optionLineChart}
+            data={lineChartData}
+            size={200}
+          />
         </div>
       </div>
     </div>

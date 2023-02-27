@@ -1,53 +1,53 @@
-import React from "react";
-import { Row, Col, Dropdown } from "react-bootstrap";
-import { FiPlus } from "react-icons/fi";
-import Breadcrumb from "../../components/common/breadcrumbPrimary";
-import CreDetailCard from "../../components/cre-management/creDetailCard";
-import DealFilter from "../../components/dealClosure/dealFilter";
-import CrePerformanceCard from "../../components/cre-management/crePerformanceCard";
-import CrePerformanceMatrix from "../../components/cre-management/crePerformanceMatrix";
-import ButtonPrimary from "../../components/common/buttons/ButtonPrimary";
-import HeaderPrimary from "../../components/common/headerPrimary";
-import SearchPrimary from "../../components/common/searchPrimary";
+import React from 'react';
+import { Row, Col } from 'react-bootstrap';
+import { FiPlus } from 'react-icons/fi';
+import Breadcrumb from '../../components/common/breadcrumbPrimary';
+import CreDetailCard from '../../components/cre-management/creDetailCard';
+import DealFilter from '../../components/dealClosure/dealFilter';
+import CrePerformanceCard from '../../components/cre-management/crePerformanceCard';
+import CrePerformanceMatrix from '../../components/cre-management/crePerformanceMatrix';
+import ButtonPrimary from '../../components/common/buttons/ButtonPrimary';
+import HeaderPrimary from '../../components/common/headerPrimary';
+import SearchPrimary from '../../components/common/searchPrimary';
+import ThemeDropdown from '../../components/common/themeDropdown';
 
-import styles from "./style.module.scss";
-import ThemeDropdown from "~/components/common/themeDropdown";
+import styles from './style.module.scss';
 
 function CreManagement() {
   const cardData = [
     {
-      imageUrl: "/images/bob-Vishwas.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bob-Vishwas1.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas1.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bob-Vishwas2.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas2.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bob-Vishwas3.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bob-Vishwas3.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
   ];
   const performanceCardData = [
     {
-      cardBodyBg: "bgGray18",
+      cardBodyBg: 'bgGray18',
     },
     {
-      cardBodyBg: "bgGray28",
+      cardBodyBg: 'bgGray28',
     },
     {
-      cardBodyBg: "bgblack40",
+      cardBodyBg: 'bgblack40',
     },
     {
-      cardBodyBg: "bgGray18",
+      cardBodyBg: 'bgGray18',
     },
   ];
 
