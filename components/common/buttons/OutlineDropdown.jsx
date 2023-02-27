@@ -3,7 +3,7 @@ import styles from './style.module.scss';
 
 export default function OutlineDropdown(props) {
   return (
-    <Dropdown className={styles.outlineDropdownMenu}>
+    <Dropdown className={`${styles.outlineDropdownMenu} ${props.className}`}>
       <Dropdown.Toggle variant="" id="dropdown-basic" className={styles.dropdownToggle}>
         {props.dropdownTitle}
       </Dropdown.Toggle>

@@ -207,7 +207,20 @@ function Demand() {
       <div className={styles.demandContainer}>
         <div className={styles.demandHead}>
           <div className={styles.title}>Total Leads</div>
-          <div className={styles.stageTitle} />
+          <div className={styles.stageTitle}>
+            <div className="d-flex align-items-center me-4">
+              <div className="status-circle danger me-2" />
+              Hunter 350
+            </div>
+            <div className="d-flex align-items-center me-4">
+              <div className="status-circle sky me-2" />
+              Classic 350
+            </div>
+            <div className="d-flex align-items-center">
+              <div className="status-circle orange me-2" />
+              Scram 411
+            </div>
+          </div>
         </div>
 
         <div className={styles.graphSection}>
@@ -250,7 +263,9 @@ function Demand() {
           ))}
         </div>
       </div>
-      <DemandPrimaryTable />
+      <div className={styles.allTimeTable}>
+        <DemandPrimaryTable />
+      </div>
       <DetailPagination />
     </>
   );

@@ -1,8 +1,13 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
+import { Button, Table } from 'react-bootstrap';
 import styles from "./style.module.scss";
+import Dropdown from 'react-bootstrap/Dropdown';
+import { BsThreeDotsVertical } from 'react-icons/bs';
+import { FiFlag } from 'react-icons/fi';
+import { MdOutlineClose } from 'react-icons/md';
 
-function DemandPrimaryTable() {
+
+function DemandPrimaryTable(props) {
 	const demandData = [
 		{
 			sno: '01',
@@ -44,7 +49,7 @@ function DemandPrimaryTable() {
 			city: 'Delhi',
 			bikeName: 'Himalayan 350',
 		},
-	  ];
+	];
 	return (
 		<>
 			<Table bordered className={styles.demandTableMain}>
@@ -56,6 +61,9 @@ function DemandPrimaryTable() {
 						<th>Email</th>
 						<th>State</th>
 						<th>Request model</th>
+						{props.isAction && (
+							<th>Action</th>
+						)}
 					</tr>
 				</thead>
 				<tbody>
@@ -67,6 +75,24 @@ function DemandPrimaryTable() {
 							<td>{item.email}</td>
 							<td>{item.city}</td>
 							<td>{item.bikeName}</td>
+							{props.isActionTd && (
+								<td>
+									<div className={styles.actionTd}>
+										<Button variant="" className={styles.flagBtn}><FiFlag /></Button>
+										<Dropdown>
+											<Dropdown.Toggle variant="" id="dropdown-basic" className={styles.dropdownToggle}>
+												<BsThreeDotsVertical />
+											</Dropdown.Toggle>
+
+											<Dropdown.Menu className={styles.dropdownMenu}>
+												<span className={styles.closeDropdown}><MdOutlineClose /></span>
+												<Dropdown.Item href="#">Send to Customer</Dropdown.Item>
+												<Dropdown.Item href="#">Preview Link</Dropdown.Item>
+											</Dropdown.Menu>
+										</Dropdown>
+									</div>
+								</td>
+							)}
 						</tr>
 					))}
 				</tbody>

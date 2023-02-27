@@ -803,7 +803,10 @@ h6 {
       background: $theme-warning;
     }
     &.orange{
-      background-color: #E86A16;
+      background-color: $theme-orange-A16;
+    }
+    &.sky{
+      background-color: $theme-sky-4B;
     }
   }
 
