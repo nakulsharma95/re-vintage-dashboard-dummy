@@ -25,6 +25,18 @@ function NonRe() {
     {
       bikeName: '2021 TVS Ronin',
     },
+    {
+      bikeName: '2020 Pulsar NS',
+    },
+    {
+      bikeName: '2015 Avenger',
+    },
+    {
+      bikeName: '2021 TVS Ronin',
+    },
+    {
+      bikeName: '2021 TVS Ronin',
+    },
   ];
 
   const optionsDoughnut = {
@@ -118,22 +130,34 @@ function NonRe() {
       <Row className="mb-4">
         <Col md={6}>
           <div className={styles.enquireDoughnutChart}>
-            <DoughnutChart options={optionsDoughnut} data={doughnutChartData} />
+            <h4 className="mb-4">Non-RE Exchange Enquiries</h4>
+            <div className={styles.barChart}>
+              <DoughnutChart
+                size={210}
+                options={optionsDoughnut}
+                data={doughnutChartData}
+              />
+            </div>
           </div>
         </Col>
         <Col md={6}>
           <div className={styles.enquireBarChart}>
-            <VerticalBarChart data={barData} options={barChartOptions} />
+            <h4 className="mb-4">Non-RE Exchange Enquiries</h4>
+            <div className={styles.barChart}>
+              <VerticalBarChart
+                size={270}
+                data={barData}
+                options={barChartOptions}
+              />
+            </div>
           </div>
         </Col>
       </Row>
-      <Row>
+      <div className={styles.nonReDetailCard}>
         {nonReData.map((item) => (
-          <Col md={3}>
-            <NonReDetailCard reData={item} />
-          </Col>
+          <NonReDetailCard reData={item} />
         ))}
-      </Row>
+      </div>
     </>
   );
 }

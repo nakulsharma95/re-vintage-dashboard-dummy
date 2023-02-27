@@ -143,53 +143,50 @@ function InventoryTab() {
       </Row>
 
       <div className={styles.graphCards}>
-        <Row>
-          <Col lg={4}>
-            <div className={styles.graphCard}>
-              <div className="d-flex justify-content-between mb-3">
-                <h5>Total Inventory</h5>
-                <DownloadButton
-                  buttonLink="/dummy.pdf"
-                  iconUrl={<AiOutlineDownload className={styles.cardIcon} />}
-                />
-              </div>
-              <DoughnutChart
-                options={optionsDoughnut}
-                data={doughnutChartData}
-              />
-            </div>
-          </Col>
-          <Col lg={4}>
-            <div className={styles.graphCard}>
-              <div className="d-flex justify-content-between mb-3">
-                <h5>Total Inventory</h5>
-                <DownloadButton
-                  buttonLink="/dummy.pdf"
-                  iconUrl={<AiOutlineDownload className={styles.cardIcon} />}
-                />
-              </div>
-              <DoughnutChart
-                options={optionsDoughnut}
-                data={doughnutChartData}
-              />
-            </div>
-          </Col>
-          <Col lg={4}>
-            <div className={styles.graphCard}>
-              <div className="d-flex justify-content-between mb-3">
-                <h5>Total Listed</h5>
-                <DownloadButton
-                  buttonLink="/dummy.pdf"
-                  iconUrl={<AiOutlineDownload className={styles.cardIcon} />}
-                />
-              </div>
-              <DoughnutChart
-                options={optionsDoughnut}
-                data={doughnutChartData}
-              />
-            </div>
-          </Col>
-        </Row>
+        <div className={styles.graphCard}>
+          <div className="d-flex justify-content-between mb-3">
+            <h5>Total Inventory</h5>
+            <DownloadButton
+              buttonLink="/dummy.pdf"
+              iconUrl={<AiOutlineDownload className={styles.cardIcon} />}
+            />
+          </div>
+          <DoughnutChart
+            options={optionsDoughnut}
+            data={doughnutChartData}
+            size={200}
+          />
+        </div>
+
+        <div className={styles.graphCard}>
+          <div className="d-flex justify-content-between mb-3">
+            <h5>Total Inventory</h5>
+            <DownloadButton
+              buttonLink="/dummy.pdf"
+              iconUrl={<AiOutlineDownload className={styles.cardIcon} />}
+            />
+          </div>
+          <DoughnutChart
+            options={optionsDoughnut}
+            data={doughnutChartData}
+            size={200}
+          />
+        </div>
+
+        <div className={styles.graphCard}>
+          <div className="d-flex justify-content-between mb-3">
+            <h5>Total Listed</h5>
+            <DownloadButton
+              buttonLink="/dummy.pdf"
+              iconUrl={<AiOutlineDownload className={styles.cardIcon} />}
+            />
+          </div>
+          <DoughnutChart
+            options={optionsDoughnut}
+            data={doughnutChartData}
+            size={200}
+          />
+        </div>
       </div>
     </div>
   );
