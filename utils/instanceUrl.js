@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 const main = axios.create({
-  baseURL: 'https://jsonplaceholder.typicode.com/',
+  baseURL: `${process.env.NEXT_PUBLIC_API_BASE_URL}/`,
 });
 const authInstance = axios.create({
-  baseURL: 'https://jsonplaceholder.typicode.com/',
+  baseURL: `${process.env.NEXT_PUBLIC_API_BASE_URL}/`,
 });
 main.interceptors.request.use(
   (config) => {
