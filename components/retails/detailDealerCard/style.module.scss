@@ -37,7 +37,6 @@
       color: #cbc6c6;
       font-size: 12px;
       font-weight: 500;
-      margin-bottom: 0px;
       margin-right: 10px;
     }
  
@@ -62,6 +61,60 @@
       font-weight: 400;
     }
   }
+  .bikePrice{
+	display: flex;
+	align-items: center;
+	position: relative;
+	font-weight: 600;
+	font-size: 18px;
+	input{
+		background-color: $gray-2c;
+		padding: 5px;
+		padding-left: 23px;
+		width: 100%;
+		// max-width: 145px;
+		font-size: 18px;
+		font-weight: 600;
+		outline: none;
+		border: none;
+		color: #fff;
+	}
+	button.submitBtn{
+		display:inline-block;
+		background-color: $black-40;
+		border: none;
+		border-radius: 0;
+		width: 100%;
+		max-width: 90px;
+		margin-bottom: 2px;
+		height: 35px;
+		font-size: 12px;
+		text-transform: uppercase;
+		padding: 0 10px;
+		margin-left: 10px;
+		transition: all 0.5s;
+		font-weight: 500;
+		&:hover{
+			background-color: $gray-fd;
+			color: $gray-3;
+		}
+	}
+	svg{
+		cursor: pointer;
+		margin-left: 0.8rem;
+		display:inline-block;
+		width: 28px;
+	}
+	span{
+		position: absolute;
+		top:4px;
+		left: -1px;
+		svg{
+			margin-left: 0;
+			font-size: 21px;
+		}
+	}
+}
 .dealerLocation{
 	text-decoration: underline;
 	font-size: 14px;

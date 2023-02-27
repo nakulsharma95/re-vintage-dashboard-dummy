@@ -912,6 +912,7 @@ h6 {
   }
 }
 
+
 .fixed-Footer{
   display: flex;
   justify-content: end;
@@ -926,4 +927,24 @@ h6 {
     height: 35px;
   }
 
+}
+
+
+.addMotorBtn{
+	display: inline-block;
+	padding: 6px 15px;
+	color:$gray-0D;
+	background-color: $white;
+	font-size: 12px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: all 0.5s;
+	&:hover{
+		background-color: $theme-red-da;
+		color: $white;
+	}
+	svg{
+		display: inline-block;
+		margin-right: 3px;
+	}
 }

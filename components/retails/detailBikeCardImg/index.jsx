@@ -27,7 +27,7 @@ export default function DetailBikeCardImg() {
   ];
   return (
     <div>
-      <Card className={styles.detailCard}>
+      <Card className={`${styles.detailCard} mb-5`}>
         <Card.Body className={styles.detailCardBody}>
           <Row>
             {detailcard.map((item) => (

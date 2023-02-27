@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { Row, Col, Card } from "react-bootstrap/";
 import Button from "react-bootstrap/Button";
 import { FiPhoneCall, FiTrash2 } from "react-icons/fi";
+import { BiRupee } from "react-icons/bi";
 import { ImHammer2 } from "react-icons/im";
 import styles from "./style.module.scss";
 
 function DetailDealerCard(props) {
   return (
     <>
-      <Card className={styles.bikeDetailCardMain}>
+      <Card className={`${styles.bikeDetailCardMain} mb-5`}>
         <Card.Header className={`${styles.bikeDetailCardHeader} px-0`}>
           <div className="d-flex align-items-center">
             <h4 className={styles.bikeName}>
@@ -18,6 +19,14 @@ function DetailDealerCard(props) {
           </div>
           <div className="d-flex align-items-end">
             <p className={styles.priceTag}>Selling price</p>
+            <div className={styles.bikePrice}>
+              <span>
+                <BiRupee />
+              </span>
+              <input type="text" value="1,25,000.00" name="" id="" />
+
+              <Button className={styles.submitBtn}>EDIT</Button>
+            </div>
           </div>
         </Card.Header>
         <Card.Body className={`${styles.bikeCardBody} px-0`}>

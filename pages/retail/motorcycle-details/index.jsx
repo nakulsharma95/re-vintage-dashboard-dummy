@@ -21,7 +21,7 @@ export default function MotorcycleDetails() {
       supplierContact: "+91 98765 43219",
       evaluationDateTime: "Thu, 19 Nov at 08:30AM",
       reschedule: "none",
-      dealerLocation:"Neel Motors, Lajpat Nagar, Delhi"
+      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
     },
   ];
   return (
@@ -47,7 +47,6 @@ export default function MotorcycleDetails() {
           location={item.location}
           postedDate={item.date}
           dealerLocation={item.dealerLocation}
-          
         />
       ))}
 
