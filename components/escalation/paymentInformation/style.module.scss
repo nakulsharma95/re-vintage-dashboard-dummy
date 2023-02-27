@@ -7,10 +7,17 @@
 	padding: 1rem 1.5rem;
 	box-sizing: border-box;
 
+	@include mobile{
+		flex-direction: column;
+	}
+
 	.transerfer{
 		width: 70%;
 		border-right: 1px solid $gray-70;
 		margin-right: 2rem;
+		@include mobile{
+        width: 100%;
+		}
 		h6{
 			font-size: 14px;
 			color: $gray-cb;
@@ -31,6 +38,9 @@
 	}
 	.received{
 		width: 30%;
+		@include mobile{
+			width: 100%;
+			}
 		h6{
 			font-size: 14px;
 			color: $gray-cb;

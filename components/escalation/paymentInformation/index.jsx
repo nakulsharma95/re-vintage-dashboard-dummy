@@ -10,10 +10,10 @@ function PaymentInformation() {
       <div className={style.transerfer}>
         <h6>Transfer to</h6>
         <Row className={style.transerfer_info}>
-          <Col lg={2}>
+          <Col lg={2} sm={5} xs={6}>
             <p>Name:</p>
           </Col>
-          <Col lg={4}>
+          <Col lg={4} sm={5} xs={6}>
             <p>
               <span>Ranvijay Singh</span>
             </p>
@@ -23,7 +23,7 @@ function PaymentInformation() {
           </Col>
           <Col lg={4}>
             <p>
-              <span>ICICI165007845 (Savings)</span>{' '}
+              <span>ICICI165007845 (Savings)</span>
             </p>
           </Col>
         </Row>
@@ -33,7 +33,7 @@ function PaymentInformation() {
           </Col>
           <Col lg={4}>
             <p>
-              <span>₹ 1,19,300</span>{' '}
+              <span>₹ 1,19,300</span>
             </p>
           </Col>
           <Col lg={2}>
@@ -41,8 +41,8 @@ function PaymentInformation() {
           </Col>
           <Col lg={4}>
             <p>
-              {' '}
-              <span>ICICI0005</span>{' '}
+              
+              <span>ICICI0005</span>
             </p>
           </Col>
         </Row>
@@ -52,8 +52,8 @@ function PaymentInformation() {
           </Col>
           <Col lg={4}>
             <p>
-              {' '}
-              <span>Online</span>{' '}
+              
+              <span>Online</span>
             </p>
           </Col>
           <Col lg={2}>
@@ -61,7 +61,7 @@ function PaymentInformation() {
           </Col>
           <Col lg={4}>
             <p>
-              <span>Okhla Phase-1, Delhi</span>{' '}
+              <span>Okhla Phase-1, Delhi</span>
             </p>
           </Col>
         </Row>
@@ -71,9 +71,9 @@ function PaymentInformation() {
           </Col>
           <Col lg={4}>
             <p>
-              {' '}
-              <span className={style.refNo}>CSFDJG54879865</span>{' '}
-              <span>Save</span>{' '}
+              
+              <span className={style.refNo}>CSFDJG54879865</span>
+              <span>Save</span>
             </p>
           </Col>
           <Col lg={2}>
@@ -83,7 +83,7 @@ function PaymentInformation() {
             <p>
               <span className={style.downloadBtn}>
                 <FiDownload /> Download
-              </span>{' '}
+              </span>
             </p>
           </Col>
         </Row>
@@ -93,7 +93,7 @@ function PaymentInformation() {
           </Col>
           <Col lg={4}>
             <p>
-              <span>2NB9R2HF01</span>{' '}
+              <span>2NB9R2HF01</span>
             </p>
           </Col>
         </Row>
@@ -106,7 +106,7 @@ function PaymentInformation() {
           </Col>
           <Col lg={10}>
             <p>
-              <span>Neel Motors, Lajpat Nagar, Delhi</span>{' '}
+              <span>Neel Motors, Lajpat Nagar, Delhi</span>
             </p>
           </Col>
         </Row>
@@ -116,7 +116,7 @@ function PaymentInformation() {
           </Col>
           <Col lg={10}>
             <p>
-              <span>₹ 1,19,300</span>{' '}
+              <span>₹ 1,19,300</span>
             </p>
           </Col>
         </Row>
@@ -126,7 +126,7 @@ function PaymentInformation() {
           </Col>
           <Col lg={10}>
             <p>
-              <span>Online</span>{' '}
+              <span>Online</span>
             </p>
           </Col>
         </Row>
@@ -136,10 +136,10 @@ function PaymentInformation() {
           </Col>
           <Col lg={7}>
             <p>
-              <span className={style.refNo}>CSFDJG54879865</span>{' '}
+              <span className={style.refNo}>CSFDJG54879865</span>
               <span>
                 <FiEdit2 />
-              </span>{' '}
+              </span>
             </p>
           </Col>
         </Row>

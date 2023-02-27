@@ -5,6 +5,10 @@
   color: $white;
   padding: 1rem 1.5rem 0rem 1.5rem;
   margin: 1rem 0;
+@include mobile{
+  overflow-y: scroll;
+}
+  
 
 
   .escalationCard_head {
