@@ -85,7 +85,7 @@ function DealershipDetails() {
               Address <span>View in map</span>
             </h6>
             <p>
-              No F 29/2, Phase 2, Okhla Industrial Area, Okhla Industrial Area,
+              No F 29/2, Phase 2, Okhla Industrial Area, Okhla Industrial <br/> Area,
               New Delhi -110020
             </p>
           </div>

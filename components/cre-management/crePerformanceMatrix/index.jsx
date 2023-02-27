@@ -1,5 +1,6 @@
 import { Card, Tab, Table, Tabs } from 'react-bootstrap';
 import { AiOutlineDownload } from 'react-icons/ai';
+import DownloadButton from '../../common/buttons/downloadButton';
 import styles from './style.module.scss';
 
 export default function CrePerformanceMatrix(props) {
@@ -8,7 +9,12 @@ export default function CrePerformanceMatrix(props) {
       <Card className={`${styles.crePerformanceMatrix} mt-3`}>
         <div className={styles.matrixHeading}>
           <h2>{props.creTitle}</h2>
-          <AiOutlineDownload className={styles.downloadIcon} size={26} />
+          <DownloadButton
+            buttonLink="/dummy.pdf"
+            iconUrl={
+              <AiOutlineDownload className={styles.downloadIcon} size={26} />
+            }
+          />
         </div>
         <Tabs
           className={`${styles.tabCre} mb-3 mt-3`}

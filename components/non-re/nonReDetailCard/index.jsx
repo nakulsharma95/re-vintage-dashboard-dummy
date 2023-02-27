@@ -3,7 +3,7 @@ import { Card, Row, Col } from 'react-bootstrap';
 import styles from './style.module.scss';
 
 function NonReDetailCard(props) {
-  const { reData ,nonRE} = props;
+  const { reData, nonRE } = props;
   return (
     <Card className={styles.nonReCard}>
       <Card.Body>
@@ -22,7 +22,11 @@ function NonReDetailCard(props) {
         <Card.Text className={styles.dealerCode}>
           Dealer: <span>(C2N0RJ20FC2N)</span>
         </Card.Text>
-        <h6 className={`${styles.dealerAddress} ${!nonRE ? styles.addressUnderline : ''}`}>
+        <h6
+          className={`${styles.dealerAddress} ${
+            !nonRE ? styles.addressUnderline : ''
+          }`}
+        >
           Neel Motors, Lajpat Nagar, Delhi
         </h6>
       </Card.Body>

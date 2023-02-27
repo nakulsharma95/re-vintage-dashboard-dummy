@@ -111,7 +111,7 @@ header {
 	border: none;
   display: none;
 
-  @include mobile {
+  @include tablet {
     display: inline-flex;
   }
 }

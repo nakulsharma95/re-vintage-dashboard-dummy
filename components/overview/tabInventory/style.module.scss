@@ -30,10 +30,18 @@
 }
 
 .graphCards {
-  margin: 1rem 0;
+  margin: 24px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
   .graphCard {
     background-color: #282828;
-    height: 60vh;
     width: 100%;
+    padding: 20px;
+  }
+
+  .cardIcon {
+    font-size: 25px;
   }
 }
