@@ -10,6 +10,7 @@ import FilterButton from "../../../components/common/filterButton";
 import HeaderPrimary from "../../../components/common/headerPrimary";
 import OutlineButton from "../../../components/common/buttons/OutlineButton";
 import DashboardCard from "../../../components/dashboardCard";
+import TableListView from "../../../components/retails/tableListView";
 
 export default function MarketPlace() {
  
@@ -107,6 +108,8 @@ export default function MarketPlace() {
         moveToOlx
         sortTabTitle="12 Result Found"
       />
+
+      <TableListView />
 
       <Row>
         {cardData.map((item) => (

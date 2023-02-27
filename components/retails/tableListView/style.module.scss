@@ -1,0 +1,66 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.listViewTable{
+	tr{
+		th{
+			color: $white;
+			font-weight: 500;
+			font-size: 12px;
+			background-color: $black-40;
+			border-bottom: none;
+			vertical-align: middle;
+			padding: 13px 10px;
+		}
+		td{
+			color: $white;
+			font-weight: 500;
+			font-size: 12px;
+			border-color: $gray-70;
+			background-color: $gray-28;
+			vertical-align: middle;
+			padding: 12px 10px;
+			.listImg{
+				img{
+					width: 100%;
+					max-width: 50px;
+					height: 40px;
+					object-fit: cover;
+					border-radius: 2px;
+				}
+			}
+			.modelYear{
+				display: block;
+			}
+			.regNo{
+				color: $theme-yellow-E8;
+			}
+			a{
+				text-decoration: underline;
+				color: $white;
+			}
+			.dealerCode{
+				display: block;
+				font-size: 10px;
+				color: $gray-F3;
+			}
+
+			.viewLink{
+				color: $theme-yellow-E8;
+				transition: all 0.5s;
+				&:hover{
+					color: $white;
+				}
+			}
+
+			.statusRadio{
+				.sliderRound{
+					input:checked {
+						background-color: $theme-green;
+						border-color: $theme-green;
+					}
+				}
+			}
+		}
+	}
+}
