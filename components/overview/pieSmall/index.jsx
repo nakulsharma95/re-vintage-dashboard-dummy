@@ -15,6 +15,9 @@ function PieSmall(props) {
         labels: {
           fontSize: 20,
           color: 'white',
+          usePointStyle: true,
+          pointStyle: 'circle',
+          padding: 15,
         },
       },
     },
@@ -34,12 +37,11 @@ function PieSmall(props) {
     ],
   };
   return (
-    <div className={styles.pieContainer}>
-      {props.withouticon && <h5>Source</h5>}
-      {props.icon && (
-        <h5>
-          Procured <IoIosArrowForward />
-        </h5>
+    <div className={`${styles.pieContainer} ${props.containerStyle}`}>
+      {props.title && (
+        <div>
+          <h5>{props.title}</h5> {props.icon && <IoIosArrowForward />}
+        </div>
       )}
 
       <DoughnutChart options={optionsDoughnut} data={doughnutChartData} />

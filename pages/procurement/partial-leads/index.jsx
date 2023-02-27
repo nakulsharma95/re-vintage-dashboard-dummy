@@ -12,6 +12,7 @@ import FilterButton from '../../../components/common/filterButton';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 
 export default function PartialLeads() {
+
   const cardData = [
     {
       ownerName: 'Rishab Sharma',
@@ -54,7 +55,7 @@ export default function PartialLeads() {
           rightIcon={<RiShareBoxFill />}
           className="mr-2"
         />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
 

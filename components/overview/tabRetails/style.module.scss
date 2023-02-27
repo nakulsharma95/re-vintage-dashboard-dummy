@@ -1,12 +1,39 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
 
-.retailFooter{
-	display: flex;
-	justify-content: space-between;
-}
-.tabRetailsTable{
-width: 75%;
-}
+.retailTable {
+  .tabRetailsTable {
+    width: 100%;
+  }
+  .tableStyle {
+    width: 100%;
+    margin: 0;
+    
+    thead,
+    tbody,
+    tfoot,
+    tr,
+    td,
+    th {
+      border: none;
+    }
 
-.tabRetailsPie{
-	width: 20%;
+    .boldHeadIcon {
+      margin-left: 10px;
+    }
+
+    a {
+      color: $theme-yellow-E8;
+      text-decoration: none;
+    }
+  }
+
+  .tabRetailsPie {
+    width: 100%;
+  }
+
+  .containerPieStyle {
+    width: 100%;
+    height: 100%;
+  }
 }

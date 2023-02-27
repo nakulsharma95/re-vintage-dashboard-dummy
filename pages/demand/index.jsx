@@ -207,12 +207,10 @@ function Demand() {
       <div className={styles.demandContainer}>
         <div className={styles.demandHead}>
           <div className={styles.title}>Total Leads</div>
-          <div className={styles.stageTitle}>
-            
-          </div>
+          <div className={styles.stageTitle} />
         </div>
 
-        <div className={styles.dummyGraphBox}>
+        <div className={styles.graphSection}>
           <LineChart
             options={optionLineChart}
             data={lineChartData}

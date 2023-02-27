@@ -183,6 +183,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0 7px;
   padding: 1rem 1rem 0 0rem;
 
   .downloadBtn {
@@ -214,6 +215,7 @@
     height: 38px;
     border: none;
     padding: 0 1rem;
+    font-weight: 500;
   }
 }
 

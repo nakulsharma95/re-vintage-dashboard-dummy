@@ -4,6 +4,8 @@
 .inspectionBikeMain{
 	background-color: $gray-28;
 	position: relative;
+	height: 100%;
+	
 	&::after{
 		content: '';
 		width: 100%;

@@ -50,8 +50,45 @@ h6 {
   font-family: 'Guardian Sans', sans-serif;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .scroll-hide {
   @include scrollHide;
+}
+
+// Sidebar Active Style
+.sidebar-global {
+  button[aria-expanded="true"] {
+    background: $black;
+    border-bottom: 1px solid $gray-28;
+
+    .nav-item {
+      color: $theme-red-da;
+    }
+
+    a {
+      color: $white !important;
+    }
+  }
+
+  .accordion-button:not(.collapsed) {
+    box-shadow: none;
+  }
+
+  .active {
+    color: $white !important;
+    background-color: $black;
+    
+    a {
+      color: $white !important;
+    }
+
+    .nav-item {
+      color: $theme-red-da;
+    }
+  }
 }
 
 // four-oh-four
@@ -86,6 +123,8 @@ h6 {
   }
 }
 
+
+// Custom Tab Style
 .custom-tab-style .nav-link {
   color: #fff;
   font-size: 14px;
@@ -121,6 +160,58 @@ h6 {
   border: none;
   border-bottom: 0 solid;
   margin-bottom: 0;
+}
+
+
+// default White tab style
+.default-tab-style {
+ border: 1px solid $gray-70;
+
+  .nav-item {
+    border-right: 1px solid $gray-70;
+
+    &:last-child {
+      border: none;
+    }
+
+    button {
+      border-radius: 0;
+      color: $gray-a7;
+      font-size: 12px;
+      margin-bottom: 0 !important;
+      font-weight: 600;
+      border: none;
+
+      .activeTab {
+        background-color: $white;
+        color: $gray-a7;
+      }
+
+      &:hover{
+        border: none;
+        background-color: $white;
+        color: $black-40;
+      }
+
+      &:focus{
+        border: none !important;
+      }
+    }
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  .nav-link {
+    border-radius: 0;
+  }
+
+  .active {
+    background: $white !important;
+    border: none;
+    color: $black-40 !important;
+  }
 }
 
 // Pagination Start ---------------------------------
@@ -445,18 +536,25 @@ h6 {
   }
 }
 
-.dashboardTable .table-striped > tbody > tr:nth-of-type(odd) > * {
-  --bs-table-accent-bg: #282828;
-  color: #bfbfbf;
-}
+
+// Tables Style here
 
 .dashboardTable .table > :not(caption) > * > * {
-  padding: 0.5rem 0.5rem;
-  background-color: #181818 !important;
+  padding: 1rem;
   border-bottom-width: none;
+  background-color: $gray-28;
+  color: rgba($gray-F3, 0.8);
 }
 
+.dashboardTable .table-odd > tbody > tr:nth-of-type(even) > * {
+  background-color: $gray-18;
+  color: $white;
+}
 
+.dashboardTable .table-even > tbody > tr:nth-of-type(odd) > * {
+  background-color: $gray-18;
+  color: $white;
+}
 // Card Bg Colour
 
 .bgGray18 {
@@ -592,6 +690,26 @@ h6 {
   }
 }
 
+// motor-cycle-accordian
+.motor-cycle-accordian {
+  .accordion-body {
+    padding: 0;
+    background-color: #191919;
+  }
+
+  .accordion-header .accordion-button {
+    background-color: $black;
+  }
+
+  .motor-cycle-accordian-inner {
+    padding: 20px;
+
+    .accordion-header .accordion-button {
+      background-color: $gray-2;
+    }
+  }
+}
+
 .re-detailFootBg {
   display: flex;
   background-color: $black;
@@ -684,6 +802,9 @@ h6 {
     &.warning {
       background: $theme-warning;
     }
+    &.orange{
+      background-color: #E86A16;
+    }
   }
 
 .bg-gray-3{
@@ -695,6 +816,12 @@ h6 {
   gap: 10px;
   margin-bottom: 12px;
   margin-top: 24px;
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
 
 
@@ -708,4 +835,47 @@ h6 {
 // cre-space-section
 .cre-space-section {
   margin-bottom: 60px;
+}
+
+.pricePrimaryCol{
+  .col-md-2{
+    @media (min-width: 768px){
+      width: 19.8%;
+    }
+  }
+}
+
+.leadsModalMain{
+  .modal-dialog{
+    width: 100%;
+    max-width: 732px;
+    margin: 50px auto;
+    .modal-content{
+      border-radius: 0;
+      border: none;
+      background-color: $gray-28;
+      color: $white;
+      padding: 0;
+    }
+  }
+}
+
+.dark-card-style {
+  background-color: #282828;
+  padding: 15px 15px 15px 15px;
+
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .downloadIcon {
+      cursor: pointer;
+    }
+  }
 }

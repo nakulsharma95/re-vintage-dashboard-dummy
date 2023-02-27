@@ -43,7 +43,7 @@ async function verifyToken(token, successResponse, failureResponse) {
 }
 
 async function authenticateUser(req) {
-  const failureResponse = NextResponse.redirect(new URL('/', req.url));
+  const failureResponse = NextResponse.redirect(new URL('/login', req.url));
   const successResponse = NextResponse.redirect(new URL('/homepage', req.url));
 
   let token = req.cookies.get(process.env.NEXT_PUBLIC_COOKIE_NAME);
@@ -58,7 +58,7 @@ async function authenticateUser(req) {
 export async function middleware(request) {
   const { pathname } = request.nextUrl;
   if (pathname.match(/\.(.*)$/)) return; // prevent middleware running on public files
-  const isPath = pathname === '/' || pathname.includes('/sign-up');
+  const isPath = pathname === '/login' || pathname.includes('/sign-up');
   const { isAuthenticated, successResponse, failureResponse } =
     await authenticateUser(request);
   if (!isPath && !isAuthenticated) {

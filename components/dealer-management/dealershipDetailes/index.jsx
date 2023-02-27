@@ -66,13 +66,13 @@ function DealershipDetails() {
             </div>
             <div className={style.motors_list}>
               <Image
-                src="/images/dealership-icon1.svg"
+                src="/images/dealership-icon2.svg"
                 width="28"
                 height="17"
                 alt=""
               />
               <div className={style.listItemContent}>
-                <h6>96</h6>
+                <h6>06</h6>
                 <p>Branches</p>
               </div>
             </div>

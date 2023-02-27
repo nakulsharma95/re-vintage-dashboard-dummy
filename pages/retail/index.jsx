@@ -59,13 +59,45 @@ export default function Retail() {
       imageUrl: '/images/bikeImage4.png',
       dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
+    {
+      imageUrl: '/images/bikeImage2.png',
+      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
+    },
+    {
+      imageUrl: '/images/bikeImage3.png',
+      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
+    },
+    {
+      imageUrl: '/images/bikeImage4.png',
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
+    },
+    {
+      imageUrl: '/images/bikeImage3.png',
+      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
+    },
+    {
+      imageUrl: '/images/bikeImage2.png',
+      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
+    },
+    {
+      imageUrl: '/images/bikeImage3.png',
+      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
+    },
+    {
+      imageUrl: '/images/bikeImage4.png',
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
+    },
+    {
+      imageUrl: '/images/bikeImage3.png',
+      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
+    },
   ];
   return (
     <div>
       <Breadcrumb title="Retail" />
       <HeaderPrimary headerClass="mb-2" title="Retail">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
       <div className="dashboard-card">

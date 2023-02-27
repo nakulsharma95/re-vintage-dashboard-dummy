@@ -1,32 +1,30 @@
-import React from 'react';
-import { Row, Col } from 'react-bootstrap';
-import { RiShareBoxFill } from 'react-icons/ri';
-import CloserBikeCard from '../../../components/dealClosure/closerCard';
-import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import TabPrimary from '../../../components/common/tabPrimary';
-import DealFilter from '../../../components/dealClosure/dealFilter';
-import SearchPrimary from '../../../components/common/searchPrimary';
-import FilterButton from '../../../components/common/filterButton';
-import HeaderPrimary from '../../../components/common/headerPrimary';
-import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import React from "react";
+import { Row, Col } from "react-bootstrap";
+import { RiShareBoxFill } from "react-icons/ri";
+import CloserBikeCard from "../../../components/dealClosure/closerCard";
+import Breadcrumb from "../../../components/common/breadcrumbPrimary";
+import TabPrimary from "../../../components/common/tabPrimary";
+import DealFilter from "../../../components/dealClosure/dealFilter";
+import SearchPrimary from "../../../components/common/searchPrimary";
+import FilterButton from "../../../components/common/filterButton";
+import HeaderPrimary from "../../../components/common/headerPrimary";
+import OutlineButton from "../../../components/common/buttons/OutlineButton";
 
 function PaymentsPending() {
   const cardData = [
     {
-      imageUrl: '/images/bikeImage.png',
-      overDue: 'evolutionOver',
-      bikeStatus: 'Upload Content',
+      imageUrl: "/images/bikeImage.png",
+      overDue: "evolutionOver",
     },
     {
-      imageUrl: '/images/bikeImage2.png',
-      bikeStatus: 'Under Refurbishment',
+      imageUrl: "/images/bikeImage2.png",
+      bikeStatus: "Payment OVERDUE",
     },
     {
-      imageUrl: '/images/bikeImage3.png',
-      bikeStatus: 'Under Approval',
+      imageUrl: "/images/bikeImage3.png",
     },
     {
-      imageUrl: '/images/bikeImage4.png',
+      imageUrl: "/images/bikeImage4.png",
     },
   ];
   return (
@@ -34,7 +32,7 @@ function PaymentsPending() {
       <Breadcrumb title="Deal Closure" addmoretitle="Payment Pending" />
       <HeaderPrimary headerClass="mb-2" title="Payment Pending">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
       <TabPrimary title1="Dealer" title2="Seller Portal (12)" />

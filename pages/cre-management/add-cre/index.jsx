@@ -11,7 +11,7 @@ function AddCre() {
       <Breadcrumb title="CRE Management" addmoretitle="Add CRE" />
 
       <HeaderPrimary title="CRE Management" subTitle="CRE Management module">
-        <SearchPrimary />
+        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
       </HeaderPrimary>
 
       <Row>

@@ -14,6 +14,9 @@ function PieBig(props) {
         labels: {
           fontSize: 20,
           color: 'white',
+          usePointStyle: true,
+          pointStyle: 'circle',
+          padding: 15,
         },
       },
     },

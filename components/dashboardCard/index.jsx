@@ -1,4 +1,4 @@
-import { DropdownButton, Dropdown } from 'react-bootstrap';
+import OutlineDropdownWhite from '../common/buttons/OutlineDropdownWhite';
 import styles from './style.module.scss';
 
 export default function DashboardCard(props) {
@@ -13,14 +13,10 @@ export default function DashboardCard(props) {
             {props.title} <br /> {props.titleBr}
           </h3>
           {props.dropdown && (
-            <DropdownButton
-              className={styles.dashboardDropdown}
-              id="dropdown-basic-button"
-              title="1 Month"
-            >
-              <Dropdown.Item href="#/action-1">Month 2</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Month 3</Dropdown.Item>
-            </DropdownButton>
+            <OutlineDropdownWhite
+              dropdownTitle={props.dropdownTitle}
+              dropdownMenuTitle={props.dropdownMenuTitle}
+            />
           )}
         </div>
         <div className={styles.numbers}>{props.description}</div>

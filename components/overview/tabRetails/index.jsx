@@ -1,14 +1,13 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import CrePerformanceMatrix from '../../../components/cre-management/crePerformanceMatrix';
-import Table from 'react-bootstrap/Table';
+import CrePerformanceMatrix from '../../cre-management/crePerformanceMatrix';
 
 import styles from './style.module.scss';
 import PieSmall from '../pieSmall';
 
 function RetailsTab() {
   return (
-    <div>
+    <div className={styles.retailTable}>
       <Row>
         <Col xxl={12} lg={12} md={12}>
           <CrePerformanceMatrix
@@ -22,60 +21,67 @@ function RetailsTab() {
       </Row>
 
       <div className={styles.retailFooter}>
-        <div className={`${styles.tabRetailsTable}  dashboardTable`}>
-          <Table striped bordered variant="dark" className={styles.tableStyle}>
-            <thead>
-              <tr>
-                <th colSpan={5}>
-                  <div className="d-flex justify-content-between">
-                    <span>Test Ride Requests</span>
-                    {/* <OutlineDropdown dropdownTitle="1 Month" dropdownMenuTitle="2 Month" /> */}
-                  </div>
-                </th>
-              </tr>
-              <tr>
-                <th>Reference ID</th>
-                <th>Date & Time</th>
-                <th>Model</th>
-                <th>Name</th>
-                <th>Contact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>FB29FH9219HR1</td>
-                <td>Thu, 19 Nov at 08:30AM</td>
-                <td>Classic 350</td>
-                <td>Rishbh singh</td>
-                <td>+91987654320</td>
-              </tr>
-              <tr>
-                <td>FB29FH9219HR1</td>
-                <td>Thu, 19 Nov at 08:30AM</td>
-                <td>Classic 350</td>
-                <td>Rishbh singh</td>
-                <td>+91987654320</td>
-              </tr>
-              <tr>
-                <td>FB29FH9219HR1</td>
-                <td>Thu, 19 Nov at 08:30AM</td>
-                <td>Classic 350</td>
-                <td>Rishbh singh</td>
-                <td>+91987654320</td>
-              </tr>
-              <tr>
-                <td>FB29FH9219HR1</td>
-                <td>Thu, 19 Nov at 08:30AM</td>
-                <td>Classic 350</td>
-                <td>Rishbh singh</td>
-                <td>+91987654320</td>
-              </tr>
-            </tbody>
-          </Table>
-        </div>
-        <div className={styles.tabRetailsPie}>
-          <PieSmall withouticon />
-        </div>
+        <Row>
+          <Col lg={8}>
+            <div className={`${styles.tabRetailsTable} dashboardTable`}>
+              <table className={`${styles.tableStyle} table table-even`}>
+                <thead>
+                  <tr>
+                    <th colSpan={5}>
+                      <div className="d-flex justify-content-between">
+                        <span>Test Ride Requests</span>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>Reference ID</th>
+                    <th>Date & Time</th>
+                    <th>Model</th>
+                    <th>Name</th>
+                    <th>Contact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>FB29FH9219HR1</td>
+                    <td>Thu, 19 Nov at 08:30AM</td>
+                    <td>Classic 350</td>
+                    <td>Rishbh singh</td>
+                    <td>+91987654320</td>
+                  </tr>
+                  <tr>
+                    <td>FB29FH9219HR1</td>
+                    <td>Thu, 19 Nov at 08:30AM</td>
+                    <td>Classic 350</td>
+                    <td>Rishbh singh</td>
+                    <td>+91987654320</td>
+                  </tr>
+                  <tr>
+                    <td>FB29FH9219HR1</td>
+                    <td>Thu, 19 Nov at 08:30AM</td>
+                    <td>Classic 350</td>
+                    <td>Rishbh singh</td>
+                    <td>+91987654320</td>
+                  </tr>
+                  <tr>
+                    <td>FB29FH9219HR1</td>
+                    <td>Thu, 19 Nov at 08:30AM</td>
+                    <td>Classic 350</td>
+                    <td>Rishbh singh</td>
+                    <td>+91987654320</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </Col>
+
+          <Col lg={4}>
+            <PieSmall
+              containerStyle={styles.containerPieStyle}
+              title="Sold & Booked"
+            />
+          </Col>
+        </Row>
       </div>
     </div>
   );
