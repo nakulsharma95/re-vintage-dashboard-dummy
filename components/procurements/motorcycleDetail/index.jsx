@@ -10,7 +10,6 @@ import styles from './style.module.scss';
 import ButtonPrimary from '../../common/buttons/ButtonPrimary';
 import CustomModal from '../../modals/cancelModal';
 import BiddingTimer from '../../biddingPortal/biddingTimer';
-import { style } from '@mui/system';
 
 function MotorcycleDetail(props) {
   const [cancelModal, setCancelModal] = useState(false);

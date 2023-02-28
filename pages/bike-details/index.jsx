@@ -1,4 +1,6 @@
+import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import Link from 'next/link';
 import BikeCardFooter from '../../components/common/cardFooter';
 import Bids from '../../components/biddingPortal/bids';
 import BikeDetailTitle from '../../components/common/detailHeader';
@@ -8,8 +10,12 @@ import styles from './style.module.scss';
 import BackButton from '../../components/common/buttons/BackButton';
 import BikeSlider from '../../components/common/thumbnailSlider';
 import MotorcycleDetail from '../../components/procurements/motorcycleDetail';
+import { MdOutlineClose, MdErrorOutline, MdCheckCircleOutline } from 'react-icons/md';
+import { FiPhone } from 'react-icons/fi';
 
-export default function BiddingDetails() {
+
+
+export default function BiddingDetails(props) {
   const bikeDetailData = [
     {
       bikeName: 'HUNTER 350',
@@ -93,7 +99,22 @@ export default function BiddingDetails() {
             />
           ))}
         </div>
+
+        {props.bikeContact && (
+          <div className={styles.contactCols}>
+            <li><Link href="/"><FiPhone /> Call Owner</Link></li>
+            <li><Link href="/"><FiPhone /> Call Dealer</Link></li>
+            <li><Link href="/"><MdOutlineClose /> Drop Negotiation</Link></li>
+          </div>
+        )}
       </div>
+      {props.bikeSendDetail && (
+        <div className={styles.detailSendCols}>
+          <li><MdCheckCircleOutline style={{ color: '#36942f' }} /> Send <Link href="/" className={styles.sendLink}>‘Payment detail link’</Link> to Customer <Link href="/">- Send</Link></li>
+          <li><MdErrorOutline style={{ color: '#f59e0b' }} /> Send <Link href="/" className={styles.sendLink}>‘Payment detail link’</Link> to Customer <Link href="/">- Send</Link></li>
+          <li><MdErrorOutline style={{ color: '#f59e0b' }} /> Send Customer details to Dealer <Link href="/">- Send</Link></li>
+        </div>
+      )}
       <Bids />
       <BikeInspection />
       <BikeHistory />
