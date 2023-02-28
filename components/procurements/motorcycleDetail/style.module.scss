@@ -145,6 +145,9 @@
   position: relative;
   right: 20rem;
   
+  @include mobile{
+    right: 0;
+  }
 }
 
 .dealerDetails{

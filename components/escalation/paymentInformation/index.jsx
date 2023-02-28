@@ -18,28 +18,28 @@ function PaymentInformation() {
               <span>Ranvijay Singh</span>
             </p>
           </Col>
-          <Col lg={2}>
+          <Col lg={2} sm={5} xs={6}>
             <p>Account No. </p>
           </Col>
-          <Col lg={4}>
+          <Col lg={4} sm={5} xs={6}>
             <p>
               <span>ICICI165007845 (Savings)</span>
             </p>
           </Col>
         </Row>
         <Row>
-          <Col lg={2}>
+          <Col lg={2} sm={5} xs={6}>
             <p>Amount: </p>
           </Col>
-          <Col lg={4}>
+          <Col lg={4} sm={5} xs={6}>
             <p>
               <span>₹ 1,19,300</span>
             </p>
           </Col>
-          <Col lg={2}>
+          <Col lg={2} sm={5} xs={6}>
             <p>Ifsc Code: </p>
           </Col>
-          <Col lg={4}>
+          <Col lg={4} sm={5} xs={6}>
             <p>
               
               <span>ICICI0005</span>
@@ -47,39 +47,39 @@ function PaymentInformation() {
           </Col>
         </Row>
         <Row>
-          <Col lg={2}>
+          <Col lg={2} sm={5} xs={6}>
             <p>Mode: </p>
           </Col>
-          <Col lg={4}>
+          <Col lg={4} sm={5} xs={6}>
             <p>
               
               <span>Online</span>
             </p>
           </Col>
-          <Col lg={2}>
+          <Col lg={2} sm={5} xs={6}>
             <p>Branch: </p>
           </Col>
-          <Col lg={4}>
+          <Col lg={4} sm={5} xs={6}>
             <p>
               <span>Okhla Phase-1, Delhi</span>
             </p>
           </Col>
         </Row>
         <Row>
-          <Col lg={2}>
+          <Col lg={2} sm={5} xs={6}>
             <p>Payment Ref No. </p>
           </Col>
-          <Col lg={4}>
+          <Col lg={4} sm={5} xs={6}>
             <p>
               
               <span className={style.refNo}>CSFDJG54879865</span>
               <span>Save</span>
             </p>
           </Col>
-          <Col lg={2}>
+          <Col lg={2}sm={5} xs={6}>
             <p>Cancelled Check: </p>
           </Col>
-          <Col lg={4}>
+          <Col lg={4}sm={5} xs={6}>
             <p>
               <span className={style.downloadBtn}>
                 <FiDownload /> Download
@@ -88,10 +88,10 @@ function PaymentInformation() {
           </Col>
         </Row>
         <Row>
-          <Col lg={2}>
+          <Col lg={2}sm={5} xs={6}>
             <p>MSD ID: </p>
           </Col>
-          <Col lg={4}>
+          <Col lg={4}sm={5} xs={6}>
             <p>
               <span>2NB9R2HF01</span>
             </p>
@@ -101,40 +101,40 @@ function PaymentInformation() {
       <div className={style.received}>
         <h6>Received From</h6>
         <Row>
-          <Col lg={2}>
+          <Col lg={2} sm={4} xs={4}>
             <p>Name: </p>
           </Col>
-          <Col lg={10}>
+          <Col lg={10} sm={8} xs={8}>
             <p>
               <span>Neel Motors, Lajpat Nagar, Delhi</span>
             </p>
           </Col>
         </Row>
         <Row>
-          <Col lg={2}>
+          <Col lg={2} sm={5} xs={4}>
             <p>Amount:</p>
           </Col>
-          <Col lg={10}>
+          <Col lg={10} sm={5} xs={8}>
             <p>
               <span>₹ 1,19,300</span>
             </p>
           </Col>
         </Row>
         <Row>
-          <Col lg={2}>
+          <Col lg={2} sm={5} xs={4}>
             <p>Mode: </p>
           </Col>
-          <Col lg={10}>
+          <Col lg={10} sm={5} xs={8}>
             <p>
               <span>Online</span>
             </p>
           </Col>
         </Row>
         <Row>
-          <Col lg={5}>
+          <Col lg={5} sm={5} xs={5}>
             <p>Payment Ref No. </p>
           </Col>
-          <Col lg={7}>
+          <Col lg={7} sm={5} xs={6}>
             <p>
               <span className={style.refNo}>CSFDJG54879865</span>
               <span>

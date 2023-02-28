@@ -114,18 +114,17 @@ function MotorcycleDetail(props) {
             </p>
             <hr className={styles.dealerDetails_line} />
             <Row className={styles.dealerDetails_lists}>
-              <Col className={styles.dealerDetails_list}>
-                {' '}
+              <Col xs={6} sm={4} lg={3} className={styles.dealerDetails_list}>
                 <IoHammer className={styles.list_icon} /> Bid Details
               </Col>
-              <Col className={styles.dealerDetails_list}>
+              <Col xs={6} sm={4} lg={3} className={styles.dealerDetails_list}>
                 <IoCallOutline className={styles.list_icon} /> Call Dealer
               </Col>
-              <Col className={styles.dealerDetails_list}>
+              <Col xs={6} sm={4} lg={3} className={styles.dealerDetails_list}>
                 <IoCallOutline className={styles.list_icon} />
                 Call CRE
               </Col>
-              <Col>
+              <Col xs={6} sm={4} lg={3} >
                 <RxCross2 className={styles.list_icon} />
                 Drop
               </Col>
