@@ -110,6 +110,7 @@ export default function UpcomingBids() {
               {upcomingBikeData.map((item) => (
                 <Col md={3}>
                   <UpcomingBikeCard
+                    isCardTitle
                     baseprice
                     arrowBtn
                     imageUrl={item.imageUrl}
@@ -122,12 +123,11 @@ export default function UpcomingBids() {
                 </Col>
               ))}
             </Row>
+            <DetailPagination className="mt-3" />
           </Tab>
           <Tab eventKey="title2" title="Next Bidding (31 Dec)" />
         </Tabs>
       </div>
-
-      <DetailPagination className="mt-3" />
     </div>
   );
 }

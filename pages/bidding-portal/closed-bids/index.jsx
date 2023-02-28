@@ -80,11 +80,14 @@ export default function ClosedBids() {
               {closedBikeData.map((item) => (
                 <Col md={3}>
                   <ClosedBikeCard
+                    className="img-shadow"
+                    highestBidSymbol
                     arrowBtn
+                    isClosedTitle
                     closedBid
                     imageUrl={item.imageUrl}
-                    bikeName={item.name}
-                    bikeNumber={item.number}
+                    closedBikeName={item.name}
+                    closedBikeNumber={item.number}
                     kmDrive={item.km}
                     modelYear={item.year}
                     location={item.location}
@@ -94,11 +97,37 @@ export default function ClosedBids() {
                 </Col>
               ))}
             </Row>
+            <DetailPagination className="mt-3" />
           </Tab>
-          <Tab eventKey="title2" title="No Bids" />
+          <Tab eventKey="title2" title="No Bids">
+            <SortTabs
+              selectAllCheck
+              sortTabTitle="25 Bids Available"
+            />
+            <Row className="mb-3">
+              {closedBikeData.map((item) => (
+                <Col md={3}>
+                  <ClosedBikeCard
+                    className="img-shadow"
+                    bidTitle="No bidding on this motorcycle."
+                    isCheckbox
+                    arrowBtn
+                    isClosedTitle
+                    highestBid
+                    imageUrl={item.imageUrl}
+                    closedBikeName={item.name}
+                    closedBikeNumber={item.number}
+                    kmDrive={item.km}
+                    modelYear={item.year}
+                    location={item.location}
+                  />
+                </Col>
+              ))}
+            </Row>
+            <DetailPagination className="mt-3" />
+          </Tab>
         </Tabs>
       </div>
-      <DetailPagination className="mt-3" />
     </div>
   );
 }

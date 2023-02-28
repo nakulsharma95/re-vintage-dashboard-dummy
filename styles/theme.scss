@@ -948,3 +948,20 @@ h6 {
 		margin-right: 3px;
 	}
 }
+
+.img-shadow{
+  &::after{
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 80px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(0, 0, 0, 0)), to(black)) !important;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, black 100%) !important;
+    margin-top: -115px;
+    z-index: 1;
+    bottom: 0;
+  }
+}

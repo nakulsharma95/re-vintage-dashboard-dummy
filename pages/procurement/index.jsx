@@ -247,7 +247,7 @@ function Procurement() {
         {schedulednData.map((item) => (
           <Col md={3}>
             <BikeCard
-              className="bg-gray-3 py-2"
+              className="py-2"
               isKmData
               isViewBtn
               isestimatedPrice

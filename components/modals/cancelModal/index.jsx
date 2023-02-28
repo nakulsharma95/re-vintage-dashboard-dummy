@@ -24,7 +24,7 @@ function CancelModal(props) {
 
         <div className="text-center">
           <img
-            src="/images/Group-15036.svg"
+            src={props.imgUrl}
             className={styles.cancelModalImage}
             alt=""
           />
