@@ -9,7 +9,7 @@ import OutlineButton from '../../components/common/buttons/OutlineButton';
 import DealerTable from '../../components/dealer-management/dealerTable';
 import FilterButton from '../../components/common/filterButton';
 import EmptyState from '../../components/emptyState';
-import MobileDealerCard from '../../components/dealer-management/mobileDealerCard';
+// import MobileDealerCard from '../../components/dealer-management/mobileDealerCard';
 
 function DealerManagement() {
   return (
@@ -25,9 +25,9 @@ function DealerManagement() {
         <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
-      
-      <MobileDealerCard />
-      {/* <div className="custom-tab-style">
+
+      {/* <MobileDealerCard /> */}
+      <div className="custom-tab-style">
         <Tabs
           className="mb-3"
           defaultActiveKey="title1"
@@ -49,7 +49,7 @@ function DealerManagement() {
             />
           </Tab>
         </Tabs>
-      </div> */}
+      </div>
     </div>
   );
 }
