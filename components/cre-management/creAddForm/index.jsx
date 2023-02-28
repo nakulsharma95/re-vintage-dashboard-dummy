@@ -13,7 +13,7 @@ export default function CreAddForm() {
           <span className={styles.inputSpan}>Name</span>
         </Col>
 
-        <Col className={`${styles.inputField} `} xl={4} lg={4} md={12}>
+        <Col className={`${styles.inputField}  col-6`} xl={4} lg={4} md={6}>
           <Form>
             <Form.Group className="" controlId="formBasicEmail">
               <Form.Control type="email" placeholder="First name" />
@@ -21,7 +21,7 @@ export default function CreAddForm() {
           </Form>
         </Col>
 
-        <Col className={`${styles.inputField}`} xl={4} lg={4} md={12}>
+        <Col className={`${styles.inputField} col-6`} xl={4} lg={4} md={6}>
           <Form>
             <Form.Group className="" controlId="formBasicEmail">
               <Form.Control type="email" placeholder="Last name" />
@@ -77,7 +77,7 @@ export default function CreAddForm() {
           <span className={styles.inputSpan}>Date of Birth</span>
         </Col>
 
-        <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
+        <Col className={`${styles.inputField} `} xl={8} lg={8} md={12}>
           <Form>
             <Form.Group className="" controlId="formBasicEmail">
               <Form.Control type="text" placeholder="29/08/2022" />
@@ -91,7 +91,7 @@ export default function CreAddForm() {
           <span className={styles.inputSpan}>Phone</span>
         </Col>
 
-        <Col className={`${styles.inputField} `} xl={2} lg={2} md={2}>
+        <Col className={`${styles.inputField} col-6 `} xl={2} lg={2} md={6}>
           <Form>
             <Form.Group className="" controlId="formBasicEmail">
               <Form.Control type="email" placeholder="+91" />
@@ -99,7 +99,7 @@ export default function CreAddForm() {
           </Form>
         </Col>
 
-        <Col className={`${styles.inputField}`} xl={6} lg={6} md={6}>
+        <Col className={`${styles.inputField} col-6`} xl={6} lg={6} md={6}>
           <Form>
             <Form.Group className="" controlId="formBasicEmail">
               <Form.Control type="email" placeholder="+91 98765 43210" />
@@ -113,7 +113,7 @@ export default function CreAddForm() {
           <span className={styles.inputSpan}>State and city</span>
         </Col>
 
-        <Col className={`${styles.inputField} `} xl={4} lg={4} md={12}>
+        <Col className={`${styles.inputField}  col-6`} xl={4} lg={4} md={6}>
           <Form>
             <Form.Group className="" controlId="formBasicEmail">
               <Form.Control type="email" placeholder="Delhi" />
@@ -121,7 +121,7 @@ export default function CreAddForm() {
           </Form>
         </Col>
 
-        <Col className={`${styles.inputField}`} xl={4} lg={4} md={12}>
+        <Col className={`${styles.inputField} col-6`} xl={4} lg={4} md={6}>
           <Form>
             <Form.Group className="" controlId="formBasicEmail">
               <Form.Control type="email" placeholder="New Delhi" />
@@ -136,7 +136,7 @@ export default function CreAddForm() {
           <span className={styles.inputSpan}>Gender</span>
         </Col>
 
-        <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
+        <Col className={`${styles.inputField} `} xl={8} lg={8} md={12}>
           <Form>
             <Form.Group className="" controlId="formBasicEmail">
               <Form.Control type="text" placeholder="Male" />
@@ -150,7 +150,7 @@ export default function CreAddForm() {
           <span className={styles.inputSpan}>Marital Status</span>
         </Col>
 
-        <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
+        <Col className={`${styles.inputField} `} xl={8} lg={8} md={12}>
           <Form>
             <Form.Group className="" controlId="formBasicEmail">
               <Form.Control type="text" placeholder="Single" />
@@ -166,7 +166,7 @@ export default function CreAddForm() {
           <span className={styles.inputSpan}>Current Address</span>
         </Col>
 
-        <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
+        <Col className={`${styles.inputField} `} xl={8} lg={8} md={12}>
           <textarea
             class="form-control"
             id="exampleFormControlTextarea1"
@@ -181,7 +181,7 @@ export default function CreAddForm() {
           <span className={styles.inputSpan}>Permanent Address</span>
         </Col>
 
-        <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
+        <Col className={`${styles.inputField} `} xl={8} lg={8} md={12}>
           <textarea
             class="form-control"
             id="exampleFormControlTextarea1"
@@ -196,7 +196,7 @@ export default function CreAddForm() {
           <span className={styles.inputSpan}>About</span>
         </Col>
 
-        <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
+        <Col className={`${styles.inputField} `} xl={8} lg={8} md={12}>
           <textarea
             class="form-control"
             id="exampleFormControlTextarea1"

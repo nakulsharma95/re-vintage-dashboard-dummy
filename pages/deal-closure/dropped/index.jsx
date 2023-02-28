@@ -1,34 +1,33 @@
-import React from 'react';
-import { Row, Col, Button } from 'react-bootstrap';
-import { BiChevronDown } from 'react-icons/bi';
-import { RiShareBoxFill } from 'react-icons/ri';
-import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import TabPrimary from '../../../components/common/tabPrimary';
-import styles from './style.module.scss';
-import CloserBikeCard from '../../../components/dealClosure/closerCard';
-import DetailPagination from '../../../components/common/paginationPrimary';
-import SearchPrimary from '../../../components/common/searchPrimary';
-import FilterButton from '../../../components/common/filterButton';
-import HeaderPrimary from '../../../components/common/headerPrimary';
-import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import React from "react";
+import { Row, Col, Button, Tabs, Tab } from "react-bootstrap";
+import { BiChevronDown } from "react-icons/bi";
+import { RiShareBoxFill } from "react-icons/ri";
+import Breadcrumb from "../../../components/common/breadcrumbPrimary";
+import styles from "./style.module.scss";
+import CloserBikeCard from "../../../components/dealClosure/closerCard";
+import DetailPagination from "../../../components/common/paginationPrimary";
+import SearchPrimary from "../../../components/common/searchPrimary";
+import FilterButton from "../../../components/common/filterButton";
+import HeaderPrimary from "../../../components/common/headerPrimary";
+import OutlineButton from "../../../components/common/buttons/OutlineButton";
 
 function PaymentsPending() {
   const cardData = [
     {
-      imageUrl: '/images/bikeImage.png',
-      overDue: 'evolutionOver',
-      bikeStatus: 'Upload Content',
+      imageUrl: "/images/bikeImage.png",
+      overDue: "evolutionOver",
+      bikeStatus: "Upload Content",
     },
     {
-      imageUrl: '/images/bikeImage2.png',
-      bikeStatus: 'Under Refurbishment',
+      imageUrl: "/images/bikeImage2.png",
+      bikeStatus: "Under Refurbishment",
     },
     {
-      imageUrl: '/images/bikeImage3.png',
-      bikeStatus: 'Under Approval',
+      imageUrl: "/images/bikeImage3.png",
+      bikeStatus: "Under Approval",
     },
     {
-      imageUrl: '/images/bikeImage4.png',
+      imageUrl: "/images/bikeImage4.png",
     },
   ];
   return (
@@ -39,8 +38,7 @@ function PaymentsPending() {
         <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
-      <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
-      <div className={styles.sortByMain}>
+      <div className={`${styles.sortByMain} mt-4`}>
         <h5 className={styles.sortByTitle}>3 Leads</h5>
         <div className="d-flex align-items-center">
           <span className={styles.sortByTxt}>Sort By :</span>
@@ -51,7 +49,7 @@ function PaymentsPending() {
       </div>
       <Row>
         {cardData.map((item) => (
-          <Col md={3}>
+          <Col xxl={3} xl={4} lg={6} md={6}>
             <CloserBikeCard
               data={item}
               isHighestBid="Highest Bid"

@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import styles from "./style.module.scss";
 import { BiLocationPlus, BiMailSend, BiPhone } from "react-icons/bi";
-import ThemeDropdown from "~/components/common/themeDropdown";
+import OutlineDropdown from "~/components/common/buttons/OutlineDropdown";
 
 function CreProfileCard(props) {
   return (
@@ -29,12 +29,10 @@ function CreProfileCard(props) {
               md={6}
             >
               {" "}
-              <ThemeDropdown
-                dropDownTitle="Action"
-                dropItem1="Action1"
-                dropItem2="Action2"
-                dropItem3="Action3"
-              />{" "}
+              <OutlineDropdown
+                dropdownTitle="Actions"
+                options={["Temporary Disable", "Unavailable", "Edit Details"]}
+              />
             </Col>
           </Row>
           <Row className="mt-5">
