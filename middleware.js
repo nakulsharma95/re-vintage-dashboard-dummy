@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 async function verifyToken(token, successResponse, failureResponse) {
   const verifyResponse = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/verify-token`,
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/v3/auth/dashboard/verify-token`,
     {
       headers: new Headers({
         Authorization: token.split('#')?.[0],
@@ -12,26 +12,32 @@ async function verifyToken(token, successResponse, failureResponse) {
   );
   const res = await verifyResponse?.json();
 
-  if (res?.code === 200) {
+  if (res?.code === 200 && true) {
     return { isAuthenticated: true, successResponse };
   }
-  if (res?.code === 401 || res?.code === 402) {
+  if (res?.code === 401 || res?.code === 402 || false) {
+    const splitToken = token?.split('#');
     const generateResponse = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/generate-token`,
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/v3/auth/dashboard/generate-token`,
       {
         method: 'POST',
-        body: {
-          refreshToken: token.split('#')?.[1],
-          userId: token.split('#')?.[2],
+        headers: {
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify({
+          refreshToken: splitToken?.[1],
+          userId: splitToken?.[2],
+        }),
       }
     );
     const response = await generateResponse?.json();
-
     if (response.code === 200) {
+      const tempToken = btoa(
+        `${response?.data?.accessToken}#${response?.data?.refreshToken}#${splitToken?.[2]}`
+      );
       successResponse.cookies.set(
         process.env.NEXT_PUBLIC_COOKIE_NAME,
-        'set the new token here'
+        tempToken
       );
       return { isAuthenticated: true, successResponse };
     }

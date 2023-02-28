@@ -7,7 +7,10 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 import Link from 'next/link';
 import { useState } from 'react';
 import styles from './style.module.scss';
-import { useLoginMutation } from '../../redux/api/endpoints/auth';
+import {
+  useLoginMutation,
+  useEncryptMutation,
+} from '../../redux/api/endpoints/auth';
 
 export default function Login() {
   const [formData, setFormData] = useState({
@@ -17,7 +20,8 @@ export default function Login() {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [status, setStatus] = useState('');
-  const [login, { isLoading }] = useLoginMutation();
+  const [login] = useLoginMutation();
+  const [encrypt] = useEncryptMutation();
   const handleChange = (event) => {
     setFormData({
       ...formData,
@@ -30,22 +34,33 @@ export default function Login() {
   }
   const loginHandler = async (e) => {
     e.preventDefault();
-    if ((formData.email || formData.password) === '' || isLoading) return;
+    if ((formData.email || formData.password) === '' || status === 'Loading...')
+      return;
     if (!validateEmail(formData.email)) {
       setStatus('username / phone');
       return;
     }
+    setStatus('Loading...');
     try {
-      const userData = await login({
-        credentials: btoa(`${formData.email}:${formData.password}`),
+      const encryptCredentials = await encrypt({
+        string: `${formData.email}:${formData.password}`,
       });
-      if ([401, 403, 404].includes(userData?.data?.code)) {
-        setStatus(userData?.data?.message || '');
+      if (encryptCredentials?.data?.code === 200) {
+        const userData = await login({
+          credentials: encryptCredentials?.data?.data,
+        });
+        if ([401, 403, 404].includes(userData?.data?.code)) {
+          setStatus(userData?.data?.message || '');
+        } else {
+          setStatus('');
+          router.push('/homepage');
+        }
       } else {
-        router.push('/homepage');
+        setStatus(encryptCredentials?.data?.message || '');
       }
     } catch (err) {
       console.log(err);
+      setStatus('Something went wrong!');
     }
   };
   return (
@@ -74,7 +89,7 @@ export default function Login() {
                   value={formData.email}
                   onChange={handleChange}
                 />
-                {status?.includes('username / phone') && (
+                {status?.includes('Username') && (
                   <span className="text-error">
                     Please enter correct email.
                   </span>
@@ -98,7 +113,7 @@ export default function Login() {
                 >
                   {showPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
                 </Button>
-                {status?.includes('password') && (
+                {status?.includes('Password') && (
                   <span className="text-error">
                     Please enter correct password
                   </span>
@@ -110,7 +125,7 @@ export default function Login() {
                   type="submit"
                   className={styles.submitBtn}
                 >
-                  {isLoading ? 'Loading...' : 'Login'}
+                  {status === 'Loading...' ? 'Loading...' : 'Login'}
                 </Button>
               </div>
             </Form>

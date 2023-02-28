@@ -1,21 +1,20 @@
-import {
-  setCookie,
-} from 'cookies-next';
+import { setCookie } from 'cookies-next';
 import { apiSlice } from '../main';
-import { setCredentials } from '../../user';
+import { setCredentials } from '../../slices/user';
 
 export const authApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     login: builder.mutation({
       query: (credentials) => ({
-        url: '/auth/login',
+        url: '/v3/auth/dashboard/login',
         method: 'POST',
         body: { ...credentials },
       }),
       onQueryStarted: async (arg, api) => {
         try {
           const { data } = await api.queryFulfilled;
-          const jwtAccessToken = await data?.data?.jwtAccessToken;
+          if ([401, 403, 404].includes(await data?.code)) return;
+          const jwtAccessToken = await data?.data?.accessToken;
           const refreshToken = await data?.data?.refreshToken;
           const guid = await data?.data?.user?.guid;
           const tokens = `${jwtAccessToken}#${refreshToken}#${guid}`;
@@ -31,9 +30,16 @@ export const authApiSlice = apiSlice.injectEndpoints({
         }
       },
     }),
+    encrypt: builder.mutation({
+      query: (credentials) => ({
+        url: '/v3/auth/dashboard/encrypt',
+        method: 'POST',
+        body: { ...credentials },
+      }),
+    }),
     verifyToken: builder.query({
       query: () => ({
-        url: '/auth/verify-token',
+        url: '/v3/auth/dashboard/verify-token',
         method: 'GET',
         skip: true,
       }),
@@ -41,9 +47,5 @@ export const authApiSlice = apiSlice.injectEndpoints({
   }),
 });
 
-export const {
-  useLoginMutation,
-  useVerifyTokenQuery,
-  useGetProfileQuery,
-  useGetProfileMutation,
-} = authApiSlice;
+export const { useLoginMutation, useVerifyTokenQuery, useEncryptMutation } =
+  authApiSlice;
