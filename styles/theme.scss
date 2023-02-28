@@ -133,6 +133,18 @@ h6 {
 .custom-tab-style .nav-tabs {
   border-color: $gray-70;
 
+  @include mobile {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+  }
+
+  .nav-item {
+    @include mobile {
+      white-space: nowrap;
+    }
+  }
+
   .nav-link {
     border: none;
     padding: 10px 0px 10px 0;

@@ -15,6 +15,11 @@
 		background: transparent;
 		border-radius: 0;
 		border: 1px solid $gray-70;
+		
+		@include mobile {
+			min-width: auto;
+		}
+
 		&::placeholder{
 			color: $gray-a7;
 		}
