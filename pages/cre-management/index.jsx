@@ -10,8 +10,8 @@ import HeaderPrimary from "../../components/common/headerPrimary";
 import SearchPrimary from "../../components/common/searchPrimary";
 
 import styles from "./style.module.scss";
-import ThemeDropdown from "~/components/common/themeDropdown";
 import SortTabs from "~/components/common/sortTabs";
+import OutlineDropdown from "~/components/common/buttons/OutlineDropdown";
 
 function CreManagement() {
   const cardData = [
@@ -57,18 +57,15 @@ function CreManagement() {
 
       <HeaderPrimary title="CRE Management" subTitle="CRE Management module">
         <SearchPrimary placeholder="Search Name, Location, Reference ID" />
-        <ThemeDropdown
-          dropDownTitle="Delhi"
-          dropItem1="Puna"
-          dropItem2="Mumbai"
-          dropItem3="Hayrana"
-        />
-        <ThemeDropdown
-          dropDownTitle="Zone"
-          dropItem1="Zone1"
-          dropItem2="Zone2"
-          dropItem3="Zone3"
-        />
+        <OutlineDropdown
+            dropdownTitle="Zone"
+            options={["Zone1", "Zone2", "Zone3"]}
+          />
+     
+       <OutlineDropdown
+            dropdownTitle="Delhi"
+            options={["Pune", "Mumbai", "Jaipur"]}
+          />
 
         <Link href="cre-management/add-cre" className="addMotorBtn">
           <FiPlus /> Add Motorcycle
@@ -80,7 +77,7 @@ function CreManagement() {
 
       <Row>
         {cardData.map((item) => (
-          <Col xxl={3} xl={4} lg={6}>
+          <Col xxl={3} xl={4} lg={6} md={6}>
             <CreDetailCard
               name="Bob Vishwas"
               jobPost="(Senior CRE)"

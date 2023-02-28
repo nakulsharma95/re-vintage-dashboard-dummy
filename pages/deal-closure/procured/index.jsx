@@ -1,9 +1,8 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col,Tabs,Tab } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
 import CloserBikeCard from '../../../components/dealClosure/closerCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import TabPrimary from '../../../components/common/tabPrimary';
 import DealFilter from '../../../components/dealClosure/dealFilter';
 import SearchPrimary from '../../../components/common/searchPrimary';
 import FilterButton from '../../../components/common/filterButton';
@@ -37,11 +36,20 @@ function PaymentsPending() {
         <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
-      <TabPrimary title1="Dealer" title2="Seller Portal (12)" />
+      <div className="custom-tab-style">
+        <Tabs
+          className="mb-3"
+          defaultActiveKey="title3"
+          id="uncontrolled-tab-example"
+        >
+          <Tab eventKey="title1" title="Dealer (25)" />
+          <Tab eventKey="title2" title="Seller Portal (12)" />
+        </Tabs>
+      </div>
       <DealFilter title="8 Leads" />
       <Row>
         {cardData.map((item) => (
-          <Col md={3}>
+          <Col xxl={3} xl={4} lg={6}  md={6}>
             <CloserBikeCard
               data={item}
               isHighestBid="Evolution Price"
