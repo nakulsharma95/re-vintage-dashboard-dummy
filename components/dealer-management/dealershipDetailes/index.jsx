@@ -22,7 +22,7 @@ function DealershipDetails() {
       >
         <div className="status-circle success mt-3" />
         <p className={style.dealership_status}>
-          Status: <span>Active</span>{' '}
+          Status: <span>Active</span>
         </p>
         <OutlineDropdown
           dropdownTitle="Actions"
@@ -52,6 +52,7 @@ function DealershipDetails() {
                 width="28"
                 height="17"
                 alt=""
+                className={style.motors_list_icon}
               />
               <div className={style.listItemContent}>
                 <h6>35</h6>
@@ -64,6 +65,7 @@ function DealershipDetails() {
                 width="28"
                 height="17"
                 alt=""
+                className={style.motors_list_icon}
               />
               <div className={style.listItemContent}>
                 <h6>10</h6>
@@ -76,6 +78,7 @@ function DealershipDetails() {
                 width="28"
                 height="17"
                 alt=""
+                className={style.motors_list_icon}
               />
               <div className={style.listItemContent}>
                 <h6>06</h6>

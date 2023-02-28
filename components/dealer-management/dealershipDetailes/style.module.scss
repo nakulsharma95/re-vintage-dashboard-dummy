@@ -1,5 +1,5 @@
-@import "../../../styles/variables/colors";
-@import "../../../styles/variables/mixins";
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/mixins';
 .dealershipDetails {
   button {
     background-color: transparent;
@@ -19,7 +19,7 @@
     font-size: 12px;
     color: $gray-cb;
 
-    span{
+    span {
       color: $white;
     }
   }
@@ -29,6 +29,10 @@
   .motors_head {
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
     .motors_heading {
       h3 {
         font-size: 24px;
@@ -51,30 +55,49 @@
     .motors_lists {
       display: flex;
 
-	  .listItemContent {
-		width: 100%;
-	  }
+      @include mobile{
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+      }
+
+      
+
+      .listItemContent {
+        width: 100%;
+      }
 
       .motors_list {
         display: flex;
         justify-content: space-between;
         align-items: center;
-		margin-bottom: 40px;
-		gap: 0 20px;
+        margin-bottom: 40px;
+        gap: 0 20px;
 
-		&::before {
-			background: $gray-65;
-			height: 80%;
-			width: 2px;
-			display: flex;
-			content: '';
-			margin: 0 24px 22px;
-		}
+        @include mobile {
+          flex-direction: column;
+          justify-content: start;
+        }
+        .motors_list_icon{
+          @include mobile{
+            position: relative;
+            left: 0.5rem;
+            top: 1rem;
+          }
+        }
+        &::before {
+          background: $gray-65;
+          height: 80%;
+          width: 2px;
+          display: flex;
+          content: '';
+          margin: 0 24px 22px;
+        }
 
         &:first-child {
-			&::before { 
-				display: none;
-			}
+          &::before {
+            display: none;
+          }
         }
         h6 {
           font-size: 16px;
@@ -93,12 +116,20 @@
   .motors_cards {
     display: flex;
     justify-content: space-between;
-	gap: 0 14px;
-	
+    gap: 0 14px;
+
+    @include mobile{
+      flex-direction: column;
+    }
+
     .motors_card {
       background-color: $gray-28;
       padding: 1.5rem;
       width: 100%;
+
+      @include mobile{
+        margin: 0.5rem 0;
+      }
 
       h6 {
         font-size: 12px;
