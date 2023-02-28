@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Image } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { BiRupee } from 'react-icons/bi';
 import { BsPencil } from 'react-icons/bs';
+import CustomCheckBox from '../../../components/common/customCheckBox';
 import ArrowButton from '../../common/buttons/ArrowButton';
 import ButtonPrimary from '../../common/buttons/ButtonPrimary';
 import styles from './style.module.scss';
@@ -15,16 +16,31 @@ function BiddingBikeCard(props) {
   };
   return (
     <Card className={styles.bikeCardCols}>
-      <Card.Img
-        className={styles.bikeImg}
-        variant="top"
-        src={props.imageUrl}
-        alt="not-found"
-      />
+      <div className={`${styles.bikeImg} ${props.className}`}>
+        <Image
+          variant="top"
+          src={props.imageUrl}
+          alt="not-found"
+        />
+      </div>
+      {props.isClosedTitle && (
+        <div className={styles.closedBidTitle}>
+          {props.closedBikeName} <br /> <span>{props.closedBikeNumber}</span>
+        </div>
+      )}
+
+      {props.isCheckbox && (
+        <div className={styles.selectBoxCheck}>
+          <CustomCheckBox />
+        </div>
+      )}
+
       <Card.Body className={styles.cardPanel}>
-        <Card.Title className={styles.bikeName}>
-          {props.bikeName} <span>- {props.bikeNumber}</span>
-        </Card.Title>
+        {props.isCardTitle && (
+          <Card.Title className={styles.bikeName}>
+            {props.bikeName} <span>- {props.bikeNumber}</span>
+          </Card.Title>
+        )}
 
         <div className={styles.priceList}>
           {props.baseprice && (
@@ -34,7 +50,7 @@ function BiddingBikeCard(props) {
                 <span>
                   <BiRupee />
                 </span>
-                <input type="text" value="1,25,000.00" name="" id="" />
+                <input type="text" defaultValue="1,25,000.00" name="" id="" />
                 <BsPencil
                   onClick={showSave}
                   className={showSaveBtn ? 'd-none' : ''}
@@ -48,11 +64,13 @@ function BiddingBikeCard(props) {
 
           {props.highestBid && (
             <div className={styles.priceFlex}>
-              <div className={styles.sbTitle}>Highest Bid</div>
+              <div className={styles.sbTitle}>{props.bidTitle}</div>
               <div className={styles.bikePrice}>
-                <span>
-                  <BiRupee />
-                </span>
+                {props.highestBidSymbol && (
+                  <span>
+                    <BiRupee />
+                  </span>
+                )}
                 {props.highestBidPrice}
               </div>
             </div>
@@ -61,12 +79,15 @@ function BiddingBikeCard(props) {
           {props.closedBid && (
             <div className={styles.priceFlex}>
               <div className={styles.closedPriceCols}>
-                <div className={styles.sbTitle}>Highest Bid</div>
+                <div className={styles.sbTitle}>{props.bidTitle}</div>
                 <div className={styles.bikePrice}>
-                  <span>
-                    <BiRupee />
-                  </span>
+                  {props.highestBidSymbol && (
+                    <span>
+                      <BiRupee />
+                    </span>
+                  )}
                   {props.highestClosedBidPrice}
+
                 </div>
               </div>
               <div className={styles.closedPriceCols}>

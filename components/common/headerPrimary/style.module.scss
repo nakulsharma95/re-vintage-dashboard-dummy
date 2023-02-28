@@ -9,6 +9,8 @@
 
   @include mobile {
     flex-direction: column;
+    // justify-content: start;
+    align-items: start;
   }
 
   .headerActionSection {
@@ -17,7 +19,7 @@
     gap: 0 12px;
 
     @include mobile {
-      flex-direction: column;
+      flex-direction: row;
       gap: 12px;
     }
   }

@@ -24,6 +24,10 @@
 .procuredMotorTopcard{
   display: flex;
   background-color: $gray-2;
+
+  @include mobile{
+    flex-direction: column;
+  }
 }
 
 .imgBox {

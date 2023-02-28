@@ -160,6 +160,7 @@ function EvaluationRequestDetailCard(props) {
 
       <CancelModal
         isOpen={cancelModal}
+        imgUrl="/images/warning.svg"
         handleClose={cancelToggleModal}
         title="Are you sure you want to reschedule the lead?"
         handleYes={rescheduleToggleModal}

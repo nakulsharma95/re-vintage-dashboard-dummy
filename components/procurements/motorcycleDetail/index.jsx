@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Row, Col, Button } from 'react-bootstrap';
 import { BiDotsVerticalRounded, BiRupee } from 'react-icons/bi';
 import { IoHammer, IoCallOutline } from 'react-icons/io5';
 import { RxCross2 } from 'react-icons/rx';
+import Form from 'react-bootstrap/Form';
+import { FiCopy } from 'react-icons/fi';
 import styles from './style.module.scss';
+import ButtonPrimary from '../../common/buttons/ButtonPrimary';
+import CustomModal from '../../modals/cancelModal';
+import BiddingTimer from '../../biddingPortal/biddingTimer';
 
 function MotorcycleDetail(props) {
+  const [cancelModal, setCancelModal] = useState(false);
+  const [acceptModal, setAcceptModal] = useState(false);
+  const cancelToggleModal = () => {
+    setCancelModal(!cancelModal);
+  };
+  const acceptToggleModal = () => {
+    setAcceptModal(!acceptModal);
+  };
   return (
     <div
       className={`${styles.motorcycleDetail} ${styles.completeBorderRight} px-3`}
@@ -115,7 +128,6 @@ function MotorcycleDetail(props) {
             <hr className={styles.dealerDetails_line} />
             <Row className={styles.dealerDetails_lists}>
               <Col className={styles.dealerDetails_list}>
-                {' '}
                 <IoHammer className={styles.list_icon} /> Bid Details
               </Col>
               <Col className={styles.dealerDetails_list}>
@@ -145,6 +157,92 @@ function MotorcycleDetail(props) {
           </div>
         </div>
       )}
+
+      {/* This section add to closed detail page */}
+
+      {props.isClosedPrice && (
+        <div className={styles.closedBidPrice}>
+          <div className={styles.motorsDetails}>
+            <span>Current highest bid by</span>
+            <Button variant="" onClick={cancelToggleModal}>
+              {props.highestBidPrice}
+            </Button>
+          </div>
+          <div className="d-flex">
+            <div className={styles.priceTag}>
+              <BiRupee /> {props.evaluationFootPrice}
+            </div>
+            <div className={styles.priceBtn}>
+              <ButtonPrimary onClick={acceptToggleModal} title="ACCEPT" />
+            </div>
+          </div>
+        </div>
+      )}
+
+      <CustomModal
+        isOpen={cancelModal}
+        handleClose={cancelToggleModal}
+        imgUrl="/images/icons/bid-hammer.svg"
+        title="Are you sure you want to allocate this bid to Neel Motors?"
+      />
+
+      <CustomModal
+        isOpen={acceptModal}
+        imgUrl="/images/icons/bid-hammer.svg"
+        handleClose={acceptToggleModal}
+        title="Are you sure you want to accept the bidding price by Neel Motors?"
+      />
+
+      {/* end */}
+
+      {/* This section add to Upcoming Bid detail page */}
+      {props.isUpcomingBidDetail && (
+        <div className={styles.upcomingDetailPrice}>
+          <div className={styles.title}>Base Price</div>
+          <div className="d-flex">
+            <div className={styles.priceCols}>
+              <BiRupee /> 1,20,000.00
+            </div>
+            <div className={styles.upcomingBtn}>
+              <Link href="/">Edit</Link>
+            </div>
+          </div>
+          <div className="mt-2">
+            <BiddingTimer title="Bidding will active in" timer="02 : 23 : 36" />
+          </div>
+        </div>
+      )}
+      {/* end */}
+
+      {/* This section add to Seller Bid detail page */}
+      {props.isSellerBidDetail && (
+        <div className={styles.sellerDetailPrice}>
+          <div className={styles.priceCols}>
+            <div className={styles.title}>Base Price: </div> <BiRupee />{' '}
+            1,25,000.00
+          </div>
+          <div className={styles.sellerIdCols}>
+            <div className={styles.title}>Seller Portal ID</div>
+            <div className={styles.sellerId}>
+              <span>CSFDJG54879865</span>
+              <Button variant="">
+                <FiCopy />
+              </Button>
+            </div>
+          </div>
+          <div className={styles.title}>Seller Portal Price</div>
+          <div className={styles.sellerIInput}>
+            <div className={styles.inputCols}>
+              <BiRupee />
+              <Form.Control type="text" defaultValue="1,25,000.00" />
+            </div>
+            <div className={styles.saveBtn}>
+              <ButtonPrimary title="SUBMIT" />
+            </div>
+          </div>
+        </div>
+      )}
+      {/* end */}
     </div>
   );
 }

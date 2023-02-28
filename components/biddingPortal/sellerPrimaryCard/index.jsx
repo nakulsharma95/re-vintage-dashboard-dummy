@@ -41,7 +41,7 @@ export default function SellerPrimaryCard(props) {
 				</span>
 				<Form.Control
 					type="text"
-					value="1,25,00,000"
+					defaultValue="1,25,00,000"
 					id=""
 					name=""
 				/>
