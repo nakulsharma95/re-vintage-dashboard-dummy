@@ -7,7 +7,33 @@
 	margin-bottom: 20px;
 	position: relative;
 	.bikeImg{
-		border-radius: 0;
+		position: relative;
+		img{
+			width: 100%;
+			border-radius: 0
+		}
+	}
+	.closedBidTitle{
+		font-size: 18px;
+		color: #ffffff;
+		margin-bottom: 0;
+		padding: 10px;
+		margin-top: -43px;
+		position: relative;
+		z-index: 9;
+		padding-bottom: 2px;
+		line-height: 2.2rem;
+		font-weight: 500;
+		span{
+			color: $theme-yellow-E8;
+			font-size: 14px;
+			margin-top: 2px;
+		}
+		svg{
+			cursor: pointer;
+			color: $white;
+			font-size: 12px;
+		}
 	}
 	.bikeName{
 		font-size: 18px;
@@ -16,6 +42,7 @@
 		padding: 10px;
 		display: flex;
 		align-items: center;
+		font-weight: 500;
 		span{
 			color: $theme-yellow-E8;
 			font-size: 14px;
@@ -33,7 +60,7 @@
 		padding: 0;
 		.priceList{
 			background-color: $gray-3;
-			padding:5px 10px;
+			padding:10px 10px;
 			.priceFlex{
 				display: flex;
 				align-items: center;

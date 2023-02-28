@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import { AiOutlineClose } from 'react-icons/ai';
 import { FaRegClipboard } from 'react-icons/fa';
+import { MdOutlineClose } from 'react-icons/md';
 import styles from './style.module.scss';
 import ArrowButton from '../../common/buttons/ArrowButton';
 import PartialLeadsDetail from '../../../components/modals/partialLeadsModal';
@@ -54,29 +55,71 @@ export default function DetailCard(props) {
                 <p className="mb-0 text-white ">{props.pinCode}</p>
               </div>
             </div>
-
-            <div className={`${styles.detailsDivide} py-2 `}>
-              <ArrowButton
-                onClick={props.detailHandler}
-                title="Contact Customer"
-              />
-              <div className={`${styles.detailSendForm} text-white`}>
-                <FaRegClipboard className="mx-1" size={16} />
-                <span onClick={partialToggleModal}>Send eval. form</span>
+            {props.isReason && (
+              <div
+                className={`${styles.borderStyles} ${styles.detailsDivide}  pb-2 mt-1`}
+              >
+                <div className={`${styles.detailEmail}`}>
+                  <span className="text-white-50">Reason</span>
+                  <p className="mb-0 text-white ">{props.reason}</p>
+                </div>
               </div>
-            </div>
+            )}
+            {props.isContactBtn && (
+              <div className={`${styles.detailsDivide} py-2 `}>
+                <ArrowButton
+                  onClick={props.detailHandler}
+                  title="Contact Customer"
+                />
+                <div className={`${styles.detailSendForm} text-white`}>
+                  <FaRegClipboard className="mx-1" size={16} />
+                  <span onClick={partialToggleModal}>Send eval. form</span>
+                </div>
+              </div>
+            )}
+            {props.isDropLead && (
+              <div className={`${styles.detailsDivide} py-2 `}>
+                <div className={`${styles.detailSendForm} text-white`}>
+                  <MdOutlineClose className="mx-1" size={16} />
+                  <span>Drop Lead</span>
+                </div>
+                <div className={`${styles.detailSendForm} text-white`}>
+                  <FaRegClipboard className="mx-1" size={16} />
+                  <span onClick={partialToggleModal}>Send eval. form</span>
+                </div>
+              </div>
+            )}
           </div>
         </Card.Body>
-        <div
-          className={`${styles.detailCardFooter} ${styles.detailsDivide}  card-footer`}
-        >
-          <p className="text-white-50 mb-0">
-            Prm source: <span className="text-white">{props.prmSource}</span>
-          </p>
-          <p className="text-white-50 mb-0">
-            Sec source: <span className="text-white">{props.secSource}</span>
-          </p>
-        </div>
+        {props.isCardFooter && (
+          <div
+            className={`${styles.detailCardFooter} card-footer`}
+          >
+            {props.isUserDetail && (
+              <div className={styles.userDetail}>
+                <div className={styles.userlTitle}>CRE Details</div>
+                <div className={styles.userFlex}>
+                  <div>
+                    <span className={styles.smTitle}>Name</span>
+                    Rishabh Sharma
+                  </div>
+                  <div>
+                    <span className={styles.smTitle}>Contact No.</span>
+                    +91 98765 43210
+                  </div>
+                </div>
+              </div>
+            )}
+            <div className={styles.detailsDivide}>
+              <p className="text-white-50 mb-0">
+                Prm source: <span className="text-white">{props.prmSource}</span>
+              </p>
+              <p className="text-white-50 mb-0">
+                Sec source: <span className="text-white">{props.secSource}</span>
+              </p>
+            </div>
+          </div>
+        )}
       </Card>
 
       <PartialLeadsDetail

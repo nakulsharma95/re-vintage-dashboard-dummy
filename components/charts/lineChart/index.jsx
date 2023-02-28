@@ -26,7 +26,12 @@ ChartJS.register(
 function LineChart(props) {
   return (
     <div className={`${styles.lineChart} ${props.graphClass}`}>
-      <Line options={props.options} data={props.data} width="100%" />
+      <Line
+        options={props.options}
+        data={props.data}
+        width="100%"
+        height={props.size}
+      />
     </div>
   );
 }

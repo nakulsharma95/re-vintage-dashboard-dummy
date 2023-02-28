@@ -1,0 +1,166 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.bikeDetailCardMain {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #282828;
+  border: 0;
+  border-radius: 0;
+
+  .bikeDetailCardHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #707070;
+
+    .bikeName {
+      color: $white;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 0px;
+      span {
+        color: #e8b016;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .bikeCode {
+        color: #cbc6c6;
+        opacity: 0.7;
+        font-size: 13px;
+        margin-left: 5px;
+        margin-bottom: 0px;
+      }
+
+    }
+    .priceTag {
+      color: #cbc6c6;
+      font-size: 12px;
+      font-weight: 500;
+      margin-right: 10px;
+    }
+ 
+  }
+  .bikeCardBody {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    .bikeCardBodyTitle {
+      color: #cbc6c6;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .bikeCardBodySubTitle {
+      color: #a7a7a7;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .bikeCardBodyText {
+      color: $white;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  .bikePrice{
+	display: flex;
+	align-items: center;
+	position: relative;
+	font-weight: 600;
+	font-size: 18px;
+	input{
+		background-color: $gray-2c;
+		padding: 5px;
+		padding-left: 23px;
+		width: 100%;
+		// max-width: 145px;
+		font-size: 18px;
+		font-weight: 600;
+		outline: none;
+		border: none;
+		color: #fff;
+	}
+	button.submitBtn{
+		display:inline-block;
+		background-color: $black-40;
+		border: none;
+		border-radius: 0;
+		width: 100%;
+		max-width: 90px;
+		margin-bottom: 2px;
+		height: 35px;
+		font-size: 12px;
+		text-transform: uppercase;
+		padding: 0 10px;
+		margin-left: 10px;
+		transition: all 0.5s;
+		font-weight: 500;
+		&:hover{
+			background-color: $gray-fd;
+			color: $gray-3;
+		}
+	}
+	svg{
+		cursor: pointer;
+		margin-left: 0.8rem;
+		display:inline-block;
+		width: 28px;
+	}
+	span{
+		position: absolute;
+		top:4px;
+		left: -1px;
+		svg{
+			margin-left: 0;
+			font-size: 21px;
+		}
+	}
+}
+.dealerLocation{
+	text-decoration: underline;
+	font-size: 14px;
+	color: $white;
+	font-weight: 300;
+	margin-left: 5px;
+}
+  .dealerSubTitleText{
+	font-size: 14px;
+	letter-spacing: 1px;
+	opacity: 0.6;
+	color: $white;
+	font-weight: 100;
+  }
+  .bikeCardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-top: 1rem;
+    border-top: 1px solid #707070;
+   
+    .statusBtnBox {
+      display: flex;
+      .statusBtn {
+        display: flex;
+        padding: 0rem 0.8rem;
+        color: #cbc6c6;
+        font-size: 12px;
+        font-weight: 500;
+        background: transparent;
+        border-radius: 0;
+        border: 0px;
+        border-right: 1px solid #707070;
+        .statusBtnIcn {
+          margin-right: 8px;
+          font-size: 15px;
+          font-weight: bold;
+        }
+
+        &:last-child {
+          border-right: 0px;
+        }
+      }
+    }
+  }
+}
+.cardBodyBorderRight {
+  border-right: 1px solid #707070;
+}

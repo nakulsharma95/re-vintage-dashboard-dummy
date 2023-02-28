@@ -1,5 +1,6 @@
 import { Card, Tabs, Tab } from 'react-bootstrap';
 import { AiOutlineDownload } from 'react-icons/ai';
+import DownloadButton from '../../common/buttons/downloadButton';
 
 import styles from './style.module.scss';
 
@@ -8,7 +9,10 @@ function RegionalAnalytics() {
     <Card className={styles.card}>
       <div className={styles.cardHead}>
         <h4>Regional Analytics</h4>
-        <AiOutlineDownload className={styles.cardIcon} />
+        <DownloadButton
+          buttonLink="/dummy.pdf"
+          iconUrl={<AiOutlineDownload className={styles.cardIcon} />}
+        />
       </div>
 
       <Tabs

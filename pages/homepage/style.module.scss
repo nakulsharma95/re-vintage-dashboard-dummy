@@ -1,9 +1,11 @@
 // variables
-@import "../../styles/variables/colors";
-@import "../../styles/variables//mixins";
+@import '../../styles/variables/colors';
+@import '../../styles/variables//mixins';
 
 // Home Page Style
 .homepageStyle {
+  position: relative;
+
   .titleCustomStyle {
     color: $white;
   }
@@ -25,5 +27,40 @@
     padding: 0 30px;
     height: 34px;
     text-transform: uppercase;
+  }
+}
+
+// Filter Popup
+.filterPopup {
+  display: flex;
+  align-items: center;
+  gap: 0 12px;
+  width:100%;
+  left: 0;
+  background-color: $gray-2;
+  height: 81px;
+  position: absolute;
+  padding:10px 20px;
+  top: 0px;
+
+  .filterAction {
+    display: flex;
+    gap: 0 8px;
+    flex-grow: 2;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .filterButton {
+    height: 32px;
+  }
+
+  .closeButton {
+    background: none;
+    color: rgba($gray-cb, 0.8);
+    border: none;
+    font-size: 14px;
   }
 }

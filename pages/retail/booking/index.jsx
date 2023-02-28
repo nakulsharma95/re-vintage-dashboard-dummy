@@ -1,4 +1,4 @@
-import { Row, Col } from "react-bootstrap";
+import { Row, Col,Tab,Tabs } from "react-bootstrap";
 import { RiShareBoxFill } from "react-icons/ri";
 import BikeCard from "../../../components/procurements/bikeCard";
 import Breadcrumb from "../../../components/common/breadcrumbPrimary";
@@ -38,9 +38,15 @@ export default function Booking() {
         <FilterButton />
       </HeaderPrimary>
 
-      <TabPrimary title1="Booked (4)" title2="Sold" title3="Returned (12)" />
-      <DealFilter title="4 Leads" />
-      <Row>
+      <div className="custom-tab-style">
+        <Tabs
+          className="mb-3"
+          defaultActiveKey="title3"
+          id="uncontrolled-tab-example"
+        >
+          <Tab eventKey="title1" title="Booked (4)">
+          <DealFilter singleTitle="4 Leads" />
+             <Row>
         {cardData.map((item) => (
           <Col xxl={3} xl={4} lg={6} key={item.id}>
             <BikeCard
@@ -52,13 +58,65 @@ export default function Booking() {
               bikekm="43,384"
               bikeOwner="1st"
               bikeCc="350"
-              sellingPrice="1,25,000"
-              source="VDMP"
+              sellingPrice="1,25,000.00"
+              source="Source:"
+              sourceTitle="VDMP"
               imageUrl={item.imageUrl}
             />
           </Col>
         ))}
       </Row>
+          </Tab>
+          <Tab eventKey="title2" title="Sold">
+              <DealFilter singleTitle="4 Leads" />
+                 <Row>
+        {cardData.map((item) => (
+          <Col xxl={3} xl={4} lg={6} key={item.id}>
+            <BikeCard
+              isKmData
+              isPriceData
+              priceTitle="Selling Price"
+              bikeModal="2015 Classic 350"
+              bikeRc="DL6TAL7314"
+              bikekm="43,384"
+              bikeOwner="1st"
+              bikeCc="350"
+              sellingPrice="1,25,000.00"
+              source="Source:"
+              sourceTitle="VDMP"
+              imageUrl={item.imageUrl}
+            />
+          </Col>
+        ))}
+      </Row>
+          </Tab>
+          <Tab eventKey="title3" title="Returned (12)">
+              <DealFilter singleTitle="4 Leads" />
+                 <Row>
+        {cardData.map((item) => (
+          <Col xxl={3} xl={4} lg={6} key={item.id}>
+            <BikeCard
+              isKmData
+              isPriceData
+              priceTitle="Selling Price"
+              bikeModal="2015 Classic 350"
+              bikeRc="DL6TAL7314"
+              bikekm="43,384"
+              bikeOwner="1st"
+              bikeCc="350"
+              sellingPrice="1,25,000.00"
+              source="Source:"
+              sourceTitle="VDMP"
+              imageUrl={item.imageUrl}
+            />
+          </Col>
+        ))}
+      </Row>
+          </Tab>
+        
+        </Tabs>
+      </div>
+   
     </div>
   );
 }

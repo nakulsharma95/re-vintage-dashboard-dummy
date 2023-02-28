@@ -44,7 +44,11 @@ function PieSmall(props) {
         </div>
       )}
 
-      <DoughnutChart options={optionsDoughnut} data={doughnutChartData} />
+      <DoughnutChart
+        size={200}
+        options={optionsDoughnut}
+        data={doughnutChartData}
+      />
     </div>
   );
 }

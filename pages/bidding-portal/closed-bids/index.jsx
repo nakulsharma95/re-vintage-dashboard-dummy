@@ -1,9 +1,8 @@
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Tab, Tabs } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
 import ClosedBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
-import TabPrimary from '../../../components/common/tabPrimary';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
@@ -66,30 +65,69 @@ export default function ClosedBids() {
         <FilterButton />
       </HeaderPrimary>
 
-      <TabPrimary title1="Bids" title2="No Bids" />
-      <SortTabs
-        selectAllCheck 
-        sortTabTitle="25 Bids Available"
-      />
-      <Row className="mb-3">
-        {closedBikeData.map((item) => (
-          <Col md={3}>
-            <ClosedBikeCard
-              arrowBtn
-              closedBid
-              imageUrl={item.imageUrl}
-              bikeName={item.name}
-              bikeNumber={item.number}
-              kmDrive={item.km}
-              modelYear={item.year}
-              location={item.location}
-              highestClosedBidPrice={item.highestbidPrice}
-              motorShopName={item.bidByName}
+      <div className="custom-tab-style">
+        <Tabs
+          className="mb-3"
+          defaultActiveKey="title1"
+          id="uncontrolled-tab-example"
+        >
+          <Tab eventKey="title1" title="Bids">
+            <SortTabs
+              selectAllCheck
+              sortTabTitle="25 Bids Available"
             />
-          </Col>
-        ))}
-      </Row>
-      <DetailPagination className="mt-3" />
+            <Row className="mb-3">
+              {closedBikeData.map((item) => (
+                <Col md={3}>
+                  <ClosedBikeCard
+                    className="img-shadow"
+                    highestBidSymbol
+                    arrowBtn
+                    isClosedTitle
+                    closedBid
+                    imageUrl={item.imageUrl}
+                    closedBikeName={item.name}
+                    closedBikeNumber={item.number}
+                    kmDrive={item.km}
+                    modelYear={item.year}
+                    location={item.location}
+                    highestClosedBidPrice={item.highestbidPrice}
+                    motorShopName={item.bidByName}
+                  />
+                </Col>
+              ))}
+            </Row>
+            <DetailPagination className="mt-3" />
+          </Tab>
+          <Tab eventKey="title2" title="No Bids">
+            <SortTabs
+              selectAllCheck
+              sortTabTitle="25 Bids Available"
+            />
+            <Row className="mb-3">
+              {closedBikeData.map((item) => (
+                <Col md={3}>
+                  <ClosedBikeCard
+                    className="img-shadow"
+                    bidTitle="No bidding on this motorcycle."
+                    isCheckbox
+                    arrowBtn
+                    isClosedTitle
+                    highestBid
+                    imageUrl={item.imageUrl}
+                    closedBikeName={item.name}
+                    closedBikeNumber={item.number}
+                    kmDrive={item.km}
+                    modelYear={item.year}
+                    location={item.location}
+                  />
+                </Col>
+              ))}
+            </Row>
+            <DetailPagination className="mt-3" />
+          </Tab>
+        </Tabs>
+      </div>
     </div>
   );
 }

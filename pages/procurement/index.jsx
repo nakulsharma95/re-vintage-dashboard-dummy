@@ -194,6 +194,8 @@ function Procurement() {
         {cardData.map((item) => (
           <Col xl={4} md={6}>
             <DetailCard
+              isContactBtn
+              isCardFooter
               ownerName={item.ownerName}
               emailId={item.email}
               pinCode={item.pinCode}
@@ -245,7 +247,7 @@ function Procurement() {
         {schedulednData.map((item) => (
           <Col md={3}>
             <BikeCard
-              className="bg-gray-3 py-2"
+              className="py-2"
               isKmData
               isViewBtn
               isestimatedPrice

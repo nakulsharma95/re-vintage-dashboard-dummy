@@ -1,10 +1,9 @@
-import { Row, Col, Dropdown, Form } from 'react-bootstrap';
+import { Row, Col, Dropdown, Form, Tab, Tabs } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
 import { FiSettings } from 'react-icons/fi';
 import UpcomingBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
-import TabPrimary from '../../../components/common/tabPrimary';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
@@ -14,6 +13,7 @@ import ButtonPrimary from '../../../components/common/buttons/ButtonPrimary';
 import SortTabs from '../../../components/common/sortTabs';
 // Style here
 import styles from './style.module.scss';
+import Link from 'next/link';
 
 export default function UpcomingBids() {
   const upcomingBikeData = [
@@ -80,6 +80,7 @@ export default function UpcomingBids() {
                 </div>
                 <div className={styles.title}>%</div>
               </div>
+              <div className={styles.lastEdited}>Last edited by: <Link href="/">Rahul Sharma</Link></div>
               <div className={styles.bidPricebtn}>
                 <ButtonPrimary title="Apply" />
               </div>
@@ -94,28 +95,39 @@ export default function UpcomingBids() {
         <FilterButton />
       </HeaderPrimary>
 
-      <TabPrimary title1="Today" title2="Next Bidding (31 Dec)" />
-      <SortTabs
-        selectAllCheck 
-        sortTabTitle="25 Bids Available"
-      />
-      <Row className="mb-3">
-        {upcomingBikeData.map((item) => (
-          <Col md={3}>
-            <UpcomingBikeCard
-              baseprice
-              arrowBtn
-              imageUrl={item.imageUrl}
-              bikeName={item.name}
-              bikeNumber={item.number}
-              kmDrive={item.km}
-              modelYear={item.year}
-              location={item.location}
+      <div className="custom-tab-style">
+        <Tabs
+          className="mb-3"
+          defaultActiveKey="title1"
+          id="uncontrolled-tab-example"
+        >
+          <Tab eventKey="title1" title="Today">
+            <SortTabs
+              selectAllCheck
+              sortTabTitle="25 Bids Available"
             />
-          </Col>
-        ))}
-      </Row>
-      <DetailPagination className="mt-3" />
+            <Row className="mb-3">
+              {upcomingBikeData.map((item) => (
+                <Col md={3}>
+                  <UpcomingBikeCard
+                    isCardTitle
+                    baseprice
+                    arrowBtn
+                    imageUrl={item.imageUrl}
+                    bikeName={item.name}
+                    bikeNumber={item.number}
+                    kmDrive={item.km}
+                    modelYear={item.year}
+                    location={item.location}
+                  />
+                </Col>
+              ))}
+            </Row>
+            <DetailPagination className="mt-3" />
+          </Tab>
+          <Tab eventKey="title2" title="Next Bidding (31 Dec)" />
+        </Tabs>
+      </div>
     </div>
   );
 }

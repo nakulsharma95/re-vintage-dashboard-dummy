@@ -50,7 +50,13 @@ function PieBig(props) {
   return (
     <div className={styles.pieContainer}>
       <h5>{props.title} </h5>
-      <DoughnutChart options={optionsDoughnut} data={doughnutChartData} />
+      <div className="h-100 d-flex align-items-center w-full">
+        <DoughnutChart
+          size={200}
+          options={optionsDoughnut}
+          data={doughnutChartData}
+        />
+      </div>
     </div>
   );
 }

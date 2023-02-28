@@ -59,6 +59,12 @@
   .iconLeft {
     font-size: 16px;
     margin-right: 12px;
+    line-height: 1;
+  }
+  .iconRight {
+    font-size: 20px;
+    margin-left: 12px;
+    line-height: 1;
   }
 
   &.primary {
@@ -200,12 +206,18 @@
     border-radius: 0;
     background-color: $gray-4;
     padding: 0;
+    width: 100%;
     a {
       color: $white;
       border-bottom: 1px solid $gray-3;
       padding: 6px 12px;
       font-size: 12px;
       color: $gray-c;
+      white-space: normal;
+      
+      &:hover{
+        background-color: $gray-4;
+      }
       &:last-child {
         border-bottom: none;
       }
@@ -233,6 +245,19 @@
       &:last-child {
         border-bottom: none;
       }
+    }
+  }
+}
+
+// downloadButton
+.downloadButton {
+
+  .iconUrl {
+    color: $white;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 }

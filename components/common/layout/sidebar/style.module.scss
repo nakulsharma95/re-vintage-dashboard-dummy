@@ -1,5 +1,3 @@
-@import '../../../../styles/variables/colors';
-@import '../../../../styles/variables/mixins';
 // variables
 @import '../../../../styles/variables/colors';
 @import '../../../../styles/variables/mixins';
@@ -15,7 +13,7 @@
   left: 0;
   z-index: 9;
 
-  @include mobile {
+  @include tablet {
     left: -100%;
     transition: all 0.5s ease-in-out;
   }
