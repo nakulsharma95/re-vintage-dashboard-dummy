@@ -14,7 +14,7 @@ RUN npm install -g env-cmd
 # Copying source files
 COPY . /usr/src/app
 
-RUN npm run build:uat
+RUN npm run build:dev
 
 # Building app
 EXPOSE 3000
