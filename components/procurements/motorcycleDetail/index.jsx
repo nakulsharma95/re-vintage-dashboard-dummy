@@ -10,6 +10,7 @@ import styles from './style.module.scss';
 import ButtonPrimary from '../../common/buttons/ButtonPrimary';
 import CustomModal from '../../modals/cancelModal';
 import BiddingTimer from '../../biddingPortal/biddingTimer';
+import { style } from '@mui/system';
 
 function MotorcycleDetail(props) {
   const [cancelModal, setCancelModal] = useState(false);
@@ -243,6 +244,72 @@ function MotorcycleDetail(props) {
         </div>
       )}
       {/* end */}
+
+      <div className={styles.underNegDetailPrice}>
+        <div className={styles.negPriceList}>
+          <div className={styles.negPriceCols}>
+            <div className={styles.priceSymbol}>
+              <BiRupee />
+            </div>
+            <div>
+              <small>Base Price</small>
+              <BiRupee /> 1,20,000.00
+            </div>
+          </div>
+          <div className={styles.negPriceCols}>
+            <div className={styles.priceSymbol}>
+              <BiRupee />
+            </div>
+            <div>
+              <small>Highest bid</small>
+              <BiRupee /> 1,20,000.00
+            </div>
+          </div>
+          <div className={styles.negPriceCols}>
+            <div>
+              <small>Highest bid by</small>
+              <Link href="/">Neel Motors, Lajpat Nagar</Link>
+            </div>
+          </div>
+
+        </div>
+
+        <div className={styles.cdaPriceMain}>
+          <div className={styles.cdaFlex}>
+            <div className={styles.title}>Customer Demand</div>
+            <div className={styles.priceInput}>
+              <BiRupee />
+              <Form.Control type="text" defaultValue="1,25,000.00" />
+            </div>
+            <div className={styles.priceBtn}>
+              <Button variant="">Edit</Button>
+            </div>
+          </div>
+
+          <div className={styles.cdaFlex}>
+            <div className={styles.title}>Dealer Offer</div>
+            <div className={styles.priceInput}>
+              <BiRupee />
+              <Form.Control type="text" defaultValue="1,25,000.00" />
+            </div>
+            <div className={styles.priceBtn}>
+              <Button variant="">Edit</Button>
+            </div>
+          </div>
+
+          <div className={styles.cdaFlex}>
+            <div className={styles.title}>Accepted Price</div>
+            <div className={styles.priceInput}>
+              <BiRupee />
+              <Form.Control type="text" defaultValue="1,25,000.00" />
+            </div>
+            <div className={styles.priceBtn}>
+              <Button variant="" className={styles.activeBtn}>Submit</Button>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   );
 }
