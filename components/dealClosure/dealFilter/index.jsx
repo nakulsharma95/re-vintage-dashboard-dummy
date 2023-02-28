@@ -6,6 +6,7 @@ import styles from './style.module.scss';
 function DealFilter(props) {
   return (
     <div className={styles.dealFilterMain}>
+      <h3 className={styles.singleTitle}>{props.singleTitle}</h3>
       <h4 className={styles.dealFilterTitle}>{props.title}</h4>
       {props.isSortButton && (
         <div className={styles.sortTabBtnBox}>

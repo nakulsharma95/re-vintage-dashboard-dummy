@@ -59,6 +59,21 @@
 			border-top: 1px solid $gray-65;
 			padding: 12px;
 		}
+
+		.lastEdited{
+			display: block;
+			padding: 5px 15px 8px;
+			color: $black;
+			color: $black;
+			a{
+				text-decoration: underline;
+				color: $black;
+				font-weight: 600;
+				&:hover{
+					color: $theme-red-da;
+				}
+			}
+		}
 	}
 	&.bidPriceButton{
 		display: none;

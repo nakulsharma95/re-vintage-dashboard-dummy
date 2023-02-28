@@ -4,26 +4,30 @@
 .motorcycleDetail {
   padding-top: 1.5rem;
   position: relative;
-  
+
   .motorcycleTitle {
     color: $gray-cb;
     font-size: 12px;
     font-weight: 500;
     margin-bottom: 1rem;
+
     span {
       opacity: 0.7;
     }
   }
+
   .motorcycleName {
     color: $white;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 0.5rem;
+
     span {
       color: $theme-yellow-E8;
       font-size: 14px;
       font-weight: 500;
     }
+
     small {
       color: $gray-cb;
       font-size: 12px;
@@ -32,29 +36,35 @@
       margin-left: 5px;
     }
   }
+
   .motorcycleSpecs {
     color: $gray-cb;
     font-size: 12px;
     font-weight: 500;
     margin-bottom: 0.8rem;
     text-align: center;
+
     &:first-child {
       text-align: left;
     }
+
     &:nth-child(2) {
       border-left: 1px solid $gray-70;
       border-right: 1px solid $gray-70;
     }
   }
+
   .motorcycleCompleteSpec {
     padding: 0.7rem 1rem;
     border: 1px solid $black-40;
+
     .specsHeading {
       color: $gray-a7;
       font-size: 10px;
       font-weight: 500;
       margin-bottom: 0.5rem;
     }
+
     .specsText {
       color: $gray-F3;
       font-size: 10px;
@@ -62,12 +72,14 @@
       margin-bottom: 0.7rem;
     }
   }
+
   .motorStylePrice {
     color: $gray-cb;
     font-size: 12px;
     font-weight: 500;
     margin-bottom: 3px;
   }
+
   .motorStylePriceTxt {
     color: $gray-F3;
     font-size: 18px;
@@ -79,15 +91,16 @@
   border: 1px solid $black-40;
 }
 
-.bikeDetailLocation{
+.bikeDetailLocation {
   margin-bottom: 20px;
-  span{
-  font-size: 12px;
-  color: $gray-cb;
+
+  span {
+    font-size: 12px;
+    color: $gray-cb;
   }
 }
 
-.bikeRupeeIcon{
+.bikeRupeeIcon {
   font-size: 24px;
   display: inline-block;
   margin-right: 5px;
@@ -95,39 +108,45 @@
 }
 
 
-.hgBidCols{
+.hgBidCols {
   display: flex;
   justify-content: space-between;
   margin-top: 12px;
-    .priceTag{
-      background-color: $black-40;
-      color: $theme-yellow-E8;
-      padding: 5px 15px;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      width: 100%;
+
+  .priceTag {
+    background-color: $black-40;
+    color: $theme-yellow-E8;
+    padding: 5px 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .motorsDetails {
+    padding: 0 18px;
+    width: 100%;
+
+    span {
+      display: block;
+      color: $gray-a7;
+      font-size: 12px;
     }
-    .motorsDetails{
-      padding: 0 18px;
-      width: 100%;
-        span{
-          display: block;
-          color: $gray-a7;
-          font-size: 12px;
-        }
-        a{
-          color: $white;
-          text-decoration: underline;
-          transition: all 0.5s;
-          &:hover{
-          color: $theme-yellow-E8;
-        }
+
+    a {
+      color: $white;
+      text-decoration: underline;
+      transition: all 0.5s;
+
+      &:hover {
+        color: $theme-yellow-E8;
       }
     }
+    
+  }
 }
 
-.bikeDetailInfoIcon{
+.bikeDetailInfoIcon {
   position: absolute;
   right: 5px;
   top: 0;
@@ -139,36 +158,194 @@
   color: $gray-c;
 }
 
-.bike_dealerPrice{
+.bike_dealerPrice {
   display: flex;
   align-items: center;
   position: relative;
   right: 20rem;
   
+  @include mobile{
+    right: 0;
+  }
 }
 
-.dealerDetails{
+.dealerDetails {
   margin: 0.6rem 0;
-  
-  .dealerName{
+
+  .dealerName {
     font-size: 14px;
     margin-bottom: 0.5rem;
+
     // font-size: 200;
-    span{
+    span {
       text-decoration: underline;
       margin-left: 0.5rem;
     }
   }
 
-  .dealerDetails_line{
+  .dealerDetails_line {
     margin: 0.5rem 0;
   }
-  .dealerDetails_lists{
-    .dealerDetails_list{
+
+  .dealerDetails_lists {
+    .dealerDetails_list {
       border-right: 1px solid #707070;
     }
-    .list_icon{
-      margin:0 0.5rem;
+
+    .list_icon {
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+.closedBidPrice {
+  .motorsDetails {
+    font-size: 12px;
+    color: $gray-a7;
+    margin-bottom: 3px;
+
+    a {
+      color: $gray-F3;
+      font-size: 14px;
+      text-decoration: underline;
+      margin-left: 5px;
+    }
+    button {
+      color: $white;
+      text-decoration: underline;
+      transition: all 0.5s;
+      border: none;
+      outline: none;
+
+      &:hover {
+        color: $theme-yellow-E8;
+      }
+    }
+  }
+
+  .priceTag {
+    width: 100%;
+    background-color: $gray-28;
+    font-size: 18px;
+    color: $gray-a7;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    margin-right: 10px;
+  }
+
+  .priceBtn {
+    width: 100%;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.upcomingDetailPrice{
+  .title{
+    font-size: 12px;
+    color: $gray-a7;
+    margin-bottom: 3px;
+  }
+  .priceCols{
+    background-color: $gray-28;
+    padding: 5px 12px;
+    color: $gray-a7;
+    font-size: 18px;
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    svg{
+      font-size: 22px;
+    }
+  }
+  .upcomingBtn{
+    a{
+      display: inline-block;
+      margin-left: 10px;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: $white;
+      font-size: 12px;
+      text-transform: uppercase;
+      background-color: $black-40;
+    }
+  }
+}
+
+.sellerDetailPrice{
+  .title{
+    font-size: 12px;
+    color: $gray-a7;
+  }
+  .priceCols{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    svg{
+      font-size: 17px;
+      margin-left: 3px;
+    }
+  }
+  .sellerIdCols{
+    margin-bottom: 10px;
+    .sellerId{
+      display: flex;
+      align-items: center;
+      span{
+        background-color: $gray-28;
+        padding: 5px 15px;
+      }
+      button{
+        color: $white;
+        padding: 0;
+        outline: none;
+        border: none;
+        font-size: 13px;
+      }
+    }    
+  }
+
+  .sellerIInput{
+    display: flex;
+    align-items: center;
+    .inputCols{
+      position: relative;
+      margin-top: 2px;
+      width: 100%;
+      input{
+        border-radius: 0;
+        background-color: transparent;
+        border: 1px solid $black-40;
+        color: $white;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 26px;
+        &:focus{
+          outline: none;
+          box-shadow: none;
+        }
+      }
+      svg{
+        position: absolute;
+        left: 8px;
+        top: 9px;
+        font-size: 19px;
+      }
+    }
+    .saveBtn{
+      width: 100%;
+      margin-left: 10px;
+      button{
+        width: 100%;
+      }
     }
   }
 }

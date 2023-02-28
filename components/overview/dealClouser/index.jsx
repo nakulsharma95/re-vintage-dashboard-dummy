@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 function DealClouser() {
   return (
     <div className="dashboardTable">
-      <table className={`${styles.tableStyle} table table-even`}>
+      <table className={`${styles.tableStyle} table table-even m-0`}>
         <tbody>
           <tr className={styles.bgGray28Table}>
             <th rowSpan={2} className="pt-4 align-middle">

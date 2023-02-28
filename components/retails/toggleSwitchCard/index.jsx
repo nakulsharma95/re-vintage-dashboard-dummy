@@ -13,13 +13,13 @@ export default function ToggleSwitchCard(props) {
             type="switch"
             label={props.toggleLabal1}
           />
+            <FormCheck
+              className={styles.sliderRound}
+              id="switchEnabled"
+              type="switch"
+              label={props.toggleLabal2}
+            />
 
-          <FormCheck
-            className={styles.sliderRound}
-            id="switchEnabled"
-            type="switch"
-            label={props.toggleLabal2}
-          />
         </Card.Body>
       </Card>
     </div>

@@ -1,14 +1,15 @@
 import React from 'react';
-import { BiDownload } from "react-icons/bi";;
+import { BiDownload } from 'react-icons/bi';
 import { RiShareBoxFill } from 'react-icons/ri';
+import { Tab, Tabs } from 'react-bootstrap';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import HeaderPrimary from '../../components/common/headerPrimary';
 import SearchPrimary from '../../components/common/searchPrimary';
 import OutlineButton from '../../components/common/buttons/OutlineButton';
-import TabPrimary from '../../components/common/tabPrimary';
 import DealerTable from '../../components/dealer-management/dealerTable';
 import FilterButton from '../../components/common/filterButton';
-import { Tab, Tabs } from 'react-bootstrap';
+import EmptyState from '../../components/emptyState';
+import MobileDealerCard from '../../components/dealer-management/mobileDealerCard';
 
 function DealerManagement() {
   return (
@@ -24,24 +25,31 @@ function DealerManagement() {
         <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
-     
-      <div className="custom-tab-style">
+      
+      <MobileDealerCard />
+      {/* <div className="custom-tab-style">
         <Tabs
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
         >
-          <Tab eventKey="title1" title="All" >
-          <DealerTable />
+          <Tab eventKey="title1" title="All">
+            <DealerTable />
           </Tab>
-          <Tab eventKey="title2" title="Enabled Dealers" >
-            Data not Found
+          <Tab eventKey="title2" title="Enabled Dealers">
+            <EmptyState
+              title="No Result Found!"
+              description="we couldn find what you searched for try something again."
+            />
           </Tab>
           <Tab eventKey="title3" title="Disabled Dealers">
-          Data not Found
-          </Tab>         
+            <EmptyState
+              title="No Result Found!"
+              description="we couldn find what you searched for try something again."
+            />
+          </Tab>
         </Tabs>
-      </div>
+      </div> */}
     </div>
   );
 }

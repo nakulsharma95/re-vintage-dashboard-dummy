@@ -42,7 +42,7 @@
 		}
 	}
 
-	button{
+	a{
 		background-color: $white;
 		color: $gray-3;
 		padding: 0 15px;
@@ -55,6 +55,7 @@
 		align-items: center;
 		justify-content: space-between;
 		transition: all 0.5s;
+		text-decoration: none;
 		&:hover{
 			background-color: $theme-red-da;
 			color: $white;

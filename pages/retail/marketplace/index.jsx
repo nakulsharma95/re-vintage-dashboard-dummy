@@ -1,19 +1,19 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Tab, Tabs } from "react-bootstrap";
 import { RiShareBoxFill } from "react-icons/ri";
 import BikeCardRadio from "../../../components/common/cardCheckbox";
+import BikeCardOlx from "../../../components/common/cardCheckbox";
 import { TbTrendingUp } from "react-icons/tb";
 import Breadcrumb from "../../../components/common/breadcrumbPrimary";
 import SortTabs from "../../../components/common/sortTabs";
-import TabPrimary from "../../../components/common/tabPrimary";
 import SearchPrimary from "../../../components/common/searchPrimary";
 import FilterButton from "../../../components/common/filterButton";
 import HeaderPrimary from "../../../components/common/headerPrimary";
 import OutlineButton from "../../../components/common/buttons/OutlineButton";
 import DashboardCard from "../../../components/dashboardCard";
+import TableListView from "../../../components/retails/tableListView";
 
 export default function MarketPlace() {
- 
- const cardData = [
+  const cardData = [
     {
       imageUrl: "/images/bikeImage.png",
       overDue: "evolutionOver",
@@ -94,48 +94,118 @@ export default function MarketPlace() {
           />
         ))}
       </div>
-      <TabPrimary
-        title1="Active"
-        title2="Inactive (12)"
-        title3="OLX Listing (4)"
-      />
-      <SortTabs
-        selectAllCheck
-        isCheckInput
-        isSubmitBtn
-        approveBtn
-        moveToOlx
-        sortTabTitle="12 Result Found"
-      />
-
-      <Row>
-        {cardData.map((item) => (
-          <Col xxl={3} xl={4} lg={6} key={item.id}>
-            <BikeCardRadio
-              bikeModal="2015 Classic 350"
-              bikeRc="-DL6TAL7314"
-              bikekm="43,384 km"
-              bikeOwner="1st Owner"
-              bikeCc="350 CC"
-              bikePrice="1,25,000.00"
-              bikeDealer="(C2N0RJ20FC2N)"
-              dealerAddress="Neel Motors, Lajpat Nagar, Delhi"
-              creDetail="CRE Detail"
-              creName="John Watson"
-              creNumber="+91 98765 43210"
-              isCardVisible
-              isCheckBoxVisible
-              isBikeTagVisible={false}
-              isOlxTagVisible
-              isBikeChassisVisible={false}
-              imageUrl={item.imageUrl}
-              dealerLocation={item.dealerLocation}
-              isCreDetails
-              isDealer
+      {/* <TableListView /> */}
+      <div className="custom-tab-style">
+        <Tabs
+          className="mb-3"
+          defaultActiveKey="title3"
+          id="uncontrolled-tab-example"
+        >
+          <Tab eventKey="title1" title="Active">
+            <SortTabs
+              selectAllCheck
+              isCheckInput
+              isSubmitBtn
+              approveBtn
+              moveToOlx
+              sortTabTitle="12 Result Found"
             />
-          </Col>
-        ))}
-      </Row>
+            <Row>
+              {cardData.map((item) => (
+                <Col xxl={3} xl={4} lg={6} key={item.id}>
+                  <BikeCardRadio
+                    isOlxTooltipVisible={true}
+                    bikeModal="2015 Classic 350"
+                    bikeRc="-DL6TAL7314"
+                    bikekm="43,384 km"
+                    bikeOwner="1st Owner"
+                    bikeCc="350 CC"
+                    bikePrice="1,25,000.00"
+                    bikeDealer="(C2N0RJ20FC2N)"
+                    dealerAddress="Neel Motors, Lajpat Nagar, Delhi"
+                    creDetail="CRE Detail"
+                    creName="John Watson"
+                    creNumber="+91 98765 43210"
+                    isCardVisible
+                    isCheckBoxVisible
+                    isBikeTagVisible={false}
+                    isOlxTagVisible
+                    isBikeChassisVisible={false}
+                    imageUrl={item.imageUrl}
+                    dealerLocation={item.dealerLocation}
+                    isCreDetails
+                    isDealer
+                  />
+                </Col>
+              ))}
+            </Row>
+          </Tab>
+          <Tab eventKey="title2" title="Inactive (12)">
+            <SortTabs selectAllCheck sortTabTitle="15 Result Found" />
+            <Row>
+              {cardData.map((item) => (
+                <Col xxl={3} xl={4} lg={6} key={item.id}>
+                  <BikeCardOlx
+                    bikeModal="2015 Classic 350"
+                    isOlxTooltipVisible={false}
+                    bikeRc="-DL6TAL7314"
+                    bikekm="43,384 km"
+                    bikeOwner="1st Owner"
+                    bikeCc="350 CC"
+                    bikePrice="1,25,000.00"
+                    bikeDealer="(C2N0RJ20FC2N)"
+                    dealerAddress="Neel Motors, Lajpat Nagar, Delhi"
+                    creDetail="CRE Detail"
+                    creName="John Watson"
+                    creNumber="+91 98765 43210"
+                    isCardVisible
+                    isCheckBoxVisible={false}
+                    isBikeTagVisible={false}
+                    isOlxTagVisible
+                    isBikeChassisVisible={false}
+                    imageUrl={item.imageUrl}
+                    dealerLocation={item.dealerLocation}
+                    isCreDetails
+                    isDealer
+                  />
+                </Col>
+              ))}
+            </Row>
+          </Tab>
+          <Tab eventKey="title3" title="OLX Listing (4)">
+            <SortTabs selectAllCheck sortTabTitle="12 Result Found" />
+            <Row>
+              {cardData.map((item) => (
+                <Col xxl={3} xl={4} lg={6} key={item.id}>
+                  <BikeCardOlx
+                    bikeModal="2015 Classic 350"
+                    isOlxTooltipVisible={false}
+                    bikeRc="-DL6TAL7314"
+                    bikekm="43,384 km"
+                    bikeOwner="1st Owner"
+                    bikeCc="350 CC"
+                    bikePrice="1,25,000.00"
+                    bikeDealer="(C2N0RJ20FC2N)"
+                    dealerAddress="Neel Motors, Lajpat Nagar, Delhi"
+                    creDetail="CRE Detail"
+                    creName="John Watson"
+                    creNumber="+91 98765 43210"
+                    isCardVisible
+                    isCheckBoxVisible={false}
+                    isBikeTagVisible={false}
+                    isOlxTagVisible
+                    isBikeChassisVisible={false}
+                    imageUrl={item.imageUrl}
+                    dealerLocation={item.dealerLocation}
+                    isCreDetails
+                    isDealer
+                  />
+                </Col>
+              ))}
+            </Row>
+          </Tab>
+        </Tabs>
+      </div>
     </div>
   );
 }

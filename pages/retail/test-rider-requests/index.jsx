@@ -1,12 +1,13 @@
-import { RiShareBoxFill } from 'react-icons/ri';
-import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import CompleteBikeDetail from '../../../components/procurements/completeEvalutationCard';
-import TabPrimary from '../../../components/common/tabPrimary';
-import DealFilter from '../../../components/dealClosure/dealFilter';
-import SearchPrimary from '../../../components/common/searchPrimary';
-import FilterButton from '../../../components/common/filterButton';
-import HeaderPrimary from '../../../components/common/headerPrimary';
-import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import { RiShareBoxFill } from "react-icons/ri";
+import { Col, Row, Tab, Tabs } from "react-bootstrap";
+import Breadcrumb from "../../../components/common/breadcrumbPrimary";
+import CompleteBikeDetail from "../../../components/procurements/completeEvalutationCard";
+import DealFilter from "../../../components/dealClosure/dealFilter";
+import SearchPrimary from "../../../components/common/searchPrimary";
+import FilterButton from "../../../components/common/filterButton";
+import HeaderPrimary from "../../../components/common/headerPrimary";
+import OutlineButton from "../../../components/common/buttons/OutlineButton";
+import SortTabs from "~/components/common/sortTabs";
 
 export default function TestRiderRequests() {
   return (
@@ -17,18 +18,53 @@ export default function TestRiderRequests() {
         <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
-      <TabPrimary
-        title1="From Web (4)"
-        title2="From OLX"
-        title3="Completed (4)"
-        title4="Dropped (4)"
-      />
-      <DealFilter title="12 Result Found" isViewBy droptitle="Pending" />
-      <CompleteBikeDetail
-        isEvalBtnVisible={false}
-        isCallerBtnVisible
-        isEnquiryNumVisible
-      />
+
+      <div className="custom-tab-style">
+        <Tabs
+          className="mb-3"
+          defaultActiveKey="title3"
+          id="uncontrolled-tab-example"
+        >
+          <Tab eventKey="title1" title="From Web (4)">
+            <SortTabs selectAllCheck sortTabTitle="12 Result Found" />
+
+            <CompleteBikeDetail
+              isEvalBtnVisible={false}
+              isCallerBtnVisible
+              isEnquiryNumVisible
+              isSlider={true}
+            />
+          </Tab>
+          <Tab eventKey="title2" title="From OLX">
+            <SortTabs selectAllCheck sortTabTitle="12 Result Found" />
+            <CompleteBikeDetail
+              isEvalBtnVisible={false}
+              isCallerBtnVisible
+              isSlider={true}
+              isEnquiryNumVisible
+            />
+          </Tab>
+          <Tab eventKey="title3" title="Completed (4)">
+            <SortTabs selectAllCheck sortTabTitle="12 Result Found" />
+            <CompleteBikeDetail
+              isEvalBtnVisible={false}
+              isCallerBtnVisible
+              isSlider={true}
+              isEnquiryNumVisible
+            />
+          </Tab>
+          <Tab eventKey="title4" title="Dropped (4)">
+            <SortTabs selectAllCheck sortTabTitle="12 Result Found" />
+            <CompleteBikeDetail
+              isEvalBtnVisible={false}
+              isCallerBtnVisible
+              isSlider={true}
+              isEnquiryNumVisible
+            
+            />
+          </Tab>
+        </Tabs>
+      </div>
     </div>
   );
 }

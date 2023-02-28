@@ -4,11 +4,11 @@
 .procuredStatus {
   display: flex;
   align-items: center;
-  color: #cbc6c6;
+  color: $gray-cb;
   display: flex;
   align-items: center;
   font-size: 12px;
-  background-color: #282828;
+  background-color: $gray-28;
   padding: 6px 10px;
   position: relative;
 
@@ -24,6 +24,10 @@
 .procuredMotorTopcard{
   display: flex;
   background-color: $gray-2;
+
+  @include mobile{
+    flex-direction: column;
+  }
 }
 
 .imgBox {

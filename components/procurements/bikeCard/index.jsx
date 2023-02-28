@@ -45,15 +45,16 @@ function BikeCard(props) {
           )}
           {props.isestimatedPrice && (
             <div className={bikeCardStyle.estimatedPrice}>
-              <h5 className={bikeCardStyle.priceTitle}>{props.smPriceTitle}</h5>
+              <h5 className={bikeCardStyle.pricetitle}>{props.smPriceTitle}</h5>
               <div className={bikeCardStyle.estPrice}>
                 <BiRupee size={21} /> {props.price} - <BiRupee size={21} /> {props.priceTwo}
               </div>
             </div>
           )}
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center mx-3">
+          <h4 className={bikeCardStyle.source}>{props.source}</h4>
             <h5 className={bikeCardStyle.priceTitle}>{props.sourceTitle}</h5>
-            <h4 className={bikeCardStyle.source}>{props.source}</h4>
+           
           </div>
           {props.isEstBtn && (
             <div className={bikeCardStyle.smailBtn}>

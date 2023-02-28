@@ -1,9 +1,8 @@
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Tab, Tabs } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailCard from '../../../components/procurements/detailCard';
 import DetailPagination from '../../../components/common/paginationPrimary';
-import TabPrimary from '../../../components/common/tabPrimary';
 import ViewAll from '../../../components/common/viewAllHeader';
 import styles from './style.module.scss';
 import HeaderPrimary from '../../../components/common/headerPrimary';
@@ -22,6 +21,7 @@ export default function PartialLeads() {
       prmSource: 'MIY',
       secSource: 'Google',
       detailNo: '- FB29FH9219HR1',
+      reason: 'Customer not interested',
     },
     {
       ownerName: 'Rishab kumar',
@@ -31,6 +31,7 @@ export default function PartialLeads() {
       prmSource: 'MIY',
       secSource: 'Google',
       detailNo: '- FB29FH9219HR1',
+      reason: 'Customer not interested',
     },
     {
       ownerName: 'Rishab Sharma',
@@ -40,6 +41,7 @@ export default function PartialLeads() {
       prmSource: 'MIY',
       secSource: 'Google',
       detailNo: '- FB29FH9219HR1',
+      reason: 'Customer not interested',
     },
   ];
   return (
@@ -59,36 +61,113 @@ export default function PartialLeads() {
         <FilterButton />
       </HeaderPrimary>
 
-      <TabPrimary
-        title1="Recent"
-        title2="In-progress (4)"
-        title3="Dropped (2)"
-        title4="Self consume(By dealer)"
-      />
-      <Row>
-        <ViewAll 
-          title="3 Leads Available" 
-          viewAllClass="mb-4 mt-0"
-        />
-        {cardData.map((item) => (
-          <Col md={4}>
-            <DetailCard
-              detailNumber={item.detailNo}
-              ownerName={item.ownerName}
-              emailId={item.email}
-              pinCode={item.pinCode}
-              prmSource={item.prmSource}
-              secSource={item.secSource}
-              contactNo={item.contact}
-            />
-          </Col>
-        ))}
-        <Col md={12}>
-          <p className={styles.detailCardTxt}>
-            Evaluation form sent: 8th November 2022 | 4:40 PM
-          </p>
-        </Col>
-      </Row>
+      <div className="custom-tab-style">
+        <Tabs
+          className="mb-3"
+          defaultActiveKey="title1"
+          id="uncontrolled-tab-example"
+        >
+          <Tab eventKey="title1" title="Recent">
+            <Row>
+              <ViewAll
+                title="3 Leads Available"
+                viewAllClass="mb-4 mt-0"
+              />
+              {cardData.map((item) => (
+                <Col md={4}>
+                  <DetailCard
+                    isCardFooter
+                    isContactBtn
+                    detailNumber={item.detailNo}
+                    ownerName={item.ownerName}
+                    emailId={item.email}
+                    pinCode={item.pinCode}
+                    prmSource={item.prmSource}
+                    secSource={item.secSource}
+                    contactNo={item.contact}
+                  />
+                </Col>
+              ))}
+              <Col md={12}>
+                <p className={styles.detailCardTxt}>
+                  Evaluation form sent: 8th November 2022 | 4:40 PM
+                </p>
+              </Col>
+            </Row>
+          </Tab>
+          <Tab eventKey="title2" title="In-progress (4)">
+            <Row className="mb-5">
+              <ViewAll
+                title="3 Leads Available"
+                viewAllClass="mb-4 mt-0"
+              />
+              {cardData.map((item) => (
+                <Col md={4}>
+                  <DetailCard
+                    isCardFooter
+                    isUserDetail
+                    isContactBtn
+                    detailNumber={item.detailNo}
+                    ownerName={item.ownerName}
+                    emailId={item.email}
+                    pinCode={item.pinCode}
+                    prmSource={item.prmSource}
+                    secSource={item.secSource}
+                    contactNo={item.contact}
+                  />
+                </Col>
+              ))}
+            </Row>
+          </Tab>
+          <Tab eventKey="title3" title="Dropped (2)">
+            <Row className="mb-5">
+              <ViewAll
+                title="3 Leads Available"
+                viewAllClass="mb-4 mt-0"
+              />
+              {cardData.map((item) => (
+                <Col md={4}>
+                  <DetailCard
+                    isCardFooter
+                    isUserDetail
+                    isReason
+                    reason={item.reason}
+                    detailNumber={item.detailNo}
+                    ownerName={item.ownerName}
+                    emailId={item.email}
+                    pinCode={item.pinCode}
+                    prmSource={item.prmSource}
+                    secSource={item.secSource}
+                    contactNo={item.contact}
+                  />
+                </Col>
+              ))}
+            </Row>
+          </Tab>
+          <Tab eventKey="title4" title="Self consume(By dealer)">
+            <Row className="mb-5">
+              <ViewAll
+                title="3 Leads Available"
+                viewAllClass="mb-4 mt-0"
+              />
+              {cardData.map((item) => (
+                <Col md={4}>
+                  <DetailCard
+                    isDropLead
+                    detailNumber={item.detailNo}
+                    ownerName={item.ownerName}
+                    emailId={item.email}
+                    pinCode={item.pinCode}
+                    prmSource={item.prmSource}
+                    secSource={item.secSource}
+                    contactNo={item.contact}
+                  />
+                </Col>
+              ))}
+            </Row>
+          </Tab>
+        </Tabs>
+      </div>
       <DetailPagination />
     </div>
   );

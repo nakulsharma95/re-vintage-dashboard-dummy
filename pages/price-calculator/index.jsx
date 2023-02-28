@@ -6,6 +6,7 @@ import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import styles from './style.module.scss';
 import PricePrimaryCard from '../../components/priceCalculator/pricePrimaryCard';
 import HeaderPrimary from '../../components/common/headerPrimary';
+import EvaluteForm from '../../components/priceCalculator/evaluateForm';
 
 export default function PriceCalculator() {
   const priceCardData = [
@@ -80,8 +81,7 @@ export default function PriceCalculator() {
           headerClass="mb-2"
           title="Instant Estimator Configurator"
           subTitle="Here you will find the Contact details of CRE for active Motorcycle and General Info"
-        >
-        </HeaderPrimary>
+        />
         <Link
           href="/price-calculator/add-motorcycle"
           className={styles.addMotorBtn}
@@ -89,11 +89,18 @@ export default function PriceCalculator() {
           <BsPlusLg /> Add Motorcycle
         </Link>
       </div>
+      <div className={styles.evaluteMain}>
+        <div className="mb-2">Evaluate In Easy Steps</div>
+        <EvaluteForm />
+      </div>
       <div className={styles.priceResultText}>18 item found</div>
       <Row className="pricePrimaryCol">
         {priceCardData.map((item) => (
           <Col md={2}>
-            <PricePrimaryCard imageUrl={item.imageUrl} priceTitle={item.title} />
+            <PricePrimaryCard
+              imageUrl={item.imageUrl}
+              priceTitle={item.title}
+            />
           </Col>
         ))}
       </Row>

@@ -20,6 +20,12 @@
   justify-content: space-between;
 }
 
+.stageTitle{
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
 .wishListedGraphBox {
   display: flex;
   justify-content: center;
@@ -36,4 +42,8 @@
   .graphStyle {
     height: 339px;
   }
+}
+
+.allTimeTable{
+  margin: 25px 0;
 }

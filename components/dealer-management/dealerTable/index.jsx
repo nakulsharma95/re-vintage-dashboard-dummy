@@ -59,13 +59,13 @@ function DealerTable() {
               No F 29/2, Phase 2, Okhla <br /> Industrial Area, New Delhi
               -110020
             </td>
-            <td onClick={cancelToggleModal}>
+            <td >
               <Form.Check
                 className={style.tableCheckbox}
                 type="checkbox"
                 label="Enabled"
-                checked
-              />{' '}
+                
+              />
             </td>
           </tr>
           <tr>

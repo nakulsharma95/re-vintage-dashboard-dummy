@@ -1,0 +1,11 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.reqRequestMain{
+	margin-top: 15px;
+	.smTitle{
+		font-size: 14px;
+		color: $gray-cb;
+		margin-bottom: 15px;
+	}
+}

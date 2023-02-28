@@ -1,6 +1,8 @@
 import { MdOutlineFilterList } from 'react-icons/md';
 import { TbTrendingUp } from 'react-icons/tb';
 import { Tab, Tabs } from 'react-bootstrap';
+import { RxCaretRight } from 'react-icons/rx';
+import { useState } from 'react';
 import DashboardCard from '../../components/dashboardCard';
 import FilterButton from '../../components/common/filterButton';
 import HeaderPrimary from '../../components/common/headerPrimary';
@@ -12,10 +14,16 @@ import InventoryTab from '../../components/overview/tabInventory';
 import RetailsTab from '../../components/overview/tabRetails';
 import LeadSection from '../../components/overview/leadSection';
 import NonReLeadSection from '../../components/overview/nonReLeadSection';
+import OutlineDropdown from '../../components/common/buttons/OutlineDropdown';
+import ButtonPrimary from '../../components/common/buttons/ButtonPrimary';
 
 import style from './style.module.scss';
 
 export default function Homepage() {
+  const [isFilterAction, setFilterAction] = useState(false);
+  const filterToggle = () => {
+    setFilterAction(!isFilterAction);
+  };
   const dashboardCardData = [
     {
       title: 'Total Procured',
@@ -56,9 +64,71 @@ export default function Homepage() {
         subTitle="Here you will see the most latest update"
       >
         <SearchPrimary placeholder="Search Reference ID" />
-        <button type="button" className={style.filterBtn}>
+        <button
+          type="button"
+          className={style.filterBtn}
+          onClick={filterToggle}
+        >
           Filter <MdOutlineFilterList size={15} />
         </button>
+
+        {isFilterAction && (
+          <div className={style.filterPopup}>
+            <div className={style.filterAction}>
+              <OutlineDropdown
+                dropdownTitle="Zone"
+                options={[
+                  'North Central',
+                  'East Culture',
+                  'North East Culture',
+                ]}
+                className="w-full"
+              />
+              <OutlineDropdown
+                dropdownTitle="Region"
+                dropdownMenuTitle="Blacklist Dealer"
+                className="w-full"
+                options={[
+                  'East India',
+                  'North India',
+                  'South India',
+                  'West India',
+                ]}
+              />
+              <OutlineDropdown
+                dropdownTitle="City"
+                dropdownMenuTitle="Blacklist Dealer"
+                className="w-full"
+                options={['Pune', 'Delhi', 'Pune']}
+              />
+              <OutlineDropdown
+                dropdownTitle="Dealer"
+                dropdownMenuTitle="Blacklist Dealer"
+                className="w-full"
+                options={['Dealer 1', 'Dealer 2', 'Dealer 3']}
+              />
+              <OutlineDropdown
+                dropdownTitle="Time Frame"
+                dropdownMenuTitle="Blacklist Dealer"
+                className="w-full"
+                options={['2pm to 5pm', '10am to 12pm', '9pm to 11pm']}
+              />
+              <ButtonPrimary
+                iconRight={<RxCaretRight />}
+                title="Apply"
+                white
+                className={style.filterButton}
+              />
+            </div>
+            <button
+              type="button"
+              className={style.closeButton}
+              onClick={filterToggle}
+            >
+              Close x
+            </button>
+          </div>
+        )}
       </HeaderPrimary>
 
       <div className="dashboard-card">
@@ -83,12 +153,11 @@ export default function Homepage() {
         <RegionalAnalytics />
       </div>
 
-      <HeaderPrimary headerClass="mb-1" title="Lead">
+      <HeaderPrimary headerClass="mt-5" title="Lead">
         <SearchPrimary placeholder="Search Mobile Number, Chassis Number…" />
         <FilterButton />
       </HeaderPrimary>
 
-      {/* <TabPrimary title1="Procurement" title2="Inventory" title3="Retail" /> */}
       <div className="custom-tab-style">
         <Tabs
           className="mb-3"

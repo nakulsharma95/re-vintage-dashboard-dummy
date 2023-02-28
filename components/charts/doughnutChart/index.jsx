@@ -28,7 +28,12 @@ ChartJS.register(
 function DoughnutChart(props) {
   return (
     <div className={styles.doughnutChart}>
-      <Doughnut options={props.options} data={props.data} width="100%" />
+      <Doughnut
+        options={props.options}
+        data={props.data}
+        width="100%"
+        height={props.size}
+      />
     </div>
   );
 }

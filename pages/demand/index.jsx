@@ -130,21 +130,6 @@ function Demand() {
     ],
   };
 
-  const dropdownList = [
-    {
-      dropdownTitle: 'This Year',
-      dropdownMenuTitle: 'Jan 2020',
-    },
-    {
-      dropdownTitle: 'Delhi',
-      dropdownMenuTitle: 'Mumbai',
-    },
-    {
-      dropdownTitle: 'City',
-      dropdownMenuTitle: 'Delhi',
-    },
-  ];
-
   const cardList = [
     {
       imgUrl: '/images/bikeImage3.png',
@@ -168,16 +153,6 @@ function Demand() {
     },
   ];
 
-  const favDropdownList = [
-    {
-      dropdownTitle: 'This week',
-      dropdownMenuTitle: 'Week 1',
-    },
-    {
-      dropdownTitle: 'Delhi',
-      dropdownMenuTitle: 'Mumbai',
-    },
-  ];
   return (
     <>
       <Breadcrumb title="Demand" />
@@ -189,12 +164,9 @@ function Demand() {
         <div className={styles.demandHead}>
           <div className={styles.title}>Wish-listed Motorcycles</div>
           <div className="d-flex align-items-center">
-            {dropdownList.map((item) => (
-              <OutlineDropdown
-                dropdownTitle={item.dropdownTitle}
-                dropdownMenuTitle={item.dropdownMenuTitle}
-              />
-            ))}
+            <OutlineDropdown dropdownTitle="This Year" options={['Jan 2020']} />
+            <OutlineDropdown dropdownTitle="Delhi" options={['Mumbai']} />
+            <OutlineDropdown dropdownTitle="City" options={['Delhi']} />
           </div>
         </div>
 
@@ -207,7 +179,20 @@ function Demand() {
       <div className={styles.demandContainer}>
         <div className={styles.demandHead}>
           <div className={styles.title}>Total Leads</div>
-          <div className={styles.stageTitle} />
+          <div className={styles.stageTitle}>
+            <div className="d-flex align-items-center me-4">
+              <div className="status-circle danger me-2" />
+              Hunter 350
+            </div>
+            <div className="d-flex align-items-center me-4">
+              <div className="status-circle sky me-2" />
+              Classic 350
+            </div>
+            <div className="d-flex align-items-center">
+              <div className="status-circle orange me-2" />
+              Scram 411
+            </div>
+          </div>
         </div>
 
         <div className={styles.graphSection}>
@@ -242,15 +227,14 @@ function Demand() {
             <OutlineButton title="Import EXCEL" leftIcon={<BiDownload />} />
           </div>
           <span className="sortText">Sort By:</span>
-          {favDropdownList.map((item) => (
-            <OutlineDropdown
-              dropdownTitle={item.dropdownTitle}
-              dropdownMenuTitle={item.dropdownMenuTitle}
-            />
-          ))}
+
+          <OutlineDropdown dropdownTitle="This week" options={['Week 1']} />
+          <OutlineDropdown dropdownTitle="City" options={['Mumbai']} />
         </div>
       </div>
-      <DemandPrimaryTable />
+      <div className={styles.allTimeTable}>
+        <DemandPrimaryTable />
+      </div>
       <DetailPagination />
     </>
   );
