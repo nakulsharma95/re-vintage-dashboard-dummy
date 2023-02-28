@@ -12,10 +12,10 @@ async function verifyToken(token, successResponse, failureResponse) {
   );
   const res = await verifyResponse?.json();
 
-  if (res?.code === 200 && true) {
+  if (res?.code === 200) {
     return { isAuthenticated: true, successResponse };
   }
-  if (res?.code === 401 || res?.code === 402 || false) {
+  if (res?.code === 401 || res?.code === 402 ) {
     const splitToken = token?.split('#');
     const generateResponse = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/v3/auth/dashboard/generate-token`,
