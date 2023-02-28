@@ -5,6 +5,10 @@
   color: $white;
   padding: 1rem 1.5rem 0rem 1.5rem;
   margin: 1rem 0;
+@include mobile{
+  overflow-y: scroll;
+}
+  
 
 
   .escalationCard_head {
@@ -55,9 +59,15 @@
     .escalationCard_bottomRow {
       display: flex;
       align-items: center;
-	   justify-content: space-between;
+	    justify-content: space-between;
       gap: 0 41px;
       padding: 17px 0;
+
+      @include mobile{
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+      }
 
 	  .escalationCard_Colums {
 		display: flex;

@@ -1,0 +1,22 @@
+.dealerCard{
+
+	p{
+		margin: 0;
+	}
+	.dealerCardHead{
+		background-color: #282828;
+		padding: 1rem;
+
+		.dealerCardTitle{
+			font-size: 16px;
+		}
+        .dealerCardLocation{
+			font-size: 12px;
+			margin: 1rem 0;
+		}
+	}
+	.dealerCardFooter{
+		background-color: #181818;
+		padding: 1rem;
+	}
+}

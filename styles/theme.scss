@@ -711,6 +711,10 @@ h6 {
   .motor-cycle-accordian-inner {
     padding: 20px;
 
+    @include mobile{
+      padding: 0;
+    }
+
     .accordion-header .accordion-button {
       background-color: $gray-2;
     }
