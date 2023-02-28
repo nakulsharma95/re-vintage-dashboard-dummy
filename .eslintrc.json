@@ -22,6 +22,7 @@
         "endOfLine": "auto"
       }
     ],
+    "no-param-reassign": [2, { "props": false }],
     "react/react-in-jsx-scope": "off",
     "react/destructuring-assignment": "off",
     "react/prop-types": "off",
