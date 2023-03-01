@@ -1,100 +1,97 @@
-import { Col, Row, Tab, Tabs } from "react-bootstrap";
-import { TbTrendingUp } from "react-icons/tb";
-import DealFilter from "../../../components/dealClosure/dealFilter";
-import { RiShareBoxFill } from "react-icons/ri";
-import BikeCardRadio from "../../../components/common/cardCheckbox";
-import BikeCardUpload from "../../../components/common/cardCheckbox";
-import BikeCardRefurbishment from "../../../components/common/cardCheckbox";
-import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import DashboardCard from "../../../components/dashboardCard";
-import SortTabs from "../../../components/common/sortTabs";
-import TabPrimary from "../../../components/common/tabPrimary";
-import SearchPrimary from "../../../components/common/searchPrimary";
-import FilterButton from "../../../components/common/filterButton";
-import HeaderPrimary from "../../../components/common/headerPrimary";
-import OutlineButton from "../../../components/common/buttons/OutlineButton";
+import { Col, Row, Tab, Tabs } from 'react-bootstrap';
+import { TbTrendingUp } from 'react-icons/tb';
+import { RiShareBoxFill } from 'react-icons/ri';
+import DealFilter from '../../../components/dealClosure/dealFilter';
+import BikeCard from '../../../components/common/cardCheckbox';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import DashboardCard from '../../../components/dashboardCard';
+import SortTabs from '../../../components/common/sortTabs';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import FilterButton from '../../../components/common/filterButton';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
 
 export default function Inventory() {
   const dashboardCardData = [
     {
-      title: "Total",
-      description: "32",
-      bottomDescription: "Overall Growth",
-      percentage: "12%",
+      title: 'Total',
+      description: '32',
+      bottomDescription: 'Overall Growth',
+      percentage: '12%',
       icon: <TbTrendingUp color="#13B21F" size={15} />,
-      cardBg: "#DA291C",
-      dividerColor: "white",
+      cardBg: '#DA291C',
+      dividerColor: 'white',
     },
     {
-      title: "Content Approval Pending",
-      description: "12",
-      bottomDescription: "Received This Week",
-      percentage: "8",
-      cardBg: "#403E3E",
-      dividerColor: "#282828",
+      title: 'Content Approval Pending',
+      description: '12',
+      bottomDescription: 'Received This Week',
+      percentage: '8',
+      cardBg: '#403E3E',
+      dividerColor: '#282828',
     },
     {
-      title: "Content Upload Pending",
-      description: "08",
-      cardBg: "#282828",
+      title: 'Content Upload Pending',
+      description: '08',
+      cardBg: '#282828',
     },
     {
-      title: "Under Refurbishment",
-      description: "12",
-      cardBg: "#282828",
+      title: 'Under Refurbishment',
+      description: '12',
+      cardBg: '#282828',
     },
   ];
   const cardData = [
     {
-      imageUrl: "/images/bikeImage.png",
-      overDue: "evolutionOver",
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      imageUrl: '/images/bikeImage.png',
+      overDue: 'evolutionOver',
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage2.png",
-      dealerLocation: "Neel Motors, Rohini Nagar, Delhi",
+      imageUrl: '/images/bikeImage2.png',
+      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage3.png",
-      dealerLocation: "Neel Motors, Punjabi Bagh, Delhi",
+      imageUrl: '/images/bikeImage3.png',
+      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage4.png",
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      imageUrl: '/images/bikeImage4.png',
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage.png",
-      overDue: "evolutionOver",
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      imageUrl: '/images/bikeImage.png',
+      overDue: 'evolutionOver',
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage2.png",
-      dealerLocation: "Neel Motors, Rohini Nagar, Delhi",
+      imageUrl: '/images/bikeImage2.png',
+      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage3.png",
-      dealerLocation: "Neel Motors, Punjabi Bagh, Delhi",
+      imageUrl: '/images/bikeImage3.png',
+      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage4.png",
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      imageUrl: '/images/bikeImage4.png',
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage.png",
-      overDue: "evolutionOver",
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      imageUrl: '/images/bikeImage.png',
+      overDue: 'evolutionOver',
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage2.png",
-      dealerLocation: "Neel Motors, Rohini Nagar, Delhi",
+      imageUrl: '/images/bikeImage2.png',
+      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage3.png",
-      dealerLocation: "Neel Motors, Punjabi Bagh, Delhi",
+      imageUrl: '/images/bikeImage3.png',
+      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage4.png",
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      imageUrl: '/images/bikeImage4.png',
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
   ];
   return (
@@ -127,6 +124,7 @@ export default function Inventory() {
           className="mb-3"
           defaultActiveKey="title3"
           id="uncontrolled-tab-example"
+          tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Content Approval Pending (12)">
             <SortTabs
@@ -139,7 +137,7 @@ export default function Inventory() {
             <Row>
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>
-                  <BikeCardRadio
+                  <BikeCard
                     bikeModal="2015 Classic 350"
                     bikeRc="-DL6TAL7314"
                     bikekm="43,384 km"
@@ -171,7 +169,7 @@ export default function Inventory() {
             <Row>
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>
-                  <BikeCardUpload
+                  <BikeCard
                     bikeModal="2015 Classic 350"
                     bikeRc="-DL6TAL7314"
                     bikekm="43,384 km"
@@ -206,7 +204,7 @@ export default function Inventory() {
             <Row>
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>
-                  <BikeCardRefurbishment
+                  <BikeCard
                     bikeModal="2015 Classic 350"
                     bikeRc="-DL6TAL7314"
                     bikekm="43,384 km"

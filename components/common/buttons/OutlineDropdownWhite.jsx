@@ -4,7 +4,11 @@ import styles from './style.module.scss';
 export default function OutlineDropdownWhite(props) {
   return (
     <Dropdown className={styles.outlineDropdownMenu}>
-      <Dropdown.Toggle variant="" id="dropdown-basic" className={styles.dropdownToggleWhite}>
+      <Dropdown.Toggle
+        variant=""
+        id="dropdown-basic"
+        className={styles.dropdownToggleWhite}
+      >
         {props.dropdownTitle}
       </Dropdown.Toggle>
 

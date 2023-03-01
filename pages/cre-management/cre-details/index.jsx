@@ -1,29 +1,29 @@
-import React from "react";
-import { Row, Col, Tab, Tabs } from "react-bootstrap";
-import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import CreAddressDetailCard from "../../../components/cre-management/creAddressDetailCard";
-import CreBikeInfoCard from "../../../components/cre-management/creBikeInfoCard";
-import CrePrimaryCard from "../../../components/cre-management/crePrimaryCard";
-import CreProfileCard from "../../../components/cre-management/creProfileCard";
-import CreTrainingCard from "../../../components/cre-management/creTrainingCard";
-import TabPrimary from "../../../components/common/tabPrimary";
-import HeaderPrimary from "../../../components/common/headerPrimary";
-import CrePerformanceMatrix from "../../../components/cre-management/crePerformanceMatrix";
-import CreMonthPerformace from "../../../components/cre-management/creMonthPerformace";
+import React from 'react';
+import { Row, Col, Tab, Tabs } from 'react-bootstrap';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import CreAddressDetailCard from '../../../components/cre-management/creAddressDetailCard';
+import CreBikeInfoCard from '../../../components/cre-management/creBikeInfoCard';
+import CrePrimaryCard from '../../../components/cre-management/crePrimaryCard';
+import CreProfileCard from '../../../components/cre-management/creProfileCard';
+import CreTrainingCard from '../../../components/cre-management/creTrainingCard';
+import TabPrimary from '../../../components/common/tabPrimary';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import CrePerformanceMatrix from '../../../components/cre-management/crePerformanceMatrix';
+import CreMonthPerformace from '../../../components/cre-management/creMonthPerformace';
 
 function CreDetails() {
   const cardData = [
     {
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
     {
-      dealerLocation: "Neel Motors, Rohini Nagar, Delhi",
+      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
     },
     {
-      dealerLocation: "Neel Motors, Punjabi Bagh, Delhi",
+      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
     },
     {
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
   ];
   return (
@@ -53,6 +53,7 @@ function CreDetails() {
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
+          tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Basic Details">
             <div className="cre-heading mb-2 mt-2">Allocated Leads</div>
@@ -115,13 +116,7 @@ function CreDetails() {
           <Tab eventKey="title2" title="Performance Management">
             <div className="cre-heading mb-2 mt-2">Performance</div>
             <Col xxl={12} lg={12} md={12}>
-              <CrePerformanceMatrix
-                title1="Procurement Lead Management"
-                title2="Bidding / First Offer"
-                title3="Deal Closure"
-                title4="General Query Response"
-                creTitle="CRE Performance Matrix"
-              />
+              <CrePerformanceMatrix creTitle="CRE Performance Matrix" />
 
               <CreMonthPerformace performanceTitle="Monthly Performance" />
             </Col>

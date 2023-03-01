@@ -1,9 +1,9 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
-import CreAddForm from "../../../components/cre-management/creAddForm";
-import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import HeaderPrimary from "../../../components/common/headerPrimary";
-import SearchPrimary from "../../../components/common/searchPrimary";
+import React from 'react';
+import { Row, Col } from 'react-bootstrap';
+import CreAddForm from '../../../components/cre-management/creAddForm';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
 
 function AddCre() {
   return (

@@ -1,4 +1,5 @@
 import { RiShareBoxFill } from 'react-icons/ri';
+import { Tab, Tabs } from 'react-bootstrap';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
 import MotorcycleDetailCard from '../../../components/procurements/evaluationRequest';
@@ -7,7 +8,6 @@ import SearchPrimary from '../../../components/common/searchPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
 import ViewAll from '../../../components/common/viewAllHeader';
-import { Tab, Tabs } from 'react-bootstrap';
 
 function EvaluationRequest() {
   const motorCycleDetail = [
@@ -96,6 +96,7 @@ function EvaluationRequest() {
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
+          tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Open">
             <ViewAll

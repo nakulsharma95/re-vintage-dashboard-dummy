@@ -41,7 +41,6 @@ function PaymentInformation() {
           </Col>
           <Col lg={4} sm={5} xs={6}>
             <p>
-              
               <span>ICICI0005</span>
             </p>
           </Col>
@@ -52,7 +51,6 @@ function PaymentInformation() {
           </Col>
           <Col lg={4} sm={5} xs={6}>
             <p>
-              
               <span>Online</span>
             </p>
           </Col>
@@ -71,15 +69,14 @@ function PaymentInformation() {
           </Col>
           <Col lg={4} sm={5} xs={6}>
             <p>
-              
               <span className={style.refNo}>CSFDJG54879865</span>
               <span>Save</span>
             </p>
           </Col>
-          <Col lg={2}sm={5} xs={6}>
+          <Col lg={2} sm={5} xs={6}>
             <p>Cancelled Check: </p>
           </Col>
-          <Col lg={4}sm={5} xs={6}>
+          <Col lg={4} sm={5} xs={6}>
             <p>
               <span className={style.downloadBtn}>
                 <FiDownload /> Download
@@ -88,10 +85,10 @@ function PaymentInformation() {
           </Col>
         </Row>
         <Row>
-          <Col lg={2}sm={5} xs={6}>
+          <Col lg={2} sm={5} xs={6}>
             <p>MSD ID: </p>
           </Col>
-          <Col lg={4}sm={5} xs={6}>
+          <Col lg={4} sm={5} xs={6}>
             <p>
               <span>2NB9R2HF01</span>
             </p>

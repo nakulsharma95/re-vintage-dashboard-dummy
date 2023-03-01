@@ -28,7 +28,7 @@ export default function ManaualEntry() {
       </div>
       <div className={styles.submitBtn}>
         <Button variant="">
-          Submit{' '}
+          Submit
           <span>
             <BsChevronRight />
           </span>

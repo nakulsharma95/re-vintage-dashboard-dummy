@@ -1,11 +1,11 @@
 import { Card } from 'react-bootstrap';
-import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import { BiRupee } from 'react-icons/bi';
 import { FiCopy } from 'react-icons/fi';
-import styles from './style.module.scss';
 import ArrowButton from '../../common/buttons/ArrowButton';
 import CustomCheckBox from '../../common/customCheckBox';
+import styles from './style.module.scss';
 
 export default function SellerPrimaryCard(props) {
   return (

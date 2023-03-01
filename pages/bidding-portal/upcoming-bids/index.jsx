@@ -1,6 +1,7 @@
 import { Row, Col, Dropdown, Form, Tab, Tabs } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
 import { FiSettings } from 'react-icons/fi';
+import Link from 'next/link';
 import UpcomingBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
@@ -13,7 +14,6 @@ import ButtonPrimary from '../../../components/common/buttons/ButtonPrimary';
 import SortTabs from '../../../components/common/sortTabs';
 // Style here
 import styles from './style.module.scss';
-import Link from 'next/link';
 
 export default function UpcomingBids() {
   const upcomingBikeData = [
@@ -80,7 +80,9 @@ export default function UpcomingBids() {
                 </div>
                 <div className={styles.title}>%</div>
               </div>
-              <div className={styles.lastEdited}>Last edited by: <Link href="/">Rahul Sharma</Link></div>
+              <div className={styles.lastEdited}>
+                Last edited by: <Link href="/">Rahul Sharma</Link>
+              </div>
               <div className={styles.bidPricebtn}>
                 <ButtonPrimary title="Apply" />
               </div>
@@ -100,12 +102,10 @@ export default function UpcomingBids() {
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
+          tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Today">
-            <SortTabs
-              selectAllCheck
-              sortTabTitle="25 Bids Available"
-            />
+            <SortTabs selectAllCheck sortTabTitle="25 Bids Available" />
             <Row className="mb-3">
               {upcomingBikeData.map((item) => (
                 <Col md={3}>

@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { Card } from "react-bootstrap";
-import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
-import styles from "./style.module.scss";
+import Link from 'next/link';
+import { Card } from 'react-bootstrap';
+import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
+import styles from './style.module.scss';
 
 function CreDetailCard(props) {
   const { creDetailData } = props;

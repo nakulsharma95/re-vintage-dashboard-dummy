@@ -20,6 +20,8 @@
 
     @include mobile {
       flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: start;
       gap: 12px;
     }
   }

@@ -1,6 +1,6 @@
-import React from "react";
-import { Dropdown } from "react-bootstrap";
-import styles from "./style.module.scss";
+import React from 'react';
+import { Dropdown } from 'react-bootstrap';
+import styles from './style.module.scss';
 
 export default function ThemeDropdown(props) {
   return (

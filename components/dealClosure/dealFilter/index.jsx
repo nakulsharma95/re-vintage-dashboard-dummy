@@ -21,13 +21,7 @@ function DealFilter(props) {
 
       {props.isViewBy && (
         <div className={styles.viewPending}>
-        { props.isNonRe ?
-        "" 
-          :
-          <span className="mx-2">View:</span> 
-          
-          }
-
+          {props.isNonRe ? '' : <span className="mx-2">View:</span>}
 
           <div className={styles.pendingOuter}>
             <Dropdown className={styles.pendingDropdown}>

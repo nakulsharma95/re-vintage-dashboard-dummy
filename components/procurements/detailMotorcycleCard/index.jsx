@@ -1,6 +1,6 @@
 import { Table } from 'react-bootstrap';
-import styles from './style.module.scss';
 import { BiRupee } from 'react-icons/bi';
+import styles from './style.module.scss';
 import DetailDropCard from '../detailDropCard';
 
 export default function DetailMotorcycleCard(props) {
@@ -11,7 +11,9 @@ export default function DetailMotorcycleCard(props) {
           <h2 className={`${styles.vehicleDetailStatus} mb-3 mb-0`}>
             Motorcycle details
             <span className={`${styles.status} ms-4 mb-0`}>Status:</span>
-            <span className={`${styles.overdue} ms-2 mb-0`}>{props.status}</span>
+            <span className={`${styles.overdue} ms-2 mb-0`}>
+              {props.status}
+            </span>
           </h2>
 
           <h3 className={`${styles.vehicleDetailNumber} mb-3 mb-0`}>
@@ -19,7 +21,9 @@ export default function DetailMotorcycleCard(props) {
             <span className={`${styles.vehicleNumber} ms-2`}>
               - {props.bikeNumber}
             </span>
-            <span className={`${styles.vehicleId} ms-1`}>- {props.bikeCode}</span>
+            <span className={`${styles.vehicleId} ms-1`}>
+              - {props.bikeCode}
+            </span>
           </h3>
 
           <h4 className={`${styles.vehicleRideDetails} mb-3 mb-0`}>
@@ -36,14 +40,17 @@ export default function DetailMotorcycleCard(props) {
             <thead>
               <tr>
                 <th className={styles.ownerdetailHeadTable}>
-                  Owner<p className={styles.ownerDescription}>{props.ownerNo}</p>
+                  Owner
+                  <p className={styles.ownerDescription}>{props.ownerNo}</p>
                 </th>
                 <th className={styles.ownerdetailHeadTable}>
                   KM<p className={styles.ownerDescription}>{props.kmDrive}</p>
                 </th>
                 <th className={styles.ownerdetailHeadTable}>
                   Mileage
-                  <p className={styles.ownerDescription}>{props.mileage} kmpl</p>
+                  <p className={styles.ownerDescription}>
+                    {props.mileage} kmpl
+                  </p>
                 </th>
               </tr>
             </thead>
@@ -68,7 +75,9 @@ export default function DetailMotorcycleCard(props) {
 
           <div className={styles.Estimatedprice}>
             <span>Estimated Price</span>
-            <p className="mb-0"><BiRupee /> {props.priceOne} - <BiRupee /> {props.priceTwo} </p>
+            <p className="mb-0">
+              <BiRupee /> {props.priceOne} - <BiRupee /> {props.priceTwo}{' '}
+            </p>
           </div>
         </div>
         <div className={styles.evaluation}>
