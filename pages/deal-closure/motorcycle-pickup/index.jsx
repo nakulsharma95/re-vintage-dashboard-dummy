@@ -46,28 +46,48 @@ function MotorcyclePickup() {
           defaultActiveKey="title3"
           id="uncontrolled-tab-example"
         >
-          <Tab eventKey="title1" title="Dealer (25)" />
-          <Tab eventKey="title2" title="Seller Portal (12)" />
+          <Tab eventKey="title1" title="Dealer (25)">
+            <Row>
+              <SortTabs
+                selectAllCheck
+                approveBtn
+                isCheckInput
+                sortTabTitle="25 Result Found"
+              />
+              {cardData.map((item) => (
+                <Col xxl={3} xl={4} lg={6} md={6}>
+                  <DealCheckCard
+                    data={item}
+                    isCheckBoxVisible
+                    acceptPrice
+                    pickupCheck
+                  />
+                </Col>
+              ))}
+            </Row>
+          </Tab>
+          <Tab eventKey="title2" title="Seller Portal (12)">
+            <Row>
+              <SortTabs
+                selectAllCheck
+                approveBtn
+                isCheckInput
+                sortTabTitle="25 Result Found"
+              />
+              {cardData.map((item) => (
+                <Col xxl={3} xl={4} lg={6} md={6}>
+                  <DealCheckCard
+                    data={item}
+                    isCheckBoxVisible
+                    acceptPrice
+                    pickupCheck
+                  />
+                </Col>
+              ))}
+            </Row>
+          </Tab>
         </Tabs>
       </div>
-      <SortTabs
-        selectAllCheck
-        approveBtn
-        isCheckInput
-        sortTabTitle="25 Result Found"
-      />
-      <Row>
-        {cardData.map((item) => (
-          <Col xxl={3} xl={4} lg={6} md={6}>
-            <DealCheckCard
-              data={item}
-              isCheckBoxVisible
-              acceptPrice
-              pickupCheck
-            />
-          </Col>
-        ))}
-      </Row>
     </>
   );
 }

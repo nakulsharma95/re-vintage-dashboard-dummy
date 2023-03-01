@@ -1,8 +1,8 @@
 import React from 'react';
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { AiOutlineMail } from "react-icons/ai";
-import { BsTelephone } from "react-icons/bs";
-
+import { HiOutlineLocationMarker } from 'react-icons/hi';
+import { AiOutlineMail } from 'react-icons/ai';
+import { BsTelephone } from 'react-icons/bs';
+import { Button } from 'react-bootstrap';
 import styles from './style.module.scss';
 
 function MobileDealerCard(props) {

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import Card from 'react-bootstrap/Card';
 import { AiOutlineClose } from 'react-icons/ai';
 import { FaRegClipboard } from 'react-icons/fa';
 import { MdOutlineClose } from 'react-icons/md';
-import styles from './style.module.scss';
 import ArrowButton from '../../common/buttons/ArrowButton';
 import PartialLeadsDetail from '../../modals/partialLeadsModal';
+import styles from './style.module.scss';
 
 export default function DetailCard(props) {
   const [partialModal, setpartialModal] = useState(false);
@@ -116,18 +117,18 @@ export default function DetailCard(props) {
                   </div>
                   <div>
                     <span className={styles.smTitle}>Contact No.</span>
-                    +91 98765 43210
+                    <Link href="/">+91 98765 43210</Link>
                   </div>
                 </div>
               </div>
             )}
             <div className={styles.detailsDivide}>
               <p className="text-white-50 mb-0">
-                Prm source:{' '}
+                Prm source:
                 <span className="text-white">{props.prmSource}</span>
               </p>
               <p className="text-white-50 mb-0">
-                Sec source:{' '}
+                Sec source:
                 <span className="text-white">{props.secSource}</span>
               </p>
             </div>

@@ -11,8 +11,6 @@ import FilterButton from '../../components/common/filterButton';
 import EmptyState from '../../components/emptyState';
 import MobileDealerCard from '../../components/dealer-management/mobileDealerCard';
 
-import styles from './style.module.scss';
-
 function DealerManagement() {
   const mobileDealerCard = [
     {
