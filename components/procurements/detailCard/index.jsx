@@ -68,10 +68,12 @@ export default function DetailCard(props) {
             )}
             {props.isContactBtn && (
               <div className={`${styles.detailsDivide} py-2 `}>
-                <ArrowButton
-                  onClick={props.detailHandler}
-                  title="Contact Customer"
-                />
+                <div className={styles.contactUserBtn}>
+                  <ArrowButton
+                    onClick={props.detailHandler}
+                    title="Contact Customer"
+                  />
+                </div>
                 <div className={`${styles.detailSendForm} text-white`}>
                   <FaRegClipboard className="mx-1" size={16} />
                   <button
