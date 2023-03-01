@@ -19,13 +19,13 @@ function Review() {
     prevArrow: <MdOutlineArrowBackIosNew />,
     responsive: [
       {
-        breakpoint:900,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 3,
           dots: false,
-          arrows:false
-        }
+          arrows: false,
+        },
       },
       {
         breakpoint: 600,
@@ -33,8 +33,8 @@ function Review() {
           slidesToShow: 2,
           slidesToScroll: 2,
           dots: false,
-          arrows:false
-        }
+          arrows: false,
+        },
       },
       {
         breakpoint: 480,
@@ -42,15 +42,15 @@ function Review() {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
-          arrows:false
-        }
-      }
+          arrows: false,
+        },
+      },
       // You can unslick at a given breakpoint now by adding:
       // settings: "unslick"
       // instead of a settings object
-    ]
+    ],
   };
-  
+
   return (
     <div className={style.review}>
       <h5>Reviews</h5>

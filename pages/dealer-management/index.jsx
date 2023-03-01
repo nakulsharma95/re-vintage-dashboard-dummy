@@ -11,7 +11,7 @@ import FilterButton from '../../components/common/filterButton';
 import EmptyState from '../../components/emptyState';
 import MobileDealerCard from '../../components/dealer-management/mobileDealerCard';
 
-import styles from './style.module.scss';
+// import styles from './style.module.scss';
 
 function DealerManagement() {
   return (
@@ -29,32 +29,31 @@ function DealerManagement() {
       </HeaderPrimary>
 
       <MobileDealerCard />
-      <div className='d-none d-lg-block'>
-      <div className="custom-tab-style">
-        <Tabs
-          className="mb-3"
-          defaultActiveKey="title1"
-          id="uncontrolled-tab-example"
-        >
-          <Tab eventKey="title1" title="All">
-            <DealerTable />
-          </Tab>
-          <Tab eventKey="title2" title="Enabled Dealers">
-            <EmptyState
-              title="No Result Found!"
-              description="we couldn find what you searched for try something again."
-            />
-          </Tab>
-          <Tab eventKey="title3" title="Disabled Dealers">
-            <EmptyState
-              title="No Result Found!"
-              description="we couldn find what you searched for try something again."
-            />
-          </Tab>
-        </Tabs>
+      <div className="d-none d-lg-block">
+        <div className="custom-tab-style">
+          <Tabs
+            className="mb-3"
+            defaultActiveKey="title1"
+            id="uncontrolled-tab-example"
+          >
+            <Tab eventKey="title1" title="All">
+              <DealerTable />
+            </Tab>
+            <Tab eventKey="title2" title="Enabled Dealers">
+              <EmptyState
+                title="No Result Found!"
+                description="we couldn find what you searched for try something again."
+              />
+            </Tab>
+            <Tab eventKey="title3" title="Disabled Dealers">
+              <EmptyState
+                title="No Result Found!"
+                description="we couldn find what you searched for try something again."
+              />
+            </Tab>
+          </Tabs>
+        </div>
       </div>
-      </div>
-     
     </div>
   );
 }

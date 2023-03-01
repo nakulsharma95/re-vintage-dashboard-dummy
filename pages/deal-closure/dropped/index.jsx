@@ -1,30 +1,30 @@
-import { Col, Row } from "react-bootstrap";
-import { RiShareBoxFill } from "react-icons/ri";
-import SortTabs from "~/components/common/sortTabs";
-import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import OutlineButton from "../../../components/common/buttons/OutlineButton";
-import FilterButton from "../../../components/common/filterButton";
-import HeaderPrimary from "../../../components/common/headerPrimary";
-import SearchPrimary from "../../../components/common/searchPrimary";
-import CloserBikeCard from "../../../components/dealClosure/closerCard";
+import { Col, Row } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
+import SortTabs from '../../../components/common/sortTabs';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import FilterButton from '../../../components/common/filterButton';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import CloserBikeCard from '../../../components/dealClosure/closerCard';
 
 function PaymentsPending() {
   const cardData = [
     {
-      imageUrl: "/images/bikeImage.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bikeImage.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bikeImage2.png",
-      bikeStatus: "Under Refurbishment",
+      imageUrl: '/images/bikeImage2.png',
+      bikeStatus: 'Under Refurbishment',
     },
     {
-      imageUrl: "/images/bikeImage3.png",
-      bikeStatus: "Under Approval",
+      imageUrl: '/images/bikeImage3.png',
+      bikeStatus: 'Under Approval',
     },
     {
-      imageUrl: "/images/bikeImage4.png",
+      imageUrl: '/images/bikeImage4.png',
     },
   ];
   return (
