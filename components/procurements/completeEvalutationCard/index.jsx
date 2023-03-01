@@ -39,11 +39,7 @@ function CompleteBikeDetail({
     <Card className={styles.compBikeCard}>
       <Card.Body className={`${styles.compBikeCardBody}`}>
         <Row>
-<<<<<<< HEAD
           <Col xxl={4} xl={6} lg={6} className={styles.compBikeCardSliderMain}>
-=======
-          <Col md={4} className={styles.compBikeCardSliderMain}>
->>>>>>> 01aad61b6f01c36cfc6902e7c3b3729053581819
             <BikeSlider isSlider={isSlider} />
           </Col>
           {completeData.map((item) => (
