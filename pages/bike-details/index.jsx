@@ -105,7 +105,7 @@ export default function BiddingDetails(props) {
         </div>
 
         {/* This component open in Under Negotiation bike detail page */}
-        
+
         {props.bikeContact && (
           <div className={styles.contactCols}>
             <li>
