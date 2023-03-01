@@ -1,29 +1,29 @@
-import React from "react";
-import { Row, Col, Tabs, Tab } from "react-bootstrap";
-import { RiShareBoxFill } from "react-icons/ri";
-import CloserBikeCard from "../../../components/dealClosure/closerCard";
-import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import SearchPrimary from "../../../components/common/searchPrimary";
-import FilterButton from "../../../components/common/filterButton";
-import HeaderPrimary from "../../../components/common/headerPrimary";
-import OutlineButton from "../../../components/common/buttons/OutlineButton";
-import SortTabs from "~/components/common/sortTabs";
+import React from 'react';
+import { Row, Col, Tabs, Tab } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
+import CloserBikeCard from '../../../components/dealClosure/closerCard';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import FilterButton from '../../../components/common/filterButton';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import SortTabs from '../../../components/common/sortTabs';
 
 function PaymentsPending() {
   const cardData = [
     {
-      imageUrl: "/images/bikeImage.png",
-      overDue: "evolutionOver",
+      imageUrl: '/images/bikeImage.png',
+      overDue: 'evolutionOver',
     },
     {
-      imageUrl: "/images/bikeImage2.png",
-      bikeStatus: "Payment OVERDUE",
+      imageUrl: '/images/bikeImage2.png',
+      bikeStatus: 'Payment OVERDUE',
     },
     {
-      imageUrl: "/images/bikeImage3.png",
+      imageUrl: '/images/bikeImage3.png',
     },
     {
-      imageUrl: "/images/bikeImage4.png",
+      imageUrl: '/images/bikeImage4.png',
     },
   ];
   return (
