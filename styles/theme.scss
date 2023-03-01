@@ -880,10 +880,17 @@ h6 {
 
 // dashboardCard
 .dashboard-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin-bottom: 12px;
   margin-top: 24px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
 
   @include mobile {
     display: grid;
