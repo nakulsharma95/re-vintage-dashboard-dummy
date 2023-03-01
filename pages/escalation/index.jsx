@@ -7,7 +7,7 @@ import OutlineButton from '../../components/common/buttons/OutlineButton';
 import DealFilter from '../../components/dealClosure/dealFilter';
 import EscalationCard from '../../components/escalation/escalationCard';
 
-function Escalation(props) {
+function Escalation() {
   const escalationCardData = [
     {
       escalationID: '- CSCB29E2B1',
@@ -64,19 +64,18 @@ function Escalation(props) {
       </HeaderPrimary>
       <hr />
       <DealFilter title="4 Escalations Found" isViewBy droptitle="Recent" />
-     {escalationCardData.map((item)=>(
-      <EscalationCard
-      id={item.escalationID}
-      issue={item.escalationIssue}
-      escalatedBy={item.escalatedBy}
-      status={item.status}
-      stage={item.escalationStage}
-      vdmpId={item.vdmpId}
-      description={item.description}
-      dateAndTime={item.dateAndTime}
-    />
-     ))}
-   
+      {escalationCardData.map((item) => (
+        <EscalationCard
+          id={item.escalationID}
+          issue={item.escalationIssue}
+          escalatedBy={item.escalatedBy}
+          status={item.status}
+          stage={item.escalationStage}
+          vdmpId={item.vdmpId}
+          description={item.description}
+          dateAndTime={item.dateAndTime}
+        />
+      ))}
     </div>
   );
 }
