@@ -64,20 +64,42 @@ export default function Sidebar(props) {
             </Link>
           </Accordion.Header>
           <Accordion.Body className={styles.accordionBody}>
-            <li>
+            <li
+              className={
+                router.pathname === '/procurement/partial-leads' ? 'active' : ''
+              }
+            >
               <Link href="/procurement/partial-leads">Partial Leads</Link>
             </li>
-            <li>
+            <li
+              className={
+                router.pathname === '/procurement/evaluation-requests'
+                  ? 'active'
+                  : ''
+              }
+            >
               <Link href="/procurement/evaluation-requests">
                 Evaluation Requests
               </Link>
             </li>
-            <li>
+            <li
+              className={
+                router.pathname === '/procurement/scheduled-evaluation'
+                  ? 'active'
+                  : ''
+              }
+            >
               <Link href="/procurement/scheduled-evaluation">
                 Scheduled Evaluation
               </Link>
             </li>
-            <li>
+            <li
+              className={
+                router.pathname === '/procurement/complete-evaluation'
+                  ? 'active'
+                  : ''
+              }
+            >
               <Link href="/procurement/complete-evaluation">
                 Completed Evaluation
               </Link>
