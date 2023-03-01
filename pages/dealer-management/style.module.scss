@@ -1,0 +1,10 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables//mixins';
+
+.mobileDealerCard{
+	@include tablet{
+		// display: grid;
+		// grid-template-columns: 1fr 1fr;
+		// gap: 1rem;
+	   }
+}

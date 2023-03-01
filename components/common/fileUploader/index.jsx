@@ -1,6 +1,6 @@
-import styles from "./style.module.scss";
-import { Form } from "react-bootstrap";
-import { AiOutlineCloudUpload } from "react-icons/ai";
+import { Form } from 'react-bootstrap';
+import { AiOutlineCloudUpload } from 'react-icons/ai';
+import styles from './style.module.scss';
 
 export default function FileUploader() {
   return (

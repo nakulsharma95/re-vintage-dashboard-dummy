@@ -1,4 +1,5 @@
 import { RiShareBoxFill } from 'react-icons/ri';
+import { Tab, Tabs } from 'react-bootstrap';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailMotorcycleCard from '../../../components/procurements/detailMotorcycleCard';
 import DetailPagination from '../../../components/common/paginationPrimary';
@@ -7,7 +8,6 @@ import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
 import FilterButton from '../../../components/common/filterButton';
 import ViewAll from '../../../components/common/viewAllHeader';
-import { Tab, Tabs } from 'react-bootstrap';
 
 export default function ScheduledEvaluation() {
   const cardItemData = [
@@ -93,6 +93,7 @@ export default function ScheduledEvaluation() {
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
+          tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Open">
             <ViewAll

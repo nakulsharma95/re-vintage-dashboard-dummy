@@ -4,9 +4,11 @@
 .sortTabMain {
   @include d-flex(space-between, center);
   margin-bottom: 1rem;
+  
   .sortTabFilter {
     display: flex;
     align-items: center;
+
     .sortTabFilterBtn {
       color: $white;
       opacity: 0.7;
@@ -34,21 +36,25 @@
   .sortTabCheck {
     display: flex;
     align-items: center;
+
     .tabCheckTitle {
       color: $gray-cb;
       font-size: 16px;
       font-weight: 500;
       padding-right: 1rem;
     }
+
     .tabCheck {
       margin-left: 1rem;
       margin-right: 1rem;
+
       label {
         color: $gray-cb;
         font-size: 14px;
         font-weight: 400;
       }
     }
+
     .submitCheckBBtn {
       padding: 0.3rem 0.8rem;
       display: flex;
@@ -60,9 +66,11 @@
       border: 1px solid $white;
       border-radius: 0px;
       transition: all 0.3s ease;
+
       .checkBtnIcon {
         font-size: 20px;
       }
+
       &:hover {
         color: $black;
         background: $white;
@@ -72,6 +80,7 @@
   .sortTabBtnBoxMain {
     display: flex;
     align-items: center;
+
     .sortText {
       color: $gray-cb;
       font-size: 14px;
@@ -79,6 +88,7 @@
       margin-bottom: 0px;
       margin-right: 0.5rem;
     }
+
     .sortTabBtn {
       font-size: 14px;
       font-weight: 600;
@@ -87,8 +97,10 @@
       border: 0;
       border-radius: 15px;
     }
+
     .sortTabBtnBox {
       padding-left: 0.5rem;
+
       .viewTabBtn {
         padding:0 0.5rem;
         font-size: 20px;

@@ -1,7 +1,7 @@
-import React from "react";
-import { Card, Badge } from "react-bootstrap";
-import { AiOutlineCheck, AiOutlineClose } from "react-icons/ai";
-import styles from "./style.module.scss";
+import React from 'react';
+import { Card, Badge } from 'react-bootstrap';
+import { AiOutlineCheck, AiOutlineClose } from 'react-icons/ai';
+import styles from './style.module.scss';
 
 function NotificationCard({
   heading,

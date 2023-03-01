@@ -1,10 +1,23 @@
-.dealerCard{
+@import "../../../styles/variables/colors";
+@import "../../../styles/variables/mixins";
 
+.dealerCard{
+   margin: 0.9rem 0;
+   display: none;
+
+   @include tablet{
+	display: block;
+	
+   }
+   @include mobile{
+	display: block;
+   }
 	p{
 		margin: 0;
 	}
+	
 	.dealerCardHead{
-		background-color: #282828;
+		background-color: $gray-28;
 		padding: 1rem;
 
 		.dealerCardTitle{
@@ -14,9 +27,29 @@
 			font-size: 12px;
 			margin: 1rem 0;
 		}
+		.dealerCardBtn{
+			background-color: transparent;
+			border: 1px solid $gray-70;
+			font-weight: 500;
+			color: $white;
+			font-size: 12px;
+			padding:0.6rem 2rem;
+			border-radius: 0;
+		}
 	}
 	.dealerCardFooter{
-		background-color: #181818;
-		padding: 1rem;
+		background-color: $gray-18;
+		padding: 0.5rem 1rem;
+		.dealerCardFooterLine{
+			margin: 0.5rem 0;
+		}
+		.dealerCardContact{
+			font-size: 12px;
+			color: $gray-cb;
+		}
+		.dealerContactNo{
+			font-size: 10px;
+			color: $gray-cb;
+		}
 	}
 }

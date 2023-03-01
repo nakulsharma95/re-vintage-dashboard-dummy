@@ -6,8 +6,13 @@ import styles from './style.module.scss';
 function DealFilter(props) {
   return (
     <div className={styles.dealFilterMain}>
+      {props.singleTitle && (
       <h3 className={styles.singleTitle}>{props.singleTitle}</h3>
+      )}
+      {props.title && (
       <h4 className={styles.dealFilterTitle}>{props.title}</h4>
+
+      )}
       {props.isSortButton && (
         <div className={styles.sortTabBtnBox}>
           <Button variant="primary" className={styles.viewTabBtn}>
@@ -21,13 +26,7 @@ function DealFilter(props) {
 
       {props.isViewBy && (
         <div className={styles.viewPending}>
-        { props.isNonRe ?
-        "" 
-          :
-          <span className="mx-2">View:</span> 
-          
-          }
-
+          {props.isNonRe ? '' : <span className="mx-2">View:</span>}
 
           <div className={styles.pendingOuter}>
             <Dropdown className={styles.pendingDropdown}>

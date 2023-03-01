@@ -1,15 +1,9 @@
-import React from "react";
-import { Col, Button } from "react-bootstrap";
-import {
-  BiGridAlt,
-  BiListUl,
-  BiCheck,
-  BiChevronDown,
-  BiErrorAlt,
-} from "react-icons/bi";
-import CustomCheckBox from "../customCheckBox";
-import DealFilter from '../../../components/dealClosure/dealFilter';
-import styles from "./style.module.scss";
+import React from 'react';
+import { Col, Button } from 'react-bootstrap';
+import { BiGridAlt, BiListUl, BiCheck, BiErrorAlt } from 'react-icons/bi';
+import CustomCheckBox from '../customCheckBox';
+import DealFilter from '../../dealClosure/dealFilter';
+import styles from './style.module.scss';
 
 function SortTabs(props) {
   return (
@@ -50,7 +44,7 @@ function SortTabs(props) {
               )}
             </div>
           ) : (
-            <>
+            <div>
               {props.isSubmitBtn && (
                 <div>
                   <Button variant="primary" className={styles.submitCheckBBtn}>
@@ -59,7 +53,7 @@ function SortTabs(props) {
                   </Button>
                 </div>
               )}
-            </>
+            </div>
           )}
         </div>
       ) : (
@@ -75,20 +69,8 @@ function SortTabs(props) {
         </div>
       )}
       <div className={styles.sortTabBtnBoxMain}>
-        {/* {props.isSortTabBox && (
-          <div className={`${styles.rightBorder} d-flex align-items-center`}>
-            <p className={styles.sortText}>Sort by:</p>
-            <div>
-              <Button variant="primary" className={styles.sortTabBtn}>
-                Self Procure
-                <BiChevronDown size={20} />
-              </Button>
-            </div>
-          </div>
-        )} */}
         <DealFilter title="Sort By" isViewBy isNonRe droptitle="Pending" />
-          <div className={styles.rightBorder}>
-        </div>
+        <div className={styles.rightBorder} />
 
         <div className={styles.sortTabBtnBox}>
           <Button variant="primary" className={styles.viewTabBtn}>

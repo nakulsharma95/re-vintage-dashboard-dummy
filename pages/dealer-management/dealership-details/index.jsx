@@ -1,6 +1,6 @@
 import React from 'react';
-import Dealershipdetails from '../../../components/dealer-management/dealershipDetailes';
 import { Row, Col, Tabs, Tab } from 'react-bootstrap';
+import Dealershipdetails from '../../../components/dealer-management/dealershipDetailes';
 import DetailPagination from '../../../components/common/paginationPrimary';
 import Review from '../../../components/dealer-management/reviewSlider';
 import BikeCardRadio from '../../../components/common/cardCheckbox';
@@ -8,7 +8,7 @@ import DealFilter from '../../../components/dealClosure/dealFilter';
 import EmptyState from '../../../components/emptyState';
 import styles from './style.module.scss';
 
-function DealershipDetails(props) {
+function DealershipDetails() {
   const cardData = [
     {
       imageUrl: '/images/bikeImage.png',
@@ -37,6 +37,7 @@ function DealershipDetails(props) {
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
+          tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Inventory">
             <DealFilter title="37 Listing Found" />
@@ -101,8 +102,8 @@ function DealershipDetails(props) {
               ))}
             </Row>
           </Tab>
-          <Tab eventKey="title2" title="Marketplace (31)" >
-          <EmptyState
+          <Tab eventKey="title2" title="Marketplace (31)">
+            <EmptyState
               title="No Result Found!"
               description="we couldn find what you searched for try something again."
             />
