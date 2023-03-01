@@ -16,6 +16,8 @@ import styles from './style.module.scss';
 import BackButton from '../../components/common/buttons/BackButton';
 import BikeSlider from '../../components/common/thumbnailSlider';
 import MotorcycleDetail from '../../components/procurements/motorcycleDetail';
+import CustomCheckBox from '../../components/common/customCheckBox';
+import ButtonPrimary from '../../components/common/buttons/ButtonPrimary';
 
 export default function BiddingDetails(props) {
   const bikeDetailData = [
@@ -102,6 +104,8 @@ export default function BiddingDetails(props) {
           ))}
         </div>
 
+        {/* This component open in Under Negotiation bike detail page */}
+
         {props.bikeContact && (
           <div className={styles.contactCols}>
             <li>
@@ -122,17 +126,18 @@ export default function BiddingDetails(props) {
           </div>
         )}
       </div>
+
       {props.bikeSendDetail && (
         <div className={styles.detailSendCols}>
           <li>
-            <MdCheckCircleOutline style={{ color: '#36942f' }} /> Send{' '}
+            <MdCheckCircleOutline style={{ color: '#36942f' }} /> Send
             <Link href="/" className={styles.sendLink}>
               ‘Payment detail link’
             </Link>{' '}
             to Customer <Link href="/">- Send</Link>
           </li>
           <li>
-            <MdErrorOutline style={{ color: '#f59e0b' }} /> Send{' '}
+            <MdErrorOutline style={{ color: '#f59e0b' }} /> Send
             <Link href="/" className={styles.sendLink}>
               ‘Payment detail link’
             </Link>{' '}
@@ -142,8 +147,29 @@ export default function BiddingDetails(props) {
             <MdErrorOutline style={{ color: '#f59e0b' }} /> Send Customer
             details to Dealer <Link href="/">- Send</Link>
           </li>
+
+          <div className={styles.sendPaymentsCols}>
+            <div className={styles.sendFlex}>
+              <div className={styles.sendCheckbox}>
+                <div className={styles.checkBoxBg}>
+                  <CustomCheckBox />
+                </div>
+              </div>
+              <div className={styles.sendList}>
+                <ul>
+                  <li>Send Payment detail of Customer to Seller Portal</li>
+                  <li>Send Customer details to seller portal</li>
+                  <li>Send Preferred Time slot</li>
+                </ul>
+              </div>
+            </div>
+            <div className={styles.sendPaymentBtn}>
+              <ButtonPrimary title="SUBMIT" />
+            </div>
+          </div>
         </div>
       )}
+      {/* end */}
       <Bids />
       <BikeInspection />
       <BikeHistory />

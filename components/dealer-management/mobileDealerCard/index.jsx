@@ -2,7 +2,7 @@ import React from 'react';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsTelephone } from 'react-icons/bs';
-
+import { Button } from 'react-bootstrap';
 import styles from './style.module.scss';
 
 function MobileDealerCard() {
@@ -15,9 +15,9 @@ function MobileDealerCard() {
           2nd floor, Ganesh Nagar, Opposite metro pillar no. 535, New Delhi -
           110018
         </p>
-        <button type="button" className={styles.dealerCardBtn}>
+        <Button variant="" className={styles.dealerCardBtn}>
           VIEW DETAILS
-        </button>
+        </Button>
       </div>
       <div className={styles.dealerCardFooter}>
         <p className={styles.dealerContactInfo}>Contact Info</p>
