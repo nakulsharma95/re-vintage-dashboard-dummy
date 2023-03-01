@@ -23,6 +23,7 @@ export default function TestRiderRequests() {
           className="mb-3"
           defaultActiveKey="title3"
           id="uncontrolled-tab-example"
+          tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="From Web (4)">
             <SortTabs selectAllCheck sortTabTitle="12 Result Found" />

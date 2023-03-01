@@ -75,7 +75,7 @@ h6 {
       color: $theme-red-da;
     }
 
-     a {
+    a {
       color: $white !important;
     }
   }
@@ -84,7 +84,6 @@ h6 {
     box-shadow: none;
   }
 
-
   .active.accordion-item .accordion-header a {
     color: $white;
   }
@@ -92,13 +91,13 @@ h6 {
   // Condition if class show on button
   button.active {
     background-color: $black;
-    
+
     a {
       color: $white;
     }
   }
 
-    // Condition if class show on li
+  // Condition if class show on li
   li.active {
     color: $white !important;
     background-color: $black;
@@ -148,57 +147,55 @@ h6 {
 }
 
 // Custom Tab Style
-.custom-tab-style .nav-link {
-  color: #fff;
-  font-size: 14px;
-  border: none;
-}
+.custom-tab-style {
+  .nav-tabs[tabClassName="custom-tab-nav"] {
+    border-color: $gray-70;
 
-.custom-tab-style .nav-tabs {
-  border-color: $gray-70;
-
-  @include mobile {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-y: hidden;
-  }
-
-  .nav-item {
     @include mobile {
-      white-space: nowrap;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-y: hidden;
+    }
+
+    .nav-item {
+      @include mobile {
+        white-space: nowrap;
+      }
+    }
+
+    .nav-link {
+      padding: 10px 0px 10px 0;
+      margin-right: 25px;
+      color: #fff;
+      font-size: 14px;
+      border: none;
+
+      &.active {
+        background-color: transparent;
+        border: none;
+        color: $theme-red-da;
+        margin-bottom: 0;
+        position: relative;
+    
+        &::after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background-color: $theme-red-da;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+        }
+      }
+    }
+
+    .nav-link:hover,
+    .nav-tabs .nav-link:focus {
+      border: none;
+      border-bottom: 0 solid;
+      margin-bottom: 0;
     }
   }
-
-  .nav-link {
-    border: none;
-    padding: 10px 0px 10px 0;
-    margin-right: 25px;
-  }
-}
-
-.custom-tab-style .nav-link.active {
-  background-color: transparent;
-  border: none;
-  color: $theme-red-da;
-  margin-bottom: 0;
-  position: relative;
-
-  &::after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: $theme-red-da;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-  }
-}
-
-.custom-tab-style .nav-link:hover,
-.nav-tabs .nav-link:focus {
-  border: none;
-  border-bottom: 0 solid;
-  margin-bottom: 0;
 }
 
 // default White tab style
@@ -219,6 +216,7 @@ h6 {
       margin-bottom: 0 !important;
       font-weight: 600;
       border: none;
+      width: 100%;
 
       .activeTab {
         background-color: $white;
@@ -461,7 +459,6 @@ h6 {
     border: 0;
 
     .react-calendar__navigation {
-
       .react-calendar__navigation__prev2-button,
       .react-calendar__navigation__next2-button {
         display: none;
@@ -577,19 +574,19 @@ h6 {
 
 // Tables Style here
 
-.dashboardTable .table> :not(caption)>*>* {
+.dashboardTable .table > :not(caption) > * > * {
   padding: 1rem;
   border-bottom-width: none;
   background-color: $gray-28;
   color: rgba($gray-F3, 0.8);
 }
 
-.dashboardTable .table-odd>tbody>tr:nth-of-type(even)>* {
+.dashboardTable .table-odd > tbody > tr:nth-of-type(even) > * {
   background-color: $gray-18;
   color: $white;
 }
 
-.dashboardTable .table-even>tbody>tr:nth-of-type(odd)>* {
+.dashboardTable .table-even > tbody > tr:nth-of-type(odd) > * {
   background-color: $gray-18;
   color: $white;
 }
@@ -747,7 +744,7 @@ h6 {
   .motor-cycle-accordian-inner {
     padding: 20px;
 
-    @include mobile{
+    @include mobile {
       padding: 0;
     }
 
@@ -952,8 +949,7 @@ h6 {
   }
 }
 
-
-.fixed-Footer{
+.fixed-Footer {
   display: flex;
   justify-content: end;
   background-color: $gray-28;
@@ -962,44 +958,52 @@ h6 {
   padding: 10px;
   z-index: 9;
   width: calc(100vw - 335px);
-  
-  button{
+
+  button {
     height: 35px;
   }
-
 }
 
-
-.addMotorBtn{
-	display: inline-block;
-	padding: 6px 15px;
-	color:$gray-0D;
-	background-color: $white;
-	font-size: 12px;
-	font-weight: 600;
-	text-decoration: none;
-	transition: all 0.5s;
-	&:hover{
-		background-color: $theme-red-da;
-		color: $white;
-	}
-	svg{
-		display: inline-block;
-		margin-right: 3px;
-	}
+.addMotorBtn {
+  display: inline-block;
+  padding: 6px 15px;
+  color: $gray-0D;
+  background-color: $white;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.5s;
+  &:hover {
+    background-color: $theme-red-da;
+    color: $white;
+  }
+  svg {
+    display: inline-block;
+    margin-right: 3px;
+  }
 }
 
-.img-shadow{
-  &::after{
+.img-shadow {
+  &::after {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 100%;
     height: 80px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(0, 0, 0, 0)), to(black)) !important;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, black 100%) !important;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(10%, rgba(0, 0, 0, 0)),
+      to(black)
+    ) !important;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 10%,
+      black 100%
+    ) !important;
     margin-top: -115px;
     z-index: 1;
     bottom: 0;
