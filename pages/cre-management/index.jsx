@@ -1,53 +1,53 @@
-import React from 'react';
-import { Row, Col } from 'react-bootstrap';
-import { FiPlus } from 'react-icons/fi';
-import Link from 'next/link';
-import Breadcrumb from '../../components/common/breadcrumbPrimary';
-import CreDetailCard from '../../components/cre-management/creDetailCard';
-import CrePerformanceCard from '../../components/cre-management/crePerformanceCard';
-import CrePerformanceMatrix from '../../components/cre-management/crePerformanceMatrix';
-import HeaderPrimary from '../../components/common/headerPrimary';
-import SearchPrimary from '../../components/common/searchPrimary';
+import React from "react";
+import { Row, Col } from "react-bootstrap";
+import { FiPlus } from "react-icons/fi";
+import Link from "next/link";
+import Breadcrumb from "../../components/common/breadcrumbPrimary";
+import CreDetailCard from "../../components/cre-management/creDetailCard";
+import CrePerformanceCard from "../../components/cre-management/crePerformanceCard";
+import CrePerformanceMatrix from "../../components/cre-management/crePerformanceMatrix";
+import HeaderPrimary from "../../components/common/headerPrimary";
+import SearchPrimary from "../../components/common/searchPrimary";
 
-import styles from './style.module.scss';
-import SortTabs from '../../components/common/sortTabs';
-import OutlineDropdown from '../../components/common/buttons/OutlineDropdown';
+import styles from "./style.module.scss";
+import SortTabs from "../../components/common/sortTabs";
+import OutlineDropdown from "../../components/common/buttons/OutlineDropdown";
 
 function CreManagement() {
   const cardData = [
     {
-      imageUrl: '/images/bob-Vishwas.png',
-      overDue: 'evolutionOver',
-      bikeStatus: 'Upload Content',
+      imageUrl: "/images/bob-Vishwas.png",
+      overDue: "evolutionOver",
+      bikeStatus: "Upload Content",
     },
     {
-      imageUrl: '/images/bob-Vishwas1.png',
-      overDue: 'evolutionOver',
-      bikeStatus: 'Upload Content',
+      imageUrl: "/images/bob-Vishwas1.png",
+      overDue: "evolutionOver",
+      bikeStatus: "Upload Content",
     },
     {
-      imageUrl: '/images/bob-Vishwas2.png',
-      overDue: 'evolutionOver',
-      bikeStatus: 'Upload Content',
+      imageUrl: "/images/bob-Vishwas2.png",
+      overDue: "evolutionOver",
+      bikeStatus: "Upload Content",
     },
     {
-      imageUrl: '/images/bob-Vishwas3.png',
-      overDue: 'evolutionOver',
-      bikeStatus: 'Upload Content',
+      imageUrl: "/images/bob-Vishwas3.png",
+      overDue: "evolutionOver",
+      bikeStatus: "Upload Content",
     },
   ];
   const performanceCardData = [
     {
-      cardBodyBg: 'bgGray18',
+      cardBodyBg: "bgGray18",
     },
     {
-      cardBodyBg: 'bgGray28',
+      cardBodyBg: "bgGray28",
     },
     {
-      cardBodyBg: 'bgblack40',
+      cardBodyBg: "bgblack40",
     },
     {
-      cardBodyBg: 'bgGray18',
+      cardBodyBg: "bgGray18",
     },
   ];
 
@@ -59,12 +59,12 @@ function CreManagement() {
         <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <OutlineDropdown
           dropdownTitle="Zone"
-          options={['Zone1', 'Zone2', 'Zone3']}
+          options={["Zone1", "Zone2", "Zone3"]}
         />
 
         <OutlineDropdown
           dropdownTitle="Delhi"
-          options={['Pune', 'Mumbai', 'Jaipur']}
+          options={["Pune", "Mumbai", "Jaipur"]}
         />
 
         <Link href="cre-management/add-cre" className="addMotorBtn">
