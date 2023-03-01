@@ -12,6 +12,36 @@ import EmptyState from '../../components/emptyState';
 import MobileDealerCard from '../../components/dealer-management/mobileDealerCard';
 
 function DealerManagement() {
+  const mobileDealerCard = [
+    {
+      title: 'Neel Motors',
+      location:
+        'WZ - 1, Nirankari Tower, 2nd floor, Ganesh Nagar, Opposite metro pillar no. 535, New Delhi - 110018',
+      mobile: '+91 98765 43210',
+      email: 'delhimotorcycles@royalenfield.com',
+    },
+    {
+      title: 'Neel Motors',
+      location:
+        'WZ - 1, Nirankari Tower, 2nd floor, Ganesh Nagar, Opposite metro pillar no. 535, New Delhi - 110018',
+      mobile: '+91 98765 43210',
+      email: 'delhimotorcycles@royalenfield.com',
+    },
+    {
+      title: 'Neel Motors',
+      location:
+        'WZ - 1, Nirankari Tower, 2nd floor, Ganesh Nagar, Opposite metro pillar no. 535, New Delhi - 110018',
+      mobile: '+91 98765 43210',
+      email: 'delhimotorcycles@royalenfield.com',
+    },
+    {
+      title: 'Neel Motors',
+      location:
+        'WZ - 1, Nirankari Tower, 2nd floor, Ganesh Nagar, Opposite metro pillar no. 535, New Delhi - 110018',
+      mobile: '+91 98765 43210',
+      email: 'delhimotorcycles@royalenfield.com',
+    },
+  ];
   return (
     <div>
       <Breadcrumb title="Dealer Management" />
@@ -26,7 +56,17 @@ function DealerManagement() {
         <FilterButton />
       </HeaderPrimary>
 
-      <MobileDealerCard />
+      {mobileDealerCard.map((item) => (
+        <div className={styles.mobileDealerCard}>
+          <MobileDealerCard
+            title={item.title}
+            location={item.location}
+            mobile={item.mobile}
+            email={item.email}
+          />
+        </div>
+      ))}
+
       <div className="d-none d-lg-block">
         <div className="custom-tab-style">
           <Tabs

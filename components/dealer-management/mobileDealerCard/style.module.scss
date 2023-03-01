@@ -7,12 +7,17 @@
 
    @include tablet{
 	display: block;
+	
+   }
+   @include mobile{
+	display: block;
    }
 	p{
 		margin: 0;
 	}
+	
 	.dealerCardHead{
-		background-color: #282828;
+		background-color: $gray-28;
 		padding: 1rem;
 
 		.dealerCardTitle{
@@ -24,27 +29,27 @@
 		}
 		.dealerCardBtn{
 			background-color: transparent;
-			border: 1px solid #707070;
+			border: 1px solid $gray-70;
 			font-weight: 500;
-			color: #FFFFFF;
+			color: $white;
 			font-size: 12px;
 			padding:0.6rem 2rem;
 			border-radius: 0;
 		}
 	}
 	.dealerCardFooter{
-		background-color: #181818;
+		background-color: $gray-18;
 		padding: 0.5rem 1rem;
 		.dealerCardFooterLine{
 			margin: 0.5rem 0;
 		}
 		.dealerCardContact{
 			font-size: 12px;
-			color: #CBC6C6;
+			color: $gray-cb;
 		}
 		.dealerContactNo{
 			font-size: 10px;
-			color: #CBC6C6;
+			color: $gray-cb;
 		}
 	}
 }
