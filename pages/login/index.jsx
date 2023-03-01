@@ -29,7 +29,7 @@ export default function Login() {
     });
   };
   function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     return regex.test(email);
   }
   const loginHandler = async (e) => {
@@ -49,7 +49,7 @@ export default function Login() {
         const userData = await login({
           credentials: encryptCredentials?.data?.data,
         });
-        if ([401, 403, 404].includes(userData?.data?.code)) {
+        if (userData?.data?.code !== 200) {
           setStatus(userData?.data?.message || '');
         } else {
           setStatus('');

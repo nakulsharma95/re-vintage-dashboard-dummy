@@ -13,7 +13,7 @@ export const authApiSlice = apiSlice.injectEndpoints({
       onQueryStarted: async (arg, api) => {
         try {
           const { data } = await api.queryFulfilled;
-          if ([401, 403, 404].includes(await data?.code)) return;
+          if ((await data?.code) !== 200) return;
           const jwtAccessToken = await data?.data?.accessToken;
           const refreshToken = await data?.data?.refreshToken;
           const guid = await data?.data?.user?.guid;
