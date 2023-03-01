@@ -24,7 +24,6 @@ function EvaluationRequestDetailCard(props) {
     setCancelModal(false);
   };
 
-  const { data } = props;
   return (
     <>
       <Card className={styles.bikeDetailCardMain}>
@@ -42,7 +41,9 @@ function EvaluationRequestDetailCard(props) {
           </div>
           <div className="d-flex align-items-end">
             <p className={styles.priceTag}>Estimate Price</p>
-            <h3 className={styles.priceText}><BiRupee /> {props.priceOne} - <BiRupee /> {props.priceTwo}</h3>
+            <h3 className={styles.priceText}>
+              <BiRupee /> {props.priceOne} - <BiRupee /> {props.priceTwo}
+            </h3>
           </div>
         </Card.Header>
         <Card.Body className={`${styles.bikeCardBody} px-0`}>
@@ -60,7 +61,9 @@ function EvaluationRequestDetailCard(props) {
                 </Col>
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>Mileage</h6>
-                  <p className={styles.bikeCardBodyText}>{props.mileage} kmpl</p>
+                  <p className={styles.bikeCardBodyText}>
+                    {props.mileage} kmpl
+                  </p>
                 </Col>
               </Row>
               <Row>
@@ -72,7 +75,9 @@ function EvaluationRequestDetailCard(props) {
                 </Col>
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>Location</h6>
-                  <p className={`${styles.bikeCardBodyText} mb-0`}>{props.location}</p>
+                  <p className={`${styles.bikeCardBodyText} mb-0`}>
+                    {props.location}
+                  </p>
                 </Col>
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>Posting date</h6>
@@ -86,14 +91,16 @@ function EvaluationRequestDetailCard(props) {
               <h2 className={styles.bikeCardBodyTitle}>Evaluation Details</h2>
               <Row className="mb-3">
                 <Col>
-                  <h6 className={styles.bikeCardBodySubTitle}>
-                    Name
-                  </h6>
-                  <p className={styles.bikeCardBodyText}>{props.supplierName}</p>
+                  <h6 className={styles.bikeCardBodySubTitle}>Name</h6>
+                  <p className={styles.bikeCardBodyText}>
+                    {props.supplierName}
+                  </p>
                 </Col>
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>Contact No.</h6>
-                  <p className={styles.bikeCardBodyText}>{props.supplierContact}</p>
+                  <p className={styles.bikeCardBodyText}>
+                    {props.supplierContact}
+                  </p>
                 </Col>
                 <Col>
                   <h6 className={styles.bikeCardBodySubTitle}>

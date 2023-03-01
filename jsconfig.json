@@ -28,6 +28,6 @@
 	  "jsx": "preserve",
 	  "incremental": true
 	},
-	"include": ["next-env.d.js", "**/*.js", "**/*.jsx", "sonar.js"],
+	"include": ["next-env.d.js", "**/*.js", "**/*.jsx", "scanner.js"],
 	"exclude": ["node_modules"]
   }

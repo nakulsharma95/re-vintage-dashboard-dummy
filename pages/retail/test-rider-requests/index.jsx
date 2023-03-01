@@ -1,13 +1,12 @@
-import { RiShareBoxFill } from "react-icons/ri";
-import { Col, Row, Tab, Tabs } from "react-bootstrap";
-import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import CompleteBikeDetail from "../../../components/procurements/completeEvalutationCard";
-import DealFilter from "../../../components/dealClosure/dealFilter";
-import SearchPrimary from "../../../components/common/searchPrimary";
-import FilterButton from "../../../components/common/filterButton";
-import HeaderPrimary from "../../../components/common/headerPrimary";
-import OutlineButton from "../../../components/common/buttons/OutlineButton";
-import SortTabs from "~/components/common/sortTabs";
+import { RiShareBoxFill } from 'react-icons/ri';
+import { Tab, Tabs } from 'react-bootstrap';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import CompleteBikeDetail from '../../../components/procurements/completeEvalutationCard';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import FilterButton from '../../../components/common/filterButton';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import SortTabs from '../../../components/common/sortTabs';
 
 export default function TestRiderRequests() {
   return (
@@ -32,7 +31,7 @@ export default function TestRiderRequests() {
               isEvalBtnVisible={false}
               isCallerBtnVisible
               isEnquiryNumVisible
-              isSlider={true}
+              isSlider
             />
           </Tab>
           <Tab eventKey="title2" title="From OLX">
@@ -40,7 +39,7 @@ export default function TestRiderRequests() {
             <CompleteBikeDetail
               isEvalBtnVisible={false}
               isCallerBtnVisible
-              isSlider={true}
+              isSlider
               isEnquiryNumVisible
             />
           </Tab>
@@ -49,7 +48,7 @@ export default function TestRiderRequests() {
             <CompleteBikeDetail
               isEvalBtnVisible={false}
               isCallerBtnVisible
-              isSlider={true}
+              isSlider
               isEnquiryNumVisible
             />
           </Tab>
@@ -58,9 +57,8 @@ export default function TestRiderRequests() {
             <CompleteBikeDetail
               isEvalBtnVisible={false}
               isCallerBtnVisible
-              isSlider={true}
+              isSlider
               isEnquiryNumVisible
-            
             />
           </Tab>
         </Tabs>

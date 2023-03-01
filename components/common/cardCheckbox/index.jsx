@@ -30,7 +30,7 @@ function BikeCardRadio({
   isCreContact,
   isCreDetails,
   isDealer,
-  isOlxTooltipVisible
+  isOlxTooltipVisible,
 }) {
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -62,14 +62,14 @@ function BikeCardRadio({
             Listed on
             <img src="/images/olx.png" className={styles.olxImage} alt="" />
             {isOlxTooltipVisible && (
-            <OverlayTrigger
-              placement="right"
-              delay={{ show: 250, hide: 400 }}
-              overlay={renderTooltip}
-              className="d-inline-flex align-items-center"
-            >
-              <Button className={styles.olxBtn}>2</Button>
-            </OverlayTrigger>
+              <OverlayTrigger
+                placement="right"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltip}
+                className="d-inline-flex align-items-center"
+              >
+                <Button className={styles.olxBtn}>2</Button>
+              </OverlayTrigger>
             )}
           </div>
         )}

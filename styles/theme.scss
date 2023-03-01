@@ -58,6 +58,13 @@ h6 {
   @include scrollHide;
 }
 
+.btn-link {
+  border: none;
+  background: none;
+  padding: 0;
+  text-decoration: none;
+}
+
 // Sidebar Active Style
 .sidebar-global {
   button[aria-expanded='true'] {
@@ -132,6 +139,18 @@ h6 {
 
 .custom-tab-style .nav-tabs {
   border-color: $gray-70;
+
+  @include mobile {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+  }
+
+  .nav-item {
+    @include mobile {
+      white-space: nowrap;
+    }
+  }
 
   .nav-link {
     border: none;

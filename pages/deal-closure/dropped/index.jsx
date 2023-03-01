@@ -1,33 +1,32 @@
-import React from "react";
-import { Row, Col, Button, Tabs, Tab } from "react-bootstrap";
-import { BiChevronDown } from "react-icons/bi";
-import { RiShareBoxFill } from "react-icons/ri";
-import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import styles from "./style.module.scss";
-import CloserBikeCard from "../../../components/dealClosure/closerCard";
-import DetailPagination from "../../../components/common/paginationPrimary";
-import SearchPrimary from "../../../components/common/searchPrimary";
-import FilterButton from "../../../components/common/filterButton";
-import HeaderPrimary from "../../../components/common/headerPrimary";
-import OutlineButton from "../../../components/common/buttons/OutlineButton";
+import { Button, Col, Row } from 'react-bootstrap';
+import { BiChevronDown } from 'react-icons/bi';
+import { RiShareBoxFill } from 'react-icons/ri';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import FilterButton from '../../../components/common/filterButton';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import DetailPagination from '../../../components/common/paginationPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import CloserBikeCard from '../../../components/dealClosure/closerCard';
+import styles from './style.module.scss';
 
 function PaymentsPending() {
   const cardData = [
     {
-      imageUrl: "/images/bikeImage.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bikeImage.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bikeImage2.png",
-      bikeStatus: "Under Refurbishment",
+      imageUrl: '/images/bikeImage2.png',
+      bikeStatus: 'Under Refurbishment',
     },
     {
-      imageUrl: "/images/bikeImage3.png",
-      bikeStatus: "Under Approval",
+      imageUrl: '/images/bikeImage3.png',
+      bikeStatus: 'Under Approval',
     },
     {
-      imageUrl: "/images/bikeImage4.png",
+      imageUrl: '/images/bikeImage4.png',
     },
   ];
   return (

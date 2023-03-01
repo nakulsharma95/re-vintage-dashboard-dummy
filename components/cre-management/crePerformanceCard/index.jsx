@@ -1,5 +1,5 @@
-import { Card, Col } from "react-bootstrap";
-import styles from "./style.module.scss";
+import { Card } from 'react-bootstrap';
+import styles from './style.module.scss';
 
 export default function CrePerformanceCard(props) {
   return (

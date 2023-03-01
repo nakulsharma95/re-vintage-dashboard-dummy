@@ -3,7 +3,7 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 
-import styles from "./style.module.scss"
+import styles from './style.module.scss';
 
 function MobileDealerCard() {
   return (
@@ -25,4 +25,4 @@ function MobileDealerCard() {
   )
 }
 
-export default MobileDealerCard
+export default MobileDealerCard;
