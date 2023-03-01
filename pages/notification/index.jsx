@@ -1,6 +1,6 @@
 import { Row, Col } from "react-bootstrap";
-import NotificationCard from "~/components/common/notificationCard";
-import TabPrimary from "~/components/common/tabPrimary";
+import NotificationCard from "../../components/common/notificationCard";
+import TabPrimary from "../../components/common/tabPrimary";
 import Breadcrumb from "../../components/common/breadcrumbPrimary";
 import HeaderPrimary from "../../components/common/headerPrimary";
 

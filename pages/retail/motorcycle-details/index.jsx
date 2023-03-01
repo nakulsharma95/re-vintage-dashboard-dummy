@@ -1,8 +1,8 @@
-import { Row, Col } from "react-bootstrap";
-import ArrowButton from "~/components/common/buttons/ArrowButton";
-import OutlineButton from "~/components/common/buttons/OutlineButton";
-import DetailBikeCardImg from "~/components/retails/detailBikeCardImg";
-import DetailDealerCard from "~/components/retails/detailDealerCard";
+import { Row } from "react-bootstrap";
+import ArrowButton from "../../../components/common/buttons/ArrowButton";
+import OutlineButton from "../../../components/common/buttons/OutlineButton";
+import DetailBikeCardImg from "../../../components/retails/detailBikeCardImg";
+import DetailDealerCard from "../../../components/retails/detailDealerCard";
 import HeaderPrimary from "../../../components/common/headerPrimary";
 
 export default function MotorcycleDetails() {

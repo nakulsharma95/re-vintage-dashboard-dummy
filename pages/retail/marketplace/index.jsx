@@ -10,7 +10,6 @@ import FilterButton from "../../../components/common/filterButton";
 import HeaderPrimary from "../../../components/common/headerPrimary";
 import OutlineButton from "../../../components/common/buttons/OutlineButton";
 import DashboardCard from "../../../components/dashboardCard";
-import TableListView from "../../../components/retails/tableListView";
 
 export default function MarketPlace() {
   const cardData = [

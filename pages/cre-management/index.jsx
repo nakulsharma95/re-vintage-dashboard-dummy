@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Dropdown } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { FiPlus } from "react-icons/fi";
 import Link from "next/link";
 import Breadcrumb from "../../components/common/breadcrumbPrimary";
@@ -8,10 +8,9 @@ import CrePerformanceCard from "../../components/cre-management/crePerformanceCa
 import CrePerformanceMatrix from "../../components/cre-management/crePerformanceMatrix";
 import HeaderPrimary from "../../components/common/headerPrimary";
 import SearchPrimary from "../../components/common/searchPrimary";
-
 import styles from "./style.module.scss";
-import SortTabs from "~/components/common/sortTabs";
-import OutlineDropdown from "~/components/common/buttons/OutlineDropdown";
+import SortTabs from "../../components/common/sortTabs";
+import OutlineDropdown from "../../components/common/buttons/OutlineDropdown";
 
 function CreManagement() {
   const cardData = [

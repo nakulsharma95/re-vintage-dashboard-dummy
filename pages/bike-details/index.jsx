@@ -108,13 +108,16 @@ export default function BiddingDetails(props) {
           </div>
         )}
       </div>
-      {props.bikeSendDetail && (
+
+      {/* {props.bikeSendDetail && ( */}
         <div className={styles.detailSendCols}>
           <li><MdCheckCircleOutline style={{ color: '#36942f' }} /> Send <Link href="/" className={styles.sendLink}>‘Payment detail link’</Link> to Customer <Link href="/">- Send</Link></li>
           <li><MdErrorOutline style={{ color: '#f59e0b' }} /> Send <Link href="/" className={styles.sendLink}>‘Payment detail link’</Link> to Customer <Link href="/">- Send</Link></li>
           <li><MdErrorOutline style={{ color: '#f59e0b' }} /> Send Customer details to Dealer <Link href="/">- Send</Link></li>
+
+          <div className={styles.sendPaymentsCols}></div>
         </div>
-      )}
+      {/* )} */}
       <Bids />
       <BikeInspection />
       <BikeHistory />

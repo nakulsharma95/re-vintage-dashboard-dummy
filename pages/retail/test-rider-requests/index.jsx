@@ -1,13 +1,12 @@
 import { RiShareBoxFill } from "react-icons/ri";
-import { Col, Row, Tab, Tabs } from "react-bootstrap";
+import { Tab, Tabs } from "react-bootstrap";
 import Breadcrumb from "../../../components/common/breadcrumbPrimary";
 import CompleteBikeDetail from "../../../components/procurements/completeEvalutationCard";
-import DealFilter from "../../../components/dealClosure/dealFilter";
 import SearchPrimary from "../../../components/common/searchPrimary";
 import FilterButton from "../../../components/common/filterButton";
 import HeaderPrimary from "../../../components/common/headerPrimary";
 import OutlineButton from "../../../components/common/buttons/OutlineButton";
-import SortTabs from "~/components/common/sortTabs";
+import SortTabs from "../../../components/common/sortTabs";
 
 export default function TestRiderRequests() {
   return (

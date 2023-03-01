@@ -8,7 +8,6 @@ import BikeCardRefurbishment from "../../../components/common/cardCheckbox";
 import Breadcrumb from "../../../components/common/breadcrumbPrimary";
 import DashboardCard from "../../../components/dashboardCard";
 import SortTabs from "../../../components/common/sortTabs";
-import TabPrimary from "../../../components/common/tabPrimary";
 import SearchPrimary from "../../../components/common/searchPrimary";
 import FilterButton from "../../../components/common/filterButton";
 import HeaderPrimary from "../../../components/common/headerPrimary";

@@ -4,9 +4,9 @@ import Breadcrumb from "../../../components/common/breadcrumbPrimary";
 import Filters from "../../../components/common/filters";
 import CrePerformanceMatrix from "../../../components/cre-management/crePerformanceMatrix";
 import TabPrimary from "../../../components/common/tabPrimary";
-import CreMonthPerformace from "~/components/cre-management/creMonthPerformace";
-import HeaderPrimary from "~/components/common/headerPrimary";
-import CreProfileCard from "~/components/cre-management/creProfileCard";
+import CreMonthPerformace from "../../../components/cre-management/creMonthPerformace";
+import HeaderPrimary from "../../../components/common/headerPrimary";
+import CreProfileCard from "../../../components/cre-management/creProfileCard";
 
 function CrePerformanceDetails() {
   return (

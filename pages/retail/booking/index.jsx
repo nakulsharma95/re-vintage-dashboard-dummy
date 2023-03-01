@@ -2,7 +2,6 @@ import { Row, Col,Tab,Tabs } from "react-bootstrap";
 import { RiShareBoxFill } from "react-icons/ri";
 import BikeCard from "../../../components/procurements/bikeCard";
 import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import TabPrimary from "../../../components/common/tabPrimary";
 import DealFilter from "../../../components/dealClosure/dealFilter";
 import SearchPrimary from "../../../components/common/searchPrimary";
 import FilterButton from "../../../components/common/filterButton";

@@ -6,6 +6,7 @@ import { MdOutlineClose } from 'react-icons/md';
 import styles from './style.module.scss';
 import ArrowButton from '../../common/buttons/ArrowButton';
 import PartialLeadsDetail from '../../../components/modals/partialLeadsModal';
+import Link from 'next/link';
 
 export default function DetailCard(props) {
   const [partialModal, setpartialModal] = useState(false);
@@ -105,7 +106,7 @@ export default function DetailCard(props) {
                   </div>
                   <div>
                     <span className={styles.smTitle}>Contact No.</span>
-                    +91 98765 43210
+                    <Link href="/">+91 98765 43210</Link>
                   </div>
                 </div>
               </div>
