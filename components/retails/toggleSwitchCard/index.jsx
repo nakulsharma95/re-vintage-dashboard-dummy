@@ -1,6 +1,6 @@
-import React from "react";
-import { Card, FormCheck } from "react-bootstrap";
-import styles from "./style.module.scss";
+import React from 'react';
+import { Card, FormCheck } from 'react-bootstrap';
+import styles from './style.module.scss';
 
 export default function ToggleSwitchCard(props) {
   return (
@@ -13,13 +13,12 @@ export default function ToggleSwitchCard(props) {
             type="switch"
             label={props.toggleLabal1}
           />
-            <FormCheck
-              className={styles.sliderRound}
-              id="switchEnabled"
-              type="switch"
-              label={props.toggleLabal2}
-            />
-
+          <FormCheck
+            className={styles.sliderRound}
+            id="switchEnabled"
+            type="switch"
+            label={props.toggleLabal2}
+          />
         </Card.Body>
       </Card>
     </div>

@@ -23,11 +23,7 @@ function CancelModal(props) {
         </button>
 
         <div className="text-center">
-          <img
-            src={props.imgUrl}
-            className={styles.cancelModalImage}
-            alt=""
-          />
+          <img src={props.imgUrl} className={styles.cancelModalImage} alt="" />
           <h4 className={styles.cancelModalTitle}>{props.title}</h4>
         </div>
 

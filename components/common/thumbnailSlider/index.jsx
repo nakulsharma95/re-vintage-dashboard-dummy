@@ -40,7 +40,6 @@ function BikeSlider(props) {
   return (
     <div>
       {!props.isSlider ? (
-        
         <div className="bike-slider-custom">
           <Slider
             asNavFor={nav2}
@@ -83,7 +82,9 @@ function BikeSlider(props) {
             height="320"
             className={styles.imgFullStyle}
           />
-             <p className={styles.sliderThumbTag}><span>Status:</span>Pending</p>
+          <p className={styles.sliderThumbTag}>
+            <span>Status:</span>Pending
+          </p>
         </div>
       )}
     </div>

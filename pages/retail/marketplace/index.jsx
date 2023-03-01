@@ -1,68 +1,67 @@
-import { Col, Row, Tab, Tabs } from "react-bootstrap";
-import { RiShareBoxFill } from "react-icons/ri";
-import BikeCardRadio from "../../../components/common/cardCheckbox";
-import BikeCardOlx from "../../../components/common/cardCheckbox";
-import { TbTrendingUp } from "react-icons/tb";
-import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import SortTabs from "../../../components/common/sortTabs";
-import SearchPrimary from "../../../components/common/searchPrimary";
-import FilterButton from "../../../components/common/filterButton";
-import HeaderPrimary from "../../../components/common/headerPrimary";
-import OutlineButton from "../../../components/common/buttons/OutlineButton";
-import DashboardCard from "../../../components/dashboardCard";
+import { Col, Row, Tab, Tabs } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
+import { TbTrendingUp } from 'react-icons/tb';
+import BikeCard from '../../../components/common/cardCheckbox';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import SortTabs from '../../../components/common/sortTabs';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import FilterButton from '../../../components/common/filterButton';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import DashboardCard from '../../../components/dashboardCard';
 
 export default function MarketPlace() {
   const cardData = [
     {
-      imageUrl: "/images/bikeImage.png",
-      overDue: "evolutionOver",
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      imageUrl: '/images/bikeImage.png',
+      overDue: 'evolutionOver',
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage2.png",
-      dealerLocation: "Neel Motors, Rohini Nagar, Delhi",
+      imageUrl: '/images/bikeImage2.png',
+      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage3.png",
-      dealerLocation: "Neel Motors, Punjabi Bagh, Delhi",
+      imageUrl: '/images/bikeImage3.png',
+      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
     },
     {
-      imageUrl: "/images/bikeImage4.png",
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      imageUrl: '/images/bikeImage4.png',
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
   ];
 
   const dashboardCardData = [
     {
-      title: "Listed (Active + Inactive)",
-      description: "1507",
-      bottomDescription: "Overall Booking Growth",
-      percentage: "12%",
+      title: 'Listed (Active + Inactive)',
+      description: '1507',
+      bottomDescription: 'Overall Booking Growth',
+      percentage: '12%',
       icon: <TbTrendingUp color="#13B21F" size={15} />,
-      cardBg: "#DA291C",
-      dividerColor: "white",
-      dropdown: "dropdown",
+      cardBg: '#DA291C',
+      dividerColor: 'white',
+      dropdown: 'dropdown',
     },
     {
-      title: "Recent Inventory",
-      description: "97",
-      bottomDescription: "Received This Week",
-      percentage: "22",
-      cardBg: "#403E3E",
-      dividerColor: "#282828",
-      dropdown: "dropdown",
+      title: 'Recent Inventory',
+      description: '97',
+      bottomDescription: 'Received This Week',
+      percentage: '22',
+      cardBg: '#403E3E',
+      dividerColor: '#282828',
+      dropdown: 'dropdown',
     },
     {
-      title: "Test Ride Requests",
-      description: "12",
-      cardBg: "#282828",
-      dropdown: "dropdown",
+      title: 'Test Ride Requests',
+      description: '12',
+      cardBg: '#282828',
+      dropdown: 'dropdown',
     },
     {
-      title: "Bookings",
-      description: "35",
-      cardBg: "#403E3E",
-      dropdown: "dropdown",
+      title: 'Bookings',
+      description: '35',
+      cardBg: '#403E3E',
+      dropdown: 'dropdown',
     },
   ];
   return (
@@ -112,8 +111,8 @@ export default function MarketPlace() {
             <Row>
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>
-                  <BikeCardRadio
-                    isOlxTooltipVisible={true}
+                  <BikeCard
+                    isOlxTooltipVisible
                     bikeModal="2015 Classic 350"
                     bikeRc="-DL6TAL7314"
                     bikekm="43,384 km"
@@ -144,7 +143,7 @@ export default function MarketPlace() {
             <Row>
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>
-                  <BikeCardOlx
+                  <BikeCard
                     bikeModal="2015 Classic 350"
                     isOlxTooltipVisible={false}
                     bikeRc="-DL6TAL7314"
@@ -176,7 +175,7 @@ export default function MarketPlace() {
             <Row>
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>
-                  <BikeCardOlx
+                  <BikeCard
                     bikeModal="2015 Classic 350"
                     isOlxTooltipVisible={false}
                     bikeRc="-DL6TAL7314"

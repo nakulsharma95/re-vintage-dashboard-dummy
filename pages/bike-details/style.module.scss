@@ -2,60 +2,120 @@
 @import '../../styles/variables//mixins';
 
 .bikeDetailContainer {
-	margin-top: 20px;
-	background-color: $gray-2;
+  margin-top: 20px;
+  background-color: $gray-2;
 }
 
 .contactCols {
-	background-color: $black;
-	display: flex;
-	li{
-		list-style-type: none;
-		margin-right: 15px;
-		padding-right: 15px;
-		border-right: 1px solid $gray-70;
-		&:last-child{
-			margin-right: 0;
-		}
-		a{
-			color: $white;
-			text-decoration: none;
-			font-size: 12px;
-			color: $gray-cb;
-		}
-	}
+  background-color: $black;
+  display: flex;
+  li {
+    list-style-type: none;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid $gray-70;
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 12px;
+      color: $gray-cb;
+    }
+  }
 }
 
-.detailSendCols{
-	padding: 20px;
-	background-color: $gray-28;
-	li{
-		list-style-type: none;
-		margin-bottom: 8px;
-		&:last-child{
-			margin-bottom: 0;
-		}
-		a.sendLink{
-			color: $white;
-			text-decoration: underline;
-			&:hover{
-				color: $theme-warning;
-			}
-		}
-		a{
-			color: $theme-warning;
-			text-decoration: none;
-			&:hover{
-				color: $white;
-			}
-		}
-		svg{
-			font-size: 16px;
-			margin-right: 3px;
-		}
-	}
+.detailSendCols {
+  padding: 20px;
+  background-color: $gray-28;
+  li {
+    list-style-type: none;
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a.sendLink {
+      color: $white;
+      text-decoration: underline;
+      &:hover {
+        color: $theme-warning;
+      }
+    }
+    a {
+      color: $theme-warning;
+      text-decoration: none;
+      &:hover {
+        color: $white;
+      }
+    }
+    svg {
+      font-size: 16px;
+      margin-right: 3px;
+    }
+  }
 }
 
-.sendPaymentsCols{
-	position: relative;
+.sendPaymentsCols {
+  position: relative;
+  border-top: 1px solid $gray-70;
+  padding: 20px 0 0;
+  margin-top: 20px;
+  .sendFlex {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .sendCheckbox {
+      margin-right: 15px;
+      position: relative;
+      .checkBoxBg {
+        background: $gray-28;
+        position: relative;
+        z-index: 9;
+      }
+      &::after {
+        content: '';
+        width: 60px;
+        height: 1px;
+        background-color: $gray-70;
+        position: absolute;
+        left: 0;
+        top: 9px;
+      }
+    }
+    .sendList {
+      position: relative;
+      padding-left: 25px;
+      &::before {
+        content: '';
+        width: 150px;
+        height: 59px;
+        border: 1px solid $gray-70;
+        position: absolute;
+        border-radius: 12px;
+        left: 10px;
+        top: 10px;
+        z-index: 1;
+      }
+      ul {
+        background: $gray-28;
+        padding: 0 5px;
+        position: relative;
+        z-index: 9;
+        margin: 0;
+      }
+      li {
+        font-size: 14px;
+        margin-bottom: 8px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .sendPaymentBtn{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+  }
 }

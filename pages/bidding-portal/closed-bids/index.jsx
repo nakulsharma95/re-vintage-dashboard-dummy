@@ -72,10 +72,7 @@ export default function ClosedBids() {
           id="uncontrolled-tab-example"
         >
           <Tab eventKey="title1" title="Bids">
-            <SortTabs
-              selectAllCheck
-              sortTabTitle="25 Bids Available"
-            />
+            <SortTabs selectAllCheck sortTabTitle="25 Bids Available" />
             <Row className="mb-3">
               {closedBikeData.map((item) => (
                 <Col md={3}>
@@ -100,10 +97,7 @@ export default function ClosedBids() {
             <DetailPagination className="mt-3" />
           </Tab>
           <Tab eventKey="title2" title="No Bids">
-            <SortTabs
-              selectAllCheck
-              sortTabTitle="25 Bids Available"
-            />
+            <SortTabs selectAllCheck sortTabTitle="25 Bids Available" />
             <Row className="mb-3">
               {closedBikeData.map((item) => (
                 <Col md={3}>

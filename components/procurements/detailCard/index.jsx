@@ -5,8 +5,7 @@ import { FaRegClipboard } from 'react-icons/fa';
 import { MdOutlineClose } from 'react-icons/md';
 import styles from './style.module.scss';
 import ArrowButton from '../../common/buttons/ArrowButton';
-import PartialLeadsDetail from '../../../components/modals/partialLeadsModal';
-import Link from 'next/link';
+import PartialLeadsDetail from '../../modals/partialLeadsModal';
 
 export default function DetailCard(props) {
   const [partialModal, setpartialModal] = useState(false);
@@ -74,7 +73,13 @@ export default function DetailCard(props) {
                 />
                 <div className={`${styles.detailSendForm} text-white`}>
                   <FaRegClipboard className="mx-1" size={16} />
-                  <span onClick={partialToggleModal}>Send eval. form</span>
+                  <button
+                    type="button"
+                    className="btn-link text-white"
+                    onClick={partialToggleModal}
+                  >
+                    Send eval. form
+                  </button>
                 </div>
               </div>
             )}
@@ -86,16 +91,21 @@ export default function DetailCard(props) {
                 </div>
                 <div className={`${styles.detailSendForm} text-white`}>
                   <FaRegClipboard className="mx-1" size={16} />
-                  <span onClick={partialToggleModal}>Send eval. form</span>
+                  <button
+                    type="button"
+                    className="btn-link text-white"
+                    onClick={partialToggleModal}
+                  >
+                    Send eval. form
+                  </button>
                 </div>
               </div>
             )}
           </div>
         </Card.Body>
+
         {props.isCardFooter && (
-          <div
-            className={`${styles.detailCardFooter} card-footer`}
-          >
+          <div className={`${styles.detailCardFooter} card-footer`}>
             {props.isUserDetail && (
               <div className={styles.userDetail}>
                 <div className={styles.userlTitle}>CRE Details</div>
@@ -113,10 +123,12 @@ export default function DetailCard(props) {
             )}
             <div className={styles.detailsDivide}>
               <p className="text-white-50 mb-0">
-                Prm source: <span className="text-white">{props.prmSource}</span>
+                Prm source:{' '}
+                <span className="text-white">{props.prmSource}</span>
               </p>
               <p className="text-white-50 mb-0">
-                Sec source: <span className="text-white">{props.secSource}</span>
+                Sec source:{' '}
+                <span className="text-white">{props.secSource}</span>
               </p>
             </div>
           </div>

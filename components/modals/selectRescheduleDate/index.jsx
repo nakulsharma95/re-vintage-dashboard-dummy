@@ -1,10 +1,11 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Row, Col, Modal, Accordion, Button, Form } from 'react-bootstrap';
 import { IoMdClose } from 'react-icons/io';
 import CustomCalender from '../../common/customCalender';
 import styles from './style.module.scss';
 
-const SelectRescheduleDate = (props) => {
+function SelectRescheduleDate(props) {
   return (
     <Modal
       show={props.isOpen}
@@ -139,7 +140,7 @@ const SelectRescheduleDate = (props) => {
                       className="form-check-input"
                     />
                     <label htmlFor="test2" className="form-check-label">
-                      I'm not the owner
+                      I am not the owner
                     </label>
                   </p>
                   <p className={styles.rescheduleRadio}>
@@ -199,6 +200,6 @@ const SelectRescheduleDate = (props) => {
       </div>
     </Modal>
   );
-};
+}
 
 export default SelectRescheduleDate;

@@ -58,6 +58,13 @@ h6 {
   @include scrollHide;
 }
 
+.btn-link {
+  border: none;
+  background: none;
+  padding: 0;
+  text-decoration: none;
+}
+
 // Sidebar Active Style
 .sidebar-global {
   button[aria-expanded='true'] {
@@ -68,7 +75,7 @@ h6 {
       color: $theme-red-da;
     }
 
-    a {
+     a {
       color: $white !important;
     }
   }
@@ -77,14 +84,31 @@ h6 {
     box-shadow: none;
   }
 
-  .active {
+
+  .active.accordion-item .accordion-header a {
+    color: $white;
+  }
+
+  // Condition if class show on button
+  button.active {
+    background-color: $black;
+    
+    a {
+      color: $white;
+    }
+  }
+
+    // Condition if class show on li
+  li.active {
     color: $white !important;
     background-color: $black;
 
     a {
-      color: $white !important;
+      color: $white;
     }
+  }
 
+  .active {
     .nav-item {
       color: $theme-red-da;
     }
