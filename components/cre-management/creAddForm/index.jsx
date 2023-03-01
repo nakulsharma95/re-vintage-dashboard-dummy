@@ -1,9 +1,9 @@
-import React from "react";
-import { Row, Col, Form, Image } from "react-bootstrap";
-import FileUploader from "~/components/common/fileUploader";
-import ButtonPrimary from "../../common/buttons/ButtonPrimary";
-import OutlineButton from "../../common/buttons/OutlineButton";
-import styles from "./style.module.scss";
+import React from 'react';
+import { Row, Col, Form, Image } from 'react-bootstrap';
+import FileUploader from '../../common/fileUploader';
+import ButtonPrimary from '../../common/buttons/ButtonPrimary';
+import OutlineButton from '../../common/buttons/OutlineButton';
+import styles from './style.module.scss';
 
 export default function CreAddForm() {
   return (
@@ -168,11 +168,11 @@ export default function CreAddForm() {
 
         <Col className={`${styles.inputField} `} xl={8} lg={8} md={12}>
           <textarea
-            class="form-control"
+            className="form-control"
             id="exampleFormControlTextarea1"
             placeholder="1236/2, D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi, Delhi - 110066"
             rows="3"
-          ></textarea>
+          />
         </Col>
       </Row>
       <div className={styles.inputDivider} />
@@ -183,11 +183,11 @@ export default function CreAddForm() {
 
         <Col className={`${styles.inputField} `} xl={8} lg={8} md={12}>
           <textarea
-            class="form-control"
+            className="form-control"
             id="exampleFormControlTextarea1"
             placeholder="1236/2, D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi, Delhi - 110066"
             rows="3"
-          ></textarea>
+          />
         </Col>
       </Row>
       <div className={styles.inputDivider} />
@@ -198,11 +198,11 @@ export default function CreAddForm() {
 
         <Col className={`${styles.inputField} `} xl={8} lg={8} md={12}>
           <textarea
-            class="form-control"
+            className="form-control"
             id="exampleFormControlTextarea1"
             placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             rows="3"
-          ></textarea>
+          />
 
           <div className="text-area-character">10 character left</div>
         </Col>
@@ -213,7 +213,7 @@ export default function CreAddForm() {
           <OutlineButton title="Cancel" className="theme1" />
         </div>
         <div>
-          {" "}
+          {' '}
           <ButtonPrimary title="Save" />
         </div>
       </div>

@@ -69,10 +69,7 @@ export default function ActiveBids() {
       </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-3" />
-      <SortTabs
-        selectAllCheck
-        sortTabTitle="25 Bids Available"
-      />
+      <SortTabs selectAllCheck sortTabTitle="25 Bids Available" />
       <Row className="mb-3">
         {activeBikeData.map((item) => (
           <Col md={3}>

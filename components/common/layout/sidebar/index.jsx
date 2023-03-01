@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useAccordionButton } from 'react-bootstrap';
@@ -210,7 +211,9 @@ export default function Sidebar(props) {
           <Accordion.Header className={styles.headerStyle}>
             <Link
               href="/retail/inventory"
-              className={router.pathname === '/retail/inventory' ? 'active' : ''}
+              className={
+                router.pathname === '/retail/inventory' ? 'active' : ''
+              }
             >
               <span className={`${styles.navIcon} nav-item`}>
                 <BsFileEarmarkText />

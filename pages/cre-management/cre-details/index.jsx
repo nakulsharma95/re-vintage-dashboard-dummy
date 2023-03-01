@@ -1,29 +1,29 @@
-import React from "react";
-import { Row, Col, Tab, Tabs } from "react-bootstrap";
-import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import CreAddressDetailCard from "../../../components/cre-management/creAddressDetailCard";
-import CreBikeInfoCard from "../../../components/cre-management/creBikeInfoCard";
-import CrePrimaryCard from "../../../components/cre-management/crePrimaryCard";
-import CreProfileCard from "../../../components/cre-management/creProfileCard";
-import CreTrainingCard from "../../../components/cre-management/creTrainingCard";
-import TabPrimary from "../../../components/common/tabPrimary";
-import HeaderPrimary from "../../../components/common/headerPrimary";
-import CrePerformanceMatrix from "../../../components/cre-management/crePerformanceMatrix";
-import CreMonthPerformace from "../../../components/cre-management/creMonthPerformace";
+import React from 'react';
+import { Row, Col, Tab, Tabs } from 'react-bootstrap';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import CreAddressDetailCard from '../../../components/cre-management/creAddressDetailCard';
+import CreBikeInfoCard from '../../../components/cre-management/creBikeInfoCard';
+import CrePrimaryCard from '../../../components/cre-management/crePrimaryCard';
+import CreProfileCard from '../../../components/cre-management/creProfileCard';
+import CreTrainingCard from '../../../components/cre-management/creTrainingCard';
+import TabPrimary from '../../../components/common/tabPrimary';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import CrePerformanceMatrix from '../../../components/cre-management/crePerformanceMatrix';
+import CreMonthPerformace from '../../../components/cre-management/creMonthPerformace';
 
 function CreDetails() {
   const cardData = [
     {
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
     {
-      dealerLocation: "Neel Motors, Rohini Nagar, Delhi",
+      dealerLocation: 'Neel Motors, Rohini Nagar, Delhi',
     },
     {
-      dealerLocation: "Neel Motors, Punjabi Bagh, Delhi",
+      dealerLocation: 'Neel Motors, Punjabi Bagh, Delhi',
     },
     {
-      dealerLocation: "Neel Motors, Lajpat Nagar, Delhi",
+      dealerLocation: 'Neel Motors, Lajpat Nagar, Delhi',
     },
   ];
   return (
