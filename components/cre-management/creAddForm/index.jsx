@@ -1,8 +1,6 @@
 import React from 'react';
 import { Row, Col, Form, Image } from 'react-bootstrap';
 import FileUploader from '../../common/fileUploader';
-import ButtonPrimary from '../../common/buttons/ButtonPrimary';
-import OutlineButton from '../../common/buttons/OutlineButton';
 import styles from './style.module.scss';
 
 export default function CreAddForm() {
@@ -208,15 +206,7 @@ export default function CreAddForm() {
         </Col>
       </Row>
 
-      <div className={styles.fixedFooter}>
-        <div className="mx-3">
-          <OutlineButton title="Cancel" className="theme1" />
-        </div>
-        <div>
-          {' '}
-          <ButtonPrimary title="Save" />
-        </div>
-      </div>
+
     </div>
   );
 }
