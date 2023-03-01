@@ -10,8 +10,41 @@ import DealerTable from '../../components/dealer-management/dealerTable';
 import FilterButton from '../../components/common/filterButton';
 import EmptyState from '../../components/emptyState';
 import MobileDealerCard from '../../components/dealer-management/mobileDealerCard';
+import styles from './style.module.scss';
+import useMediaQuery from '../../components/common/useMedia';
 
 function DealerManagement() {
+  const isSmallScreen = useMediaQuery(767);
+  const mobileDealerCard = [
+    {
+      title: 'Neel Motors',
+      location:
+        'WZ - 1, Nirankari Tower, 2nd floor, Ganesh Nagar, Opposite metro pillar no. 535, New Delhi - 110018',
+      mobile: '+91 98765 43210',
+      email: 'delhimotorcycles@royalenfield.com',
+    },
+    {
+      title: 'Neel Motors',
+      location:
+        'WZ - 1, Nirankari Tower, 2nd floor, Ganesh Nagar, Opposite metro pillar no. 535, New Delhi - 110018',
+      mobile: '+91 98765 43210',
+      email: 'delhimotorcycles@royalenfield.com',
+    },
+    {
+      title: 'Neel Motors',
+      location:
+        'WZ - 1, Nirankari Tower, 2nd floor, Ganesh Nagar, Opposite metro pillar no. 535, New Delhi - 110018',
+      mobile: '+91 98765 43210',
+      email: 'delhimotorcycles@royalenfield.com',
+    },
+    {
+      title: 'Neel Motors',
+      location:
+        'WZ - 1, Nirankari Tower, 2nd floor, Ganesh Nagar, Opposite metro pillar no. 535, New Delhi - 110018',
+      mobile: '+91 98765 43210',
+      email: 'delhimotorcycles@royalenfield.com',
+    },
+  ];
   return (
     <div>
       <Breadcrumb title="Dealer Management" />
@@ -26,13 +59,24 @@ function DealerManagement() {
         <FilterButton />
       </HeaderPrimary>
 
-      <MobileDealerCard />
-      <div className="d-none d-lg-block">
+      {isSmallScreen ? (
+        <div className={styles.mobileDealerCard}>
+          {mobileDealerCard.map((item) => (
+            <MobileDealerCard
+              title={item.title}
+              location={item.location}
+              mobile={item.mobile}
+              email={item.email}
+            />
+          ))}
+        </div>
+      ) : (
         <div className="custom-tab-style">
           <Tabs
             className="mb-3"
             defaultActiveKey="title1"
             id="uncontrolled-tab-example"
+            tabClassName="custom-tab-nav"
           >
             <Tab eventKey="title1" title="All">
               <DealerTable />
@@ -51,7 +95,7 @@ function DealerManagement() {
             </Tab>
           </Tabs>
         </div>
-      </div>
+      )}
     </div>
   );
 }

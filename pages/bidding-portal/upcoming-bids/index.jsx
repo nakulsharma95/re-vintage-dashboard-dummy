@@ -102,6 +102,7 @@ export default function UpcomingBids() {
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
+          tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Today">
             <SortTabs selectAllCheck sortTabTitle="25 Bids Available" />

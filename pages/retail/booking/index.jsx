@@ -42,6 +42,7 @@ export default function Booking() {
           className="mb-3"
           defaultActiveKey="title3"
           id="uncontrolled-tab-example"
+          tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Booked (4)">
             <DealFilter singleTitle="4 Leads" />

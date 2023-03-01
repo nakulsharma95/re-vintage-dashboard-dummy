@@ -147,57 +147,55 @@ h6 {
 }
 
 // Custom Tab Style
-.custom-tab-style .nav-link {
-  color: #fff;
-  font-size: 14px;
-  border: none;
-}
+.custom-tab-style {
+  .nav-tabs[tabClassName="custom-tab-nav"] {
+    border-color: $gray-70;
 
-.custom-tab-style .nav-tabs {
-  border-color: $gray-70;
-
-  @include mobile {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-y: hidden;
-  }
-
-  .nav-item {
     @include mobile {
-      white-space: nowrap;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-y: hidden;
+    }
+
+    .nav-item {
+      @include mobile {
+        white-space: nowrap;
+      }
+    }
+
+    .nav-link {
+      padding: 10px 0px 10px 0;
+      margin-right: 25px;
+      color: #fff;
+      font-size: 14px;
+      border: none;
+
+      &.active {
+        background-color: transparent;
+        border: none;
+        color: $theme-red-da;
+        margin-bottom: 0;
+        position: relative;
+    
+        &::after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background-color: $theme-red-da;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+        }
+      }
+    }
+
+    .nav-link:hover,
+    .nav-tabs .nav-link:focus {
+      border: none;
+      border-bottom: 0 solid;
+      margin-bottom: 0;
     }
   }
-
-  .nav-link {
-    border: none;
-    padding: 10px 0px 10px 0;
-    margin-right: 25px;
-  }
-}
-
-.custom-tab-style .nav-link.active {
-  background-color: transparent;
-  border: none;
-  color: $theme-red-da;
-  margin-bottom: 0;
-  position: relative;
-
-  &::after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: $theme-red-da;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-  }
-}
-
-.custom-tab-style .nav-link:hover,
-.nav-tabs .nav-link:focus {
-  border: none;
-  border-bottom: 0 solid;
-  margin-bottom: 0;
 }
 
 // default White tab style
@@ -218,6 +216,7 @@ h6 {
       margin-bottom: 0 !important;
       font-weight: 600;
       border: none;
+      width: 100%;
 
       .activeTab {
         background-color: $white;
@@ -881,10 +880,17 @@ h6 {
 
 // dashboardCard
 .dashboard-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin-bottom: 12px;
   margin-top: 24px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
 
   @include mobile {
     display: grid;
@@ -954,12 +960,11 @@ h6 {
   display: flex;
   justify-content: end;
   background-color: $gray-28;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   padding: 10px;
   z-index: 9;
-  width: calc(100vw - 335px);
-
+  width: calc(100vw - 335px);  
   button {
     height: 35px;
   }
