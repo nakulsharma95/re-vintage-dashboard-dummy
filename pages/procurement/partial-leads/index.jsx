@@ -11,7 +11,6 @@ import FilterButton from '../../../components/common/filterButton';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 
 export default function PartialLeads() {
-
   const cardData = [
     {
       ownerName: 'Rishab Sharma',
@@ -69,10 +68,7 @@ export default function PartialLeads() {
         >
           <Tab eventKey="title1" title="Recent">
             <Row>
-              <ViewAll
-                title="3 Leads Available"
-                viewAllClass="mb-4 mt-0"
-              />
+              <ViewAll title="3 Leads Available" viewAllClass="mb-4 mt-0" />
               {cardData.map((item) => (
                 <Col md={4}>
                   <DetailCard
@@ -97,10 +93,7 @@ export default function PartialLeads() {
           </Tab>
           <Tab eventKey="title2" title="In-progress (4)">
             <Row className="mb-5">
-              <ViewAll
-                title="3 Leads Available"
-                viewAllClass="mb-4 mt-0"
-              />
+              <ViewAll title="3 Leads Available" viewAllClass="mb-4 mt-0" />
               {cardData.map((item) => (
                 <Col md={4}>
                   <DetailCard
@@ -121,10 +114,7 @@ export default function PartialLeads() {
           </Tab>
           <Tab eventKey="title3" title="Dropped (2)">
             <Row className="mb-5">
-              <ViewAll
-                title="3 Leads Available"
-                viewAllClass="mb-4 mt-0"
-              />
+              <ViewAll title="3 Leads Available" viewAllClass="mb-4 mt-0" />
               {cardData.map((item) => (
                 <Col md={4}>
                   <DetailCard
@@ -146,10 +136,7 @@ export default function PartialLeads() {
           </Tab>
           <Tab eventKey="title4" title="Self consume(By dealer)">
             <Row className="mb-5">
-              <ViewAll
-                title="3 Leads Available"
-                viewAllClass="mb-4 mt-0"
-              />
+              <ViewAll title="3 Leads Available" viewAllClass="mb-4 mt-0" />
               {cardData.map((item) => (
                 <Col md={4}>
                   <DetailCard

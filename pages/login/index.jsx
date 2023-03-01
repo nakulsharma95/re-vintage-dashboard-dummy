@@ -59,7 +59,6 @@ export default function Login() {
         setStatus(encryptCredentials?.data?.message || '');
       }
     } catch (err) {
-      console.log(err);
       setStatus('Something went wrong!');
     }
   };

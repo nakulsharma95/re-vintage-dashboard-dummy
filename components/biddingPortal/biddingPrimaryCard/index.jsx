@@ -4,7 +4,7 @@ import { Card, Image } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { BiRupee } from 'react-icons/bi';
 import { BsPencil } from 'react-icons/bs';
-import CustomCheckBox from '../../../components/common/customCheckBox';
+import CustomCheckBox from '../../common/customCheckBox';
 import ArrowButton from '../../common/buttons/ArrowButton';
 import ButtonPrimary from '../../common/buttons/ButtonPrimary';
 import styles from './style.module.scss';
@@ -17,11 +17,7 @@ function BiddingBikeCard(props) {
   return (
     <Card className={styles.bikeCardCols}>
       <div className={`${styles.bikeImg} ${props.className}`}>
-        <Image
-          variant="top"
-          src={props.imageUrl}
-          alt="not-found"
-        />
+        <Image variant="top" src={props.imageUrl} alt="not-found" />
       </div>
       {props.isClosedTitle && (
         <div className={styles.closedBidTitle}>
@@ -87,7 +83,6 @@ function BiddingBikeCard(props) {
                     </span>
                   )}
                   {props.highestClosedBidPrice}
-
                 </div>
               </div>
               <div className={styles.closedPriceCols}>

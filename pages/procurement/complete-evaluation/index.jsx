@@ -41,7 +41,7 @@ function CompleteEvaluation() {
           isEvalBtnVisible
           isCallerBtnVisible={false}
           isEnquiryNumVisible={false}
-          isCardFooterVisible={true}
+          isCardFooterVisible
           isSlider={false}
         />
       ))}

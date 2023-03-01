@@ -19,12 +19,16 @@ export default function ManaualEntry() {
         </div>
         <div className={styles.inputCols}>
           <Form.Control type="text" placeholder="Primary Comment" />
-          <Form.Control as="textarea" placeholder="Secondary Comment" rows={3} />
+          <Form.Control
+            as="textarea"
+            placeholder="Secondary Comment"
+            rows={3}
+          />
         </div>
       </div>
       <div className={styles.submitBtn}>
         <Button variant="">
-          Submit{' '}
+          Submit
           <span>
             <BsChevronRight />
           </span>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col,Tabs,Tab } from 'react-bootstrap';
+import { Row, Col, Tabs, Tab } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
 import CloserBikeCard from '../../../components/dealClosure/closerCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
@@ -49,7 +49,7 @@ function PaymentsPending() {
       <DealFilter title="8 Leads" />
       <Row>
         {cardData.map((item) => (
-          <Col xxl={3} xl={4} lg={6}  md={6}>
+          <Col xxl={3} xl={4} lg={6} md={6}>
             <CloserBikeCard
               data={item}
               isHighestBid="Evolution Price"

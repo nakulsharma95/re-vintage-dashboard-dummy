@@ -272,7 +272,6 @@ function MotorcycleDetail(props) {
                 <Link href="/">Neel Motors, Lajpat Nagar</Link>
               </div>
             </div>
-
           </div>
 
           <div className={styles.cdaPriceMain}>
@@ -305,10 +304,11 @@ function MotorcycleDetail(props) {
                 <Form.Control type="text" defaultValue="1,25,000.00" />
               </div>
               <div className={styles.priceBtn}>
-                <Button variant="" className={styles.activeBtn}>Submit</Button>
+                <Button variant="" className={styles.activeBtn}>
+                  Submit
+                </Button>
               </div>
             </div>
-
           </div>
         </div>
       )}

@@ -1,7 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Slider from 'react-slick';
 import { AiFillStar } from 'react-icons/ai';
-import { MdOutlineArrowForwardIos, MdOutlineArrowBackIosNew } from 'react-icons/md';
+import {
+  MdOutlineArrowForwardIos,
+  MdOutlineArrowBackIosNew,
+} from 'react-icons/md';
 import style from './style.module.scss';
 
 function Review() {
@@ -13,7 +17,40 @@ function Review() {
     slidesToScroll: 3,
     nextArrow: <MdOutlineArrowForwardIos />,
     prevArrow: <MdOutlineArrowBackIosNew />,
+    responsive: [
+      {
+        breakpoint:900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+          dots: false,
+          arrows:false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: false,
+          arrows:false
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows:false
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
   };
+  
   return (
     <div className={style.review}>
       <h5>Reviews</h5>
@@ -41,7 +78,7 @@ function Review() {
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
-            retrospect I think I should've stuck to my regular choice. The
+            retrospect I think I should have stuck to my regular choice. The
             location itself looks and feels like an authentic place for
             motorcycle riders to hang out.
           </p>
@@ -68,7 +105,7 @@ function Review() {
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
-            retrospect I think I should've stuck to my regular choice. The
+            retrospect I think I should have stuck to my regular choice. The
             location itself looks and feels like an authentic place for
             motorcycle riders to hang out.
           </p>
@@ -95,7 +132,7 @@ function Review() {
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
-            retrospect I think I should've stuck to my regular choice. The
+            retrospect I think I should have stuck to my regular choice. The
             location itself looks and feels like an authentic place for
             motorcycle riders to hang out.
           </p>
@@ -122,7 +159,7 @@ function Review() {
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
-            retrospect I think I should've stuck to my regular choice. The
+            retrospect I think I should have stuck to my regular choice. The
             location itself looks and feels like an authentic place for
             motorcycle riders to hang out.
           </p>
@@ -149,7 +186,7 @@ function Review() {
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
-            retrospect I think I should've stuck to my regular choice. The
+            retrospect I think I should have stuck to my regular choice. The
             location itself looks and feels like an authentic place for
             motorcycle riders to hang out.
           </p>
@@ -176,7 +213,7 @@ function Review() {
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
-            retrospect I think I should've stuck to my regular choice. The
+            retrospect I think I should have stuck to my regular choice. The
             location itself looks and feels like an authentic place for
             motorcycle riders to hang out.
           </p>
@@ -203,7 +240,7 @@ function Review() {
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
-            retrospect I think I should've stuck to my regular choice. The
+            retrospect I think I should have stuck to my regular choice. The
             location itself looks and feels like an authentic place for
             motorcycle riders to hang out.
           </p>
@@ -230,7 +267,7 @@ function Review() {
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
-            retrospect I think I should've stuck to my regular choice. The
+            retrospect I think I should have stuck to my regular choice. The
             location itself looks and feels like an authentic place for
             motorcycle riders to hang out.
           </p>
@@ -257,7 +294,7 @@ function Review() {
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
-            retrospect I think I should've stuck to my regular choice. The
+            retrospect I think I should have stuck to my regular choice. The
             location itself looks and feels like an authentic place for
             motorcycle riders to hang out.
           </p>

@@ -6,9 +6,9 @@ import { RiShareBoxFill } from 'react-icons/ri';
 import { BiRefresh } from 'react-icons/bi';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { FiSettings } from 'react-icons/fi';
-import FilterDropdown from '.';
 import ButtonPrimary from '../buttons/ButtonPrimary';
 import filterStyle from './style.module.scss';
+import FilterDropdown from './filterDropdown';
 
 function Filters(props) {
   return (

@@ -58,6 +58,13 @@ h6 {
   @include scrollHide;
 }
 
+.btn-link {
+  border: none;
+  background: none;
+  padding: 0;
+  text-decoration: none;
+}
+
 // Sidebar Active Style
 .sidebar-global {
   button[aria-expanded='true'] {

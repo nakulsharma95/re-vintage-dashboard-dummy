@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import { FiPhoneCall } from "react-icons/fi";
+import { FiPhoneCall } from 'react-icons/fi';
 import ArrowButton from '../../common/buttons/ArrowButton';
 import styles from './style.module.scss';
 

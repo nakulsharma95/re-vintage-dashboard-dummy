@@ -9,7 +9,9 @@ import OutlineButton from '../../components/common/buttons/OutlineButton';
 import DealerTable from '../../components/dealer-management/dealerTable';
 import FilterButton from '../../components/common/filterButton';
 import EmptyState from '../../components/emptyState';
-// import MobileDealerCard from '../../components/dealer-management/mobileDealerCard';
+import MobileDealerCard from '../../components/dealer-management/mobileDealerCard';
+
+import styles from './style.module.scss';
 
 function DealerManagement() {
   return (
@@ -26,7 +28,8 @@ function DealerManagement() {
         <FilterButton />
       </HeaderPrimary>
 
-      {/* <MobileDealerCard /> */}
+      <MobileDealerCard />
+      <div className='d-none d-lg-block'>
       <div className="custom-tab-style">
         <Tabs
           className="mb-3"
@@ -50,6 +53,8 @@ function DealerManagement() {
           </Tab>
         </Tabs>
       </div>
+      </div>
+     
     </div>
   );
 }
