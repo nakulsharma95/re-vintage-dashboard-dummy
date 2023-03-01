@@ -4,8 +4,8 @@ import CreAddForm from '../../../components/cre-management/creAddForm';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
-import OutlineButton from '~/components/common/buttons/OutlineButton';
-import ButtonPrimary from '~/components/common/buttons/ButtonPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import ButtonPrimary from '../../../components/common/buttons/ButtonPrimary';
 
 function AddCre() {
   return (
@@ -21,14 +21,14 @@ function AddCre() {
           <CreAddForm />
         </Col>
         <div className="fixed-Footer">
-        <div className="mx-3">
-          <OutlineButton title="Cancel" className="theme1" />
+          <div className="mx-3">
+            <OutlineButton title="Cancel" className="theme1" />
+          </div>
+          <div>
+            {' '}
+            <ButtonPrimary title="Save" />
+          </div>
         </div>
-        <div>
-          {' '}
-          <ButtonPrimary title="Save" />
-        </div>
-      </div>
       </Row>
     </>
   );

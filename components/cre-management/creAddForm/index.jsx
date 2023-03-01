@@ -205,8 +205,6 @@ export default function CreAddForm() {
           <div className="text-area-character">10 character left</div>
         </Col>
       </Row>
-
-
     </div>
   );
 }

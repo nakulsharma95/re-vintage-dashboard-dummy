@@ -1,5 +1,5 @@
-import OutlineDropdown from "../common/buttons/OutlineDropdown";
-import styles from "./style.module.scss";
+import OutlineDropdown from '../common/buttons/OutlineDropdown';
+import styles from './style.module.scss';
 
 export default function DashboardCard(props) {
   return (
@@ -15,7 +15,7 @@ export default function DashboardCard(props) {
           {props.dropdown && (
             <OutlineDropdown
               dropdownTitle="1 Month"
-              options={["2 Month", "3 Month", "4 Month"]}
+              options={['2 Month', '3 Month', '4 Month']}
             />
           )}
         </div>
