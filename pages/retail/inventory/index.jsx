@@ -124,6 +124,7 @@ export default function Inventory() {
           className="mb-3"
           defaultActiveKey="title3"
           id="uncontrolled-tab-example"
+          tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Content Approval Pending (12)">
             <SortTabs

@@ -10,6 +10,7 @@ import DealerTable from '../../components/dealer-management/dealerTable';
 import FilterButton from '../../components/common/filterButton';
 import EmptyState from '../../components/emptyState';
 import MobileDealerCard from '../../components/dealer-management/mobileDealerCard';
+import styles from './style.module.scss';
 
 function DealerManagement() {
   const mobileDealerCard = [
@@ -73,6 +74,7 @@ function DealerManagement() {
             className="mb-3"
             defaultActiveKey="title1"
             id="uncontrolled-tab-example"
+            tabClassName="custom-tab-nav"
           >
             <Tab eventKey="title1" title="All">
               <DealerTable />

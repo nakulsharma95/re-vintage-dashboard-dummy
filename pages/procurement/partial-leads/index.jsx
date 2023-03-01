@@ -65,6 +65,7 @@ export default function PartialLeads() {
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
+          tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Recent">
             <Row>
