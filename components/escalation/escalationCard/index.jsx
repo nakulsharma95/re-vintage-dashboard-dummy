@@ -3,26 +3,26 @@ import ArrowButton from '../../common/buttons/ArrowButton';
 
 import style from './style.module.scss';
 
-function EscalationCard() {
+function EscalationCard(props) {
   return (
     <div className={style.escalationCard}>
       <div className={style.escalationCard_head}>
         <div className={style.escalationCard_topRow}>
           <div className={style.escalationCard_topCol}>
             <h6>
-              Escalation ID <span>- CSCB29E2B1</span>
+              Escalation ID <span>{props.id} </span>
             </h6>
           </div>
 
           <div className={style.escalationCard_topCol}>
             <h6>
-              Escalation Issue: <span>Customer</span>
+              Escalation Issue: <span>{props.issue}</span>
             </h6>
           </div>
 
           <div className={style.escalationCard_topCol}>
             <h6>
-              Escalated By: <span>CRE</span>
+              Escalated By: <span>{props.escalatedBy}</span>
             </h6>
           </div>
 
@@ -30,7 +30,7 @@ function EscalationCard() {
             <div className="d-flex align-items-center">
               <div className="status-circle danger me-2" />
               <h6>
-                Status:<span> Unresolved</span>
+                Status:<span> {props.status}</span>
               </h6>
             </div>
           </div>
@@ -39,23 +39,23 @@ function EscalationCard() {
           <div className={style.escalationCard_Colums}>
             <div className={style.escalationCard_bottomCol}>
               <p>
-                Escalation Stage <br /> <span>Procurement</span>
+                Escalation Stage <br /> <span>{props.stage} </span>
               </p>
             </div>
 
             <div className={style.escalationCard_bottomCol}>
               <p>
-                VDMP ID <br /> <span>CNNASA0R2R1</span>
+                VDMP ID <br /> <span>{props.vdmpId}</span>
               </p>
             </div>
 
             <p>
-              Description <br /> <span>Reason for escalation of this lead</span>
+              Description <br /> <span>{props.description} </span>
             </p>
 
             <p>
               Date and Time of escalation <br />
-              <span>17 Jan, 2023 at 4:23 PM</span>
+              <span>{props.dateAndTime} </span>
             </p>
           </div>
 
