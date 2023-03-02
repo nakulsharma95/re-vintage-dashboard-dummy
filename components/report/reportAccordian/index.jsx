@@ -18,11 +18,9 @@ function ReportAccordian() {
                   src="/images/profile.png"
                   alt="profil-img"
                 />
-                <h6 className={styles.accordianHeadName}>
-                  Rakesh Verma
-                </h6>
-				<span className='status-circle gray ms-3 mb-1'></span>
-				<p>4 Feb, 2023</p>
+                <h6 className={styles.accordianHeadName}>Rakesh Verma</h6>
+                <span className="status-circle gray ms-3 mb-1"></span>
+                <p>4 Feb, 2023</p>
               </div>
               <div className="d-flex align-items-center mt-2 ">
                 <Rating name="size-medium" defaultValue={3} />
@@ -49,17 +47,13 @@ function ReportAccordian() {
                   src="/images/profile-2.png"
                   alt="profil-img"
                 />
-                <h6 className={styles.accordianHeadName}>
-				Neha Dotania 
-                </h6>
-				<span className='status-circle gray ms-3 mb-1'></span>
-				<p>4 Feb, 2023</p>
+                <h6 className={styles.accordianHeadName}>Neha Dotania</h6>
+                <span className="status-circle gray ms-3 mb-1"></span>
+                <p>4 Feb, 2023</p>
               </div>
               <div className="d-flex align-items-center mt-2 ">
                 <Rating name="size-medium" defaultValue={5} />
-                <h6 className={styles.ratingTitle}>
-				Ut Enim Ad Minim Veniam.
-                </h6>
+                <h6 className={styles.ratingTitle}>Ut Enim Ad Minim Veniam.</h6>
               </div>
             </div>
           </Accordion.Header>
@@ -80,11 +74,9 @@ function ReportAccordian() {
                   src="/images/profile-3.png"
                   alt="profil-img"
                 />
-                <h6 className={styles.accordianHeadName}>
-                  Rakesh Verma 
-                </h6>
-				<span className='status-circle gray ms-3 mb-1'></span>
-				<p>4 Feb, 2023</p>
+                <h6 className={styles.accordianHeadName}>Rakesh Verma</h6>
+                <span className="status-circle gray ms-3 mb-1"></span>
+                <p>4 Feb, 2023</p>
               </div>
               <div className="d-flex align-items-center mt-2 ">
                 <Rating name="size-medium" defaultValue={3} />
@@ -111,11 +103,9 @@ function ReportAccordian() {
                   src="/images/profile-4.png"
                   alt="profil-img"
                 />
-                <h6 className={styles.accordianHeadName}>
-                  Rakesh Verma 
-                </h6>
-				<span className='status-circle gray ms-3 mb-1'></span>
-				<p>4 Feb, 2023</p>
+                <h6 className={styles.accordianHeadName}>Rakesh Verma</h6>
+                <span className="status-circle gray ms-3 mb-1"></span>
+                <p>4 Feb, 2023</p>
               </div>
               <div className="d-flex align-items-center mt-2 ">
                 <Rating name="size-medium" defaultValue={2} />
@@ -142,11 +132,9 @@ function ReportAccordian() {
                   src="/images/profile-5.png"
                   alt="profil-img"
                 />
-                <h6 className={styles.accordianHeadName}>
-                  Rakesh Verma 
-                </h6>
-				<span className='status-circle gray ms-3 mb-1'></span>
-				<p>4 Feb, 2023</p>
+                <h6 className={styles.accordianHeadName}>Rakesh Verma</h6>
+                <span className="status-circle gray ms-3 mb-1"></span>
+                <p>4 Feb, 2023</p>
               </div>
               <div className="d-flex align-items-center mt-2 ">
                 <Rating name="size-medium" defaultValue={4} />

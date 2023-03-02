@@ -1,27 +1,26 @@
 @import '../../../styles/variables/colors';
 @import '../../../styles/variables//mixins';
 
-.reportAccordian{
-	.profileIcon{
-		width: 32px;
-		height: 32px;
-		margin-right: 1rem;
-	}
-	.accordianHeadName{
-		font-size: 14px;
-		font-weight: normal;
-		
-	}
-	p{
-		color: $white;
-		opacity: 0.5;
-		font-size: 12px;
-		margin-left: 0.6rem;
-		margin-bottom: 0;
-	}
+.reportAccordian {
+  .profileIcon {
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem;
+  }
+  .accordianHeadName {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  p {
+    color: $white;
+    opacity: 0.5;
+    font-size: 12px;
+    margin-left: 0.6rem;
+    margin-bottom: 0;
+  }
 
-	.ratingTitle{
-		font-size: 14px;
-		margin-left: 1rem;
-	}
+  .ratingTitle {
+    font-size: 14px;
+    margin-left: 1rem;
+  }
 }
