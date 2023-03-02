@@ -1,7 +1,7 @@
-import React from 'react';
-import { Row, Col, Form, Image } from 'react-bootstrap';
-import FileUploader from '../../common/fileUploader';
-import styles from './style.module.scss';
+import React from "react";
+import { Row, Col, Form, Image } from "react-bootstrap";
+import FileUploader from "../../common/fileUploader";
+import styles from "./style.module.scss";
 
 export default function CreAddForm() {
   return (
@@ -61,7 +61,7 @@ export default function CreAddForm() {
           <span className={styles.inputSpan}>Email address</span>
         </Col>
 
-        <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
+        <Col className={`${styles.inputField} `} xl={8} lg={8} md={12}>
           <Form>
             <Form.Group className="" controlId="formBasicEmail">
               <Form.Control type="email" placeholder="Email address" />
