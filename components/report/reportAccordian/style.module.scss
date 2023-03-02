@@ -9,11 +9,11 @@
   }
   .accordianHeadName {
     font-size: 14px;
-    font-weight: normal;
+    font-weight: 500;
+    color: rgba($white,0.9);
   }
   p {
-    color: $white;
-    opacity: 0.5;
+    color: rgba($white,0.5);
     font-size: 12px;
     margin-left: 0.6rem;
     margin-bottom: 0;
@@ -22,5 +22,14 @@
   .ratingTitle {
     font-size: 14px;
     margin-left: 1rem;
+    font-weight: bold;
+    color: rgba($white,0.9);
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba($white,0.8);
+    padding-right: 60px;
   }
 }
