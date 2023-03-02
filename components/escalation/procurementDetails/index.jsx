@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ArrowButton from '../../common/buttons/ArrowButton';
 import style from './style.module.scss';
 
 function ProcurementDetails() {
@@ -9,13 +9,16 @@ function ProcurementDetails() {
       <p>Issue mentioned by CRE</p>
 
       <h6>Remark</h6>
-      <div className="position-relative">
+      <div className="position-relative d-flex">
         <div className={style.remark_text}>
           <p>Remark by Supervisor</p>
         </div>
-        <button type="button" className={style.remark_btn}>
-          SUBMIT
-        </button>
+        <div className={style.remark_btn}>
+          <ArrowButton
+            detailLink="/escalation/procuredMotorcycle"
+            title="SUBMIT"
+          />
+        </div>
       </div>
     </div>
   );
