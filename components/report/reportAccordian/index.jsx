@@ -56,8 +56,8 @@ function ReportAccordian() {
   return (
     <div className={`${styles.reportAccordian} primary-accordion-style pt-3`}>
       <Accordion defaultActiveKey="0">
-        {accordianData.map((item, index) => (
-          <Accordion.Item key={index} eventKey={index}>
+        {accordianData.map((item) => (
+          <Accordion.Item key={item} eventKey={item}>
             <Accordion.Header>
               <div className={styles.accordianHead}>
                 <div className="d-flex align-items-center my-2 ">
