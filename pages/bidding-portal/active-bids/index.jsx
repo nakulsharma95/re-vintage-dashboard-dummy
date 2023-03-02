@@ -54,10 +54,7 @@ export default function ActiveBids() {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <Breadcrumb title="Bidding Portal" addmoretitle="Active Bids" />
-        <BiddingTimer   biddingNotStartedText="bidding will Active in"
-          biddingStartedText="bidding is Active Now!"
-          biddingStartTime={14}
-          biddingEndTime={17}/>
+        <BiddingTimer biddingStartTime={14} biddingEndTime={17} />
       </div>
 
       <HeaderPrimary

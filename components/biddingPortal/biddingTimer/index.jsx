@@ -4,6 +4,8 @@ import { useGetDateQuery } from '~/redux/api/endpoints/biddingTimer';
 import styles from './style.module.scss';
 
 export default function BiddingTimer(props) {
+  const biddingNotStartedText = 'bidding will Active in';
+  const biddingStartedText = 'bidding is Active Now!';
   const { data, isSuccess } = useGetDateQuery();
 
   const [timer, setTimer] = useState({ text: '', time: '' });
@@ -12,10 +14,10 @@ export default function BiddingTimer(props) {
 
   const remainingTime = (startDate, endDate) => {
     if (endDate < 0)
-      return { time: endDate + day, text: props.biddingNotStartedText };
+      return { time: startDate + day, text: biddingNotStartedText };
     return startDate > 0
-      ? { time: startDate, text: props.biddingNotStartedText }
-      : { time: endDate, text: props.biddingStartedText };
+      ? { time: startDate, text: biddingNotStartedText }
+      : { time: endDate, text: biddingStartedText };
   };
 
   let currentDate = new Date(data?.data);
@@ -23,13 +25,12 @@ export default function BiddingTimer(props) {
   const biddingEndTime = new Date(data?.data);
 
   function runFunction() {
-    console.log(`current date: ${currentDate}`, data);
-
     const biddingActualStartTime =
       biddingStartingTime.setHours(props.biddingStartTime, 0, 0, 0) -
       currentDate;
     const biddingActualEndTime =
       biddingEndTime.setHours(props.biddingEndTime, 0, 0, 0) - currentDate;
+
     const biddingStatus = remainingTime(
       biddingActualStartTime,
       biddingActualEndTime
@@ -44,9 +45,14 @@ export default function BiddingTimer(props) {
     });
   }
   useEffect(() => {
+    let biddingTimer;
     if (isSuccess) {
-      setInterval(runFunction, 1000);
+      biddingTimer = setInterval(runFunction, 1000);
     }
+
+    return () => {
+      clearInterval(biddingTimer);
+    };
   }, [isSuccess]);
   return (
     <div className={styles.biddingTimer}>
