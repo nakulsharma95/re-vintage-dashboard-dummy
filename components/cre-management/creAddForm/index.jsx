@@ -1,7 +1,7 @@
-import React from "react";
-import { Row, Col, Form, Image } from "react-bootstrap";
-import FileUploader from "../../common/fileUploader";
-import styles from "./style.module.scss";
+import React from 'react';
+import { Row, Col, Form, Image } from 'react-bootstrap';
+import FileUploader from '../../common/fileUploader';
+import styles from './style.module.scss';
 
 export default function CreAddForm() {
   return (

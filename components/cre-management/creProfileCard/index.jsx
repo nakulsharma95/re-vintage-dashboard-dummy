@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-import { Row, Col } from "react-bootstrap";
-import { BiLocationPlus, BiMailSend, BiPhone } from "react-icons/bi";
-import styles from "./style.module.scss";
-import OutlineDropdown from "../../common/buttons/OutlineDropdown";
+import React from 'react';
+import { Row, Col } from 'react-bootstrap';
+import { BiLocationPlus, BiMailSend, BiPhone } from 'react-icons/bi';
+import styles from './style.module.scss';
+import OutlineDropdown from '../../common/buttons/OutlineDropdown';
 
 function CreProfileCard(props) {
   return (
@@ -29,11 +29,11 @@ function CreProfileCard(props) {
               className="d-flex align-items-center justify-content-end"
               md={6}
             >
-              {" "}
+              {' '}
               <OutlineDropdown
                 className={styles.displayAction}
                 dropdownTitle="Actions"
-                options={["Temporary Disable", "Unavailable", "Edit Details"]}
+                options={['Temporary Disable', 'Unavailable', 'Edit Details']}
               />
             </Col>
           </Row>

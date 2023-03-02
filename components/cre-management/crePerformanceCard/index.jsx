@@ -7,13 +7,11 @@ export default function CrePerformanceCard(props) {
       <div className={`${styles.cardBody} ${props.cardBodyStyle} py-2`}>
         <div className={`${styles.cardHead}`}>
           <div className="d-flex justify-content-between">
-            <h2>
-             {props.title}
-            </h2>
+            <h2>{props.title}</h2>
           </div>
           <div className="d-flex justify-content-between mb-2">
             <h3>
-            <span>Total</span>Leads Evaluated
+              <span>Total</span>Leads Evaluated
             </h3>
             <span>{props.totalNumber}</span>
           </div>
