@@ -53,10 +53,10 @@ export const getPath = () => {
  */
 
 export const insertSpaces = (string) => {
-  string.replace(/([a-z])([A-Z])/g, '$1 $2');
-  string.replace(/([A-Z])([A-Z][a-z])/g, '$1 $2');
-  return string;
+  const newString = string.replace(/([a-z])([A-Z])/g, '$1 $2');
+  return newString.replace(/([A-Z])([A-Z][a-z])/g, '$1 $2');
 };
+
 
 /**
  * It takes a string, converts it to a buffer, and then converts the buffer to a base64 string
