@@ -140,18 +140,6 @@ $desktop-width-lg: 1500px;
 }
 
 // ----------------------------------
-// Brandon Grotesque Font Family
-// ----------------------------------
-@mixin ff-primary() {
-  font-family: "Gilroy", sans-serif !important;
-  line-height: 1.5;
-
-  strong {
-    font-weight: bold;
-  }
-}
-
-// ----------------------------------
 // Heading Color
 // ----------------------------------
 @mixin headings-all() {
