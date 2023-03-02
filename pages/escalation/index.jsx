@@ -59,7 +59,7 @@ function Escalation() {
         title="Escalations"
         subTitle="Please fill all the necessary details"
       >
-        <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
+        <OutlineButton title="Export Data" leftIcon={<RiShareBoxFill />} />
         <SearchPrimary placeholder="Search Name, Location, Reference ID" />
       </HeaderPrimary>
       <hr />

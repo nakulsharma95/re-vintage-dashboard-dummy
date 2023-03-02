@@ -742,6 +742,10 @@ h6 {
     color: $gray-8;
     font-size: 16px;
   }
+
+  .css-iljtu2-MuiRating-root{
+    color: #F2A742;
+  }
 }
 
 // motor-cycle-accordian
@@ -879,12 +883,11 @@ h6 {
     background-color: $theme-sky-4B;
   }
 
-  &.warning {
-    background: $theme-warning;
-  }
-
   &.orange {
     background-color: #e86a16;
+  }
+  &.gray{
+    background-color: #6F7070;
   }
 }
 

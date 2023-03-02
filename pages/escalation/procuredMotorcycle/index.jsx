@@ -18,7 +18,7 @@ function ProcuredMotorcycle() {
       priceTitle: 'Evaluation Price',
       evaluationPrice: '1,19,300',
       priceTitle2: 'Dealer Price',
-      dealerPrice: '₹ 1,29,300',
+      dealerPrice: '1,29,300',
     },
   ];
   return (
@@ -57,7 +57,7 @@ function ProcuredMotorcycle() {
       </div>
       <MotorcycleAccordian />
       <div className="mt-5">
-        <BikeInspection />
+        <BikeInspection noOutlineBtn />
       </div>
     </div>
   );

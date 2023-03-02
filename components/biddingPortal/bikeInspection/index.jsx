@@ -1,11 +1,12 @@
 import { Tab, Nav, Row, Col } from 'react-bootstrap';
 import { BiDownload } from 'react-icons/bi';
+import { IoMdDownload } from 'react-icons/io';
 import Image from 'next/image';
 import styles from './style.module.scss';
 import BodyExteriors from '../bodyExteriors';
 import OutlineButton from '../../common/buttons/OutlineButton';
 
-export default function BikeInspection() {
+export default function BikeInspection(props) {
   return (
     <div className={styles.bikeInspectionMain}>
       <div className={styles.inspectionTabs}>
@@ -168,11 +169,20 @@ export default function BikeInspection() {
         </Tab.Container>
       </div>
       <div className="mt-3">
-        <OutlineButton
+        {props.outlineButton && (
+          <OutlineButton
           leftIcon={<BiDownload />}
           title="Download Report"
           className="theme1"
         />
+        )}
+        {props.noOutlineBtn &&(
+          <button className={styles.noOutlineBtn}>
+       <IoMdDownload className={styles.noOutlineIcon}/>Download Insp. Report
+       </button>
+        )}
+       
+        
       </div>
     </div>
   );

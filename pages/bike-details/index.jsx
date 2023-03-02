@@ -171,7 +171,7 @@ export default function BiddingDetails(props) {
       )}
       {/* end */}
       <Bids />
-      <BikeInspection />
+      <BikeInspection outlineButton />
       <BikeHistory />
     </div>
   );
