@@ -53,9 +53,9 @@ export const getPath = () => {
  */
 
 export const insertSpaces = (string) => {
-  string.replace(/([a-z])([A-Z])/g, '$1 $2');
-  string.replace(/([A-Z])([A-Z][a-z])/g, '$1 $2');
-  return string;
+  let newString = string.replace(/([a-z])([A-Z])/g, '$1 $2');
+  newString = newString.replace(/([A-Z])([A-Z][a-z])/g, '$1 $2');
+  return newString;
 };
 
 /**
@@ -86,19 +86,3 @@ export const errorToast = (message) => {
 export const loadingToast = (message) => {
   toast.loading(message || 'Wait! Task is in progress');
 };
-
-/**
- * It generates a random string of characters of a specified length.
- * @param {number} length - number - The length of the generated ID.
- * @returns A string of random characters.
- */
-
-export function generateId(length) {
-  let result = '';
-  const characters =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  for (let i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-  return result;
-}
