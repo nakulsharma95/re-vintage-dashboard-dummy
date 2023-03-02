@@ -15,17 +15,17 @@ function CreAddressDetailCard(props) {
             <Col xl={12} lg={12} md={12}>
               <div className={styles.addressCardText}>
                 <h3>CURRENT ADDRESS</h3>
-                <p>{props.houseNumber}</p>
+                <p>{props.currentHouseNumber}</p>
                 <p>{props.currentAddress}</p>
-                <p>{props.addressPincode}</p>
+                <p>{props.currentPincode}</p>
               </div>
             </Col>
 
             <Col xl={112} lg={12} md={12}>
               <div className={styles.addressCardText}>
-                <h3>PERMANENT ADDRESS</h3>
-
+                <p>{props.permanentHouseNumber}</p>
                 <p>{props.permanentAddress}</p>
+                <p>{props.permanentPincode}</p>
               </div>
             </Col>
           </Row>

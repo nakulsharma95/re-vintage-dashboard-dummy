@@ -1,14 +1,19 @@
-import React from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react';
 import { BsPlusLg } from 'react-icons/bs';
-import { Col, Row } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import styles from './style.module.scss';
 import PricePrimaryCard from '../../components/priceCalculator/pricePrimaryCard';
 import HeaderPrimary from '../../components/common/headerPrimary';
 import EvaluteForm from '../../components/priceCalculator/evaluateForm';
+import PreviewModal from '../../components/modals/previewModal';
 
 export default function PriceCalculator() {
+  const [addBikeViaModal, setaddBikeViaModal] = useState(false);
+
+  const addBikeViaToggleModal = () => {
+    setaddBikeViaModal(!addBikeViaModal);
+  };
   const priceCardData = [
     {
       imageUrl: '/images/sliderImg/bike0.png',
@@ -82,12 +87,13 @@ export default function PriceCalculator() {
           title="Instant Estimator Configurator"
           subTitle="Here you will find the Contact details of CRE for active Motorcycle and General Info"
         />
-        <Link
-          href="/price-calculator/add-motorcycle"
+        <Button
+          variant=""
+          onClick={addBikeViaToggleModal}
           className={styles.addMotorBtn}
         >
           <BsPlusLg /> Add Motorcycle
-        </Link>
+        </Button>
       </div>
       <div className={styles.evaluteMain}>
         <div className="mb-2">Evaluate In Easy Steps</div>
@@ -104,6 +110,12 @@ export default function PriceCalculator() {
           </Col>
         ))}
       </Row>
+      <PreviewModal
+        isOpen={addBikeViaModal}
+        handleClose={addBikeViaToggleModal}
+        isAddBikeModal
+        title="Add Motorcycle"
+      />
     </div>
   );
 }
