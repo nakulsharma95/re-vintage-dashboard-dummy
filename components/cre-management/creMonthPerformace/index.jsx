@@ -52,7 +52,7 @@ function CreMonthPerformace(props) {
     ],
   };
   return (
-    <Card className={styles.performanceCard}>
+    <Card className={`${styles.performanceCard} mt-5`}>
       <Card.Body className={styles.performanceCardBody}>
         <div className={styles.custumDivide}>
           <div className={styles.performanceCardText}>
