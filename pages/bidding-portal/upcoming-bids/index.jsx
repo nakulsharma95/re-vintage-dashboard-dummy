@@ -57,7 +57,7 @@ export default function UpcomingBids() {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <Breadcrumb title="Bidding Portal" addmoretitle="Upcoming Bids" />
-        <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
+        <BiddingTimer biddingStartTime={14} biddingEndTime={17} />
       </div>
       <HeaderPrimary headerClass="mb-2" title="Upcoming Bids">
         <div>
