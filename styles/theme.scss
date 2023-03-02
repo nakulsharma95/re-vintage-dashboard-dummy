@@ -148,7 +148,7 @@ h6 {
 
 // Custom Tab Style
 .custom-tab-style {
-  .nav-tabs[tabClassName="custom-tab-nav"] {
+  .nav-tabs[tabClassName='custom-tab-nav'] {
     border-color: $gray-70;
 
     @include mobile {
@@ -176,7 +176,7 @@ h6 {
         color: $theme-red-da;
         margin-bottom: 0;
         position: relative;
-    
+
         &::after {
           content: '';
           width: 100%;
@@ -252,9 +252,17 @@ h6 {
 
 // Pagination Start ---------------------------------
 .custom-paginationMain {
+  .mobFlexPagination{
+    @include mobile {
+      flex-wrap: nowrap;
+    }
+  }  
   .custom-pagination {
     .page-item {
       margin: 0 0.4rem;
+      @include mobile {
+        margin: 0;
+      }
 
       &:first-child,
       &:last-child {
@@ -274,6 +282,12 @@ h6 {
         line-height: 29px;
         border: 0;
         background-color: transparent;
+        @include mobile {
+          width: 20px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 24px;
+        }
 
         &:focus {
           outline: none;
@@ -964,7 +978,7 @@ h6 {
   bottom: 0;
   padding: 10px;
   z-index: 9;
-  width: calc(100vw - 335px);  
+  width: calc(100vw - 335px);
   button {
     height: 35px;
   }
@@ -1020,5 +1034,17 @@ h6 {
   .p-xs-1 {
     padding-left: 0.33rem;
     padding-right: 0.33rem;
+  }
+}
+
+
+.previewViaModal{
+  .modal-dialog{
+    width: 100%;
+    max-width: 558px;
+    .modal-content{
+      border-radius: 0;
+      background-color: $gray-18;
+    }
   }
 }

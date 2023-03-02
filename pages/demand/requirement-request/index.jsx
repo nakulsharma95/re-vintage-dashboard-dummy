@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BiDownload } from 'react-icons/bi';
 import { RiShareBoxFill } from 'react-icons/ri';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
@@ -7,8 +7,14 @@ import HeaderPrimary from '../../../components/common/headerPrimary';
 import OutlineDropdown from '../../../components/common/buttons/OutlineDropdown';
 import styles from './style.module.scss';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import PreviewModal from '../../../components/modals/previewModal';
 
 function RequirementRequest() {
+  const [previewViaModal, setpreviewViaModal] = useState(false);
+
+  const previewViaToggleModal = () => {
+    setpreviewViaModal(!previewViaModal);
+  };
   return (
     <>
       <Breadcrumb title="Demand" />
@@ -18,7 +24,11 @@ function RequirementRequest() {
       </HeaderPrimary>
       <div className={styles.reqRequestMain}>
         <div className={styles.smTitle}>12 Result Found</div>
-        <DemandPrimaryTable isAction isActionTd />
+        <DemandPrimaryTable
+          isAction
+          isActionTd
+          previewHandler={previewViaToggleModal}
+        />
       </div>
       <div className="d-flex mt-4">
         <div className="me-3">
@@ -26,6 +36,12 @@ function RequirementRequest() {
         </div>
         <OutlineButton title="Import EXCEL" leftIcon={<BiDownload />} />
       </div>
+      <PreviewModal
+        isPreviewModal
+        title="Preview Link"
+        isOpen={previewViaModal}
+        handleClose={previewViaToggleModal}
+      />
     </>
   );
 }
