@@ -18,7 +18,7 @@
 
   .motorcycleName {
     color: $white;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 600;
     margin-bottom: 0.5rem;
 
@@ -93,18 +93,23 @@
 
 .bikeDetailLocation {
   margin-bottom: 20px;
+  font-size: 12px;
 
   span {
     font-size: 12px;
     color: $gray-cb;
+    font-size: 500;
   }
 }
 
 .bikeRupeeIcon {
-  font-size: 24px;
+  font-size: 20px;
   display: inline-block;
   margin-right: 5px;
   color: $gray-cb;
+  position: relative;
+  top: 0.6rem;
+  left: 0.3rem;
 }
 
 

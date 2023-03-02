@@ -91,7 +91,9 @@ function DemandPrimaryTable(props) {
                         <MdOutlineClose />
                       </span>
                       <Dropdown.Item href="#">Send to Customer</Dropdown.Item>
-                      <Dropdown.Item href="#">Preview Link</Dropdown.Item>
+                      <Dropdown.Item href="#" onClick={props.previewHandler}>
+                        Preview Link
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
                 </div>
