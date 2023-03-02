@@ -21,6 +21,9 @@
 .detailCard {
   background-color: $gray-28;
   border-radius: 5px;
+  @include mobile{
+    margin-bottom: 25px;
+  }
 }
 
 .borderStyles {

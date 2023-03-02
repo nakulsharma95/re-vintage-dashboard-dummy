@@ -39,7 +39,7 @@ function MotorcycleDetail(props) {
         )}
         {props.detailLocation && (
           <div className={styles.bikeDetailLocation}>
-            <span>Loacation:</span> {props.bikeLocation}
+            <span>Location:</span> {props.bikeLocation}
           </div>
         )}
 
@@ -218,7 +218,7 @@ function MotorcycleDetail(props) {
       {props.isSellerBidDetail && (
         <div className={styles.sellerDetailPrice}>
           <div className={styles.priceCols}>
-            <div className={styles.title}>Base Price: </div> <BiRupee />{' '}
+            <div className={styles.title}>Base Price: </div> <BiRupee />
             1,25,000.00
           </div>
           <div className={styles.sellerIdCols}>

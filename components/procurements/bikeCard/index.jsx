@@ -59,7 +59,7 @@ function BikeCard(props) {
           <div className={styles.estimatedPrice}>
             <h5 className={styles.pricetitle}>{props.smPriceTitle}</h5>
             <div className={styles.estPrice}>
-              <BiRupee size={21} /> {props.price} - <BiRupee size={21} />{' '}
+              <BiRupee size={21} /> {props.price} - <BiRupee size={21} />
               {props.priceTwo}
             </div>
           </div>
