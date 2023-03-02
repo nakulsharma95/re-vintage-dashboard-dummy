@@ -960,12 +960,11 @@ h6 {
   display: flex;
   justify-content: end;
   background-color: $gray-28;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   padding: 10px;
   z-index: 9;
-  width: calc(100vw - 335px);
-
+  width: calc(100vw - 335px);  
   button {
     height: 35px;
   }
@@ -1014,5 +1013,12 @@ h6 {
     margin-top: -115px;
     z-index: 1;
     bottom: 0;
+  }
+}
+
+@include mobile {
+  .p-xs-1 {
+    padding-left: 0.33rem;
+    padding-right: 0.33rem;
   }
 }

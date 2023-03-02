@@ -11,8 +11,10 @@ import FilterButton from '../../components/common/filterButton';
 import EmptyState from '../../components/emptyState';
 import MobileDealerCard from '../../components/dealer-management/mobileDealerCard';
 import styles from './style.module.scss';
+import useMediaQuery from '../../components/common/useMedia';
 
 function DealerManagement() {
+  const isSmallScreen = useMediaQuery(767);
   const mobileDealerCard = [
     {
       title: 'Neel Motors',
@@ -57,18 +59,18 @@ function DealerManagement() {
         <FilterButton />
       </HeaderPrimary>
 
-      {mobileDealerCard.map((item) => (
+      {isSmallScreen ? (
         <div className={styles.mobileDealerCard}>
-          <MobileDealerCard
-            title={item.title}
-            location={item.location}
-            mobile={item.mobile}
-            email={item.email}
-          />
+          {mobileDealerCard.map((item) => (
+            <MobileDealerCard
+              title={item.title}
+              location={item.location}
+              mobile={item.mobile}
+              email={item.email}
+            />
+          ))}
         </div>
-      ))}
-
-      <div className="d-none d-lg-block">
+      ) : (
         <div className="custom-tab-style">
           <Tabs
             className="mb-3"
@@ -93,7 +95,7 @@ function DealerManagement() {
             </Tab>
           </Tabs>
         </div>
-      </div>
+      )}
     </div>
   );
 }
