@@ -9,26 +9,28 @@
 // test: Adding missing tests or correcting existing tests
 // ui: UI related changes that does not affect functionality but the visual of a website
 
+const USER_ID_INDEX = 2;
+const USER_ID_INDEX_DATA = 100
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
     'body-leading-blank': [1, 'always'],
-    'body-max-line-length': [2, 'always', 100],
+    'body-max-line-length': [USER_ID_INDEX, 'always', USER_ID_INDEX_DATA],
     'footer-leading-blank': [1, 'always'],
-    'footer-max-line-length': [2, 'always', 100],
-    'header-max-length': [2, 'always', 100],
-    'scope-case': [2, 'always', 'lower-case'],
+    'footer-max-line-length': [USER_ID_INDEX, 'always', USER_ID_INDEX_DATA],
+    'header-max-length': [USER_ID_INDEX, 'always', USER_ID_INDEX_DATA],
+    'scope-case': [USER_ID_INDEX, 'always', 'lower-case'],
     'subject-case': [
-      2,
+      USER_ID_INDEX,
       'never',
       ['sentence-case', 'start-case', 'pascal-case', 'upper-case'],
     ],
-    'subject-empty': [2, 'never'],
-    'subject-full-stop': [2, 'never', '.'],
-    'type-case': [2, 'always', 'lower-case'],
-    'type-empty': [2, 'never'],
+    'subject-empty': [USER_ID_INDEX, 'never'],
+    'subject-full-stop': [USER_ID_INDEX, 'never', '.'],
+    'type-case': [USER_ID_INDEX, 'always', 'lower-case'],
+    'type-empty': [USER_ID_INDEX, 'never'],
     'type-enum': [
-      2,
+      USER_ID_INDEX,
       'always',
       [
         'build',

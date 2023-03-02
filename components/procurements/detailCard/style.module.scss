@@ -6,6 +6,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .contactUserBtn{
+    @include mobile{
+      width: 100%;
+      max-width: 175px;
+    }
+  }
 }
 
 .card-container {
@@ -15,6 +21,9 @@
 .detailCard {
   background-color: $gray-28;
   border-radius: 5px;
+  @include mobile{
+    margin-bottom: 25px;
+  }
 }
 
 .borderStyles {
@@ -83,6 +92,12 @@
 
 .detailSendForm {
   display: flex;
+  @include mobile {
+    font-size: 12px;
+    svg{
+      width:10px;
+    }
+  }
 
   span {
     font-size: 12px;
@@ -137,6 +152,12 @@
     font-size: 12px;
     color: $gray-F3;
     margin-bottom: 8px;
+  }
+  .contactUserBtn{
+    @include mobile{
+      width: 100%;
+      max-width: 100px;
+    }
   }
   .userFlex{
     display: flex;

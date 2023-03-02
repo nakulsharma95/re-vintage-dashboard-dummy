@@ -15,6 +15,7 @@
 	font-weight: 600;
 	text-decoration: none;
 	transition: all 0.5s;
+	border-radius: 0;
 	&:hover{
 		background-color: $theme-red-da;
 		color: $white;

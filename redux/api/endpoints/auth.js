@@ -2,6 +2,8 @@ import { setCookie } from 'cookies-next';
 import { apiSlice } from '../main';
 import { setCredentials } from '../../slices/user';
 
+const SUCCESS_STATUS_CODE = 200;
+
 export const authApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     login: builder.mutation({
@@ -13,12 +15,15 @@ export const authApiSlice = apiSlice.injectEndpoints({
       onQueryStarted: async (arg, api) => {
         try {
           const { data } = await api.queryFulfilled;
-          if ((await data?.code) !== 200) return;
+          if ((await data?.code) !== SUCCESS_STATUS_CODE) return;
           const jwtAccessToken = await data?.data?.accessToken;
           const refreshToken = await data?.data?.refreshToken;
           const guid = await data?.data?.user?.guid;
           const tokens = `${jwtAccessToken}#${refreshToken}#${guid}`;
-          setCookie(process.env.NEXT_PUBLIC_COOKIE_NAME, btoa(tokens));
+          setCookie(
+            process.env.NEXT_PUBLIC_COOKIE_NAME,
+            Buffer.from(tokens, 'utf-8').toString('base64')
+          );
           api.dispatch(
             setCredentials({
               accessToken: jwtAccessToken,

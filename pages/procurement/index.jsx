@@ -192,7 +192,7 @@ function Procurement() {
       />
       <Row>
         {cardData.map((item) => (
-          <Col xl={4} md={6}>
+          <Col xl={4}>
             <DetailCard
               isContactBtn
               isCardFooter
@@ -216,7 +216,7 @@ function Procurement() {
       />
       <Row>
         {evaluationData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <BikeCard
               className="bg-gray-3 py-2"
               isKmData
@@ -245,7 +245,7 @@ function Procurement() {
       />
       <Row>
         {schedulednData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <BikeCard
               className="py-2"
               isKmData
@@ -274,7 +274,7 @@ function Procurement() {
       />
       <Row>
         {completedData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <BikeCard
               className="bg-gray-3 py-2 bg-transparent mb-0 pb-0"
               isKmData

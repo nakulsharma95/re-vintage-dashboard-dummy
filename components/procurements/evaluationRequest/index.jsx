@@ -87,7 +87,7 @@ function EvaluationRequestDetailCard(props) {
                 </Col>
               </Row>
             </Col>
-            <Col md={7} className="ps-5">
+            <Col md={7} className={styles.cardBodyBorderRight}>
               <h2 className={styles.bikeCardBodyTitle}>Evaluation Details</h2>
               <Row className="mb-3">
                 <Col>

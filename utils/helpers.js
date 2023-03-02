@@ -53,9 +53,8 @@ export const getPath = () => {
  */
 
 export const insertSpaces = (string) => {
-  let newString = string.replace(/([a-z])([A-Z])/g, '$1 $2');
-  newString = newString.replace(/([A-Z])([A-Z][a-z])/g, '$1 $2');
-  return newString;
+  const newString = string.replace(/([a-z])([A-Z])/g, '$1 $2');
+  return newString.replace(/([A-Z])([A-Z][a-z])/g, '$1 $2');
 };
 
 /**
