@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { timerHelper } from '~/utils/helpers';
-import { useGetDateQuery } from '~/redux/api/endpoints/biddingTimer';
+import { timerHelper } from '../../../utils/helpers';
+import { useGetDateQuery } from '../../../redux/api/endpoints/biddingTimer';
 import styles from './style.module.scss';
 
 export default function BiddingTimer(props) {
