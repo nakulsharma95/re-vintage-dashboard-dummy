@@ -8,21 +8,21 @@ import ReportAccordian from '../../components/report/reportAccordian';
 
 function Report() {
   return (
-	<div>
-		 <Breadcrumb title="Feedbacks" />
-		 <HeaderPrimary
+    <div>
+      <Breadcrumb title="Feedbacks" />
+      <HeaderPrimary
         headerClass="mb-2"
         title="Feedbacks"
         subTitle="Here you’ll find the feedbacks from the customers."
       >
         <SearchPrimary placeholder="Search feedbacks" />
-		<FilterButton />
+        <FilterButton />
       </HeaderPrimary>
-	  <hr/>
-	  <DealFilter title="4 feedbacks found" />
-	  <ReportAccordian/>
-	</div>
-  )
+      <hr />
+      <DealFilter title="4 feedbacks found" />
+      <ReportAccordian />
+    </div>
+  );
 }
 
-export default Report
+export default Report;
