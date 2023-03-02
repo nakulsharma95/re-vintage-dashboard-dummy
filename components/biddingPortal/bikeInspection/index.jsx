@@ -171,18 +171,17 @@ export default function BikeInspection(props) {
       <div className="mt-3">
         {props.outlineButton && (
           <OutlineButton
-          leftIcon={<BiDownload />}
-          title="Download Report"
-          className="theme1"
-        />
+            leftIcon={<BiDownload />}
+            title="Download Report"
+            className="theme1"
+          />
         )}
-        {props.noOutlineBtn &&(
+        {props.noOutlineBtn && (
           <button className={styles.noOutlineBtn}>
-       <IoMdDownload className={styles.noOutlineIcon}/>Download Insp. Report
-       </button>
+            <IoMdDownload className={styles.noOutlineIcon} />
+            Download Insp. Report
+          </button>
         )}
-       
-        
       </div>
     </div>
   );
