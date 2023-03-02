@@ -1,9 +1,9 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
 import Rating from '@mui/material/Rating';
-// import img from "../../../public"
 
 import styles from './style.module.scss';
+import Image from 'next/image';
 
 function ReportAccordian() {
   return (
@@ -13,7 +13,7 @@ function ReportAccordian() {
           <Accordion.Header>
             <div className={styles.accordianHead}>
               <div className="d-flex align-items-center my-2 ">
-                <img
+                <Image
                   className={styles.profileIcon}
                   src="/images/profile.png"
                   alt="profil-img"
@@ -42,7 +42,7 @@ function ReportAccordian() {
           <Accordion.Header>
             <div className={styles.accordianHead}>
               <div className="d-flex align-items-center my-2 ">
-                <img
+                <Image
                   className={styles.profileIcon}
                   src="/images/profile-2.png"
                   alt="profil-img"
@@ -69,7 +69,7 @@ function ReportAccordian() {
           <Accordion.Header>
             <div className={styles.accordianHead}>
               <div className="d-flex align-items-center my-2 ">
-                <img
+                <Image
                   className={styles.profileIcon}
                   src="/images/profile-3.png"
                   alt="profil-img"
@@ -98,7 +98,7 @@ function ReportAccordian() {
           <Accordion.Header>
             <div className={styles.accordianHead}>
               <div className="d-flex align-items-center my-2 ">
-                <img
+                <Image
                   className={styles.profileIcon}
                   src="/images/profile-4.png"
                   alt="profil-img"
@@ -127,7 +127,7 @@ function ReportAccordian() {
           <Accordion.Header>
             <div className={styles.accordianHead}>
               <div className="d-flex align-items-center my-2 ">
-                <img
+                <Image
                   className={styles.profileIcon}
                   src="/images/profile-5.png"
                   alt="profil-img"
