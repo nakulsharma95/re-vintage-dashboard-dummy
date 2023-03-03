@@ -35,9 +35,9 @@ function PaymentsPending() {
         <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
-      <div className="mb-4 mt-4">
-        <SortTabs selectAllCheck sortTabTitle="3 Leads" />
-      </div>
+      <div className="bottom-white-border mt-3 mb-3" />
+
+      <SortTabs selectAllCheck sortTabTitle="3 Leads" />
 
       <Row>
         {cardData.map((item) => (

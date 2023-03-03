@@ -132,7 +132,7 @@ function BikeCardRadio({
 
           {isButtonVisible && (
             <div className={styles.creBtnBox}>
-              <Button variant="primary" className={styles.downloadBtn}>
+              <Button variant="primary w-full" className={styles.downloadBtn}>
                 VIEW
               </Button>
               <ArrowButton detailLink="" title="APPROVE" buttonStyle="w-full" />
