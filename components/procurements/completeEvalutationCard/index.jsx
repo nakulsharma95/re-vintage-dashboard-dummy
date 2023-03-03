@@ -43,7 +43,7 @@ function CompleteBikeDetail({
             <BikeSlider isSlider={isSlider} />
           </Col>
           {completeData.map((item) => (
-            <Col className="mb-4" xxl={4} xl={6} lg={6}>
+            <Col className="" xxl={4} xl={6} lg={6}>
               <MotorcycleDetail
                 headBikeDetail
                 bikeInfo

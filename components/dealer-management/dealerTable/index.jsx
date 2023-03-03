@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
+import { AiOutlineInfoCircle } from 'react-icons/ai';
 import CancelModal from '../../modals/cancelModal';
 
 import style from './style.module.scss';
@@ -276,6 +277,7 @@ function DealerTable() {
       <CancelModal
         isOpen={cancelModal}
         handleClose={cancelToggleModal}
+        icon={<AiOutlineInfoCircle size={48} color="#DA291C" />}
         title="Are you sure you want to disable the dealer from the Portal?"
         handleYes={rescheduleToggleModal}
       />
