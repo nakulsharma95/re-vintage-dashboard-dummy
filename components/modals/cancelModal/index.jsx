@@ -31,7 +31,7 @@ function CancelModal(props) {
             />
           )}
           {props.icon && <div>{props.icon}</div>}
-          <h4 className={styles.cancelModalTitle}>{props.title}</h4>
+          <h4 className={styles.cancelModalTitle}>{props.title}<span>{props.titleBold}</span>  </h4>
         </div>
 
         <div className={styles.cancelModalFooter}>

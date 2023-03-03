@@ -173,7 +173,7 @@ function DealerTable() {
                 className={style.tableCheckbox}
                 type="checkbox"
                 label="Enabled"
-              />{' '}
+              />
             </td>
           </tr>
           <tr>
@@ -195,7 +195,7 @@ function DealerTable() {
                 className={style.tableCheckbox}
                 type="checkbox"
                 label="Enabled"
-              />{' '}
+              />
             </td>
           </tr>
           <tr>
@@ -221,7 +221,7 @@ function DealerTable() {
                 label="Enabled"
                 checked
                 onClick={cancelToggleModal}
-              />{' '}
+              />
             </td>
           </tr>
           <tr>
@@ -278,7 +278,8 @@ function DealerTable() {
         isOpen={cancelModal}
         handleClose={cancelToggleModal}
         icon={<AiOutlineInfoCircle size={48} color="#DA291C" />}
-        title="Are you sure you want to disable the dealer from the Portal?"
+        title="Are you sure you want to disable the dealer  from the"
+        titleBold=" Portal ?"
         handleYes={rescheduleToggleModal}
       />
     </div>
