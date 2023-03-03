@@ -39,15 +39,27 @@ function CreManagement() {
   const performanceCardData = [
     {
       cardBodyBg: 'bgGray18',
+      title: 'Procurement Lead Management',
+      totalNumber: '93/124',
+      achievedScore: '75%',
     },
     {
       cardBodyBg: 'bgGray28',
+      title: 'Bidding / First Offer',
+      totalNumber: '90/93',
+      achievedScore: '97%',
     },
     {
       cardBodyBg: 'bgblack40',
+      title: 'Deal Closure',
+      totalNumber: '72/90',
+      achievedScore: '80%',
     },
     {
       cardBodyBg: 'bgGray18',
+      title: 'General Query Response',
+      totalNumber: '57/80',
+      achievedScore: '80%',
     },
   ];
 
@@ -68,7 +80,7 @@ function CreManagement() {
         />
 
         <Link href="cre-management/add-cre" className="addMotorBtn">
-          <FiPlus /> Add Motorcycle
+          <FiPlus /> Add CRE
         </Link>
       </HeaderPrimary>
 
@@ -94,19 +106,18 @@ function CreManagement() {
           <Row>
             {performanceCardData.map((item) => (
               <Col xxl={3} lg={6} md={6}>
-                <CrePerformanceCard cardBodyStyle={item.cardBodyBg} />
+                <CrePerformanceCard
+                  cardBodyStyle={item.cardBodyBg}
+                  title={item.title}
+                  totalNumber={item.totalNumber}
+                  achievedScore={item.achievedScore}
+                />
               </Col>
             ))}
           </Row>
         </div>
         <Col xxl={12} lg={12} md={12}>
-          <CrePerformanceMatrix
-            title1="Procurement Lead Management"
-            title2="Bidding / First Offer"
-            title3="Deal Closure"
-            title4="General Query Response"
-            creTitle="Cumulative CRE Performance Matrix"
-          />
+          <CrePerformanceMatrix creTitle="Cumulative CRE Performance Matrix" />
         </Col>
       </Row>
     </>

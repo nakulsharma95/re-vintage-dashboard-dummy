@@ -39,6 +39,8 @@ function CrePerformanceDetails() {
         <div className="mb-2 mt-2">Performance</div>
         <Col xxl={12} lg={12} md={12}>
           <CrePerformanceMatrix creTitle="CRE Performance Matrix" />
+        </Col>
+        <Col xxl={12} lg={12} md={12}>
           <CreMonthPerformace performanceTitle="Monthly Performance" />
         </Col>
       </Row>

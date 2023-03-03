@@ -1,9 +1,8 @@
 import React from 'react';
 import { Card, Col, Image, Row } from 'react-bootstrap';
 import { BiRupee } from 'react-icons/bi';
-import Link from 'next/link';
 import styles from './style.module.scss';
-import ButtonPrimary from '../../common/buttons/ButtonPrimary';
+import ArrowButton from '../../common/buttons/ArrowButton';
 
 function BikeCard(props) {
   const { data } = props;
@@ -70,12 +69,12 @@ function BikeCard(props) {
         </div>
         {props.isEstBtn && (
           <div className={styles.smailBtn}>
-            <Link href="/">CONTACT SAMIL</Link>
+            <ArrowButton title="CONTACT SAMIL" />
           </div>
         )}
         {props.isViewBtn && (
           <div className={styles.cardBtnCols}>
-            <ButtonPrimary title="VIEW DETAIL" />
+            <ArrowButton title="VIEW DETAIL" />
           </div>
         )}
       </Card.Body>

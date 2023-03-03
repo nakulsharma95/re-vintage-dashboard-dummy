@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
-import Image from 'next/image';
 import React from 'react';
+import Image from 'next/image';
 import { Accordion } from 'react-bootstrap';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import Rating from 'react-rating';

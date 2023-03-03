@@ -135,9 +135,6 @@ export default function CrePerformanceMatrix(props) {
         <Tab eventKey="title4" title="General Query Response">
           <h4>Not Found</h4>
         </Tab>
-        <Tab eventKey="title5" title="General Query Response">
-          <h4>Not Found</h4>
-        </Tab>
       </Tabs>
     </Card>
   );

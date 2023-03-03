@@ -9,6 +9,7 @@ export const apiSlice = createApi({
       const token = atob(
         localStorage.getItem(process.env.NEXT_PUBLIC_COOKIE_NAME)
       )?.split('#')?.[0];
+
       if (token) {
         headers.set('authorization', `Bearer ${token}`);
       }

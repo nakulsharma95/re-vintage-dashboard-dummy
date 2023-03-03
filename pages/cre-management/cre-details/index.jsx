@@ -93,8 +93,12 @@ function CreDetails() {
                 <Col xxl={6} xl={6} lg={6} md={12}>
                   <CreAddressDetailCard
                     cardHeading="Address Details"
-                    currentAddress="1236/2 D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi Delhi - 110066"
-                    permanentAddress="1236/2 D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi, Delhi - 110066"
+                    currentHouseNumber="1236/2"
+                    currentAddress="D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi"
+                    currentPincode="Delhi - 110066"
+                    permanentHouseNumber="1236/2"
+                    permanentAddress="D-Block, West Guru Angad Nagar, Laxmi Nagar, New Delhi"
+                    permanentPincode="Delhi - 110066"
                   />
                 </Col>
               </Row>
@@ -117,7 +121,8 @@ function CreDetails() {
             <div className="cre-heading mb-2 mt-2">Performance</div>
             <Col xxl={12} lg={12} md={12}>
               <CrePerformanceMatrix creTitle="CRE Performance Matrix" />
-
+            </Col>
+            <Col xxl={12} lg={12} md={12}>
               <CreMonthPerformace performanceTitle="Monthly Performance" />
             </Col>
           </Tab>

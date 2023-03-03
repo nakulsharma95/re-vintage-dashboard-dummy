@@ -12,6 +12,8 @@ import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
 import ButtonPrimary from '../../../components/common/buttons/ButtonPrimary';
 import SortTabs from '../../../components/common/sortTabs';
+import EmptyState from '../../../components/emptyState';
+
 // Style here
 import styles from './style.module.scss';
 
@@ -89,11 +91,8 @@ export default function UpcomingBids() {
             </Dropdown.Menu>
           </Dropdown>
         </div>
-        <OutlineButton
-          title="Scheduled Evaluation"
-          rightIcon={<RiShareBoxFill />}
-        />
-        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
+        <OutlineButton title="Esport Data" rightIcon={<RiShareBoxFill />} />
+        <SearchPrimary placeholder="Search Model, State, Registration No." />
         <FilterButton />
       </HeaderPrimary>
 
@@ -125,7 +124,12 @@ export default function UpcomingBids() {
             </Row>
             <DetailPagination className="mt-3" />
           </Tab>
-          <Tab eventKey="title2" title="Next Bidding (31 Dec)" />
+          <Tab eventKey="title2" title="Next Bidding (31 Dec)">
+            <EmptyState
+              title="No Result Found!"
+              description="we couldn find what you searched for try something again."
+            />
+          </Tab>
         </Tabs>
       </div>
     </div>
