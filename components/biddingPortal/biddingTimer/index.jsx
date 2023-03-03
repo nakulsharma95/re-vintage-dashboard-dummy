@@ -6,13 +6,15 @@ import styles from './style.module.scss';
 export default function BiddingTimer(props) {
   const biddingNotStartedText = 'bidding will Active in';
   const biddingStartedText = 'bidding is Active Now!';
-  const { data, isSuccess } = useGetDateQuery();
+  const [isRefetchQuery, setIsRefetchQuery] = useState(false);
+
+  const { data, isSuccess } = useGetDateQuery({ isRefetchQuery });
 
   const [timer, setTimer] = useState({ text: '', time: '' });
 
   const day = 60 * 60 * 24 * 1000;
 
-  const remainingTime = (startDate, endDate) => {
+  const returnBiddingStatus = (startDate, endDate) => {
     if (endDate < 0)
       return { time: startDate + day, text: biddingNotStartedText };
     return startDate > 0
@@ -31,17 +33,15 @@ export default function BiddingTimer(props) {
     const biddingActualEndTime =
       biddingEndTime.setHours(props.biddingEndTime, 0, 0, 0) - currentDate;
 
-    const biddingStatus = remainingTime(
+    const biddingStatus = returnBiddingStatus(
       biddingActualStartTime,
       biddingActualEndTime
     );
     currentDate = Number(currentDate) + 1000;
 
-    const countDownTime = biddingStatus.time;
-
     setTimer({
       text: biddingStatus.text,
-      time: timerHelper(countDownTime),
+      time: timerHelper(biddingStatus.time),
     });
   }
   useEffect(() => {
@@ -50,10 +50,20 @@ export default function BiddingTimer(props) {
       biddingTimer = setInterval(runFunction, 1000);
     }
 
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        if (isSuccess) {
+          setIsRefetchQuery(!isRefetchQuery);
+        }
+      }
+    });
+
     return () => {
       clearInterval(biddingTimer);
+      document.removeEventListener('visibilitychange', () => {});
     };
-  }, [isSuccess]);
+  }, [data]);
+
   return (
     <div className={styles.biddingTimer}>
       {timer.text}

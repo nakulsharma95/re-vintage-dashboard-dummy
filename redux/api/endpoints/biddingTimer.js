@@ -1,12 +1,11 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { apiSlice } from '../main';
 
-const getDateApi = createApi({
-  reducerPath: 'getDateApi',
-  refetchOnMountOrArgChange: true,
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://api-dev2.royalenfield.com' }),
+const getDateApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getDate: builder.query({
-      query: () => '/v3/core/bikes/get-date',
+      query: () => ({
+        url: '/v3/core/bikes/get-date',
+      }),
     }),
   }),
 });
