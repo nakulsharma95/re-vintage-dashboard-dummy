@@ -4,14 +4,15 @@ import { useGetDateQuery } from '../../../redux/api/endpoints/biddingTimer';
 import styles from './style.module.scss';
 
 export default function BiddingTimer(props) {
-  const biddingNotStartedText = 'bidding will Active in';
-  const biddingStartedText = 'bidding is Active Now!';
   const [isRefetchQuery, setIsRefetchQuery] = useState(false);
-
+  const [timer, setTimer] = useState({ text: '', time: '' });
   const { data, isSuccess } = useGetDateQuery({ isRefetchQuery });
 
-  const [timer, setTimer] = useState({ text: '', time: '' });
-
+  const biddingNotStartedText = 'Bidding will Active in';
+  const biddingStartedText = 'Bidding is Active Now!';
+  let currentDate = new Date(data?.data);
+  const biddingStartingTime = new Date(data?.data);
+  const biddingEndTime = new Date(data?.data);
   const day = 60 * 60 * 24 * 1000;
 
   const returnBiddingStatus = (startDate, endDate) => {
@@ -22,9 +23,6 @@ export default function BiddingTimer(props) {
       : { time: endDate, text: biddingStartedText };
   };
 
-  let currentDate = new Date(data?.data);
-  const biddingStartingTime = new Date(data?.data);
-  const biddingEndTime = new Date(data?.data);
 
   function runFunction() {
     const biddingActualStartTime =
