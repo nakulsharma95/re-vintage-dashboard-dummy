@@ -23,7 +23,7 @@ function DealCheckCard(props) {
       )}
       <Card.Body className="px-0">
         <Card.Title className={styles.bkeName}>
-          2015 Classic 350 <span>- DL 6T AL 7314</span>
+          2015 Classic 350 <span>- DL6TAL7314</span>
         </Card.Title>
         <Row className={`${styles.bidPrice} mx-0`}>
           {props.acceptPrice ? (
