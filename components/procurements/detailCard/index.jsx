@@ -21,20 +21,23 @@ export default function DetailCard(props) {
             className={`${styles.headerDetail} ${styles.detailsDivide} p-0 border-0 `}
           >
             <h2 className="text-white mb-0">
-              Details
+              Details <small>-</small>
+              {props.isDateTime && (
+                <span className={styles.smTitle}> {props.dateTime}</span>
+              )}
               <span className="text-white-50"> {props.detailNumber}</span>
             </h2>
-            <div
-              className={`${styles.detailDrop} ${styles.detailsDivide} border-0 shadow-none text-white  gap-1 }`}
-            >
-              <AiOutlineClose size={18} />
-              <span className="mb-0">Drop Lead</span>
-            </div>
+            {props.isDropbtn && (
+              <div
+                className={`${styles.detailDrop} ${styles.detailsDivide} border-0 shadow-none text-white  gap-1 }`}
+              >
+                <AiOutlineClose size={18} />
+                <span className="mb-0">Drop Lead</span>
+              </div>
+            )}
           </div>
           <div className="mt-2">
-            <div
-              className={`${styles.borderStyles} ${styles.detailsDivide}   pb-2`}
-            >
+            <div className={`${styles.borderStyles} ${styles.detailsDivide}`}>
               <div className={`${styles.detailName}`}>
                 <span className="text-white-50">Owner Name</span>
                 <p className="mb-0 text-white ">{props.ownerName}</p>
@@ -44,9 +47,7 @@ export default function DetailCard(props) {
                 <p className="mb-0 text-white ">{props.contactNo}</p>
               </div>
             </div>
-            <div
-              className={`${styles.borderStyles} ${styles.detailsDivide}  pb-2 mt-1`}
-            >
+            <div className={`${styles.borderStyles} ${styles.detailsDivide}`}>
               <div className={`${styles.detailEmail}`}>
                 <span className="text-white-50">Email</span>
                 <p className="mb-0 text-white ">{props.emailId}</p>
@@ -57,9 +58,7 @@ export default function DetailCard(props) {
               </div>
             </div>
             {props.isReason && (
-              <div
-                className={`${styles.borderStyles} ${styles.detailsDivide}  pb-2 mt-1`}
-              >
+              <div className={`${styles.borderStyles} ${styles.detailsDivide}`}>
                 <div className={`${styles.detailEmail}`}>
                   <span className="text-white-50">Reason</span>
                   <p className="mb-0 text-white ">{props.reason}</p>
@@ -67,7 +66,7 @@ export default function DetailCard(props) {
               </div>
             )}
             {props.isContactBtn && (
-              <div className={`${styles.detailsDivide} py-2 `}>
+              <div className={`${styles.detailsDivide} py-3 pb-1`}>
                 <div className={styles.contactUserBtn}>
                   <ArrowButton
                     onClick={props.detailHandler}
@@ -87,7 +86,7 @@ export default function DetailCard(props) {
               </div>
             )}
             {props.isDropLead && (
-              <div className={`${styles.detailsDivide} py-2 `}>
+              <div className={`${styles.detailsDivide} py-3 pb-0`}>
                 <div className={`${styles.detailSendForm} text-white`}>
                   <MdOutlineClose className="mx-1" size={16} />
                   <span>Drop Lead</span>

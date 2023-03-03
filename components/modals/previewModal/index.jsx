@@ -9,6 +9,7 @@ import { MdOutlineArrowForwardIos } from 'react-icons/md';
 import OutlineButton from '../../common/buttons/OutlineButton';
 import FileUploader from '../../common/fileUploader';
 import styles from './style.module.scss';
+import ArrowButton from '../../common/buttons/ArrowButton';
 
 function PreviewModal(props) {
   return (
@@ -60,19 +61,19 @@ function PreviewModal(props) {
               </Form.Group>
               <Form.Group className="mb-4" controlId="formBasicEmail">
                 <Form.Label>Download Layout</Form.Label>
-                <OutlineButton
-                  title="Download Layout"
-                  leftIcon={<BiDownload />}
-                />
+                <div className={styles.downloadBtn}>
+                  <OutlineButton
+                    title="Download Layout"
+                    leftIcon={<BiDownload />}
+                  />
+                </div>
               </Form.Group>
               <Form.Group className="mb-5" controlId="formBasicEmail">
                 <Form.Label>Upload Excel</Form.Label>
                 <FileUploader />
               </Form.Group>
-              <div className={styles.sbBtn}>
-                <Button variant="">
-                  Submit <MdOutlineArrowForwardIos />
-                </Button>
+              <div className={styles.btnCols}>
+                <ArrowButton title="SUBMIT" />
               </div>
             </Form>
           </div>

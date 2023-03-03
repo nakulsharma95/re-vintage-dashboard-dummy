@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
+import { AiOutlineInfoCircle } from 'react-icons/ai';
 import CancelModal from '../../modals/cancelModal';
 
 import style from './style.module.scss';
@@ -172,7 +173,7 @@ function DealerTable() {
                 className={style.tableCheckbox}
                 type="checkbox"
                 label="Enabled"
-              />{' '}
+              />
             </td>
           </tr>
           <tr>
@@ -194,7 +195,7 @@ function DealerTable() {
                 className={style.tableCheckbox}
                 type="checkbox"
                 label="Enabled"
-              />{' '}
+              />
             </td>
           </tr>
           <tr>
@@ -220,7 +221,7 @@ function DealerTable() {
                 label="Enabled"
                 checked
                 onClick={cancelToggleModal}
-              />{' '}
+              />
             </td>
           </tr>
           <tr>
@@ -276,7 +277,9 @@ function DealerTable() {
       <CancelModal
         isOpen={cancelModal}
         handleClose={cancelToggleModal}
-        title="Are you sure you want to disable the dealer from the Portal?"
+        icon={<AiOutlineInfoCircle size={48} color="#DA291C" />}
+        title="Are you sure you want to disable the dealer  from the"
+        titleBold=" Portal ?"
         handleYes={rescheduleToggleModal}
       />
     </div>
