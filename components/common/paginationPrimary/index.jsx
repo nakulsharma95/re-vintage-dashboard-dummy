@@ -15,7 +15,7 @@ function DetailPagination() {
   }
   return (
     <div className={`${styles.paginationMain} custom-paginationMain`}>
-      <Row className="align-items-center">
+      <Row className="align-items-center mobFlexPagination">
         <Col className={styles.detailPaginationTitle} xl={4} lg={4} md={12}>
           <h3 className="mb-0">Page 2 of 4</h3>
         </Col>
@@ -27,8 +27,9 @@ function DetailPagination() {
                 variant="primary"
                 className={styles.detailPagePrevNextBtn}
               >
-                <BsChevronLeft className={`${styles.paginationArrow} me-2`} />
-                Previous
+                <BsChevronLeft className={`${styles.paginationArrow} me-1`} />
+                <span className={styles.desktopTitle}>Previous</span>
+                <span className={styles.mobileTitle}>Prev</span>
               </Button>
             </div>
             <Pagination
@@ -43,7 +44,7 @@ function DetailPagination() {
                 className={styles.detailPagePrevNextBtn}
               >
                 Next
-                <BsChevronRight className={`${styles.paginationArrow} ms-2`} />
+                <BsChevronRight className={`${styles.paginationArrow} ms-1`} />
               </Button>
             </div>
           </div>

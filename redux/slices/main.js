@@ -41,6 +41,4 @@ export const mainSlice = createSlice({
   },
 });
 
-// export const {} = mainSlice.actions;
-
 export default mainSlice.reducer;

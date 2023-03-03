@@ -5,7 +5,6 @@ const PAYMENT_REQUIRED_STATUS_CODE = 402;
 const SUCCESS_STATUS_CODE = 200;
 const USER_ID_INDEX = 2;
 
-
 async function verifyToken(token, successResponse, failureResponse) {
   const verifyResponse = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/v3/auth/dashboard/verify-token`,
@@ -20,7 +19,10 @@ async function verifyToken(token, successResponse, failureResponse) {
   if (res?.code === SUCCESS_STATUS_CODE) {
     return { isAuthenticated: true, successResponse };
   }
-  if (res?.code === UNAUTHORIZED_STATUS_CODE || res?.code === PAYMENT_REQUIRED_STATUS_CODE ) {
+  if (
+    res?.code === UNAUTHORIZED_STATUS_CODE ||
+    res?.code === PAYMENT_REQUIRED_STATUS_CODE
+  ) {
     const splitToken = token?.split('#');
     const generateResponse = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/v3/auth/dashboard/generate-token`,
@@ -54,7 +56,7 @@ async function verifyToken(token, successResponse, failureResponse) {
 }
 // demo/sprint-1
 
- const authenticateUser = async (req) => {
+const authenticateUser = async (req) => {
   const failureResponse = NextResponse.redirect(new URL('/login', req.url));
   const successResponse = NextResponse.redirect(new URL('/homepage', req.url));
 
@@ -65,14 +67,17 @@ async function verifyToken(token, successResponse, failureResponse) {
   }
   failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME);
   return { isAuthenticated: false, failureResponse }; // return false if token is not verified
-}
+};
 
 export const middleware = async (request) => {
   const { pathname } = request.nextUrl;
-  // /\.(.*)$/
-  if (pathname.match(/\.[a-zA-Z0-9-]+$/)) return; // prevent middleware running on public files
+  if (pathname.match(/\.[a-zA-Z0-9-]+$/)) {
+    return NextResponse.next(); // prevent middleware running on public files
+  }
+
   const isPath = pathname === '/login' || pathname.includes('/sign-up');
-  const { isAuthenticated, successResponse, failureResponse } = await authenticateUser(request);
+  const { isAuthenticated, successResponse, failureResponse } =
+    await authenticateUser(request);
 
   if (isPath && isAuthenticated) {
     return successResponse;
@@ -83,10 +88,8 @@ export const middleware = async (request) => {
   }
 
   return NextResponse.next();
-}
-
+};
 
 export const config = {
   matcher: ['/((?!api|_next/static|favicon.ico).*)'],
 };
-
