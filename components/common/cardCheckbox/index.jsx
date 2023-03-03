@@ -55,7 +55,9 @@ function BikeCardRadio({
           </div>
 
           {isBikeChassisVisible && (
-            <div className={`${styles.bikeChassisTag}`}>FB29FH9219HR1</div>
+            <div className={`${styles.bikeChassisTag}`}>
+              <span>FB29FH9219HR1</span>
+            </div>
           )}
         </div>
 
