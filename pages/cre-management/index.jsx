@@ -80,7 +80,7 @@ function CreManagement() {
         />
 
         <Link href="cre-management/add-cre" className="addMotorBtn">
-          <FiPlus /> Add Motorcycle
+          <FiPlus /> Add CRE
         </Link>
       </HeaderPrimary>
 

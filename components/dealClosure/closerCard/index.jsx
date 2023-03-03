@@ -1,7 +1,8 @@
 /* eslint-disable consistent-return */
 import React from 'react';
-import { Row, Col, Card, Button } from 'react-bootstrap';
+import { Row, Col, Card } from 'react-bootstrap';
 import { BiRupee } from 'react-icons/bi';
+import ArrowButton from '../../common/buttons/ArrowButton';
 import styles from './style.module.scss';
 
 function CloserBikeCard(props) {
@@ -103,10 +104,8 @@ function CloserBikeCard(props) {
             </Col>
           </Row>
         )}
-        <div className={styles.btnBox}>
-          <Button variant="primary" className={styles.bikeCardBtn}>
-            VIEW DETAILS
-          </Button>
+        <div className={styles.cardBtnCols}>
+          <ArrowButton detailLink="/bike-details" title="VIEW DETAILS" />
         </div>
       </Card.Body>
       {props.contactCSE && (

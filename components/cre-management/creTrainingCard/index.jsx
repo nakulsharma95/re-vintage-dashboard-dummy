@@ -26,8 +26,9 @@ function CreTrainingCard(props) {
                 <p>{props.completeOn}</p>
               </div>
             </Col>
-
-            <div className={styles.divider} />
+            <Col md={12}>
+              <div className="bottom-white-border mb-3" />
+            </Col>
 
             <Col xl={6} lg={6} md={6}>
               <div className={styles.TrainingCardText}>
@@ -44,7 +45,10 @@ function CreTrainingCard(props) {
                 <p>{props.completeOn}</p>
               </div>
             </Col>
-            <div className={styles.divider} />
+            <Col md={12}>
+              <div className="bottom-white-border mb-3" />
+            </Col>
+
             <Col xl={6} lg={6} md={6}>
               <div className={styles.TrainingCardText}>
                 <h3>TRAINING NAME</h3>

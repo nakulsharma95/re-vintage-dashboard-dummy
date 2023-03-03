@@ -278,7 +278,7 @@ export default function BiddingPortal() {
               highestBid
               highestBidSymbol
               bidTitle="Highest Bid"
-              arrowBtn
+              redBtn
               imageUrl={item.imageUrl}
               bikeName={item.name}
               bikeNumber={item.number}
