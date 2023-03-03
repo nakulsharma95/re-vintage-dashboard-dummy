@@ -21,7 +21,7 @@ export default function PartialLeads() {
       secSource: 'Google',
       detailNo: 'FB29FH9219HR1',
       reason: 'Customer not interested',
-      dateTime:'30 Sep, 2022 | 4:40 pm',
+      dateTime: '30 Sep, 2022 | 4:40 pm',
     },
     {
       ownerName: 'Rishab kumar',
@@ -32,7 +32,7 @@ export default function PartialLeads() {
       secSource: 'Google',
       detailNo: 'FB29FH9219HR1',
       reason: 'Customer not interested',
-      dateTime:'30 Sep, 2022 | 4:40 pm',
+      dateTime: '30 Sep, 2022 | 4:40 pm',
     },
     {
       ownerName: 'Rishab Sharma',
@@ -43,7 +43,7 @@ export default function PartialLeads() {
       secSource: 'Google',
       detailNo: 'FB29FH9219HR1',
       reason: 'Customer not interested',
-      dateTime:'30 Sep, 2022 | 4:40 pm',
+      dateTime: '30 Sep, 2022 | 4:40 pm',
     },
   ];
   return (

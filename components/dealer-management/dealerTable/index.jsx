@@ -282,7 +282,7 @@ function DealerTable() {
       >
         <h4 className={style.cancelModalTitle}>
           Are you sure you want to disable the dealer from the
-          <span className="font-weight-bold">Portal</span> ?
+          <span className="font-weight-bold"> Portal</span> ?
         </h4>
       </CancelModal>
     </div>
