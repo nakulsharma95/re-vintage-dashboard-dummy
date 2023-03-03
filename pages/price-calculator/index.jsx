@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BsPlusLg } from 'react-icons/bs';
+import { BiDownload } from 'react-icons/bi';
 import { Button, Col, Row } from 'react-bootstrap';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import styles from './style.module.scss';
@@ -8,7 +9,6 @@ import HeaderPrimary from '../../components/common/headerPrimary';
 import EvaluteForm from '../../components/priceCalculator/evaluateForm';
 import PreviewModal from '../../components/modals/previewModal';
 import OutlineButton from '../../components/common/buttons/OutlineButton';
-import { BiDownload } from 'react-icons/bi';
 
 export default function PriceCalculator() {
   const [addBikeViaModal, setaddBikeViaModal] = useState(false);

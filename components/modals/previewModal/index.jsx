@@ -9,7 +9,7 @@ import { MdOutlineArrowForwardIos } from 'react-icons/md';
 import OutlineButton from '../../common/buttons/OutlineButton';
 import FileUploader from '../../common/fileUploader';
 import styles from './style.module.scss';
-import ArrowButton from '~/components/common/buttons/ArrowButton';
+import ArrowButton from '../../common/buttons/ArrowButton';
 
 function PreviewModal(props) {
   return (

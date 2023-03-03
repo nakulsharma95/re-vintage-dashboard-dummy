@@ -37,9 +37,7 @@ export default function DetailCard(props) {
             )}
           </div>
           <div className="mt-2">
-            <div
-              className={`${styles.borderStyles} ${styles.detailsDivide}`}
-            >
+            <div className={`${styles.borderStyles} ${styles.detailsDivide}`}>
               <div className={`${styles.detailName}`}>
                 <span className="text-white-50">Owner Name</span>
                 <p className="mb-0 text-white ">{props.ownerName}</p>
@@ -49,9 +47,7 @@ export default function DetailCard(props) {
                 <p className="mb-0 text-white ">{props.contactNo}</p>
               </div>
             </div>
-            <div
-              className={`${styles.borderStyles} ${styles.detailsDivide}`}
-            >
+            <div className={`${styles.borderStyles} ${styles.detailsDivide}`}>
               <div className={`${styles.detailEmail}`}>
                 <span className="text-white-50">Email</span>
                 <p className="mb-0 text-white ">{props.emailId}</p>
@@ -62,9 +58,7 @@ export default function DetailCard(props) {
               </div>
             </div>
             {props.isReason && (
-              <div
-                className={`${styles.borderStyles} ${styles.detailsDivide}`}
-              >
+              <div className={`${styles.borderStyles} ${styles.detailsDivide}`}>
                 <div className={`${styles.detailEmail}`}>
                   <span className="text-white-50">Reason</span>
                   <p className="mb-0 text-white ">{props.reason}</p>
