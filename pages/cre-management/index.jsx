@@ -117,13 +117,7 @@ function CreManagement() {
           </Row>
         </div>
         <Col xxl={12} lg={12} md={12}>
-          <CrePerformanceMatrix
-            title1="Procurement Lead Management"
-            title2="Bidding / First Offer"
-            title3="Deal Closure"
-            title4="General Query Response"
-            creTitle="Cumulative CRE Performance Matrix"
-          />
+          <CrePerformanceMatrix creTitle="Cumulative CRE Performance Matrix" />
         </Col>
       </Row>
     </>
