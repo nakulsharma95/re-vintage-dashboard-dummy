@@ -112,7 +112,7 @@ function BiddingBikeCard(props) {
         )}
         {props.redBtn && (
           <div className={styles.cardBtnCols}>
-            <ButtonPrimary title="VIEW DETAIL" />
+            <ArrowButton detailLink="/bike-details" title="VIEW DETAILS" />
           </div>
         )}
       </Card.Body>

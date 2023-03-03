@@ -81,6 +81,8 @@
 }
 
 .detailPincode {
+  width: 100%;
+  max-width: 89px;
   span {
     font-size: 12px;
   }
@@ -137,6 +139,7 @@
 
   span {
     font-size: 12px;
+    font-weight: 500;
   }
 
   p {
