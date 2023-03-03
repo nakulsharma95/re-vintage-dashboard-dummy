@@ -1,15 +1,18 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { main } from '../../utils/instanceUrl';
 
-export const fetchData = createAsyncThunk('data/getData', async () => {
-  try {
-    const response = await main.get(`/todos`);
-    return response?.data;
-  } catch (error) {
-    // eslint-disable-next-line no-undef
-    return rejectWithValue(error.message);
+export const fetchData = createAsyncThunk(
+  'data/getData',
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await main.get(`/todos`);
+      return response?.data;
+    } catch (error) {
+      // eslint-disable-next-line no-undef
+      return rejectWithValue(error.message);
+    }
   }
-});
+);
 
 const initialState = {
   value: [],
@@ -37,7 +40,5 @@ export const mainSlice = createSlice({
       });
   },
 });
-
-// export const {} = mainSlice.actions;
 
 export default mainSlice.reducer;

@@ -13,7 +13,6 @@ main.interceptors.request.use(
       // eslint-disable-next-line no-param-reassign
       config.headers.Authorization = `Bearer ${token}`;
     }
-
     return config;
   },
 
