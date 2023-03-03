@@ -81,6 +81,7 @@ export default function ClosedBids() {
                     className="img-shadow"
                     highestBidSymbol
                     arrowBtn
+                    bidTitle="Highest Bid"
                     isClosedTitle
                     closedBid
                     imageUrl={item.imageUrl}

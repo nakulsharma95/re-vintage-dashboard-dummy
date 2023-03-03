@@ -39,15 +39,27 @@ function CreManagement() {
   const performanceCardData = [
     {
       cardBodyBg: 'bgGray18',
+      title: 'Procurement Lead Management',
+      totalNumber: '93/124',
+      achievedScore: '75%',
     },
     {
       cardBodyBg: 'bgGray28',
+      title: 'Bidding / First Offer',
+      totalNumber: '90/93',
+      achievedScore: '97%',
     },
     {
       cardBodyBg: 'bgblack40',
+      title: 'Deal Closure',
+      totalNumber: '72/90',
+      achievedScore: '80%',
     },
     {
       cardBodyBg: 'bgGray18',
+      title: 'General Query Response',
+      totalNumber: '57/80',
+      achievedScore: '80%',
     },
   ];
 
@@ -94,7 +106,12 @@ function CreManagement() {
           <Row>
             {performanceCardData.map((item) => (
               <Col xxl={3} lg={6} md={6}>
-                <CrePerformanceCard cardBodyStyle={item.cardBodyBg} />
+                <CrePerformanceCard
+                  cardBodyStyle={item.cardBodyBg}
+                  title={item.title}
+                  totalNumber={item.totalNumber}
+                  achievedScore={item.achievedScore}
+                />
               </Col>
             ))}
           </Row>

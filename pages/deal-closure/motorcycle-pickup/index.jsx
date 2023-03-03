@@ -43,7 +43,7 @@ function MotorcyclePickup() {
       <div className="custom-tab-style">
         <Tabs
           className="mb-3"
-          defaultActiveKey="title3"
+          defaultActiveKey="title1"
           id="uncontrolled-tab-example"
           tabClassName="custom-tab-nav"
         >

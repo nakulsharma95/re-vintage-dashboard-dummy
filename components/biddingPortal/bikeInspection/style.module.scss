@@ -63,6 +63,10 @@
 	font-size: 12px;
 	font-weight: 500;
 
+	&:hover{
+		background-color: transparent;
+	}
+
 	.noOutlineIcon{
 		margin-right: 0.5rem;
 		font-size: 1.2rem;
