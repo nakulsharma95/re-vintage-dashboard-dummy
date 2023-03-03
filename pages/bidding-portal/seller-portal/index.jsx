@@ -24,7 +24,7 @@ export default function ClosedBids() {
     {
       imageUrl: '/images/bikeImage2.png',
       bikeName: '2015 Classic 350',
-      bikeNumber: 'DL 6T AL 7315',
+      bikeNumber: 'DL6TAL7315',
       sellerId: 'CSFDJG548798',
       kmDrive: '48,523 KM',
       modelYear: '2020',
@@ -33,7 +33,7 @@ export default function ClosedBids() {
     {
       imageUrl: '/images/bikeImage3.png',
       bikeName: '2015 Classic 350',
-      bikeNumber: 'DL 6T AL 7316',
+      bikeNumber: 'DL6TAL7316',
       sellerId: 'CSFDJG548798',
       kmDrive: '48,523 KM',
       modelYear: '2020',
@@ -42,7 +42,7 @@ export default function ClosedBids() {
     {
       imageUrl: '/images/bikeImage4.png',
       bikeName: '2015 Classic 350',
-      bikeNumber: 'DL 6T AL 7317',
+      bikeNumber: 'DL6TAL7317',
       sellerId: 'CSFDJG548798',
       kmDrive: '48,523 KM',
       modelYear: '2020',

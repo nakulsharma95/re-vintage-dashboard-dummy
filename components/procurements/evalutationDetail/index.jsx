@@ -1,6 +1,5 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { BiDownload } from 'react-icons/bi';
 import { FiPhoneCall } from 'react-icons/fi';
 import OutlineButton from '../../common/buttons/OutlineButton';
 import ArrowButton from '../../common/buttons/ArrowButton';
@@ -31,7 +30,7 @@ function EvaluationDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
             <ArrowButton detailLink="/" title="DETAILS" />
           </div>
           <div className={styles.btnCols}>
-            <OutlineButton title="DOWNLOAD REPORT" leftIcon={<BiDownload />} />
+            <OutlineButton title="DOWNLOAD REPORT" />
           </div>
         </div>
       )}
