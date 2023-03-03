@@ -89,10 +89,7 @@ export default function UpcomingBids() {
             </Dropdown.Menu>
           </Dropdown>
         </div>
-        <OutlineButton
-          title="Esport Data"
-          rightIcon={<RiShareBoxFill />}
-        />
+        <OutlineButton title="Esport Data" rightIcon={<RiShareBoxFill />} />
         <SearchPrimary placeholder="Search Model, State, Registration No." />
         <FilterButton />
       </HeaderPrimary>
