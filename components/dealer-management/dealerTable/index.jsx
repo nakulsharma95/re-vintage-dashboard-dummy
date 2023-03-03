@@ -269,7 +269,7 @@ function DealerTable() {
                 className={style.tableCheckbox}
                 type="checkbox"
                 label="Enabled"
-              />{' '}
+              />
             </td>
           </tr>
         </tbody>
@@ -278,10 +278,13 @@ function DealerTable() {
         isOpen={cancelModal}
         handleClose={cancelToggleModal}
         icon={<AiOutlineInfoCircle size={48} color="#DA291C" />}
-        title="Are you sure you want to disable the dealer  from the"
-        titleBold=" Portal ?"
         handleYes={rescheduleToggleModal}
-      />
+      >
+        <h4 className={style.cancelModalTitle}>
+          Are you sure you want to disable the dealer from the
+          <span className="font-weight-bold"> Portal</span> ?
+        </h4>
+      </CancelModal>
     </div>
   );
 }

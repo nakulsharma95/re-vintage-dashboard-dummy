@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BsPlusLg } from 'react-icons/bs';
 import { BiDownload } from 'react-icons/bi';
 import { Button, Col, Row } from 'react-bootstrap';
+import { BiDownload } from 'react-icons/bi';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import styles from './style.module.scss';
 import PricePrimaryCard from '../../components/priceCalculator/pricePrimaryCard';
