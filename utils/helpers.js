@@ -85,3 +85,27 @@ export const errorToast = (message) => {
 export const loadingToast = (message) => {
   toast.loading(message || 'Wait! Task is in progress');
 };
+
+/**
+ * It generates a random string of characters of a specified length.
+ * @param {number} length - number - The length of the generated ID.
+ * @returns A string of random characters.
+ */
+
+export function generateId(length) {
+  let result = '';
+  const characters =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+}
+
+export const timerHelper = (time) => {
+  const formatText = (item) => String(item).padStart(2, '0');
+  const nrHours = formatText(Math.floor(time / 1000 / 60 / 60) % 24);
+  const nrMin = formatText(Math.floor(time / 1000 / 60) % 60);
+  const nrSec = formatText(Math.floor(time / 1000) % 60);
+  return `${nrHours} : ${nrMin} : ${nrSec}`;
+};
