@@ -23,7 +23,6 @@ export default function BiddingTimer(props) {
       : { time: endDate, text: biddingStartedText };
   };
 
-
   function runFunction() {
     const biddingActualStartTime =
       biddingStartingTime.setHours(props.biddingStartTime, 0, 0, 0) -
