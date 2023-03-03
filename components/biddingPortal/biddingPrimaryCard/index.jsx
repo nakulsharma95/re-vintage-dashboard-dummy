@@ -76,7 +76,7 @@ function BiddingBikeCard(props) {
             <div className={styles.priceFlex}>
               <div className={styles.closedPriceCols}>
                 <div className={styles.sbTitle}>{props.bidTitle}</div>
-                <div className={styles.bikePrice}>
+                <div className={styles.bikeClosedPrice}>
                   {props.highestBidSymbol && (
                     <span>
                       <BiRupee />

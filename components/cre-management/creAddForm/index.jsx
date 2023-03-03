@@ -61,7 +61,7 @@ export default function CreAddForm() {
           <span className={styles.inputSpan}>Email address</span>
         </Col>
 
-        <Col className={`${styles.inputField} `} xl={8} lg={4} md={12}>
+        <Col className={`${styles.inputField} `} xl={8} lg={8} md={12}>
           <Form>
             <Form.Group className="" controlId="formBasicEmail">
               <Form.Control type="email" placeholder="Email address" />

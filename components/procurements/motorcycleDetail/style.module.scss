@@ -194,11 +194,14 @@
 
   .dealerDetails_lists {
     .dealerDetails_list {
+      font-size: 12px;
+      font-weight: 500;
       border-right: 1px solid #707070;
     }
 
     .list_icon {
-      margin: 0 0.5rem;
+      margin: 0rem 0.5rem;
+      margin-bottom: 0.2rem;
     }
   }
 }

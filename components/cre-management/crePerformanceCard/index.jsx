@@ -7,22 +7,20 @@ export default function CrePerformanceCard(props) {
       <div className={`${styles.cardBody} ${props.cardBodyStyle} py-2`}>
         <div className={`${styles.cardHead}`}>
           <div className="d-flex justify-content-between">
-            <h2>
-              Procurement Lead <br /> Management
-            </h2>
+            <h2>{props.title}</h2>
           </div>
           <div className="d-flex justify-content-between mb-2">
             <h3>
-              Total <br /> Leads Evaluated
+              <span>Total</span>Leads Evaluated
             </h3>
-            <span>93/124</span>
+            <span>{props.totalNumber}</span>
           </div>
         </div>
         <div className={`${styles.divider} w-100`} />
         <div className={`${styles.cardFooter} pt-2 w-100`}>
           <h3>Score Achieved</h3>
           <div>
-            <span className="mx-2">75%</span>
+            <span className="mx-2">{props.achievedScore}</span>
           </div>
         </div>
       </div>
