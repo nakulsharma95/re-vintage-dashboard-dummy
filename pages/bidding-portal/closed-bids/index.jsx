@@ -57,7 +57,7 @@ export default function ClosedBids() {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <Breadcrumb title="Bidding Portal" addmoretitle="Closed Bids" />
-        <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
+        <BiddingTimer biddingStartTime={14} biddingEndTime={17} />
       </div>
       <HeaderPrimary headerClass="mb-2" title="Closed Bids">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
