@@ -1,7 +1,9 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
+import { BiDownload } from 'react-icons/bi';
 import { FiPhoneCall } from 'react-icons/fi';
+import OutlineButton from '~/components/common/buttons/OutlineButton';
 import ArrowButton from '../../common/buttons/ArrowButton';
 import styles from './style.module.scss';
 
@@ -27,11 +29,11 @@ function EvaluationDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
       {isEvalBtnVisible && (
         <div className={styles.evalBtnBox}>
           <div className={styles.arrowBtnDiv}>
-            <ArrowButton detailLink="/" title="Detail" />
+            <ArrowButton detailLink="/" title="DETAILS" />
           </div>
-          <Button variant="primary" className={styles.downloadBtn}>
-            Download Report
-          </Button>
+          <div className={styles.btnCols}>
+          <OutlineButton title="DOWNLOAD REPORT" leftIcon={<BiDownload />} />
+          </div>
         </div>
       )}
 

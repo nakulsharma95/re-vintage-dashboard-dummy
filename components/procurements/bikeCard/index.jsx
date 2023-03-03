@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Col, Image, Row } from 'react-bootstrap';
 import { BiRupee } from 'react-icons/bi';
 import styles from './style.module.scss';
-import ArrowButton from '~/components/common/buttons/ArrowButton';
+import ArrowButton from '../../common/buttons/ArrowButton';
 
 function BikeCard(props) {
   const { data } = props;
