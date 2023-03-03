@@ -6,7 +6,6 @@ import { BiRupee } from 'react-icons/bi';
 import { BsPencil } from 'react-icons/bs';
 import CustomCheckBox from '../../common/customCheckBox';
 import ArrowButton from '../../common/buttons/ArrowButton';
-import ButtonPrimary from '../../common/buttons/ButtonPrimary';
 import styles from './style.module.scss';
 
 function BiddingBikeCard(props) {
