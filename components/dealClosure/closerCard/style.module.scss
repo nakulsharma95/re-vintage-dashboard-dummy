@@ -87,11 +87,10 @@
     display: flex;
     font-weight: 600;
     align-items: center;
-
+    
     @include desktop-lg {
       font-size: 18px;
     }
-
     span {
       font-size: 14px;
       color: #e8b016;
@@ -270,6 +269,7 @@
       font-size: 12px;
       font-weight: 500;
       margin-bottom: 1rem;
+      margin-left: 10px
     }
   }
   .btnBox {

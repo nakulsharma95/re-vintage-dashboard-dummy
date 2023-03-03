@@ -49,6 +49,11 @@
       border-radius: 0;
       width: 100%;
     }
+    .btnCols{
+      button{
+        padding: 9px 15px;
+      }
+    }
   }
 
   .callerBtnBox {
@@ -63,12 +68,14 @@
       color: $gray-cb;
       text-align: center;
       border-right: 1px solid #707070;
+      font-weight: 500;
     }
 
     .CallBtn2 {
       color: $gray-cb;
       font-size: 12px;
       text-align: center;
+      font-weight: 500;
     }
   }
 }

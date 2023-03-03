@@ -170,6 +170,7 @@ export default function Inventory() {
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>
                   <BikeCard
+                    className="img-shadow"
                     bikeModal="2015 Classic 350"
                     bikeRc="-DL6TAL7314"
                     bikekm="43,384 km"

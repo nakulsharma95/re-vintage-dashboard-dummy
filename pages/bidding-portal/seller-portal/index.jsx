@@ -15,7 +15,7 @@ export default function ClosedBids() {
     {
       imageUrl: '/images/bikeImage.png',
       bikeName: '2015 Classic 350',
-      bikeNumber: 'DL 6T AL 7314',
+      bikeNumber: 'DL6TAL7314',
       sellerId: 'CSFDJG548798',
       kmDrive: '48,523 KM',
       modelYear: '2020',

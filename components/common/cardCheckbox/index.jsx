@@ -1,5 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-import { Card, Col, OverlayTrigger, Row, Tooltip } from 'react-bootstrap';
+import {
+  Card,
+  Col,
+  OverlayTrigger,
+  Row,
+  Tooltip,
+  Image,
+} from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { BiRupee } from 'react-icons/bi';
 import ToggleSwitchCard from '../../retails/toggleSwitchCard';
@@ -31,6 +38,7 @@ function BikeCardRadio({
   isCreDetails,
   isDealer,
   isOlxTooltipVisible,
+  className,
 }) {
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -42,9 +50,14 @@ function BikeCardRadio({
     <>
       <Card className={styles.bikeCardMain}>
         <div className={styles.ChassisImage}>
-          <Card.Img variant="top" src={imageUrl} />
+          <div className={`${styles.bikeImg} ${className}`}>
+            <Image variant="top" src={imageUrl} alt="not-found" />
+          </div>
+
           {isBikeChassisVisible && (
-            <div className={`${styles.bikeChassisTag}`}>FB29FH9219HR1</div>
+            <div className={`${styles.bikeChassisTag}`}>
+              <span>FB29FH9219HR1</span>
+            </div>
           )}
         </div>
 
