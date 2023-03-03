@@ -127,11 +127,11 @@ export default function DetailCard(props) {
             <div className={styles.detailsDivide}>
               <p className="text-white-50 mb-0">
                 Prm source:
-                <span className="text-white">{props.prmSource}</span>
+                <span className="text-white"> {props.prmSource}</span>
               </p>
               <p className="text-white-50 mb-0">
                 Sec source:
-                <span className="text-white">{props.secSource}</span>
+                <span className="text-white"> {props.secSource}</span>
               </p>
             </div>
           </div>

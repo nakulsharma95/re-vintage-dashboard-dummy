@@ -127,6 +127,12 @@
         padding-left: 1rem;
         padding-right: 1rem;
         margin-bottom: 0px;
+        border-right: 1px solid $gray-70;
+        margin-right: 15px;
+        &:last-child{
+          margin-right: 0;
+          border-right: none;
+        }
         @include mobile {
           margin-bottom: 3px;
           &:last-child{
