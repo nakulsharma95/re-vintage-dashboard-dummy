@@ -1,0 +1,19 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/variables//mixins";
+
+.totalCard{
+	border: none;
+	border-radius: 0;
+	margin-bottom: 1.5rem;
+	.totalCardBody {
+	  background-color: $gray-2;
+	  padding: 20px;
+	  border: none;
+		h3 {
+		  font-size: 16px;
+		  color: $white;
+		  margin-bottom: 10px;
+		  font-weight: 400;
+		}
+	}
+  }
