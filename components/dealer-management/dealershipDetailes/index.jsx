@@ -46,7 +46,7 @@ function DealershipDetails() {
             </p>
           </div>
           <div className={style.motors_lists}>
-            <div className={style.motors_list}>
+            <div className={`${style.motors_list} ${style.motors_list_mob}`}>
               <Image
                 src="/images/dealership-icon1.svg"
                 width="28"
