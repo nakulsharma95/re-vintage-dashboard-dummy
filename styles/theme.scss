@@ -588,6 +588,13 @@ h6 {
 
 // Tables Style here
 
+.dashboardTable {
+
+  @include mobile {
+    overflow-x: scroll;
+  }
+}
+
 .dashboardTable .table > :not(caption) > * > * {
   padding: 1rem;
   border-bottom-width: none;

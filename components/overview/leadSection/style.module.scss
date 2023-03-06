@@ -9,8 +9,17 @@
     gap: 0px 24px;
     margin-bottom: 20px;
 
+    @include mobile {
+      flex-direction: column;
+      gap: 24px;
+    }
+
     .leadTable {
       flex-grow: 2;
+
+      @include mobile {
+        overflow-x: scroll;
+      }
       
       .tableStyle {
         thead,
@@ -44,6 +53,10 @@
 
   .leadsBottom {
     max-width: 49%;
+
+    @include mobile {
+      max-width: 100%;
+    }
   }
 
   .leadsMiddle {
@@ -51,8 +64,18 @@
     gap: 24px;
     margin-bottom: 24px;
 
+
+    @include mobile {
+      flex-direction: column;
+      gap: 24px;
+    }
+
     .leadMidTable {
       flex-grow: 2;
+
+      @include mobile {
+        overflow-x: scroll;
+      }
 
       table {
         text-align: center;
