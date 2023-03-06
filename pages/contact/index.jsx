@@ -3,10 +3,9 @@ import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import HeaderPrimary from '../../components/common/headerPrimary';
 import SearchPrimary from '../../components/common/searchPrimary';
 import FilterButton from '../../components/common/filterButton';
-import DealFilter from '../../components/dealClosure/dealFilter';
 import ReportAccordian from '../../components/report/reportAccordian';
 
-function Report() {
+function ContactPage() {
   return (
     <div>
       <Breadcrumb title="Feedbacks" />
@@ -19,10 +18,15 @@ function Report() {
         <FilterButton />
       </HeaderPrimary>
       <hr />
-      <DealFilter title="4 feedbacks found" />
+
+      <div className="action-list-style">
+        <div className="left-sec">
+          <h5 className="title3">4 feedbacks found</h5>
+        </div>
+      </div>
       <ReportAccordian />
     </div>
   );
 }
 
-export default Report;
+export default ContactPage;

@@ -183,6 +183,7 @@ function Procurement() {
       </HeaderPrimary>
 
       <div className="bottom-white-border" />
+
       <ViewAll
         title="Partial Leads"
         leadsTitle="(8 Leads)"

@@ -1,10 +1,9 @@
-import React from 'react';
 import { RiShareBoxFill } from 'react-icons/ri';
+import SortByDropdown from '../../components/common/sortByDropdown';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
+import OutlineButton from '../../components/common/buttons/OutlineButton';
 import HeaderPrimary from '../../components/common/headerPrimary';
 import SearchPrimary from '../../components/common/searchPrimary';
-import OutlineButton from '../../components/common/buttons/OutlineButton';
-import DealFilter from '../../components/dealClosure/dealFilter';
 import EscalationCard from '../../components/escalation/escalationCard';
 
 function Escalation() {
@@ -63,7 +62,20 @@ function Escalation() {
         <SearchPrimary placeholder="Search Name, Location, Reference ID" />
       </HeaderPrimary>
       <hr />
-      <DealFilter title="4 Escalations Found" isViewBy droptitle="Recent" />
+
+      <div className="action-list-style my-3">
+        <div className="left-sec">
+          <h5 className="title3">4 Escalations Found</h5>
+        </div>
+
+        <div className="right-sec">
+          <SortByDropdown
+            droptitle="Select view"
+            options={['Recent', 'tommrow', '2 days ago']}
+          />
+        </div>
+      </div>
+
       {escalationCardData.map((item) => (
         <EscalationCard
           id={item.escalationID}

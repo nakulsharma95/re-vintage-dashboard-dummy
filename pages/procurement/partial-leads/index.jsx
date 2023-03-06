@@ -72,7 +72,11 @@ export default function PartialLeads() {
         >
           <Tab eventKey="title1" title="Recent">
             <Row>
-              <ViewAll title="3 Leads Available" viewAllClass="mb-4 mt-0" />
+              <div className="action-list-style my-0 mb-3">
+                <div className="left-sec">
+                  <h5 className="title3">3 Leads Available</h5>
+                </div>
+              </div>
               {cardData.map((item) => (
                 <Col md={4}>
                   <DetailCard
@@ -98,7 +102,12 @@ export default function PartialLeads() {
           </Tab>
           <Tab eventKey="title2" title="In-progress (4)">
             <Row className="mb-5">
-              <ViewAll title="3 Leads Available" viewAllClass="mb-4 mt-0" />
+              <div className="action-list-style my-0 mb-3">
+                <div className="left-sec">
+                  <h5 className="title3">3 Leads Available</h5>
+                </div>
+              </div>
+
               {cardData.map((item) => (
                 <Col md={4}>
                   <DetailCard
@@ -120,7 +129,11 @@ export default function PartialLeads() {
           </Tab>
           <Tab eventKey="title3" title="Dropped (2)">
             <Row className="mb-5">
-              <ViewAll title="3 Leads Available" viewAllClass="mb-4 mt-0" />
+              <div className="action-list-style my-0 mb-3">
+                <div className="left-sec">
+                  <h5 className="title3">3 Leads Available</h5>
+                </div>
+              </div>
               {cardData.map((item) => (
                 <Col md={4}>
                   <DetailCard

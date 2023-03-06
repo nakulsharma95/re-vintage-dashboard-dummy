@@ -1,6 +1,6 @@
 import { Col, Row } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
-import SortTabs from '../../../components/common/sortTabs';
+import SortByDropdown from '../../../components/common/sortByDropdown';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
@@ -37,7 +37,19 @@ function PaymentsPending() {
       </HeaderPrimary>
       <div className="bottom-white-border mt-3 mb-3" />
 
-      <SortTabs selectAllCheck sortTabTitle="3 Leads" />
+      <div className="action-list-style my-3">
+        <div className="left-sec">
+          <h5 className="title3">3 Leads</h5>
+          <div className="vertical-divider" />
+        </div>
+
+        <div className="right-sec">
+          <SortByDropdown
+            droptitle="Select Relevant"
+            options={['Most Relevant', 'Relevant']}
+          />
+        </div>
+      </div>
 
       <Row>
         {cardData.map((item) => (

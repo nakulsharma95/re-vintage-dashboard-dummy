@@ -1,16 +1,19 @@
 import React from 'react';
+import useMediaQuery from '../../common/useMedia';
 import DoughnutChart from '../../charts/doughnutChart';
 
 import styles from './style.module.scss';
 
 function PieBig(props) {
+  const isSmallScreen = useMediaQuery(767);
+
   const optionsDoughnut = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
       legend: {
         display: true,
-        position: 'right',
+        position: isSmallScreen ? 'bottom' : 'right',
         labels: {
           fontSize: 20,
           color: 'white',
