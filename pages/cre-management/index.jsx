@@ -1,17 +1,16 @@
-import React from 'react';
-import { Row, Col } from 'react-bootstrap';
-import { FaPlus } from 'react-icons/fa';
 import Link from 'next/link';
+import { Col, Row } from 'react-bootstrap';
+import { FaPlus } from 'react-icons/fa';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
+import HeaderPrimary from '../../components/common/headerPrimary';
+import SearchPrimary from '../../components/common/searchPrimary';
 import CreDetailCard from '../../components/cre-management/creDetailCard';
 import CrePerformanceCard from '../../components/cre-management/crePerformanceCard';
 import CrePerformanceMatrix from '../../components/cre-management/crePerformanceMatrix';
-import HeaderPrimary from '../../components/common/headerPrimary';
-import SearchPrimary from '../../components/common/searchPrimary';
+import DealFilter from '../../components/dealClosure/dealFilter';
+import OutlineDropdown from '../../components/common/buttons/OutlineDropdown';
 
 import styles from './style.module.scss';
-import SortTabs from '../../components/common/sortTabs';
-import OutlineDropdown from '../../components/common/buttons/OutlineDropdown';
 
 function CreManagement() {
   const cardData = [
@@ -85,7 +84,21 @@ function CreManagement() {
       </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-3" />
-      <SortTabs selectAllCheck sortTabTitle="Available CRE(s)" />
+
+      <div className="action-list-style my-3">
+        <div className="left-sec">
+          <h5 className="title3">Available CRE(s)</h5>
+        </div>
+
+        <div className="right-sec">
+          <DealFilter
+            title="Sort By"
+            isViewBy
+            isNonRe
+            droptitle="Top Performer"
+          />
+        </div>
+      </div>
 
       <Row>
         {cardData.map((item) => (

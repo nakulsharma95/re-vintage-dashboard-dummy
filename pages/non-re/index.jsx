@@ -1,15 +1,15 @@
-import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
-import NonReDetailCard from '../../components/non-re/nonReDetailCard';
-import Breadcrumb from '../../components/common/breadcrumbPrimary';
-import SortTabs from '../../components/common/sortTabs';
-import SearchPrimary from '../../components/common/searchPrimary';
-import HeaderPrimary from '../../components/common/headerPrimary';
-import OutlineButton from '../../components/common/buttons/OutlineButton';
-import VerticalBarChart from '../../components/charts/verticalBarChart';
-import styles from './style.module.scss';
+import ToggleView from '../../components/common/toggleView';
+import DealFilter from '../../components/dealClosure/dealFilter';
 import DoughnutChart from '../../components/charts/doughnutChart';
+import VerticalBarChart from '../../components/charts/verticalBarChart';
+import Breadcrumb from '../../components/common/breadcrumbPrimary';
+import OutlineButton from '../../components/common/buttons/OutlineButton';
+import HeaderPrimary from '../../components/common/headerPrimary';
+import SearchPrimary from '../../components/common/searchPrimary';
+import NonReDetailCard from '../../components/non-re/nonReDetailCard';
+import styles from './style.module.scss';
 
 function NonRe() {
   const nonReData = [
@@ -174,7 +174,16 @@ function NonRe() {
       </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-3" />
-      <SortTabs selectAllCheck isSortTabBox />
+      <div className="action-list-style my-3">
+        <div className="left-sec">
+          <h5 className="title3">25 Bids Available</h5>
+        </div>
+
+        <div className="right-sec">
+          <DealFilter title="Sort By" isViewBy isNonRe droptitle="Pending" />
+          <ToggleView />
+        </div>
+      </div>
       <Row className="mb-4">
         <Col md={6}>
           <div className={styles.enquireDoughnutChart}>

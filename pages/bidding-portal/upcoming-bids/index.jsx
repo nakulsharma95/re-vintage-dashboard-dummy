@@ -1,17 +1,16 @@
-import { Row, Col, Dropdown, Form, Tab, Tabs } from 'react-bootstrap';
-import { RiShareBoxFill } from 'react-icons/ri';
-import { FiSettings } from 'react-icons/fi';
 import Link from 'next/link';
+import { Col, Dropdown, Form, Row, Tab, Tabs } from 'react-bootstrap';
+import { FiSettings } from 'react-icons/fi';
+import { RiShareBoxFill } from 'react-icons/ri';
 import UpcomingBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
-import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import DetailPagination from '../../../components/common/paginationPrimary';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
-import HeaderPrimary from '../../../components/common/headerPrimary';
-import SearchPrimary from '../../../components/common/searchPrimary';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import ButtonPrimary from '../../../components/common/buttons/ButtonPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
-import ButtonPrimary from '../../../components/common/buttons/ButtonPrimary';
-import SortTabs from '../../../components/common/sortTabs';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import DetailPagination from '../../../components/common/paginationPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
 import EmptyState from '../../../components/emptyState';
 
 // Style here
@@ -104,7 +103,12 @@ export default function UpcomingBids() {
           tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Today">
-            <SortTabs selectAllCheck sortTabTitle="25 Bids Available" />
+            <div className="action-list-style my-3">
+              <div className="left-sec">
+                <h5 className="title3">25 Bids Available</h5>
+              </div>
+            </div>
+
             <Row className="mb-3">
               {upcomingBikeData.map((item) => (
                 <Col md={3}>

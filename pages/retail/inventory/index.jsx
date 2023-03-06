@@ -1,15 +1,17 @@
 import { Col, Row, Tab, Tabs } from 'react-bootstrap';
-import { TbTrendingUp } from 'react-icons/tb';
+import { BiCheck } from 'react-icons/bi';
 import { RiShareBoxFill } from 'react-icons/ri';
-import DealFilter from '../../../components/dealClosure/dealFilter';
-import BikeCard from '../../../components/common/cardCheckbox';
+import { TbTrendingUp } from 'react-icons/tb';
+import CustomCheckBox from '../../../components/common/customCheckBox';
+import ToggleView from '../../../components/common/toggleView';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import DashboardCard from '../../../components/dashboardCard';
-import SortTabs from '../../../components/common/sortTabs';
-import SearchPrimary from '../../../components/common/searchPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import BikeCard from '../../../components/common/cardCheckbox';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
-import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import DashboardCard from '../../../components/dashboardCard';
+import DealFilter from '../../../components/dealClosure/dealFilter';
 
 export default function Inventory() {
   const dashboardCardData = [
@@ -127,13 +129,31 @@ export default function Inventory() {
           tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Content Approval Pending (12)">
-            <SortTabs
-              selectAllCheck
-              approveBtn
-              isSortTabBox
-              isCheckInput
-              sortTabTitle="12 Result Found"
-            />
+            <div className="action-list-style my-3">
+              <div className="left-sec">
+                <h5 className="title3">12 Result Found</h5>
+                <div className="vertical-divider" />
+                <div className="d-flex align-items-center">
+                  <CustomCheckBox checkTitle="Select all -" className="me-2" />
+                  <OutlineButton
+                    leftIcon={<BiCheck className="m-0 me-2" />}
+                    title="Submit Selected"
+                  />
+                </div>
+              </div>
+
+              <div className="right-sec">
+                <DealFilter
+                  title="Sort By"
+                  isViewBy
+                  isNonRe
+                  droptitle="Pending"
+                />
+                <div className="vertical-divider" />
+                <ToggleView />
+              </div>
+            </div>
+
             <Row>
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>
@@ -165,7 +185,11 @@ export default function Inventory() {
             </Row>
           </Tab>
           <Tab eventKey="title2" title="Content Upload Pending (8)">
-            <DealFilter className="mb-5" singleTitle="8 Result Found" />
+            <div className="action-list-style my-3">
+              <div className="left-sec">
+                <h5 className="title3">8 Result Found</h5>
+              </div>
+            </div>
             <Row>
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>
@@ -197,11 +221,22 @@ export default function Inventory() {
             </Row>
           </Tab>
           <Tab eventKey="title3" title="Under Refurbishment">
-            <SortTabs
-              selectAllCheck
-              isSortTabBox
-              sortTabTitle="12 Result Found"
-            />
+            <div className="action-list-style my-3">
+              <div className="left-sec">
+                <h5 className="title3">12 Result Found</h5>
+              </div>
+
+              <div className="right-sec">
+                <DealFilter
+                  title="Sort By"
+                  isViewBy
+                  isNonRe
+                  droptitle="Self Procure"
+                />
+                <div className="vertical-divider" />
+                <ToggleView />
+              </div>
+            </div>
             <Row>
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>

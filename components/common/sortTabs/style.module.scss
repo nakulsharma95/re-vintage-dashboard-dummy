@@ -77,44 +77,6 @@
       }
     }
   }
-  .sortTabBtnBoxMain {
-    display: flex;
-    align-items: center;
-
-    .sortText {
-      color: $gray-cb;
-      font-size: 14px;
-      font-weight: 400;
-      margin-bottom: 0px;
-      margin-right: 0.5rem;
-    }
-
-    .sortTabBtn {
-      font-size: 14px;
-      font-weight: 600;
-      color: $white;
-      background: $gray-28;
-      border: 0;
-      border-radius: 15px;
-    }
-
-    .sortTabBtnBox {
-      padding-left: 0.5rem;
-
-      .viewTabBtn {
-        padding:0 0.5rem;
-        font-size: 20px;
-        background: transparent;
-        border: 0px;
-        &:first-child {
-          color: $gray-BF;
-        }
-        &:first-child {
-          color: $gray-70;
-        }
-      }
-    }
-  }
 }
 .leftBorder {
   padding-left: 1rem;

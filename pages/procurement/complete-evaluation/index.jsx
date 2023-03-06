@@ -3,7 +3,6 @@ import { RiShareBoxFill } from 'react-icons/ri';
 import CompleteBikeDetail from '../../../components/procurements/completeEvalutationCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
-import DealFilter from '../../../components/dealClosure/dealFilter';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
 import FilterButton from '../../../components/common/filterButton';
@@ -32,9 +31,12 @@ function CompleteEvaluation() {
       </HeaderPrimary>
 
       <div className="bottom-white-border" />
-      <div className="mt-3 mb-3">
-        <DealFilter title="2 Search" />
+      <div className="action-list-style my-3">
+        <div className="left-sec">
+          <h5 className="title3">2 Search</h5>
+        </div>
       </div>
+
       {completeData.map((item) => (
         <CompleteBikeDetail
           data={item}
