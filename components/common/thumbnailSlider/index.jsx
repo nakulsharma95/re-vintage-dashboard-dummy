@@ -67,7 +67,7 @@ function BikeSlider(props) {
                     src={item.imgUrl}
                     className="img-full"
                     width="63"
-                    height="80"
+                    height="50"
                   />
                 </div>
               ))}

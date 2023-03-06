@@ -77,13 +77,19 @@
   }
 
   .bkeName {
-    font-size: 16px;
+    font-size: 18px;
     color: $white;
     padding: 0rem 0.8rem;
     margin-bottom: 15px;
+    font-weight: 600;
+       
+    @include desktop-lg {
+      font-size: 18px;
+    }
     span {
       font-size: 14px;
       color: #e8b016;
+      font-weight: 500;
     }
   }
   .bidPrice {
@@ -117,8 +123,8 @@
         padding: 5px;
         padding-left: 18px;
         width: 100%;
-        max-width: 105px;
-        font-size: 13px;
+        max-width: 130px;
+        font-size: 18px;
         font-weight: 600;
         outline: none;
         border: none;
@@ -148,7 +154,7 @@
       }
       span{
         position: absolute;
-        top: 3px;
+        top: 7px;
         left: -2px;
         svg{
           margin-left: 0;
@@ -248,7 +254,7 @@
     }
   }
   .btnBox {
-    @include d-flex(space-between, center);
+  
     padding: 0rem 0.8rem;
 
     .bikeCardBtn {

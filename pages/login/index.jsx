@@ -12,6 +12,8 @@ import {
   useEncryptMutation,
 } from '../../redux/api/endpoints/auth';
 
+const loadingText = 'Loading...';
+
 export default function Login() {
   const [formData, setFormData] = useState({
     email: '',
@@ -29,18 +31,18 @@ export default function Login() {
     });
   };
   function validateEmail(email) {
-    const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    const regex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
     return regex.test(email);
   }
   const loginHandler = async (e) => {
     e.preventDefault();
-    if ((formData.email || formData.password) === '' || status === 'Loading...')
+    if ((formData.email || formData.password) === '' || status === loadingText)
       return;
     if (!validateEmail(formData.email)) {
-      setStatus('username / phone');
+      setStatus('Username Invalid');
       return;
     }
-    setStatus('Loading...');
+    setStatus(loadingText);
     try {
       const encryptCredentials = await encrypt({
         string: `${formData.email}:${formData.password}`,
@@ -124,7 +126,7 @@ export default function Login() {
                   type="submit"
                   className={styles.submitBtn}
                 >
-                  {status === 'Loading...' ? 'Loading...' : 'Login'}
+                  {status === loadingText ? loadingText : 'Login'}
                 </Button>
               </div>
             </Form>

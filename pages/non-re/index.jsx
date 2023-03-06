@@ -15,27 +15,75 @@ function NonRe() {
   const nonReData = [
     {
       bikeName: '2020 Pulsar NS',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC2N',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'John Watson',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2015 Avenger',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC2M',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'Danim Watson',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2021 TVS Ronin',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC6M',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'Constanza',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2021 TVS Ronin',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC6M',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'John Maxlome',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2020 Pulsar NS',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC6M',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'John Watson',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2015 Avenger',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC6P',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'John Watson',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2021 TVS Ronin',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC6S',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'John Watson',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2021 TVS Ronin',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC6L',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'John Watson',
+      creUserNumber: '9876543210',
     },
   ];
 
@@ -155,7 +203,16 @@ function NonRe() {
       </Row>
       <div className={styles.nonReDetailCard}>
         {nonReData.map((item) => (
-          <NonReDetailCard reData={item} />
+          <NonReDetailCard
+            bikeName={item.bikeName}
+            bikeNumber={item.bikeNumber}
+            reData={item}
+            price={item.price}
+            dealerRef={item.dealerRef}
+            dealerAddress={item.dealerAddress}
+            creUserName={item.creUserName}
+            creUserNumber={item.creUserNumber}
+          />
         ))}
       </div>
     </>

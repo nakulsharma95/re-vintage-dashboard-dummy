@@ -15,7 +15,7 @@ export default function ClosedBids() {
     {
       imageUrl: '/images/bikeImage.png',
       bikeName: '2015 Classic 350',
-      bikeNumber: 'DL 6T AL 7314',
+      bikeNumber: 'DL6TAL7314',
       sellerId: 'CSFDJG548798',
       kmDrive: '48,523 KM',
       modelYear: '2020',
@@ -24,7 +24,7 @@ export default function ClosedBids() {
     {
       imageUrl: '/images/bikeImage2.png',
       bikeName: '2015 Classic 350',
-      bikeNumber: 'DL 6T AL 7315',
+      bikeNumber: 'DL6TAL7315',
       sellerId: 'CSFDJG548798',
       kmDrive: '48,523 KM',
       modelYear: '2020',
@@ -33,7 +33,7 @@ export default function ClosedBids() {
     {
       imageUrl: '/images/bikeImage3.png',
       bikeName: '2015 Classic 350',
-      bikeNumber: 'DL 6T AL 7316',
+      bikeNumber: 'DL6TAL7316',
       sellerId: 'CSFDJG548798',
       kmDrive: '48,523 KM',
       modelYear: '2020',
@@ -42,7 +42,7 @@ export default function ClosedBids() {
     {
       imageUrl: '/images/bikeImage4.png',
       bikeName: '2015 Classic 350',
-      bikeNumber: 'DL 6T AL 7317',
+      bikeNumber: 'DL6TAL7317',
       sellerId: 'CSFDJG548798',
       kmDrive: '48,523 KM',
       modelYear: '2020',
@@ -53,7 +53,7 @@ export default function ClosedBids() {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <Breadcrumb title="Bidding Portal" addmoretitle="Seller Portal" />
-        <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
+        <BiddingTimer biddingStartTime={14} biddingEndTime={17} />
       </div>
 
       <HeaderPrimary

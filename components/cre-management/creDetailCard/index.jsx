@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { Card } from 'react-bootstrap';
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
+import ArrowButton from '../../common/buttons/ArrowButton';
 import styles from './style.module.scss';
 
 function CreDetailCard(props) {
@@ -25,12 +25,11 @@ function CreDetailCard(props) {
             <h4>{props.location}</h4>
           </div>
 
-          <Link
-            href="/cre-management/cre-details"
-            className={styles.downloadBtn}
-          >
-            VIEW DETAILS
-          </Link>
+          <ArrowButton
+            detailLink="/cre-management/cre-details"
+            title="VIEW DETAILS"
+            buttonStyle="w-full"
+          />
         </Card.Body>
       </Card>
 

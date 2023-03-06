@@ -49,6 +49,21 @@
       border-radius: 0;
       width: 100%;
     }
+    .btnCols{
+      width: 100%;
+      margin-left: 10px;
+      button{
+        padding: 9px 8px;
+        font-size: 11px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        @include desktop-lg{
+          font-size: 12px;
+          padding: 9px 15px;
+        }
+      }
+    }
   }
 
   .callerBtnBox {
@@ -63,12 +78,14 @@
       color: $gray-cb;
       text-align: center;
       border-right: 1px solid #707070;
+      font-weight: 500;
     }
 
     .CallBtn2 {
       color: $gray-cb;
       font-size: 12px;
       text-align: center;
+      font-weight: 500;
     }
   }
 }

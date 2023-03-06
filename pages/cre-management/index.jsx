@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { FiPlus } from 'react-icons/fi';
+import { FaPlus } from 'react-icons/fa';
 import Link from 'next/link';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import CreDetailCard from '../../components/cre-management/creDetailCard';
@@ -80,7 +80,7 @@ function CreManagement() {
         />
 
         <Link href="cre-management/add-cre" className="addMotorBtn">
-          <FiPlus /> Add Motorcycle
+          <FaPlus /> Add CRE
         </Link>
       </HeaderPrimary>
 
@@ -94,7 +94,7 @@ function CreManagement() {
               name="Bob Vishwas"
               jobPost="(Senior CRE)"
               location="Gurugram, Haryana"
-              phoneNo="Gurugram, Haryana"
+              phoneNo="+91 98765 43210"
               emailID="bobvishwas@royalenfield.com"
               creDetailData={item}
             />
@@ -117,13 +117,7 @@ function CreManagement() {
           </Row>
         </div>
         <Col xxl={12} lg={12} md={12}>
-          <CrePerformanceMatrix
-            title1="Procurement Lead Management"
-            title2="Bidding / First Offer"
-            title3="Deal Closure"
-            title4="General Query Response"
-            creTitle="Cumulative CRE Performance Matrix"
-          />
+          <CrePerformanceMatrix creTitle="Cumulative CRE Performance Matrix" />
         </Col>
       </Row>
     </>

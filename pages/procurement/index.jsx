@@ -211,7 +211,7 @@ function Procurement() {
         title="Evaluation Requests"
         leadsTitle="(8 Leads)"
         viewAllBtn
-        viewAllClass="mt-5 mb-3"
+        viewAllClass="mt-4 mb-4"
         viewHandler="procurement/evaluation-requests"
       />
       <Row>
@@ -240,7 +240,7 @@ function Procurement() {
         title="Scheduled Evaluation"
         leadsTitle="(32 Leads)"
         viewAllBtn
-        viewAllClass="mt-5 mb-3"
+        viewAllClass="mt-4 mb-4"
         viewHandler="procurement/scheduled-evaluation"
       />
       <Row>
@@ -269,7 +269,7 @@ function Procurement() {
         title="Completed Evaluation"
         leadsTitle="(32 Leads)"
         viewAllBtn
-        viewAllClass="mt-5 mb-3"
+        viewAllClass="mt-4 mb-4"
         viewHandler="procurement/complete-evaluation"
       />
       <Row>

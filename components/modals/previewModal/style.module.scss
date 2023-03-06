@@ -75,6 +75,18 @@
       }
     }
   }
+  .btnCols{
+    width: 100%;
+    max-width: 140px;
+    margin: auto;
+  }
+}
+
+.downloadBtn{
+  button{
+    background-color: $black;
+    padding: 8px 15px;
+  }
 }
 
 

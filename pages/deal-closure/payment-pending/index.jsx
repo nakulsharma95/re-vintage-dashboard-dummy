@@ -29,7 +29,7 @@ function PaymentsPending() {
   return (
     <>
       <Breadcrumb title="Deal Closure" addmoretitle="Payment Pending" />
-      <HeaderPrimary headerClass="mb-2" title="Payment Pending">
+      <HeaderPrimary headerClass="" title="Payment Pending">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
         <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />

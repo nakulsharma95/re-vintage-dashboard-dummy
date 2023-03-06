@@ -57,7 +57,6 @@ export const insertSpaces = (string) => {
   return newString.replace(/([A-Z])([A-Z][a-z])/g, '$1 $2');
 };
 
-
 /**
  * It takes a string, converts it to a buffer, and then converts the buffer to a base64 string
  * @param {string} str - The string to be converted to base64.
@@ -102,3 +101,11 @@ export function generateId(length) {
   }
   return result;
 }
+
+export const timerHelper = (time) => {
+  const formatText = (item) => String(item).padStart(2, '0');
+  const nrHours = formatText(Math.floor(time / 1000 / 60 / 60) % 24);
+  const nrMin = formatText(Math.floor(time / 1000 / 60) % 60);
+  const nrSec = formatText(Math.floor(time / 1000) % 60);
+  return `${nrHours} : ${nrMin} : ${nrSec}`;
+};

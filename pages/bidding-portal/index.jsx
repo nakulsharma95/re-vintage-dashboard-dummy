@@ -170,7 +170,7 @@ export default function BiddingPortal() {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <Breadcrumb title="Bidding Portal" />
-        <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
+        <BiddingTimer biddingEndTime={17} biddingStartTime={14} />
       </div>
 
       <HeaderPrimary headerClass="mb-2" title="Bidding Portal">
@@ -278,7 +278,7 @@ export default function BiddingPortal() {
               highestBid
               highestBidSymbol
               bidTitle="Highest Bid"
-              arrowBtn
+              redBtn
               imageUrl={item.imageUrl}
               bikeName={item.name}
               bikeNumber={item.number}

@@ -19,8 +19,9 @@ export default function PartialLeads() {
       pinCode: '110014',
       prmSource: 'MIY',
       secSource: 'Google',
-      detailNo: '- FB29FH9219HR1',
+      detailNo: 'FB29FH9219HR1',
       reason: 'Customer not interested',
+      dateTime: '30 Sep, 2022 | 4:40 pm',
     },
     {
       ownerName: 'Rishab kumar',
@@ -29,8 +30,9 @@ export default function PartialLeads() {
       pinCode: '110014',
       prmSource: 'MIY',
       secSource: 'Google',
-      detailNo: '- FB29FH9219HR1',
+      detailNo: 'FB29FH9219HR1',
       reason: 'Customer not interested',
+      dateTime: '30 Sep, 2022 | 4:40 pm',
     },
     {
       ownerName: 'Rishab Sharma',
@@ -39,8 +41,9 @@ export default function PartialLeads() {
       pinCode: '110014',
       prmSource: 'MIY',
       secSource: 'Google',
-      detailNo: '- FB29FH9219HR1',
+      detailNo: 'FB29FH9219HR1',
       reason: 'Customer not interested',
+      dateTime: '30 Sep, 2022 | 4:40 pm',
     },
   ];
   return (
@@ -75,6 +78,7 @@ export default function PartialLeads() {
                   <DetailCard
                     isCardFooter
                     isContactBtn
+                    isDropbtn
                     detailNumber={item.detailNo}
                     ownerName={item.ownerName}
                     emailId={item.email}
@@ -99,6 +103,7 @@ export default function PartialLeads() {
                 <Col md={4}>
                   <DetailCard
                     isCardFooter
+                    isDropbtn
                     isUserDetail
                     isContactBtn
                     detailNumber={item.detailNo}
@@ -120,6 +125,8 @@ export default function PartialLeads() {
                 <Col md={4}>
                   <DetailCard
                     isCardFooter
+                    isDateTime
+                    dateTime={item.dateTime}
                     isUserDetail
                     isReason
                     reason={item.reason}
