@@ -22,7 +22,7 @@ export default function DetailDropCard() {
   return (
     <>
       <div className={styles.dropCardBg}>
-        <div className={`${styles.dropCardInner} mb-5`}>
+        <div className={`${styles.dropCardInner} mb-lg-5`}>
           <h3 className="mb-3">SAMIL Details</h3>
           <div className="mb-3">
             <h3>SAMIL Case ID</h3>

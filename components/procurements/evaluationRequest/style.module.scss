@@ -129,6 +129,9 @@
         margin-bottom: 0px;
         border-right: 1px solid $gray-70;
         margin-right: 15px;
+        @include mobile {
+          border-right: none;
+        }
         &:last-child{
           margin-right: 0;
           border-right: none;

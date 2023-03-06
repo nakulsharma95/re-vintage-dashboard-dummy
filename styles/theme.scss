@@ -255,6 +255,7 @@ h6 {
   .mobFlexPagination{
     @include mobile {
       flex-wrap: nowrap;
+      justify-content: space-between;
     }
   }  
   .custom-pagination {

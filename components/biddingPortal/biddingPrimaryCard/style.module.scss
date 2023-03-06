@@ -43,12 +43,31 @@
 		display: flex;
 		align-items: center;
 		font-weight: 500;
+		@include mobile-tablet-p{
+			font-size: 16px;
+			flex-wrap: wrap;
+		}
+		@include mobile{
+			flex-wrap: nowrap;
+		}
 		span{
 			color: $theme-yellow-E8;
 			font-size: 14px;
 			display: inline-block;
 			margin-left: 4px;
 			margin-top: 2px;
+			@include mobile-tablet-p{
+				display: block;
+				width: 100%;
+				margin-left: 0;
+				font-size: 12px;
+			}
+			@include mobile{
+				display: inline-block;
+				width: inherit;
+				margin-left:4px;
+				font-size: 13px;
+			}
 		}
 		svg{
 			cursor: pointer;
@@ -113,6 +132,9 @@
 				position: relative;
 				font-weight: 600;
 				font-size: 18px;
+				@include mobile{
+					font-size: 16px;
+				}
 				input{
 					background-color: $gray-2c;
 					padding: 5px;
@@ -124,6 +146,9 @@
 					outline: none;
 					border: none;
 					color: #fff;
+					@include mobile-tablet-p{
+						font-size: 14px;
+					}
 				}
 				button.submitBtn{
 					display:inline-block;
@@ -155,9 +180,15 @@
 					position: absolute;
 					top:4px;
 					left: -1px;
+					@include mobile-tablet-p{
+						top: 1px;
+					}
 					svg{
 						margin-left: 0;
 						font-size: 21px;
+						@include mobile-tablet-p{
+							font-size: 16px;
+						}
 					}
 				}
 			}
