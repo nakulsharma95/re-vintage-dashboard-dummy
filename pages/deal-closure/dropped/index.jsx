@@ -1,12 +1,12 @@
 import { Col, Row } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
+import SortByDropdown from '../../../components/common/sortByDropdown';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
 import CloserBikeCard from '../../../components/dealClosure/closerCard';
-import DealFilter from '../../../components/dealClosure/dealFilter';
 
 function PaymentsPending() {
   const cardData = [
@@ -44,11 +44,9 @@ function PaymentsPending() {
         </div>
 
         <div className="right-sec">
-          <DealFilter
-            title="Sort By"
-            isViewBy
-            isNonRe
-            droptitle="Most Relevant"
+          <SortByDropdown
+            droptitle="Select Relevant"
+            options={['Most Relevant', 'Relevant']}
           />
         </div>
       </div>

@@ -2,13 +2,13 @@ import Link from 'next/link';
 import { Col, Row } from 'react-bootstrap';
 import { FaPlus } from 'react-icons/fa';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
+import OutlineDropdown from '../../components/common/buttons/OutlineDropdown';
 import HeaderPrimary from '../../components/common/headerPrimary';
 import SearchPrimary from '../../components/common/searchPrimary';
 import CreDetailCard from '../../components/cre-management/creDetailCard';
 import CrePerformanceCard from '../../components/cre-management/crePerformanceCard';
 import CrePerformanceMatrix from '../../components/cre-management/crePerformanceMatrix';
-import DealFilter from '../../components/dealClosure/dealFilter';
-import OutlineDropdown from '../../components/common/buttons/OutlineDropdown';
+import SortByDropdown from '../../components/common/sortByDropdown';
 
 import styles from './style.module.scss';
 
@@ -91,11 +91,9 @@ function CreManagement() {
         </div>
 
         <div className="right-sec">
-          <DealFilter
-            title="Sort By"
-            isViewBy
-            isNonRe
-            droptitle="Top Performer"
+          <SortByDropdown
+            droptitle="Select Performer"
+            options={['Top Performer', '2nd Performer', '3rd Performer']}
           />
         </div>
       </div>

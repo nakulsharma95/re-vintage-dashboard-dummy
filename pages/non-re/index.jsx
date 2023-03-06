@@ -1,13 +1,13 @@
 import { Col, Row } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
-import ToggleView from '../../components/common/toggleView';
-import DealFilter from '../../components/dealClosure/dealFilter';
+import SortByDropdown from '../../components/common/sortByDropdown';
 import DoughnutChart from '../../components/charts/doughnutChart';
 import VerticalBarChart from '../../components/charts/verticalBarChart';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import OutlineButton from '../../components/common/buttons/OutlineButton';
 import HeaderPrimary from '../../components/common/headerPrimary';
 import SearchPrimary from '../../components/common/searchPrimary';
+import ToggleView from '../../components/common/toggleView';
 import NonReDetailCard from '../../components/non-re/nonReDetailCard';
 import styles from './style.module.scss';
 
@@ -180,7 +180,10 @@ function NonRe() {
         </div>
 
         <div className="right-sec">
-          <DealFilter title="Sort By" isViewBy isNonRe droptitle="Pending" />
+          <SortByDropdown
+            droptitle="Status"
+            options={['Pending', 'Complete', 'Waiting']}
+          />
           <ToggleView />
         </div>
       </div>

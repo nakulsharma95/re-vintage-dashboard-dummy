@@ -1,11 +1,11 @@
 import { Tab, Tabs } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
+import SortByDropdown from '../../../components/common/sortByDropdown';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
-import DealFilter from '../../../components/dealClosure/dealFilter';
 import CompleteBikeDetail from '../../../components/procurements/completeEvalutationCard';
 
 export default function TestRiderRequests() {
@@ -32,11 +32,9 @@ export default function TestRiderRequests() {
               </div>
 
               <div className="right-sec">
-                <DealFilter
-                  title="Sort By"
-                  isViewBy
-                  isNonRe
-                  droptitle="Pending"
+                <SortByDropdown
+                  droptitle="Status"
+                  options={['Pending', 'Complete', 'Waiting']}
                 />
               </div>
             </div>
@@ -55,11 +53,9 @@ export default function TestRiderRequests() {
               </div>
 
               <div className="right-sec">
-                <DealFilter
-                  title="Sort By"
-                  isViewBy
-                  isNonRe
-                  droptitle="Pending"
+                <SortByDropdown
+                  droptitle="Status"
+                  options={['Pending', 'Complete', 'Waiting']}
                 />
               </div>
             </div>
@@ -77,11 +73,9 @@ export default function TestRiderRequests() {
               </div>
 
               <div className="right-sec">
-                <DealFilter
-                  title="Sort By"
-                  isViewBy
-                  isNonRe
-                  droptitle="Pending"
+                <SortByDropdown
+                  droptitle="Status"
+                  options={['Pending', 'Complete', 'Waiting']}
                 />
               </div>
             </div>
@@ -99,11 +93,9 @@ export default function TestRiderRequests() {
               </div>
 
               <div className="right-sec">
-                <DealFilter
-                  title="Sort By"
-                  isViewBy
-                  isNonRe
-                  droptitle="Pending"
+                <SortByDropdown
+                  droptitle="Status"
+                  options={['Pending', 'Complete', 'Waiting']}
                 />
               </div>
             </div>

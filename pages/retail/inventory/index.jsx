@@ -2,16 +2,16 @@ import { Col, Row, Tab, Tabs } from 'react-bootstrap';
 import { BiCheck } from 'react-icons/bi';
 import { RiShareBoxFill } from 'react-icons/ri';
 import { TbTrendingUp } from 'react-icons/tb';
-import CustomCheckBox from '../../../components/common/customCheckBox';
-import ToggleView from '../../../components/common/toggleView';
+import SortByDropdown from '../../../components/common/sortByDropdown';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import BikeCard from '../../../components/common/cardCheckbox';
+import CustomCheckBox from '../../../components/common/customCheckBox';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
+import ToggleView from '../../../components/common/toggleView';
 import DashboardCard from '../../../components/dashboardCard';
-import DealFilter from '../../../components/dealClosure/dealFilter';
 
 export default function Inventory() {
   const dashboardCardData = [
@@ -143,11 +143,9 @@ export default function Inventory() {
               </div>
 
               <div className="right-sec">
-                <DealFilter
-                  title="Sort By"
-                  isViewBy
-                  isNonRe
-                  droptitle="Pending"
+                <SortByDropdown
+                  droptitle="Status"
+                  options={['Pending', 'Complete', 'Waiting']}
                 />
                 <div className="vertical-divider" />
                 <ToggleView />
@@ -227,12 +225,11 @@ export default function Inventory() {
               </div>
 
               <div className="right-sec">
-                <DealFilter
-                  title="Sort By"
-                  isViewBy
-                  isNonRe
-                  droptitle="Self Procure"
+                <SortByDropdown
+                  droptitle="Select Procure"
+                  options={['Self Procure', 'Self Procure']}
                 />
+
                 <div className="vertical-divider" />
                 <ToggleView />
               </div>
