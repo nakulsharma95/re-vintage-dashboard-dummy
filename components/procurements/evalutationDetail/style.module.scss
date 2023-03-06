@@ -50,8 +50,18 @@
       width: 100%;
     }
     .btnCols{
+      width: 100%;
+      margin-left: 10px;
       button{
-        padding: 9px 15px;
+        padding: 9px 8px;
+        font-size: 11px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        @include desktop-lg{
+          font-size: 12px;
+          padding: 9px 15px;
+        }
       }
     }
   }
