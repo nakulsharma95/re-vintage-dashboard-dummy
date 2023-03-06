@@ -924,6 +924,24 @@ h6 {
   }
 }
 
+.accounts-dashboard-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+	margin-bottom: 1.5rem;
+  margin-top: 24px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
 // text-error
 .text-error {
   color: $theme-danger;
@@ -1040,9 +1058,36 @@ h6 {
     padding-right: 0.33rem;
   }
 }
+// Account Page 
+.whiteBtn {
+  padding: 5px 15px;
+  min-height: 28px;
+  font-size: 12px;
+  font-weight: 400;
+  background: $white;
+  border: 1px solid $white;
+  border-radius: 0px;
+  color: $black;
+  font-weight: 700;
+  text-decoration: none;
+  &:hover{
+    color:$black ;
+  }
+  &:active {
+    background: transparent;
+    border: 1px solid $black;
+  }
+}
 
-.previewViaModal {
-  .modal-dialog {
+.filterTitle{
+font-size: 14px;
+color: $gray-cb;
+font-weight: 400;
+}
+// Account Page 
+
+.previewViaModal{
+  .modal-dialog{
     width: 100%;
     max-width: 558px;
     .modal-content {

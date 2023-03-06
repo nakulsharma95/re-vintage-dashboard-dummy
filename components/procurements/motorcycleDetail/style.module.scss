@@ -24,6 +24,10 @@
     display: flex;
     align-items: center;
 
+    @include mobile{
+      font-size: 20px;
+    }
+
     span {
       color: $theme-yellow-E8;
       font-size: 14px;
@@ -37,6 +41,10 @@
       font-weight: 500;
       margin-bottom: 1.5rem;
       margin-left: 5px;
+
+      @include mobile{
+        margin-bottom: 0;
+      }
     }
   }
 

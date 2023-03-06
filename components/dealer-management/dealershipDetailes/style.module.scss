@@ -110,6 +110,11 @@
           color: $gray-cb;
         }
       }
+      .motors_list_mob{
+        @include mobile{
+          margin-top: 1.5rem;
+        }
+      }
     }
   }
 
