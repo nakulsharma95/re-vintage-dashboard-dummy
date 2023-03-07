@@ -92,16 +92,6 @@ export const loadingToast = (message) => {
  * @returns A string of random characters.
  */
 
-export function generateId(length) {
-  let result = '';
-  const characters =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  for (let i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-  return result;
-}
-
 export const timerHelper = (time) => {
   const formatText = (item) => String(item).padStart(2, '0');
   const nrHours = formatText(Math.floor(time / 1000 / 60 / 60) % 24);
