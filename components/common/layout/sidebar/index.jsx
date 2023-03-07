@@ -37,9 +37,9 @@ export default function Sidebar(props) {
         <div className={styles.accordionItems}>
           <CustomLink
             eventKey="0"
-            className={router.pathname === '/' ? 'active' : ''}
+            className={router.pathname === '/homepage' ? 'active' : ''}
           >
-            <Link href="/">
+            <Link href="/homepage">
               <span className={`${styles.navIcon} nav-item`}>
                 <FiBarChart2 />
               </span>

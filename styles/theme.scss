@@ -635,7 +635,7 @@ h6 {
 
   .header-button-style {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 0 12px;
   }
 }
@@ -1001,7 +1001,7 @@ h6 {
 
 .fixed-Footer {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;  
   background-color: $gray-28;
   position: fixed;
   bottom: 0;

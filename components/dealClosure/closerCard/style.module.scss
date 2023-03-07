@@ -1,5 +1,5 @@
-@import "../../../styles/variables/colors";
-@import "../../../styles/variables//mixins";
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
 
 .bikeCardMain {
   margin-bottom: 1rem;
@@ -75,7 +75,7 @@
       background-color: #e8b016;
       color: $black;
       font-size: 10px;
-    font-weight: 600;
+      font-weight: 600;
     }
   }
 
@@ -87,7 +87,7 @@
     display: flex;
     font-weight: 600;
     align-items: center;
-    
+
     @include desktop-lg {
       font-size: 18px;
     }
@@ -119,15 +119,15 @@
       padding: 0;
       margin-bottom: 0px;
       display: flex;
-    align-items: center;
-    justify-content: end;
+      align-items: center;
+      justify-content: flex-end;
     }
-    .priceInput{
+    .priceInput {
       display: flex;
       align-items: center;
       position: relative;
       padding: 0px;
-      input{
+      input {
         background-color: $gray-2c;
         padding: 5px;
         padding-left: 18px;
@@ -139,8 +139,8 @@
         border: none;
         color: #fff;
       }
-      button.submitBtn{
-        display:inline-block;
+      button.submitBtn {
+        display: inline-block;
         background-color: transparent;
         border: 1px solid $gray-fd;
         border-radius: 0;
@@ -150,22 +150,22 @@
         padding: 0 8px;
         margin-left: 10px;
         transition: all 0.5s;
-        &:hover{
+        &:hover {
           background-color: $gray-fd;
           color: $gray-3;
         }
       }
-      svg{
+      svg {
         cursor: pointer;
         margin-left: 0.8rem;
-        display:inline-block;
+        display: inline-block;
         width: 28px;
       }
-      span{
+      span {
         position: absolute;
         top: 3px;
         left: -2px;
-        svg{
+        svg {
           margin-left: 0;
           font-size: 16px;
         }
@@ -210,7 +210,7 @@
       }
     }
   }
-  .priceHead{
+  .priceHead {
     padding: 0rem 0.8rem;
     margin-bottom: 1rem;
     font-size: 18px;
@@ -269,7 +269,7 @@
       font-size: 12px;
       font-weight: 500;
       margin-bottom: 1rem;
-      margin-left: 10px
+      margin-left: 10px;
     }
   }
   .btnBox {
@@ -286,13 +286,10 @@
       border: 1px solid $gray-a7;
       border-radius: 0;
     }
-
-
-
   }
-  .cardBtnCols{
+  .cardBtnCols {
     padding: 5px 10px 0px;
-    button{
+    button {
       width: 100%;
     }
   }
