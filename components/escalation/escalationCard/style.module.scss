@@ -5,19 +5,29 @@
   color: $white;
   padding: 1rem 1.5rem 0rem 1.5rem;
   margin: 1rem 0;
-@include mobile{
-  overflow-y: scroll;
-}
-  
-
+  @include mobile {
+    overflow-y: scroll;
+  }
 
   .escalationCard_head {
+    @include mobile {
+      display: flex;
+    }
     .escalationCard_topRow {
       display: flex;
-
+      @include mobile {
+        flex-direction: column;
+        // justify-content: space-around;
+        position: relative;
+        top: 1.5rem;
+      }
       h6 {
         font-size: 14px;
-        font-family: "Montserrat";
+        font-family: 'Montserrat';
+
+        @include mobile{
+          margin-bottom: 1.5rem;
+        }
 
         span {
           color: $gray-cb;
@@ -25,6 +35,10 @@
       }
       .escalationCard_topCol {
         display: flex;
+
+        @include mobile {
+          flex-direction: column;
+        }
 
         &:before {
           content: '';
@@ -60,20 +74,25 @@
     .escalationCard_bottomRow {
       display: flex;
       align-items: center;
-	    justify-content: space-between;
+      justify-content: space-between;
       gap: 0 41px;
       padding: 17px 0;
 
-      @include mobile{
+      @include mobile {
         flex-direction: column;
         align-items: start;
         justify-content: start;
       }
 
-	  .escalationCard_Colums {
-		display: flex;
-		gap: 0 41px;
-	  }
+      .escalationCard_Colums {
+        display: flex;
+        gap: 0 41px;
+
+        @include mobile {
+          flex-direction: column;
+         
+        }
+      }
 
       p {
         font-size: 12px;
@@ -91,8 +110,19 @@
       .viewDetailBtn {
         margin-top: 1rem;
         width: 100%;
-		max-width: 163px;
+        max-width: 163px;
+
+        @include mobile{
+          position: relative;
+          left: -12rem;
+        }
       }
     }
+  }
+}
+
+.statusCircle{
+  @include mobile{
+    margin-bottom: 1.5rem;
   }
 }

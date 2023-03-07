@@ -28,7 +28,9 @@ function EscalationCard(props) {
 
           <div className={`${style.escalationCard_topCol}`}>
             <div className="d-flex align-items-center">
-              <div className="status-circle danger me-2" />
+              <div
+                className={`${style.statusCircle} status-circle danger me-2 `}
+              />
               <h6>
                 Status:<span> {props.status}</span>
               </h6>
