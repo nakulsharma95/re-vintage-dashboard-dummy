@@ -3,6 +3,8 @@ import { TbTrendingUp } from 'react-icons/tb';
 import { Tab, Tabs } from 'react-bootstrap';
 import { RxCaretRight } from 'react-icons/rx';
 import { useState } from 'react';
+import { BsFilter } from 'react-icons/bs';
+import { AiOutlineSearch } from 'react-icons/ai';
 import DashboardCard from '../../components/dashboardCard';
 import FilterButton from '../../components/common/filterButton';
 import HeaderPrimary from '../../components/common/headerPrimary';
@@ -192,7 +194,16 @@ export default function Homepage() {
         </Tabs>
       </div>
 
-      {isSmallScreen && <BottomActionBar filterHandler={filterToggle} />}
+      {isSmallScreen && (
+        <BottomActionBar>
+          <button type="button">
+            Search <AiOutlineSearch />
+          </button>
+          <button type="button" onClick={filterToggle}>
+            Filter <BsFilter />
+          </button>
+        </BottomActionBar>
+      )}
     </div>
   );
 }

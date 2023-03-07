@@ -3,7 +3,7 @@
 
 .bikeDetailHead{
 	display: flex;
-	align-items: end;
+	align-items: flex-end;
 	justify-content: space-between;
 	color: $white;
 	@include mobile{
@@ -16,10 +16,12 @@
 			font-size: 16px;
 		}
 	}
+
 	.smtitle{
 		font-size: 14px;
 		color: $gray-cb;
 	}
+
 	.bikeDetailStatus{
 		font-size: 12px;
 		@include mobile{

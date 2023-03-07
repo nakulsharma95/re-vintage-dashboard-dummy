@@ -39,9 +39,9 @@ function Review() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.1,
           slidesToScroll: 1,
-          dots: false,
+          // dots: false,
           arrows: false,
         },
       },

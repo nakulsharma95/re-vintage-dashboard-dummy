@@ -201,6 +201,10 @@
   @include mobile{
     right: 0;
   }
+
+  @include tablet{
+    right: 4rem;
+  }
 }
 
 .dealerDetails {
