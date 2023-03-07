@@ -133,7 +133,9 @@ function MotorcycleDetail(props) {
               <Col className={styles.dealerDetails_list}>
                 <IoCallOutline className={styles.list_icon} /> Call Dealer
               </Col>
-              <Col className={styles.dealerDetails_list}>
+              <Col
+                className={`${styles.dealerDetails_list} d-sm-none d-none d-xl-block`}
+              >
                 <IoCallOutline className={styles.list_icon} />
                 Call CRE
               </Col>
