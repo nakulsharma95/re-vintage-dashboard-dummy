@@ -13,7 +13,7 @@ function EvaluationRequest() {
   const motorCycleDetail = [
     {
       bikeName: '2015 Classic 350',
-      bikeNumber: 'DL 6T AL 7314',
+      bikeNumber: 'DL6TAL7314',
       code: 'FB29FH9219HR1',
       requestBadge: 'Dealer',
       priceOne: '1,19,300',
@@ -35,9 +35,8 @@ function EvaluationRequest() {
     },
     {
       bikeName: '2015 Hunter 350',
-      bikeNumber: 'DL 6T AL 7314',
+      bikeNumber: 'DL6TAL7314',
       code: 'FB29FH9219HR1',
-      requestBadge: 'Dealer',
       priceOne: '1,19,300',
       priceTwo: '1,26,600',
       ownerDetail: '2nd',
@@ -57,9 +56,8 @@ function EvaluationRequest() {
     },
     {
       bikeName: '2015 Electra 350',
-      bikeNumber: 'DL 6T AL 7314',
+      bikeNumber: 'DL6TAL7314',
       code: 'FB29FH9219HR1',
-      requestBadge: 'Dealer',
       priceOne: '1,19,300',
       priceTwo: '1,26,600',
       ownerDetail: '2nd',

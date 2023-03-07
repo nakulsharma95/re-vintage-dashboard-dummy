@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BsPlusLg } from 'react-icons/bs';
+import { BiDownload } from 'react-icons/bi';
 import { Button, Col, Row } from 'react-bootstrap';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import styles from './style.module.scss';
@@ -7,6 +8,7 @@ import PricePrimaryCard from '../../components/priceCalculator/pricePrimaryCard'
 import HeaderPrimary from '../../components/common/headerPrimary';
 import EvaluteForm from '../../components/priceCalculator/evaluateForm';
 import PreviewModal from '../../components/modals/previewModal';
+import OutlineButton from '../../components/common/buttons/OutlineButton';
 
 export default function PriceCalculator() {
   const [addBikeViaModal, setaddBikeViaModal] = useState(false);
@@ -87,13 +89,18 @@ export default function PriceCalculator() {
           title="Instant Estimator Configurator"
           subTitle="Here you will find the Contact details of CRE for active Motorcycle and General Info"
         />
-        <Button
-          variant=""
-          onClick={addBikeViaToggleModal}
-          className={styles.addMotorBtn}
-        >
-          <BsPlusLg /> Add Motorcycle
-        </Button>
+        <div className="d-flex">
+          <div className="me-3">
+            <OutlineButton title="Download Layout" leftIcon={<BiDownload />} />
+          </div>
+          <Button
+            variant=""
+            onClick={addBikeViaToggleModal}
+            className={styles.addMotorBtn}
+          >
+            <BsPlusLg /> Add Motorcycle
+          </Button>
+        </div>
       </div>
       <div className={styles.evaluteMain}>
         <div className="mb-2">Evaluate In Easy Steps</div>

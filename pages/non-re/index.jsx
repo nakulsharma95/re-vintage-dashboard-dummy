@@ -1,41 +1,89 @@
-import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
-import NonReDetailCard from '../../components/non-re/nonReDetailCard';
-import Breadcrumb from '../../components/common/breadcrumbPrimary';
-import SortTabs from '../../components/common/sortTabs';
-import SearchPrimary from '../../components/common/searchPrimary';
-import HeaderPrimary from '../../components/common/headerPrimary';
-import OutlineButton from '../../components/common/buttons/OutlineButton';
-import VerticalBarChart from '../../components/charts/verticalBarChart';
-import styles from './style.module.scss';
+import SortByDropdown from '../../components/common/sortByDropdown';
 import DoughnutChart from '../../components/charts/doughnutChart';
+import VerticalBarChart from '../../components/charts/verticalBarChart';
+import Breadcrumb from '../../components/common/breadcrumbPrimary';
+import OutlineButton from '../../components/common/buttons/OutlineButton';
+import HeaderPrimary from '../../components/common/headerPrimary';
+import SearchPrimary from '../../components/common/searchPrimary';
+import ToggleView from '../../components/common/toggleView';
+import NonReDetailCard from '../../components/non-re/nonReDetailCard';
+import styles from './style.module.scss';
 
 function NonRe() {
   const nonReData = [
     {
       bikeName: '2020 Pulsar NS',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC2N',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'John Watson',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2015 Avenger',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC2M',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'Danim Watson',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2021 TVS Ronin',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC6M',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'Constanza',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2021 TVS Ronin',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC6M',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'John Maxlome',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2020 Pulsar NS',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC6M',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'John Watson',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2015 Avenger',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC6P',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'John Watson',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2021 TVS Ronin',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC6S',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'John Watson',
+      creUserNumber: '9876543210',
     },
     {
       bikeName: '2021 TVS Ronin',
+      bikeNumber: 'DL6TAL7314',
+      price: '1,25,000.00',
+      dealerRef: 'C2N0RJ20FC6L',
+      dealerAddress: 'Neel Motors, Lajpat Nagar, Delhi',
+      creUserName: 'John Watson',
+      creUserNumber: '9876543210',
     },
   ];
 
@@ -126,7 +174,19 @@ function NonRe() {
       </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-3" />
-      <SortTabs selectAllCheck isSortTabBox />
+      <div className="action-list-style my-3">
+        <div className="left-sec">
+          <h5 className="title3">25 Bids Available</h5>
+        </div>
+
+        <div className="right-sec">
+          <SortByDropdown
+            droptitle="Status"
+            options={['Pending', 'Complete', 'Waiting']}
+          />
+          <ToggleView />
+        </div>
+      </div>
       <Row className="mb-4">
         <Col md={6}>
           <div className={styles.enquireDoughnutChart}>
@@ -155,7 +215,16 @@ function NonRe() {
       </Row>
       <div className={styles.nonReDetailCard}>
         {nonReData.map((item) => (
-          <NonReDetailCard reData={item} />
+          <NonReDetailCard
+            bikeName={item.bikeName}
+            bikeNumber={item.bikeNumber}
+            reData={item}
+            price={item.price}
+            dealerRef={item.dealerRef}
+            dealerAddress={item.dealerAddress}
+            creUserName={item.creUserName}
+            creUserNumber={item.creUserNumber}
+          />
         ))}
       </div>
     </>

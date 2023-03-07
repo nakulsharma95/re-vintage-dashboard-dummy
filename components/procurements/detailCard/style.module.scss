@@ -20,7 +20,7 @@
 
 .detailCard {
   background-color: $gray-28;
-  border-radius: 5px;
+  border-radius: 0;
   @include mobile{
     margin-bottom: 25px;
   }
@@ -28,6 +28,7 @@
 
 .borderStyles {
   border-bottom: 1px solid $gray-4c;
+  padding: 8px 0;
   &:last-child{
     border-bottom: none;
   }
@@ -36,10 +37,22 @@
 .headerDetail {
   h2 {
     font-size: 14px;
+    line-height: 1.6rem;
+    width: 100%;
+    max-width: fit-content;
+    small{
+      color: $gray-a7;
+      margin: 0 3px;
+    }
   }
 
   span {
     font-size: 13px;
+  }
+  .smTitle{
+    display: inline-block;
+    color: $gray-a7;
+    margin-left: 5px;
   }
 }
 
@@ -81,6 +94,8 @@
 }
 
 .detailPincode {
+  width: 100%;
+  max-width: 89px;
   span {
     font-size: 12px;
   }
@@ -134,9 +149,11 @@
 
 .detailCardFooter {
   background-color: $gray-18;
+  border: none;
 
   span {
     font-size: 12px;
+    font-weight: 500;
   }
 
   p {

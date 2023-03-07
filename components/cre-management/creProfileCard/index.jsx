@@ -8,12 +8,12 @@ import OutlineDropdown from '../../common/buttons/OutlineDropdown';
 function CreProfileCard(props) {
   return (
     <Row className={styles.profileCardHead}>
-      <Col md={3}>
+      <Col className="p-md-0" xxl={3} xl={3} lg={4}>
         <div className={styles.profileImg}>
           <img src="/images/cre-profile-card.png" alt="" />
         </div>
       </Col>
-      <Col md={9}>
+      <Col xxl={9} xl={9} lg={8}>
         <div className={styles.performerDetails}>
           <Row>
             <Col md={6}>
@@ -29,15 +29,17 @@ function CreProfileCard(props) {
               className="d-flex align-items-center justify-content-end"
               md={6}
             >
-              {' '}
               <OutlineDropdown
+                className={styles.displayAction}
                 dropdownTitle="Actions"
+                themeWhite
+                width="170px"
                 options={['Temporary Disable', 'Unavailable', 'Edit Details']}
               />
             </Col>
           </Row>
-          <Row className="mt-5">
-            <Col xxl={4} xl={3} lg={6} md={6}>
+          <Row className="mt-md-5 mt-4">
+            <Col xxl={3} xl={3} lg={6} md={6}>
               <div className={styles.performerArea}>
                 <BiLocationPlus className={styles.icon} size={20} />
                 <span>{props.area}</span>

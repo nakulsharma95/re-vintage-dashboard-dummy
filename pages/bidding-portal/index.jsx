@@ -170,7 +170,7 @@ export default function BiddingPortal() {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <Breadcrumb title="Bidding Portal" />
-        <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
+        <BiddingTimer biddingEndTime={17} biddingStartTime={14} />
       </div>
 
       <HeaderPrimary headerClass="mb-2" title="Bidding Portal">
@@ -193,6 +193,7 @@ export default function BiddingPortal() {
         {upcomingBikeData.map((item) => (
           <Col md={3}>
             <BiddingCard
+              isCardTitle
               baseprice
               arrowBtn
               imageUrl={item.imageUrl}
@@ -219,6 +220,9 @@ export default function BiddingPortal() {
           <Col md={3}>
             <BiddingCard
               highestBid
+              highestBidSymbol
+              bidTitle="Highest Bid"
+              isCardTitle
               redBtn
               imageUrl={item.imageUrl}
               bikeName={item.name}
@@ -243,7 +247,10 @@ export default function BiddingPortal() {
         {closedBikeData.map((item) => (
           <Col md={3}>
             <BiddingCard
+              isCardTitle
               highestBid
+              highestBidSymbol
+              bidTitle="Base Price"
               imageUrl={item.imageUrl}
               bikeName={item.name}
               bikeNumber={item.number}
@@ -267,8 +274,11 @@ export default function BiddingPortal() {
         {sellerBikeData.map((item) => (
           <Col md={3}>
             <BiddingCard
+              isCardTitle
               highestBid
-              arrowBtn
+              highestBidSymbol
+              bidTitle="Highest Bid"
+              redBtn
               imageUrl={item.imageUrl}
               bikeName={item.name}
               bikeNumber={item.number}

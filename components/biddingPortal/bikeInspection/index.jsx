@@ -1,4 +1,4 @@
-import { Tab, Nav, Row, Col } from 'react-bootstrap';
+import { Tab, Nav, Row, Col, Button } from 'react-bootstrap';
 import { BiDownload } from 'react-icons/bi';
 import { IoMdDownload } from 'react-icons/io';
 import Image from 'next/image';
@@ -177,10 +177,10 @@ export default function BikeInspection(props) {
           />
         )}
         {props.noOutlineBtn && (
-          <button type="button" className={styles.noOutlineBtn}>
+          <Button className={styles.noOutlineBtn}>
             <IoMdDownload className={styles.noOutlineIcon} />
             Download Insp. Report
-          </button>
+          </Button>
         )}
       </div>
     </div>

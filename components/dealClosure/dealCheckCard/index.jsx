@@ -5,6 +5,7 @@ import { BiRupee } from 'react-icons/bi';
 import { Row, Col, Card, Button } from 'react-bootstrap';
 import styles from './style.module.scss';
 import CustomCheckBox from '../../common/customCheckBox';
+import ArrowButton from '../../common/buttons/ArrowButton';
 
 function DealCheckCard(props) {
   const { data } = props;
@@ -23,7 +24,7 @@ function DealCheckCard(props) {
       )}
       <Card.Body className="px-0">
         <Card.Title className={styles.bkeName}>
-          2015 Classic 350 <span>- DL 6T AL 7314</span>
+          2015 Classic 350 <span>- DL6TAL7314</span>
         </Card.Title>
         <Row className={`${styles.bidPrice} mx-0`}>
           {props.acceptPrice ? (
@@ -73,12 +74,12 @@ function DealCheckCard(props) {
         )}
 
         <div className={styles.btnBox}>
-          <div>
-            <Button variant="primary" className={styles.bikeCardBtn}>
-              VIEW DETAILS
-            </Button>
+          <div className="mb-3">
+            <ArrowButton detailLink="/" title="VIEW DETAILS" />
           </div>
-          {props.pickupCheck && <CustomCheckBox checkTitle="Picked-up" />}
+          {props.pickupCheck && (
+            <CustomCheckBox checkTitle="Motorcycle Picked-up" />
+          )}
         </div>
       </Card.Body>
       <Card.Footer className={styles.cardFooter}>Contact CSE</Card.Footer>

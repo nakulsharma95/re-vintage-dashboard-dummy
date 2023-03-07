@@ -10,10 +10,13 @@
 		border-radius: 0;
 	}
 	.bikeName{
-		font-size: 18px;
+		font-size: 16px;
 		color: $white;
 		margin-bottom: 5px;
 		padding: 10px;
+		@include desktop-lg{
+			font-size: 18px;
+		}
 		span{
 			color: $theme-yellow-E8;
 			font-size: 14px;

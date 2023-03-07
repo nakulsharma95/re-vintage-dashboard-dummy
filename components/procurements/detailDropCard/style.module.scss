@@ -32,12 +32,11 @@
   .borderTopCustom {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     border-top: 1px solid $gray-4c;
-    padding: 10px 0;
+    padding: 15px 0 10px;
 
     .dropCardFooter{
-      border-right: 1px solid $gray-4c;
       padding: 0 15px;
       display: flex;
       align-items: center;
@@ -46,7 +45,7 @@
       transition: all 0.5s;
       background: none;
       border: none;
-      padding: 0;
+      border-right: 1px solid $gray-4c;
 
       &:hover{
         color: $theme-yellow-E8;

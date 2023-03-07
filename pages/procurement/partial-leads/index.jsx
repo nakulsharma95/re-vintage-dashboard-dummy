@@ -19,8 +19,9 @@ export default function PartialLeads() {
       pinCode: '110014',
       prmSource: 'MIY',
       secSource: 'Google',
-      detailNo: '- FB29FH9219HR1',
+      detailNo: 'FB29FH9219HR1',
       reason: 'Customer not interested',
+      dateTime: '30 Sep, 2022 | 4:40 pm',
     },
     {
       ownerName: 'Rishab kumar',
@@ -29,8 +30,9 @@ export default function PartialLeads() {
       pinCode: '110014',
       prmSource: 'MIY',
       secSource: 'Google',
-      detailNo: '- FB29FH9219HR1',
+      detailNo: 'FB29FH9219HR1',
       reason: 'Customer not interested',
+      dateTime: '30 Sep, 2022 | 4:40 pm',
     },
     {
       ownerName: 'Rishab Sharma',
@@ -39,8 +41,9 @@ export default function PartialLeads() {
       pinCode: '110014',
       prmSource: 'MIY',
       secSource: 'Google',
-      detailNo: '- FB29FH9219HR1',
+      detailNo: 'FB29FH9219HR1',
       reason: 'Customer not interested',
+      dateTime: '30 Sep, 2022 | 4:40 pm',
     },
   ];
   return (
@@ -69,12 +72,17 @@ export default function PartialLeads() {
         >
           <Tab eventKey="title1" title="Recent">
             <Row>
-              <ViewAll title="3 Leads Available" viewAllClass="mb-4 mt-0" />
+              <div className="action-list-style my-0 mb-3">
+                <div className="left-sec">
+                  <h5 className="title3">3 Leads Available</h5>
+                </div>
+              </div>
               {cardData.map((item) => (
                 <Col md={4}>
                   <DetailCard
                     isCardFooter
                     isContactBtn
+                    isDropbtn
                     detailNumber={item.detailNo}
                     ownerName={item.ownerName}
                     emailId={item.email}
@@ -94,11 +102,17 @@ export default function PartialLeads() {
           </Tab>
           <Tab eventKey="title2" title="In-progress (4)">
             <Row className="mb-5">
-              <ViewAll title="3 Leads Available" viewAllClass="mb-4 mt-0" />
+              <div className="action-list-style my-0 mb-3">
+                <div className="left-sec">
+                  <h5 className="title3">3 Leads Available</h5>
+                </div>
+              </div>
+
               {cardData.map((item) => (
                 <Col md={4}>
                   <DetailCard
                     isCardFooter
+                    isDropbtn
                     isUserDetail
                     isContactBtn
                     detailNumber={item.detailNo}
@@ -115,11 +129,17 @@ export default function PartialLeads() {
           </Tab>
           <Tab eventKey="title3" title="Dropped (2)">
             <Row className="mb-5">
-              <ViewAll title="3 Leads Available" viewAllClass="mb-4 mt-0" />
+              <div className="action-list-style my-0 mb-3">
+                <div className="left-sec">
+                  <h5 className="title3">3 Leads Available</h5>
+                </div>
+              </div>
               {cardData.map((item) => (
                 <Col md={4}>
                   <DetailCard
                     isCardFooter
+                    isDateTime
+                    dateTime={item.dateTime}
                     isUserDetail
                     isReason
                     reason={item.reason}

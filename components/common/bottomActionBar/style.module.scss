@@ -1,0 +1,29 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/mixins';
+
+.filterBar{
+	background: $white;
+	position: fixed;
+	bottom: 0;
+	z-index: 999;
+	width: 100%;
+	left: 0;
+	height: 50px;
+	display: flex;
+	align-items: center;
+
+	button {
+		border: none;
+		background: none;
+		width: 100%;
+		padding: 0;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 14px;
+
+		&:first-child {
+			border-right: 1px solid $gray-28
+		}
+	}
+}
+

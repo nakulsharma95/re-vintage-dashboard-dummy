@@ -31,7 +31,7 @@ export default function DetailMotorcycleCard(props) {
               {props.kmDrive} km
             </span>
             <span className={`${styles.vehicleOwner} ${styles.DividerRight}`}>
-              {props.owner}
+              {props.owner} Owner
             </span>
             <span className={`${styles.vehicleCc}`}>{props.bikeCC} CC</span>
           </h4>

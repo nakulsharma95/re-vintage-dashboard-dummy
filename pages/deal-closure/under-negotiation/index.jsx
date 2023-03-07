@@ -1,12 +1,12 @@
-import { Row, Col, Tab, Tabs } from 'react-bootstrap';
+import { Col, Row, Tab, Tabs } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import SortTabs from '../../../components/common/sortTabs';
-import CloserBikeCard from '../../../components/dealClosure/closerCard';
-import SearchPrimary from '../../../components/common/searchPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
-import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import ToggleView from '../../../components/common/toggleView';
+import CloserBikeCard from '../../../components/dealClosure/closerCard';
 
 function UnderNegotiation() {
   const cardData = [
@@ -45,7 +45,21 @@ function UnderNegotiation() {
         >
           <Tab eventKey="title1" title="Dealer (25)">
             <Row>
-              <SortTabs />
+              <div className="action-list-style mb-3">
+                <div className="left-sec">
+                  <ul className="horizontal-list">
+                    <li className="list active">All (25)</li>
+                    <li className="list">Price under negotiation (12)</li>
+                    <li className="list">Payment detail pending (8)</li>
+                    <li className="list">Detail sharing pending (7)</li>
+                  </ul>
+                </div>
+
+                <div className="right-sec">
+                  <ToggleView />
+                </div>
+              </div>
+
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} md={6}>
                   <CloserBikeCard
@@ -62,7 +76,20 @@ function UnderNegotiation() {
           </Tab>
           <Tab eventKey="title2" title="Seller Portal (12)">
             <Row>
-              <SortTabs />
+              <div className="action-list-style mb-3">
+                <div className="left-sec">
+                  <ul className="horizontal-list">
+                    <li className="list active">All (25)</li>
+                    <li className="list">Price under negotiation (12)</li>
+                    <li className="list">Payment detail pending (8)</li>
+                    <li className="list">Detail sharing pending (7)</li>
+                  </ul>
+                </div>
+
+                <div className="right-sec">
+                  <ToggleView />
+                </div>
+              </div>
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} md={6}>
                   <CloserBikeCard

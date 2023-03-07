@@ -73,6 +73,9 @@
 
     &.yellowTag {
       background-color: #e8b016;
+      color: $black;
+      font-size: 10px;
+    font-weight: 600;
     }
   }
 
@@ -81,9 +84,18 @@
     color: $white;
     padding: 0rem 0.8rem;
     margin-bottom: 15px;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    
+    @include desktop-lg {
+      font-size: 18px;
+    }
     span {
       font-size: 14px;
       color: #e8b016;
+      margin-left: 5px;
+      font-weight: 600;
     }
   }
   .bidPrice {
@@ -102,7 +114,7 @@
     }
     .priceTxtValue {
       font-size: 18px;
-      font-weight: 500;
+      font-weight: 600;
       color: $white;
       padding: 0;
       margin-bottom: 0px;
@@ -220,6 +232,8 @@
     margin-bottom: 1rem;
     span {
       color: $white;
+      margin-left: 3px;
+      font-size: 12px;
     }
   }
   .price {
@@ -255,6 +269,7 @@
       font-size: 12px;
       font-weight: 500;
       margin-bottom: 1rem;
+      margin-left: 10px
     }
   }
   .btnBox {
@@ -270,6 +285,15 @@
       background: transparent;
       border: 1px solid $gray-a7;
       border-radius: 0;
+    }
+
+
+
+  }
+  .cardBtnCols{
+    padding: 5px 10px 0px;
+    button{
+      width: 100%;
     }
   }
   .cardFooter {

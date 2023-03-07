@@ -6,7 +6,6 @@ import { BiRupee } from 'react-icons/bi';
 import { BsPencil } from 'react-icons/bs';
 import CustomCheckBox from '../../common/customCheckBox';
 import ArrowButton from '../../common/buttons/ArrowButton';
-import ButtonPrimary from '../../common/buttons/ButtonPrimary';
 import styles from './style.module.scss';
 
 function BiddingBikeCard(props) {
@@ -76,7 +75,7 @@ function BiddingBikeCard(props) {
             <div className={styles.priceFlex}>
               <div className={styles.closedPriceCols}>
                 <div className={styles.sbTitle}>{props.bidTitle}</div>
-                <div className={styles.bikePrice}>
+                <div className={styles.bikeClosedPrice}>
                   {props.highestBidSymbol && (
                     <span>
                       <BiRupee />
@@ -112,7 +111,7 @@ function BiddingBikeCard(props) {
         )}
         {props.redBtn && (
           <div className={styles.cardBtnCols}>
-            <ButtonPrimary title="VIEW DETAIL" />
+            <ArrowButton detailLink="/bike-details" title="VIEW DETAILS" />
           </div>
         )}
       </Card.Body>
