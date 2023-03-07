@@ -1,7 +1,7 @@
 import Image from 'react-bootstrap/Image';
 import { BsBell } from 'react-icons/bs';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { RiMenu2Fill } from 'react-icons/ri';
+import { Button } from 'react-bootstrap';
 import styles from './style.module.scss';
 
 export default function Header(props) {
@@ -40,13 +40,13 @@ export default function Header(props) {
               </Dropdown>
             </div>
 
-            <button
-              type="button"
+            <Button
               onClick={props.toggleHandler}
               className={styles.toggleButton}
+              variant="link"
             >
-              <RiMenu2Fill color="white" size={24} />
-            </button>
+              <span>{props.buttonIcon}</span>
+            </Button>
           </div>
         </div>
       </div>

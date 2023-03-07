@@ -111,6 +111,11 @@ header {
 	border: none;
   display: none;
 
+  span {
+    color: $white;
+    font-size: 24px;
+  }
+
   @include tablet {
     display: inline-flex;
   }

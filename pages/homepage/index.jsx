@@ -66,16 +66,17 @@ export default function Homepage() {
         title="Welcome to Your Inventory Dashboard"
         subTitle="Here you will see the most latest update"
       >
-        <SearchPrimary placeholder="Search Reference ID" />
-
         {!isSmallScreen && (
-          <button
-            type="button"
-            className={style.filterBtn}
-            onClick={filterToggle}
-          >
-            Filter <MdOutlineFilterList size={15} />
-          </button>
+          <>
+            <SearchPrimary placeholder="Search Reference ID" />
+            <button
+              type="button"
+              className={style.filterBtn}
+              onClick={filterToggle}
+            >
+              Filter <MdOutlineFilterList size={15} />
+            </button>
+          </>
         )}
 
         {isFilterAction && (
@@ -160,8 +161,12 @@ export default function Homepage() {
       </div>
 
       <HeaderPrimary headerClass="mt-5" title="Lead">
-        <SearchPrimary placeholder="Search Mobile Number, Chassis Number…" />
-        {!isSmallScreen && <FilterButton />}
+        <SearchPrimary placeholder="Search" className={style.searchStyle} />
+        <FilterButton />
+        <OutlineDropdown
+          dropdownTitle="Select Week"
+          options={['This Week', 'Second Week']}
+        />
       </HeaderPrimary>
 
       <div className={`custom-tab-style ${style.customTab}`}>

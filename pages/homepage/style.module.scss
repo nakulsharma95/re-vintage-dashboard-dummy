@@ -6,6 +6,10 @@
 .homepageStyle {
   position: relative;
 
+  @include mobile {
+    padding-bottom: 100px;
+  }
+
   .titleCustomStyle {
     color: $white;
   }
@@ -88,5 +92,13 @@
     color: rgba($gray-cb, 0.8);
     border: none;
     font-size: 14px;
+  }
+  
+  // searchStyle
+  .searchStyle {
+    
+    @include mobile {
+      width: auto;
+    }
   }
 }
