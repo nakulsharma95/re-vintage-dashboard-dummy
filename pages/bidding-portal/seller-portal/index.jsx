@@ -1,5 +1,6 @@
 import { Col, Row } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
+import { BiCheck } from 'react-icons/bi';
 import FilterButton from '../../../components/common/filterButton';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
 import SellerPrimaryCard from '../../../components/biddingPortal/sellerPrimaryCard';
@@ -8,7 +9,8 @@ import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
 import SearchPrimary from '../../../components/common/searchPrimary';
-import SortTabs from '../../../components/common/sortTabs';
+import ToggleView from '../../../components/common/toggleView';
+import CustomCheckBox from '../../../components/common/customCheckBox';
 
 export default function ClosedBids() {
   const activeBikeData = [
@@ -67,12 +69,28 @@ export default function ClosedBids() {
       </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-2" />
-      <SortTabs
-        selectAllCheck
-        isCheckInput
-        isSubmitBtn
-        sortTabTitle="25 Bids Available"
-      />
+
+      {/* Action Section */}
+      <div className="action-list-style my-3">
+        <div className="left-sec">
+          <h5 className="title3">25 Bids Available</h5>
+          <div className="vertical-divider" />
+          <div className="d-flex align-items-center">
+            <CustomCheckBox checkTitle="Select all -" className="me-2" />
+            <OutlineButton
+              leftIcon={<BiCheck className="m-0 me-2" />}
+              title="Submit Selected"
+            />
+          </div>
+        </div>
+
+        <div className="right-sec">
+          <ToggleView />
+        </div>
+      </div>
+
+      {/* Action Section End */}
+
       <Row className="mb-3">
         {activeBikeData.map((item) => (
           <Col md={3}>

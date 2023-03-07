@@ -26,11 +26,9 @@ function DealershipDetails() {
         </p>
         <OutlineDropdown
           dropdownTitle="Actions"
-          options={[
-            'Blacklist Dealer',
-            'Blacklist Dealer 2',
-            'Blacklist Dealer 3',
-          ]}
+          width="150px"
+          options={['Blacklist Dealer', 'Disable']}
+          themeWhite
         />
       </HeaderPrimary>
 

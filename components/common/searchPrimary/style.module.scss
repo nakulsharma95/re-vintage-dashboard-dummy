@@ -2,6 +2,11 @@
 @import '../../../styles/variables//mixins';
 
 .searchPrimary {
+
+	@include mobile {
+		width: 100%;
+	}
+	
 .formGroup{
 	position: relative;
 	

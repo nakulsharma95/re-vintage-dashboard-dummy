@@ -1,26 +1,9 @@
-import React from 'react';
-import { Button, Dropdown } from 'react-bootstrap';
-import { BiGridAlt, BiListUl } from 'react-icons/bi';
+import { Dropdown } from 'react-bootstrap';
 import styles from './style.module.scss';
 
 function DealFilter(props) {
   return (
     <div className={styles.dealFilterMain}>
-      {props.singleTitle && (
-        <h3 className={styles.singleTitle}>{props.singleTitle}</h3>
-      )}
-      {props.title && <h4 className={styles.dealFilterTitle}>{props.title}</h4>}
-      {props.isSortButton && (
-        <div className={styles.sortTabBtnBox}>
-          <Button variant="primary" className={styles.viewTabBtn}>
-            <BiGridAlt />
-          </Button>
-          <Button variant="primary" className={styles.viewTabBtn}>
-            <BiListUl />
-          </Button>
-        </div>
-      )}
-
       {props.isViewBy && (
         <div className={styles.viewPending}>
           {props.isNonRe ? '' : <span className="mx-2">View:</span>}

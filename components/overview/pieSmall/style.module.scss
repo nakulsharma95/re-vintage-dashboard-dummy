@@ -5,6 +5,10 @@
   background-color: #282828;
   padding: 1rem;
   width: 255px;
+
+  @include mobile {
+    width: 100%;
+  }
   
   h5 {
     margin-bottom: 24px;

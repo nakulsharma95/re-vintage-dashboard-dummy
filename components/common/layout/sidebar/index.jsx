@@ -368,11 +368,11 @@ export default function Sidebar(props) {
             eventKey="10"
             className={router.pathname === '/report' ? 'active' : ''}
           >
-            <Link href="/report">
+            <Link href="/contact">
               <span className={`${styles.navIcon} nav-item`}>
                 <BsFileEarmarkText />
               </span>
-              Report
+              Contact Us
             </Link>
           </CustomLink>
         </div>
