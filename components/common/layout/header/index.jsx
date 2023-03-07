@@ -1,10 +1,17 @@
 import Image from 'react-bootstrap/Image';
+import { deleteCookie } from 'cookies-next';
+import { useRouter } from 'next/navigation';
 import { BsBell } from 'react-icons/bs';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { RiMenu2Fill } from 'react-icons/ri';
 import styles from './style.module.scss';
 
 export default function Header(props) {
+  const router = useRouter();
+  const logoutHandler = () => {
+    deleteCookie(process.env.NEXT_PUBLIC_COOKIE_NAME);
+    router.push('/homepage');
+  };
   return (
     <header>
       <div className={styles.headerContainer}>
@@ -36,6 +43,7 @@ export default function Header(props) {
                   <Dropdown.Item href="#/action-3">
                     Something else
                   </Dropdown.Item>
+                  <Dropdown.Item onClick={logoutHandler}>Logout</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </div>
