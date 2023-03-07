@@ -42,8 +42,9 @@
     justify-content: center;
     border-top: 1px solid $gray-4c;
     padding: 15px 0 10px;
+    
     @include mobile {
-      justify-content: start;
+      justify-content: flex-start;
     }
 
     .dropCardFooter{
