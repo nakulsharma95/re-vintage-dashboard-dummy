@@ -1,5 +1,6 @@
 /* eslint-disable consistent-return */
 import { NextResponse } from 'next/server';
+import { Buffer } from 'buffer';
 const UNAUTHORIZED_STATUS_CODE = 401;
 const PAYMENT_REQUIRED_STATUS_CODE = 402;
 const SUCCESS_STATUS_CODE = 200;
