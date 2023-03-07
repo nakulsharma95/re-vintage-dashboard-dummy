@@ -5,6 +5,9 @@
 	.title{
 		padding: 15px 25px;
 		background-color: $gray-28;
+		@include mobile{
+			padding: 15px;
+		}
 	}
 	.performanceTitle{
 		display: flex;
@@ -21,6 +24,9 @@
 		background-color: $gray-28;
 		text-align: center;
 		margin-top: 15px;
+		@include mobile{
+			padding: 15px;
+		}
 		h3{
 			margin: 0;
 			font-size: 23px;

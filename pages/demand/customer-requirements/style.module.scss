@@ -1,0 +1,8 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.mobileMt{
+	@include mobile{
+		margin-top: 15px;
+	}
+}

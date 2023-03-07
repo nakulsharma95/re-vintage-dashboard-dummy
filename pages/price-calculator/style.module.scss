@@ -5,6 +5,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	@include mobile-tablet-p{
+		flex-wrap: wrap;
+	}
 }
 .addMotorBtn{
 	display: inline-block;
@@ -37,4 +40,9 @@
 	margin-top: 20px;
 	background-color: $gray-28;
 	padding: 20px;
+	@include mobile-tablet-p{
+		float: left;
+		margin-bottom: 15px;
+		padding: 15px;
+	}
 }

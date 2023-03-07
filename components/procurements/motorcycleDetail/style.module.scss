@@ -26,6 +26,7 @@
 
     @include mobile{
       font-size: 20px;
+      flex-wrap: wrap;
     }
 
     span {
@@ -44,6 +45,8 @@
 
       @include mobile{
         margin-bottom: 0;
+        margin-left: 0;
+        margin-top: 5px;
       }
     }
   }
@@ -91,6 +94,10 @@
     margin-bottom: 3px;
     margin-left: -1rem;
     text-align: right;
+    @include mobile{
+      text-align: left;
+      margin-left: 0;
+    }
   }
 
   .motorStylePriceTxt {
@@ -123,6 +130,9 @@
   position: relative;
   top: 0.6rem;
   left: 0.3rem;
+  @include mobile{
+    top: 0;
+  }
 }
 
 
@@ -130,6 +140,9 @@
   display: flex;
   justify-content: space-between;
   margin-top: 12px;
+  @include mobile{
+    flex-wrap: wrap;
+  }
 
   .priceTag {
     background-color: $black-40;
@@ -144,6 +157,9 @@
   .motorsDetails {
     padding: 0 18px;
     width: 100%;
+    @include mobile{
+      padding: 15px 0;
+    }
 
     span {
       display: block;

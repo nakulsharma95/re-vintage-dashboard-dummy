@@ -59,7 +59,7 @@ export default function BiddingDetails(props) {
 
   return (
     <div>
-      <BackButton backLink="/bidding-portal" title="Back" />
+      <BackButton backLink="/bidding-portal" title="Go Back" />
       <BikeDetailTitle
         title="Motorcycle Details"
         smtitle="Please find all the necessary details below"

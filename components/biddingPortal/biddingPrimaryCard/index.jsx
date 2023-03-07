@@ -92,13 +92,15 @@ function BiddingBikeCard(props) {
           )}
         </div>
         <div className={styles.addtionalInfo}>
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-md-flex align-items-center justify-content-between">
+          <div className={styles.kmModelCols}>
             <span className={styles.infoTitle}>KMs Driven</span>
-            <span className={styles.infoTitle}>Model</span>
-          </div>
-          <div className="d-flex align-items-center justify-content-between">
             <span>{props.kmDrive} KM</span>
+          </div>
+          <div className={styles.kmModelCols}>
+            <span className={styles.infoTitle}>Model</span>
             <span>{props.modelYear}</span>
+          </div>
           </div>
           <div className={styles.locationText}>
             <span>Location</span> {props.location}

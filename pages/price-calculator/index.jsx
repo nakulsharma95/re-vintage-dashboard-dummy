@@ -109,7 +109,7 @@ export default function PriceCalculator() {
       <div className={styles.priceResultText}>18 item found</div>
       <Row className="pricePrimaryCol">
         {priceCardData.map((item) => (
-          <Col md={2}>
+          <Col md={2} xs={6}>
             <PricePrimaryCard
               imageUrl={item.imageUrl}
               priceTitle={item.title}

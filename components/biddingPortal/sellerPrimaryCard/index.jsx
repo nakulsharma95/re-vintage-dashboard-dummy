@@ -27,7 +27,7 @@ export default function SellerPrimaryCard(props) {
           </span>
         </Card.Title>
         <div className={styles.priceList}>
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-md-flex align-items-center justify-content-between">
             <div className={styles.sbTitle}>Seller Portal ID:</div>
             <div className={styles.sellerIdText}>
               {props.sellerId} <FiCopy className={styles.copyIcon} />
@@ -52,13 +52,15 @@ export default function SellerPrimaryCard(props) {
           </div>
         </div>
         <div className={styles.addtionalInfo}>
-          <div className="d-flex align-items-center justify-content-between">
-            <span className={styles.infoTitle}>KMs Driven</span>
-            <span className={styles.infoTitle}>Model</span>
-          </div>
-          <div className="d-flex align-items-center justify-content-between">
-            <span>{props.kmDrive}</span>
-            <span>{props.modelYear}</span>
+          <div className="d-md-flex justify-content-between">
+            <div className={styles.kmModelCols}>
+              <span className={styles.infoTitle}>KMs Driven</span>
+              <span>{props.kmDrive}</span>
+            </div>
+            <div className={styles.kmModelCols}>
+              <span className={styles.infoTitle}>Model</span>
+              <span>{props.modelYear}</span>
+            </div>
           </div>
           <div className={styles.locationText}>
             <span>Location</span> {props.location}

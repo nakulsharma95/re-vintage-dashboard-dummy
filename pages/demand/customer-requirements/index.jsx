@@ -5,6 +5,7 @@ import DemandNav from '../../../components/demand/demandNav';
 import DemandPrimaryCard from '../../../components/demand/demandPrimaryCard';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import OutlineDropdown from '../../../components/common/buttons/OutlineDropdown';
+import styles from './style.module.scss';
 
 function CustomerRequirements() {
   const cardList = [
@@ -41,16 +42,18 @@ function CustomerRequirements() {
         title="Requirement Request"
         subTitle="Please find all the necessary details"
       >
+        <div className={styles.mobileMt}>
         <div className="d-flex align-items-center">
           <span className="sortText">Sort By:</span>
           <OutlineDropdown dropdownTitle="This week" options={['Week 1']} />
           <OutlineDropdown dropdownTitle="City" options={['Mumbai']} />
         </div>
+        </div>
       </HeaderPrimary>
 
       <Row className="mt-3 mb-5">
         {cardList.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6}>
             <DemandPrimaryCard
               imgUrl={item.imgUrl}
               title={item.title}

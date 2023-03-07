@@ -9,7 +9,7 @@ export default function ManaualEntry() {
     <div className={styles.addManaulMain}>
       <div>Add manual entry here</div>
       <div className={styles.addManaulCols}>
-        <div className="d-flex">
+        <div className="d-md-flex">
           <Tags title="Evaluation" bgColor="#B8382F" />
           <Tags title="CRE" bgColor="#2F6AB8" />
           <Tags title="SAMIL" bgColor="#E8B016" />

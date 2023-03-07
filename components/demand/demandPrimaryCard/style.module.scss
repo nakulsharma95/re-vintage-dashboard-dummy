@@ -10,6 +10,9 @@
 		width: 100%;
 		height: 168px;
 		object-fit: cover;
+		@include mobile{
+			height: auto;
+		}
 	}
 	.demandCardText{
 		padding: 15px;
@@ -21,6 +24,9 @@
 			font-size: 14px;
 			margin: 10px 0 0;
 			font-weight: normal;
+			@include mobile{
+				margin: 5px 0 0;
+			}
 		}
 	}
 }

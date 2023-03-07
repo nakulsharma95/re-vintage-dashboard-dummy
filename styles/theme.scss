@@ -784,6 +784,9 @@ h6 {
   display: flex;
   background-color: $black;
   gap: 0 40px;
+  @include mobile{
+    flex-wrap: wrap;
+  }
 
   .col-md-4 {
     &:last-child {
@@ -1090,6 +1093,9 @@ font-weight: 400;
   .modal-dialog{
     width: 100%;
     max-width: 558px;
+    @include mobile{
+      margin: 0 auto;
+    }
     .modal-content {
       border-radius: 0;
       background-color: $gray-18;
@@ -1109,6 +1115,10 @@ font-weight: 400;
 
     .title3 {
       opacity: 0.7;
+      @include mobile{
+        font-size: 14px;
+        line-height: inherit;
+      }
     }
   }
 
@@ -1182,5 +1192,11 @@ font-weight: 400;
         color: rgba($black, 1) !important; 
       }
     }
+  }
+}
+
+.flex-xs-column-reverse{
+  @include mobile{
+    flex-direction: column-reverse;
   }
 }

@@ -9,6 +9,9 @@
 	width: 100%;
 	max-width: fit-content;
 	text-align: center;
+	@include mobile{
+		margin-top: 20px;
+	}
 	span{
 		margin-left: 15px;
 		color: $theme-yellow-E8;

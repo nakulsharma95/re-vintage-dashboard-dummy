@@ -41,9 +41,7 @@ function PreviewModal(props) {
               <FiCopy />
             </Link>
             <div className={styles.sbBtn}>
-              <Button variant="">
-                Submit <MdOutlineArrowForwardIos />
-              </Button>
+              <ArrowButton title="SUBMIT" />
             </div>
           </div>
         )}
@@ -52,15 +50,15 @@ function PreviewModal(props) {
           <div className={styles.addBikeMain}>
             <Form>
               <Form.Group className="mb-4" controlId="formBasicEmail">
-                <Form.Label>Motorcycle Name</Form.Label>
+                <Form.Label className={styles.labelTitle}>Motorcycle Name</Form.Label>
                 <Form.Control type="text" placeholder="Motorcycle Name" />
               </Form.Group>
               <Form.Group className="mb-4" controlId="formBasicEmail">
-                <Form.Label>Upload Picture</Form.Label>
+                <Form.Label className={styles.labelTitle}>Upload Picture</Form.Label>
                 <FileUploader />
               </Form.Group>
               <Form.Group className="mb-4" controlId="formBasicEmail">
-                <Form.Label>Download Layout</Form.Label>
+                <Form.Label className={styles.labelTitle}>Download Layout</Form.Label>
                 <div className={styles.downloadBtn}>
                   <OutlineButton
                     title="Download Layout"
@@ -69,7 +67,7 @@ function PreviewModal(props) {
                 </div>
               </Form.Group>
               <Form.Group className="mb-5" controlId="formBasicEmail">
-                <Form.Label>Upload Excel</Form.Label>
+                <Form.Label className={styles.labelTitle}>Upload Excel</Form.Label>
                 <FileUploader />
               </Form.Group>
               <div className={styles.btnCols}>
