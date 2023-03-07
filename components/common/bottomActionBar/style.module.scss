@@ -11,18 +11,37 @@
 	height: 50px;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
 
 	button {
 		border: none;
 		background: none;
-		width: 100%;
 		padding: 0;
 		text-transform: uppercase;
 		font-weight: 500;
-		font-size: 14px;
+		font-size: 13px;
+		display: flex;
+		align-items: center;
+		gap: 0px;
+		position: relative;
 
-		&:first-child {
-			border-right: 1px solid $gray-28
+		&::after {
+			position: absolute;
+			right: -30px;
+			margin: 0 auto;
+			content: '';
+			display: flex;
+			width: 1px;
+			height: 100%;
+			margin: 0 10px;
+			background-color: $gray-28;
+		}
+
+		&:last-child {
+			&::after {
+				display: none;
+			}
 		}
 	}
 }

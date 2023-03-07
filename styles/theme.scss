@@ -1101,11 +1101,20 @@ font-weight: 400;
 .action-list-style {
   display: flex;
   justify-content: space-between;
+  
+  @include mobile {
+    flex-wrap: wrap;
+    gap: 10px 0;
+  }
 
   .left-sec {
     display: flex;
     align-items: center;
     gap: 0 10px;
+
+    @include mobile {
+      gap: 0 5px;
+    }
 
     .title3 {
       opacity: 0.7;
@@ -1116,6 +1125,10 @@ font-weight: 400;
     display: flex;
     align-items: center;
     gap: 0 10px;
+
+    @include mobile {
+      gap: 0 5px;
+    }
   }
 
   .vertical-divider {

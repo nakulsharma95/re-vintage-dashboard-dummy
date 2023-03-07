@@ -1,5 +1,7 @@
 import { Col, Row } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
+import { AiOutlineSearch } from 'react-icons/ai';
+import { BsFilter } from 'react-icons/bs';
 import SortByDropdown from '../../components/common/sortByDropdown';
 import DoughnutChart from '../../components/charts/doughnutChart';
 import VerticalBarChart from '../../components/charts/verticalBarChart';
@@ -9,9 +11,13 @@ import HeaderPrimary from '../../components/common/headerPrimary';
 import SearchPrimary from '../../components/common/searchPrimary';
 import ToggleView from '../../components/common/toggleView';
 import NonReDetailCard from '../../components/non-re/nonReDetailCard';
+import useMediaQuery from '../../components/common/useMedia';
+import BottomActionBar from '../../components/common/bottomActionBar';
+
 import styles from './style.module.scss';
 
 function NonRe() {
+  const isSmallScreen = useMediaQuery(767);
   const nonReData = [
     {
       bikeName: '2020 Pulsar NS',
@@ -93,7 +99,7 @@ function NonRe() {
     plugins: {
       legend: {
         display: true,
-        position: 'right',
+        position: !isSmallScreen ? 'right' : 'bottom',
         labels: {
           fontSize: 20,
           color: 'white',
@@ -166,11 +172,15 @@ function NonRe() {
     ],
   };
   return (
-    <>
+    <div className={styles.nonReStyle}>
       <Breadcrumb title="Retail" addmoretitle="Non-RE" />
       <HeaderPrimary headerClass="mb-2" title="Non-RE">
-        <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
-        <SearchPrimary placeholder="Search Name, Location, Reference ID" />
+        {!isSmallScreen && (
+          <>
+            <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
+            <SearchPrimary placeholder="Search Name, Location, Reference ID" />
+          </>
+        )}
       </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-3" />
@@ -227,7 +237,21 @@ function NonRe() {
           />
         ))}
       </div>
-    </>
+
+      {isSmallScreen && (
+        <BottomActionBar>
+          <button type="button">
+            Export Data <RiShareBoxFill />
+          </button>
+          <button type="button">
+            Search <AiOutlineSearch />
+          </button>
+          <button type="button">
+            Filter <BsFilter />
+          </button>
+        </BottomActionBar>
+      )}
+    </div>
   );
 }
 
