@@ -1,12 +1,11 @@
-import { Row, Col, Tab, Tabs } from 'react-bootstrap';
+import { Col, Row, Tab, Tabs } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
-import BikeCard from '../../../components/procurements/bikeCard';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import DealFilter from '../../../components/dealClosure/dealFilter';
-import SearchPrimary from '../../../components/common/searchPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
 import HeaderPrimary from '../../../components/common/headerPrimary';
-import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import BikeCard from '../../../components/procurements/bikeCard';
 
 export default function Booking() {
   const cardData = [
@@ -40,12 +39,16 @@ export default function Booking() {
       <div className="custom-tab-style">
         <Tabs
           className="mb-3"
-          defaultActiveKey="title3"
+          defaultActiveKey="title1"
           id="uncontrolled-tab-example"
           tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Booked (4)">
-            <DealFilter singleTitle="4 Leads" />
+            <div className="action-list-style my-3">
+              <div className="left-sec">
+                <h5 className="title3">4 Leads</h5>
+              </div>
+            </div>
             <Row>
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>
@@ -68,7 +71,11 @@ export default function Booking() {
             </Row>
           </Tab>
           <Tab eventKey="title2" title="Sold">
-            <DealFilter singleTitle="4 Leads" />
+            <div className="action-list-style my-3">
+              <div className="left-sec">
+                <h5 className="title3">4 Leads</h5>
+              </div>
+            </div>
             <Row>
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>
@@ -91,7 +98,11 @@ export default function Booking() {
             </Row>
           </Tab>
           <Tab eventKey="title3" title="Returned (12)">
-            <DealFilter singleTitle="4 Leads" />
+            <div className="action-list-style my-3">
+              <div className="left-sec">
+                <h5 className="title3">4 Leads</h5>
+              </div>
+            </div>
             <Row>
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>

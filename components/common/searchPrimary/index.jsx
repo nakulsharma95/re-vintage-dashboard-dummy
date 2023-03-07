@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 
 function SearchPrimary(props) {
   return (
-    <div className={styles.searchPrimary}>
+    <div className={`${styles.searchPrimary} ${props.className}`}>
       <Form.Group className={`${styles.formGroup}`}>
         <Form.Control type="text" placeholder={props.placeholder} />
         <FaSearch className={styles.inputSearch} size={15} />

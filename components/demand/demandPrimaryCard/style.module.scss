@@ -3,6 +3,9 @@
 
 .demandCard{
 	background-color: $gray-28;
+	@include mobile{
+		margin-bottom: 20px;
+	}
 	img{
 		width: 100%;
 		height: 168px;

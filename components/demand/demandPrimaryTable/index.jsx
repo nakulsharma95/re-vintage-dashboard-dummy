@@ -50,7 +50,7 @@ function DemandPrimaryTable(props) {
     },
   ];
   return (
-    <Table bordered className={styles.demandTableMain}>
+    <Table bordered responsive className={styles.demandTableMain}>
       <thead>
         <tr>
           <th>S. No.</th>

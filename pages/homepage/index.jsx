@@ -3,6 +3,8 @@ import { TbTrendingUp } from 'react-icons/tb';
 import { Tab, Tabs } from 'react-bootstrap';
 import { RxCaretRight } from 'react-icons/rx';
 import { useState } from 'react';
+import { BsFilter } from 'react-icons/bs';
+import { AiOutlineSearch } from 'react-icons/ai';
 import DashboardCard from '../../components/dashboardCard';
 import FilterButton from '../../components/common/filterButton';
 import HeaderPrimary from '../../components/common/headerPrimary';
@@ -16,10 +18,13 @@ import LeadSection from '../../components/overview/leadSection';
 import NonReLeadSection from '../../components/overview/nonReLeadSection';
 import OutlineDropdown from '../../components/common/buttons/OutlineDropdown';
 import ButtonPrimary from '../../components/common/buttons/ButtonPrimary';
+import useMediaQuery from '../../components/common/useMedia';
+import BottomActionBar from '../../components/common/bottomActionBar';
 
 import style from './style.module.scss';
 
 export default function Homepage() {
+  const isSmallScreen = useMediaQuery(767);
   const [isFilterAction, setFilterAction] = useState(false);
   const filterToggle = () => {
     setFilterAction(!isFilterAction);
@@ -63,14 +68,18 @@ export default function Homepage() {
         title="Welcome to Your Inventory Dashboard"
         subTitle="Here you will see the most latest update"
       >
-        <SearchPrimary placeholder="Search Reference ID" />
-        <button
-          type="button"
-          className={style.filterBtn}
-          onClick={filterToggle}
-        >
-          Filter <MdOutlineFilterList size={15} />
-        </button>
+        {!isSmallScreen && (
+          <>
+            <SearchPrimary placeholder="Search Reference ID" />
+            <button
+              type="button"
+              className={style.filterBtn}
+              onClick={filterToggle}
+            >
+              Filter <MdOutlineFilterList size={15} />
+            </button>
+          </>
+        )}
 
         {isFilterAction && (
           <div className={style.filterPopup}>
@@ -154,11 +163,15 @@ export default function Homepage() {
       </div>
 
       <HeaderPrimary headerClass="mt-5" title="Lead">
-        <SearchPrimary placeholder="Search Mobile Number, Chassis Number…" />
+        <SearchPrimary placeholder="Search" className={style.searchStyle} />
         <FilterButton />
+        <OutlineDropdown
+          dropdownTitle="Select Week"
+          options={['This Week', 'Second Week']}
+        />
       </HeaderPrimary>
 
-      <div className="custom-tab-style">
+      <div className={`custom-tab-style ${style.customTab}`}>
         <Tabs
           className="mb-3"
           defaultActiveKey="title1"
@@ -180,6 +193,17 @@ export default function Homepage() {
           </Tab>
         </Tabs>
       </div>
+
+      {isSmallScreen && (
+        <BottomActionBar>
+          <button type="button">
+            Search <AiOutlineSearch />
+          </button>
+          <button type="button" onClick={filterToggle}>
+            Filter <BsFilter />
+          </button>
+        </BottomActionBar>
+      )}
     </div>
   );
 }

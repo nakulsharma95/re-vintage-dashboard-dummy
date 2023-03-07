@@ -1,5 +1,9 @@
 /* eslint-disable consistent-return */
 import { NextResponse } from 'next/server';
+const UNAUTHORIZED_STATUS_CODE = 401;
+const PAYMENT_REQUIRED_STATUS_CODE = 402;
+const SUCCESS_STATUS_CODE = 200;
+const USER_ID_INDEX = 2;
 
 async function verifyToken(token, successResponse, failureResponse) {
   const verifyResponse = await fetch(
@@ -12,10 +16,13 @@ async function verifyToken(token, successResponse, failureResponse) {
   );
   const res = await verifyResponse?.json();
 
-  if (res?.code === 200) {
+  if (res?.code === SUCCESS_STATUS_CODE) {
     return { isAuthenticated: true, successResponse };
   }
-  if (res?.code === 401 || res?.code === 402 ) {
+  if (
+    res?.code === UNAUTHORIZED_STATUS_CODE ||
+    res?.code === PAYMENT_REQUIRED_STATUS_CODE
+  ) {
     const splitToken = token?.split('#');
     const generateResponse = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/v3/auth/dashboard/generate-token`,
@@ -26,15 +33,15 @@ async function verifyToken(token, successResponse, failureResponse) {
         },
         body: JSON.stringify({
           refreshToken: splitToken?.[1],
-          userId: splitToken?.[2],
+          userId: splitToken?.[USER_ID_INDEX],
         }),
       }
     );
     const response = await generateResponse?.json();
-    if (response.code === 200) {
-      const tempToken = btoa(
-        `${response?.data?.accessToken}#${response?.data?.refreshToken}#${splitToken?.[2]}`
-      );
+    if (response.code === SUCCESS_STATUS_CODE) {
+      const tempToken = Buffer.from(
+        `${response?.data?.accessToken}#${response?.data?.refreshToken}#${splitToken?.[USER_ID_INDEX]}`
+      ).toString('base64');
       successResponse.cookies.set(
         process.env.NEXT_PUBLIC_COOKIE_NAME,
         tempToken
@@ -47,34 +54,41 @@ async function verifyToken(token, successResponse, failureResponse) {
   failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME);
   return { isAuthenticated: false, failureResponse };
 }
+// demo/sprint-1
 
-async function authenticateUser(req) {
+const authenticateUser = async (req) => {
   const failureResponse = NextResponse.redirect(new URL('/login', req.url));
   const successResponse = NextResponse.redirect(new URL('/homepage', req.url));
 
   let token = req.cookies.get(process.env.NEXT_PUBLIC_COOKIE_NAME);
   if (token && token?.value) {
-    token = atob(token.value);
+    token = Buffer.from(token.value, 'base64').toString('utf-8');
     return verifyToken(token, successResponse, failureResponse);
   }
   failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME);
   return { isAuthenticated: false, failureResponse }; // return false if token is not verified
-}
+};
 
-export async function middleware(request) {
+export const middleware = async (request) => {
   const { pathname } = request.nextUrl;
-  if (pathname.match(/\.(.*)$/)) return; // prevent middleware running on public files
+  if (pathname.match(/\.[a-zA-Z0-9-]+$/)) {
+    return NextResponse.next(); // prevent middleware running on public files
+  }
+
   const isPath = pathname === '/login' || pathname.includes('/sign-up');
   const { isAuthenticated, successResponse, failureResponse } =
     await authenticateUser(request);
-  if (!isPath && !isAuthenticated) {
-    return failureResponse;
-  }
+
   if (isPath && isAuthenticated) {
     return successResponse;
   }
+
+  if (!isPath && !isAuthenticated) {
+    return failureResponse;
+  }
+
   return NextResponse.next();
-}
+};
 
 export const config = {
   matcher: ['/((?!api|_next/static|favicon.ico).*)'],

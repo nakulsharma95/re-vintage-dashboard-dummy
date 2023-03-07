@@ -29,10 +29,11 @@ function CreProfileCard(props) {
               className="d-flex align-items-center justify-content-end"
               md={6}
             >
-              {' '}
               <OutlineDropdown
                 className={styles.displayAction}
                 dropdownTitle="Actions"
+                themeWhite
+                width="170px"
                 options={['Temporary Disable', 'Unavailable', 'Edit Details']}
               />
             </Col>

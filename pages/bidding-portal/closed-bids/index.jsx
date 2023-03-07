@@ -1,14 +1,13 @@
-import { Row, Col, Tab, Tabs } from 'react-bootstrap';
+import { Col, Row, Tab, Tabs } from 'react-bootstrap';
 import { RiShareBoxFill } from 'react-icons/ri';
 import ClosedBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
-import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import DetailPagination from '../../../components/common/paginationPrimary';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
-import HeaderPrimary from '../../../components/common/headerPrimary';
-import SearchPrimary from '../../../components/common/searchPrimary';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
-import SortTabs from '../../../components/common/sortTabs';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import DetailPagination from '../../../components/common/paginationPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
 
 export default function ClosedBids() {
   const closedBikeData = [
@@ -57,7 +56,7 @@ export default function ClosedBids() {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <Breadcrumb title="Bidding Portal" addmoretitle="Closed Bids" />
-        <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
+        <BiddingTimer biddingStartTime={14} biddingEndTime={17} />
       </div>
       <HeaderPrimary headerClass="mb-2" title="Closed Bids">
         <OutlineButton title="Export Data" rightIcon={<RiShareBoxFill />} />
@@ -73,7 +72,11 @@ export default function ClosedBids() {
           tabClassName="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Bids">
-            <SortTabs selectAllCheck sortTabTitle="25 Bids Available" />
+            <div className="action-list-style my-3">
+              <div className="left-sec">
+                <h5 className="title3">25 Bids Available</h5>
+              </div>
+            </div>
             <Row className="mb-3">
               {closedBikeData.map((item) => (
                 <Col md={3}>
@@ -99,7 +102,11 @@ export default function ClosedBids() {
             <DetailPagination className="mt-3" />
           </Tab>
           <Tab eventKey="title2" title="No Bids">
-            <SortTabs selectAllCheck sortTabTitle="25 Bids Available" />
+            <div className="action-list-style my-3">
+              <div className="left-sec">
+                <h5 className="title3">25 Bids Available</h5>
+              </div>
+            </div>
             <Row className="mb-3">
               {closedBikeData.map((item) => (
                 <Col md={3}>

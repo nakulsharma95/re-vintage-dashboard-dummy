@@ -1,42 +1,36 @@
-import React from 'react';
-import { Card, Row, Col } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import styles from './style.module.scss';
 
 function NonReDetailCard(props) {
-  const { reData, nonRE } = props;
   return (
     <Card className={styles.nonReCard}>
       <Card.Body>
         <Card.Title className={styles.nonReCardTitle}>
-          {reData.bikeName} <span>- DL6TAL7314</span>
+          {props.bikeName} <span>- {props.bikeNumber}</span>
         </Card.Title>
         <Card.Subtitle className={styles.nonReCardSubTitle}>
           FB29FH9219HR1
         </Card.Subtitle>
-        <Row className={styles.nonReCardInline}>
-          <Col className={styles.nonReCardInlineText}>43,384 km</Col>
-          <Col className={styles.nonReCardInlineText}>1st Owner</Col>
-          <Col className={styles.nonReCardInlineText}>160 CC</Col>
-        </Row>
-        <h3 className={styles.nonReCardPrice}>₹ 1,25,000.00</h3>
+        <div className={styles.nonReCardInline}>
+          <div className={styles.nonReCardInlineText}>43,384 km</div>
+          <div className={styles.nonReCardInlineText}>1st Owner</div>
+          <div className={styles.nonReCardInlineText}>160 CC</div>
+        </div>
+        <h3 className={styles.nonReCardPrice}>₹ {props.price}</h3>
         <Card.Text className={styles.dealerCode}>
-          Dealer: <span>(C2N0RJ20FC2N)</span>
+          Dealer: <span>({props.dealerRef})</span>
         </Card.Text>
-        <h6
-          className={`${styles.dealerAddress} ${
-            !nonRE ? styles.addressUnderline : ''
-          }`}
-        >
-          Neel Motors, Lajpat Nagar, Delhi
+        <h6 className={`${styles.dealerAddress} ${styles.addressUnderline}`}>
+          {props.dealerAddress}
         </h6>
       </Card.Body>
       <Card.Footer className={styles.nonReCardFooter}>
         <h4 className={styles.footerTitle}>CRE Detail</h4>
         <h4 className={styles.footerSubTitle}>
-          Name: <span>John Watson</span>
+          Name: <span>{props.creUserName}</span>
         </h4>
         <h4 className={`${styles.footerSubTitle} mb-0`}>
-          Number: <span>+91 98765 43210</span>
+          Number: <span>+91 {props.creUserNumber}</span>
         </h4>
       </Card.Footer>
     </Card>

@@ -7,7 +7,7 @@ import styles from './style.module.scss';
 
 export default function AddPrimaryTable() {
   return (
-    <Table bordered hover className={styles.addPrimaryTable}>
+    <Table bordered hover responsive className={styles.addPrimaryTable}>
       <thead>
         <tr>
           <th />

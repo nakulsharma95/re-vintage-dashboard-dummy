@@ -205,7 +205,7 @@ function Demand() {
       </div>
 
       <div className={styles.demandTitle}>All Time Favourites</div>
-      <Row className="mt-3 mb-5">
+      <Row className="mt-3 mb-lg-5">
         {cardList.map((item) => (
           <Col md={3}>
             <DemandPrimaryCard

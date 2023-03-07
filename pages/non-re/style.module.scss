@@ -1,6 +1,12 @@
 @import '../../styles/variables/colors';
 @import '../../styles/variables//mixins';
 
+.nonReStyle {
+
+	@include mobile {
+		padding-bottom: 100px;
+	}
+}
 
 .enquireDoughnutChart {
 	position: relative;
@@ -9,6 +15,10 @@
 	padding-right: 80px;
 	height: 100%;
 	overflow: hidden;
+
+	@include mobile {
+		padding-right: 0px;
+	}
 
 	.barChart {
 		height: 100%;
@@ -25,6 +35,9 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	@include mobile {
+		margin-top: 20px;
+	}
 
 	.barChart {
 		display: flex;

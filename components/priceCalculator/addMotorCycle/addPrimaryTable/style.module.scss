@@ -18,6 +18,9 @@ table.addPrimaryTable{
 			vertical-align: middle;
 			padding: 10px 10px;
 			border: 1px solid $black-40;
+			@include mobile{
+				white-space: nowrap;
+			}
 		}
 		td{
 			color: $white;
@@ -27,6 +30,9 @@ table.addPrimaryTable{
 			border: 1px solid $black-40;
 			white-space: nowrap;
 			padding: 10px 10px;
+			@include mobile{
+				white-space: nowrap;
+			}
 			&:nth-child(01){
 				font-size: 10px;
 				color: $gray-cb;
