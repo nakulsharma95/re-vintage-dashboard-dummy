@@ -1,59 +1,66 @@
 /* eslint-disable consistent-return */
 import { NextResponse } from 'next/server';
 import { Buffer } from 'buffer';
+
 const UNAUTHORIZED_STATUS_CODE = 401;
 const PAYMENT_REQUIRED_STATUS_CODE = 402;
 const SUCCESS_STATUS_CODE = 200;
 const USER_ID_INDEX = 2;
 
 async function verifyToken(token, successResponse, failureResponse) {
-  const verifyResponse = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/v3/auth/dashboard/verify-token`,
-    {
-      headers: new Headers({
-        Authorization: token.split('#')?.[0],
-      }),
-    }
-  );
-  const res = await verifyResponse?.json();
-
-  if (res?.code === SUCCESS_STATUS_CODE) {
-    return { isAuthenticated: true, successResponse };
-  }
-  if (
-    res?.code === UNAUTHORIZED_STATUS_CODE ||
-    res?.code === PAYMENT_REQUIRED_STATUS_CODE
-  ) {
-    const splitToken = token?.split('#');
-    const generateResponse = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/v3/auth/dashboard/generate-token`,
+  try {
+    const verifyResponse = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/v3/auth/dashboard/verify-token`,
       {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          refreshToken: splitToken?.[1],
-          userId: splitToken?.[USER_ID_INDEX],
+        headers: new Headers({
+          Authorization: token.split('#')?.[0],
         }),
       }
     );
-    const response = await generateResponse?.json();
-    if (response.code === SUCCESS_STATUS_CODE) {
-      const tempToken = Buffer.from(
-        `${response?.data?.accessToken}#${response?.data?.refreshToken}#${splitToken?.[USER_ID_INDEX]}`
-      ).toString('base64');
-      successResponse.cookies.set(
-        process.env.NEXT_PUBLIC_COOKIE_NAME,
-        tempToken
-      );
+    const res = await verifyResponse?.json();
+
+    if (res?.code === SUCCESS_STATUS_CODE) {
       return { isAuthenticated: true, successResponse };
+    }
+    if (
+      res?.code === UNAUTHORIZED_STATUS_CODE ||
+      res?.code === PAYMENT_REQUIRED_STATUS_CODE
+    ) {
+      const splitToken = token?.split('#');
+      const generateResponse = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/v3/auth/dashboard/generate-token`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            refreshToken: splitToken?.[1],
+            userId: splitToken?.[USER_ID_INDEX],
+          }),
+        }
+      );
+      const response = await generateResponse?.json();
+      if (response.code === SUCCESS_STATUS_CODE) {
+        const tempToken = Buffer.from(
+          `${response?.data?.accessToken}#${response?.data?.refreshToken}#${splitToken?.[USER_ID_INDEX]}`
+        ).toString('base64');
+        successResponse.cookies.set(
+          process.env.NEXT_PUBLIC_COOKIE_NAME,
+          tempToken
+        );
+        return { isAuthenticated: true, successResponse };
+      }
+      failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME);
+      return { isAuthenticated: false, failureResponse };
     }
     failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME);
     return { isAuthenticated: false, failureResponse };
+  } catch (e) {
+    console.log(e);
+    failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME);
+    return { isAuthenticated: false, failureResponse };
   }
-  failureResponse.cookies.delete(process.env.NEXT_PUBLIC_COOKIE_NAME);
-  return { isAuthenticated: false, failureResponse };
 }
 // demo/sprint-1
 
