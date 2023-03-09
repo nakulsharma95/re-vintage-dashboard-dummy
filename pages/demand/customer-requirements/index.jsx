@@ -43,11 +43,11 @@ function CustomerRequirements() {
         subTitle="Please find all the necessary details"
       >
         <div className={styles.mobileMt}>
-        <div className="d-flex align-items-center">
-          <span className="sortText">Sort By:</span>
-          <OutlineDropdown dropdownTitle="This week" options={['Week 1']} />
-          <OutlineDropdown dropdownTitle="City" options={['Mumbai']} />
-        </div>
+          <div className="d-flex align-items-center">
+            <span className="sortText">Sort By:</span>
+            <OutlineDropdown dropdownTitle="This week" options={['Week 1']} />
+            <OutlineDropdown dropdownTitle="City" options={['Mumbai']} />
+          </div>
         </div>
       </HeaderPrimary>
 

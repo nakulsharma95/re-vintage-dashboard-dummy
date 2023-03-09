@@ -11,6 +11,7 @@ function CompleteBikeDetail({
   isCallerBtnVisible,
   isEnquiryNumVisible,
   isCardFooterVisible,
+  sliderTagVisible,
   isSlider,
 }) {
   const completeData = [
@@ -40,7 +41,10 @@ function CompleteBikeDetail({
       <Card.Body className={`${styles.compBikeCardBody}`}>
         <Row>
           <Col xl={4} lg={6} className={styles.compBikeCardSliderMain}>
-            <BikeSlider isSlider={isSlider} />
+            <BikeSlider
+              isSlider={isSlider}
+              sliderTagVisible={sliderTagVisible}
+            />
           </Col>
           {completeData.map((item) => (
             <Col className="" xl={4} lg={6}>

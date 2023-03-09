@@ -40,10 +40,11 @@ export default function TestRiderRequests() {
             </div>
 
             <CompleteBikeDetail
-              isEvalBtnVisible={false}
               isCallerBtnVisible
               isEnquiryNumVisible
               isSlider
+              isEvalBtnVisible={false}
+              sliderTagVisible
             />
           </Tab>
           <Tab eventKey="title2" title="From OLX">
@@ -60,10 +61,11 @@ export default function TestRiderRequests() {
               </div>
             </div>
             <CompleteBikeDetail
-              isEvalBtnVisible={false}
               isCallerBtnVisible
               isSlider
               isEnquiryNumVisible
+              isEvalBtnVisible={false}
+              sliderTagVisible
             />
           </Tab>
           <Tab eventKey="title3" title="Completed (4)">
@@ -80,10 +82,11 @@ export default function TestRiderRequests() {
               </div>
             </div>
             <CompleteBikeDetail
-              isEvalBtnVisible={false}
               isCallerBtnVisible
               isSlider
               isEnquiryNumVisible
+              isEvalBtnVisible={false}
+              sliderTagVisible
             />
           </Tab>
           <Tab eventKey="title4" title="Dropped (4)">
@@ -100,10 +103,11 @@ export default function TestRiderRequests() {
               </div>
             </div>
             <CompleteBikeDetail
-              isEvalBtnVisible={false}
-              isCallerBtnVisible
+              sCallerBtnVisible
               isSlider
               isEnquiryNumVisible
+              isEvalBtnVisible={false}
+              sliderTagVisible
             />
           </Tab>
         </Tabs>

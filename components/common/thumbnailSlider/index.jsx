@@ -82,9 +82,11 @@ function BikeSlider(props) {
             height="320"
             className={styles.imgFullStyle}
           />
-          <p className={styles.sliderThumbTag}>
-            <span>Status:</span>Pending
-          </p>
+          {props.sliderTagVisible && (
+            <p className={styles.sliderThumbTag}>
+              <span>Status:</span>Pending
+            </p>
+          )}
         </div>
       )}
     </div>
