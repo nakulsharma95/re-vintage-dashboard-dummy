@@ -1197,3 +1197,8 @@ font-weight: 400;
     }
   }
 }
+
+.form-check-input:checked {
+  background-color: #DA291C;
+  border-color: #DA291C;
+}
