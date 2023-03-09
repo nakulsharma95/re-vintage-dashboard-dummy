@@ -10,7 +10,7 @@ export default function TabPrimary(props) {
             className={`${styles.reTabs} mb-3`}
             defaultActiveKey="title1"
             id="uncontrolled-tab-example"
-            tabClassName="custom-tab-nav"
+            tabclassname="custom-tab-nav"
           >
             <Tab
               className={styles.reNavTab}

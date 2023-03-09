@@ -50,7 +50,7 @@ export default function FAQpage() {
           className="mb-3"
           defaultActiveKey="title3"
           id="uncontrolled-tab-example"
-          tabClassName="custom-tab-nav"
+          tabclassname="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Order" />
           <Tab eventKey="title2" title="Bill & payment" />
