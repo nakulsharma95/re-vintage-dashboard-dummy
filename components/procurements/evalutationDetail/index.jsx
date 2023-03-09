@@ -5,48 +5,50 @@ import OutlineButton from '../../common/buttons/OutlineButton';
 import ArrowButton from '../../common/buttons/ArrowButton';
 import styles from './style.module.scss';
 
-function EvaluationDetail({ isEvalBtnVisible, isCallerBtnVisible }) {
+function EvaluationDetail({ isEvalBtnVisible, isCallerBtnVisible, className }) {
   return (
-    <div className={styles.evaluationDetail}>
-      <h4 className={styles.evalTitle}>Evaluation Details</h4>
-      <h5 className={styles.evalSubTitle}>Evaluation Location</h5>
-      <p className={styles.evalText}>Neel Motors, Lajpat Nagar, Delhi</p>
-      <Row>
-        <Col>
-          <h5 className={styles.evalSubTitle}>Owner Details</h5>
-          <p className={styles.evalText}>Rishabh Sharma</p>
-        </Col>
-        <Col>
-          <h5 className={styles.evalSubTitle}>Contact No.</h5>
-          <p className={styles.evalText}>+91 98765 43219</p>
-        </Col>
-      </Row>
-      <h5 className={styles.evalSubTitle}>Evaluation Location</h5>
-      <p className={styles.evalText}>Neel Motors, Lajpat Nagar, Delhi</p>
-
-      {isEvalBtnVisible && (
-        <div className={styles.evalBtnBox}>
-          <div className={styles.arrowBtnDiv}>
-            <ArrowButton detailLink="/" title="DETAILS" />
-          </div>
-          <div className={styles.btnCols}>
-            <OutlineButton title="DOWNLOAD REPORT" />
-          </div>
-        </div>
-      )}
-
-      {isCallerBtnVisible && (
-        <div className={styles.callerBtnBox}>
-          <Col className={styles.CallBtn1}>
-            <FiPhoneCall size={15} />
-            <span className="mx-2">Call Customer</span>
+    <div className={`${styles.evaluationDetail} ${className}`}>
+      <div className={`${styles.contentWrapper}`}>
+        <h4 className={styles.evalTitle}>Evaluation Details</h4>
+        <h5 className={styles.evalSubTitle}>Evaluation Location</h5>
+        <p className={styles.evalText}>Neel Motors, Lajpat Nagar, Delhi</p>
+        <Row>
+          <Col>
+            <h5 className={styles.evalSubTitle}>Owner Details</h5>
+            <p className={styles.evalText}>Rishabh Sharma</p>
           </Col>
-          <Col className={styles.CallBtn2}>
-            <FiPhoneCall size={15} />
-            <span className="mx-2">Call Dealer</span>
+          <Col>
+            <h5 className={styles.evalSubTitle}>Contact No.</h5>
+            <p className={styles.evalText}>+91 98765 43219</p>
           </Col>
-        </div>
-      )}
+        </Row>
+        <h5 className={styles.evalSubTitle}>Evaluation Location</h5>
+        <p className={styles.evalText}>Neel Motors, Lajpat Nagar, Delhi</p>
+
+        {isEvalBtnVisible && (
+          <div className={styles.evalBtnBox}>
+            <div className={styles.arrowBtnDiv}>
+              <ArrowButton detailLink="/" title="DETAILS" />
+            </div>
+            <div className={styles.btnCols}>
+              <OutlineButton title="DOWNLOAD REPORT" />
+            </div>
+          </div>
+        )}
+
+        {isCallerBtnVisible && (
+          <div className={styles.callerBtnBox}>
+            <Col className={styles.CallBtn1}>
+              <FiPhoneCall size={15} />
+              <span className="mx-2">Call Customer</span>
+            </Col>
+            <Col className={styles.CallBtn2}>
+              <FiPhoneCall size={15} />
+              <span className="mx-2">Call Dealer</span>
+            </Col>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

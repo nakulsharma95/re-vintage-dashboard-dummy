@@ -390,6 +390,87 @@ export default function Sidebar(props) {
             </Link>
           </CustomLink>
         </div>
+
+        <Accordion.Item
+          className={`${styles.accordionItems} ${
+            router.pathname === '/inventory/under-refurbishment' ? 'active' : ''
+          }`}
+          eventKey="12"
+        >
+          <Accordion.Header className={styles.headerStyle}>
+            <Link href="/inventory/under-refurbishment">
+              <span className={`${styles.navIcon} nav-item`}>
+                <BsFileEarmarkText />
+              </span>
+              Inventory
+            </Link>
+          </Accordion.Header>
+          <Accordion.Body className={styles.accordionBody}>
+            <li
+              className={
+                router.pathname === '/inventory/under-refurbishment'
+                  ? 'active'
+                  : ''
+              }
+            >
+              <Link href="/inventory/under-refurbishment">
+                Under Refurbishment
+              </Link>
+            </li>
+            <li
+              className={
+                router.pathname === '/inventory/pending-evaluation'
+                  ? 'active'
+                  : ''
+              }
+            >
+              <Link href="/inventory/pending-evaluation">
+                Pending Evaluation
+              </Link>
+            </li>
+            <li
+              className={
+                router.pathname === '/inventory/pending-content-upload'
+                  ? 'active'
+                  : ''
+              }
+            >
+              <Link href="/inventory/pending-content-upload">
+                Pending Content Upload
+              </Link>
+            </li>
+            <li
+              className={
+                router.pathname === '/inventory/pending-approval'
+                  ? 'active'
+                  : ''
+              }
+            >
+              <Link href="/inventory/pending-approval">Pending Approval</Link>
+            </li>
+            <li
+              className={
+                router.pathname === '/inventory/listing' ? 'active' : ''
+              }
+            >
+              <Link href="/inventory/listing">Listing</Link>
+            </li>
+          </Accordion.Body>
+        </Accordion.Item>
+
+        <div className={styles.accordionItems}>
+          <CustomLink
+            eventKey="13"
+            className={router.pathname === '/btr-request' ? 'active' : ''}
+          >
+            <Link href="/btr-request">
+              <span className={`${styles.navIcon} nav-item`}>
+                <BsFileEarmarkText />
+              </span>
+              BTR request
+            </Link>
+          </CustomLink>
+        </div>
       </Accordion>
     </div>
   );
