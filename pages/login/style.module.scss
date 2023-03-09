@@ -1,29 +1,45 @@
 @import '../../styles/variables/colors';
 @import '../../styles/variables//mixins';
 
-
 // Login Header
 .loginHeader {
-	height: 65px;
-	display: flex;
-	align-items: center;
-	padding: 0 50px;
-  
-	.logo {
-	  width: 186px;
-	  height: 25px;
-	}
+  height: 65px;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  @include mobile {
+    padding: 0 15px;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: $black;
+    width: 100%;
   }
 
-  
+  .logo {
+    width: 186px;
+    height: 25px;
+  }
+}
+
 .loginMain {
+  position: relative;
   background-image: url('/images/login-bg.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 67px);
   background-size: 100%;
-  position: relative;
+  position: absolute;
+  @include tablet {
+    background-size: 100% 100%;
+    height: 100vh;
+  }
+  @include mobile {
+    height: 100vh;
+    background-size: 100% 50%;
+  }
   &::before {
     content: '';
     background-color: rgba(0, 0, 0, 0.35);
@@ -39,13 +55,25 @@
     padding: 15px 80px;
     width: 100%;
     max-width: 38%;
-    height: 100vh;
+    height: calc(100vh - 67px);
     position: absolute;
     right: 0;
     top: 0;
     z-index: 9;
     display: flex;
     align-items: center;
+    @include tablet {
+      padding: 15px 30px;
+      max-width: 45%;
+    }
+    @include mobile {
+      max-width: 100%;
+      height: auto;
+      bottom: 0;
+      padding: 0;
+      background-color: transparent;
+      align-items: end;
+    }
 
     @include desktop-lg {
       max-width: 38%;
@@ -64,6 +92,9 @@
     }
     .loginForm {
       margin-top: 70px;
+      @include mobile {
+        margin-top: 50px;
+      }
       .loginFormGroup {
         position: relative;
         margin-bottom: 35px;
@@ -105,7 +136,10 @@
         margin-top: 50px;
         transition: all 0.5s;
         text-decoration: none;
-        
+        @include mobile {
+          margin-top: 20px;
+        }
+
         &:hover {
           background-color: $theme-red-da;
           border-color: $theme-red-da;
@@ -128,6 +162,9 @@
       margin-top: 80px;
       text-align: center;
       position: relative;
+      @include mobile {
+        margin-top: 20px;
+      }
       &::before {
         content: '';
         width: 100%;

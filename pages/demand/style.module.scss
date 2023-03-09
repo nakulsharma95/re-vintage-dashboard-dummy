@@ -13,6 +13,7 @@
   padding: 15px;
   margin: 15px 0;
   margin-bottom: 40px;
+  position: relative;
   &:last-child {
     margin-bottom: 15px;
   }
@@ -23,7 +24,15 @@
   justify-content: space-between;
   @include mobile{
     flex-wrap: wrap;
-    margin-top: 15px;
+    margin-top: 0;
+    flex-direction: column-reverse;
+  }
+  .title{
+    @include mobile{
+      text-align: left;
+      width: 100%;
+      margin-top: 10px;
+    }
   }
 }
 
@@ -31,6 +40,11 @@
   display: flex;
   align-items: center;
   font-size: 12px;
+  @include mobile{
+    position: absolute;
+    bottom: 8px;
+    left: 15px;
+  }
 }
 
 .wishListedGraphBox {
@@ -53,4 +67,39 @@
 
 .allTimeTable{
   margin: 25px 0;
+}
+
+.demandHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mobile{
+    display: block;
+  }
+  .flexCols{
+    display: flex;
+    align-items: center;
+    @include mobile{
+      margin-bottom: 12px;
+      width: 100%;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    } 
+    div{
+      @include mobile{
+        width: 100%;
+      }
+    }
+    button{
+      @include mobile{
+        width: 100%;
+      }
+    }   
+    span{
+      @include mobile{
+        white-space: nowrap;
+      }
+    }
+  }
 }

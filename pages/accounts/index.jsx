@@ -24,7 +24,7 @@ export default function Accounts() {
       description: '07',
       bottomDescription: '-8.45% this month',
       percentage: '10.5%',
-      imageUrl: '/images/key.svg',
+      imageUrl: '/images/bike-icon.svg',
       icon: <FiArrowDownRight color="#DA291C" size={15} />,
       cardBg: '#4A4A4A',
     },

@@ -75,3 +75,9 @@
 		}
 	  }
 }
+
+.sliderMobileMain{
+	@include mobile{
+		padding: 12px;
+	}
+}

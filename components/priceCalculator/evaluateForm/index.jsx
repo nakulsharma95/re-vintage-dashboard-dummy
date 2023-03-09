@@ -7,7 +7,7 @@ import styles from './style.module.scss';
 export default function EvaluteForm() {
   return (
     <Form className={styles.evaluteFormMain}>
-      <div className="d-flex">
+      <div className={styles.evaluteFlex}>
         <Form.Group className={styles.formGroup}>
           <Form.Control type="text" placeholder="Model" />
           <span className={styles.iconImg}>

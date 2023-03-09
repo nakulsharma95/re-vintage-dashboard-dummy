@@ -5,6 +5,9 @@
 	background-color: $gray-28;
 	position: relative;
 	height: 100%;
+	@include mobile{
+		margin-bottom: 20px;
+	}
 	
 	&::after{
 		content: '';
@@ -21,6 +24,9 @@
 		font-weight: 500;
 		display: flex;
 		align-items: center;
+		@include mobile{
+			padding: 15px;
+		}
 		span{
 			font-size: 14px;
 			color: $theme-yellow-E8;

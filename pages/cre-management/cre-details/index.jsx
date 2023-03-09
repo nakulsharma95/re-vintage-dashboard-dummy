@@ -53,7 +53,7 @@ function CreDetails() {
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
-          tabClassName="custom-tab-nav"
+          tabclassname="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Basic Details">
             <div className="cre-heading mb-2 mt-2">Allocated Leads</div>

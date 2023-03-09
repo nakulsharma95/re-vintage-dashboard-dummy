@@ -11,7 +11,7 @@ export default function EstimatedPrice() {
       <Breadcrumb title="Instant Estimator Configurator" />
       <div className="mb-5" />
       <HeaderPrimary headerClass="mb-2" title="Estimated Price" />
-      <Row>
+      <Row className="flex-xs-column-reverse">
         <Col md={7} className="mt-1">
           <PriceInspection
             headingTitle="Royal Enfield - Classic 350 - 2015 - Black & Red - Delhi"

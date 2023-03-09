@@ -81,7 +81,7 @@ export default function BikeInspection(props) {
           </Nav>
           <Tab.Content>
             <Tab.Pane eventKey="tabs_1" className={styles.bidsTabPanel}>
-              <Row>
+              <Row className="flex-xs-column-reverse">
                 <Col md={4}>
                   <BodyExteriors />
                 </Col>
@@ -98,7 +98,7 @@ export default function BikeInspection(props) {
               </Row>
             </Tab.Pane>
             <Tab.Pane eventKey="tabs_2" className={styles.bidsTabPanel}>
-              <Row className="align-items-center">
+              <Row className="align-items-center flex-xs-column-reverse">
                 <Col md={4}>
                   <BodyExteriors />
                 </Col>
@@ -115,7 +115,7 @@ export default function BikeInspection(props) {
               </Row>
             </Tab.Pane>
             <Tab.Pane eventKey="tabs_3" className={styles.bidsTabPanel}>
-              <Row className="align-items-center">
+              <Row className="align-items-center flex-xs-column-reverse">
                 <Col md={4}>
                   <BodyExteriors />
                 </Col>
@@ -132,7 +132,7 @@ export default function BikeInspection(props) {
               </Row>
             </Tab.Pane>
             <Tab.Pane eventKey="tabs_4" className={styles.bidsTabPanel}>
-              <Row className="align-items-center">
+              <Row className="align-items-center flex-xs-column-reverse">
                 <Col md={4}>
                   <BodyExteriors />
                 </Col>
@@ -149,7 +149,7 @@ export default function BikeInspection(props) {
               </Row>
             </Tab.Pane>
             <Tab.Pane eventKey="tabs_5" className={styles.bidsTabPanel}>
-              <Row className="align-items-center">
+              <Row className="align-items-center flex-xs-column-reverse">
                 <Col md={4}>
                   <BodyExteriors />
                 </Col>

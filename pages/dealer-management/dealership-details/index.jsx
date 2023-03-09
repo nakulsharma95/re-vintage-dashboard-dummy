@@ -35,7 +35,7 @@ function DealershipDetails() {
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
-          tabClassName="custom-tab-nav"
+          tabclassname="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Inventory">
             <div className="action-list-style my-3">

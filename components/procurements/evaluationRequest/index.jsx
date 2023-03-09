@@ -90,19 +90,19 @@ function EvaluationRequestDetailCard(props) {
             <Col md={7} className={styles.cardBodyBorderRight}>
               <h2 className={styles.bikeCardBodyTitle}>Evaluation Details</h2>
               <Row className="mb-3">
-                <Col>
+                <Col md={4} xs={6}>
                   <h6 className={styles.bikeCardBodySubTitle}>Name</h6>
                   <p className={styles.bikeCardBodyText}>
                     {props.supplierName}
                   </p>
                 </Col>
-                <Col>
+                <Col md={4} xs={6}>
                   <h6 className={styles.bikeCardBodySubTitle}>Contact No.</h6>
                   <p className={styles.bikeCardBodyText}>
                     {props.supplierContact}
                   </p>
                 </Col>
-                <Col>
+                <Col md={4} xs={12}>
                   <h6 className={styles.bikeCardBodySubTitle}>
                     Evaluation Date & time
                   </h6>

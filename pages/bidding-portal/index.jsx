@@ -168,7 +168,7 @@ export default function BiddingPortal() {
   ];
   return (
     <div>
-      <div className="d-flex align-items-center justify-content-between">
+      <div className="d-md-flex align-items-center justify-content-between">
         <Breadcrumb title="Bidding Portal" />
         <BiddingTimer biddingEndTime={17} biddingStartTime={14} />
       </div>
@@ -187,11 +187,11 @@ export default function BiddingPortal() {
         title="Upcoming Bids"
         leadsTitle="(1507 Leads)"
         viewAllBtn
-        viewAllClass="mt-4 mb-3"
+        viewAllClass="mt-4 mb-4"
       />
       <Row>
         {upcomingBikeData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <BiddingCard
               isCardTitle
               baseprice
@@ -213,11 +213,11 @@ export default function BiddingPortal() {
         title="Active Bids"
         leadsTitle="(97 Leads)"
         viewAllBtn
-        viewAllClass="mt-4 mb-3"
+        viewAllClass="mt-4 mb-4"
       />
       <Row>
         {activeBikeData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <BiddingCard
               highestBid
               highestBidSymbol
@@ -241,11 +241,11 @@ export default function BiddingPortal() {
         title="Closed Bids"
         leadsTitle="(12 Leads)"
         viewAllBtn
-        viewAllClass="mt-4 mb-3"
+        viewAllClass="mt-4 mb-4"
       />
       <Row>
         {closedBikeData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <BiddingCard
               isCardTitle
               highestBid
@@ -268,11 +268,11 @@ export default function BiddingPortal() {
         title="Seller Bids"
         leadsTitle="(25 Leads)"
         viewAllBtn
-        viewAllClass="mt-4 mb-3"
+        viewAllClass="mt-4 mb-4"
       />
       <Row>
         {sellerBikeData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <BiddingCard
               isCardTitle
               highestBid

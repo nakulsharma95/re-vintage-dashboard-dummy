@@ -51,7 +51,7 @@ export default function ActiveBids() {
   ];
   return (
     <div>
-      <div className="d-flex align-items-center justify-content-between">
+      <div className="d-md-flex align-items-center justify-content-between">
         <Breadcrumb title="Bidding Portal" addmoretitle="Active Bids" />
         <BiddingTimer biddingStartTime={14} biddingEndTime={17} />
       </div>
@@ -76,7 +76,7 @@ export default function ActiveBids() {
 
       <Row className="mb-3">
         {activeBikeData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <ActiveBikeCard
               bidTitle="Highest Bid"
               highestBidSymbol

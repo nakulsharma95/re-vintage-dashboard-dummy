@@ -79,8 +79,7 @@
     }
   }
   .bikeCardBody {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem 0;
     @include mobile {
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -90,11 +89,17 @@
       font-size: 12px;
       font-weight: 700;
       margin-bottom: 1.5rem;
+      @include mobile{
+        margin-bottom:0.9rem;
+      }
     }
     .bikeCardBodySubTitle {
       color: #a7a7a7;
       font-size: 12px;
       font-weight: 500;
+      @include mobile{
+        margin-top: 5px;
+      }
     }
     .bikeCardBodyText {
       color: $white;
@@ -206,6 +211,7 @@
       border-top: 1px solid $gray-70;
     }
   }
+  
   @include mobile {
     border-right: none;
   }

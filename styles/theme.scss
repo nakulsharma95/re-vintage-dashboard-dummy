@@ -148,13 +148,12 @@ h6 {
 
 // Custom Tab Style
 .custom-tab-style {
-  .nav-tabs[tabClassName='custom-tab-nav'] {
+  .nav-tabs[tabclassname='custom-tab-nav'] {
     border-color: $gray-70;
 
     @include mobile {
       display: flex;
       flex-wrap: nowrap;
-      overflow-y: hidden;
     }
 
     .nav-item {
@@ -784,6 +783,9 @@ h6 {
   display: flex;
   background-color: $black;
   gap: 0 40px;
+  @include mobile{
+    flex-wrap: wrap;
+  }
 
   .col-md-4 {
     &:last-child {
@@ -963,6 +965,9 @@ h6 {
 }
 
 .leadsModalMain {
+  @include mobile{
+    padding: 0 8px;
+  }
   .modal-dialog {
     width: 100%;
     max-width: 732px;
@@ -1090,6 +1095,9 @@ font-weight: 400;
   .modal-dialog{
     width: 100%;
     max-width: 558px;
+    @include mobile{
+      margin: 0 auto;
+    }
     .modal-content {
       border-radius: 0;
       background-color: $gray-18;
@@ -1118,6 +1126,10 @@ font-weight: 400;
 
     .title3 {
       opacity: 0.7;
+      @include mobile{
+        font-size: 14px;
+        line-height: inherit;
+      }
     }
   }
 
@@ -1201,4 +1213,9 @@ font-weight: 400;
 .form-check-input:checked {
   background-color: #DA291C;
   border-color: #DA291C;
+}
+.flex-xs-column-reverse{
+  @include mobile{
+    flex-direction: column-reverse;
+  }
 }

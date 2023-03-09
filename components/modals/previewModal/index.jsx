@@ -1,15 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import { Button, Modal } from 'react-bootstrap';
 import Link from 'next/link';
+import { Modal } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
-import { IoMdClose } from 'react-icons/io';
-import { FiCopy } from 'react-icons/fi';
 import { BiDownload } from 'react-icons/bi';
-import { MdOutlineArrowForwardIos } from 'react-icons/md';
+import { FiCopy } from 'react-icons/fi';
+import { IoMdClose } from 'react-icons/io';
+import ArrowButton from '../../common/buttons/ArrowButton';
 import OutlineButton from '../../common/buttons/OutlineButton';
 import FileUploader from '../../common/fileUploader';
 import styles from './style.module.scss';
-import ArrowButton from '../../common/buttons/ArrowButton';
 
 function PreviewModal(props) {
   return (
@@ -41,9 +40,7 @@ function PreviewModal(props) {
               <FiCopy />
             </Link>
             <div className={styles.sbBtn}>
-              <Button variant="">
-                Submit <MdOutlineArrowForwardIos />
-              </Button>
+              <ArrowButton title="SUBMIT" />
             </div>
           </div>
         )}
@@ -52,15 +49,21 @@ function PreviewModal(props) {
           <div className={styles.addBikeMain}>
             <Form>
               <Form.Group className="mb-4" controlId="formBasicEmail">
-                <Form.Label>Motorcycle Name</Form.Label>
+                <Form.Label className={styles.labelTitle}>
+                  Motorcycle Name
+                </Form.Label>
                 <Form.Control type="text" placeholder="Motorcycle Name" />
               </Form.Group>
               <Form.Group className="mb-4" controlId="formBasicEmail">
-                <Form.Label>Upload Picture</Form.Label>
+                <Form.Label className={styles.labelTitle}>
+                  Upload Picture
+                </Form.Label>
                 <FileUploader />
               </Form.Group>
               <Form.Group className="mb-4" controlId="formBasicEmail">
-                <Form.Label>Download Layout</Form.Label>
+                <Form.Label className={styles.labelTitle}>
+                  Download Layout
+                </Form.Label>
                 <div className={styles.downloadBtn}>
                   <OutlineButton
                     title="Download Layout"
@@ -69,7 +72,9 @@ function PreviewModal(props) {
                 </div>
               </Form.Group>
               <Form.Group className="mb-5" controlId="formBasicEmail">
-                <Form.Label>Upload Excel</Form.Label>
+                <Form.Label className={styles.labelTitle}>
+                  Upload Excel
+                </Form.Label>
                 <FileUploader />
               </Form.Group>
               <div className={styles.btnCols}>

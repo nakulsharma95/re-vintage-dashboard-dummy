@@ -22,7 +22,7 @@ function MotorcycleDetail(props) {
   };
   return (
     <div
-      className={`${styles.motorcycleDetail} ${styles.completeBorderRight} px-3`}
+      className={`${styles.motorcycleDetail} ${styles.completeBorderRight} px-md-3`}
     >
       <div>
         {props.headBikeDetail && (
@@ -119,8 +119,8 @@ function MotorcycleDetail(props) {
           </div>
         )}
       </div>
-      <div className="mt-3">
-        {props.dealerDetails && (
+      {props.dealerDetails && (
+        <div className="mt-3">
           <div className={styles.dealerDetails}>
             <p>
               Dealer:<span>{props.dealerName}</span>
@@ -145,8 +145,8 @@ function MotorcycleDetail(props) {
               </Col>
             </Row>
           </div>
-        )}
-      </div>
+        </div>
+      )}
 
       {props.footerPrice && (
         <div className={styles.hgBidCols}>
