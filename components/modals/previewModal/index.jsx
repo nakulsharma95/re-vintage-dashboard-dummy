@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import { Modal } from 'react-bootstrap';
 import Link from 'next/link';
+import { Modal } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
-import { IoMdClose } from 'react-icons/io';
-import { FiCopy } from 'react-icons/fi';
 import { BiDownload } from 'react-icons/bi';
+import { FiCopy } from 'react-icons/fi';
+import { IoMdClose } from 'react-icons/io';
+import ArrowButton from '../../common/buttons/ArrowButton';
 import OutlineButton from '../../common/buttons/OutlineButton';
 import FileUploader from '../../common/fileUploader';
 import styles from './style.module.scss';
-import ArrowButton from '../../common/buttons/ArrowButton';
 
 function PreviewModal(props) {
   return (
