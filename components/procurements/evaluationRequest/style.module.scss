@@ -79,8 +79,7 @@
     }
   }
   .bikeCardBody {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem 0;
     @include mobile {
       padding-top: 1rem;
       padding-bottom: 1rem;

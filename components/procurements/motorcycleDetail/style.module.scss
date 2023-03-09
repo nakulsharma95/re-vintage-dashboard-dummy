@@ -2,8 +2,11 @@
 @import '../../../styles/variables//mixins';
 
 .motorcycleDetail {
-  padding-top: 1.5rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 
   .motorcycleTitle {
     color: $gray-cb;
