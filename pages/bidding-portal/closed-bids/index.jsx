@@ -69,7 +69,7 @@ export default function ClosedBids() {
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
-          tabClassName="custom-tab-nav"
+          tabclassname="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Bids">
             <div className="action-list-style my-3">
@@ -109,7 +109,7 @@ export default function ClosedBids() {
             </div>
             <Row className="mb-3">
               {closedBikeData.map((item) => (
-                <Col md={3}>
+                <Col md={3} xs={6}>
                   <ClosedBikeCard
                     className="img-shadow"
                     bidTitle="No bidding on this motorcycle."

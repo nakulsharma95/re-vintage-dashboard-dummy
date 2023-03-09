@@ -38,7 +38,7 @@ function PaymentsPending() {
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
-          tabClassName="custom-tab-nav"
+          tabclassname="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Dealer (25)">
             <Row>

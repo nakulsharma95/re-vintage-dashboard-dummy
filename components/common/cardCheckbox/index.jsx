@@ -39,6 +39,9 @@ function BikeCardRadio({
   isDealer,
   isOlxTooltipVisible,
   className,
+  isViewButtonVisible,
+  isStatusTagVisible,
+  Status,
 }) {
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -57,6 +60,13 @@ function BikeCardRadio({
           {isBikeChassisVisible && (
             <div className={`${styles.bikeChassisTag}`}>
               <span>FB29FH9219HR1</span>
+            </div>
+          )}
+
+          {isStatusTagVisible && (
+            <div className={`${styles.statusTag}`}>
+              <span>Status:</span>
+              {Status}
             </div>
           )}
         </div>
@@ -149,6 +159,13 @@ function BikeCardRadio({
                 VIEW
               </Button>
               <ArrowButton detailLink="" title="APPROVE" buttonStyle="w-full" />
+            </div>
+          )}
+          {isViewButtonVisible && (
+            <div className={styles.creBtnBox}>
+              <Button variant="primary w-full" className={styles.downloadBtn}>
+                VIEW
+              </Button>
             </div>
           )}
         </Card.Body>

@@ -9,6 +9,10 @@
     border-left: none;
     padding: 0 15px;
   }
+  @include mobile{
+    padding: 12px;
+    margin-top: 0;
+  }
 
   .evalTitle {
     color: $gray-cb;

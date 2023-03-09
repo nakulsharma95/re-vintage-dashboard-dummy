@@ -22,7 +22,7 @@ function MotorcycleDetail(props) {
   };
   return (
     <div
-      className={`${styles.motorcycleDetail} ${styles.completeBorderRight} px-3`}
+      className={`${styles.motorcycleDetail} ${styles.completeBorderRight} px-md-3`}
     >
       <div>
         {props.headBikeDetail && (
