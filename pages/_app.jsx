@@ -1,3 +1,4 @@
+import { Provider } from 'react-redux';
 import { SSRProvider } from 'react-bootstrap';
 import Layout from '../components/common/layout';
 import store from '../redux/store';
@@ -14,10 +15,12 @@ import '../styles/theme.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <SSRProvider store={store}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+    <SSRProvider>
+      <Provider store={store}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </Provider>
     </SSRProvider>
   );
 }
