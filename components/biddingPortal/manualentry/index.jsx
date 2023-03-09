@@ -1,9 +1,7 @@
-import { Button } from 'react-bootstrap';
-import { BsChevronRight } from 'react-icons/bs';
 import Form from 'react-bootstrap/Form';
 import styles from './style.module.scss';
 import Tags from '../../common/tags';
-import ArrowButton from '~/components/common/buttons/ArrowButton';
+import ArrowButton from '../../common/buttons/ArrowButton';
 
 export default function ManaualEntry() {
   return (
