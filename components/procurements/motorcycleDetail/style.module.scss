@@ -2,7 +2,6 @@
 @import '../../../styles/variables//mixins';
 
 .motorcycleDetail {
-  padding-top: 1.5rem;
   position: relative;
   @include mobile{
     padding: 12px;

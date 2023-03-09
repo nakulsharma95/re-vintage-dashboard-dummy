@@ -3,7 +3,7 @@ import { deleteCookie } from 'cookies-next';
 import { useRouter } from 'next/navigation';
 import { BsBell } from 'react-icons/bs';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { Button } from 'react-bootstrap';
+
 import styles from './style.module.scss';
 
 export default function Header(props) {
@@ -48,13 +48,13 @@ export default function Header(props) {
               </Dropdown>
             </div>
 
-            <Button
+            <button
+              type="button"
               onClick={props.toggleHandler}
               className={styles.toggleButton}
-              variant="link"
             >
               <span>{props.buttonIcon}</span>
-            </Button>
+            </button>
           </div>
         </div>
       </div>

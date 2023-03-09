@@ -62,8 +62,9 @@ function CompleteBikeDetail({
               />
             </Col>
           ))}
-          <Col className="mb-4" xl={4} lg={6}>
+          <Col xl={4} lg={6}>
             <EvaluationDetail
+              className="h-100 m-0"
               isEvalBtnVisible={isEvalBtnVisible}
               isCallerBtnVisible={isCallerBtnVisible}
             />
