@@ -966,6 +966,9 @@ h6 {
 }
 
 .leadsModalMain {
+  @include mobile{
+    padding: 0 8px;
+  }
   .modal-dialog {
     width: 100%;
     max-width: 732px;

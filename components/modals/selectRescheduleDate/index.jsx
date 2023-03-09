@@ -2,6 +2,7 @@
 import React from 'react';
 import { Row, Col, Modal, Accordion, Button, Form } from 'react-bootstrap';
 import { IoMdClose } from 'react-icons/io';
+import ArrowButton from '~/components/common/buttons/ArrowButton';
 import CustomCalender from '../../common/customCalender';
 import styles from './style.module.scss';
 
@@ -193,9 +194,9 @@ function SelectRescheduleDate(props) {
           </Accordion>
         </div>
         <div className={styles.rescheduleFooter}>
-          <Button variant="primary" className={styles.rescheduleFooter}>
-            RESCHEDULE
-          </Button>
+          <div className={styles.btnCols}>
+          <ArrowButton title="RESCHEDULE" />
+          </div>
         </div>
       </div>
     </Modal>

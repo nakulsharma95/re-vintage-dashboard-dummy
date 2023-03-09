@@ -195,6 +195,7 @@ function Procurement() {
         {cardData.map((item) => (
           <Col xl={4}>
             <DetailCard
+              isDateTime
               isContactBtn
               isCardFooter
               ownerName={item.ownerName}
@@ -217,7 +218,7 @@ function Procurement() {
       />
       <Row>
         {evaluationData.map((item) => (
-          <Col md={3} xs={6} className="p-xs-1">
+          <Col lg={3} md={6} xs={6} className="p-xs-1">
             <BikeCard
               className="bg-gray-3 py-2"
               isKmData

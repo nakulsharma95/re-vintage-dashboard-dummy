@@ -3,6 +3,9 @@
 
 .leadsModalBody {
 	padding: 20px;
+	@include mobile{
+		border: 1px solid $gray-70;
+	}
 
 	.leadsModalHead {
 		border-bottom: 1px solid $gray-70;
@@ -150,4 +153,5 @@
 			}
 		}
 	}
+	
 }

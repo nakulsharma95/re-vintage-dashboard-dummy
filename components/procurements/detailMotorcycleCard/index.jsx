@@ -83,25 +83,26 @@ export default function DetailMotorcycleCard(props) {
         <div className={styles.evaluation}>
           <h5 className="mb-3 text-white-50">Evaluation Details</h5>
 
-          <div className="location eval mb-3">
+          <div className={styles.detailBikeCols}>
             <p>Evaluation Location</p>
             <h5>{props.evaluationLocation}</h5>
           </div>
-          <div className="owner-name eval mb-3">
-            <p>Owner Details</p>
-            <h5>{props.ownerDetails}</h5>
+          <div className={styles.detailBikeFlex}>
+            <div className={styles.detailBikeCols}>
+              <p>Owner Details</p>
+              <h5>{props.ownerDetails}</h5>
+            </div>
+            <div className={styles.detailBikeCols}>
+              <p>Contact No.</p>
+              <h5>{props.ownerContact}</h5>
+            </div>
           </div>
-          <div className="conct eval mb-3">
-            <p>Contact No.</p>
-            <h5>{props.ownerContact}</h5>
-          </div>
-          <div className="date-&-time eval mb-3">
+          <div className={styles.detailBikeCols}>
             <p>Evaluation Date & time</p>
             <h5>{props.evaluationDateTime}</h5>
           </div>
         </div>
       </div>
-
       <DetailDropCard />
     </div>
   );

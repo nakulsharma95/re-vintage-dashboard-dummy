@@ -90,11 +90,17 @@
       font-size: 12px;
       font-weight: 700;
       margin-bottom: 1.5rem;
+      @include mobile{
+        margin-bottom:0.9rem;
+      }
     }
     .bikeCardBodySubTitle {
       color: #a7a7a7;
       font-size: 12px;
       font-weight: 500;
+      @include mobile{
+        margin-top: 5px;
+      }
     }
     .bikeCardBodyText {
       color: $white;
@@ -206,6 +212,7 @@
       border-top: 1px solid $gray-70;
     }
   }
+  
   @include mobile {
     border-right: none;
   }

@@ -187,7 +187,9 @@ export default function ScheduledEvaluation() {
           </Tab>
         </Tabs>
       </div>
+      <div className="mt-5">
       <DetailPagination />
+      </div>
     </div>
   );
 }

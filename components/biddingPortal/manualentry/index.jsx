@@ -3,6 +3,7 @@ import { BsChevronRight } from 'react-icons/bs';
 import Form from 'react-bootstrap/Form';
 import styles from './style.module.scss';
 import Tags from '../../common/tags';
+import ArrowButton from '~/components/common/buttons/ArrowButton';
 
 export default function ManaualEntry() {
   return (
@@ -27,12 +28,7 @@ export default function ManaualEntry() {
         </div>
       </div>
       <div className={styles.submitBtn}>
-        <Button variant="">
-          Submit
-          <span>
-            <BsChevronRight />
-          </span>
-        </Button>
+        <ArrowButton title="SUBMIT" />
       </div>
     </div>
   );

@@ -13,6 +13,9 @@
   background-color: #282828;
   border: 0px;
   border-radius: 0px;
+  @include mobile{
+    padding: 12px;
+  }
 
   .compBikeCardBody {
     padding: 0px;
