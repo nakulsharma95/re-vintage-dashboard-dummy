@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import ButtonPrimary from '../../../components/common/buttons/ButtonPrimary';
-import CustomCalender from '../../../components/common/customCalender';
+import ButtonPrimary from '../../common/buttons/ButtonPrimary';
+import CustomCalender from '../../common/customCalender';
 
 import styles from './style.module.scss';
 
@@ -78,7 +78,6 @@ function BookAppoinmentForm() {
       </Row>
       <hr />
       <Form.Check
-	  color='red'
         checked
         type="checkbox"
         label="I want to use this motorcycle for self consumption."
