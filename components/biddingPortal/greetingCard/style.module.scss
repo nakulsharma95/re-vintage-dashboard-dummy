@@ -1,15 +1,25 @@
 @import '../../../styles/variables/colors';
 @import '../../../styles/variables/mixins';
-.congratulationCard {
+.greetingCard {
   display: flex;
   justify-content: space-between;
   height: 251px;
   margin: 1.5rem 0;
-  .congratulationCardDetailes {
+  position: relative;
+
+  @include mobile{
+    flex-direction: column;
+    margin-bottom: 20rem;
+  }
+  .greetingCardDetailes {
     background-color: #1c1b1b;
     width: 60%;
     height: 100%;
     padding: 2rem;
+    @include mobile{
+      width: 100%;
+      padding: 1rem;
+    }
      h3{
 		font-size: 24px;
 		color: #E5E3E3;
@@ -29,8 +39,12 @@
 
     }
   }
-  .congratulationCardSlider {
+  .greetingCardSlider {
     width: 40%;
     height: 100%;
+
+    @include mobile{
+      width: 90%;
+    }
   }
 }

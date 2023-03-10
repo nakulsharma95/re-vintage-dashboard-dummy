@@ -18,6 +18,7 @@ import BikeSlider from '../../components/common/thumbnailSlider';
 import MotorcycleDetail from '../../components/procurements/motorcycleDetail';
 import CustomCheckBox from '../../components/common/customCheckBox';
 import ButtonPrimary from '../../components/common/buttons/ButtonPrimary';
+import GreetingCard from '../../components/biddingPortal/greetingCard';
 
 export default function BiddingDetails(props) {
   const bikeDetailData = [
@@ -60,6 +61,21 @@ export default function BiddingDetails(props) {
   return (
     <div>
       <BackButton backLink="/bidding-portal" title="Go Back" />
+
+      <GreetingCard
+        icon="/images/greenTick.png"
+        title="Congratulations!!"
+        text1="We are pleased to inform you that you've won the bidding for the product"
+        textYellow="Classic 350 - DL 6T xxxxx."
+        text2=" Classic 350 - DL 6T AC 7314 will be appear in your marketplace within 24 hours."
+      />
+      <GreetingCard
+        icon="/images/redcross.png"
+        title="Sorry!!"
+        text1="We are pleased to inform you that you've won the bidding for the product"
+        textYellow="Classic 350 - DL 6T xxxxx."
+        text2=" Classic 350 - DL 6T AC 7314 will be appear in your marketplace within	24 hours."
+      />
       <BikeDetailTitle
         title="Motorcycle Details"
         smtitle="Please find all the necessary details below"

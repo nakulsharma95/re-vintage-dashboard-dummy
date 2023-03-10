@@ -18,9 +18,9 @@ function BookAppoinmentForm() {
           />
         </Form.Group>
 
-        <div className="mb-3 d-flex">
-          <div className="me-3">
-            <Form.Label className={styles.contactLabel}>
+        <div className="mb-3 d-flex ">
+          <div className="me-3 d-none d-lg-block">
+            <Form.Label className={`${styles.contactLabel} `}>
               Email address
             </Form.Label>
             <Form.Control
@@ -47,12 +47,12 @@ function BookAppoinmentForm() {
             as="textarea"
             rows={4}
             placeholder="Enter addressNo F 29/2, Phase 2, Okhla Industrial Area, Okhla Industrial Area, New Delhi -110020"
-            className={styles.contactInput}
+            className={`${styles.contactInput} ${styles.contactTextArea}`}
           />
         </Form.Group>
       </Form>
       <hr />
-      <p>Select date and time</p>
+      <p className={styles.calenderTitle}>Select date and time</p>
       <Row>
         <Col md={6} className={styles.accordionCalSection}>
           <h5 className={styles.dateSecTitle}>Date</h5>
@@ -78,6 +78,7 @@ function BookAppoinmentForm() {
       </Row>
       <hr />
       <Form.Check
+        className={styles.BookAppoinmentCheck}
         checked
         type="checkbox"
         label="I want to use this motorcycle for self consumption."
