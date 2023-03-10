@@ -58,7 +58,7 @@ function DealCheckCard(props) {
             <h5 className={styles.bikeDetailTitle}>KMs Driven</h5>
             <h6 className={styles.bikeDetailSubTitle}>48,523 KM</h6>
           </Col>
-          <Col className={`${styles.detailTxtValue} text-end`}>
+          <Col className={`${styles.detailTxtValue}`}>
             <h5 className={styles.bikeDetailTitle}>Model</h5>
             <h6 className={styles.bikeDetailSubTitle}>2020</h6>
           </Col>

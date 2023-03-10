@@ -17,6 +17,11 @@
 		border: 1px solid #bbbbbb;
 		background-color: #e7e6e7;
 		margin-right: 10px;
+		@include mobile{
+			width: 14px;
+			height: 14px;
+			margin-right: 5px;
+		}
 		cursor: pointer;
 
 		&:checked {

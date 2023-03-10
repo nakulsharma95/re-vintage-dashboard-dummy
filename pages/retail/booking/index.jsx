@@ -51,7 +51,14 @@ export default function Booking() {
             </div>
             <Row>
               {cardData.map((item) => (
-                <Col xxl={3} xl={4} lg={6} key={item.id}>
+                <Col
+                  xxl={3}
+                  xl={4}
+                  lg={6}
+                  xs={6}
+                  className="p-xs-1"
+                  key={item.id}
+                >
                   <BikeCard
                     isKmData
                     isPriceData
@@ -78,7 +85,14 @@ export default function Booking() {
             </div>
             <Row>
               {cardData.map((item) => (
-                <Col xxl={3} xl={4} lg={6} key={item.id}>
+                <Col
+                  xxl={3}
+                  xl={4}
+                  lg={6}
+                  xs={6}
+                  className="p-xs-1"
+                  key={item.id}
+                >
                   <BikeCard
                     isKmData
                     isPriceData
@@ -105,7 +119,14 @@ export default function Booking() {
             </div>
             <Row>
               {cardData.map((item) => (
-                <Col xxl={3} xl={4} lg={6} key={item.id}>
+                <Col
+                  xxl={3}
+                  xl={4}
+                  lg={6}
+                  xs={6}
+                  className="p-xs-1"
+                  key={item.id}
+                >
                   <BikeCard
                     isKmData
                     isPriceData
