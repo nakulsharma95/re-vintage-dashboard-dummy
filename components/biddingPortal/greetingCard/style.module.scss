@@ -18,7 +18,7 @@
     padding: 2rem;
     @include mobile{
       width: 100%;
-      padding: 1rem;
+      padding: 0.8rem;
     }
      h3{
 		font-size: 24px;
@@ -28,6 +28,10 @@
       font-size: 16px;
       padding: 0 3rem;
       letter-spacing: 0px;
+
+      @include mobile{
+        padding:0 0 0 3rem;
+      }
       span {
         color: $theme-yellow-E8;
       }
@@ -36,7 +40,9 @@
       font-size: 14px;
       color: $gray-cb;
       padding: 1rem 3rem;
-
+      @include mobile{
+        padding:1rem 0 1rem 3rem;
+      }
     }
   }
   .greetingCardSlider {
@@ -44,7 +50,10 @@
     height: 100%;
 
     @include mobile{
-      width: 90%;
+      img{
+        width: 52vh;
+
+      }
     }
   }
 }
