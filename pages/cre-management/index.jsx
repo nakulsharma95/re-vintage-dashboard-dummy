@@ -100,7 +100,7 @@ function CreManagement() {
 
       <Row>
         {cardData.map((item) => (
-          <Col xxl={3} xl={4} lg={6} md={6}>
+          <Col xxl={3} xl={4} lg={6} md={6} xs={6} className="p-xs-1">
             <CreDetailCard
               name="Bob Vishwas"
               jobPost="(Senior CRE)"
@@ -116,7 +116,7 @@ function CreManagement() {
           <h2 className={styles.heading}>Cumulative Performance</h2>
           <Row>
             {performanceCardData.map((item) => (
-              <Col xxl={3} lg={6} md={6}>
+              <Col xxl={3} lg={6} md={6} xs={6} className="p-xs-1">
                 <CrePerformanceCard
                   cardBodyStyle={item.cardBodyBg}
                   title={item.title}

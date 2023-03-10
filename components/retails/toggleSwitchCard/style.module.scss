@@ -4,6 +4,9 @@
 .toggleCardMain {
 	background-color: #282828;
 	padding: 0 1rem;
+	@include mobile{
+		padding: 0 12px;
+	}
 
 	.sliderRound {
 		display: block !important;
@@ -21,6 +24,10 @@
 		label {
 			margin: 0 5px 0 10px;
 			font-size: 12px;
+			@include mobile{
+				margin: 0 0 0 5px;
+				font-size: 9px;
+			}
 		}
 	}
 }

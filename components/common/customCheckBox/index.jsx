@@ -8,7 +8,11 @@ function CustomCheckBox(props) {
       className={`${styles.checkBox} mb-0 ${props.className}`}
       controlId="formBasicCheckbox"
     >
-      <Form.Check type="checkbox" label={props.checkTitle} />
+      <Form.Check
+        className="custom-checkbox"
+        type="checkbox"
+        label={props.checkTitle}
+      />
     </Form.Group>
   );
 }

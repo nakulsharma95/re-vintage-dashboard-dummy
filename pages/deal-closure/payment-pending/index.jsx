@@ -53,7 +53,7 @@ function PaymentsPending() {
               </div>
 
               {cardData.map((item) => (
-                <Col xxl={3} xl={4} lg={6} md={6}>
+                <Col xxl={3} xl={4} lg={6} md={6} xs={6} className="p-xs-1">
                   <CloserBikeCard
                     data={item}
                     contactCSE
@@ -78,7 +78,7 @@ function PaymentsPending() {
                 </div>
               </div>
               {cardData.map((item) => (
-                <Col xxl={3} xl={4} lg={6} md={6}>
+                <Col xxl={3} xl={4} lg={6} md={6} xs={6} className="p-xs-1">
                   <CloserBikeCard
                     data={item}
                     contactCSE

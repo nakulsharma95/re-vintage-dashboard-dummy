@@ -99,6 +99,9 @@
     font-size: 12px;
     padding: 10px;
     border: 1px solid $gray-0D;
+    @include mobile{
+      white-space: nowrap;
+    }
   }
   td {
     color: $gray-BF;
@@ -107,5 +110,15 @@
     padding: 15px;
     border: 1px solid $gray-0D;
     font-weight: 600;
+    @include mobile{
+      white-space: nowrap;
+    }
+  }
+}
+
+
+.matrixPerformanceTabs{
+  @include mobile{
+    overflow-x: auto;
   }
 }
