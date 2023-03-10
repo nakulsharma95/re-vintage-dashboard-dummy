@@ -8,7 +8,8 @@ import {
   Image,
 } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import { BiRupee } from 'react-icons/bi';
+import { BiRupee, BiUser } from 'react-icons/bi';
+import { IoCallOutline } from 'react-icons/io5';
 import ToggleSwitchCard from '../../retails/toggleSwitchCard';
 import ArrowButton from '../buttons/ArrowButton';
 import CustomCheckBox from '../customCheckBox';
@@ -101,9 +102,24 @@ function BikeCardRadio({
             {bikeModal} <span> {bikeRc}</span>
           </Card.Title>
           <Row className={`${styles.bikeDetail} mx-0`}>
-            <Col className={styles.detailTxt}>{bikekm}</Col>
-            <Col className={styles.detailTxt}>{bikeOwner}</Col>
-            <Col className={styles.detailTxt}>{bikeCc}</Col>
+            <Col className={styles.detailTxt}>
+              <div className={styles.iconXsView}>
+                <Image src="/images/icons/road.svg" alt="not found" />
+              </div>
+              {bikekm}
+            </Col>
+            <Col className={styles.detailTxt}>
+              <div className={styles.iconXsView}>
+                <Image src="/images/icons/user.svg" alt="not found" />
+              </div>
+              {bikeOwner}
+            </Col>
+            <Col className={styles.detailTxt}>
+              <div className={styles.iconXsView}>
+                <Image src="/images/icons/engine.svg" alt="not found" />
+              </div>
+              {bikeCc}
+            </Col>
           </Row>
           <h4 className={styles.price}>
             <BiRupee size={21} />
@@ -137,11 +153,17 @@ function BikeCardRadio({
               <h3>{creDetail}</h3>
 
               <p className={`${styles.creInfo} mb-0`}>
-                Name:<span>{creName}</span>
+                <div className={styles.userIcon}>
+                  <BiUser />{' '}
+                </div>
+                <small>Name:</small> <span>{creName}</span>
               </p>
 
               <p className={`${styles.creInfo} mb-0`}>
-                Number:<span>{creNumber}</span>
+                <div className={styles.userIcon}>
+                  <IoCallOutline />{' '}
+                </div>
+                <small>Number:</small> <span>{creNumber}</span>
               </p>
             </div>
           )}
