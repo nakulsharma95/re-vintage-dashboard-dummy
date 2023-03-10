@@ -1,0 +1,27 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables//mixins';
+
+.descriptionCard{
+	background-color: $gray-2;
+	border-radius: 0;
+	padding: 20px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+
+	.descriptionCardBody{
+		h2{
+			font-size: 16px;
+			font-weight: 500;
+			margin-bottom: 20px;
+		}
+	}
+
+	.descriptionBody{
+		p{
+			font-size: 14px;
+			font-family: 400;
+		}
+		padding: 20px;
+		background-color: $gray-28;
+	}
+}

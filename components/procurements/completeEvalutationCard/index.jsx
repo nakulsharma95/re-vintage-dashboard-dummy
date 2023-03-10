@@ -47,7 +47,7 @@ function CompleteBikeDetail({
             />
           </Col>
           {completeData.map((item) => (
-            <Col className="" xl={4} lg={6}>
+            <Col xl={4} lg={6}>
               <MotorcycleDetail
                 headBikeDetail
                 bikeInfo

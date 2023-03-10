@@ -1,0 +1,46 @@
+@import "../../styles/variables/colors";
+@import "../../styles/variables//mixins";
+
+.EditDetailsCard {
+  .editBikeImg {
+    position: relative;
+    img {
+      width: 100%;
+      opacity: 0.5;
+      height: auto;
+     object-fit: cover;
+     margin-bottom: 1.5rem;
+    }
+
+    .editIcon {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+  }
+
+  .uploadBox {
+    position: relative;
+    border: 1px solid $gray-7;
+    .uploadAlign {
+      display: flex;
+      justify-content: center;
+    }
+    .uploadIcon {
+      span {
+        display: flex;
+      }
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+  }
+}

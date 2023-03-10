@@ -944,6 +944,25 @@ h6 {
   }
 }
 
+.user-detail-card{
+  border: 1px solid $gray-70;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+	margin-bottom: 1.5rem;
+  margin-top: 20px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
 // text-error
 .text-error {
   color: $theme-danger;
