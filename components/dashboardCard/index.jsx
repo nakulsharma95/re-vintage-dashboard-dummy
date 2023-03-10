@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 export default function DashboardCard(props) {
   return (
     <div
-      className={`${styles.dashboardCard} py-2`}
+      className={`${styles.dashboardCard} ${props.theme && styles.light} py-2`}
       style={{ background: props.cardBg }}
     >
       <div className={`${styles.cardHead}`}>
@@ -22,27 +22,29 @@ export default function DashboardCard(props) {
         <div className={styles.numbers}>{props.description}</div>
       </div>
 
-      <div>
-        {props.divider && (
-          <div
-            className={`${styles.divider} w-100`}
-            style={{ borderColor: props.dividerColor }}
-          />
-        )}
-        <div className={`${styles.cardFooter} pt-2 w-100`}>
-          {props.priceValue ? (
-            <div className={styles.title2}>{props.priceValue}</div>
-          ) : (
-            <>
-              <h3>{props.bottomDescription}</h3>
-              <div>
-                <span className="mx-2">{props.percentage}</span>
-                {props.icon && <span>{props.icon}</span>}
-              </div>
-            </>
+      {!props.isFooterHide && (
+        <div>
+          {props.divider && (
+            <div
+              className={`${styles.divider} w-100`}
+              style={{ borderColor: props.dividerColor }}
+            />
           )}
+          <div className={`${styles.cardFooter} pt-2 w-100`}>
+            {props.priceValue ? (
+              <div className={styles.title2}>{props.priceValue}</div>
+            ) : (
+              <>
+                <h3>{props.bottomDescription}</h3>
+                <div>
+                  <span className="mx-2">{props.percentage}</span>
+                  {props.icon && <span>{props.icon}</span>}
+                </div>
+              </>
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

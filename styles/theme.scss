@@ -199,8 +199,19 @@ h6 {
 }
 
 // default White tab style
+
+.tabs-mobile-view{
+  @include mobile{
+    overflow-x: auto;
+  }
+}
 .default-tab-style {
   border: 1px solid $gray-70;
+  @include mobile{
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
 
   .nav-item {
     border-right: 1px solid $gray-70;
@@ -1236,5 +1247,25 @@ font-weight: 400;
 .flex-xs-column-reverse{
   @include mobile{
     flex-direction: column-reverse;
+  }
+}
+
+// Evalute Card Style
+.evalute-card {
+	margin-top: 20px;
+	background-color: $gray-28;
+	padding: 20px;
+  
+	@include mobile-tablet-p{
+		float: left;
+		margin-bottom: 15px;
+		padding: 15px;
+	}
+}
+
+.custom-checkbox{
+  @include mobile{
+    display: flex;
+    align-items: center;
   }
 }

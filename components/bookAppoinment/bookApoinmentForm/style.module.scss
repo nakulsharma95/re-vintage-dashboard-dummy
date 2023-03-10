@@ -2,14 +2,20 @@
 @import '../../../styles/variables//mixins';
 
 .bookAppoinmentForm{
-    background-color: #282828;
+    background-color: $gray-28;
 	width: 65vw;
 	padding: 1rem 1.5rem;
+       
+	@include mobile{
+		width: 93vw;
+		padding: 1rem;
+	}
+
 	.contactLabel{
 		color: $white;
-		font-size: 12px;
+		font-size: 16px;
 		font-weight: 400;
-		width: 27vw;
+		width: 29.5vw;
 		margin-right: 1rem;
 	  }
 	  .contactInput{
@@ -17,16 +23,27 @@
 		color: $white;
 		font-size: 14px;
 		font-weight: 400;
-		background-color: #201F1F;
+		background-color: $gray-20;
 		border: 0px;
 		border-radius: 0px;
+		width: 65vh;
+
+		@include mobile{
+			width: 49vh;
+		}
 		&:focus{
 		  box-shadow: none;
 		  outline: none;
 		}
 	  }
+	  .contactTextArea{
+		width: 100%;
+	  }
 
-
+	  .calenderTitle{
+		font-size: 14px;
+		opacity: 0.9;
+	  }
 	  .accordionCalSection {
 		.dateSecTitle {
 		  color: $white;
@@ -61,7 +78,10 @@
 		  }
 		}
 	  }
-
+	  .BookAppoinmentCheck{
+		font-size: 16px;
+		font-weight: 400;
+	  }
 	  .BookAppoinmentButton{
 		// border: 1px solid yellow;
 		text-align: center;
@@ -71,6 +91,8 @@
 
 		button{
 			width: 35vh;
+			font-size: 12px;
+			font-weight: 600;
 		}
 
 	  }

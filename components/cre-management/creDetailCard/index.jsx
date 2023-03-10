@@ -17,7 +17,7 @@ function CreDetailCard(props) {
         <Card.Body>
           <Card.Title className={styles.headingName}>
             <h3>{props.name}</h3>
-            <span className="mx-2">{props.jobPost}</span>
+            <span className="mx-md-2">{props.jobPost}</span>
           </Card.Title>
 
           <div className={styles.location}>

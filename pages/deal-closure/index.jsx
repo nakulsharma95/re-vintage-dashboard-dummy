@@ -47,7 +47,7 @@ function DealClosure() {
           viewHandler="deal-closure/under-negotiation"
         />
         {cardData.map((item) => (
-          <Col xxl={3} xl={4} lg={6} md={6}>
+          <Col xxl={3} xl={4} lg={6} md={6} xs={6} className="p-xs-1">
             <CloserBikeCard
               data={item}
               location
@@ -65,7 +65,7 @@ function DealClosure() {
           viewHandler="deal-closure/procured"
         />
         {cardData.map((item) => (
-          <Col xxl={3} xl={4} lg={6} md={6}>
+          <Col xxl={3} xl={4} lg={6} md={6} xs={6} className="p-xs-1">
             <CloserBikeCard data={item} rcTransfer cardTag isOwner price />
           </Col>
         ))}
@@ -76,7 +76,7 @@ function DealClosure() {
           viewHandler="deal-closure/dropped"
         />
         {cardData.map((item) => (
-          <Col xxl={3} xl={4} lg={6} md={6}>
+          <Col xxl={3} xl={4} lg={6} md={6} xs={6} className="p-xs-1">
             <CloserBikeCard
               data={item}
               location

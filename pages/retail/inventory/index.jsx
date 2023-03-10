@@ -154,7 +154,14 @@ export default function Inventory() {
 
             <Row>
               {cardData.map((item) => (
-                <Col xxl={3} xl={4} lg={6} key={item.id}>
+                <Col
+                  xxl={3}
+                  xl={4}
+                  lg={6}
+                  key={item.id}
+                  xs={6}
+                  className="p-xs-1"
+                >
                   <BikeCard
                     bikeModal="2015 Classic 350"
                     bikeRc="-DL6TAL7314"
@@ -190,7 +197,14 @@ export default function Inventory() {
             </div>
             <Row>
               {cardData.map((item) => (
-                <Col xxl={3} xl={4} lg={6} key={item.id}>
+                <Col
+                  xxl={3}
+                  xl={4}
+                  lg={6}
+                  key={item.id}
+                  xs={6}
+                  className="p-xs-1"
+                >
                   <BikeCard
                     className="img-shadow"
                     bikeModal="2015 Classic 350"
@@ -236,7 +250,14 @@ export default function Inventory() {
             </div>
             <Row>
               {cardData.map((item) => (
-                <Col xxl={3} xl={4} lg={6} key={item.id}>
+                <Col
+                  xxl={3}
+                  xl={4}
+                  lg={6}
+                  key={item.id}
+                  xs={6}
+                  className="p-xs-1"
+                >
                   <BikeCard
                     bikeModal="2015 Classic 350"
                     bikeRc="-DL6TAL7314"

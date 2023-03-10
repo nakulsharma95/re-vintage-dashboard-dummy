@@ -102,7 +102,7 @@ export default function PriceCalculator() {
           </Button>
         </div>
       </div>
-      <div className={styles.evaluteMain}>
+      <div className="evalute-card">
         <div className="mb-2">Evaluate In Easy Steps</div>
         <EvaluteForm />
       </div>

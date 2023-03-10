@@ -35,14 +35,3 @@
 	display: block;
 	margin: 25px 0 15px;
 }
-
-.evaluteMain{
-	margin-top: 20px;
-	background-color: $gray-28;
-	padding: 20px;
-	@include mobile-tablet-p{
-		float: left;
-		margin-bottom: 15px;
-		padding: 15px;
-	}
-}
