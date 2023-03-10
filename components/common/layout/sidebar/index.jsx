@@ -391,11 +391,34 @@ export default function Sidebar(props) {
           </CustomLink>
         </div>
 
+        {/* Dealer Flow Start here */}
+        <div className={styles.accordionItems}>
+          <CustomLink
+            className={router.pathname === '/escalation' ? 'active' : ''}
+          >
+            <h5 className="text-white">Dealer Journey</h5>
+          </CustomLink>
+        </div>
+
+        <div className={styles.accordionItems}>
+          <CustomLink
+            eventKey="12"
+            className={router.pathname === '/dealer-overview' ? 'active' : ''}
+          >
+            <Link href="/dealer-overview">
+              <span className={`${styles.navIcon} nav-item`}>
+                <FiBarChart2 />
+              </span>
+              Overview
+            </Link>
+          </CustomLink>
+        </div>
+
         <Accordion.Item
           className={`${styles.accordionItems} ${
             router.pathname === '/inventory/under-refurbishment' ? 'active' : ''
           }`}
-          eventKey="12"
+          eventKey="13"
         >
           <Accordion.Header className={styles.headerStyle}>
             <Link href="/inventory/under-refurbishment">
@@ -460,7 +483,7 @@ export default function Sidebar(props) {
 
         <div className={styles.accordionItems}>
           <CustomLink
-            eventKey="13"
+            eventKey="14"
             className={router.pathname === '/btr-request' ? 'active' : ''}
           >
             <Link href="/btr-request">

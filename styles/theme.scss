@@ -1219,3 +1219,16 @@ font-weight: 400;
     flex-direction: column-reverse;
   }
 }
+
+// Evalute Card Style
+.evalute-card {
+	margin-top: 20px;
+	background-color: $gray-28;
+	padding: 20px;
+  
+	@include mobile-tablet-p{
+		float: left;
+		margin-bottom: 15px;
+		padding: 15px;
+	}
+}
