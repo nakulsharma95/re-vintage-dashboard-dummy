@@ -56,3 +56,37 @@
 		  }
 	  }
 }
+.uploadBox {
+    position: relative;
+    border: 1px solid $gray-7;
+	margin-bottom: 1.5rem;
+	
+	@include mobile{
+		height: 250px;
+		}
+    .uploadAlign {
+      display: flex;
+      justify-content: center;
+    }
+    .uploadIcon {
+		.uploadSvg{
+		color: $white;
+		opacity: 0.7;
+		}
+      span {
+        display: flex;
+		font-size: 12px;
+		color: $white;
+		opacity: 0.7;
+		font-weight: 400;
+		margin-top: 5px;
+      }
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+  }
