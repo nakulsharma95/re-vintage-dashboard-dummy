@@ -35,7 +35,7 @@
         tbody {
           padding: 1rem;
           .BoldHead {
-            color: white;
+            color: $white;
             font-size: 16px;
             .BoldHeadIcon {
               font-size: 1.5rem;
@@ -44,7 +44,7 @@
           }
         }
         a {
-          color: #e8b016;
+          color: $theme-yellow-E8;
           text-decoration: none;
         }
       }

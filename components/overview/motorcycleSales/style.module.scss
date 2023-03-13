@@ -3,7 +3,7 @@
 
 .card {
   background: #282828;
-  color: white;
+  color: $white;
   padding: 1.5rem;
 
   .cardHead {
@@ -69,7 +69,7 @@
   }
 }
 .cardBody_star {
-  color: #e8b016;
+  color: $theme-yellow-E8;
 }
 
 .horizontalChartStyle {

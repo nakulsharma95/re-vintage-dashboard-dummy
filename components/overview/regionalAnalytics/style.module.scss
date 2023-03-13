@@ -1,8 +1,8 @@
 @import '../../../styles/variables/colors';
 @import '../../../styles/variables//mixins';
 .card{
-	background: #282828;
-	color: white;
+	background: $gray-28;
+	color: $white;
    padding: 1.5rem;
 
   .cardHead {
@@ -68,7 +68,7 @@
   }
 }
 .cardBody_star {
-  color: #e8b016;
+  color: $theme-yellow-E8;
 }
 
 .horizontalChartStyle {

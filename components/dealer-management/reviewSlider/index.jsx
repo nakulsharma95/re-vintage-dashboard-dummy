@@ -54,24 +54,24 @@ function Review() {
 
       <Slider className={`${style.reviewCards}  review_slider`} {...settings}>
         <div className={style.reviewCard}>
-          <div className={style.reviewCard_head}>
+          <div className={style.reviewCardHead}>
             <img
-              className={style.reviewCard_img}
+              className={style.reviewCardImg}
               src="/images/dealership-detailes/profile_img1.png"
               alt="profil-img"
             />
-            <div className={style.reviewCard_heading}>
+            <div className={style.reviewCardHeading}>
               <h3>Armaan Sharma</h3>
               <p>
                 Reviewed <span>Classic 500 TN</span>
               </p>
-              <p className={style.reviewCard_rating}>
-                <AiFillStar className={style.rating_icon} /> 3 Star rating
+              <p className={style.reviewCardRating}>
+                <AiFillStar className={style.ratingIcon} /> 3 Star rating
               </p>
             </div>
           </div>
 
-          <p className={style.reviewCard_review}>
+          <p className={style.reviewCardReview}>
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
@@ -81,24 +81,24 @@ function Review() {
           </p>
         </div>
         <div className={style.reviewCard}>
-          <div className={style.reviewCard_head}>
+          <div className={style.reviewCardHead}>
             <img
-              className={style.reviewCard_img}
+              className={style.reviewCardImg}
               src="/images/dealership-detailes/profile_img2.png"
               alt="profil-img"
             />
-            <div className={style.reviewCard_heading}>
+            <div className={style.reviewCardHeading}>
               <h3>Jay Kumar Sharma</h3>
               <p>
                 Reviewed <span>Classic 500 TN</span>
               </p>
-              <p className={style.reviewCard_rating}>
-                <AiFillStar className={style.rating_icon} /> 3 Star rating
+              <p className={style.reviewCardRating}>
+                <AiFillStar className={style.ratingIcon} /> 3 Star rating
               </p>
             </div>
           </div>
 
-          <p className={style.reviewCard_review}>
+          <p className={style.reviewCardReview}>
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
@@ -108,24 +108,24 @@ function Review() {
           </p>
         </div>
         <div className={style.reviewCard}>
-          <div className={style.reviewCard_head}>
+          <div className={style.reviewCardHead}>
             <img
-              className={style.reviewCard_img}
+              className={style.reviewCardImg}
               src="/images/dealership-detailes/profile_img3.png"
               alt="profil-img"
             />
-            <div className={style.reviewCard_heading}>
+            <div className={style.reviewCardHeading}>
               <h3>NIkita Seth</h3>
               <p>
                 Reviewed <span>Classic 500 TN</span>
               </p>
-              <p className={style.reviewCard_rating}>
-                <AiFillStar className={style.rating_icon} /> 3 Star rating
+              <p className={style.reviewCardRating}>
+                <AiFillStar className={style.ratingIcon} /> 3 Star rating
               </p>
             </div>
           </div>
 
-          <p className={style.reviewCard_review}>
+          <p className={style.reviewCardReview}>
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
@@ -135,24 +135,24 @@ function Review() {
           </p>
         </div>
         <div className={style.reviewCard}>
-          <div className={style.reviewCard_head}>
+          <div className={style.reviewCardHead}>
             <img
-              className={style.reviewCard_img}
+              className={style.reviewCardImg}
               src="/images/dealership-detailes/profile_img1.png"
               alt="profil-img"
             />
-            <div className={style.reviewCard_heading}>
+            <div className={style.reviewCardHeading}>
               <h3>Armaan Sharma</h3>
               <p>
                 Reviewed <span>Classic 500 TN</span>
               </p>
-              <p className={style.reviewCard_rating}>
-                <AiFillStar className={style.rating_icon} /> 3 Star rating
+              <p className={style.reviewCardRating}>
+                <AiFillStar className={style.ratingIcon} /> 3 Star rating
               </p>
             </div>
           </div>
 
-          <p className={style.reviewCard_review}>
+          <p className={style.reviewCardReview}>
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
@@ -162,24 +162,24 @@ function Review() {
           </p>
         </div>
         <div className={style.reviewCard}>
-          <div className={style.reviewCard_head}>
+          <div className={style.reviewCardHead}>
             <img
-              className={style.reviewCard_img}
+              className={style.reviewCardImg}
               src="/images/dealership-detailes/profile_img2.png"
               alt="profil-img"
             />
-            <div className={style.reviewCard_heading}>
+            <div className={style.reviewCardHeading}>
               <h3>Jay Kumar Sharma</h3>
               <p>
                 Reviewed <span>Classic 500 TN</span>
               </p>
-              <p className={style.reviewCard_rating}>
-                <AiFillStar className={style.rating_icon} /> 3 Star rating
+              <p className={style.reviewCardRating}>
+                <AiFillStar className={style.ratingIcon} /> 3 Star rating
               </p>
             </div>
           </div>
 
-          <p className={style.reviewCard_review}>
+          <p className={style.reviewCardReview}>
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
@@ -189,24 +189,24 @@ function Review() {
           </p>
         </div>
         <div className={style.reviewCard}>
-          <div className={style.reviewCard_head}>
+          <div className={style.reviewCardHead}>
             <img
-              className={style.reviewCard_img}
+              className={style.reviewCardImg}
               src="/images/dealership-detailes/profile_img3.png"
               alt="profil-img"
             />
-            <div className={style.reviewCard_heading}>
+            <div className={style.reviewCardHeading}>
               <h3>NIkita Seth</h3>
               <p>
                 Reviewed <span>Classic 500 TN</span>
               </p>
-              <p className={style.reviewCard_rating}>
-                <AiFillStar className={style.rating_icon} /> 3 Star rating
+              <p className={style.reviewCardRating}>
+                <AiFillStar className={style.ratingIcon} /> 3 Star rating
               </p>
             </div>
           </div>
 
-          <p className={style.reviewCard_review}>
+          <p className={style.reviewCardReview}>
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
@@ -216,24 +216,24 @@ function Review() {
           </p>
         </div>
         <div className={style.reviewCard}>
-          <div className={style.reviewCard_head}>
+          <div className={style.reviewCardHead}>
             <img
-              className={style.reviewCard_img}
+              className={style.reviewCardImg}
               src="/images/dealership-detailes/profile_img1.png"
               alt="profil-img"
             />
-            <div className={style.reviewCard_heading}>
+            <div className={style.reviewCardHeading}>
               <h3>Armaan Sharma</h3>
               <p>
                 Reviewed <span>Classic 500 TN</span>
               </p>
-              <p className={style.reviewCard_rating}>
-                <AiFillStar className={style.rating_icon} /> 3 Star rating
+              <p className={style.reviewCardRating}>
+                <AiFillStar className={style.ratingIcon} /> 3 Star rating
               </p>
             </div>
           </div>
 
-          <p className={style.reviewCard_review}>
+          <p className={style.reviewCardReview}>
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
@@ -243,24 +243,24 @@ function Review() {
           </p>
         </div>
         <div className={style.reviewCard}>
-          <div className={style.reviewCard_head}>
+          <div className={style.reviewCardHead}>
             <img
-              className={style.reviewCard_img}
+              className={style.reviewCardImg}
               src="/images/dealership-detailes/profile_img2.png"
               alt="profil-img"
             />
-            <div className={style.reviewCard_heading}>
+            <div className={style.reviewCardHeading}>
               <h3>Jay Kumar Sharma</h3>
               <p>
                 Reviewed <span>Classic 500 TN</span>
               </p>
-              <p className={style.reviewCard_rating}>
-                <AiFillStar className={style.rating_icon} /> 3 Star rating
+              <p className={style.reviewCardRating}>
+                <AiFillStar className={style.ratingIcon} /> 3 Star rating
               </p>
             </div>
           </div>
 
-          <p className={style.reviewCard_review}>
+          <p className={style.reviewCardReview}>
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in
@@ -270,24 +270,24 @@ function Review() {
           </p>
         </div>
         <div className={style.reviewCard}>
-          <div className={style.reviewCard_head}>
+          <div className={style.reviewCardHead}>
             <img
-              className={style.reviewCard_img}
+              className={style.reviewCardImg}
               src="/images/dealership-detailes/profile_img3.png"
               alt="profil-img"
             />
-            <div className={style.reviewCard_heading}>
+            <div className={style.reviewCardHeading}>
               <h3>NIkita Seth</h3>
               <p>
                 Reviewed <span>Classic 500 TN</span>
               </p>
-              <p className={style.reviewCard_rating}>
-                <AiFillStar className={style.rating_icon} /> 3 Star rating
+              <p className={style.reviewCardRating}>
+                <AiFillStar className={style.ratingIcon} /> 3 Star rating
               </p>
             </div>
           </div>
 
-          <p className={style.reviewCard_review}>
+          <p className={style.reviewCardReview}>
             Love the location!
             <br /> The team is always quick and efficient to get us out on the
             road. Bikes are always clean and well maintained. Although in

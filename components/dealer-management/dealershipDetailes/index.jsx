@@ -21,7 +21,7 @@ function DealershipDetails() {
         subTitle="Please find all the necessary details"
       >
         <div className="status-circle success mt-3" />
-        <p className={style.dealership_status}>
+        <p className={style.dealershipStatus}>
           Status: <span>Active</span>
         </p>
         <OutlineDropdown
@@ -33,8 +33,8 @@ function DealershipDetails() {
       </HeaderPrimary>
 
       <div className={style.motors}>
-        <div className={style.motors_head}>
-          <div className={style.motors_heading}>
+        <div className={style.motorsHead}>
+          <div className={style.motorsHeading}>
             <h3>
               Neel Motors <span> - C23N1JFC1OO19N</span>
             </h3>
@@ -43,40 +43,40 @@ function DealershipDetails() {
               <span>(50 Reviews)</span>
             </p>
           </div>
-          <div className={style.motors_lists}>
-            <div className={`${style.motors_list} ${style.motors_list_mob}`}>
+          <div className={style.motorsLists}>
+            <div className={`${style.motorsList} ${style.motorsListMob}`}>
               <Image
                 src="/images/dealership-icon1.svg"
                 width="28"
                 height="17"
                 alt=""
-                className={style.motors_list_icon}
+                className={style.motorsListIcon}
               />
               <div className={style.listItemContent}>
                 <h6>35</h6>
                 <p>Active listing</p>
               </div>
             </div>
-            <div className={style.motors_list}>
+            <div className={style.motorsList}>
               <Image
                 src="/images/dealership-icon1.svg"
                 width="28"
                 height="17"
                 alt=""
-                className={style.motors_list_icon}
+                className={style.motorsListIcon}
               />
               <div className={style.listItemContent}>
                 <h6>10</h6>
                 <p>Refurbishment</p>
               </div>
             </div>
-            <div className={style.motors_list}>
+            <div className={style.motorsList}>
               <Image
                 src="/images/dealership-icon2.svg"
                 width="28"
                 height="17"
                 alt=""
-                className={style.motors_list_icon}
+                className={style.motorsListIcon}
               />
               <div className={style.listItemContent}>
                 <h6>06</h6>
@@ -86,17 +86,17 @@ function DealershipDetails() {
           </div>
         </div>
 
-        <div className={style.motors_cards}>
-          <div className={style.motors_card}>
+        <div className={style.motorsCards}>
+          <div className={style.motorsCard}>
             <h6>
               Address <span>View in map</span>
             </h6>
             <p>
-              No F 29/2, Phase 2, Okhla Industrial Area, Okhla Industrial <br />{' '}
+              No F 29/2, Phase 2, Okhla Industrial Area, Okhla Industrial <br />
               Area, New Delhi -110020
             </p>
           </div>
-          <div className={style.motors_card}>
+          <div className={style.motorsCard}>
             <h6>Contact Dealer</h6>
             <p>
               +91 89564 23658 <br /> <span>Mon - Sat, 9:00 AM - 8:00 PM</span>

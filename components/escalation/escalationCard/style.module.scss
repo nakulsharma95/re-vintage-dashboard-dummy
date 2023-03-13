@@ -9,11 +9,11 @@
     overflow-y: scroll;
   }
 
-  .escalationCard_head {
+  .escalationCardHead {
     @include mobile {
       display: flex;
     }
-    .escalationCard_topRow {
+    .escalationCardTopRow {
       display: flex;
       @include mobile {
         flex-direction: column;
@@ -33,7 +33,7 @@
           color: $gray-cb;
         }
       }
-      .escalationCard_topCol {
+      .escalationCardTopCol {
         display: flex;
 
         @include mobile {
@@ -55,7 +55,7 @@
           }
         }
       }
-      .escalationCard_status {
+      .escalationCardStatus {
         position: relative;
         padding: 0 1.7rem;
 
@@ -71,7 +71,7 @@
         }
       }
     }
-    .escalationCard_bottomRow {
+    .escalationCardBottomRow {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -84,7 +84,7 @@
         justify-content: flex-start;
       }
 
-      .escalationCard_Colums {
+      .escalationCardColums {
         display: flex;
         gap: 0 41px;
 
@@ -104,7 +104,7 @@
           color: $white;
         }
       }
-      .escalationCard_bottomCol {
+      .escalationCardBottomCol {
         width: 10rem;
       }
       .viewDetailBtn {

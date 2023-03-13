@@ -36,43 +36,43 @@ function DealerPerfomance() {
                         <tr>
                           <td>Neel Motors</td>
                           <td className="text-end">
-                            <AiFillStar className={styles.cardBody_star} /> 4.5
+                            <AiFillStar className={styles.cardBodyStar} /> 4.5
                           </td>
                         </tr>
                         <tr>
                           <td>Neel Motors</td>
                           <td className="text-end">
-                            <AiFillStar className={styles.cardBody_star} /> 4.5
+                            <AiFillStar className={styles.cardBodyStar} /> 4.5
                           </td>
                         </tr>
                         <tr>
                           <td>Neel Motors</td>
                           <td className="text-end">
-                            <AiFillStar className={styles.cardBody_star} /> 4.5
+                            <AiFillStar className={styles.cardBodyStar} /> 4.5
                           </td>
                         </tr>
                         <tr>
                           <td>Neel Motors</td>
                           <td className="text-end">
-                            <AiFillStar className={styles.cardBody_star} /> 4.5
+                            <AiFillStar className={styles.cardBodyStar} /> 4.5
                           </td>
                         </tr>
                         <tr>
                           <td>Neel Motors</td>
                           <td className="text-end">
-                            <AiFillStar className={styles.cardBody_star} /> 4.5
+                            <AiFillStar className={styles.cardBodystar} /> 4.5
                           </td>
                         </tr>
                         <tr>
                           <td>Neel Motors</td>
                           <td className="text-end">
-                            <AiFillStar className={styles.cardBody_star} /> 4.5
+                            <AiFillStar className={styles.cardBodyStar} /> 4.5
                           </td>
                         </tr>
                         <tr>
                           <td>Neel Motors</td>
                           <td className="text-end">
-                            <AiFillStar className={styles.cardBody_star} /> 4.5
+                            <AiFillStar className={styles.cardBodyStar} /> 4.5
                           </td>
                         </tr>
                       </tbody>
@@ -88,31 +88,31 @@ function DealerPerfomance() {
                         <tr>
                           <td>Neel Motors</td>
                           <td className="text-end">
-                            <AiFillStar className={styles.cardBody_star} /> 2.5
+                            <AiFillStar className={styles.cardBodystar} /> 2.5
                           </td>
                         </tr>
                         <tr>
                           <td>Neel Motors</td>
                           <td className="text-end">
-                            <AiFillStar className={styles.cardBody_star} /> 3.5
+                            <AiFillStar className={styles.cardBodystar} /> 3.5
                           </td>
                         </tr>
                         <tr>
                           <td>Neel Motors</td>
                           <td className="text-end">
-                            <AiFillStar className={styles.cardBody_star} /> 1.5
+                            <AiFillStar className={styles.cardBodystar} /> 1.5
                           </td>
                         </tr>
                         <tr>
                           <td>Neel Motors</td>
                           <td className="text-end">
-                            <AiFillStar className={styles.cardBody_star} /> 2.5
+                            <AiFillStar className={styles.cardBodystar} /> 2.5
                           </td>
                         </tr>
                         <tr>
                           <td>Neel Motors</td>
                           <td className="text-end">
-                            <AiFillStar className={styles.cardBody_star} /> 3.5
+                            <AiFillStar className={styles.cardBodystar} /> 3.5
                           </td>
                         </tr>
                       </tbody>

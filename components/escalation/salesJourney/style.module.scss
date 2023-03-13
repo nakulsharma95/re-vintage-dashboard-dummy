@@ -2,12 +2,12 @@
 @import '../../../styles/variables//mixins';
 
 .main {
-  background: #191919;
+  background: $gray-19;
   width: 100%;
   
   .salesJourneyTitle {
     font-size: 12px;
-    color: #a7a7a7;
+    color: $gray-a7;
 	padding: 20px 20px;
   }
 
@@ -29,7 +29,7 @@
         padding: 0 20px;
         font-size: 12px;
         line-height: 16px;
-        color: #f3f3f3;
+        color: $gray-F3;
         opacity: 0.7;
       }
 
@@ -41,7 +41,7 @@
         margin: 14px 0;
         display: grid;
         place-items: center;
-        color: #fff;
+        color: $white;
         position: relative;
         cursor: pointer;
       }

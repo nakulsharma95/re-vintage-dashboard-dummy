@@ -6,15 +6,15 @@ import style from './style.module.scss';
 function EscalationCard(props) {
   return (
     <div className={style.escalationCard}>
-      <div className={style.escalationCard_head}>
-        <div className={style.escalationCard_topRow}>
-          <div className={style.escalationCard_topCol}>
+      <div className={style.escalationCardHead}>
+        <div className={style.escalationCardTopRow}>
+          <div className={style.escalationCarTopCol}>
             <h6>
               Escalation ID <span>{props.id} </span>
             </h6>
           </div>
 
-          <div className={style.escalationCard_topCol}>
+          <div className={style.escalationCardTopCol}>
             <h6>
               Escalation Issue: <span>{props.issue}</span>
             </h6>
@@ -26,7 +26,7 @@ function EscalationCard(props) {
             </h6>
           </div>
 
-          <div className={`${style.escalationCard_topCol}`}>
+          <div className={`${style.escalationCardTopCol}`}>
             <div className="d-flex align-items-center">
               <div
                 className={`${style.statusCircle} status-circle danger me-2 `}
@@ -37,15 +37,15 @@ function EscalationCard(props) {
             </div>
           </div>
         </div>
-        <div className={style.escalationCard_bottomRow}>
-          <div className={style.escalationCard_Colums}>
-            <div className={style.escalationCard_bottomCol}>
+        <div className={style.escalationCardBottomRow}>
+          <div className={style.escalationCardColums}>
+            <div className={style.escalationCardBottomCol}>
               <p>
                 Escalation Stage <br /> <span>{props.stage} </span>
               </p>
             </div>
 
-            <div className={style.escalationCard_bottomCol}>
+            <div className={style.escalationCardBottomCol}>
               <p>
                 VDMP ID <br /> <span>{props.vdmpId}</span>
               </p>
@@ -69,7 +69,7 @@ function EscalationCard(props) {
           </div>
         </div>
       </div>
-      <div className={style.escalationCard_body} />
+      <div className={style.escalationCardBody} />
     </div>
   );
 }

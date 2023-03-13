@@ -20,17 +20,17 @@
       width: 95% !important;
       height: max-content;
 
-      .reviewCard_head {
+      .reviewCardHead {
         display: flex;
         justify-content: left;
         align-items: flex-start;
 
-        .reviewCard_img {
+        .reviewCardImg {
           margin-right: 0.6rem;
           width: 53.23px;
           height: 53.23px;
         }
-        .reviewCard_heading {
+        .reviewCardHeading {
           h3 {
             font-size: 14px;
             font-weight: 600;
@@ -47,11 +47,11 @@
               margin-left: 1rem;
             }
           }
-          .reviewCard_rating {
+          .reviewCardRating {
             color: $black;
             font-size: 10px;
 
-            .rating_icon {
+            .ratingIcon {
               margin-bottom: 0.3rem;
               color: $theme-yellow-E8;
               font-size: 1.2rem;
@@ -59,7 +59,7 @@
           }
         }
       }
-      .reviewCard_review {
+      .reviewCardReview {
         color: $gray-37;
         font-size: 14px;
         font-weight: 500;

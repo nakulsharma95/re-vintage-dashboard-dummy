@@ -10,10 +10,10 @@ function ProcurementDetails() {
 
       <h6>Remark</h6>
       <div className="position-relative d-flex">
-        <div className={style.remark_text}>
+        <div className={style.remarkText}>
           <p>Remark by Supervisor</p>
         </div>
-        <div className={style.remark_btn}>
+        <div className={style.remarkBtn}>
           <ArrowButton
             detailLink="/escalation/procuredMotorcycle"
             title="SUBMIT"

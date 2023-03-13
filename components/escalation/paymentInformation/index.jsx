@@ -9,7 +9,7 @@ function PaymentInformation() {
     <div className={style.paymentInformation}>
       <div className={style.transerfer}>
         <h6>Transfer to</h6>
-        <Row className={style.transerfer_info}>
+        <Row className={style.transerferInfo}>
           <Col lg={2} sm={5} xs={6}>
             <p>Name:</p>
           </Col>
