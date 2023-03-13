@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { Row, Col, Button } from 'react-bootstrap';
 import { BiDotsVerticalRounded, BiRupee } from 'react-icons/bi';
 import { IoHammer, IoCallOutline } from 'react-icons/io5';
-import { RxCross2 } from 'react-icons/rx';
 import Form from 'react-bootstrap/Form';
 import { FiCopy } from 'react-icons/fi';
 import styles from './style.module.scss';
@@ -134,14 +133,10 @@ function MotorcycleDetail(props) {
                 <IoCallOutline className={styles.list_icon} /> Call Dealer
               </Col>
               <Col
-                className={`${styles.dealerDetails_list} d-sm-none d-none d-xl-block`}
+                className={`${styles.dealerDetails_list} d-sm-none d-lg-none d-xl-block`}
               >
                 <IoCallOutline className={styles.list_icon} />
                 Call CRE
-              </Col>
-              <Col>
-                <RxCross2 className={styles.list_icon} />
-                Drop
               </Col>
             </Row>
           </div>

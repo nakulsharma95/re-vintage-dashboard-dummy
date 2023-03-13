@@ -11,7 +11,7 @@ function CrePrimaryCard(props) {
       <Card className={styles.primaryCard}>
         <Card.Body className={styles.primaryCardBody}>
           <Row>
-            <Col xl={6} lg={6} md={6}>
+            <Col xl={6} lg={6} md={6} xs={6}>
               <div className={styles.primaryCardText}>
                 <h3>FIRST NAME</h3>
 
@@ -19,7 +19,7 @@ function CrePrimaryCard(props) {
               </div>
             </Col>
 
-            <Col xl={6} lg={6} md={6}>
+            <Col xl={6} lg={6} md={6} xs={6}>
               <div className={styles.primaryCardText}>
                 <h3>LAST NAME</h3>
 
@@ -27,7 +27,7 @@ function CrePrimaryCard(props) {
               </div>
             </Col>
 
-            <Col xl={6} lg={6} md={6}>
+            <Col xl={6} lg={6} md={6} xs={6}>
               <div className={styles.primaryCardText}>
                 <h3>GENDER</h3>
 
@@ -35,14 +35,14 @@ function CrePrimaryCard(props) {
               </div>
             </Col>
 
-            <Col xl={6} lg={6} md={6}>
+            <Col xl={6} lg={6} md={6} xs={6}>
               <div className={styles.primaryCardText}>
                 <h3>DATE OF BIRTH</h3>
                 <p>{props.birthDate}</p>
               </div>
             </Col>
 
-            <Col xl={6} lg={6} md={6}>
+            <Col xl={6} lg={6} md={6} xs={6}>
               <div className={`${styles.primaryCardText} mb-0`}>
                 <h3>MARITAL STATUS</h3>
 
@@ -50,7 +50,7 @@ function CrePrimaryCard(props) {
               </div>
             </Col>
 
-            <Col xl={6} lg={6} md={6}>
+            <Col xl={6} lg={6} md={6} xs={6}>
               <div className={`${styles.primaryCardText} mb-0`}>
                 <h3>PHYSICALLY HANDICAPPED</h3>
                 <p>{props.handicapped}</p>

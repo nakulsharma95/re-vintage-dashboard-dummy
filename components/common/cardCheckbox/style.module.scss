@@ -339,12 +339,28 @@
   justify-content: space-between;
   padding: 0 1rem;
   margin: 0.4rem 0;
+  @include mobile{
+    display: block;
+    padding: 0 12px;
+  }
+  button{
+    @include mobile{
+      font-size: 11px;
+      padding-right: 35px;
+    }
+  }
   .bikeEditBtn{
     background-color: transparent;
     color: #FFFFFF;
     border: 1px solid #707070;
     padding: 0 2rem;
     height: 38px;
+    @include mobile{
+      width: 100%;
+      margin-bottom: 8px;
+      height: 35px;
+      font-size: 11px;
+    }
   }
   .bikeSoldBtn{
     background-color: #DA291C;

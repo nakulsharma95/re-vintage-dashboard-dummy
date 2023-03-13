@@ -20,15 +20,15 @@ function DealerTable() {
   };
   return (
     <div className={`${style.dealerTable}  dealerTable`}>
-      <Table bordered variant="dark">
+      <Table bordered responsive variant="dark">
         <thead>
           <tr>
-            <td>Name</td>
-            <td>Dealer Code</td>
-            <td>Mobile No.</td>
-            <td>Email</td>
-            <td>Address</td>
-            <td>Action</td>
+            <th>Name</th>
+            <th>Dealer Code</th>
+            <th>Mobile No.</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>

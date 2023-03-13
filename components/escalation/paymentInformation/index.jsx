@@ -98,40 +98,40 @@ function PaymentInformation() {
       <div className={style.received}>
         <h6>Received From</h6>
         <Row>
-          <Col lg={2} sm={4} xs={4}>
+          <Col lg={3} sm={4} xs={4}>
             <p>Name: </p>
           </Col>
-          <Col lg={10} sm={8} xs={8}>
+          <Col lg={9} sm={8} xs={8}>
             <p>
               <span>Neel Motors, Lajpat Nagar, Delhi</span>
             </p>
           </Col>
         </Row>
         <Row>
-          <Col lg={2} sm={5} xs={4}>
+          <Col lg={3} sm={5} xs={4}>
             <p>Amount:</p>
           </Col>
-          <Col lg={10} sm={5} xs={8}>
+          <Col lg={9} sm={5} xs={8}>
             <p>
               <span>₹ 1,19,300</span>
             </p>
           </Col>
         </Row>
         <Row>
-          <Col lg={2} sm={5} xs={4}>
+          <Col lg={3} sm={5} xs={4}>
             <p>Mode: </p>
           </Col>
-          <Col lg={10} sm={5} xs={8}>
+          <Col lg={9} sm={5} xs={8}>
             <p>
               <span>Online</span>
             </p>
           </Col>
         </Row>
         <Row>
-          <Col lg={5} sm={5} xs={5}>
+          <Col lg={3} sm={5} xs={6}>
             <p>Payment Ref No. </p>
           </Col>
-          <Col lg={7} sm={5} xs={6}>
+          <Col lg={9} sm={5} xs={6}>
             <p>
               <span className={style.refNo}>CSFDJG54879865</span>
               <span>

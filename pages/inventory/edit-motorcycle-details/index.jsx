@@ -1,4 +1,5 @@
 import { Col, Row } from 'react-bootstrap';
+import { FiUpload } from 'react-icons/fi';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import EditDetails from '../../../components/editMotorcycleCard';
@@ -8,6 +9,7 @@ import ButtonPrimary from '../../../components/common/buttons/ButtonPrimary';
 import UserBikeDetailCard from '../../../components/userBikeDetailCard';
 import AddDescription from '../../../components/addDescription';
 import SetPrice from '../../../components/setPrice';
+import ConditionInspection from '../../../components/conditionInspection';
 
 export default function EditMotorcycleDetails() {
   const editCard = [
@@ -91,6 +93,14 @@ export default function EditMotorcycleDetails() {
               <EditDetails imageUrl={item.imageUrl} />
             </Col>
           ))}
+          <Col className={styles.uploadBox} xxl={2} xl={3} lg={4} md={6}>
+            <div className={styles.uploadIcon}>
+              <div className={styles.uploadAlign}>
+                <FiUpload className={styles.uploadSvg} size={25} />
+              </div>
+              <span>Upload more</span>
+            </div>
+          </Col>
         </Row>
 
         <div className="user-detail-card">
@@ -108,6 +118,8 @@ export default function EditMotorcycleDetails() {
 
         <SetPrice />
       </div>
+
+      <ConditionInspection />
 
       <AddDescription />
 

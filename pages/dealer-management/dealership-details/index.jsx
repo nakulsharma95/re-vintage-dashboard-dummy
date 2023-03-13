@@ -45,7 +45,7 @@ function DealershipDetails() {
             </div>
             <Row className="mb-3 mt-3">
               {cardData.map((item) => (
-                <Col xxl={3} xl={4} lg={6} key={item.id}>
+                <Col xxl={3} xl={4} lg={6} xs={6} key={item.id}>
                   <BikeCardRadio
                     bikeModal="2015 Classic 350"
                     bikeRc="-DL6TAL7314"
@@ -65,7 +65,7 @@ function DealershipDetails() {
             </Row>
             <Row className="mb-3">
               {cardData.map((item) => (
-                <Col xxl={3} xl={4} lg={6} key={item.id}>
+                <Col xxl={3} xl={4} lg={6} xs={6} key={item.id}>
                   <BikeCardRadio
                     bikeModal="2015 Classic 350"
                     bikeRc="-DL6TAL7314"
@@ -85,7 +85,7 @@ function DealershipDetails() {
             </Row>
             <Row className="mb-3">
               {cardData.map((item) => (
-                <Col xxl={3} xl={4} lg={6} key={item.id}>
+                <Col xxl={3} xl={4} lg={6} xs={6} key={item.id}>
                   <BikeCardRadio
                     bikeModal="2015 Classic 350"
                     bikeRc="-DL6TAL7314"

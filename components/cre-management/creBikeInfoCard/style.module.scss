@@ -1,58 +1,92 @@
 @import '../../../styles/variables/colors';
 @import '../../../styles/variables//mixins';
 
-
 .creBikeInfoCard {
-	background-color: #282828;
-	border-radius: 0px;
-	margin-bottom: 1.5rem;
+  background-color: #282828;
+  border-radius: 0px;
+  margin-bottom: 1.5rem;
 
-  .chassisNumber{
-	margin-bottom: 5px;
-	span{
-		font-size: 12px;
-		padding: 0 1rem;
-		color: $gray-70;
-	}
-
+  .chassisNumber {
+    margin-bottom: 5px;
+    span {
+      font-size: 12px;
+      padding: 0 1rem;
+      color: $gray-70;
+    }
   }
-	.modalName {
-	  display: flex;
-      align-items: center;
-	  margin-bottom: 10px;
-	 
-	  h3{
-		font-size: 16px;
-		color: $white;
-		padding: 0 1rem;
-		
-	  }
-	  span {
-		font-size: 14px;
-		color: $theme-yellow-E8;
-	  }
-	}
-	.bikeDetail {
-	  display: flex;
-	  justify-content: space-between;
-	  margin-bottom: 10px;
-	  padding: 0 1rem;
-	  .detailTxt {
-		font-size: 12px;
-		color: $gray-cb;
-		padding: 0;
-		margin-bottom: 0px;
-  
-		&:nth-child(2) {
-		  text-align: center;
-		  border-left: 1px solid $gray-70;
-		  border-right: 1px solid $gray-70;
-		}
-		&:nth-child(3) {
-		  text-align: center;
-		}
-	  }
-	}
+  .modalName {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    @include mobile {
+      flex-wrap: wrap;
+      padding: 0 12px;
+    }
 
-  
+    h3 {
+      font-size: 16px;
+      color: $white;
+      padding: 0 1rem;
+      @include mobile {
+        padding: 0;
+      }
+    }
+    span {
+      font-size: 14px;
+      color: $theme-yellow-E8;
+      @include mobile {
+        display: block;
+        margin-top: 3px;
+      }
+    }
   }
+  .bikeDetail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 0 1rem;
+    @include mobile {
+      flex-wrap: wrap;
+      padding: 0 12px;
+      margin-bottom: 0;
+    }
+    .detailTxt {
+      font-size: 12px;
+      color: $gray-cb;
+      padding: 0;
+      margin-bottom: 0px;
+      .iconXsView {
+        display: none;
+        @include mobile {
+          display: inline-block;
+          img {
+            width: 15px;
+            margin-right: 3px;
+            opacity: 0.6;
+          }
+        }
+      }
+      @include mobile {
+        flex: 100%;
+        margin: 3px 0;
+      }
+
+      &:nth-child(2) {
+        text-align: center;
+        border-left: 1px solid $gray-70;
+        border-right: 1px solid $gray-70;
+        @include mobile {
+          text-align: left;
+          border-right: none;
+          border-left: none;
+        }
+      }
+      &:nth-child(3) {
+        text-align: center;
+        @include mobile {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

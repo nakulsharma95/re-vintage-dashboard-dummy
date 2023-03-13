@@ -24,6 +24,10 @@
     margin-left: 1rem;
     font-weight: bold;
     color: rgba($white,0.9);
+    @include mobile{
+      margin-left: 0;
+      margin-top:5px;
+    }
   }
 
   .description {
@@ -31,5 +35,9 @@
     line-height: 20px;
     color: rgba($white,0.8);
     padding-right: 60px;
+    @include mobile{
+      padding-right: 15px;
+      padding-top: 0;
+    }
   }
 }

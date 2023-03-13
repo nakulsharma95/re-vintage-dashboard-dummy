@@ -6,7 +6,7 @@ import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import Rating from 'react-rating';
 import styles from './style.module.scss';
 
-function ReportAccordian() {
+function Feedbacks() {
   const accordianData = [
     {
       name: 'Rakesh Verma',
@@ -72,7 +72,7 @@ function ReportAccordian() {
                   <span className="status-circle gray ms-3 mb-1" />
                   <p>4 Feb, 2023</p>
                 </div>
-                <div className="d-flex align-items-center mt-3">
+                <div className="d-md-flex align-items-center mt-3">
                   <Rating
                     initialRating={item.initialRating}
                     emptySymbol={<AiOutlineStar size={20} color="#D17D39" />}
@@ -92,4 +92,4 @@ function ReportAccordian() {
   );
 }
 
-export default ReportAccordian;
+export default Feedbacks;

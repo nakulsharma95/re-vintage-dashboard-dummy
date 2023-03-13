@@ -4,7 +4,7 @@ import CreAddForm from '../../../components/cre-management/creAddForm';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import HeaderPrimary from '../../../components/common/headerPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
-import ButtonPrimary from '../../../components/common/buttons/ButtonPrimary';
+import ArrowButton from '../../../components/common/buttons/ArrowButton';
 
 function AddCre() {
   return (
@@ -22,8 +22,7 @@ function AddCre() {
             <OutlineButton title="Cancel" className="theme1" />
           </div>
           <div>
-            {' '}
-            <ButtonPrimary title="Save" />
+            <ArrowButton title="Save" />
           </div>
         </div>
       </Row>

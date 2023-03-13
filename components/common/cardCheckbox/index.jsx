@@ -139,9 +139,7 @@ function BikeCardRadio({
               <button type="button" className={styles.bikeEditBtn}>
                 EDIT
               </button>
-              <button type="button" className={styles.bikeSoldBtn}>
-                SOLD / BOOKED
-              </button>
+              <ArrowButton title="SOLD/BOOKED" />
             </div>
           )}
         </Card.Body>
@@ -169,7 +167,7 @@ function BikeCardRadio({
           )}
 
           {isCreContact && (
-            <div className="d-flex">
+            <div className="d-md-flex">
               <p className={styles.contactCre}>Contact CRE</p>
               <p className={styles.contactCre}>Change CRE</p>
             </div>
