@@ -64,7 +64,7 @@ function CreDetails() {
             />
             <Row>
               {cardData.map((item) => (
-                <Col xxl={3} xl={4} lg={6} key={item.id}>
+                <Col xxl={3} xl={4} lg={6} xs={6} key={item.id}>
                   <CreBikeInfoCard
                     bikeChassis="B28EG192BR19"
                     bikeModal="2015 Classic 350"

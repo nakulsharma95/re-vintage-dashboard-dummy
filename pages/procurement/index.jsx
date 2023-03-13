@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { AiOutlineSearch } from 'react-icons/ai';
+import { BsFilter } from 'react-icons/bs';
 import BikeCard from '../../components/procurements/bikeCard';
 import Breadcrumb from '../../components/common/breadcrumbPrimary';
 import DetailCard from '../../components/procurements/detailCard';
@@ -8,9 +10,16 @@ import SearchPrimary from '../../components/common/searchPrimary';
 import FilterButton from '../../components/common/filterButton';
 import HeaderPrimary from '../../components/common/headerPrimary';
 import ContactViaModal from '../../components/modals/contactViaModal';
+import BottomActionBar from '../../components/common/bottomActionBar';
+import useMediaQuery from '../../components/common/useMedia';
 
 function Procurement() {
   const [contactViaModal, setContactViaModal] = useState(false);
+  const isSmallScreen = useMediaQuery(767);
+  const [isFilterAction, setFilterAction] = useState(false);
+  const filterToggle = () => {
+    setFilterAction(!isFilterAction);
+  };
 
   const contactViaToggleModal = () => {
     setContactViaModal(!contactViaModal);
@@ -297,6 +306,17 @@ function Procurement() {
         isOpen={contactViaModal}
         handleClose={contactViaToggleModal}
       />
+
+      {isSmallScreen && (
+        <BottomActionBar>
+          <button type="button">
+            Search <AiOutlineSearch />
+          </button>
+          <button type="button" onClick={filterToggle}>
+            Filter <BsFilter />
+          </button>
+        </BottomActionBar>
+      )}
     </div>
   );
 }

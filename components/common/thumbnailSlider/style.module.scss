@@ -32,6 +32,10 @@
 	height: 300px;
 	position: relative;
 	overflow: hidden;
+	@include mobile{
+		min-width: auto;
+		height: 210px;
+	}
 	
 	.imgFullStyle {
 		position: absolute;
@@ -42,7 +46,7 @@
 		object-fit: cover;
 
 		@include mobile {
-			width: 91%;
+			width: 100%;
 		}
 	}
 

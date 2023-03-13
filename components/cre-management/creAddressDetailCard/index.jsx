@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 
 function CreAddressDetailCard(props) {
   return (
-    <>
+    <div className={styles.addressDetailMain}>
       <div className={styles.CardHeading}>
         <h2>{props.cardHeading}</h2>
       </div>
@@ -31,7 +31,7 @@ function CreAddressDetailCard(props) {
           </Row>
         </Card.Body>
       </Card>
-    </>
+    </div>
   );
 }
 

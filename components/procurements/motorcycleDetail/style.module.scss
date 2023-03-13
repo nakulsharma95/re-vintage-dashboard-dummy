@@ -231,6 +231,12 @@
       font-size: 12px;
       font-weight: 500;
       border-right: 1px solid #707070;
+      &:last-child{
+        border-right: none;
+      }
+      @include mobile{
+        padding: 0 5px;
+      }
     }
 
     .list_icon {

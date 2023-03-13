@@ -4,6 +4,9 @@
 .formInput {
   padding: 1.25rem 0rem;
   position: relative;
+  @include mobile{
+    padding-bottom: 50px;
+  }
   .labalAlign {
     display: flex;
     align-items: center;
@@ -24,7 +27,12 @@
 		img{
 			width: 74px;
 			height: 74px;
-			margin-right: 20px;
+			margin-right: 50%;
+      @include mobile{
+        width: 45px;
+        height: 45px;
+        margin-right: 8px;
+      }
 		}
 	
 	}

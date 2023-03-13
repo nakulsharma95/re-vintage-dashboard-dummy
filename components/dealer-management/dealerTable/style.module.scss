@@ -10,11 +10,16 @@
 			margin-left: 1rem;
 		}
 		
-		thead tr td{
+		thead tr th{
 			background-color: $gray-28;
 			color: $gray-a7;
 			border: none;
 			padding: 1.3rem;
+			font-weight: 500;
+			@include mobile{
+				white-space: nowrap;
+				padding: 0.8rem;
+			}
 		}
 		tbody tr td{
 			background-color: $gray-18;
@@ -23,6 +28,10 @@
 			border-bottom: 1px solid $gray-28;
 			padding:1rem 1.3rem;
 			vertical-align: middle;
+			@include mobile{
+				white-space: nowrap;
+				padding: 0.8rem;
+			}
             
 
 			.tableCheckbox .form-check-input:checked {

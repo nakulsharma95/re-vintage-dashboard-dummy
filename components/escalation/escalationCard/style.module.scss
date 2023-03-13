@@ -6,7 +6,9 @@
   padding: 1rem 1.5rem 0rem 1.5rem;
   margin: 1rem 0;
   @include mobile {
-    overflow-y: scroll;
+    padding: 15px;
+    padding-bottom: 65px;
+    position: relative;
   }
 
   .escalationCard_head {
@@ -16,10 +18,8 @@
     .escalationCard_topRow {
       display: flex;
       @include mobile {
-        flex-direction: column;
-        // justify-content: space-around;
+        display: block;
         position: relative;
-        top: 1.5rem;
       }
       h6 {
         font-size: 14px;
@@ -27,17 +27,31 @@
 
         @include mobile{
           margin-bottom: 1.5rem;
+          font-size: 12px;
+          color: $gray-cb;
         }
 
         span {
           color: $gray-cb;
+          @include mobile{
+            display: block;
+            color: $white;
+          }
         }
       }
       .escalationCard_topCol {
         display: flex;
 
         @include mobile {
-          flex-direction: column;
+          display: block;
+          &:last-child{
+            h6{
+              display: flex;
+              span{
+                margin-left: 5px;
+              }
+            }
+          }
         }
 
         &:before {
@@ -79,9 +93,9 @@
       padding: 17px 0;
 
       @include mobile {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
+        display: block;
+        padding: 0;
+        margin-left: 20px;
       }
 
       .escalationCard_Colums {
@@ -102,6 +116,9 @@
         span {
           font-size: 14px;
           color: $white;
+          @include mobile{
+            font-size: 12px;
+          }
         }
       }
       .escalationCard_bottomCol {
@@ -113,8 +130,9 @@
         max-width: 163px;
 
         @include mobile{
-          position: relative;
-          left: -12rem;
+          position: absolute;
+          left: 15px;
+          bottom: 15px;
         }
       }
     }
