@@ -10,7 +10,7 @@ export default function Header(props) {
   const router = useRouter();
   const logoutHandler = () => {
     deleteCookie(process.env.NEXT_PUBLIC_COOKIE_NAME);
-    router.push('/homepage');
+    router.push('/login');
   };
   return (
     <header>
