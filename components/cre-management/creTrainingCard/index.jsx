@@ -11,7 +11,7 @@ function CreTrainingCard(props) {
       <Card className={styles.TrainingCard}>
         <Card.Body className={styles.TrainingCardBody}>
           <Row>
-            <Col xl={6} lg={6} md={6}>
+            <Col xl={6} lg={6} md={6} xs={6}>
               <div className={styles.TrainingCardText}>
                 <h3>TRAINING NAME</h3>
 
@@ -19,7 +19,7 @@ function CreTrainingCard(props) {
               </div>
             </Col>
 
-            <Col xl={6} lg={6} md={6}>
+            <Col xl={6} lg={6} md={6} xs={6}>
               <div className={styles.TrainingCardText}>
                 <h3>DATE COMPLETED ON</h3>
 
@@ -30,7 +30,7 @@ function CreTrainingCard(props) {
               <div className="bottom-white-border mb-3" />
             </Col>
 
-            <Col xl={6} lg={6} md={6}>
+            <Col xl={6} lg={6} md={6} xs={6}>
               <div className={styles.TrainingCardText}>
                 <h3>TRAINING NAME</h3>
 
@@ -38,7 +38,7 @@ function CreTrainingCard(props) {
               </div>
             </Col>
 
-            <Col xl={6} lg={6} md={6}>
+            <Col xl={6} lg={6} md={6} xs={6}>
               <div className={styles.TrainingCardText}>
                 <h3>DATE COMPLETED ON</h3>
 
@@ -49,7 +49,7 @@ function CreTrainingCard(props) {
               <div className="bottom-white-border mb-3" />
             </Col>
 
-            <Col xl={6} lg={6} md={6}>
+            <Col xl={6} lg={6} md={6} xs={6}>
               <div className={styles.TrainingCardText}>
                 <h3>TRAINING NAME</h3>
 
@@ -57,7 +57,7 @@ function CreTrainingCard(props) {
               </div>
             </Col>
 
-            <Col xl={6} lg={6} md={6}>
+            <Col xl={6} lg={6} md={6} xs={6}>
               <div className={styles.TrainingCardText}>
                 <h3>DATE COMPLETED ON</h3>
 

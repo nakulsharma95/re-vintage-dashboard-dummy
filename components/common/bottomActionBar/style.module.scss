@@ -8,40 +8,29 @@
 	z-index: 999;
 	width: 100%;
 	left: 0;
-	height: 50px;
+	height: auto;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 20px;
+	padding: 0;
 
 	button {
 		border: none;
 		background: none;
-		padding: 0;
+		padding: 12px 10px;
+		width: 100%;
 		text-transform: uppercase;
 		font-weight: 500;
 		font-size: 13px;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 0px;
 		position: relative;
-
-		&::after {
-			position: absolute;
-			right: -30px;
-			margin: 0 auto;
-			content: '';
-			display: flex;
-			width: 1px;
-			height: 100%;
-			margin: 0 10px;
-			background-color: $gray-28;
-		}
+		border-right: 1px solid $gray-70;
 
 		&:last-child {
-			&::after {
-				display: none;
-			}
+			border-right: none;
 		}
 	}
 }

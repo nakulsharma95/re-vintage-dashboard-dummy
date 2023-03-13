@@ -35,3 +35,9 @@
 		margin-bottom: 15px;
 	}
 }
+
+.addressDetailMain{
+	@include mobile{
+		margin-top: 60px;
+	}
+}

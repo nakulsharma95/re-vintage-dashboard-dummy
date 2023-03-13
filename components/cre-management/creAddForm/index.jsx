@@ -45,7 +45,7 @@ export default function CreAddForm() {
         </Col>
 
         <Col className={`${styles.inputField} col-12 `} xl={8} lg={8} md={12}>
-          <div className="d-flex">
+          <div className="d-flex align-items-center">
             <div className={styles.profileImg}>
               <Image src="/images/profile-image.png" alt="not found" />
             </div>
