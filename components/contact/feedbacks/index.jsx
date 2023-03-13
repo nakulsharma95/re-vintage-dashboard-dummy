@@ -6,7 +6,7 @@ import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import Rating from 'react-rating';
 import styles from './style.module.scss';
 
-function ReportAccordian() {
+function Feedbacks() {
   const accordianData = [
     {
       name: 'Rakesh Verma',
@@ -92,4 +92,4 @@ function ReportAccordian() {
   );
 }
 
-export default ReportAccordian;
+export default Feedbacks;

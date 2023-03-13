@@ -1,0 +1,100 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.customerQueriesCard {
+  background-color: $gray-28;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 24px;
+
+  @include mobile {
+    padding: 15px;
+  }
+
+  .textHead {
+    font-size: 14px;
+    color: $white;
+    line-height: 18px;
+    font-weight: 500;
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  .textLight {
+    font-size: 14px;
+    color: #CBC6C6;
+    line-height: 18px;
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  .verticalDivider {
+    width: 1px;
+    height: 14px;
+    margin: 0 24px;
+    background-color: $gray-70;
+
+    @include mobile {
+      margin: 0 14px;
+    }
+  }
+
+  .cardTopRow {
+    display: flex;
+    margin-bottom: 20px;
+    
+    @include mobile {
+      margin-bottom: 0;
+    }
+
+    .topCol {
+      display: flex;
+      gap: 0 7px;
+
+      @include mobile {
+        gap: 0 4px;
+      }
+    }
+  }
+
+  .columsStyle {
+    display: flex;
+    gap: 0 42px;
+
+    @include mobile {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  .buttonSection {
+    display: flex;
+    gap: 9px;
+
+    @include mobile {
+     margin-top: 24px;
+    }
+  }
+
+  .bottomRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 24px;
+    }
+
+    .textLight {
+      margin-bottom: 4px;
+    }
+  }
+}
