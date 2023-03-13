@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { toast } from 'react-hot-toast';
+import { getCookie, setCookie } from 'cookies-next';
 
 /**
  * It takes a date and returns a formatted date string.
@@ -98,4 +99,12 @@ export const timerHelper = (time) => {
   const nrMin = formatText(Math.floor(time / 1000 / 60) % 60);
   const nrSec = formatText(Math.floor(time / 1000) % 60);
   return `${nrHours} : ${nrMin} : ${nrSec}`;
+};
+export const getAuthCookie = () => {
+  const token = atob(getCookie(process.env.NEXT_PUBLIC_COOKIE_NAME)).split('#');
+  return token;
+};
+export const setAuthCookie = (string) => {
+  const token = btoa(string);
+  setCookie(process.env.NEXT_PUBLIC_COOKIE_NAME, token);
 };

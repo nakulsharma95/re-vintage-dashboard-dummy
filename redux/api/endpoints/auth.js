@@ -1,6 +1,6 @@
-import { setCookie } from 'cookies-next';
 import { apiSlice } from '../main';
 import { setCredentials } from '../../slices/user';
+import { getAuthCookie, setAuthCookie } from '../../../utils/helpers';
 
 const SUCCESS_STATUS_CODE = 200;
 
@@ -19,11 +19,7 @@ export const authApiSlice = apiSlice.injectEndpoints({
           const jwtAccessToken = await data?.data?.accessToken;
           const refreshToken = await data?.data?.refreshToken;
           const guid = await data?.data?.user?.guid;
-          const tokens = `${jwtAccessToken}#${refreshToken}#${guid}`;
-          setCookie(
-            process.env.NEXT_PUBLIC_COOKIE_NAME,
-            Buffer.from(tokens, 'utf-8').toString('base64')
-          );
+          setAuthCookie(`${jwtAccessToken}#${refreshToken}#${guid}`);
           api.dispatch(
             setCredentials({
               accessToken: jwtAccessToken,
@@ -49,8 +45,41 @@ export const authApiSlice = apiSlice.injectEndpoints({
         skip: true,
       }),
     }),
+    refreshToken: builder.mutation({
+      query: () => ({
+        url: '/v3/auth/dashboard/generate-token',
+        method: 'POST',
+        body: JSON.stringify({
+          refreshToken: getAuthCookie?.[1],
+          userId: getAuthCookie?.[2],
+        }),
+        keepUnusedDataFor: 0,
+        onQueryStarted: async (arg, api) => {
+          try {
+            const { data } = await api.queryFulfilled;
+            if ((await data?.code) !== SUCCESS_STATUS_CODE) return;
+            const jwtAccessToken = await data?.data?.accessToken;
+            const refreshToken = getAuthCookie?.[1];
+            const guid = getAuthCookie?.[2];
+            setAuthCookie(`${jwtAccessToken}#${refreshToken}#${guid}`);
+            api.dispatch(
+              setCredentials({
+                accessToken: jwtAccessToken,
+                user: data?.data?.user,
+              })
+            );
+          } catch (error) {
+            console.error(error);
+          }
+        },
+      }),
+    }),
   }),
 });
 
-export const { useLoginMutation, useVerifyTokenQuery, useEncryptMutation } =
-  authApiSlice;
+export const {
+  useRefreshTokenMutation,
+  useLoginMutation,
+  useVerifyTokenQuery,
+  useEncryptMutation,
+} = authApiSlice;
