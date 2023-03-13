@@ -26,6 +26,7 @@ function DealerPerfomance() {
               className="mb-3"
               defaultActiveKey="title1"
               id="uncontrolled-tab-example"
+              tabclassname="custom-tab-nav"
             >
               <Tab eventKey="title1" title="Highest Rated">
                 <div className={styles.cardBody}>

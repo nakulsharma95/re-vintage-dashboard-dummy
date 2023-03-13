@@ -26,7 +26,7 @@
 // ----------------------------------
 // Media Query Mixin
 // ----------------------------------
-$iphone5-width: 360px;
+$iphone5-width: 320px;
 $iphone6-width: 375px;
 $tablet-width: 768px;
 $tablet-p-width: 991px;
@@ -137,18 +137,6 @@ $desktop-width-lg: 1500px;
   -ms-transition: $transition-property $transition-time $method;
   -o-transition: $transition-property $transition-time $method;
   transition: $transition-property $transition-time $method;
-}
-
-// ----------------------------------
-// Brandon Grotesque Font Family
-// ----------------------------------
-@mixin ff-primary() {
-  font-family: "Gilroy", sans-serif !important;
-  line-height: 1.5;
-
-  strong {
-    font-weight: bold;
-  }
 }
 
 // ----------------------------------

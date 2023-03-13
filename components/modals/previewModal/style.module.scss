@@ -1,0 +1,114 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
+
+.previewModalBody {
+  background-color: $gray-18;
+  padding: 30px 40px;
+  @include mobile{
+    padding: 10px 15px 30px;
+  }
+
+  .headerStyle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    .previewModalCloseBtn {
+      background-color: transparent;
+      color: $white;
+      border: none;
+      outline: none;
+      svg{
+        @include mobile{
+          width: 26px;
+        }
+      }
+    }
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+      display: block;
+    }
+  }
+
+  .previewCols {
+    color: $white;
+    position: relative;
+    input {
+      background-color: transparent;
+      color: $gray-a7;
+      height: 38px;
+      border-radius: 5px;
+      border: none;
+      background-color: $gray-28;
+      padding: 0 20px;
+      &:focus {
+        box-shadow: none;
+      }
+      @include mobile{
+        padding-right: 35px;
+      }
+    }
+    a {
+      position: absolute;
+      top: 7px;
+      color: #fff;
+      right: 14px;
+      padding: 0;
+      text-decoration: none;
+    }
+  }
+  .sbBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+  .btnCols {
+    width: 100%;
+    max-width: 140px;
+    margin: auto;
+  }
+}
+
+.downloadBtn {
+  button {
+    background-color: $black;
+    padding: 8px 15px;
+  }
+}
+
+.addBikeMain {
+  label.labelTitle{
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  label{
+    @include mobile{
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+  }
+  input {
+    height: 38px;
+    border-radius: 0;
+    background-color: $gray-28;
+    border: none;
+    color: $gray-a7;
+    font-weight: 500;
+    &:focus {
+      box-shadow: none;
+      background-color: $gray-28;
+      color: $gray-a7;
+    }
+    &::placeholder {
+      color: $gray-a7;
+    }
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
+}

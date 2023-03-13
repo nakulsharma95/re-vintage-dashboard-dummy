@@ -1,0 +1,58 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/variables//mixins";
+
+.detailsbg{
+	background-color: $gray-2;
+	border-radius: 0;
+	padding: 20px;
+
+	.detailsHeading {
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+		@include mobile {
+			flex-direction: column;
+			align-items: flex-start;
+		  }
+	
+		h2 {
+		  font-size: 24px;
+		  font-weight: 600;
+		}
+		span {
+		  font-size: 14px;
+		  font-weight: 500;
+		  color: $theme-yellow-E8;
+		  margin-left: 5px;
+		}
+		p {
+		  font-size: 13px;
+		  font-weight: 600;
+		  margin-bottom: 0;
+		  color: $gray-cb;
+		  margin-left: 5px;
+		}
+	  }
+
+	  .detailsDescription{
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		@include mobile {
+			flex-direction: column;
+			align-items: flex-start;
+		  }
+		span {
+			font-size: 12px;
+			font-weight: 500;
+			color: $gray-cb;
+		  }
+		  p {
+			font-size: 12px;
+			font-weight: 500;
+			margin-bottom: 0;
+			color: $white;
+			margin-left: 5px;
+		  }
+	  }
+}

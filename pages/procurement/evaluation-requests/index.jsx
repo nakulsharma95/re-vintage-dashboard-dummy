@@ -1,4 +1,5 @@
 import { RiShareBoxFill } from 'react-icons/ri';
+import { Tab, Tabs } from 'react-bootstrap';
 import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import DetailPagination from '../../../components/common/paginationPrimary';
 import MotorcycleDetailCard from '../../../components/procurements/evaluationRequest';
@@ -7,13 +8,12 @@ import SearchPrimary from '../../../components/common/searchPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
 import ViewAll from '../../../components/common/viewAllHeader';
-import { Tab, Tabs } from 'react-bootstrap';
 
 function EvaluationRequest() {
   const motorCycleDetail = [
     {
       bikeName: '2015 Classic 350',
-      bikeNumber: 'DL 6T AL 7314',
+      bikeNumber: 'DL6TAL7314',
       code: 'FB29FH9219HR1',
       requestBadge: 'Dealer',
       priceOne: '1,19,300',
@@ -35,9 +35,8 @@ function EvaluationRequest() {
     },
     {
       bikeName: '2015 Hunter 350',
-      bikeNumber: 'DL 6T AL 7314',
+      bikeNumber: 'DL6TAL7314',
       code: 'FB29FH9219HR1',
-      requestBadge: 'Dealer',
       priceOne: '1,19,300',
       priceTwo: '1,26,600',
       ownerDetail: '2nd',
@@ -57,9 +56,8 @@ function EvaluationRequest() {
     },
     {
       bikeName: '2015 Electra 350',
-      bikeNumber: 'DL 6T AL 7314',
+      bikeNumber: 'DL6TAL7314',
       code: 'FB29FH9219HR1',
-      requestBadge: 'Dealer',
       priceOne: '1,19,300',
       priceTwo: '1,26,600',
       ownerDetail: '2nd',
@@ -96,6 +94,7 @@ function EvaluationRequest() {
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
+          tabclassname="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Open">
             <ViewAll

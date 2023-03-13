@@ -1,7 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
-import { Card, Col, OverlayTrigger, Row, Tooltip } from 'react-bootstrap';
+import {
+  Card,
+  Col,
+  OverlayTrigger,
+  Row,
+  Tooltip,
+  Image,
+} from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import { BiRupee } from 'react-icons/bi';
+import { BiRupee, BiUser } from 'react-icons/bi';
+import { IoCallOutline } from 'react-icons/io5';
 import ToggleSwitchCard from '../../retails/toggleSwitchCard';
 import ArrowButton from '../buttons/ArrowButton';
 import CustomCheckBox from '../customCheckBox';
@@ -30,7 +38,11 @@ function BikeCardRadio({
   isCreContact,
   isCreDetails,
   isDealer,
-  isOlxTooltipVisible
+  isOlxTooltipVisible,
+  className,
+  isViewButtonVisible,
+  isStatusTagVisible,
+  Status,
 }) {
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -42,9 +54,21 @@ function BikeCardRadio({
     <>
       <Card className={styles.bikeCardMain}>
         <div className={styles.ChassisImage}>
-          <Card.Img variant="top" src={imageUrl} />
+          <div className={`${styles.bikeImg} ${className}`}>
+            <Image variant="top" src={imageUrl} alt="not-found" />
+          </div>
+
           {isBikeChassisVisible && (
-            <div className={`${styles.bikeChassisTag}`}>FB29FH9219HR1</div>
+            <div className={`${styles.bikeChassisTag}`}>
+              <span>FB29FH9219HR1</span>
+            </div>
+          )}
+
+          {isStatusTagVisible && (
+            <div className={`${styles.statusTag}`}>
+              <span>Status:</span>
+              {Status}
+            </div>
           )}
         </div>
 
@@ -62,14 +86,14 @@ function BikeCardRadio({
             Listed on
             <img src="/images/olx.png" className={styles.olxImage} alt="" />
             {isOlxTooltipVisible && (
-            <OverlayTrigger
-              placement="right"
-              delay={{ show: 250, hide: 400 }}
-              overlay={renderTooltip}
-              className="d-inline-flex align-items-center"
-            >
-              <Button className={styles.olxBtn}>2</Button>
-            </OverlayTrigger>
+              <OverlayTrigger
+                placement="right"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltip}
+                className="d-inline-flex align-items-center"
+              >
+                <Button className={styles.olxBtn}>2</Button>
+              </OverlayTrigger>
             )}
           </div>
         )}
@@ -78,9 +102,24 @@ function BikeCardRadio({
             {bikeModal} <span> {bikeRc}</span>
           </Card.Title>
           <Row className={`${styles.bikeDetail} mx-0`}>
-            <Col className={styles.detailTxt}>{bikekm}</Col>
-            <Col className={styles.detailTxt}>{bikeOwner}</Col>
-            <Col className={styles.detailTxt}>{bikeCc}</Col>
+            <Col className={styles.detailTxt}>
+              <div className={styles.iconXsView}>
+                <Image src="/images/icons/road.svg" alt="not found" />
+              </div>
+              {bikekm}
+            </Col>
+            <Col className={styles.detailTxt}>
+              <div className={styles.iconXsView}>
+                <Image src="/images/icons/user.svg" alt="not found" />
+              </div>
+              {bikeOwner}
+            </Col>
+            <Col className={styles.detailTxt}>
+              <div className={styles.iconXsView}>
+                <Image src="/images/icons/engine.svg" alt="not found" />
+              </div>
+              {bikeCc}
+            </Col>
           </Row>
           <h4 className={styles.price}>
             <BiRupee size={21} />
@@ -114,11 +153,17 @@ function BikeCardRadio({
               <h3>{creDetail}</h3>
 
               <p className={`${styles.creInfo} mb-0`}>
-                Name:<span>{creName}</span>
+                <div className={styles.userIcon}>
+                  <BiUser />{' '}
+                </div>
+                <small>Name:</small> <span>{creName}</span>
               </p>
 
               <p className={`${styles.creInfo} mb-0`}>
-                Number:<span>{creNumber}</span>
+                <div className={styles.userIcon}>
+                  <IoCallOutline />{' '}
+                </div>
+                <small>Number:</small> <span>{creNumber}</span>
               </p>
             </div>
           )}
@@ -132,10 +177,17 @@ function BikeCardRadio({
 
           {isButtonVisible && (
             <div className={styles.creBtnBox}>
-              <Button variant="primary" className={styles.downloadBtn}>
+              <Button variant="primary w-full" className={styles.downloadBtn}>
                 VIEW
               </Button>
               <ArrowButton detailLink="" title="APPROVE" buttonStyle="w-full" />
+            </div>
+          )}
+          {isViewButtonVisible && (
+            <div className={styles.creBtnBox}>
+              <Button variant="primary w-full" className={styles.downloadBtn}>
+                VIEW
+              </Button>
             </div>
           )}
         </Card.Body>

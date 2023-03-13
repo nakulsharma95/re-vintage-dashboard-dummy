@@ -1,15 +1,14 @@
-import { Button } from 'react-bootstrap';
-import { BsChevronRight } from 'react-icons/bs';
 import Form from 'react-bootstrap/Form';
 import styles from './style.module.scss';
 import Tags from '../../common/tags';
+import ArrowButton from '../../common/buttons/ArrowButton';
 
 export default function ManaualEntry() {
   return (
     <div className={styles.addManaulMain}>
       <div>Add manual entry here</div>
       <div className={styles.addManaulCols}>
-        <div className="d-flex">
+        <div className="d-md-flex">
           <Tags title="Evaluation" bgColor="#B8382F" />
           <Tags title="CRE" bgColor="#2F6AB8" />
           <Tags title="SAMIL" bgColor="#E8B016" />
@@ -19,16 +18,15 @@ export default function ManaualEntry() {
         </div>
         <div className={styles.inputCols}>
           <Form.Control type="text" placeholder="Primary Comment" />
-          <Form.Control as="textarea" placeholder="Secondary Comment" rows={3} />
+          <Form.Control
+            as="textarea"
+            placeholder="Secondary Comment"
+            rows={3}
+          />
         </div>
       </div>
       <div className={styles.submitBtn}>
-        <Button variant="">
-          Submit{' '}
-          <span>
-            <BsChevronRight />
-          </span>
-        </Button>
+        <ArrowButton title="SUBMIT" />
       </div>
     </div>
   );

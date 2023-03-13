@@ -58,6 +58,13 @@ h6 {
   @include scrollHide;
 }
 
+.btn-link {
+  border: none;
+  background: none;
+  padding: 0;
+  text-decoration: none;
+}
+
 // Sidebar Active Style
 .sidebar-global {
   button[aria-expanded='true'] {
@@ -77,14 +84,30 @@ h6 {
     box-shadow: none;
   }
 
-  .active {
+  .active.accordion-item .accordion-header a {
+    color: $white;
+  }
+
+  // Condition if class show on button
+  button.active {
+    background-color: $black;
+
+    a {
+      color: $white;
+    }
+  }
+
+  // Condition if class show on li
+  li.active {
     color: $white !important;
     background-color: $black;
 
     a {
-      color: $white !important;
+      color: $white;
     }
+  }
 
+  .active {
     .nav-item {
       color: $theme-red-da;
     }
@@ -106,7 +129,7 @@ h6 {
 }
 
 .bottom-white-border {
-  border-bottom: 1px solid #707070;
+  border-bottom: 1px solid $gray-70;
 }
 
 .re-mainContainer {
@@ -124,50 +147,71 @@ h6 {
 }
 
 // Custom Tab Style
-.custom-tab-style .nav-link {
-  color: #fff;
-  font-size: 14px;
-  border: none;
-}
+.custom-tab-style {
+  .nav-tabs[tabclassname='custom-tab-nav'] {
+    border-color: $gray-70;
 
-.custom-tab-style .nav-tabs {
-  border-color: $gray-70;
+    @include mobile {
+      display: flex;
+      flex-wrap: nowrap;
+    }
 
-  .nav-link {
-    border: none;
-    padding: 10px 0px 10px 0;
-    margin-right: 25px;
+    .nav-item {
+      @include mobile {
+        white-space: nowrap;
+      }
+    }
+
+    .nav-link {
+      padding: 10px 0px 10px 0;
+      margin-right: 25px;
+      color: rgba($white, 0.7);
+      font-size: 16px;
+      border: none;
+      font-weight: 500;
+
+      &.active {
+        background-color: transparent;
+        border: none;
+        color: $theme-red-da;
+        margin-bottom: 0;
+        position: relative;
+
+        &::after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background-color: $theme-red-da;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+        }
+      }
+    }
+
+    .nav-link:hover,
+    .nav-tabs .nav-link:focus {
+      border: none;
+      border-bottom: 0 solid;
+      margin-bottom: 0;
+    }
   }
-}
-
-.custom-tab-style .nav-link.active {
-  background-color: transparent;
-  border: none;
-  color: $theme-red-da;
-  margin-bottom: 0;
-  position: relative;
-
-  &::after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: $theme-red-da;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-  }
-}
-
-.custom-tab-style .nav-link:hover,
-.nav-tabs .nav-link:focus {
-  border: none;
-  border-bottom: 0 solid;
-  margin-bottom: 0;
 }
 
 // default White tab style
+
+.tabs-mobile-view{
+  @include mobile{
+    overflow-x: auto;
+  }
+}
 .default-tab-style {
   border: 1px solid $gray-70;
+  @include mobile{
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
 
   .nav-item {
     border-right: 1px solid $gray-70;
@@ -183,6 +227,7 @@ h6 {
       margin-bottom: 0 !important;
       font-weight: 600;
       border: none;
+      width: 100%;
 
       .activeTab {
         background-color: $white;
@@ -218,9 +263,18 @@ h6 {
 
 // Pagination Start ---------------------------------
 .custom-paginationMain {
+  .mobFlexPagination {
+    @include mobile {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  }
   .custom-pagination {
     .page-item {
       margin: 0 0.4rem;
+      @include mobile {
+        margin: 0;
+      }
 
       &:first-child,
       &:last-child {
@@ -240,6 +294,12 @@ h6 {
         line-height: 29px;
         border: 0;
         background-color: transparent;
+        @include mobile {
+          width: 20px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 24px;
+        }
 
         &:focus {
           outline: none;
@@ -357,8 +417,8 @@ h6 {
     z-index: 1;
     width: 100%;
     background: rgba($black, 0.8);
-    height: 58px;
-    padding: 6px 4px;
+    height: 50px;
+    padding: 6px 0;
     backdrop-filter: blur(8px);
 
     .slick-track {
@@ -425,7 +485,6 @@ h6 {
     border: 0;
 
     .react-calendar__navigation {
-
       .react-calendar__navigation__prev2-button,
       .react-calendar__navigation__next2-button {
         display: none;
@@ -541,19 +600,25 @@ h6 {
 
 // Tables Style here
 
-.dashboardTable .table> :not(caption)>*>* {
+.dashboardTable {
+  @include mobile {
+    overflow-x: scroll;
+  }
+}
+
+.dashboardTable .table > :not(caption) > * > * {
   padding: 1rem;
   border-bottom-width: none;
   background-color: $gray-28;
   color: rgba($gray-F3, 0.8);
 }
 
-.dashboardTable .table-odd>tbody>tr:nth-of-type(even)>* {
+.dashboardTable .table-odd > tbody > tr:nth-of-type(even) > * {
   background-color: $gray-18;
   color: $white;
 }
 
-.dashboardTable .table-even>tbody>tr:nth-of-type(odd)>* {
+.dashboardTable .table-even > tbody > tr:nth-of-type(odd) > * {
   background-color: $gray-18;
   color: $white;
 }
@@ -580,7 +645,7 @@ h6 {
 
   .header-button-style {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 0 12px;
   }
 }
@@ -695,6 +760,10 @@ h6 {
     color: $gray-8;
     font-size: 16px;
   }
+
+  .css-iljtu2-MuiRating-root {
+    color: #f2a742;
+  }
 }
 
 // motor-cycle-accordian
@@ -711,7 +780,7 @@ h6 {
   .motor-cycle-accordian-inner {
     padding: 20px;
 
-    @include mobile{
+    @include mobile {
       padding: 0;
     }
 
@@ -725,6 +794,9 @@ h6 {
   display: flex;
   background-color: $black;
   gap: 0 40px;
+  @include mobile{
+    flex-wrap: wrap;
+  }
 
   .col-md-4 {
     &:last-child {
@@ -832,12 +904,11 @@ h6 {
     background-color: $theme-sky-4B;
   }
 
-  &.warning {
-    background: $theme-warning;
-  }
-
   &.orange {
     background-color: #e86a16;
+  }
+  &.gray {
+    background-color: #6f7070;
   }
 }
 
@@ -847,10 +918,54 @@ h6 {
 
 // dashboardCard
 .dashboard-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin-bottom: 12px;
   margin-top: 24px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.accounts-dashboard-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+	margin-bottom: 1.5rem;
+  margin-top: 24px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.user-detail-card{
+  border: 1px solid $gray-70;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+	margin-bottom: 1.5rem;
+  margin-top: 20px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   @include mobile {
     display: grid;
@@ -880,6 +995,9 @@ h6 {
 }
 
 .leadsModalMain {
+  @include mobile{
+    padding: 0 8px;
+  }
   .modal-dialog {
     width: 100%;
     max-width: 732px;
@@ -916,56 +1034,238 @@ h6 {
   }
 }
 
-
-.fixed-Footer{
+.fixed-Footer {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;  
   background-color: $gray-28;
   position: fixed;
   bottom: 0;
   padding: 10px;
   z-index: 9;
-  width: calc(100vw - 335px);
-  
-  button{
+  width: calc(100vw - 320px);
+  button {
     height: 35px;
   }
-
+  @include tablet {
+    width: calc(100vw - 0px);
+  }
 }
 
-
-.addMotorBtn{
-	display: inline-block;
-	padding: 6px 15px;
-	color:$gray-0D;
-	background-color: $white;
-	font-size: 12px;
-	font-weight: 600;
-	text-decoration: none;
-	transition: all 0.5s;
-	&:hover{
-		background-color: $theme-red-da;
-		color: $white;
-	}
-	svg{
-		display: inline-block;
-		margin-right: 3px;
-	}
+.addMotorBtn {
+  display: inline-block;
+  padding: 6px 15px;
+  color: $gray-0D;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.5s;
+  &:hover {
+    background-color: $theme-red-da;
+    color: $white;
+  }
+  svg {
+    display: inline-block;
+    margin-right: 3px;
+  }
 }
 
-.img-shadow{
-  &::after{
-    -webkit-transition: all 0.3s;
+.img-shadow {
+  &::after {
     transition: all 0.3s;
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 100%;
     height: 80px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(0, 0, 0, 0)), to(black)) !important;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, black 100%) !important;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, black 100%);
     margin-top: -115px;
     z-index: 1;
     bottom: 0;
+  }
+}
+
+@include mobile {
+  .p-xs-1 {
+    padding-left: 0.33rem;
+    padding-right: 0.33rem;
+  }
+}
+// Account Page 
+.whiteBtn {
+  padding: 5px 15px;
+  min-height: 28px;
+  font-size: 12px;
+  font-weight: 400;
+  background: $white;
+  border: 1px solid $white;
+  border-radius: 0px;
+  color: $black;
+  font-weight: 700;
+  text-decoration: none;
+  &:hover{
+    color:$black ;
+  }
+  &:active {
+    background: transparent;
+    border: 1px solid $black;
+  }
+}
+
+.filterTitle{
+font-size: 14px;
+color: $gray-cb;
+font-weight: 400;
+}
+// Account Page 
+
+.previewViaModal{
+  .modal-dialog{
+    width: 100%;
+    max-width: 558px;
+    @include mobile{
+      margin: 0 auto;
+    }
+    .modal-content {
+      border-radius: 0;
+      background-color: $gray-18;
+    }
+  }
+}
+
+// action-list-style
+.action-list-style {
+  display: flex;
+  justify-content: space-between;
+  
+  @include mobile {
+    flex-wrap: wrap;
+    gap: 10px 0;
+  }
+
+  .left-sec {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+
+    @include mobile {
+      gap: 0 5px;
+    }
+
+    .title3 {
+      opacity: 0.7;
+      @include mobile{
+        font-size: 14px;
+        line-height: inherit;
+      }
+    }
+  }
+
+  .right-sec {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+
+    @include mobile {
+      gap: 0 5px;
+    }
+  }
+
+  .vertical-divider {
+    height: 70%;
+    width: 1px;
+    margin: 0px 10px;
+    background-color: $gray-70;
+  }
+
+
+  // horizontal-list
+  .horizontal-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      color: $white;
+      opacity: 0.7;
+      font-size: 12px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+
+      &::after {
+        display: inline-flex;
+        width: 1px;
+        height: 100%;
+        content: '';
+        margin: 0 10px;
+        background-color: $gray-70;
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+
+      &.active {
+        color: $theme-danger;
+      }
+    }
+  }
+}
+
+
+// Dropdown White Theme
+.theme-white {
+  .dropdown-menu {
+    background-color: $white !important;
+    border-radius: 4px;
+    margin-top: 5px;
+
+    a {
+      color: rgba($black, 0.8) !important; 
+      border: none !important;
+      font-size: 14px !important;
+      font-weight: 500;
+
+      &:hover {
+        background-color: $white !important;
+        color: rgba($black, 1) !important; 
+      }
+    }
+  }
+}
+
+.form-check-input:checked {
+  background-color: #DA291C;
+  border-color: #DA291C;
+}
+.flex-xs-column-reverse{
+  @include mobile{
+    flex-direction: column-reverse;
+  }
+}
+
+// Evalute Card Style
+.evalute-card {
+	margin-top: 20px;
+	background-color: $gray-28;
+	padding: 20px;
+  
+	@include mobile-tablet-p{
+		float: left;
+		margin-bottom: 15px;
+		padding: 15px;
+	}
+}
+
+.custom-checkbox{
+  @include mobile{
+    display: flex;
+    align-items: center;
   }
 }

@@ -4,9 +4,8 @@ import { Card, Image } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { BiRupee } from 'react-icons/bi';
 import { BsPencil } from 'react-icons/bs';
-import CustomCheckBox from '../../../components/common/customCheckBox';
+import CustomCheckBox from '../../common/customCheckBox';
 import ArrowButton from '../../common/buttons/ArrowButton';
-import ButtonPrimary from '../../common/buttons/ButtonPrimary';
 import styles from './style.module.scss';
 
 function BiddingBikeCard(props) {
@@ -17,11 +16,7 @@ function BiddingBikeCard(props) {
   return (
     <Card className={styles.bikeCardCols}>
       <div className={`${styles.bikeImg} ${props.className}`}>
-        <Image
-          variant="top"
-          src={props.imageUrl}
-          alt="not-found"
-        />
+        <Image variant="top" src={props.imageUrl} alt="not-found" />
       </div>
       {props.isClosedTitle && (
         <div className={styles.closedBidTitle}>
@@ -80,14 +75,13 @@ function BiddingBikeCard(props) {
             <div className={styles.priceFlex}>
               <div className={styles.closedPriceCols}>
                 <div className={styles.sbTitle}>{props.bidTitle}</div>
-                <div className={styles.bikePrice}>
+                <div className={styles.bikeClosedPrice}>
                   {props.highestBidSymbol && (
                     <span>
                       <BiRupee />
                     </span>
                   )}
                   {props.highestClosedBidPrice}
-
                 </div>
               </div>
               <div className={styles.closedPriceCols}>
@@ -98,13 +92,15 @@ function BiddingBikeCard(props) {
           )}
         </div>
         <div className={styles.addtionalInfo}>
-          <div className="d-flex align-items-center justify-content-between">
-            <span className={styles.infoTitle}>KMs Driven</span>
-            <span className={styles.infoTitle}>Model</span>
-          </div>
-          <div className="d-flex align-items-center justify-content-between">
-            <span>{props.kmDrive} KM</span>
-            <span>{props.modelYear}</span>
+          <div className="d-md-flex align-items-center justify-content-between">
+            <div className={styles.kmModelCols}>
+              <span className={styles.infoTitle}>KMs Driven</span>
+              <span>{props.kmDrive} KM</span>
+            </div>
+            <div className={styles.kmModelCols}>
+              <span className={styles.infoTitle}>Model</span>
+              <span>{props.modelYear}</span>
+            </div>
           </div>
           <div className={styles.locationText}>
             <span>Location</span> {props.location}
@@ -117,7 +113,7 @@ function BiddingBikeCard(props) {
         )}
         {props.redBtn && (
           <div className={styles.cardBtnCols}>
-            <ButtonPrimary title="VIEW DETAIL" />
+            <ArrowButton detailLink="/bike-details" title="VIEW DETAILS" />
           </div>
         )}
       </Card.Body>

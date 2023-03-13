@@ -1,0 +1,59 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/mixins';
+.greetingCard {
+  display: flex;
+  justify-content: space-between;
+  height: 251px;
+  margin: 1.5rem 0;
+  position: relative;
+
+  @include mobile{
+    flex-direction: column;
+    margin-bottom: 20rem;
+  }
+  .greetingCardDetailes {
+    background-color: #1c1b1b;
+    width: 60%;
+    height: 100%;
+    padding: 2rem;
+    @include mobile{
+      width: 100%;
+      padding: 0.8rem;
+    }
+     h3{
+		font-size: 24px;
+		color: #E5E3E3;
+	 }
+    .cardDetailesText {
+      font-size: 16px;
+      padding: 0 3rem;
+      letter-spacing: 0px;
+
+      @include mobile{
+        padding:0 0 0 3rem;
+      }
+      span {
+        color: $theme-yellow-E8;
+      }
+    }
+    .cardDetailesTextGray {
+      font-size: 14px;
+      color: $gray-cb;
+      padding: 1rem 3rem;
+      @include mobile{
+        padding:1rem 0 1rem 3rem;
+      }
+    }
+  }
+  .greetingCardSlider {
+    width: 40%;
+    height: 100%;
+
+    @include mobile{
+      img{
+        width: 52vh;
+
+      }
+    }
+  }
+}

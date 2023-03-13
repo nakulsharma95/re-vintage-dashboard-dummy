@@ -9,9 +9,42 @@ import OutlineButton from '../../components/common/buttons/OutlineButton';
 import DealerTable from '../../components/dealer-management/dealerTable';
 import FilterButton from '../../components/common/filterButton';
 import EmptyState from '../../components/emptyState';
-import MobileDealerCard from '../../components/dealer-management/mobileDealerCard';
+// import MobileDealerCard from '../../components/dealer-management/mobileDealerCard';
+// import styles from './style.module.scss';
+// import useMediaQuery from '../../components/common/useMedia';
 
 function DealerManagement() {
+  // const isSmallScreen = useMediaQuery(767);
+  // const mobileDealerCard = [
+  //   {
+  //     title: 'Neel Motors',
+  //     location:
+  //       'WZ - 1, Nirankari Tower, 2nd floor, Ganesh Nagar, Opposite metro pillar no. 535, New Delhi - 110018',
+  //     mobile: '+91 98765 43210',
+  //     email: 'delhimotorcycles@royalenfield.com',
+  //   },
+  //   {
+  //     title: 'Neel Motors',
+  //     location:
+  //       'WZ - 1, Nirankari Tower, 2nd floor, Ganesh Nagar, Opposite metro pillar no. 535, New Delhi - 110018',
+  //     mobile: '+91 98765 43210',
+  //     email: 'delhimotorcycles@royalenfield.com',
+  //   },
+  //   {
+  //     title: 'Neel Motors',
+  //     location:
+  //       'WZ - 1, Nirankari Tower, 2nd floor, Ganesh Nagar, Opposite metro pillar no. 535, New Delhi - 110018',
+  //     mobile: '+91 98765 43210',
+  //     email: 'delhimotorcycles@royalenfield.com',
+  //   },
+  //   {
+  //     title: 'Neel Motors',
+  //     location:
+  //       'WZ - 1, Nirankari Tower, 2nd floor, Ganesh Nagar, Opposite metro pillar no. 535, New Delhi - 110018',
+  //     mobile: '+91 98765 43210',
+  //     email: 'delhimotorcycles@royalenfield.com',
+  //   },
+  // ];
   return (
     <div>
       <Breadcrumb title="Dealer Management" />
@@ -25,13 +58,50 @@ function DealerManagement() {
         <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
-      
-      <MobileDealerCard />
-      {/* <div className="custom-tab-style">
+
+      {/* {isSmallScreen ? (
+        <div className={styles.mobileDealerCard}>
+          {mobileDealerCard.map((item) => (
+            <MobileDealerCard
+              title={item.title}
+              location={item.location}
+              mobile={item.mobile}
+              email={item.email}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="custom-tab-style">
+          <Tabs
+            className="mb-3"
+            defaultActiveKey="title1"
+            id="uncontrolled-tab-example"
+            tabclassname="custom-tab-nav"
+          >
+            <Tab eventKey="title1" title="All">
+              <DealerTable />
+            </Tab>
+            <Tab eventKey="title2" title="Enabled Dealers">
+              <EmptyState
+                title="No Result Found!"
+                description="we couldn find what you searched for try something again."
+              />
+            </Tab>
+            <Tab eventKey="title3" title="Disabled Dealers">
+              <EmptyState
+                title="No Result Found!"
+                description="we couldn find what you searched for try something again."
+              />
+            </Tab>
+          </Tabs>
+        </div>
+      )} */}
+      <div className="custom-tab-style">
         <Tabs
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
+          tabclassname="custom-tab-nav"
         >
           <Tab eventKey="title1" title="All">
             <DealerTable />
@@ -49,7 +119,7 @@ function DealerManagement() {
             />
           </Tab>
         </Tabs>
-      </div> */}
+      </div>
     </div>
   );
 }

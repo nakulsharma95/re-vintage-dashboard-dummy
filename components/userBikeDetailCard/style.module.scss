@@ -1,0 +1,50 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables//mixins';
+
+.userDetailCard {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.imgIcon {
+
+	  img {
+		width: 35px;
+	    height: auto;
+		object-fit: contain;
+		padding: 5px;
+		height: 100%;
+		margin-right: 10px;
+	  }
+	}
+   
+  }
+  .cardHead {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 5px 14px 0;
+	border-right: 1px solid $gray-70;
+	
+  
+	.title {
+	  font-size: 10px;
+	  margin-bottom: 2px;
+	  font-weight: 300;
+	  opacity: 0.7;
+	  color: #ffffffcc;
+	  @include mobile {
+		font-size: 14px;
+	  }
+	}
+  
+	.numbers {
+	  font-size: 14px;
+	  margin-bottom: 0;
+	  font-weight: 500;
+	  @include mobile {
+		font-size: 14px;
+	  }
+	}
+  }
+  

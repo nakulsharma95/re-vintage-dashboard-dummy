@@ -1,0 +1,91 @@
+/* eslint-disable @next/next/no-img-element */
+import Link from 'next/link';
+import { Modal } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
+import { BiDownload } from 'react-icons/bi';
+import { FiCopy } from 'react-icons/fi';
+import { IoMdClose } from 'react-icons/io';
+import ArrowButton from '../../common/buttons/ArrowButton';
+import OutlineButton from '../../common/buttons/OutlineButton';
+import FileUploader from '../../common/fileUploader';
+import styles from './style.module.scss';
+
+function PreviewModal(props) {
+  return (
+    <Modal
+      show={props.isOpen}
+      onHide={props.handleClose}
+      centered
+      className="previewViaModal"
+      backdropClassName="blur-primary"
+    >
+      <div className={styles.previewModalBody}>
+        <div className={styles.headerStyle}>
+          <div className={styles.title}>{props.title}</div>
+          <button
+            type="button"
+            onClick={props.handleClose}
+            className={`${styles.previewModalCloseBtn}`}
+          >
+            <IoMdClose color="white" size={40} />
+          </button>
+        </div>
+        {props.isPreviewModal && (
+          <div className={styles.previewCols}>
+            <Form.Control
+              type="text"
+              defaultValue="https://royalenfield.com/vintage/FHJN2r2nw2"
+            />
+            <Link href="/">
+              <FiCopy />
+            </Link>
+            <div className={styles.sbBtn}>
+              <ArrowButton title="SUBMIT" />
+            </div>
+          </div>
+        )}
+
+        {props.isAddBikeModal && (
+          <div className={styles.addBikeMain}>
+            <Form>
+              <Form.Group className="mb-4" controlId="formBasicEmail">
+                <Form.Label className={styles.labelTitle}>
+                  Motorcycle Name
+                </Form.Label>
+                <Form.Control type="text" placeholder="Motorcycle Name" />
+              </Form.Group>
+              <Form.Group className="mb-4" controlId="formBasicEmail">
+                <Form.Label className={styles.labelTitle}>
+                  Upload Picture
+                </Form.Label>
+                <FileUploader />
+              </Form.Group>
+              <Form.Group className="mb-4" controlId="formBasicEmail">
+                <Form.Label className={styles.labelTitle}>
+                  Download Layout
+                </Form.Label>
+                <div className={styles.downloadBtn}>
+                  <OutlineButton
+                    title="Download Layout"
+                    leftIcon={<BiDownload />}
+                  />
+                </div>
+              </Form.Group>
+              <Form.Group className="mb-5" controlId="formBasicEmail">
+                <Form.Label className={styles.labelTitle}>
+                  Upload Excel
+                </Form.Label>
+                <FileUploader />
+              </Form.Group>
+              <div className={styles.btnCols}>
+                <ArrowButton title="SUBMIT" />
+              </div>
+            </Form>
+          </div>
+        )}
+      </div>
+    </Modal>
+  );
+}
+
+export default PreviewModal;

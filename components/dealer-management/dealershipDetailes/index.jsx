@@ -26,11 +26,9 @@ function DealershipDetails() {
         </p>
         <OutlineDropdown
           dropdownTitle="Actions"
-          options={[
-            'Blacklist Dealer',
-            'Blacklist Dealer 2',
-            'Blacklist Dealer 3',
-          ]}
+          width="150px"
+          options={['Blacklist Dealer', 'Disable']}
+          themeWhite
         />
       </HeaderPrimary>
 
@@ -46,7 +44,7 @@ function DealershipDetails() {
             </p>
           </div>
           <div className={style.motors_lists}>
-            <div className={style.motors_list}>
+            <div className={`${style.motors_list} ${style.motors_list_mob}`}>
               <Image
                 src="/images/dealership-icon1.svg"
                 width="28"

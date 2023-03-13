@@ -9,9 +9,13 @@
 		margin-top: 10px;
 		width: 100%;
 		max-width: 570px;
+		@include mobile{
+			padding: 20px 0;
+		}
 		.inputCols{
 			margin: 10px 0 0;
 		}
+		
 		input, textarea{
 			margin: 5px 3px;
 			border-radius: 0;
@@ -35,37 +39,5 @@
 		width: 100%;
 		max-width: 570px;
 		margin-top: 10px;
-		button{
-			display: inline-block;
-			padding: 0 20px;
-			height: 36px;
-			line-height: 32px;
-			text-align: center;
-			background-color:$theme-pink-da;
-			border-radius: 0;
-			border: 1px solid transparent;
-			outline: none;
-			color: $white;
-			position: relative;
-			padding-right: 58px;
-			transition: all 0.5s;
-			&:hover{
-				border: 1px solid $theme-red-da;
-			}
-			span{
-				display: inline-block;
-				position: absolute;
-				right: 0;
-				top: 0;
-				color: $white;
-				background-color: $theme-red-da;
-				padding: 0 12px;
-				height: 34px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				font-size: 16px;
-			}
-		}
 	}
 }

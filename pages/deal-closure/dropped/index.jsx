@@ -1,33 +1,30 @@
-import React from "react";
-import { Row, Col, Button, Tabs, Tab } from "react-bootstrap";
-import { BiChevronDown } from "react-icons/bi";
-import { RiShareBoxFill } from "react-icons/ri";
-import Breadcrumb from "../../../components/common/breadcrumbPrimary";
-import styles from "./style.module.scss";
-import CloserBikeCard from "../../../components/dealClosure/closerCard";
-import DetailPagination from "../../../components/common/paginationPrimary";
-import SearchPrimary from "../../../components/common/searchPrimary";
-import FilterButton from "../../../components/common/filterButton";
-import HeaderPrimary from "../../../components/common/headerPrimary";
-import OutlineButton from "../../../components/common/buttons/OutlineButton";
+import { Col, Row } from 'react-bootstrap';
+import { RiShareBoxFill } from 'react-icons/ri';
+import SortByDropdown from '../../../components/common/sortByDropdown';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
+import OutlineButton from '../../../components/common/buttons/OutlineButton';
+import FilterButton from '../../../components/common/filterButton';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
+import CloserBikeCard from '../../../components/dealClosure/closerCard';
 
 function PaymentsPending() {
   const cardData = [
     {
-      imageUrl: "/images/bikeImage.png",
-      overDue: "evolutionOver",
-      bikeStatus: "Upload Content",
+      imageUrl: '/images/bikeImage.png',
+      overDue: 'evolutionOver',
+      bikeStatus: 'Upload Content',
     },
     {
-      imageUrl: "/images/bikeImage2.png",
-      bikeStatus: "Under Refurbishment",
+      imageUrl: '/images/bikeImage2.png',
+      bikeStatus: 'Under Refurbishment',
     },
     {
-      imageUrl: "/images/bikeImage3.png",
-      bikeStatus: "Under Approval",
+      imageUrl: '/images/bikeImage3.png',
+      bikeStatus: 'Under Approval',
     },
     {
-      imageUrl: "/images/bikeImage4.png",
+      imageUrl: '/images/bikeImage4.png',
     },
   ];
   return (
@@ -38,18 +35,25 @@ function PaymentsPending() {
         <SearchPrimary placeholder="Search Name, Location, Reference ID" />
         <FilterButton />
       </HeaderPrimary>
-      <div className={`${styles.sortByMain} mt-4`}>
-        <h5 className={styles.sortByTitle}>3 Leads</h5>
-        <div className="d-flex align-items-center">
-          <span className={styles.sortByTxt}>Sort By :</span>
-          <Button variant="primary" className={styles.sortByBtn}>
-            Most Relevant <BiChevronDown />
-          </Button>
+      <div className="bottom-white-border mt-3 mb-3" />
+
+      <div className="action-list-style my-3">
+        <div className="left-sec">
+          <h5 className="title3">3 Leads</h5>
+          <div className="vertical-divider" />
+        </div>
+
+        <div className="right-sec">
+          <SortByDropdown
+            droptitle="Select Relevant"
+            options={['Most Relevant', 'Relevant']}
+          />
         </div>
       </div>
+
       <Row>
         {cardData.map((item) => (
-          <Col xxl={3} xl={4} lg={6} md={6}>
+          <Col xxl={3} xl={4} lg={6} md={6} xs={6} className="p-xs-1">
             <CloserBikeCard
               data={item}
               isHighestBid="Highest Bid"
@@ -61,7 +65,6 @@ function PaymentsPending() {
           </Col>
         ))}
       </Row>
-      <DetailPagination />
     </>
   );
 }

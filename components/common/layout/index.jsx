@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import { IoCloseOutline } from 'react-icons/io5';
+import { RiMenu2Fill } from 'react-icons/ri';
 import Header from './header';
 import Sidebar from './sidebar';
 import style from './style.module.scss';
@@ -18,7 +20,10 @@ function Layout(props) {
     <div className={style.layoutStyle}>
       {isLoggin && is404 && (
         <>
-          <Header toggleHandler={toggleSidebar} />
+          <Header
+            buttonIcon={!isSidebarActive ? <RiMenu2Fill /> : <IoCloseOutline />}
+            toggleHandler={toggleSidebar}
+          />
           <Sidebar containerStyle={isSidebarActive && style.sidebarShowStyle} />
         </>
       )}

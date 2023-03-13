@@ -7,12 +7,20 @@
   background-color: #282828;
   border: 0;
   border-radius: 0;
+  @include mobile {
+    position: relative;
+    padding: 1rem 1.2rem;
+    padding-top: 40px;
+  }
 
   .bikeDetailCardHeader {
     display: flex;
     justify-content: space-between;
     padding-bottom: 1rem;
     border-bottom: 1px solid #707070;
+    @include mobile {
+      flex-wrap: wrap;
+    }
 
     .bikeName {
       color: $white;
@@ -31,7 +39,7 @@
         margin-left: 5px;
         margin-bottom: 0px;
       }
-      .bikeRequest{
+      .bikeRequest {
         display: inline;
         margin-left: 2rem;
         padding: 0.4rem 0.8rem;
@@ -39,7 +47,13 @@
         font-size: 10px;
         font-weight: 500;
         background-color: $black;
-        span{
+        @include mobile {
+          position: absolute;
+          top: 12px;
+          left: 15px;
+          margin: 0;
+        }
+        span {
           color: $white;
           font-size: 10px;
         }
@@ -57,7 +71,7 @@
       font-size: 18px;
       font-weight: 500;
       margin-bottom: 0px;
-      svg{
+      svg {
         position: relative;
         bottom: 1px;
         left: 3px;
@@ -65,23 +79,35 @@
     }
   }
   .bikeCardBody {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem 0;
+    @include mobile {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
     .bikeCardBodyTitle {
       color: #cbc6c6;
       font-size: 12px;
       font-weight: 700;
       margin-bottom: 1.5rem;
+      @include mobile{
+        margin-bottom:0.9rem;
+      }
     }
     .bikeCardBodySubTitle {
       color: #a7a7a7;
       font-size: 12px;
       font-weight: 500;
+      @include mobile{
+        margin-top: 5px;
+      }
     }
     .bikeCardBodyText {
       color: $white;
       font-size: 14px;
       font-weight: 400;
+      @include mobile {
+        margin-bottom: 0;
+      }
     }
   }
   .bikeCardFooter {
@@ -90,8 +116,14 @@
     justify-content: space-between;
     padding-top: 1rem;
     border-top: 1px solid #707070;
+    @include mobile {
+      flex-wrap: wrap;
+    }
     .statusBox {
       display: flex;
+      @include mobile {
+        flex-wrap: wrap;
+      }
       .statusBoxText {
         position: relative;
         color: #cbc6c6;
@@ -100,6 +132,21 @@
         padding-left: 1rem;
         padding-right: 1rem;
         margin-bottom: 0px;
+        border-right: 1px solid $gray-70;
+        margin-right: 15px;
+        @include mobile {
+          border-right: none;
+        }
+        &:last-child{
+          margin-right: 0;
+          border-right: none;
+        }
+        @include mobile {
+          margin-bottom: 3px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
         &::before {
           content: '';
           position: absolute;
@@ -111,13 +158,20 @@
           border-radius: 50%;
           transform: translateY(-50%);
         }
-        span{
+        span {
           color: $white;
         }
       }
     }
     .statusBtnBox {
       display: flex;
+      @include mobile {
+        width: 100%;
+        margin-top: 10px;
+        border-top: 1px solid $gray-70;
+        padding-top: 15px;
+        justify-content: space-between;
+      }
       .statusBtn {
         display: flex;
         padding: 0rem 0.8rem;
@@ -147,4 +201,18 @@
 }
 .cardBodyBorderRight {
   border-right: 1px solid #707070;
+  &:last-child{
+    border-right: none;
+    padding-left: 35px;
+    @include mobile {
+      padding-left: 12px;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid $gray-70;
+    }
+  }
+  
+  @include mobile {
+    border-right: none;
+  }
 }

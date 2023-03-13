@@ -6,6 +6,9 @@
 		background-color: $gray-2;
 		padding: 25px;
 		padding-bottom: 0;
+		@include mobile-tablet-p{
+			padding: 25px 15px;
+		}
 		.title{
 			margin-bottom: 22px;
 			font-size: 16px;
@@ -14,11 +17,23 @@
 		.navTabs{
 			border: 1px solid $gray-70;
 			flex-wrap: nowrap;
+			@include mobile-tablet-p{
+				flex-wrap: wrap;
+				border: none;
+			}
 			.navItem{
 				width: 100%;
+				@include mobile-tablet-p{
+					flex: 50%;
+					width: 50%;
+					margin: 3px 0;
+				}
 				&:last-child{
 					a{
 						border-right: none;
+						@include mobile-tablet-p{
+							border-right: 1px solid $gray-70;
+						}
 					}
 				}
 				a{
@@ -29,6 +44,16 @@
 					color: $white;
 					white-space: nowrap;
 					transition: all 0.5s;
+					@include mobile-tablet-p{
+						border: 1px solid $gray-70;
+						white-space: pre-wrap;
+						display: flex;
+						align-items: center;
+						text-align: left;
+						font-size: 13px;
+						padding: 0 10px;
+						height: 50px;
+					}
 					&:hover{
 						background-color: $theme-red-da;
 					}
@@ -54,5 +79,21 @@
 				}
 			}
 		}
+	}
+}
+.noOutlineBtn{
+	border: none;
+	background-color: transparent;
+	color:$white ;
+	font-size: 12px;
+	font-weight: 500;
+
+	&:hover{
+		background-color: transparent;
+	}
+
+	.noOutlineIcon{
+		margin-right: 0.5rem;
+		font-size: 1.2rem;
 	}
 }

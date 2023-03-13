@@ -8,6 +8,13 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  @include mobile{
+    border-bottom: 1px solid $black-40;
+    width: 100%;
+    &:last-child{
+      border-bottom: none;
+    }
+  }
 
   &::before {
 	display: flex;
@@ -47,6 +54,9 @@
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 0rem;
+    @include mobile{
+      font-size: 12px;
+    }
   }
 }
 
@@ -54,6 +64,9 @@
   display: flex;
   gap: 0 60px;
   width: 100%;
+  @include mobile{
+    gap: 0 25px;
+  }
 }
 
 .borderNone {

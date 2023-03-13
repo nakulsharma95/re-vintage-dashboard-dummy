@@ -19,18 +19,23 @@
   .nonReCardSubTitle {
     color: $white;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 1rem;
   }
   .nonReCardInline {
+    display: flex;
+    gap: 10px;
+
     .nonReCardInlineText {
       color: $gray-cb;
       font-size: 12px;
       font-weight: 500;
       margin-bottom: 1rem;
+
       &:nth-child(2) {
         border-left: 1px solid $gray-70;
         border-right: 1px solid $gray-70;
+        padding: 0 10px;
       }
     }
   }

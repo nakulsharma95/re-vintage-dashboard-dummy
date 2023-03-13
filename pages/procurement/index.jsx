@@ -183,6 +183,7 @@ function Procurement() {
       </HeaderPrimary>
 
       <div className="bottom-white-border" />
+
       <ViewAll
         title="Partial Leads"
         leadsTitle="(8 Leads)"
@@ -192,8 +193,9 @@ function Procurement() {
       />
       <Row>
         {cardData.map((item) => (
-          <Col xl={4} md={6}>
+          <Col xl={4}>
             <DetailCard
+              isDateTime
               isContactBtn
               isCardFooter
               ownerName={item.ownerName}
@@ -211,12 +213,12 @@ function Procurement() {
         title="Evaluation Requests"
         leadsTitle="(8 Leads)"
         viewAllBtn
-        viewAllClass="mt-5 mb-3"
+        viewAllClass="mt-4 mb-4"
         viewHandler="procurement/evaluation-requests"
       />
       <Row>
         {evaluationData.map((item) => (
-          <Col md={3}>
+          <Col lg={3} md={6} xs={6} className="p-xs-1">
             <BikeCard
               className="bg-gray-3 py-2"
               isKmData
@@ -240,12 +242,12 @@ function Procurement() {
         title="Scheduled Evaluation"
         leadsTitle="(32 Leads)"
         viewAllBtn
-        viewAllClass="mt-5 mb-3"
+        viewAllClass="mt-4 mb-4"
         viewHandler="procurement/scheduled-evaluation"
       />
       <Row>
         {schedulednData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <BikeCard
               className="py-2"
               isKmData
@@ -269,12 +271,12 @@ function Procurement() {
         title="Completed Evaluation"
         leadsTitle="(32 Leads)"
         viewAllBtn
-        viewAllClass="mt-5 mb-3"
+        viewAllClass="mt-4 mb-4"
         viewHandler="procurement/complete-evaluation"
       />
       <Row>
         {completedData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <BikeCard
               className="bg-gray-3 py-2 bg-transparent mb-0 pb-0"
               isKmData

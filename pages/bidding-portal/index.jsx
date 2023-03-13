@@ -168,9 +168,9 @@ export default function BiddingPortal() {
   ];
   return (
     <div>
-      <div className="d-flex align-items-center justify-content-between">
+      <div className="d-md-flex align-items-center justify-content-between">
         <Breadcrumb title="Bidding Portal" />
-        <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
+        <BiddingTimer biddingEndTime={17} biddingStartTime={14} />
       </div>
 
       <HeaderPrimary headerClass="mb-2" title="Bidding Portal">
@@ -187,12 +187,13 @@ export default function BiddingPortal() {
         title="Upcoming Bids"
         leadsTitle="(1507 Leads)"
         viewAllBtn
-        viewAllClass="mt-4 mb-3"
+        viewAllClass="mt-4 mb-4"
       />
       <Row>
         {upcomingBikeData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <BiddingCard
+              isCardTitle
               baseprice
               arrowBtn
               imageUrl={item.imageUrl}
@@ -212,13 +213,16 @@ export default function BiddingPortal() {
         title="Active Bids"
         leadsTitle="(97 Leads)"
         viewAllBtn
-        viewAllClass="mt-4 mb-3"
+        viewAllClass="mt-4 mb-4"
       />
       <Row>
         {activeBikeData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <BiddingCard
               highestBid
+              highestBidSymbol
+              bidTitle="Highest Bid"
+              isCardTitle
               redBtn
               imageUrl={item.imageUrl}
               bikeName={item.name}
@@ -237,13 +241,16 @@ export default function BiddingPortal() {
         title="Closed Bids"
         leadsTitle="(12 Leads)"
         viewAllBtn
-        viewAllClass="mt-4 mb-3"
+        viewAllClass="mt-4 mb-4"
       />
       <Row>
         {closedBikeData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <BiddingCard
+              isCardTitle
               highestBid
+              highestBidSymbol
+              bidTitle="Base Price"
               imageUrl={item.imageUrl}
               bikeName={item.name}
               bikeNumber={item.number}
@@ -261,14 +268,17 @@ export default function BiddingPortal() {
         title="Seller Bids"
         leadsTitle="(25 Leads)"
         viewAllBtn
-        viewAllClass="mt-4 mb-3"
+        viewAllClass="mt-4 mb-4"
       />
       <Row>
         {sellerBikeData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <BiddingCard
+              isCardTitle
               highestBid
-              arrowBtn
+              highestBidSymbol
+              bidTitle="Highest Bid"
+              redBtn
               imageUrl={item.imageUrl}
               bikeName={item.name}
               bikeNumber={item.number}

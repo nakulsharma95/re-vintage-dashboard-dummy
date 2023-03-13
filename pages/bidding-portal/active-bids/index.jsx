@@ -1,15 +1,14 @@
-import { Row, Col } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { BiRefresh } from 'react-icons/bi';
 import { RiShareBoxFill } from 'react-icons/ri';
 import ActiveBikeCard from '../../../components/biddingPortal/biddingPrimaryCard';
-import Breadcrumb from '../../../components/common/breadcrumbPrimary';
-import DetailPagination from '../../../components/common/paginationPrimary';
 import BiddingTimer from '../../../components/biddingPortal/biddingTimer';
-import HeaderPrimary from '../../../components/common/headerPrimary';
-import SearchPrimary from '../../../components/common/searchPrimary';
+import Breadcrumb from '../../../components/common/breadcrumbPrimary';
 import OutlineButton from '../../../components/common/buttons/OutlineButton';
 import FilterButton from '../../../components/common/filterButton';
-import SortTabs from '../../../components/common/sortTabs';
+import HeaderPrimary from '../../../components/common/headerPrimary';
+import DetailPagination from '../../../components/common/paginationPrimary';
+import SearchPrimary from '../../../components/common/searchPrimary';
 
 export default function ActiveBids() {
   const activeBikeData = [
@@ -52,9 +51,9 @@ export default function ActiveBids() {
   ];
   return (
     <div>
-      <div className="d-flex align-items-center justify-content-between">
+      <div className="d-md-flex align-items-center justify-content-between">
         <Breadcrumb title="Bidding Portal" addmoretitle="Active Bids" />
-        <BiddingTimer title="Bidding is active now!" timer="02 : 23 : 36" />
+        <BiddingTimer biddingStartTime={14} biddingEndTime={17} />
       </div>
 
       <HeaderPrimary
@@ -69,13 +68,15 @@ export default function ActiveBids() {
       </HeaderPrimary>
 
       <div className="bottom-white-border mt-3 mb-3" />
-      <SortTabs
-        selectAllCheck
-        sortTabTitle="25 Bids Available"
-      />
+      <div className="action-list-style my-3">
+        <div className="left-sec">
+          <h5 className="title3">25 Bids Available</h5>
+        </div>
+      </div>
+
       <Row className="mb-3">
         {activeBikeData.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6} className="p-xs-1">
             <ActiveBikeCard
               bidTitle="Highest Bid"
               highestBidSymbol

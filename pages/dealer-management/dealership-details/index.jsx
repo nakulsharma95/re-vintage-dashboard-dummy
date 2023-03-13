@@ -1,14 +1,12 @@
-import React from 'react';
-import Dealershipdetails from '../../../components/dealer-management/dealershipDetailes';
-import { Row, Col, Tabs, Tab } from 'react-bootstrap';
-import DetailPagination from '../../../components/common/paginationPrimary';
-import Review from '../../../components/dealer-management/reviewSlider';
+import { Col, Row, Tab, Tabs } from 'react-bootstrap';
 import BikeCardRadio from '../../../components/common/cardCheckbox';
-import DealFilter from '../../../components/dealClosure/dealFilter';
+import DetailPagination from '../../../components/common/paginationPrimary';
+import Dealershipdetails from '../../../components/dealer-management/dealershipDetailes';
+import Review from '../../../components/dealer-management/reviewSlider';
 import EmptyState from '../../../components/emptyState';
 import styles from './style.module.scss';
 
-function DealershipDetails(props) {
+function DealershipDetails() {
   const cardData = [
     {
       imageUrl: '/images/bikeImage.png',
@@ -37,9 +35,14 @@ function DealershipDetails(props) {
           className="mb-3"
           defaultActiveKey="title1"
           id="uncontrolled-tab-example"
+          tabclassname="custom-tab-nav"
         >
           <Tab eventKey="title1" title="Inventory">
-            <DealFilter title="37 Listing Found" />
+            <div className="action-list-style my-3">
+              <div className="left-sec">
+                <h5 className="title3">37 Listing Found</h5>
+              </div>
+            </div>
             <Row className="mb-3 mt-3">
               {cardData.map((item) => (
                 <Col xxl={3} xl={4} lg={6} key={item.id}>
@@ -101,8 +104,8 @@ function DealershipDetails(props) {
               ))}
             </Row>
           </Tab>
-          <Tab eventKey="title2" title="Marketplace (31)" >
-          <EmptyState
+          <Tab eventKey="title2" title="Marketplace (31)">
+            <EmptyState
               title="No Result Found!"
               description="we couldn find what you searched for try something again."
             />

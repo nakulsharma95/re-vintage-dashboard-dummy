@@ -5,16 +5,20 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	@include mobile-tablet-p{
+		flex-wrap: wrap;
+	}
 }
 .addMotorBtn{
 	display: inline-block;
-	padding: 6px 15px;
+	padding: 5px 15px;
 	color:$gray-0D;
 	background-color: $white;
 	font-size: 12px;
 	font-weight: 600;
 	text-decoration: none;
 	transition: all 0.5s;
+	border-radius: 0;
 	&:hover{
 		background-color: $theme-red-da;
 		color: $white;
@@ -30,8 +34,4 @@
 	color: $gray-cb;
 	display: block;
 	margin: 25px 0 15px;
-}
-
-.evaluteMain{
-	margin-top: 20px;
 }

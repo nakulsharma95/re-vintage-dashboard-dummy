@@ -1,0 +1,19 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/mixins';
+
+.sortTabBtnBox {
+	padding-left: 0.5rem;
+
+	.viewTabBtn {
+	  padding:0 0.5rem;
+	  font-size: 20px;
+	  background: transparent;
+	  border: 0px;
+	  &:first-child {
+		color: $gray-BF;
+	  }
+	  &:first-child {
+		color: $gray-70;
+	  }
+	}
+  }

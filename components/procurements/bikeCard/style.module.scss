@@ -1,5 +1,5 @@
-@import "../../../styles/variables/colors";
-@import "../../../styles/variables//mixins";
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
 
 .bikeCardMain {
   background-color: $gray-28;
@@ -13,13 +13,23 @@
   .bikePrice {
     h5 {
       margin-bottom: 0;
+      @include mobile {
+        margin-bottom: 5px;
+      }
     }
 
     h4 {
       margin-bottom: 0;
-      svg{
+      @include mobile {
+        font-size: 13px;
+      }
+      svg {
         position: relative;
         bottom: 2px;
+        @include mobile {
+          width: 16px;
+          bottom: 1px;
+        }
       }
     }
     display: flex;
@@ -28,16 +38,28 @@
     background-color: $gray-3;
     padding: 0.7rem 0;
     margin-bottom: 1rem;
+    @include mobile {
+      flex-wrap: wrap;
+    }
   }
   .bkeName {
     font-size: 16px;
     color: $white;
     padding: 0 1rem;
     margin-bottom: 15px;
+    font-weight: 600;
+    @include mobile {
+      margin-bottom: 0;
+    }
 
     span {
       font-size: 14px;
       color: $theme-yellow-E8;
+      @include mobile {
+        display: block;
+        font-weight: 500;
+        margin-top: 5px;
+      }
     }
   }
 
@@ -46,6 +68,12 @@
     justify-content: space-between;
     margin-bottom: 1rem;
     padding: 0px 15px 0px 15px;
+    @include mobile {
+      flex-wrap: wrap;
+      background-color: transparent;
+      padding: 5px 12px;
+      margin-bottom: 0;
+    }
 
     .detailTxt {
       font-size: 12px;
@@ -54,8 +82,26 @@
       margin-bottom: 0px;
       text-align: center;
       border-right: 1px solid #707070;
+      @include mobile {
+        width: 100%;
+        flex: auto;
+        border-right: none;
+        text-align: left;
+        margin: 3px 0;
+      }
       &:last-child {
         border-right: none;
+      }
+      .iconXsView {
+        display: none;
+        @include mobile {
+          display: inline-block;
+          img {
+            width: 15px;
+            margin-right: 3px;
+            opacity: 0.6;
+          }
+        }
       }
     }
   }
@@ -77,24 +123,39 @@
     font-size: 12px;
   }
 
-  .estimatedPrice{
+  .estimatedPrice {
     padding: 0 10px;
-    h5{
+    h5 {
       padding: 3px 0;
+      font-size: 12px;
+      color: $gray-cb;
+      @include mobile {
+        font-size: 12px;
+        font-weight: 400;
+        color: $gray-cb;
+      }
     }
-    .estPrice{
+    .estPrice {
       font-size: 18px;
       font-weight: 600;
       display: flex;
       align-items: center;
+      @include mobile {
+        font-size: 13px;
+      }
+      svg {
+        @include mobile {
+          width: 16px;
+        }
+      }
     }
   }
 }
 
-.smailBtn{
+.smailBtn {
   display: block;
   padding: 10px 10px 0;
-  a{
+  a {
     display: block;
     padding: 10px;
     text-align: center;
@@ -109,15 +170,15 @@
     text-decoration: none;
     transition: all 0.5s;
     font-weight: 500;
-    &:hover{
-      background-color:$theme-red-da;
+    &:hover {
+      background-color: $theme-red-da;
     }
   }
 }
 
-.cardBtnCols{
+.cardBtnCols {
   padding: 10px 10px 0;
-  button{
+  button {
     width: 100%;
   }
 }

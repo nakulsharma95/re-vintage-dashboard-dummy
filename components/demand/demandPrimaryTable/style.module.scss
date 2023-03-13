@@ -12,6 +12,7 @@
 			background-color: $gray-28;
 			border-color: $gray-28;
 			font-weight: 500;
+			white-space: nowrap;
 			&:first-child{
 				border-left: none;
 			}
@@ -27,6 +28,7 @@
 			background-color: $gray-18;
 			border:1px solid $gray-28;
 			border-width: 0;
+			white-space: nowrap;
 			&:nth-child(01){
 				width: 6%;
 			}

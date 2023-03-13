@@ -9,18 +9,20 @@
 
   @include mobile {
     flex-direction: column;
-    // justify-content: start;
-    align-items: start;
+    align-items: flex-start;
   }
 
   .headerActionSection {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 0 12px;
 
     @include mobile {
       flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
       gap: 12px;
+      width: 100%;
     }
   }
 

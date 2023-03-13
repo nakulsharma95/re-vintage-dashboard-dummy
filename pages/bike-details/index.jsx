@@ -1,4 +1,12 @@
+import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import Link from 'next/link';
+import {
+  MdOutlineClose,
+  MdErrorOutline,
+  MdCheckCircleOutline,
+} from 'react-icons/md';
+import { FiPhone } from 'react-icons/fi';
 import BikeCardFooter from '../../components/common/cardFooter';
 import Bids from '../../components/biddingPortal/bids';
 import BikeDetailTitle from '../../components/common/detailHeader';
@@ -8,8 +16,11 @@ import styles from './style.module.scss';
 import BackButton from '../../components/common/buttons/BackButton';
 import BikeSlider from '../../components/common/thumbnailSlider';
 import MotorcycleDetail from '../../components/procurements/motorcycleDetail';
+import CustomCheckBox from '../../components/common/customCheckBox';
+import ButtonPrimary from '../../components/common/buttons/ButtonPrimary';
+import GreetingCard from '../../components/biddingPortal/greetingCard';
 
-export default function BiddingDetails() {
+export default function BiddingDetails(props) {
   const bikeDetailData = [
     {
       bikeName: 'HUNTER 350',
@@ -49,7 +60,22 @@ export default function BiddingDetails() {
 
   return (
     <div>
-      <BackButton backLink="/bidding-portal" title="Back" />
+      <BackButton backLink="/bidding-portal" title="Go Back" />
+
+      <GreetingCard
+        icon="/images/greenTick.png"
+        title="Congratulations!!"
+        text1="We are pleased to inform you that you've won the bidding for the product"
+        textYellow="Classic 350 - DL 6T xxxxx."
+        text2=" Classic 350 - DL 6T AC 7314 will be appear in your marketplace within 24 hours."
+      />
+      <GreetingCard
+        icon="/images/redcross.png"
+        title="Sorry!!"
+        text1="We are pleased to inform you that you've won the bidding for the product"
+        textYellow="Classic 350 - DL 6T xxxxx."
+        text2=" Classic 350 - DL 6T AC 7314 will be appear in your marketplace within	24 hours."
+      />
       <BikeDetailTitle
         title="Motorcycle Details"
         smtitle="Please find all the necessary details below"
@@ -93,9 +119,75 @@ export default function BiddingDetails() {
             />
           ))}
         </div>
+
+        {/* This component open in Under Negotiation bike detail page */}
+
+        {props.bikeContact && (
+          <div className={styles.contactCols}>
+            <li>
+              <Link href="/">
+                <FiPhone /> Call Owner
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <FiPhone /> Call Dealer
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <MdOutlineClose /> Drop Negotiation
+              </Link>
+            </li>
+          </div>
+        )}
       </div>
+
+      {props.bikeSendDetail && (
+        <div className={styles.detailSendCols}>
+          <li>
+            <MdCheckCircleOutline style={{ color: '#36942f' }} /> Send
+            <Link href="/" className={styles.sendLink}>
+              ‘Payment detail link’
+            </Link>{' '}
+            to Customer <Link href="/">- Send</Link>
+          </li>
+          <li>
+            <MdErrorOutline style={{ color: '#f59e0b' }} /> Send
+            <Link href="/" className={styles.sendLink}>
+              ‘Payment detail link’
+            </Link>{' '}
+            to Customer <Link href="/">- Send</Link>
+          </li>
+          <li>
+            <MdErrorOutline style={{ color: '#f59e0b' }} /> Send Customer
+            details to Dealer <Link href="/">- Send</Link>
+          </li>
+
+          <div className={styles.sendPaymentsCols}>
+            <div className={styles.sendFlex}>
+              <div className={styles.sendCheckbox}>
+                <div className={styles.checkBoxBg}>
+                  <CustomCheckBox />
+                </div>
+              </div>
+              <div className={styles.sendList}>
+                <ul>
+                  <li>Send Payment detail of Customer to Seller Portal</li>
+                  <li>Send Customer details to seller portal</li>
+                  <li>Send Preferred Time slot</li>
+                </ul>
+              </div>
+            </div>
+            <div className={styles.sendPaymentBtn}>
+              <ButtonPrimary title="SUBMIT" />
+            </div>
+          </div>
+        </div>
+      )}
+      {/* end */}
       <Bids />
-      <BikeInspection />
+      <BikeInspection outlineButton />
       <BikeHistory />
     </div>
   );

@@ -2,16 +2,16 @@
 @import '../../../styles/variables/mixins';
 
 .compBikeCardSlider {
-	min-height: 330px;
-	max-height: 330px;
+	min-height: 315px;
+	max-height: 315px;
 	.compBikeCardSlides {
 	  &:focus-visible {
 		outline: none;
 	  }
 	  img {
 		width: 100%;
-		max-height: 330px;
-		min-height: 330px;
+		max-height: 315px;
+		min-height: 315px;
 		object-fit: cover;
 	  }
 	}
@@ -40,6 +40,10 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+
+		@include mobile {
+			width: 91%;
+		}
 	}
 
 	  .sliderThumbTag {
@@ -70,4 +74,10 @@
 			font-weight: 600;
 		}
 	  }
+}
+
+.sliderMobileMain{
+	@include mobile{
+		padding: 12px;
+	}
 }

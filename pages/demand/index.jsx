@@ -156,7 +156,6 @@ function Demand() {
   return (
     <>
       <Breadcrumb title="Demand" />
-
       <DemandNav />
 
       <div className={styles.demandTitle}>Most Wish-Listed Motorcycle</div>
@@ -205,9 +204,9 @@ function Demand() {
       </div>
 
       <div className={styles.demandTitle}>All Time Favourites</div>
-      <Row className="mt-3 mb-5">
+      <Row className="mt-3 mb-lg-5">
         {cardList.map((item) => (
-          <Col md={3}>
+          <Col md={3} xs={6}>
             <DemandPrimaryCard
               imgUrl={item.imgUrl}
               title={item.title}
@@ -217,19 +216,26 @@ function Demand() {
         ))}
       </Row>
 
-      <div className={styles.demandHead}>
+      <div className={styles.demandHeader}>
         <div className={styles.demandTitle}>All Time Favourites</div>
-        <div className="d-flex align-items-center">
-          <div className="me-3">
-            <OutlineButton title="Export Data" leftIcon={<RiShareBoxFill />} />
+        <div className="d-md-flex align-items-center">
+          <div className={styles.flexCols}>
+            <div className="me-3">
+              <OutlineButton
+                title="Export Data"
+                leftIcon={<RiShareBoxFill />}
+              />
+            </div>
+            <div className="me-md-3">
+              <OutlineButton title="Import EXCEL" leftIcon={<BiDownload />} />
+            </div>
           </div>
-          <div className="me-3">
-            <OutlineButton title="Import EXCEL" leftIcon={<BiDownload />} />
-          </div>
-          <span className="sortText">Sort By:</span>
+          <div className={styles.flexCols}>
+            <span className="sortText">Sort By:</span>
 
-          <OutlineDropdown dropdownTitle="This week" options={['Week 1']} />
-          <OutlineDropdown dropdownTitle="City" options={['Mumbai']} />
+            <OutlineDropdown dropdownTitle="This week" options={['Week 1']} />
+            <OutlineDropdown dropdownTitle="City" options={['Mumbai']} />
+          </div>
         </div>
       </div>
       <div className={styles.allTimeTable}>

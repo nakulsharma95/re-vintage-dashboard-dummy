@@ -1,74 +1,84 @@
-import React from "react";
-import { Card, Col, Row } from "react-bootstrap";
-import bikeCardStyle from "./style.module.scss";
-import { BiRupee } from "react-icons/bi";
-import Link from "next/link";
-import ButtonPrimary from "../../../components/common/buttons/ButtonPrimary";
+import React from 'react';
+import { Card, Col, Image, Row } from 'react-bootstrap';
+import { BiRupee } from 'react-icons/bi';
+import styles from './style.module.scss';
+import ArrowButton from '../../common/buttons/ArrowButton';
 
 function BikeCard(props) {
   const { data } = props;
   return (
-    <>
-      <Card className={`${bikeCardStyle.bikeCardMain} mb-4`}>
-        <Card.Img variant="top" src={props.imageUrl} />
-        {props.isEvalTag && (
-          <div>
-            {data.evalTag && (
-              <div className={`${bikeCardStyle.bikeCardTag}`}>
-                {data?.evalTag}
+    <Card className={`${styles.bikeCardMain} mb-4`}>
+      <Card.Img variant="top" src={props.imageUrl} />
+      {props.isEvalTag && (
+        <div>
+          {data.evalTag && (
+            <div className={`${styles.bikeCardTag}`}>{data?.evalTag}</div>
+          )}
+        </div>
+      )}
+      <Card.Body className="px-0">
+        <Card.Title className={styles.bkeName}>
+          {props.bikeModal}
+          <span> {props.bikeRc}</span>
+        </Card.Title>
+
+        {props.isKmData && (
+          <Row className={`${styles.bikeDetail} mx-0 ${props.className}`}>
+            <Col className={styles.detailTxt}>
+              <div className={styles.iconXsView}>
+                <Image src="/images/icons/road.svg" alt="not found" />
               </div>
-            )}
+              {props.bikekm} km
+            </Col>
+            <Col className={styles.detailTxt}>
+              <div className={styles.iconXsView}>
+                <Image src="/images/icons/user.svg" alt="not found" />
+              </div>
+              {props.bikeOwner} Owner
+            </Col>
+            <Col className={styles.detailTxt}>
+              <div className={styles.iconXsView}>
+                <Image src="/images/icons/engine.svg" alt="not found" />
+              </div>
+              {props.bikeCc} CC
+            </Col>
+          </Row>
+        )}
+
+        {props.isPriceData && (
+          <div className={`${styles.bikePrice} ${props.className}`}>
+            <h5 className={styles.priceTitle}>{props.priceTitle}</h5>
+            <h4 className={styles.price}>
+              <BiRupee size={21} />
+              {props.bikekm}
+            </h4>
           </div>
         )}
-        <Card.Body className="px-0">
-          <Card.Title className={bikeCardStyle.bkeName}>
-            {props.bikeModal}
-            <span> {props.bikeRc}</span>
-          </Card.Title>
-
-          {props.isKmData && (
-            <Row className={`${bikeCardStyle.bikeDetail} mx-0 ${props.className}`}>
-              <Col className={bikeCardStyle.detailTxt}>{props.bikekm} km</Col>
-              <Col className={bikeCardStyle.detailTxt}>{props.bikeOwner} Owner</Col>
-              <Col className={bikeCardStyle.detailTxt}>{props.bikeCc} CC</Col>
-            </Row>
-          )}
-
-          {props.isPriceData && (
-            <div className={`${bikeCardStyle.bikePrice} ${props.className}`}>
-              <h5 className={bikeCardStyle.priceTitle}>{props.priceTitle}</h5>
-              <h4 className={bikeCardStyle.price}>
-                <BiRupee size={21} />
-                {props.bikekm}
-              </h4>
+        {props.isestimatedPrice && (
+          <div className={styles.estimatedPrice}>
+            <h5 className={styles.pricetitle}>{props.smPriceTitle}</h5>
+            <div className={styles.estPrice}>
+              <BiRupee size={21} /> {props.price} - <BiRupee size={21} />
+              {props.priceTwo}
             </div>
-          )}
-          {props.isestimatedPrice && (
-            <div className={bikeCardStyle.estimatedPrice}>
-              <h5 className={bikeCardStyle.pricetitle}>{props.smPriceTitle}</h5>
-              <div className={bikeCardStyle.estPrice}>
-                <BiRupee size={21} /> {props.price} - <BiRupee size={21} /> {props.priceTwo}
-              </div>
-            </div>
-          )}
-          <div className="d-flex align-items-center mx-3">
-          <h4 className={bikeCardStyle.source}>{props.source}</h4>
-            <h5 className={bikeCardStyle.priceTitle}>{props.sourceTitle}</h5>
-           
           </div>
-          {props.isEstBtn && (
-            <div className={bikeCardStyle.smailBtn}>
-              <Link href="/">CONTACT SAMIL</Link>
-            </div>
-          )}
-          {props.isViewBtn && (
-            <div className={bikeCardStyle.cardBtnCols}>
-              <ButtonPrimary title="VIEW DETAIL" />
-            </div>
-          )}
-        </Card.Body>
-      </Card>
-    </>
+        )}
+        <div className="d-flex align-items-center mx-3">
+          <h4 className={styles.source}>{props.source}</h4>
+          <h5 className={styles.priceTitle}>{props.sourceTitle}</h5>
+        </div>
+        {props.isEstBtn && (
+          <div className={styles.smailBtn}>
+            <ArrowButton title="CONTACT SAMIL" />
+          </div>
+        )}
+        {props.isViewBtn && (
+          <div className={styles.cardBtnCols}>
+            <ArrowButton title="VIEW DETAIL" />
+          </div>
+        )}
+      </Card.Body>
+    </Card>
   );
 }
 

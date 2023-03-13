@@ -1,5 +1,5 @@
-@import "../../../styles/variables/colors";
-@import "../../../styles/variables//mixins";
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables//mixins';
 .Heading {
   font-size: 16px;
   color: $white;
@@ -31,10 +31,19 @@
         font-size: 14px;
         margin-bottom: 0;
         font-weight: 300;
+        span {
+          font-size: 14px;
+          margin-bottom: 0;
+          font-weight: 300;
+          display: block;
+        }
       }
       span {
         font-size: 24px;
-		font-weight: 600;
+        font-weight: 600;
+        @include mobile{
+          font-size: 22px;
+        }
       }
     }
 
@@ -66,4 +75,3 @@
 .divider {
   border: 1px solid $black;
 }
-

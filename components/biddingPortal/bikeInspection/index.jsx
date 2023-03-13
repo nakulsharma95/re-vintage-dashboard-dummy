@@ -1,11 +1,12 @@
-import { Tab, Nav, Row, Col } from 'react-bootstrap';
+import { Tab, Nav, Row, Col, Button } from 'react-bootstrap';
 import { BiDownload } from 'react-icons/bi';
+import { IoMdDownload } from 'react-icons/io';
 import Image from 'next/image';
 import styles from './style.module.scss';
 import BodyExteriors from '../bodyExteriors';
 import OutlineButton from '../../common/buttons/OutlineButton';
 
-export default function BikeInspection() {
+export default function BikeInspection(props) {
   return (
     <div className={styles.bikeInspectionMain}>
       <div className={styles.inspectionTabs}>
@@ -80,7 +81,7 @@ export default function BikeInspection() {
           </Nav>
           <Tab.Content>
             <Tab.Pane eventKey="tabs_1" className={styles.bidsTabPanel}>
-              <Row>
+              <Row className="flex-xs-column-reverse">
                 <Col md={4}>
                   <BodyExteriors />
                 </Col>
@@ -97,7 +98,7 @@ export default function BikeInspection() {
               </Row>
             </Tab.Pane>
             <Tab.Pane eventKey="tabs_2" className={styles.bidsTabPanel}>
-              <Row className="align-items-center">
+              <Row className="align-items-center flex-xs-column-reverse">
                 <Col md={4}>
                   <BodyExteriors />
                 </Col>
@@ -114,7 +115,7 @@ export default function BikeInspection() {
               </Row>
             </Tab.Pane>
             <Tab.Pane eventKey="tabs_3" className={styles.bidsTabPanel}>
-              <Row className="align-items-center">
+              <Row className="align-items-center flex-xs-column-reverse">
                 <Col md={4}>
                   <BodyExteriors />
                 </Col>
@@ -131,7 +132,7 @@ export default function BikeInspection() {
               </Row>
             </Tab.Pane>
             <Tab.Pane eventKey="tabs_4" className={styles.bidsTabPanel}>
-              <Row className="align-items-center">
+              <Row className="align-items-center flex-xs-column-reverse">
                 <Col md={4}>
                   <BodyExteriors />
                 </Col>
@@ -148,7 +149,7 @@ export default function BikeInspection() {
               </Row>
             </Tab.Pane>
             <Tab.Pane eventKey="tabs_5" className={styles.bidsTabPanel}>
-              <Row className="align-items-center">
+              <Row className="align-items-center flex-xs-column-reverse">
                 <Col md={4}>
                   <BodyExteriors />
                 </Col>
@@ -168,11 +169,19 @@ export default function BikeInspection() {
         </Tab.Container>
       </div>
       <div className="mt-3">
-        <OutlineButton
-          leftIcon={<BiDownload />}
-          title="Download Report"
-          className="theme1"
-        />
+        {props.outlineButton && (
+          <OutlineButton
+            leftIcon={<BiDownload />}
+            title="Download Report"
+            className="theme1"
+          />
+        )}
+        {props.noOutlineBtn && (
+          <Button className={styles.noOutlineBtn}>
+            <IoMdDownload className={styles.noOutlineIcon} />
+            Download Insp. Report
+          </Button>
+        )}
       </div>
     </div>
   );

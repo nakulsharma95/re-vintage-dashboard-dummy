@@ -22,7 +22,7 @@ export default function DetailDropCard() {
   return (
     <>
       <div className={styles.dropCardBg}>
-        <div className={`${styles.dropCardInner} mb-5`}>
+        <div className={`${styles.dropCardInner} mb-lg-5`}>
           <h3 className="mb-3">SAMIL Details</h3>
           <div className="mb-3">
             <h3>SAMIL Case ID</h3>
@@ -35,23 +35,23 @@ export default function DetailDropCard() {
           </div>
         </div>
 
-        <div
-          className={`${styles.borderTopCustom}`}
-        >
-          <div
+        <div className={`${styles.borderTopCustom}`}>
+          <button
+            type="button"
             className={styles.dropCardFooter}
             onClick={dateToggleModal}
           >
             <AiOutlineCalendar className={`${styles.dropIcon}`} size={18} />
             <span className="ml-2">Reschedule</span>
-          </div>
-          <div
+          </button>
+          <button
+            type="button"
             className={`${styles.dropCardFooter}`}
             onClick={cancelToggleModal}
           >
             <AiOutlineClose className={`${styles.dropIcon}`} size={18} />
             <span>Drop</span>
-          </div>
+          </button>
         </div>
       </div>
       <CancelModal

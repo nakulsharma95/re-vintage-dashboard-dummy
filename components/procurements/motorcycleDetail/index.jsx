@@ -22,7 +22,7 @@ function MotorcycleDetail(props) {
   };
   return (
     <div
-      className={`${styles.motorcycleDetail} ${styles.completeBorderRight} px-3`}
+      className={`${styles.motorcycleDetail} ${styles.completeBorderRight} px-md-3`}
     >
       <div>
         {props.headBikeDetail && (
@@ -39,7 +39,7 @@ function MotorcycleDetail(props) {
         )}
         {props.detailLocation && (
           <div className={styles.bikeDetailLocation}>
-            <span>Loacation:</span> {props.bikeLocation}
+            <span>Location:</span> {props.bikeLocation}
           </div>
         )}
 
@@ -119,8 +119,8 @@ function MotorcycleDetail(props) {
           </div>
         )}
       </div>
-      <div className="mt-3">
-        {props.dealerDetails && (
+      {props.dealerDetails && (
+        <div className="mt-3">
           <div className={styles.dealerDetails}>
             <p>
               Dealer:<span>{props.dealerName}</span>
@@ -133,7 +133,9 @@ function MotorcycleDetail(props) {
               <Col className={styles.dealerDetails_list}>
                 <IoCallOutline className={styles.list_icon} /> Call Dealer
               </Col>
-              <Col className={styles.dealerDetails_list}>
+              <Col
+                className={`${styles.dealerDetails_list} d-sm-none d-none d-xl-block`}
+              >
                 <IoCallOutline className={styles.list_icon} />
                 Call CRE
               </Col>
@@ -143,8 +145,8 @@ function MotorcycleDetail(props) {
               </Col>
             </Row>
           </div>
-        )}
-      </div>
+        </div>
+      )}
 
       {props.footerPrice && (
         <div className={styles.hgBidCols}>
@@ -218,7 +220,7 @@ function MotorcycleDetail(props) {
       {props.isSellerBidDetail && (
         <div className={styles.sellerDetailPrice}>
           <div className={styles.priceCols}>
-            <div className={styles.title}>Base Price: </div> <BiRupee />{' '}
+            <div className={styles.title}>Base Price: </div> <BiRupee />
             1,25,000.00
           </div>
           <div className={styles.sellerIdCols}>
@@ -238,6 +240,76 @@ function MotorcycleDetail(props) {
             </div>
             <div className={styles.saveBtn}>
               <ButtonPrimary title="SUBMIT" />
+            </div>
+          </div>
+        </div>
+      )}
+      {/* end */}
+
+      {/* This section add to Under Negotiation Bid detail page */}
+      {props.isUnderNegotiationDetail && (
+        <div className={styles.underNegDetailPrice}>
+          <div className={styles.negPriceList}>
+            <div className={styles.negPriceCols}>
+              <div className={styles.priceSymbol}>
+                <BiRupee />
+              </div>
+              <div>
+                <small>Base Price</small>
+                <BiRupee /> 1,20,000.00
+              </div>
+            </div>
+            <div className={styles.negPriceCols}>
+              <div className={styles.priceSymbol}>
+                <BiRupee />
+              </div>
+              <div>
+                <small>Highest bid</small>
+                <BiRupee /> 1,20,000.00
+              </div>
+            </div>
+            <div className={styles.negPriceCols}>
+              <div>
+                <small>Highest bid by</small>
+                <Link href="/">Neel Motors, Lajpat Nagar</Link>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.cdaPriceMain}>
+            <div className={styles.cdaFlex}>
+              <div className={styles.title}>Customer Demand</div>
+              <div className={styles.priceInput}>
+                <BiRupee />
+                <Form.Control type="text" defaultValue="1,25,000.00" />
+              </div>
+              <div className={styles.priceBtn}>
+                <Button variant="">Edit</Button>
+              </div>
+            </div>
+
+            <div className={styles.cdaFlex}>
+              <div className={styles.title}>Dealer Offer</div>
+              <div className={styles.priceInput}>
+                <BiRupee />
+                <Form.Control type="text" defaultValue="1,25,000.00" />
+              </div>
+              <div className={styles.priceBtn}>
+                <Button variant="">Edit</Button>
+              </div>
+            </div>
+
+            <div className={styles.cdaFlex}>
+              <div className={styles.title}>Accepted Price</div>
+              <div className={styles.priceInput}>
+                <BiRupee />
+                <Form.Control type="text" defaultValue="1,25,000.00" />
+              </div>
+              <div className={styles.priceBtn}>
+                <Button variant="" className={styles.activeBtn}>
+                  Submit
+                </Button>
+              </div>
             </div>
           </div>
         </div>
