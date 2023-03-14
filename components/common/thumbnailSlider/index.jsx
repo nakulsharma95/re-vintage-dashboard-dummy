@@ -62,7 +62,7 @@ function BikeSlider(props) {
               arrows={false}
             >
               {sliderImages.map((item) => (
-                <div className={styles.compBikeCardSlides}>
+                <div className={`${styles.compBikeCardSlides} slide-img`}>
                   <Image
                     src={item.imgUrl}
                     className="img-full"
